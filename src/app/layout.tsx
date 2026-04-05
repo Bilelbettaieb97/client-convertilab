@@ -5,6 +5,7 @@ import { SITE, DEFAULT_OG_IMAGE } from "@/lib/constants";
 import { GoogleAnalytics, GoogleTagManager, MetaPixel, GTMNoscript, MetaPixelNoscript } from "@/components/Analytics";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -76,6 +77,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <Analytics />
+        <SpeedInsights />
         <GoogleAnalytics />
         <GoogleTagManager />
         <MetaPixel />
