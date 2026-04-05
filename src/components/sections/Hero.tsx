@@ -117,21 +117,21 @@ const Hero = () => {
                   +300%
                 </div>
                 <div className="text-xs sm:text-sm text-gray-700 font-semibold">ROI Moyen</div>
-                <div className="text-[10px] text-gray-500 mt-0.5 hidden sm:block">Pour nos clients</div>
+                <div className="text-[10px] text-gray-500 mt-0.5 hidden sm:block">Moyenne clients 2025</div>
               </div>
               <div className="group text-center p-3 sm:p-4 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-1">
                   150+
                 </div>
-                <div className="text-xs sm:text-sm text-gray-700 font-semibold">Sites Livres</div>
-                <div className="text-[10px] text-gray-500 mt-0.5 hidden sm:block">Tous secteurs</div>
+                <div className="text-xs sm:text-sm text-gray-700 font-semibold">Sites Livrés</div>
+                <div className="text-[10px] text-gray-500 mt-0.5 hidden sm:block">Depuis 2024</div>
               </div>
               <div className="group text-center p-3 sm:p-4 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent mb-1">
                   4.9&#9733;
                 </div>
                 <div className="text-xs sm:text-sm text-gray-700 font-semibold">Avis Clients</div>
-                <div className="text-[10px] text-gray-500 mt-0.5 hidden sm:block">Satisfaction 98%</div>
+                <div className="text-[10px] text-gray-500 mt-0.5 hidden sm:block">47 avis vérifiés</div>
               </div>
             </div>
 

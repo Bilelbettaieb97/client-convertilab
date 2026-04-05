@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
 import { cities } from "@/data/cities";
+import { sectors } from "@/data/sectors";
+import { glossaryTerms } from "@/data/glossary";
 
 const staticRoutes = [
   "",
@@ -76,5 +78,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...blogEntries, ...cityEntries];
+  const sectorEntries: MetadataRoute.Sitemap = sectors.map((s) => ({
+    url: `${SITE.url}/creation-site-web-${s.slug}`,
+    lastModified: siteLastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const glossaryEntries: MetadataRoute.Sitemap = [
+    { url: `${SITE.url}/glossaire`, lastModified: siteLastModified, changeFrequency: "monthly" as const, priority: 0.6 },
+    ...glossaryTerms.map((t) => ({
+      url: `${SITE.url}/glossaire/${t.slug}`,
+      lastModified: siteLastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+  ];
+
+  return [...staticEntries, ...blogEntries, ...cityEntries, ...sectorEntries, ...glossaryEntries];
 }

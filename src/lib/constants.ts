@@ -47,7 +47,7 @@ export const STRUCTURED_DATA = {
     },
   },
   localBusiness: {
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     name: SITE.name,
     url: SITE.url,
     telephone: SITE.phone,
@@ -71,5 +71,19 @@ export const STRUCTURED_DATA = {
       reviewCount: "47",
       bestRating: "5",
     },
+    areaServed: [
+      { "@type": "City", name: "Paris" },
+      { "@type": "City", name: "Rueil-Malmaison" },
+      { "@type": "AdministrativeArea", name: "Île-de-France" },
+      { "@type": "AdministrativeArea", name: "Hauts-de-Seine" },
+    ],
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    founder: { "@type": "Person", name: "Bilel Bettaieb" },
+    foundingDate: "2024",
   },
 } as const;
