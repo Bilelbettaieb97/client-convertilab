@@ -105,9 +105,6 @@ const Navigation = () => {
     { label: "Offre à 300€", href: "/offre-speciale", badge: "Limitée" },
     { label: "Demande de maquette", href: "/demande-maquette", badge: null },
     { label: "Estimation de prix", href: "/estimation-prix-site-web", badge: null },
-    { label: "Solutions par secteur", href: "/solutions", badge: null },
-    { label: "Agence Web par ville", href: "/agence-web", badge: null },
-    { label: "Glossaire Marketing", href: "/glossaire", badge: null },
   ];
 
   const openCalendly = () => {
