@@ -141,15 +141,21 @@ const Navigation = () => {
 
           {/* Logo - centered on mobile, left on desktop */}
           <div className="flex items-center lg:flex-none absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
-            <Link href="/" className="cursor-pointer">
+            <Link href="/" className="cursor-pointer flex items-center gap-2" aria-label="ConvertiLab - Accueil">
               <Image
-                src="/images/logo_convertilab.webp"
-                alt="ConvertiLab - Agence de Marketing Digital"
-                width={112}
-                height={112}
-                className="h-28 w-auto"
+                src="/images/icon-c.png"
+                alt=""
+                width={48}
+                height={48}
+                className="h-9 w-9 sm:h-11 sm:w-11 flex-shrink-0"
                 priority
               />
+              <div className="flex flex-col leading-none">
+                <span className="text-[20px] sm:text-[26px] font-bold tracking-tight">
+                  <span className="text-gray-900">Converti</span><span className="text-[#EC4899]">Lab</span>
+                </span>
+                <span className="text-[7px] sm:text-[9px] text-gray-400 tracking-[0.1em] font-medium mt-0.5">Agence de Marketing Digital</span>
+              </div>
             </Link>
           </div>
 

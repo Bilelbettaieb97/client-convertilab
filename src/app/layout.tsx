@@ -64,8 +64,8 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="500x500" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#9333ea" />
         <meta name="msapplication-TileColor" content="#9333ea" />
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
