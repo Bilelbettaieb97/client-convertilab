@@ -72,7 +72,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   const cityEntries: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${SITE.url}/agence-web-${city.slug}`,
+    url: `${SITE.url}/agence-web/${city.slug}`,
     lastModified: siteLastModified,
     changeFrequency: "monthly" as const,
     priority: 0.8,

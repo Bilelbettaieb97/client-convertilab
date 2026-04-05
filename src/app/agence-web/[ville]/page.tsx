@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Agence Web ${city.name} | Création Site Internet ${city.name}`,
     description: `Agence web à ${city.name} (${city.department}). Création de sites internet, SEO, Google Ads. +150 clients, livraison en 7 jours. Devis gratuit.`,
     keywords: `agence web ${city.name}, création site internet ${city.name}, SEO ${city.name}, site vitrine ${city.name}, agence digitale ${city.department}`,
-    alternates: { canonical: `${SITE.url}/agence-web-${city.slug}` },
+    alternates: { canonical: `${SITE.url}/agence-web/${city.slug}` },
     openGraph: {
       title: `Agence Web ${city.name} | Création Site Internet | ConvertiLab`,
       description: `Votre agence web à ${city.name}. Sites sur-mesure, SEO, Ads. Devis gratuit.`,
-      url: `${SITE.url}/agence-web-${city.slug}`,
+      url: `${SITE.url}/agence-web/${city.slug}`,
     },
     other: {
       "geo.region": "FR-IDF",
@@ -62,7 +62,7 @@ export default async function CityPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ProfessionalService"],
     name: `ConvertiLab - Agence Web ${city.name}`,
-    url: `${SITE.url}/agence-web-${city.slug}`,
+    url: `${SITE.url}/agence-web/${city.slug}`,
     telephone: SITE.phone,
     email: SITE.email,
     address: {
@@ -83,7 +83,7 @@ export default async function CityPage({ params }: Props) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: SITE.url },
-      { "@type": "ListItem", position: 2, name: `Agence Web ${city.name}`, item: `${SITE.url}/agence-web-${city.slug}` },
+      { "@type": "ListItem", position: 2, name: `Agence Web ${city.name}`, item: `${SITE.url}/agence-web/${city.slug}` },
     ],
   };
 
@@ -202,7 +202,7 @@ export default async function CityPage({ params }: Props) {
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Nous intervenons aussi à</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {cities.filter((c) => c.slug !== city.slug).map((c) => (
-              <Link key={c.slug} href={`/agence-web-${c.slug}`} className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-purple-600 hover:shadow-md transition-all border">
+              <Link key={c.slug} href={`/agence-web/${c.slug}`} className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-purple-600 hover:shadow-md transition-all border">
                 Agence web {c.name}
               </Link>
             ))}
