@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Création Site Web ${sector.name} | Site Internet ${sector.name}`,
     description: `Création de site internet pour ${sector.name.toLowerCase()}. ${sector.description.slice(0, 120)}`,
     keywords: `site web ${sector.name.toLowerCase()}, création site internet ${sector.name.toLowerCase()}, site vitrine ${sector.name.toLowerCase()}`,
-    alternates: { canonical: `${SITE.url}/creation-site-web-${sector.slug}` },
+    alternates: { canonical: `${SITE.url}/solutions/${sector.slug}` },
     openGraph: {
       title: `Création Site Web ${sector.name} | ConvertiLab`,
       description: sector.description,
-      url: `${SITE.url}/creation-site-web-${sector.slug}`,
+      url: `${SITE.url}/solutions/${sector.slug}`,
     },
   };
 }
@@ -44,7 +44,7 @@ export default async function SectorPage({ params }: Props) {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: SITE.url },
       { "@type": "ListItem", position: 2, name: "Services", item: `${SITE.url}/services` },
-      { "@type": "ListItem", position: 3, name: `Site Web ${sector.name}`, item: `${SITE.url}/creation-site-web-${sector.slug}` },
+      { "@type": "ListItem", position: 3, name: `Site Web ${sector.name}`, item: `${SITE.url}/solutions/${sector.slug}` },
     ],
   };
 
@@ -169,7 +169,7 @@ export default async function SectorPage({ params }: Props) {
           <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Nous créons aussi des sites pour</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {sectors.filter((s) => s.slug !== sector.slug).map((s) => (
-              <Link key={s.slug} href={`/creation-site-web-${s.slug}`} className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-purple-600 hover:shadow-md transition-all border">
+              <Link key={s.slug} href={`/solutions/${s.slug}`} className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-purple-600 hover:shadow-md transition-all border">
                 {s.emoji} Site web {s.name.toLowerCase()}
               </Link>
             ))}

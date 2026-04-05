@@ -79,7 +79,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const sectorEntries: MetadataRoute.Sitemap = sectors.map((s) => ({
-    url: `${SITE.url}/creation-site-web-${s.slug}`,
+    url: `${SITE.url}/solutions/${s.slug}`,
     lastModified: siteLastModified,
     changeFrequency: "monthly" as const,
     priority: 0.7,
