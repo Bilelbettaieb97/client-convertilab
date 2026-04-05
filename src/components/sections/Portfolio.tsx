@@ -169,7 +169,7 @@ function PortfolioCard({ caseStudy }: { caseStudy: CaseStudy }) {
 
   if (caseStudy.slug) {
     return (
-      <Link href={`/case-study/${caseStudy.slug}`} className="block h-full">
+      <Link href={`/etude-de-cas/${caseStudy.slug}`} className="block h-full">
         {cardContent}
       </Link>
     );
