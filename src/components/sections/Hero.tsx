@@ -1,16 +1,40 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Rocket, Shield, Calendar, Clock, CheckCircle, Users } from "lucide-react";
+import { ArrowRight, Rocket, Shield, Calendar, Clock, CheckCircle, Users, Zap } from "lucide-react";
 import { lazy, Suspense, useState, useEffect } from "react";
 import Link from "next/link";
 import { SITE } from "@/lib/constants";
+
+function useCountdown() {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0 });
+  useEffect(() => {
+    function getEndOfMonth() {
+      const now = new Date();
+      return new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+    }
+    function calc() {
+      const diff = getEndOfMonth().getTime() - Date.now();
+      if (diff <= 0) return { days: 0, hours: 0, minutes: 0 };
+      return {
+        days: Math.floor(diff / 86400000),
+        hours: Math.floor((diff % 86400000) / 3600000),
+        minutes: Math.floor((diff % 3600000) / 60000),
+      };
+    }
+    setTimeLeft(calc());
+    const timer = setInterval(() => setTimeLeft(calc()), 60000);
+    return () => clearInterval(timer);
+  }, []);
+  return timeLeft;
+}
 
 const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
 
 const rotatingWords = ["Business", "Boutique", "Projet", "Marque"];
 
 const Hero = () => {
+  const countdown = useCountdown();
   const [wordIndex, setWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -61,9 +85,13 @@ const Hero = () => {
           {/* Left - Information */}
           <div className="text-center lg:text-left">
             {/* Urgency Badge */}
-            <div className="inline-flex items-center px-4 py-2 mb-4 text-sm bg-gradient-to-r from-orange-50 to-yellow-50 border border-orange-200 text-orange-800 rounded-full animate-fade-in shadow-lg">
-              <Clock className="w-4 h-4 mr-2 text-orange-600 animate-pulse" />
-              <span className="font-bold">&#128293; 2 places restantes ce mois-ci</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm bg-gradient-to-r from-orange-50 to-yellow-50 border border-orange-200 text-orange-800 rounded-full animate-fade-in shadow-lg">
+              <Zap className="w-4 h-4 text-orange-600" />
+              <span className="font-bold">Offre audit gratuit</span>
+              <span className="hidden sm:inline">—</span>
+              <span className="font-mono font-bold text-orange-700">
+                {countdown.days}j {countdown.hours}h {countdown.minutes}m
+              </span>
             </div>
 
             {/* Main Heading - Benefit-focused */}

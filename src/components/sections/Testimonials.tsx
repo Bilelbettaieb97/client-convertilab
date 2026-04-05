@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 
@@ -12,8 +13,7 @@ const Testimonials = () => {
       company: "Boutique Éthique",
       rating: 5,
       metric: "+250% CA en ligne",
-      avatar: "M",
-      color: "bg-gradient-to-br from-purple-500 to-violet-600",
+      photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
       accent: "from-purple-100 to-violet-100"
     },
     {
@@ -23,8 +23,7 @@ const Testimonials = () => {
       company: "Cabinet Conseil",
       rating: 5,
       metric: "+50 leads/mois",
-      avatar: "T",
-      color: "bg-gradient-to-br from-green-500 to-emerald-600",
+      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
       accent: "from-green-100 to-emerald-100"
     },
     {
@@ -34,8 +33,7 @@ const Testimonials = () => {
       company: "Agence Immobilière",
       rating: 5,
       metric: "x6 demandes de devis",
-      avatar: "S",
-      color: "bg-gradient-to-br from-pink-500 to-rose-600",
+      photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
       accent: "from-pink-100 to-rose-100"
     },
     {
@@ -45,8 +43,7 @@ const Testimonials = () => {
       company: "E-commerce Mode",
       rating: 5,
       metric: "-60% coût acquisition",
-      avatar: "A",
-      color: "bg-gradient-to-br from-blue-500 to-cyan-600",
+      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
       accent: "from-blue-100 to-cyan-100"
     }
   ];
@@ -100,9 +97,13 @@ const Testimonials = () => {
                 </div>
 
                 <div className="flex items-center">
-                  <div className={`w-12 h-12 sm:w-16 sm:h-16 ${testimonial.color} rounded-xl sm:rounded-2xl flex items-center justify-center text-white font-bold text-base sm:text-xl mr-3 sm:mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    {testimonial.avatar}
-                  </div>
+                  <Image
+                    src={testimonial.photo}
+                    alt={testimonial.author}
+                    width={64}
+                    height={64}
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl object-cover mr-3 sm:mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                  />
                   <div>
                     <div className="font-bold text-gray-900 text-base sm:text-lg">{testimonial.author}</div>
                     <div className="text-xs sm:text-sm text-gray-600 mb-1">{testimonial.role}</div>

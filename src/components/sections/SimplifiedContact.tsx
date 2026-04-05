@@ -7,11 +7,15 @@ const SimplifiedContact = () => {
     <section className="py-16 sm:py-24 bg-gradient-to-br from-purple-50 to-pink-50 min-h-screen flex items-center" itemScope itemType="https://schema.org/ContactPage">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl w-full">
         <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-semibold mb-4">
+            <span className="relative flex h-2.5 w-2.5"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span></span>
+            Réponse sous 24h
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-            Nous <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Contacter</span>
+            Recevez votre <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">devis gratuit</span> en 2 minutes
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Obtenez votre devis personnalise pour la creation de votre site web sur mesure
+            Décrivez votre projet et recevez une estimation personnalisée sous 24h. Sans engagement, 100% gratuit.
           </p>
         </div>
 

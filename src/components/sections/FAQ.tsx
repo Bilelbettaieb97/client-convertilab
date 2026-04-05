@@ -31,6 +31,22 @@ const FAQ = () => {
     {
       question: "Quels services de marketing digital proposez-vous en plus ?",
       answer: "Au-delà de la création de sites, nous proposons : SEO (référencement naturel), Google Ads, Meta Ads (Facebook/Instagram), gestion des réseaux sociaux, email marketing et branding. Un accompagnement 360° pour votre croissance."
+    },
+    {
+      question: "Je n'ai pas de textes ni de contenu, vous pouvez vous en charger ?",
+      answer: "Bien sûr ! Nous rédigeons tous les textes de votre site (accueil, services, à propos, etc.) optimisés pour le SEO. Nous sélectionnons aussi les visuels. Vous n'avez qu'à valider — on s'occupe de tout."
+    },
+    {
+      question: "Avec quelle technologie construisez-vous les sites ?",
+      answer: "Nous utilisons Next.js (React), le framework utilisé par les plus grandes entreprises du monde (Netflix, Nike, Uber). Résultat : des sites ultra-rapides, sécurisés, optimisés SEO et 100% sur-mesure. Pas de WordPress, pas de templates."
+    },
+    {
+      question: "Comment se passe le suivi après la livraison ?",
+      answer: "Chaque projet inclut 30 jours de support technique gratuit après livraison. Au-delà, nous proposons des forfaits de maintenance mensuelle (mises à jour, sécurité, modifications mineures) à partir de 49€/mois."
+    },
+    {
+      question: "Je peux payer en plusieurs fois ?",
+      answer: "Oui ! Nous proposons le paiement en 2 à 4 mensualités sans frais. Vous pouvez aussi opter pour notre offre mensuelle à partir de 39€/mois avec un site livré clé en main."
     }
   ];
 

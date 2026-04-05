@@ -120,6 +120,31 @@ const Services = () => {
           </p>
         </header>
 
+        {/* Top 3 services les plus demandés */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+          {[
+            { icon: <Globe className="w-6 h-6" />, title: "Site Vitrine", desc: "à partir de 500€", link: "/services/sites-web/site-vitrine", gradient: "from-violet-500 to-purple-600", badge: "Le + demandé" },
+            { icon: <Store className="w-6 h-6" />, title: "Site E-commerce", desc: "à partir de 800€", link: "/services/sites-web/site-ecommerce", gradient: "from-pink-500 to-rose-600", badge: null },
+            { icon: <Search className="w-6 h-6" />, title: "SEO Google", desc: "Référencement naturel", link: "/services/seo/referencement", gradient: "from-emerald-500 to-teal-600", badge: "ROI le + élevé" },
+          ].map((s, i) => (
+            <Link key={i} href={s.link} className="group relative p-6 rounded-2xl border-2 border-border bg-card hover:border-purple-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+              {s.badge && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-xs font-bold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-full shadow-lg">
+                  {s.badge}
+                </span>
+              )}
+              <div className={`w-14 h-14 mx-auto rounded-xl bg-gradient-to-br ${s.gradient} flex items-center justify-center text-white mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
+                {s.icon}
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-1">{s.title}</h3>
+              <p className="text-sm text-muted-foreground mb-3">{s.desc}</p>
+              <span className="inline-flex items-center gap-1 text-sm font-medium text-purple-600">
+                Découvrir <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          ))}
+        </div>
+
         <Tabs defaultValue="sites-web" className="w-full">
           <TabsList className="w-full max-w-3xl mx-auto grid grid-cols-5 mb-12 h-auto p-1.5 bg-muted/70 backdrop-blur-sm rounded-2xl">
             {[
