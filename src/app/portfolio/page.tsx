@@ -48,6 +48,12 @@ export default function PortfolioPage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE.name,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "47",
+      bestRating: "5",
+    },
     review: [
       {
         "@type": "Review",
