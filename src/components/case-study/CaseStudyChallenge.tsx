@@ -1,0 +1,19 @@
+"use client";
+
+import { AlertTriangle } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
+export default function CaseStudyChallenge({ challenge }: { challenge: string }) {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 });
+  return (
+    <section className="py-16 bg-gradient-to-br from-destructive/5 to-background">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <div ref={ref} className={`text-center mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive/10 mb-4"><AlertTriangle className="w-8 h-8 text-destructive" /></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Le Defi</h2>
+          <p className="text-xl text-muted-foreground leading-relaxed">{challenge}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
