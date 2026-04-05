@@ -35,16 +35,19 @@ const Footer = () => {
     { name: "À propos de ConvertiLab", href: "/a-propos" },
     { name: "Blog Marketing Digital", href: "/blog" },
     { name: "Contact & Devis Gratuit", href: "/contact" },
-    { name: "Offre Spéciale", href: "/offre-speciale" }
+    { name: "Offre Spéciale", href: "/offre-speciale" },
+    { name: "Agence Web par ville", href: "/agence-web" },
+    { name: "Glossaire Marketing", href: "/glossaire" },
   ];
 
-  const sectors = [
-    { name: "E-commerce & Retail", icon: ShoppingCart },
-    { name: "SaaS & Tech", icon: Code },
-    { name: "Services B2B", icon: Target },
-    { name: "Immobilier", icon: Globe },
-    { name: "Santé & Bien-être", icon: Star },
-    { name: "Restauration & Hôtellerie", icon: Smartphone }
+  const sectorLinks = [
+    { name: "Site Web Restaurant", href: "/solutions/restaurant" },
+    { name: "Site Web Avocat", href: "/solutions/avocat" },
+    { name: "Site Web Artisan", href: "/solutions/artisan" },
+    { name: "Site Web Immobilier", href: "/solutions/immobilier" },
+    { name: "Site Web Coach", href: "/solutions/coach" },
+    { name: "Site Web E-commerce", href: "/solutions/ecommerce" },
+    { name: "Tous les secteurs", href: "/solutions" },
   ];
 
   const handleNavigation = (href: string) => {
@@ -182,18 +185,18 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Secteurs */}
+          {/* Solutions par secteur */}
           <div className="space-y-4">
             <h4 className="text-lg sm:text-xl font-semibold text-white mb-6 flex items-center">
               <Globe className="w-5 h-5 mr-2 text-purple-400" />
-              Secteurs d&apos;expertise
+              Solutions par secteur
             </h4>
             <div className="space-y-1">
-              {sectors.map((sector, index) => (
-                <div key={index} className="flex items-center text-gray-300 hover:text-purple-400 transition-colors text-sm group cursor-pointer py-2">
-                  <sector.icon className="w-4 h-4 mr-3 text-purple-400 group-hover:scale-110 transition-transform duration-300" />
+              {sectorLinks.map((sector, index) => (
+                <Link key={index} href={sector.href} className="flex items-center text-gray-300 hover:text-purple-400 transition-colors text-sm group py-2">
+                  <ArrowRight className="w-3 h-3 mr-2 text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   {sector.name}
-                </div>
+                </Link>
               ))}
             </div>
           </div>
