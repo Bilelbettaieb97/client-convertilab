@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Star, Users, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Agence Web Île-de-France | Création Site Internet par Ville",
-  description: "Votre agence web locale en Île-de-France. Création de sites internet à Paris, Rueil-Malmaison, Boulogne-Billancourt, Nanterre, Neuilly-sur-Seine. Devis gratuit.",
+  title: "Agence Web Île-de-France | Création Site Internet",
+  description: "Agence web locale en Île-de-France : Paris, Rueil-Malmaison, Boulogne, Nanterre. +150 clients, livraison 7j. Devis gratuit.",
   keywords: "agence web Île-de-France, création site internet Paris, agence web Hauts-de-Seine, agence digitale locale",
   alternates: { canonical: `${SITE.url}/agence-web` },
 };

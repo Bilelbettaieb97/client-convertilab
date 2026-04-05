@@ -9,7 +9,7 @@ import { ArrowRight, CheckCircle2, Star, Zap, Shield } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Création Site Web par Secteur d'Activité",
-  description: "Sites web sur-mesure pour chaque métier : restaurant, avocat, artisan, immobilier, coach, e-commerce. Design adapté à votre secteur, SEO optimisé, livré en 7 jours.",
+  description: "Site web sur-mesure par métier : restaurant, avocat, artisan, immobilier, coach, e-commerce. SEO optimisé, livré en 7j. Devis gratuit.",
   keywords: "site web restaurant, site internet avocat, site web artisan, création site par secteur, site web métier",
   alternates: { canonical: `${SITE.url}/solutions` },
 };
