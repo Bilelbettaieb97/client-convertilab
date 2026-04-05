@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
-import HomePageClient from "@/components/pages/HomePageClient";
+import Navigation from "@/components/layout/Navigation";
+import Hero from "@/components/sections/Hero";
+import Portfolio from "@/components/sections/Portfolio";
+import Services from "@/components/sections/Services";
+import Testimonials from "@/components/sections/Testimonials";
+import ProcessTimeline from "@/components/sections/ProcessTimeline";
+import About from "@/components/sections/About";
+import FAQ from "@/components/sections/FAQ";
+import SimplifiedContact from "@/components/sections/SimplifiedContact";
+import Footer from "@/components/layout/Footer";
+import AnimatedSection from "@/components/sections/AnimatedSection";
+import PromoBanner from "@/components/conversion/PromoBanner";
+import SuggestedArticles from "@/components/internal-links/SuggestedArticles";
+import SocialProofToast from "@/components/conversion/SocialProofToast";
+import StickyMobileCTA from "@/components/conversion/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: `Agence Web Paris & Île-de-France | SEO & Ads | ${SITE.name}`,
@@ -214,7 +228,50 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
-      <HomePageClient />
+      <div className="min-h-screen">
+        <Navigation />
+        <div style={{ paddingTop: "64px" }}>
+          <PromoBanner />
+          <section id="hero">
+            <Hero />
+          </section>
+        </div>
+        <AnimatedSection animation="fade-up">
+          <section id="portfolio" className="-mt-4">
+            <Portfolio />
+          </section>
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <section id="services" className="-mt-4">
+            <Services />
+          </section>
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up" delay={100}>
+          <ProcessTimeline />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up" delay={100}>
+          <section id="testimonials" className="-mt-4">
+            <Testimonials />
+          </section>
+        </AnimatedSection>
+        <AnimatedSection animation="scale">
+          <About />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <FAQ />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <SuggestedArticles title="Derniers articles du blog" max={3} />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <section id="contact" className="-mt-4">
+            <SimplifiedContact />
+          </section>
+        </AnimatedSection>
+        <Footer />
+        <SocialProofToast />
+        <StickyMobileCTA />
+      </div>
     </>
   );
 }
