@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
+import { cities } from "@/data/cities";
 
 const staticRoutes = [
   "",
@@ -35,16 +36,45 @@ const staticRoutes = [
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const siteLastModified = new Date("2026-04-05");
+
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${SITE.url}${route}`,
-    lastModified: new Date(),
+    lastModified: siteLastModified,
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1.0 : route.startsWith("/services") ? 0.8 : 0.7,
   }));
 
-  // TODO: Fetch blog articles from Supabase when blog is dynamic
-  // const { data: articles } = await supabase.from('blog_articles').select('slug, updated_at').eq('published', true)
-  // const blogEntries = articles?.map(a => ({ url: `${SITE.url}/blog/${a.slug}`, lastModified: a.updated_at })) ?? []
+  // Blog articles from Supabase
+  let blogEntries: MetadataRoute.Sitemap = [];
+  try {
+    const { createClient } = await import("@supabase/supabase-js");
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL || "",
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+    );
+    const { data: articles } = await supabase
+      .from("blog_articles")
+      .select("slug, updated_at")
+      .eq("published", true);
+    if (articles) {
+      blogEntries = articles.map((a) => ({
+        url: `${SITE.url}/blog/${a.slug}`,
+        lastModified: new Date(a.updated_at),
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+      }));
+    }
+  } catch {
+    // Fallback: no blog entries in sitemap
+  }
 
-  return [...staticEntries];
+  const cityEntries: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${SITE.url}/agence-web-${city.slug}`,
+    lastModified: siteLastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticEntries, ...blogEntries, ...cityEntries];
 }

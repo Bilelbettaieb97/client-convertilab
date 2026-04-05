@@ -98,13 +98,54 @@ const faqSchema = {
         text: "Nos accompagnements démarrent à partir de 500€/mois. Le budget dépend de vos objectifs, votre secteur et les leviers activés.",
       },
     },
+    {
+      "@type": "Question",
+      name: "Combien coûte la création d'un site web ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nos tarifs démarrent à partir de 500€ pour une landing page et à partir de 500€ pour un site vitrine complet. Possibilité de paiement en mensualités.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "En combien de temps mon site sera-t-il livré ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Une landing page est livrée en 5-7 jours, un site vitrine en 2-3 semaines, un site e-commerce en 3-4 semaines.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Je n'ai pas de textes ni de contenu, vous pouvez vous en charger ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Bien sûr ! Nous rédigeons tous les textes de votre site optimisés pour le SEO. Nous sélectionnons aussi les visuels. Vous n'avez qu'à valider.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Avec quelle technologie construisez-vous les sites ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nous utilisons Next.js (React), le framework utilisé par Netflix, Nike, Uber. Résultat : des sites ultra-rapides, sécurisés, optimisés SEO et 100% sur-mesure.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Je peux payer en plusieurs fois ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Oui ! Nous proposons le paiement en 2 à 4 mensualités sans frais. Vous pouvez aussi opter pour notre offre mensuelle à partir de 39€/mois.",
+      },
+    },
   ],
 };
 
 const reviewsSchema = {
   "@context": "https://schema.org",
-  "@type": "Product",
-  name: "Services ConvertiLab",
+  "@type": "Service",
+  name: "Services de Marketing Digital ConvertiLab",
+  provider: { "@type": "Organization", name: SITE.name },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
