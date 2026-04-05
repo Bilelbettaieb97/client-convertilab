@@ -20,6 +20,8 @@ const staticRoutes = [
   "/services/sea/google-ads",
   "/services/sea/meta-ads",
   "/services/social-media",
+  "/services/social-media/community-management",
+  "/services/social-media/strategie",
   "/portfolio",
   "/contact",
   "/a-propos",

@@ -77,8 +77,8 @@ const Navigation = () => {
       icon: Share2,
       description: "Gestion et stratégie réseaux sociaux",
       subServices: [
-        { name: "Community Management", icon: Share2, href: "/services/social-media" },
-        { name: "Stratégie Social Media", icon: BarChart3, href: "/services/social-media" },
+        { name: "Community Management", icon: Share2, href: "/services/social-media/community-management" },
+        { name: "Stratégie Social Media", icon: BarChart3, href: "/services/social-media/strategie" },
       ]
     },
     {
