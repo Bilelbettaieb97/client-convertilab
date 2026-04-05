@@ -100,6 +100,13 @@ const Navigation = () => {
     { label: "Contact", href: "/contact" }
   ];
 
+  const offerItems = [
+    { label: "Site à 39€/mois", href: "/offre-mensuelle", badge: "Populaire" },
+    { label: "Offre à 300€", href: "/offre-speciale", badge: "Limitée" },
+    { label: "Demande de maquette", href: "/demande-maquette", badge: null },
+    { label: "Estimation de prix", href: "/estimation-prix-site-web", badge: null },
+  ];
+
   const openCalendly = () => {
     window.open(SITE.calendly, '_blank');
   };
@@ -256,6 +263,32 @@ const Navigation = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
+            {/* Offres dropdown */}
+            <div className="relative group/offers">
+              <button className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer flex items-center gap-1 ${pathname.startsWith('/offre') || pathname.startsWith('/estimation') || pathname.startsWith('/demande') ? 'text-purple-600' : ''}`}>
+                Offres
+                <ChevronDown className="w-3 h-3 transition-transform group-hover/offers:rotate-180" />
+              </button>
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover/offers:opacity-100 group-hover/offers:visible transition-all duration-200">
+                <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2 w-56">
+                  {offerItems.map((offer) => (
+                    <Link
+                      key={offer.href}
+                      href={offer.href}
+                      className="flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors"
+                    >
+                      {offer.label}
+                      {offer.badge && (
+                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${offer.badge === 'Populaire' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}`}>
+                          {offer.badge}
+                        </span>
+                      )}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -328,6 +361,26 @@ const Navigation = () => {
                     </Link>
                   </div>
                 )}
+              </div>
+
+              {/* Mobile Offres */}
+              <div className="px-3 py-2">
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Offres</p>
+                {offerItems.map((offer) => (
+                  <Link
+                    key={offer.href}
+                    href={offer.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`flex items-center justify-between w-full px-3 py-2.5 text-base hover:text-purple-600 hover:bg-gray-50 rounded-md transition-colors duration-200 ${pathname === offer.href ? 'text-purple-600 bg-purple-50' : 'text-gray-600'}`}
+                  >
+                    {offer.label}
+                    {offer.badge && (
+                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${offer.badge === 'Populaire' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}`}>
+                        {offer.badge}
+                      </span>
+                    )}
+                  </Link>
+                ))}
               </div>
 
               {navItems.map((item) => (
