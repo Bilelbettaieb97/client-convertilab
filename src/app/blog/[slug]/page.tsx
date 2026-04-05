@@ -13,6 +13,7 @@ type Props = {
 async function getArticle(slug: string): Promise<FullBlogArticle | null> {
   try {
     const supabase = createServerClient();
+    if (!supabase) throw new Error("No supabase client");
     const { data, error } = await supabase
       .from("blog_articles")
       .select("*")
