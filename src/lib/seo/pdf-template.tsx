@@ -2,131 +2,79 @@ import React from "react";
 import { Document, Page, Text, View, StyleSheet, Link } from "@react-pdf/renderer";
 import type { SeoAuditResult } from "./analyzer";
 
-const colors = {
-  bg: "#0a0a1a",
-  card: "#14142b",
-  border: "#2a2a4a",
-  text: "#e8e8f0",
-  text2: "#8888aa",
-  text3: "#5a5a7a",
-  accent: "#6c5ce7",
-  accent2: "#a29bfe",
-  green: "#22c55e",
-  yellow: "#eab308",
-  orange: "#f97316",
-  red: "#ef4444",
-  white: "#ffffff",
+const c = {
+  bg: "#0a0a1a", card: "#14142b", border: "#2a2a4a",
+  text: "#e8e8f0", text2: "#8888aa", text3: "#5a5a7a",
+  accent: "#6c5ce7", accent2: "#a29bfe",
+  green: "#22c55e", yellow: "#eab308", orange: "#f97316", red: "#ef4444", white: "#ffffff",
 };
 
-function scoreColor(s: number) {
-  if (s >= 80) return colors.green;
-  if (s >= 60) return colors.yellow;
-  if (s >= 40) return colors.orange;
-  return colors.red;
-}
+function sc(s: number) { return s >= 80 ? c.green : s >= 60 ? c.yellow : s >= 40 ? c.orange : c.red; }
 
-const s = StyleSheet.create({
-  page: { backgroundColor: colors.bg, padding: 40, fontFamily: "Helvetica", color: colors.text, fontSize: 10, lineHeight: 1.6 },
-  // Cover
-  coverBadge: { backgroundColor: colors.accent, color: colors.white, paddingVertical: 4, paddingHorizontal: 16, borderRadius: 20, fontSize: 8, fontWeight: "bold", letterSpacing: 2, textTransform: "uppercase" as const, alignSelf: "center", marginBottom: 20 },
-  coverTitle: { fontSize: 32, fontWeight: "bold", textAlign: "center", marginBottom: 6 },
-  coverDomain: { fontSize: 18, color: colors.accent2, textAlign: "center", fontWeight: "bold", marginBottom: 4 },
-  coverDate: { fontSize: 10, color: colors.text2, textAlign: "center", marginBottom: 30 },
-  coverAgency: { borderTopWidth: 1, borderTopColor: colors.border, paddingTop: 16, textAlign: "center", fontSize: 8, color: colors.text3 },
-  // Section headers
-  sectionHeader: { flexDirection: "row", alignItems: "center", marginTop: 28, marginBottom: 14, borderBottomWidth: 1, borderBottomColor: colors.border, paddingBottom: 8 },
-  sectionNumber: { backgroundColor: colors.accent, color: colors.white, width: 22, height: 22, borderRadius: 6, textAlign: "center", lineHeight: 1, fontSize: 12, fontWeight: "bold", marginRight: 10, paddingTop: 4 },
-  sectionTitle: { fontSize: 18, fontWeight: "bold" },
-  // Score hero
-  scoreHero: { flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 30, padding: 30, backgroundColor: colors.card, borderRadius: 14, borderWidth: 1, borderColor: colors.border, marginBottom: 20 },
-  scoreNum: { fontSize: 48, fontWeight: "bold", textAlign: "center" },
-  scoreSub: { fontSize: 10, color: colors.text2, textAlign: "center" },
-  gradeText: { fontSize: 14, color: colors.text2, textAlign: "center" },
-  // Score grid
-  grid: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginBottom: 16 },
-  scoreCard: { width: "48%", flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: colors.card, borderRadius: 10, borderWidth: 1, borderColor: colors.border, padding: 12 },
-  scoreCardVal: { fontSize: 22, fontWeight: "bold", width: 40 },
-  scoreCardLabel: { fontSize: 9, fontWeight: "bold" },
-  scoreCardDesc: { fontSize: 7, color: colors.text2 },
-  scoreBar: { height: 4, backgroundColor: colors.border, borderRadius: 2, marginTop: 4, width: "100%" },
-  scoreBarFill: { height: 4, borderRadius: 2 },
-  // Boxes
-  boxRow: { flexDirection: "row", gap: 10, marginBottom: 16 },
-  box: { flex: 1, backgroundColor: colors.card, borderRadius: 10, borderWidth: 1, borderColor: colors.border, padding: 14 },
-  boxGood: { borderLeftWidth: 3, borderLeftColor: colors.green },
-  boxBad: { borderLeftWidth: 3, borderLeftColor: colors.red },
-  boxTitle: { fontSize: 11, fontWeight: "bold", marginBottom: 8 },
-  boxItem: { fontSize: 8, marginBottom: 3, color: colors.text2 },
-  // Must-do
-  mustdo: { backgroundColor: colors.card, borderRadius: 10, borderWidth: 1, borderColor: colors.border, padding: 14, marginBottom: 8, borderLeftWidth: 3 },
-  mustdoHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 6 },
-  mustdoTitle: { fontSize: 11, fontWeight: "bold", flex: 1 },
-  mustdoPri: { fontSize: 7, fontWeight: "bold", paddingVertical: 2, paddingHorizontal: 8, borderRadius: 10, textTransform: "uppercase" as const, letterSpacing: 1 },
-  mustdoWhy: { fontSize: 8, color: colors.text2, backgroundColor: "rgba(255,255,255,0.02)", padding: 8, borderRadius: 5, marginBottom: 6, borderLeftWidth: 2, borderLeftColor: colors.text3 },
-  mustdoFix: { fontSize: 8, backgroundColor: colors.card, padding: 8, borderRadius: 5, borderWidth: 1, borderColor: colors.border },
+const st = StyleSheet.create({
+  page: { backgroundColor: c.bg, padding: 30, fontFamily: "Helvetica", color: c.text, fontSize: 9, lineHeight: 1.5 },
+  // Section
+  sh: { flexDirection: "row", alignItems: "center", marginTop: 18, marginBottom: 10, borderBottomWidth: 1, borderBottomColor: c.border, paddingBottom: 6 },
+  sn: { backgroundColor: c.accent, color: c.white, width: 20, height: 20, borderRadius: 5, textAlign: "center", fontSize: 11, fontWeight: "bold", marginRight: 8, paddingTop: 3 },
+  stitle: { fontSize: 15, fontWeight: "bold" },
+  // Cards
+  card: { backgroundColor: c.card, borderRadius: 10, borderWidth: 1, borderColor: c.border, padding: 14, marginBottom: 8 },
+  cardH: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 10, borderBottomWidth: 1, borderBottomColor: c.border, paddingBottom: 8 },
+  cardT: { fontSize: 12, fontWeight: "bold" },
+  cardS: { fontSize: 18, fontWeight: "bold" },
   // Table
-  tableHead: { flexDirection: "row", borderBottomWidth: 1, borderBottomColor: colors.border, paddingBottom: 6, marginBottom: 4 },
-  tableTh: { fontSize: 7, fontWeight: "bold", color: colors.text3, textTransform: "uppercase" as const, letterSpacing: 1 },
-  tableRow: { flexDirection: "row", borderBottomWidth: 1, borderBottomColor: "rgba(255,255,255,0.03)", paddingVertical: 6 },
-  tableTd: { fontSize: 8 },
-  badge: { fontSize: 7, fontWeight: "bold", paddingVertical: 2, paddingHorizontal: 6, borderRadius: 8 },
-  badgePass: { backgroundColor: "rgba(34,197,94,0.15)", color: colors.green },
-  badgeFail: { backgroundColor: "rgba(239,68,68,0.15)", color: colors.red },
-  badgeWarn: { backgroundColor: "rgba(234,179,8,0.15)", color: colors.yellow },
-  // Card
-  card: { backgroundColor: colors.card, borderRadius: 12, borderWidth: 1, borderColor: colors.border, padding: 18, marginBottom: 12 },
-  cardHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 12, borderBottomWidth: 1, borderBottomColor: colors.border, paddingBottom: 10 },
-  cardTitle: { fontSize: 14, fontWeight: "bold" },
-  cardScore: { fontSize: 20, fontWeight: "bold" },
+  thr: { flexDirection: "row", borderBottomWidth: 1, borderBottomColor: c.border, paddingBottom: 4, marginBottom: 2 },
+  th: { fontSize: 7, fontWeight: "bold", color: c.text3, textTransform: "uppercase" as const, letterSpacing: 0.5 },
+  tr: { flexDirection: "row", borderBottomWidth: 1, borderBottomColor: "rgba(255,255,255,0.03)", paddingVertical: 4 },
+  td: { fontSize: 8 },
+  // Badge
+  b: { fontSize: 7, fontWeight: "bold", paddingVertical: 1, paddingHorizontal: 5, borderRadius: 6 },
+  bp: { backgroundColor: "rgba(34,197,94,0.15)", color: c.green },
+  bf: { backgroundColor: "rgba(239,68,68,0.15)", color: c.red },
+  bw: { backgroundColor: "rgba(234,179,8,0.15)", color: c.yellow },
+  // Mustdo
+  md: { backgroundColor: c.card, borderRadius: 8, borderWidth: 1, borderColor: c.border, padding: 10, marginBottom: 6, borderLeftWidth: 3 },
+  mdh: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 4 },
+  mdt: { fontSize: 10, fontWeight: "bold", flex: 1 },
+  mdp: { fontSize: 6, fontWeight: "bold", paddingVertical: 1, paddingHorizontal: 6, borderRadius: 8, textTransform: "uppercase" as const, letterSpacing: 0.5 },
+  mdw: { fontSize: 7, color: c.text2, padding: 6, borderRadius: 4, marginBottom: 4, borderLeftWidth: 2, borderLeftColor: c.text3 },
+  mdf: { fontSize: 7, backgroundColor: c.card, padding: 6, borderRadius: 4, borderWidth: 1, borderColor: c.border },
   // Timeline
-  tlItem: { backgroundColor: colors.card, borderRadius: 10, borderWidth: 1, borderColor: colors.border, padding: 14, marginBottom: 8, marginLeft: 12, borderLeftWidth: 3, borderLeftColor: colors.accent },
-  tlTitle: { fontSize: 11, fontWeight: "bold", color: colors.accent2, marginBottom: 4 },
-  tlText: { fontSize: 8, color: colors.text2 },
-  // CTA
-  cta: { backgroundColor: "#1a1040", borderRadius: 14, borderWidth: 1, borderColor: colors.accent, padding: 30, textAlign: "center", marginTop: 20, marginBottom: 20, alignItems: "center" },
-  ctaTitle: { fontSize: 18, fontWeight: "bold", color: colors.white, marginBottom: 8, textAlign: "center" },
-  ctaText: { fontSize: 10, color: colors.text2, marginBottom: 16, textAlign: "center", maxWidth: 400 },
-  ctaBtn: { backgroundColor: colors.accent, color: colors.white, paddingVertical: 10, paddingHorizontal: 24, borderRadius: 10, fontSize: 11, fontWeight: "bold", textDecoration: "none" },
-  ctaInfo: { fontSize: 8, color: colors.text3, marginTop: 14, textAlign: "center" },
-  // Footer
-  footer: { textAlign: "center", borderTopWidth: 1, borderTopColor: colors.border, paddingTop: 16, marginTop: 24, fontSize: 7, color: colors.text3 },
+  tl: { backgroundColor: c.card, borderRadius: 8, borderWidth: 1, borderColor: c.border, padding: 10, marginBottom: 6, borderLeftWidth: 3, borderLeftColor: c.accent },
+  tlt: { fontSize: 10, fontWeight: "bold", color: c.accent2, marginBottom: 3 },
+  tlp: { fontSize: 7, color: c.text2, marginBottom: 1 },
   // Glossary
-  glossGrid: { flexDirection: "row", flexWrap: "wrap", gap: 6, marginBottom: 16 },
-  glossItem: { width: "48%", backgroundColor: colors.card, borderRadius: 8, borderWidth: 1, borderColor: colors.border, padding: 8 },
-  glossTerm: { fontSize: 9, fontWeight: "bold", color: colors.accent2 },
-  glossDef: { fontSize: 7, color: colors.text2, marginTop: 2 },
+  gg: { flexDirection: "row", flexWrap: "wrap", gap: 5, marginBottom: 12 },
+  gi: { width: "48%", backgroundColor: c.card, borderRadius: 6, borderWidth: 1, borderColor: c.border, padding: 6 },
+  gt: { fontSize: 8, fontWeight: "bold", color: c.accent2 },
+  gd: { fontSize: 6, color: c.text2, marginTop: 1 },
+  // CTA
+  cta: { backgroundColor: "#1a1040", borderRadius: 12, borderWidth: 1, borderColor: c.accent, padding: 24, textAlign: "center", marginTop: 14, alignItems: "center" },
+  // Footer
+  ft: { textAlign: "center", borderTopWidth: 1, borderTopColor: c.border, paddingTop: 10, marginTop: 16, fontSize: 7, color: c.text3 },
 });
 
 function Badge({ ok, label }: { ok: boolean; label?: string }) {
-  return (
-    <Text style={[s.badge, ok ? s.badgePass : s.badgeFail]}>
-      {ok ? `✓ ${label || "OK"}` : `✗ ${label || "Probleme"}`}
-    </Text>
-  );
+  return <Text style={[st.b, ok ? st.bp : st.bf]}>{ok ? `✓ ${label || "OK"}` : `✗ ${label || "Probleme"}`}</Text>;
 }
 
-function SectionHeader({ num, title }: { num: string; title: string }) {
-  return (
-    <View style={s.sectionHeader}>
-      <Text style={s.sectionNumber}>{num}</Text>
-      <Text style={s.sectionTitle}>{title}</Text>
-    </View>
-  );
+function Sh({ n, t }: { n: string; t: string }) {
+  return <View style={st.sh}><Text style={st.sn}>{n}</Text><Text style={st.stitle}>{t}</Text></View>;
 }
 
 export function SeoAuditPdf({ audit }: { audit: SeoAuditResult }) {
   const { scores, grade, gradeLabel, issues, strengths, homepage, robotsTxt, sitemap, domain } = audit;
   const date = new Date(audit.fetchedAt).toLocaleDateString("fr-FR", { year: "numeric", month: "long", day: "numeric" });
 
-  const categories = [
-    { name: "SEO Technique", score: scores.technique, desc: "HTTPS, robots, sitemap" },
-    { name: "SEO On-Page", score: scores.onPage, desc: "Title, meta, headings" },
-    { name: "Schema", score: scores.schema, desc: "JSON-LD, structured data" },
-    { name: "Mobile & UX", score: scores.mobile, desc: "Viewport, responsive" },
-    { name: "Contenu & E-E-A-T", score: scores.contenu, desc: "Experience, expertise" },
-    { name: "AI Search / GEO", score: scores.geo, desc: "ChatGPT, Perplexity" },
-    { name: "Performance", score: scores.performance, desc: "Vitesse, optimisation" },
-    { name: "Securite", score: scores.securite, desc: "HTTPS, lang, a11y" },
+  const cats = [
+    { n: "SEO Technique", s: scores.technique, d: "HTTPS, robots, sitemap" },
+    { n: "SEO On-Page", s: scores.onPage, d: "Title, meta, headings" },
+    { n: "Schema", s: scores.schema, d: "JSON-LD, structured data" },
+    { n: "Mobile & UX", s: scores.mobile, d: "Viewport, responsive" },
+    { n: "Contenu & E-E-A-T", s: scores.contenu, d: "Experience, expertise" },
+    { n: "AI Search / GEO", s: scores.geo, d: "ChatGPT, Perplexity" },
+    { n: "Performance", s: scores.performance, d: "Vitesse, optimisation" },
+    { n: "Securite", s: scores.securite, d: "HTTPS, lang, a11y" },
   ];
 
   const criticals = issues.filter(i => i.priority === "critical");
@@ -135,262 +83,316 @@ export function SeoAuditPdf({ audit }: { audit: SeoAuditResult }) {
 
   return (
     <Document>
-      {/* PAGE 1: Cover + Scores */}
-      <Page size="A4" style={s.page}>
-        <View style={{ alignItems: "center", marginBottom: 30, marginTop: 20 }}>
-          <Text style={s.coverBadge}>AUDIT SEO COMPLET</Text>
-          <Text style={s.coverTitle}>Rapport d&apos;Audit SEO</Text>
-          <Text style={s.coverDomain}>{domain}</Text>
-          <Text style={s.coverDate}>{date} — 8 categories • 60+ points</Text>
+      {/* ===== PAGE 1: Cover + Scores + Points Forts ===== */}
+      <Page size="A4" style={st.page}>
+        {/* Cover */}
+        <View style={{ alignItems: "center", marginBottom: 16, marginTop: 8 }}>
+          <Text style={{ backgroundColor: c.accent, color: c.white, paddingVertical: 3, paddingHorizontal: 14, borderRadius: 15, fontSize: 7, fontWeight: "bold", letterSpacing: 2, textTransform: "uppercase" as const, marginBottom: 12 }}>
+            AUDIT SEO COMPLET
+          </Text>
+          <Text style={{ fontSize: 24, fontWeight: "bold", textAlign: "center", lineHeight: 1.2 }}>
+            Rapport d&apos;Audit SEO
+          </Text>
+          <View style={{ height: 10 }} />
+          <Text style={{ fontSize: 14, color: c.accent2, fontWeight: "bold", textAlign: "center", lineHeight: 1.2 }}>
+            {domain}
+          </Text>
+          <View style={{ height: 6 }} />
+          <Text style={{ fontSize: 9, color: c.text2, textAlign: "center", lineHeight: 1.3 }}>
+            {date} — 8 categories • 60+ points de controle
+          </Text>
         </View>
 
-        <View style={s.scoreHero}>
-          <View style={{ alignItems: "center" }}>
-            <Text style={[s.scoreNum, { color: scoreColor(scores.global) }]}>{scores.global}</Text>
-            <Text style={s.scoreSub}>sur 100</Text>
+        {/* Score hero */}
+        <View style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", padding: 16, backgroundColor: c.card, borderRadius: 12, borderWidth: 1, borderColor: c.border, marginBottom: 12 }}>
+          <View style={{ alignItems: "center", marginRight: 40 }}>
+            <Text style={{ fontSize: 38, fontWeight: "bold", color: sc(scores.global), lineHeight: 1.1 }}>{scores.global}</Text>
+            <View style={{ height: 6 }} />
+            <Text style={{ fontSize: 9, color: c.text2, lineHeight: 1.2 }}>sur 100</Text>
           </View>
           <View style={{ alignItems: "center" }}>
-            <Text style={[s.scoreNum, { color: scoreColor(scores.global), fontSize: 42 }]}>{grade}</Text>
-            <Text style={s.gradeText}>{gradeLabel}</Text>
+            <Text style={{ fontSize: 34, fontWeight: "bold", color: sc(scores.global), lineHeight: 1.1 }}>{grade}</Text>
+            <View style={{ height: 6 }} />
+            <Text style={{ fontSize: 11, color: c.text2, lineHeight: 1.2 }}>{gradeLabel}</Text>
           </View>
         </View>
 
-        <View style={s.grid}>
-          {categories.map(c => (
-            <View key={c.name} style={s.scoreCard}>
-              <Text style={[s.scoreCardVal, { color: scoreColor(c.score) }]}>{c.score}</Text>
+        {/* Score grid */}
+        <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 6, marginBottom: 14 }}>
+          {cats.map(cat => (
+            <View key={cat.n} style={{ width: "48.5%", flexDirection: "row", alignItems: "center", gap: 8, backgroundColor: c.card, borderRadius: 8, borderWidth: 1, borderColor: c.border, padding: 8 }}>
+              <Text style={{ fontSize: 20, fontWeight: "bold", color: sc(cat.s), width: 36, textAlign: "center" }}>{cat.s}</Text>
               <View style={{ flex: 1 }}>
-                <Text style={s.scoreCardLabel}>{c.name}</Text>
-                <Text style={s.scoreCardDesc}>{c.desc}</Text>
-                <View style={s.scoreBar}>
-                  <View style={[s.scoreBarFill, { width: `${c.score}%`, backgroundColor: scoreColor(c.score) }]} />
+                <Text style={{ fontSize: 8, fontWeight: "bold" }}>{cat.n}</Text>
+                <Text style={{ fontSize: 6, color: c.text2 }}>{cat.d}</Text>
+                <View style={{ height: 3, backgroundColor: c.border, borderRadius: 2, marginTop: 3, width: "100%" }}>
+                  <View style={{ height: 3, borderRadius: 2, backgroundColor: sc(cat.s), width: `${cat.s}%` }} />
                 </View>
               </View>
             </View>
           ))}
         </View>
 
-        <View style={s.boxRow}>
-          <View style={[s.box, s.boxGood]}>
-            <Text style={s.boxTitle}>Points Forts</Text>
-            {strengths.slice(0, 5).map((st, i) => (
-              <Text key={i} style={s.boxItem}>✓ {st}</Text>
+        {/* Points Forts / A Corriger */}
+        <View style={{ flexDirection: "row", gap: 8, marginBottom: 14 }}>
+          <View style={{ flex: 1, backgroundColor: c.card, borderRadius: 8, borderWidth: 1, borderColor: c.border, borderLeftWidth: 3, borderLeftColor: c.green, padding: 10 }}>
+            <Text style={{ fontSize: 10, fontWeight: "bold", marginBottom: 6 }}>Points Forts</Text>
+            {strengths.slice(0, 5).map((s, i) => (
+              <Text key={i} style={{ fontSize: 7, color: c.text2, marginBottom: 2 }}>✓ {s}</Text>
             ))}
           </View>
-          <View style={[s.box, s.boxBad]}>
-            <Text style={s.boxTitle}>A Corriger</Text>
+          <View style={{ flex: 1, backgroundColor: c.card, borderRadius: 8, borderWidth: 1, borderColor: c.border, borderLeftWidth: 3, borderLeftColor: c.red, padding: 10 }}>
+            <Text style={{ fontSize: 10, fontWeight: "bold", marginBottom: 6 }}>A Corriger</Text>
             {issues.slice(0, 5).map((is, i) => (
-              <Text key={i} style={s.boxItem}>✗ {is.title}</Text>
+              <Text key={i} style={{ fontSize: 7, color: c.text2, marginBottom: 2 }}>✗ {is.title}</Text>
             ))}
           </View>
         </View>
 
-        <View style={s.coverAgency}>
-          <Text>Audit realise par ConvertiLab — Agence Web Paris & Ile-de-France</Text>
-          <Text>convertilab.com • contact@convertilab.com • +33 6 16 47 72 45</Text>
+        {/* Agency footer */}
+        <View style={{ borderTopWidth: 1, borderTopColor: c.border, paddingTop: 10, textAlign: "center" }}>
+          <Text style={{ fontSize: 7, color: c.text3 }}>Audit realise par ConvertiLab — Agence Web Paris & Ile-de-France</Text>
+          <Text style={{ fontSize: 7, color: c.text3 }}>convertilab.com • contact@convertilab.com • +33 6 16 47 72 45</Text>
         </View>
       </Page>
 
-      {/* PAGE 2: Must-Do */}
-      <Page size="A4" style={s.page}>
-        <SectionHeader num="2" title="Must-Do : Actions Prioritaires" />
+      {/* ===== PAGE 2: Must-Do + Analyse Technique + On-Page ===== */}
+      <Page size="A4" style={st.page}>
+        <Sh n="2" t="Must-Do : Actions Prioritaires" />
 
-        {issues.slice(0, 7).map((issue, i) => {
-          const borderColor = issue.priority === "critical" ? colors.red : issue.priority === "important" ? colors.orange : colors.yellow;
-          const priBg = issue.priority === "critical" ? "rgba(239,68,68,0.15)" : issue.priority === "important" ? "rgba(249,115,22,0.15)" : "rgba(234,179,8,0.15)";
-          const priColor = issue.priority === "critical" ? colors.red : issue.priority === "important" ? colors.orange : colors.yellow;
-          const priLabel = issue.priority === "critical" ? "CRITIQUE" : issue.priority === "important" ? "IMPORTANT" : "RECOMMANDE";
-
+        {issues.slice(0, 6).map((issue, i) => {
+          const bColor = issue.priority === "critical" ? c.red : issue.priority === "important" ? c.orange : c.yellow;
+          const pBg = issue.priority === "critical" ? "rgba(239,68,68,0.15)" : issue.priority === "important" ? "rgba(249,115,22,0.15)" : "rgba(234,179,8,0.15)";
+          const pLabel = issue.priority === "critical" ? "CRITIQUE" : issue.priority === "important" ? "IMPORTANT" : "RECOMMANDE";
           return (
-            <View key={i} style={[s.mustdo, { borderLeftColor: borderColor }]}>
-              <View style={s.mustdoHead}>
-                <Text style={s.mustdoTitle}>{i + 1}. {issue.title}</Text>
-                <Text style={[s.mustdoPri, { backgroundColor: priBg, color: priColor }]}>{priLabel}</Text>
+            <View key={i} style={[st.md, { borderLeftColor: bColor }]}>
+              <View style={st.mdh}>
+                <Text style={st.mdt}>{i + 1}. {issue.title}</Text>
+                <Text style={[st.mdp, { backgroundColor: pBg, color: bColor }]}>{pLabel}</Text>
               </View>
-              <View style={s.mustdoWhy}>
-                <Text><Text style={{ fontWeight: "bold" }}>Pourquoi :</Text> {issue.description}</Text>
-              </View>
-              <View style={s.mustdoFix}>
-                <Text><Text style={{ fontWeight: "bold", color: colors.green }}>Corriger :</Text> {issue.fix}</Text>
-              </View>
+              <View style={st.mdw}><Text><Text style={{ fontWeight: "bold" }}>Pourquoi : </Text>{issue.description}</Text></View>
+              <View style={st.mdf}><Text><Text style={{ fontWeight: "bold", color: c.green }}>Corriger : </Text>{issue.fix}</Text></View>
             </View>
           );
         })}
-      </Page>
 
-      {/* PAGE 3: Detail */}
-      <Page size="A4" style={s.page}>
-        <SectionHeader num="3" title="Analyse Detaillee" />
-
-        {/* Technique */}
-        <View style={s.card}>
-          <View style={s.cardHead}>
-            <Text style={s.cardTitle}>SEO Technique</Text>
-            <Text style={[s.cardScore, { color: scoreColor(scores.technique) }]}>{scores.technique}/100</Text>
-          </View>
-          <View style={s.tableHead}>
-            <Text style={[s.tableTh, { width: "25%" }]}>Point</Text>
-            <Text style={[s.tableTh, { width: "20%" }]}>Statut</Text>
-            <Text style={[s.tableTh, { width: "55%" }]}>Detail</Text>
+        {/* SEO Technique */}
+        <Sh n="3" t="Analyse Detaillee" />
+        <View style={st.card}>
+          <View style={st.cardH}>
+            <Text style={st.cardT}>SEO Technique</Text>
+            <Text style={[st.cardS, { color: sc(scores.technique) }]}>{scores.technique}/100</Text>
           </View>
           {[
-            { name: "HTTPS", ok: audit.url.startsWith("https"), detail: audit.url.startsWith("https") ? "SSL actif" : "Non securise" },
-            { name: "robots.txt", ok: robotsTxt.exists, detail: robotsTxt.exists ? `Present — ${robotsTxt.blockedPaths.length} chemins bloques` : "Absent" },
-            { name: "Sitemap", ok: sitemap.exists, detail: sitemap.exists ? `${sitemap.urlCount} URLs` : "Absent" },
-            { name: "Canonical", ok: !!homepage.canonical, detail: homepage.canonical || "Manquante" },
-          ].map((row, i) => (
-            <View key={i} style={s.tableRow}>
-              <Text style={[s.tableTd, { width: "25%" }]}>{row.name}</Text>
-              <View style={{ width: "20%" }}><Badge ok={row.ok} /></View>
-              <Text style={[s.tableTd, { width: "55%", color: colors.text2 }]}>{row.detail}</Text>
+            { n: "HTTPS", ok: audit.url.startsWith("https"), d: audit.url.startsWith("https") ? "SSL actif" : "Non securise" },
+            { n: "robots.txt", ok: robotsTxt.exists, d: robotsTxt.exists ? `Present — ${robotsTxt.blockedPaths.length} chemins bloques` : "Absent" },
+            { n: "Sitemap", ok: sitemap.exists, d: sitemap.exists ? `${sitemap.urlCount} URLs` : "Absent" },
+            { n: "Canonical", ok: !!homepage.canonical, d: homepage.canonical ? homepage.canonical.substring(0, 50) : "Manquante" },
+          ].map((r, i) => (
+            <View key={i} style={st.tr}>
+              <Text style={[st.td, { width: "22%" }]}>{r.n}</Text>
+              <View style={{ width: "18%" }}><Badge ok={r.ok} /></View>
+              <Text style={[st.td, { width: "60%", color: c.text2 }]}>{r.d}</Text>
             </View>
           ))}
         </View>
 
-        {/* On-Page */}
-        <View style={s.card}>
-          <View style={s.cardHead}>
-            <Text style={s.cardTitle}>SEO On-Page</Text>
-            <Text style={[s.cardScore, { color: scoreColor(scores.onPage) }]}>{scores.onPage}/100</Text>
-          </View>
-          <View style={s.tableHead}>
-            <Text style={[s.tableTh, { width: "25%" }]}>Point</Text>
-            <Text style={[s.tableTh, { width: "20%" }]}>Statut</Text>
-            <Text style={[s.tableTh, { width: "55%" }]}>Detail</Text>
+        {/* SEO On-Page */}
+        <View style={st.card}>
+          <View style={st.cardH}>
+            <Text style={st.cardT}>SEO On-Page</Text>
+            <Text style={[st.cardS, { color: sc(scores.onPage) }]}>{scores.onPage}/100</Text>
           </View>
           {[
-            { name: "Title", ok: !!homepage.title, detail: homepage.title ? `"${homepage.title.substring(0, 50)}..." (${homepage.titleLength} car.)` : "Manquant" },
-            { name: "Meta desc.", ok: !!homepage.metaDescription, detail: homepage.metaDescription ? `${homepage.metaDescriptionLength} caracteres` : "Manquante" },
-            { name: "H1", ok: homepage.h1.length === 1, detail: homepage.h1.length === 0 ? "Aucun H1" : homepage.h1.length === 1 ? `"${homepage.h1[0].substring(0, 45)}..."` : `${homepage.h1.length} H1 (1 seul recommande)` },
-            { name: "Images alt", ok: homepage.imagesWithoutAlt === 0, detail: `${homepage.imagesWithoutAlt}/${homepage.totalImages} sans alt` },
-            { name: "Liens internes", ok: homepage.internalLinks >= 3, detail: `${homepage.internalLinks} liens` },
-            { name: "Open Graph", ok: !!homepage.ogTags["og:title"], detail: Object.keys(homepage.ogTags).length > 0 ? `${Object.keys(homepage.ogTags).length} balises` : "Absent" },
-          ].map((row, i) => (
-            <View key={i} style={s.tableRow}>
-              <Text style={[s.tableTd, { width: "25%" }]}>{row.name}</Text>
-              <View style={{ width: "20%" }}><Badge ok={row.ok} /></View>
-              <Text style={[s.tableTd, { width: "55%", color: colors.text2 }]}>{row.detail}</Text>
-            </View>
-          ))}
-        </View>
-
-        {/* Schema */}
-        <View style={s.card}>
-          <View style={s.cardHead}>
-            <Text style={s.cardTitle}>Schema / JSON-LD</Text>
-            <Text style={[s.cardScore, { color: scoreColor(scores.schema) }]}>{scores.schema}/100</Text>
-          </View>
-          {homepage.jsonLd.map((j, i) => (
-            <View key={i} style={[s.tableRow, { paddingVertical: 4 }]}>
-              <Text style={[s.tableTd, { width: "40%" }]}>{j.type}</Text>
-              <Badge ok={j.detected} label={j.detected ? "Detecte" : "Absent"} />
+            { n: "Title", ok: !!homepage.title, d: homepage.title ? `"${homepage.title.substring(0, 45)}..." (${homepage.titleLength} car.)` : "Manquant" },
+            { n: "Meta desc.", ok: !!homepage.metaDescription, d: `${homepage.metaDescriptionLength} caracteres` },
+            { n: "H1", ok: homepage.h1.length === 1, d: homepage.h1.length === 0 ? "Aucun" : `"${homepage.h1[0].substring(0, 40)}..."` },
+            { n: "Images alt", ok: homepage.imagesWithoutAlt === 0, d: `${homepage.imagesWithoutAlt}/${homepage.totalImages} sans alt` },
+            { n: "Liens internes", ok: homepage.internalLinks >= 3, d: `${homepage.internalLinks} liens` },
+            { n: "Open Graph", ok: !!homepage.ogTags["og:title"], d: `${Object.keys(homepage.ogTags).length} balises` },
+          ].map((r, i) => (
+            <View key={i} style={st.tr}>
+              <Text style={[st.td, { width: "22%" }]}>{r.n}</Text>
+              <View style={{ width: "18%" }}><Badge ok={r.ok} /></View>
+              <Text style={[st.td, { width: "60%", color: c.text2 }]}>{r.d}</Text>
             </View>
           ))}
         </View>
       </Page>
 
-      {/* PAGE 4: GEO + Performance + Plan */}
-      <Page size="A4" style={s.page}>
+      {/* ===== PAGE 3: Schema + Mobile + GEO + Perf + Securite (compact) ===== */}
+      <Page size="A4" style={[st.page, { padding: 26 }]}>
+        {/* Schema - compact 2-col layout */}
+        <View style={[st.card, { padding: 10, marginBottom: 6 }]}>
+          <View style={[st.cardH, { marginBottom: 6, paddingBottom: 6 }]}>
+            <Text style={{ fontSize: 11, fontWeight: "bold" }}>Schema / JSON-LD</Text>
+            <Text style={{ fontSize: 16, fontWeight: "bold", color: sc(scores.schema) }}>{scores.schema}/100</Text>
+          </View>
+          <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+            {homepage.jsonLd.map((j, i) => (
+              <View key={i} style={{ flexDirection: "row", alignItems: "center", width: "50%", paddingVertical: 1 }}>
+                <Text style={{ fontSize: 7, width: "55%" }}>{j.type}</Text>
+                <Text style={[st.b, j.detected ? st.bp : st.bf, { fontSize: 6 }]}>{j.detected ? "✓" : "✗"}</Text>
+              </View>
+            ))}
+          </View>
+        </View>
+
+        {/* Mobile + Securite side by side */}
+        <View style={{ flexDirection: "row", marginBottom: 6 }}>
+          <View style={[st.card, { flex: 1, padding: 10, marginBottom: 0, marginRight: 6 }]}>
+            <View style={[st.cardH, { marginBottom: 6, paddingBottom: 6 }]}>
+              <Text style={{ fontSize: 11, fontWeight: "bold" }}>Mobile & UX</Text>
+              <Text style={{ fontSize: 16, fontWeight: "bold", color: sc(scores.mobile) }}>{scores.mobile}/100</Text>
+            </View>
+            {[
+              { n: "Viewport", ok: homepage.viewport, d: homepage.viewport ? "Oui" : "Absent" },
+              { n: "CSS", ok: homepage.cssFramework !== "Inconnu", d: homepage.cssFramework },
+              { n: "JS", ok: homepage.jsFramework !== "Inconnu", d: homepage.jsFramework },
+              { n: "WebP", ok: homepage.hasWebpImages, d: homepage.hasWebpImages ? "Oui" : "Non" },
+            ].map((r, i) => (
+              <View key={i} style={{ flexDirection: "row", alignItems: "center", paddingVertical: 2 }}>
+                <Text style={{ fontSize: 7, width: "30%" }}>{r.n}</Text>
+                <Text style={[st.b, r.ok ? st.bp : st.bf, { fontSize: 6 }]}>{r.ok ? "✓" : "✗"}</Text>
+                <Text style={{ fontSize: 7, color: c.text2, marginLeft: 4 }}>{r.d}</Text>
+              </View>
+            ))}
+          </View>
+          <View style={[st.card, { flex: 1, padding: 10, marginBottom: 0 }]}>
+            <View style={[st.cardH, { marginBottom: 6, paddingBottom: 6 }]}>
+              <Text style={{ fontSize: 11, fontWeight: "bold" }}>Securite</Text>
+              <Text style={{ fontSize: 16, fontWeight: "bold", color: sc(scores.securite) }}>{scores.securite}/100</Text>
+            </View>
+            {[
+              { n: "HTTPS", ok: audit.url.startsWith("https"), d: "SSL" },
+              { n: "Lang", ok: !!homepage.lang, d: homepage.lang || "—" },
+              { n: "Alt", ok: homepage.imagesWithoutAlt === 0, d: `${homepage.imagesWithoutAlt} manquant` },
+            ].map((r, i) => (
+              <View key={i} style={{ flexDirection: "row", alignItems: "center", paddingVertical: 2 }}>
+                <Text style={{ fontSize: 7, width: "30%" }}>{r.n}</Text>
+                <Text style={[st.b, r.ok ? st.bp : st.bf, { fontSize: 6 }]}>{r.ok ? "✓" : "✗"}</Text>
+                <Text style={{ fontSize: 7, color: c.text2, marginLeft: 4 }}>{r.d}</Text>
+              </View>
+            ))}
+          </View>
+        </View>
+
         {/* AI/GEO */}
-        <View style={s.card}>
-          <View style={s.cardHead}>
-            <Text style={s.cardTitle}>AI Search / GEO</Text>
-            <Text style={[s.cardScore, { color: scoreColor(scores.geo) }]}>{scores.geo}/100</Text>
+        <View style={[st.card, { padding: 10, marginBottom: 6 }]}>
+          <View style={[st.cardH, { marginBottom: 6, paddingBottom: 6 }]}>
+            <Text style={{ fontSize: 11, fontWeight: "bold" }}>AI Search / GEO</Text>
+            <Text style={{ fontSize: 16, fontWeight: "bold", color: sc(scores.geo) }}>{scores.geo}/100</Text>
           </View>
-          <Text style={{ fontSize: 8, color: colors.text2, marginBottom: 10 }}>Visibilite sur ChatGPT, Perplexity, Gemini, Claude, Copilot</Text>
-          {[
-            { name: "GPTBot (ChatGPT)", status: robotsTxt.aiBots.gptbot },
-            { name: "ClaudeBot (Anthropic)", status: robotsTxt.aiBots.claudebot },
-            { name: "PerplexityBot", status: robotsTxt.aiBots.perplexitybot },
-            { name: "Google-Extended (Gemini)", status: robotsTxt.aiBots.googleExtended },
-          ].map((bot, i) => (
-            <View key={i} style={s.tableRow}>
-              <Text style={[s.tableTd, { width: "50%" }]}>{bot.name}</Text>
-              <Text style={[s.badge, bot.status === "allowed" ? s.badgePass : bot.status === "blocked" ? s.badgeFail : s.badgeWarn]}>
-                {bot.status === "allowed" ? "✓ Autorise" : bot.status === "blocked" ? "✗ Bloque" : "⚠ Non mentionne"}
-              </Text>
-            </View>
-          ))}
+          <Text style={{ fontSize: 7, color: c.text2, marginBottom: 4 }}>Visibilite sur ChatGPT, Perplexity, Gemini, Claude, Copilot</Text>
+          <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+            {[
+              { n: "GPTBot", s: robotsTxt.aiBots.gptbot },
+              { n: "ClaudeBot", s: robotsTxt.aiBots.claudebot },
+              { n: "PerplexityBot", s: robotsTxt.aiBots.perplexitybot },
+              { n: "Google-Extended", s: robotsTxt.aiBots.googleExtended },
+            ].map((bot, i) => (
+              <View key={i} style={{ flexDirection: "row", alignItems: "center", width: "50%", paddingVertical: 2 }}>
+                <Text style={{ fontSize: 7, width: "55%" }}>{bot.n}</Text>
+                <Text style={[st.b, bot.s === "allowed" ? st.bp : bot.s === "blocked" ? st.bf : st.bw, { fontSize: 6 }]}>
+                  {bot.s === "allowed" ? "✓ Autorise" : bot.s === "blocked" ? "✗ Bloque" : "⚠ ?"}
+                </Text>
+              </View>
+            ))}
+          </View>
         </View>
 
         {/* Performance */}
-        <View style={s.card}>
-          <View style={s.cardHead}>
-            <Text style={s.cardTitle}>Performance</Text>
-            <Text style={[s.cardScore, { color: scoreColor(scores.performance) }]}>{scores.performance}/100</Text>
+        <View style={[st.card, { padding: 10, marginBottom: 6 }]}>
+          <View style={[st.cardH, { marginBottom: 6, paddingBottom: 6 }]}>
+            <Text style={{ fontSize: 11, fontWeight: "bold" }}>Performance</Text>
+            <Text style={{ fontSize: 16, fontWeight: "bold", color: sc(scores.performance) }}>{scores.performance}/100</Text>
           </View>
-          {[
-            { name: "Temps de reponse", ok: homepage.responseTime < 1500, detail: `${(homepage.responseTime / 1000).toFixed(1)}s` },
-            { name: "Preconnect", ok: homepage.hasPreconnect, detail: homepage.hasPreconnect ? "Detecte" : "Absent" },
-            { name: "Images WebP", ok: homepage.hasWebpImages, detail: homepage.hasWebpImages ? "Oui" : "Non" },
-            { name: "Framework", ok: homepage.jsFramework !== "Inconnu", detail: `${homepage.jsFramework} + ${homepage.cssFramework}` },
-          ].map((row, i) => (
-            <View key={i} style={s.tableRow}>
-              <Text style={[s.tableTd, { width: "30%" }]}>{row.name}</Text>
-              <View style={{ width: "20%" }}><Badge ok={row.ok} /></View>
-              <Text style={[s.tableTd, { width: "50%", color: colors.text2 }]}>{row.detail}</Text>
-            </View>
-          ))}
-        </View>
-
-        {/* Plan d'action */}
-        <SectionHeader num="4" title="Plan d'Action" />
-        <View style={s.tlItem}>
-          <Text style={s.tlTitle}>Semaine 1-2 : Corrections critiques</Text>
-          {criticals.slice(0, 4).map((i, idx) => <Text key={idx} style={s.tlText}>• {i.title}</Text>)}
-        </View>
-        <View style={s.tlItem}>
-          <Text style={s.tlTitle}>Semaine 3-4 : Optimisations importantes</Text>
-          {importants.slice(0, 4).map((i, idx) => <Text key={idx} style={s.tlText}>• {i.title}</Text>)}
-          {importants.length === 0 && <Text style={s.tlText}>• Enrichir le contenu et les signaux E-E-A-T</Text>}
-        </View>
-        <View style={s.tlItem}>
-          <Text style={s.tlTitle}>Mois 2+ : Croissance continue</Text>
-          {recommended.slice(0, 3).map((i, idx) => <Text key={idx} style={s.tlText}>• {i.title}</Text>)}
-          <Text style={s.tlText}>• Monitorer la visibilite IA</Text>
+          <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+            {[
+              { n: "Temps reponse", ok: homepage.responseTime < 1500, d: `${(homepage.responseTime / 1000).toFixed(1)}s` },
+              { n: "Preconnect", ok: homepage.hasPreconnect, d: homepage.hasPreconnect ? "Oui" : "Non" },
+              { n: "Images WebP", ok: homepage.hasWebpImages, d: homepage.hasWebpImages ? "Oui" : "Non" },
+              { n: "Framework", ok: homepage.jsFramework !== "Inconnu", d: `${homepage.jsFramework}` },
+            ].map((r, i) => (
+              <View key={i} style={{ flexDirection: "row", alignItems: "center", width: "50%", paddingVertical: 2 }}>
+                <Text style={{ fontSize: 7, width: "40%" }}>{r.n}</Text>
+                <Text style={[st.b, r.ok ? st.bp : st.bf, { fontSize: 6 }]}>{r.ok ? "✓" : "✗"}</Text>
+                <Text style={{ fontSize: 7, color: c.text2, marginLeft: 4 }}>{r.d}</Text>
+              </View>
+            ))}
+          </View>
         </View>
       </Page>
 
-      {/* PAGE 5: Glossaire + CTA */}
-      <Page size="A4" style={s.page}>
-        <SectionHeader num="5" title="Glossaire SEO" />
-        <View style={s.glossGrid}>
+      {/* ===== PAGE 4: Plan + Glossaire + CTA + Footer ===== */}
+      <Page size="A4" style={st.page}>
+        <Sh n="4" t="Plan d'Action" />
+        <View style={st.tl}>
+          <Text style={st.tlt}>Semaine 1-2 : Corrections critiques</Text>
+          {criticals.length > 0
+            ? criticals.slice(0, 4).map((i, idx) => <Text key={idx} style={st.tlp}>• {i.title}</Text>)
+            : <Text style={st.tlp}>• Aucun probleme critique detecte !</Text>
+          }
+        </View>
+        <View style={st.tl}>
+          <Text style={st.tlt}>Semaine 3-4 : Optimisations importantes</Text>
+          {importants.length > 0
+            ? importants.slice(0, 4).map((i, idx) => <Text key={idx} style={st.tlp}>• {i.title}</Text>)
+            : <Text style={st.tlp}>• Enrichir le contenu et les signaux E-E-A-T</Text>
+          }
+        </View>
+        <View style={st.tl}>
+          <Text style={st.tlt}>Mois 2+ : Croissance continue</Text>
+          {recommended.slice(0, 3).map((i, idx) => <Text key={idx} style={st.tlp}>• {i.title}</Text>)}
+          <Text style={st.tlp}>• Monitorer la visibilite IA avec Otterly.ai ou Peec AI</Text>
+          <Text style={st.tlp}>• Analyser les Core Web Vitals via Google Search Console</Text>
+        </View>
+
+        <Sh n="5" t="Glossaire SEO" />
+        <View style={{ flexDirection: "row", flexWrap: "wrap", marginBottom: 8 }}>
           {[
-            { term: "SEO", def: "Optimiser pour apparaitre en haut de Google." },
-            { term: "GEO", def: "Optimiser pour etre cite par les IA (ChatGPT, Perplexity)." },
-            { term: "E-E-A-T", def: "Experience, Expertise, Autorite, Trust — criteres Google." },
-            { term: "Schema JSON-LD", def: "Code invisible qui aide Google a comprendre le contenu." },
-            { term: "Meta description", def: "Texte sous le titre dans Google, incite au clic." },
-            { term: "Canonical", def: "Dit a Google quelle page est l'originale." },
-            { term: "Sitemap XML", def: "Plan du site pour aider Google a tout indexer." },
-            { term: "robots.txt", def: "Directives pour les robots (Google, ChatGPT, etc.)." },
-            { term: "Alt text", def: "Texte invisible decrivant une image pour le SEO." },
-            { term: "Core Web Vitals", def: "3 metriques Google : vitesse, reactivite, stabilite." },
-            { term: "Backlink", def: "Lien externe = vote de confiance pour Google." },
-            { term: "Rich Snippet", def: "Resultat Google enrichi grace au schema." },
+            { t: "SEO", d: "Optimiser pour apparaitre en haut de Google" },
+            { t: "GEO", d: "Optimiser pour etre cite par les IA" },
+            { t: "E-E-A-T", d: "Experience, Expertise, Autorite, Trust" },
+            { t: "JSON-LD", d: "Code invisible pour Google (FAQ, avis)" },
+            { t: "Meta desc.", d: "Texte sous le titre dans Google" },
+            { t: "Canonical", d: "Indique la page originale a Google" },
+            { t: "Sitemap", d: "Plan du site pour l'indexation" },
+            { t: "robots.txt", d: "Directives pour les robots" },
+            { t: "Alt text", d: "Texte decrivant une image" },
+            { t: "Web Vitals", d: "Metriques Google de vitesse" },
+            { t: "Backlink", d: "Lien externe = vote de confiance" },
+            { t: "Rich Snippet", d: "Resultat Google enrichi" },
           ].map((g, i) => (
-            <View key={i} style={s.glossItem}>
-              <Text style={s.glossTerm}>{g.term}</Text>
-              <Text style={s.glossDef}>{g.def}</Text>
+            <View key={i} style={{ width: "33%", paddingVertical: 2, paddingRight: 6 }}>
+              <Text style={{ fontSize: 7, fontWeight: "bold", color: c.accent2 }}>{g.t}</Text>
+              <Text style={{ fontSize: 6, color: c.text2 }}>{g.d}</Text>
             </View>
           ))}
         </View>
 
         {/* CTA */}
-        <View style={s.cta}>
-          <Text style={s.ctaTitle}>Besoin d&apos;aide pour corriger tout ca ?</Text>
-          <Text style={s.ctaText}>L&apos;equipe ConvertiLab peut prendre en charge toutes les corrections et optimisations identifiees dans cet audit.</Text>
-          <Link src="https://convertilab.com/contact" style={s.ctaBtn}>
+        <View style={{ backgroundColor: "#1a1040", borderRadius: 10, borderWidth: 1, borderColor: c.accent, padding: 18, textAlign: "center", marginTop: 8, alignItems: "center" }}>
+          <Text style={{ fontSize: 14, fontWeight: "bold", color: c.white, marginBottom: 4, textAlign: "center", lineHeight: 1.2 }}>
+            Besoin d&apos;aide pour corriger tout ca ?
+          </Text>
+          <Text style={{ fontSize: 8, color: c.text2, marginBottom: 10, textAlign: "center" }}>
+            L&apos;equipe ConvertiLab peut prendre en charge toutes les corrections et optimisations.
+          </Text>
+          <Link src="https://convertilab.com/contact" style={{ backgroundColor: c.accent, color: c.white, paddingVertical: 7, paddingHorizontal: 20, borderRadius: 7, fontSize: 9, fontWeight: "bold", textDecoration: "none" }}>
             Prendre rendez-vous gratuit
           </Link>
-          <Text style={s.ctaInfo}>convertilab.com • 06 16 47 72 45 • contact@convertilab.com</Text>
+          <View style={{ height: 6 }} />
+          <Text style={{ fontSize: 6, color: c.text3, textAlign: "center" }}>
+            convertilab.com • 06 16 47 72 45 • contact@convertilab.com
+          </Text>
         </View>
 
-        {/* Footer */}
-        <View style={s.footer}>
-          <Text style={{ fontWeight: "bold" }}>Audit SEO realise par ConvertiLab</Text>
-          <Text>Agence Web Paris & Ile-de-France</Text>
-          <Text style={{ marginTop: 6 }}>Document genere le {date} • Ce rapport est confidentiel.</Text>
+        {/* Footer - inline, no separate page */}
+        <View style={{ textAlign: "center", borderTopWidth: 1, borderTopColor: c.border, paddingTop: 8, marginTop: 10, fontSize: 7, color: c.text3 }}>
+          <Text style={{ fontWeight: "bold" }}>Audit SEO realise par ConvertiLab — Agence Web Paris & Ile-de-France</Text>
+          <View style={{ height: 3 }} />
+          <Text>Document genere le {date} • Ce rapport est confidentiel.</Text>
         </View>
       </Page>
     </Document>
