@@ -5,7 +5,8 @@ import { sectors } from "@/data/sectors";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Star, Zap, Shield } from "lucide-react";
+import { ArrowRight, Star, Zap, Shield } from "lucide-react";
+import SolutionsGrid from "./SolutionsGrid";
 
 export const metadata: Metadata = {
   title: "Création Site Web par Secteur d'Activité",
@@ -58,31 +59,7 @@ export default function SolutionsPage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Choisissez votre secteur</h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">Chaque page détaille les fonctionnalités, les études de cas et les tarifs spécifiques à votre métier.</p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sectors.map((sector) => (
-              <Link
-                key={sector.slug}
-                href={`/solutions/${sector.slug}`}
-                className="group bg-white rounded-2xl shadow-md border border-gray-100 p-8 hover:shadow-xl hover:border-purple-200 hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="text-5xl mb-4">{sector.emoji}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                  Site Web {sector.name}
-                </h3>
-                <p className="text-sm text-gray-600 mb-4 leading-relaxed">{sector.description}</p>
-                <ul className="space-y-1.5 mb-6">
-                  {sector.features.slice(0, 3).map((f, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}
-                    </li>
-                  ))}
-                </ul>
-                <span className="inline-flex items-center gap-1 text-sm font-semibold text-purple-600 group-hover:gap-2 transition-all">
-                  Découvrir <ArrowRight className="w-4 h-4" />
-                </span>
-              </Link>
-            ))}
-          </div>
+          <SolutionsGrid sectors={sectors.map(s => ({ slug: s.slug, name: s.name, emoji: s.emoji, description: s.description, features: s.features }))} />
         </div>
       </section>
 
