@@ -2810,6 +2810,2526 @@ export const sectors: Sector[] = [
       },
     ],
   },
+  {
+    slug: "veterinaire",
+    name: "Vétérinaire",
+    emoji: "🐾",
+    description:
+      "Rassurez les propriétaires d'animaux avec un site professionnel présentant vos services, vos horaires d'urgence et la prise de rendez-vous en ligne.",
+    painPoints: [
+      "Pas de prise de RDV en ligne",
+      "Horaires d'urgence introuvables",
+      "Site vieillissant qui ne rassure pas",
+      "Faible visibilité locale sur Google",
+    ],
+    solutions: [
+      "Site moderne avec réservation en ligne",
+      "Page urgences et horaires claires",
+      "Fiches services détaillées par animal",
+      "SEO local vétérinaire optimisé",
+    ],
+    features: [
+      "Prise de RDV en ligne",
+      "Page urgences vétérinaires",
+      "Fiches par type d'animal",
+      "Galerie photos de la clinique",
+      "Carte Google Maps intégrée",
+      "Blog conseils santé animale",
+    ],
+    cta: "Créer le site de ma clinique vétérinaire",
+    faqItems: [
+      {
+        question: "Combien coûte un site web pour un vétérinaire ?",
+        answer:
+          "Nos sites pour vétérinaires démarrent à 500€. Ce tarif inclut la prise de rendez-vous en ligne, les fiches services, la page urgences, l'intégration Google Maps et un an d'hébergement. Un blog santé animale ou un espace client peut être ajouté en option.",
+      },
+      {
+        question: "Les clients pourront-ils prendre RDV en ligne ?",
+        answer:
+          "Oui, nous intégrons un système de réservation en ligne permettant à vos clients de choisir le créneau, le type de consultation et l'animal concerné. Vous recevez une notification et pouvez gérer votre planning facilement.",
+      },
+      {
+        question: "Peut-on afficher les urgences et les gardes ?",
+        answer:
+          "Absolument. Une page dédiée aux urgences affiche clairement vos horaires de garde, le numéro à appeler et les consignes. Cette page est optimisée pour apparaître en premier sur Google quand un propriétaire cherche un vétérinaire en urgence.",
+      },
+      {
+        question: "Le site sera-t-il visible sur Google Maps ?",
+        answer:
+          "Oui, nous optimisons votre fiche Google My Business et le SEO local pour que votre clinique apparaisse dans les résultats de recherche locaux. Les propriétaires d'animaux près de chez vous vous trouveront facilement.",
+      },
+    ],
+    caseStudy: {
+      client: "Clinique Vétérinaire des Tilleuls",
+      sector: "Vétérinaire — Nantes",
+      challenge:
+        "La clinique recevait de nombreux appels pour des renseignements basiques (horaires, tarifs). Le site existant était obsolète et ne proposait aucune prise de RDV en ligne, surchargeant l'accueil téléphonique.",
+      solution:
+        "Nous avons créé un site moderne avec prise de RDV en ligne, fiches détaillées par service, page urgences et blog santé animale. Le SEO local a été optimisé sur 'vétérinaire Nantes'.",
+      results: [
+        "+80% de RDV pris en ligne en 4 mois",
+        "-50% d'appels téléphoniques pour renseignements",
+        "1ère page Google sur 'vétérinaire Nantes'",
+        "+35% de nouveaux clients en 6 mois",
+      ],
+      testimonial:
+        "Le site a transformé notre quotidien. Les clients prennent RDV en ligne, on passe moins de temps au téléphone et plus de temps avec les animaux. C'est exactement ce qu'il nous fallait.",
+      author: "Dr. Sophie Martin",
+      role: "Directrice, Clinique des Tilleuls",
+      photo: "/images/testimonials/veterinaire.webp",
+    },
+    stats: [
+      {
+        value: "78%",
+        label: "des propriétaires d'animaux cherchent un vétérinaire sur Google",
+      },
+      {
+        value: "4x",
+        label: "plus de RDV avec un système de réservation en ligne",
+      },
+      {
+        value: "65%",
+        label: "des urgences vétérinaires commencent par une recherche en ligne",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre clinique",
+        desc: "Nous étudions vos services, votre clientèle, votre zone de chalandise et vos besoins spécifiques pour concevoir un site adapté.",
+      },
+      {
+        step: "02",
+        title: "Design & fiches services",
+        desc: "Création d'un design rassurant et professionnel avec fiches détaillées par type d'animal et de consultation.",
+      },
+      {
+        step: "03",
+        title: "RDV en ligne & SEO local",
+        desc: "Intégration du système de prise de rendez-vous, optimisation Google My Business et référencement local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & accompagnement",
+        desc: "Mise en ligne, formation à la gestion du planning et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "notaire",
+    name: "Notaire",
+    emoji: "📜",
+    description:
+      "Modernisez l'image de votre étude notariale avec un site sobre et professionnel qui rassure vos clients et facilite la prise de contact.",
+    painPoints: [
+      "Image en ligne dépassée",
+      "Difficulté à attirer de nouveaux clients",
+      "Pas de présentation claire des services",
+      "Aucun formulaire de prise de contact",
+    ],
+    solutions: [
+      "Site premium qui inspire la confiance",
+      "Pages par domaine d'intervention",
+      "Formulaire de contact sécurisé",
+      "Blog d'actualité juridique et fiscale",
+    ],
+    features: [
+      "Design sobre et institutionnel",
+      "Pages par spécialité notariale",
+      "Formulaire de prise de RDV",
+      "Blog actualité juridique",
+      "Présentation de l'équipe",
+      "SEO local étude notariale",
+    ],
+    cta: "Créer le site de mon étude notariale",
+    faqItems: [
+      {
+        question: "Combien coûte un site web pour une étude notariale ?",
+        answer:
+          "Un site vitrine pour notaire démarre à 500€. Ce prix inclut un design professionnel, les pages par domaine d'intervention, le formulaire de contact sécurisé et un an d'hébergement. Un blog juridique ou un espace documentaire client peut être ajouté en option.",
+      },
+      {
+        question: "Le site respectera-t-il les règles de la profession ?",
+        answer:
+          "Oui, nous connaissons les obligations déontologiques des notaires en matière de communication. Le site respectera les règles du Conseil Supérieur du Notariat concernant les mentions obligatoires et la présentation de l'étude.",
+      },
+      {
+        question: "Peut-on présenter chaque domaine d'intervention ?",
+        answer:
+          "Absolument. Immobilier, succession, droit de la famille, droit des sociétés : chaque domaine aura sa propre page optimisée pour le référencement, avec une explication claire et accessible pour vos clients.",
+      },
+      {
+        question: "Les clients pourront-ils prendre RDV en ligne ?",
+        answer:
+          "Oui, nous intégrons un formulaire de prise de rendez-vous sécurisé. Vos clients choisissent le type d'acte concerné et le créneau souhaité. Vous recevez la demande par email et confirmez le rendez-vous.",
+      },
+    ],
+    caseStudy: {
+      client: "Étude Notariale Dumont & Associés",
+      sector: "Notaire — Lyon 6e",
+      challenge:
+        "L'étude n'avait aucun site web et recevait peu de nouveaux clients hors recommandation. Les jeunes acquéreurs immobiliers ne trouvaient pas l'étude sur Google.",
+      solution:
+        "Création d'un site sobre et professionnel avec pages par domaine d'intervention, présentation de l'équipe, formulaire de contact sécurisé et blog juridique. Le SEO local a été optimisé sur 'notaire Lyon 6'.",
+      results: [
+        "+55% de demandes de RDV en 3 mois",
+        "1ère page Google sur 'notaire Lyon 6'",
+        "+30% de nouveaux clients primo-accédants",
+        "85% de taux de satisfaction client",
+      ],
+      testimonial:
+        "Notre site reflète enfin le sérieux de notre étude. Les clients nous trouvent facilement et prennent RDV en ligne. C'est un vrai atout pour notre activité.",
+      author: "Maître Claire Dumont",
+      role: "Notaire associée, Étude Dumont & Associés",
+      photo: "/images/testimonials/notaire.webp",
+    },
+    stats: [
+      {
+        value: "68%",
+        label: "des particuliers cherchent un notaire sur internet",
+      },
+      {
+        value: "2.5x",
+        label: "plus de prises de contact avec un site professionnel",
+      },
+      {
+        value: "82%",
+        label: "des primo-accédants comparent les études notariales en ligne",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Découverte de votre étude",
+        desc: "Nous analysons vos domaines d'intervention, votre clientèle cible et votre positionnement pour créer un site à votre image.",
+      },
+      {
+        step: "02",
+        title: "Design & contenu juridique",
+        desc: "Création d'un design sobre et professionnel avec des pages claires par domaine d'intervention et une présentation de l'équipe.",
+      },
+      {
+        step: "03",
+        title: "Formulaire & SEO local",
+        desc: "Mise en place du formulaire de contact sécurisé, optimisation Google My Business et référencement local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & suivi",
+        desc: "Mise en ligne, formation à la gestion du blog et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "psychologue-therapeute",
+    name: "Psychologue / Thérapeute",
+    emoji: "🧠",
+    description:
+      "Créez un espace en ligne rassurant et bienveillant pour vos patients, avec prise de RDV en ligne et présentation de vos spécialités thérapeutiques.",
+    painPoints: [
+      "Difficile de se faire connaître sans publicité",
+      "Pas de prise de RDV en ligne",
+      "Absence de présentation claire des approches",
+      "Image trop clinique ou pas assez rassurante",
+    ],
+    solutions: [
+      "Site chaleureux qui met en confiance",
+      "Prise de RDV en ligne simple",
+      "Pages par spécialité thérapeutique",
+      "Blog bien-être et ressources",
+    ],
+    features: [
+      "Design apaisant et bienveillant",
+      "Prise de RDV en ligne",
+      "Pages par approche thérapeutique",
+      "Section tarifs et remboursements",
+      "Blog ressources et articles",
+      "SEO local psychologue",
+    ],
+    cta: "Créer le site de mon cabinet",
+    faqItems: [
+      {
+        question: "Combien coûte un site web pour un psychologue ?",
+        answer:
+          "Nos sites pour psychologues et thérapeutes démarrent à 500€. Ce prix inclut un design apaisant, les pages par spécialité, la prise de RDV en ligne, la section tarifs et un an d'hébergement.",
+      },
+      {
+        question: "Le site sera-t-il rassurant pour mes patients ?",
+        answer:
+          "Oui, nous concevons des sites avec des couleurs douces, une typographie apaisante et un ton bienveillant. L'objectif est que vos futurs patients se sentent en confiance dès la première visite sur votre site.",
+      },
+      {
+        question: "Peut-on présenter les différentes approches thérapeutiques ?",
+        answer:
+          "Absolument. TCC, psychanalyse, EMDR, thérapie de couple : chaque approche aura sa propre page avec une explication accessible. Cela rassure les patients et améliore votre référencement.",
+      },
+      {
+        question: "Les patients pourront-ils prendre RDV en ligne ?",
+        answer:
+          "Oui, nous intégrons un système de prise de rendez-vous simple et discret. Vos patients choisissent le type de consultation (individuelle, couple, enfant) et le créneau. Vous gérez votre planning en toute simplicité.",
+      },
+    ],
+    caseStudy: {
+      client: "Cabinet Émilie Renard — Psychologue clinicienne",
+      sector: "Psychologue — Bordeaux",
+      challenge:
+        "Émilie venait de s'installer et n'avait aucune visibilité en ligne. Son planning était vide les 3 premiers mois. Elle ne savait pas comment se faire connaître sans publicité agressive.",
+      solution:
+        "Nous avons créé un site apaisant avec présentation de ses spécialités (anxiété, burnout, thérapie de couple), prise de RDV en ligne, blog bien-être et optimisation SEO local sur 'psychologue Bordeaux'.",
+      results: [
+        "Planning rempli à 90% en 4 mois",
+        "1ère page Google sur 'psychologue Bordeaux centre'",
+        "+120 RDV pris en ligne en 6 mois",
+        "4.9/5 de satisfaction patients",
+      ],
+      testimonial:
+        "Mon site est devenu mon meilleur allié. Les patients me disent qu'ils m'ont choisie parce que le site les a rassurés. ConvertiLab a compris l'importance du ton et de l'image pour ma profession.",
+      author: "Émilie Renard",
+      role: "Psychologue clinicienne, Bordeaux",
+      photo: "/images/testimonials/psychologue.webp",
+    },
+    stats: [
+      {
+        value: "74%",
+        label: "des patients cherchent un psychologue sur Google",
+      },
+      {
+        value: "3x",
+        label: "plus de prises de RDV avec un site professionnel",
+      },
+      {
+        value: "89%",
+        label: "des patients consultent le site avant de prendre RDV",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Découverte de votre pratique",
+        desc: "Nous échangeons sur vos spécialités, votre approche thérapeutique et votre clientèle cible pour créer un site qui vous ressemble.",
+      },
+      {
+        step: "02",
+        title: "Design apaisant & contenu",
+        desc: "Création d'un design bienveillant avec des pages claires par spécialité et un ton rassurant adapté à votre profession.",
+      },
+      {
+        step: "03",
+        title: "RDV en ligne & référencement",
+        desc: "Intégration de la prise de rendez-vous, optimisation Google My Business et SEO local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & accompagnement",
+        desc: "Mise en ligne, formation à la gestion du blog et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "agence-immobiliere-luxe",
+    name: "Agence immobilière de luxe",
+    emoji: "🏛️",
+    description:
+      "Présentez vos biens d'exception avec un site haut de gamme qui sublime chaque propriété et attire une clientèle exigeante.",
+    painPoints: [
+      "Site qui ne reflète pas le standing des biens",
+      "Pas de présentation immersive des propriétés",
+      "Difficulté à toucher les acheteurs internationaux",
+      "Concurrence forte des portails immobiliers",
+    ],
+    solutions: [
+      "Site luxe avec design sur-mesure",
+      "Pages propriétés immersives avec galeries HD",
+      "Version multilingue (FR/EN)",
+      "SEO premium immobilier de prestige",
+    ],
+    features: [
+      "Design haut de gamme et élégant",
+      "Galeries photos plein écran HD",
+      "Fiches propriétés détaillées",
+      "Visite virtuelle intégrée",
+      "Formulaire de contact qualifié",
+      "SEO immobilier de luxe",
+    ],
+    cta: "Créer le site de mon agence de prestige",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour une agence immobilière de luxe ?",
+        answer:
+          "Un site sur-mesure pour l'immobilier de luxe démarre à 1500€. Ce prix inclut un design premium, les pages propriétés immersives, les galeries HD, le formulaire de contact qualifié et un an d'hébergement. La version multilingue et les visites virtuelles sont en option.",
+      },
+      {
+        question: "Le site mettra-t-il en valeur nos biens d'exception ?",
+        answer:
+          "Oui, chaque propriété bénéficie d'une page dédiée avec galerie photos plein écran, description premium, plan interactif et possibilité d'intégrer une visite virtuelle 360°. Le design est pensé pour sublimer chaque bien.",
+      },
+      {
+        question: "Peut-on avoir un site multilingue ?",
+        answer:
+          "Absolument. Nous créons des sites bilingues (français/anglais) voire trilingues pour toucher la clientèle internationale. Chaque version est optimisée pour le SEO dans la langue concernée.",
+      },
+      {
+        question: "Comment se démarquer des portails immobiliers classiques ?",
+        answer:
+          "Votre site offrira une expérience unique que les portails ne peuvent pas proposer : un design sur-mesure, une présentation immersive de chaque bien, votre identité de marque et un storytelling qui crée l'émotion chez l'acheteur.",
+      },
+    ],
+    caseStudy: {
+      client: "Prestige Properties Paris",
+      sector: "Immobilier de luxe — Paris 16e",
+      challenge:
+        "L'agence avait un site daté qui ne reflétait pas le standing de ses biens à 2M€+. Les acheteurs internationaux ne trouvaient pas l'agence et les mandats exclusifs étaient difficiles à obtenir.",
+      solution:
+        "Création d'un site haut de gamme bilingue FR/EN avec pages propriétés immersives, galeries plein écran, visites virtuelles intégrées et SEO premium sur 'immobilier luxe Paris 16'.",
+      results: [
+        "+45% de demandes qualifiées en 3 mois",
+        "3 mandats exclusifs obtenus grâce au site",
+        "+60% de visiteurs internationaux",
+        "Temps moyen sur le site : 4min30",
+      ],
+      testimonial:
+        "Notre site est enfin à la hauteur de nos biens. Les clients nous disent qu'ils ont été séduits avant même la visite. ConvertiLab a compris l'univers du luxe.",
+      author: "Alexandre de Montfort",
+      role: "Directeur, Prestige Properties Paris",
+      photo: "/images/testimonials/immobilier-luxe.webp",
+    },
+    stats: [
+      {
+        value: "92%",
+        label: "des acheteurs de biens de luxe commencent leur recherche en ligne",
+      },
+      {
+        value: "5x",
+        label: "plus de temps passé sur un site immobilier avec galeries immersives",
+      },
+      {
+        value: "67%",
+        label: "des acquéreurs internationaux consultent le site avant de contacter l'agence",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Immersion dans votre univers",
+        desc: "Nous analysons votre positionnement, vos biens phares et votre clientèle cible pour créer un site qui incarne le prestige de votre agence.",
+      },
+      {
+        step: "02",
+        title: "Design luxe & pages propriétés",
+        desc: "Création d'un design haut de gamme avec galeries plein écran, typographie élégante et pages propriétés immersives.",
+      },
+      {
+        step: "03",
+        title: "Multilingue & SEO premium",
+        desc: "Traduction professionnelle, optimisation SEO immobilier de luxe et intégration des visites virtuelles.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à l'ajout de propriétés et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "cave-a-vin-caviste",
+    name: "Cave à vin / Caviste",
+    emoji: "🍷",
+    description:
+      "Mettez en valeur votre sélection de vins avec un site élégant proposant catalogue en ligne, conseils d'accords mets-vins et événements dégustation.",
+    painPoints: [
+      "Catalogue de vins non consultable en ligne",
+      "Pas de visibilité sur les événements dégustation",
+      "Difficulté à fidéliser la clientèle",
+      "Concurrence des sites de vente en ligne",
+    ],
+    solutions: [
+      "Catalogue de vins élégant en ligne",
+      "Page événements et dégustations",
+      "Newsletter et programme de fidélité",
+      "Blog accords mets-vins et conseils",
+    ],
+    features: [
+      "Catalogue de vins avec filtres",
+      "Page événements dégustation",
+      "Blog accords mets-vins",
+      "Newsletter intégrée",
+      "Galerie photos de la cave",
+      "SEO local caviste",
+    ],
+    cta: "Créer le site de ma cave à vin",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un caviste ?",
+        answer:
+          "Un site pour caviste démarre à 500€. Ce prix inclut le catalogue de vins en ligne, la page événements, le blog accords mets-vins et un an d'hébergement. La vente en ligne avec paiement sécurisé peut être ajoutée en option.",
+      },
+      {
+        question: "Peut-on présenter notre catalogue de vins en ligne ?",
+        answer:
+          "Oui, nous créons un catalogue élégant avec fiches détaillées par vin (cépage, appellation, notes de dégustation, prix). Vos clients peuvent filtrer par région, couleur ou prix. Vous mettez à jour le catalogue facilement.",
+      },
+      {
+        question: "Peut-on promouvoir nos événements dégustation ?",
+        answer:
+          "Absolument. Une page dédiée présente vos prochains événements avec inscription en ligne. Nous intégrons aussi une newsletter pour informer vos clients des nouveautés et dégustations à venir.",
+      },
+      {
+        question: "Le blog peut-il aider mon référencement ?",
+        answer:
+          "Oui, un blog avec des articles sur les accords mets-vins, les régions viticoles et les conseils de dégustation attire du trafic qualifié et renforce votre expertise aux yeux de Google et de vos clients.",
+      },
+    ],
+    caseStudy: {
+      client: "La Cave du Marais",
+      sector: "Caviste — Paris 3e",
+      challenge:
+        "La cave avait une clientèle fidèle de quartier mais n'arrivait pas à attirer de nouveaux clients. Les événements dégustation étaient peu connus et le catalogue de 400 références n'était pas consultable en ligne.",
+      solution:
+        "Création d'un site élégant avec catalogue de vins filtrable, page événements avec inscription, blog accords mets-vins et newsletter mensuelle. SEO local optimisé sur 'caviste Paris 3'.",
+      results: [
+        "+70% de participants aux dégustations en 3 mois",
+        "1ère page Google sur 'caviste Paris 3'",
+        "+45% de nouveaux clients en 6 mois",
+        "600 abonnés newsletter en 4 mois",
+      ],
+      testimonial:
+        "Le site a donné une nouvelle dimension à ma cave. Les dégustations affichent complet et je touche une clientèle que je n'aurais jamais atteinte sans présence en ligne.",
+      author: "François Leblanc",
+      role: "Gérant, La Cave du Marais",
+      photo: "/images/testimonials/caviste.webp",
+    },
+    stats: [
+      {
+        value: "62%",
+        label: "des amateurs de vin recherchent un caviste sur Google",
+      },
+      {
+        value: "3x",
+        label: "plus de participants aux événements avec promotion en ligne",
+      },
+      {
+        value: "71%",
+        label: "des clients consultent le catalogue avant de se déplacer",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Découverte de votre cave",
+        desc: "Nous analysons votre sélection, vos événements, votre clientèle et votre positionnement pour concevoir un site qui vous ressemble.",
+      },
+      {
+        step: "02",
+        title: "Design & catalogue en ligne",
+        desc: "Création d'un design élégant avec un catalogue de vins filtrable, des fiches détaillées et une galerie photos de la cave.",
+      },
+      {
+        step: "03",
+        title: "Événements & newsletter",
+        desc: "Mise en place de la page événements avec inscription, du blog et de la newsletter pour fidéliser votre clientèle.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à la gestion du catalogue et des événements, suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "pizzeria-fast-food",
+    name: "Pizzeria / Fast-food",
+    emoji: "🍕",
+    description:
+      "Boostez vos commandes avec un site appétissant proposant menu en ligne, commande à emporter et livraison pour votre pizzeria ou fast-food.",
+    painPoints: [
+      "Trop dépendant des plateformes de livraison",
+      "Commissions élevées sur Uber Eats / Deliveroo",
+      "Menu non consultable en ligne",
+      "Pas de commande directe possible",
+    ],
+    solutions: [
+      "Site avec commande en ligne directe",
+      "Menu digital avec photos appétissantes",
+      "Système click & collect intégré",
+      "SEO local pour livraison de proximité",
+    ],
+    features: [
+      "Menu digital avec photos",
+      "Commande en ligne & click and collect",
+      "Intégration paiement en ligne",
+      "Zone de livraison affichée",
+      "Promotions et offres du moment",
+      "SEO local pizzeria",
+    ],
+    cta: "Créer le site de ma pizzeria",
+    faqItems: [
+      {
+        question: "Combien coûte un site de commande en ligne pour une pizzeria ?",
+        answer:
+          "Un site avec commande en ligne pour pizzeria démarre à 800€. Ce prix inclut le menu digital, le système de commande, le paiement en ligne sécurisé, le click & collect et un an d'hébergement. Vous économisez les commissions des plateformes de livraison.",
+      },
+      {
+        question: "Peut-on se passer d'Uber Eats et Deliveroo ?",
+        answer:
+          "Votre site vous permet de recevoir des commandes directement sans commission. Vous gardez 100% de vos marges. Beaucoup de nos clients réduisent progressivement leur dépendance aux plateformes grâce à leur propre site.",
+      },
+      {
+        question: "Les clients peuvent-ils payer en ligne ?",
+        answer:
+          "Oui, nous intégrons un système de paiement sécurisé (carte bancaire). Vos clients commandent et paient en ligne, vous recevez la commande instantanément et préparez la commande.",
+      },
+      {
+        question: "Peut-on afficher la zone de livraison ?",
+        answer:
+          "Absolument. Une carte interactive affiche votre zone de livraison. Le client entre son adresse et voit immédiatement s'il peut être livré et en combien de temps.",
+      },
+    ],
+    caseStudy: {
+      client: "Pizza Napoli Express",
+      sector: "Pizzeria — Marseille 6e",
+      challenge:
+        "La pizzeria payait 30% de commission sur chaque commande Uber Eats. Le propriétaire voulait recevoir des commandes directes mais n'avait aucun site web.",
+      solution:
+        "Création d'un site de commande en ligne avec menu photos, paiement sécurisé, click & collect et zone de livraison. SEO local sur 'pizzeria livraison Marseille 6'. Campagne flyers avec QR code vers le site.",
+      results: [
+        "+200 commandes directes/mois en 3 mois",
+        "12 000€ de commissions économisées par an",
+        "1ère page Google sur 'pizza livraison Marseille 6'",
+        "+25% de panier moyen vs plateformes",
+      ],
+      testimonial:
+        "Avant, je donnais 30% à Uber Eats. Maintenant, la moitié de mes commandes passent par mon site. J'ai récupéré mes marges et mes clients sont contents de commander directement.",
+      author: "Karim Bouzid",
+      role: "Gérant, Pizza Napoli Express",
+      photo: "/images/testimonials/pizzeria.webp",
+    },
+    stats: [
+      {
+        value: "30%",
+        label: "de commission économisée en moyenne sur les plateformes",
+      },
+      {
+        value: "2x",
+        label: "plus de panier moyen sur un site propre vs plateformes",
+      },
+      {
+        value: "76%",
+        label: "des clients préfèrent commander directement au restaurant",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre carte",
+        desc: "Nous étudions votre menu, vos prix, votre zone de livraison et vos objectifs pour concevoir un site de commande performant.",
+      },
+      {
+        step: "02",
+        title: "Menu digital & design",
+        desc: "Création d'un menu appétissant avec photos, catégories, suppléments et options. Design mobile-first pour commander facilement.",
+      },
+      {
+        step: "03",
+        title: "Commande & paiement",
+        desc: "Intégration du système de commande, du paiement en ligne sécurisé, du click & collect et de la zone de livraison.",
+      },
+      {
+        step: "04",
+        title: "Lancement & promotion",
+        desc: "Mise en ligne, création de QR codes pour vos flyers et emballages, et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "hotel-chambre-hotes",
+    name: "Hôtel / Chambre d'hôtes",
+    emoji: "🏨",
+    description:
+      "Attirez des réservations directes avec un site immersif présentant vos chambres, vos tarifs et votre environnement pour réduire la dépendance à Booking.",
+    painPoints: [
+      "Trop dépendant de Booking et Airbnb",
+      "Commissions de 15-20% sur chaque réservation",
+      "Pas de réservation directe possible",
+      "Site qui ne met pas en valeur l'établissement",
+    ],
+    solutions: [
+      "Site immersif avec réservation directe",
+      "Galeries photos immersives des chambres",
+      "Moteur de réservation intégré",
+      "SEO local hôtellerie optimisé",
+    ],
+    features: [
+      "Galeries photos immersives",
+      "Moteur de réservation en ligne",
+      "Fiches chambres avec tarifs",
+      "Page activités et environs",
+      "Avis clients intégrés",
+      "SEO local hôtel",
+    ],
+    cta: "Créer le site de mon établissement",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un hôtel ou une chambre d'hôtes ?",
+        answer:
+          "Un site avec réservation en ligne démarre à 800€. Ce prix inclut les galeries photos, les fiches chambres, le moteur de réservation, la page activités et un an d'hébergement. Vous économisez les commissions des OTA (Booking, Airbnb).",
+      },
+      {
+        question: "Peut-on se passer de Booking ?",
+        answer:
+          "Votre site vous permet de recevoir des réservations directes sans commission. Nos clients réduisent en moyenne de 40% leur dépendance aux OTA après 6 mois. L'objectif est un mix sain entre réservations directes et plateformes.",
+      },
+      {
+        question: "Le site aura-t-il un système de réservation ?",
+        answer:
+          "Oui, nous intégrons un moteur de réservation permettant de choisir les dates, le type de chambre et de payer en ligne. Vous gérez vos disponibilités et tarifs depuis un panneau d'administration simple.",
+      },
+      {
+        question: "Peut-on mettre en avant les activités de la région ?",
+        answer:
+          "Absolument. Une page dédiée présente les activités, restaurants et sites touristiques autour de votre établissement. C'est un argument de vente puissant et un excellent levier SEO.",
+      },
+    ],
+    caseStudy: {
+      client: "Le Mas des Oliviers",
+      sector: "Chambre d'hôtes — Luberon, Provence",
+      challenge:
+        "Le mas payait 18% de commission à Booking sur chaque réservation. Le site existant était un simple blog sans réservation en ligne et ne reflétait pas le charme du lieu.",
+      solution:
+        "Création d'un site immersif avec galeries photos professionnelles, fiches chambres, moteur de réservation directe, page activités Luberon et SEO optimisé sur 'chambre d'hôtes Luberon'.",
+      results: [
+        "60% de réservations directes en 6 mois",
+        "8 000€ de commissions économisées par an",
+        "1ère page Google sur 'chambre d'hôtes Luberon'",
+        "Taux d'occupation +20% en basse saison",
+      ],
+      testimonial:
+        "Les clients nous disent qu'ils ont réservé directement après avoir vu notre site. Les photos et la page sur le Luberon font rêver. On a réduit notre dépendance à Booking de moitié.",
+      author: "Isabelle & Pierre Roux",
+      role: "Propriétaires, Le Mas des Oliviers",
+      photo: "/images/testimonials/hotel.webp",
+    },
+    stats: [
+      {
+        value: "18%",
+        label: "de commission économisée en moyenne par réservation directe",
+      },
+      {
+        value: "3x",
+        label: "plus de réservations directes avec un site immersif",
+      },
+      {
+        value: "85%",
+        label: "des voyageurs visitent le site de l'hôtel avant de réserver",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Découverte de votre établissement",
+        desc: "Nous visitons (ou échangeons en visio) pour comprendre l'ambiance, les chambres, les atouts et la clientèle cible de votre établissement.",
+      },
+      {
+        step: "02",
+        title: "Design immersif & galeries",
+        desc: "Création d'un design qui fait voyager avec galeries plein écran, fiches chambres détaillées et page activités de la région.",
+      },
+      {
+        step: "03",
+        title: "Réservation & SEO",
+        desc: "Intégration du moteur de réservation, optimisation SEO local et connexion avec votre channel manager si nécessaire.",
+      },
+      {
+        step: "04",
+        title: "Lancement & accompagnement",
+        desc: "Mise en ligne, formation à la gestion des disponibilités et tarifs, suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "creche-garde-enfants",
+    name: "Crèche / Garde d'enfants",
+    emoji: "👶",
+    description:
+      "Rassurez les parents avec un site chaleureux présentant votre projet pédagogique, votre équipe et un formulaire de pré-inscription en ligne.",
+    painPoints: [
+      "Les parents ne trouvent pas la crèche en ligne",
+      "Pas de pré-inscription en ligne",
+      "Projet pédagogique non communiqué",
+      "Difficulté à se démarquer des autres structures",
+    ],
+    solutions: [
+      "Site rassurant avec galerie et équipe",
+      "Formulaire de pré-inscription en ligne",
+      "Page projet pédagogique détaillée",
+      "SEO local crèche et garde d'enfants",
+    ],
+    features: [
+      "Design chaleureux et coloré",
+      "Page projet pédagogique",
+      "Présentation de l'équipe",
+      "Formulaire de pré-inscription",
+      "Galerie photos des locaux",
+      "SEO local crèche",
+    ],
+    cta: "Créer le site de ma crèche",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour une crèche ?",
+        answer:
+          "Un site pour crèche ou structure de garde d'enfants démarre à 500€. Ce prix inclut un design chaleureux, la page projet pédagogique, la présentation de l'équipe, le formulaire de pré-inscription et un an d'hébergement.",
+      },
+      {
+        question: "Les parents pourront-ils pré-inscrire leur enfant en ligne ?",
+        answer:
+          "Oui, un formulaire de pré-inscription détaillé permet aux parents de soumettre leur demande en ligne (âge de l'enfant, dates souhaitées, besoins spécifiques). Vous recevez les demandes par email et pouvez les traiter efficacement.",
+      },
+      {
+        question: "Peut-on présenter notre projet pédagogique ?",
+        answer:
+          "Absolument. Une page dédiée présente votre approche pédagogique (Montessori, Reggio Emilia, etc.), vos valeurs, votre programme d'activités et vos engagements. C'est un argument décisif pour les parents.",
+      },
+      {
+        question: "Le site sera-t-il rassurant pour les parents ?",
+        answer:
+          "Oui, le design est pensé pour inspirer confiance : photos des locaux lumineux, présentation de l'équipe avec parcours, témoignages de parents et informations transparentes sur les tarifs et les horaires.",
+      },
+    ],
+    caseStudy: {
+      client: "Les Petits Explorateurs",
+      sector: "Micro-crèche — Toulouse",
+      challenge:
+        "La micro-crèche venait d'ouvrir et avait du mal à remplir ses 12 places. Les parents du quartier ne savaient pas qu'elle existait et les inscriptions se faisaient uniquement par téléphone.",
+      solution:
+        "Création d'un site chaleureux avec projet pédagogique Montessori, galerie photos des locaux, présentation de l'équipe, formulaire de pré-inscription et SEO local sur 'crèche Toulouse'.",
+      results: [
+        "12 places remplies en 2 mois",
+        "Liste d'attente de 15 familles en 4 mois",
+        "1ère page Google sur 'micro-crèche Toulouse'",
+        "+90% de pré-inscriptions via le site",
+      ],
+      testimonial:
+        "Le site a été notre meilleur investissement. Les parents nous ont découverts en ligne et ont été rassurés par la présentation de notre projet. On a une liste d'attente maintenant !",
+      author: "Marie Dupont",
+      role: "Directrice, Les Petits Explorateurs",
+      photo: "/images/testimonials/creche.webp",
+    },
+    stats: [
+      {
+        value: "83%",
+        label: "des parents cherchent une crèche sur internet",
+      },
+      {
+        value: "4x",
+        label: "plus de pré-inscriptions avec un formulaire en ligne",
+      },
+      {
+        value: "91%",
+        label: "des parents consultent le site avant de visiter la crèche",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Découverte de votre structure",
+        desc: "Nous échangeons sur votre projet pédagogique, votre équipe, vos locaux et votre positionnement pour concevoir un site adapté.",
+      },
+      {
+        step: "02",
+        title: "Design chaleureux & contenu",
+        desc: "Création d'un design coloré et rassurant avec la page projet pédagogique, la présentation de l'équipe et la galerie photos.",
+      },
+      {
+        step: "03",
+        title: "Pré-inscription & SEO",
+        desc: "Mise en place du formulaire de pré-inscription, optimisation Google My Business et référencement local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & suivi",
+        desc: "Mise en ligne, formation à la gestion des demandes et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "demenageur",
+    name: "Déménageur",
+    emoji: "📦",
+    description:
+      "Générez des demandes de devis qualifiées grâce à un site professionnel avec formulaire de devis en ligne, zones d'intervention et témoignages clients.",
+    painPoints: [
+      "Peu de demandes de devis en dehors du bouche-à-oreille",
+      "Concurrence forte des plateformes de devis",
+      "Pas de site ou site très basique",
+      "Difficulté à rassurer les prospects",
+    ],
+    solutions: [
+      "Site pro avec formulaire de devis en ligne",
+      "Page zones d'intervention détaillée",
+      "Témoignages et avis clients mis en avant",
+      "SEO local déménagement optimisé",
+    ],
+    features: [
+      "Formulaire de devis en ligne détaillé",
+      "Page services (particulier, entreprise, piano...)",
+      "Zones d'intervention avec carte",
+      "Galerie photos de réalisations",
+      "Avis clients et témoignages",
+      "SEO local déménageur",
+    ],
+    cta: "Créer le site de mon entreprise de déménagement",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un déménageur ?",
+        answer:
+          "Un site vitrine pour déménageur démarre à 500€. Ce prix inclut le formulaire de devis en ligne, les pages services, la zone d'intervention, les témoignages et un an d'hébergement.",
+      },
+      {
+        question: "Le formulaire de devis est-il détaillé ?",
+        answer:
+          "Oui, le formulaire permet au client de préciser le volume, les étages, la distance, les objets spéciaux (piano, coffre-fort) et la date souhaitée. Vous recevez des demandes qualifiées avec toutes les informations nécessaires pour chiffrer.",
+      },
+      {
+        question: "Peut-on afficher nos zones d'intervention ?",
+        answer:
+          "Absolument. Une carte interactive affiche vos zones de départ et d'arrivée. Cela rassure le client et améliore votre référencement local sur les villes que vous desservez.",
+      },
+      {
+        question: "Comment se démarquer des plateformes de devis en ligne ?",
+        answer:
+          "Votre site met en avant votre expertise, vos témoignages et votre professionnalisme. Contrairement aux plateformes, vous n'êtes pas en concurrence directe avec 5 autres devis. Le client vous contacte directement car il a été convaincu.",
+      },
+    ],
+    caseStudy: {
+      client: "Déménagements Rapides IDF",
+      sector: "Déménagement — Île-de-France",
+      challenge:
+        "L'entreprise dépensait 800€/mois sur des plateformes de devis avec un taux de conversion faible. Les prospects comparaient systématiquement 5 devis et choisissaient le moins cher.",
+      solution:
+        "Création d'un site professionnel avec formulaire de devis détaillé, pages par type de déménagement, galerie photos, témoignages vidéo et SEO local sur les principales villes d'IDF.",
+      results: [
+        "+120 demandes de devis directes/mois",
+        "Taux de conversion devis : 45% (vs 15% sur plateforme)",
+        "Suppression des plateformes payantes",
+        "+35% de chiffre d'affaires en 6 mois",
+      ],
+      testimonial:
+        "Depuis qu'on a notre site, les clients nous contactent directement et sont déjà convaincus. Le taux de conversion a triplé par rapport aux plateformes. Meilleur investissement qu'on ait fait.",
+      author: "Thomas Leclerc",
+      role: "Gérant, Déménagements Rapides IDF",
+      photo: "/images/testimonials/demenageur.webp",
+    },
+    stats: [
+      {
+        value: "85%",
+        label: "des particuliers cherchent un déménageur sur Google",
+      },
+      {
+        value: "3x",
+        label: "meilleur taux de conversion avec un site propre vs plateformes",
+      },
+      {
+        value: "70%",
+        label: "des clients choisissent un déménageur après avoir vu son site",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre activité",
+        desc: "Nous étudions vos services, zones d'intervention, tarifs et clientèle cible pour concevoir un site qui génère des devis qualifiés.",
+      },
+      {
+        step: "02",
+        title: "Design & formulaire de devis",
+        desc: "Création d'un design professionnel et rassurant avec formulaire de devis détaillé et pages par type de prestation.",
+      },
+      {
+        step: "03",
+        title: "Témoignages & SEO local",
+        desc: "Mise en avant des avis clients, optimisation Google My Business et référencement local sur vos zones d'intervention.",
+      },
+      {
+        step: "04",
+        title: "Lancement & suivi",
+        desc: "Mise en ligne, formation à la gestion des demandes de devis et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "serrurier",
+    name: "Serrurier",
+    emoji: "🔑",
+    description:
+      "Soyez trouvé en urgence grâce à un site optimisé pour le SEO local avec numéro cliquable, zones d'intervention et tarifs transparents.",
+    painPoints: [
+      "Concurrence déloyale sur Google (arnaques)",
+      "Difficulté à inspirer confiance",
+      "Pas de visibilité en situation d'urgence",
+      "Tarifs perçus comme opaques",
+    ],
+    solutions: [
+      "Site rassurant avec tarifs transparents",
+      "Numéro cliquable et appel en un clic",
+      "Pages par zone d'intervention",
+      "SEO local urgence serrurier",
+    ],
+    features: [
+      "Numéro cliquable call-to-action",
+      "Grille tarifaire transparente",
+      "Pages par ville / quartier",
+      "Disponibilité 24h/24 affichée",
+      "Avis Google intégrés",
+      "SEO local serrurier urgence",
+    ],
+    cta: "Créer le site de mon entreprise de serrurerie",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un serrurier ?",
+        answer:
+          "Un site pour serrurier démarre à 500€. Ce prix inclut le numéro cliquable, la grille tarifaire, les pages par zone d'intervention, les avis clients et un an d'hébergement. Le SEO local est inclus pour apparaître en urgence.",
+      },
+      {
+        question: "Comment inspirer confiance face aux arnaques en ligne ?",
+        answer:
+          "Votre site affiche clairement vos tarifs, vos certifications, votre numéro SIRET et vos vrais avis clients. Cette transparence vous distingue immédiatement des serruriers frauduleux et rassure les clients en situation de stress.",
+      },
+      {
+        question: "Le site sera-t-il visible en cas d'urgence ?",
+        answer:
+          "Oui, nous optimisons votre site pour les recherches d'urgence ('serrurier urgence + ville'). Le numéro est cliquable, l'appel se fait en un clic sur mobile. Votre site apparaît quand les clients ont le plus besoin de vous.",
+      },
+      {
+        question: "Peut-on créer des pages par ville ?",
+        answer:
+          "Absolument. Nous créons une page optimisée pour chaque ville ou quartier que vous desservez. C'est la stratégie la plus efficace pour apparaître sur les recherches locales 'serrurier + nom de ville'.",
+      },
+    ],
+    caseStudy: {
+      client: "Serrurier Express Lyon",
+      sector: "Serrurerie — Lyon et agglomération",
+      challenge:
+        "Le serrurier souffrait de la concurrence déloyale sur Google. Les clients avaient du mal à distinguer les vrais professionnels des arnaqueurs. Le bouche-à-oreille ne suffisait plus.",
+      solution:
+        "Création d'un site transparent avec grille tarifaire, certifications, avis Google, numéro cliquable et pages SEO par arrondissement de Lyon et villes de l'agglomération.",
+      results: [
+        "+90 appels directs/mois depuis le site",
+        "1ère page Google sur 'serrurier Lyon' (6 arrondissements)",
+        "+60% de chiffre d'affaires en 6 mois",
+        "4.8/5 sur Google avec 200+ avis",
+      ],
+      testimonial:
+        "Mon site me rapporte plus que toutes les publicités que j'ai pu faire. Les clients me disent qu'ils m'ont choisi parce que mes tarifs sont clairs et mes avis sont vrais. Enfin de la confiance !",
+      author: "Julien Moreau",
+      role: "Gérant, Serrurier Express Lyon",
+      photo: "/images/testimonials/serrurier.webp",
+    },
+    stats: [
+      {
+        value: "95%",
+        label: "des recherches de serrurier sont faites en urgence sur mobile",
+      },
+      {
+        value: "5x",
+        label: "plus d'appels avec un numéro cliquable et des tarifs affichés",
+      },
+      {
+        value: "73%",
+        label: "des clients choisissent le serrurier avec les meilleurs avis",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre activité",
+        desc: "Nous étudions vos services, zones d'intervention, tarifs et certifications pour concevoir un site qui inspire confiance.",
+      },
+      {
+        step: "02",
+        title: "Design & transparence tarifaire",
+        desc: "Création d'un site rassurant avec grille tarifaire claire, certifications visibles et numéro d'appel en un clic.",
+      },
+      {
+        step: "03",
+        title: "Pages locales & SEO urgence",
+        desc: "Création de pages par ville/quartier, optimisation Google My Business et SEO orienté recherches d'urgence.",
+      },
+      {
+        step: "04",
+        title: "Lancement & suivi",
+        desc: "Mise en ligne, mise en place du suivi des appels et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "paysagiste-jardinier",
+    name: "Paysagiste / Jardinier",
+    emoji: "🌿",
+    description:
+      "Montrez votre savoir-faire avec un site mettant en valeur vos réalisations paysagères, vos services et un formulaire de devis en ligne.",
+    painPoints: [
+      "Réalisations non visibles en ligne",
+      "Peu de demandes de devis qualifiées",
+      "Concurrence forte sur le local",
+      "Pas de site ou site très ancien",
+    ],
+    solutions: [
+      "Portfolio avant/après de vos réalisations",
+      "Formulaire de devis paysager en ligne",
+      "Pages par type de prestation",
+      "SEO local paysagiste optimisé",
+    ],
+    features: [
+      "Portfolio avant/après",
+      "Formulaire de devis en ligne",
+      "Pages par service (création, entretien, élagage...)",
+      "Galerie photos de réalisations",
+      "Avis clients et témoignages",
+      "SEO local paysagiste",
+    ],
+    cta: "Créer le site de mon entreprise paysagère",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un paysagiste ?",
+        answer:
+          "Un site vitrine pour paysagiste démarre à 500€. Ce prix inclut le portfolio avant/après, le formulaire de devis, les pages services, la galerie photos et un an d'hébergement.",
+      },
+      {
+        question: "Peut-on montrer des photos avant/après ?",
+        answer:
+          "Oui, nous créons un portfolio interactif avec slider avant/après pour chaque réalisation. C'est le format le plus convaincant pour montrer votre savoir-faire et déclencher des demandes de devis.",
+      },
+      {
+        question: "Le formulaire de devis est-il adapté au paysagisme ?",
+        answer:
+          "Absolument. Le formulaire permet au client de préciser le type de projet (création de jardin, entretien, élagage, terrasse), la surface, le budget estimé et de joindre des photos de leur terrain.",
+      },
+      {
+        question: "Comment apparaître sur Google en tant que paysagiste ?",
+        answer:
+          "Nous optimisons votre site pour les recherches locales ('paysagiste + ville'), créons des pages par zone d'intervention et optimisons votre fiche Google My Business avec vos photos de réalisations.",
+      },
+    ],
+    caseStudy: {
+      client: "Jardins d'Émeraude",
+      sector: "Paysagiste — Rennes et alentours",
+      challenge:
+        "Le paysagiste travaillait uniquement par bouche-à-oreille et perdait des chantiers face à des concurrents qui avaient un site avec portfolio. Ses magnifiques réalisations n'étaient visibles nulle part en ligne.",
+      solution:
+        "Création d'un site avec portfolio avant/après, formulaire de devis, pages par prestation (création, entretien, élagage) et SEO local sur 'paysagiste Rennes'.",
+      results: [
+        "+25 demandes de devis/mois en 3 mois",
+        "1ère page Google sur 'paysagiste Rennes'",
+        "+50% de chiffre d'affaires en 8 mois",
+        "Panier moyen +40% grâce au portfolio premium",
+      ],
+      testimonial:
+        "Les clients voient mes réalisations en ligne et arrivent déjà convaincus. Le portfolio avant/après est mon meilleur commercial. Je refuse des chantiers maintenant !",
+      author: "Stéphane Legall",
+      role: "Gérant, Jardins d'Émeraude",
+      photo: "/images/testimonials/paysagiste.webp",
+    },
+    stats: [
+      {
+        value: "77%",
+        label: "des particuliers cherchent un paysagiste sur Google",
+      },
+      {
+        value: "4x",
+        label: "plus de devis avec un portfolio avant/après en ligne",
+      },
+      {
+        value: "68%",
+        label: "des clients choisissent le paysagiste après avoir vu ses réalisations",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Découverte de votre activité",
+        desc: "Nous échangeons sur vos prestations, vos réalisations phares et votre zone d'intervention pour concevoir un site à votre image.",
+      },
+      {
+        step: "02",
+        title: "Portfolio & design nature",
+        desc: "Création d'un design inspiré par la nature avec portfolio avant/après, galerie photos et pages par type de prestation.",
+      },
+      {
+        step: "03",
+        title: "Devis en ligne & SEO",
+        desc: "Mise en place du formulaire de devis, optimisation Google My Business et référencement local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à l'ajout de nouvelles réalisations et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "peintre-batiment",
+    name: "Peintre en bâtiment",
+    emoji: "🎨",
+    description:
+      "Décrochez plus de chantiers avec un site professionnel présentant vos réalisations, vos spécialités et un formulaire de devis en ligne.",
+    painPoints: [
+      "Pas de portfolio visible en ligne",
+      "Difficile de justifier ses tarifs",
+      "Concurrence forte sur le local",
+      "Bouche-à-oreille insuffisant",
+    ],
+    solutions: [
+      "Portfolio photos de chantiers réalisés",
+      "Pages par spécialité (intérieur, extérieur, déco...)",
+      "Formulaire de devis en ligne",
+      "SEO local peintre en bâtiment",
+    ],
+    features: [
+      "Portfolio avant/après chantiers",
+      "Pages par spécialité",
+      "Formulaire de devis détaillé",
+      "Certifications et assurances affichées",
+      "Avis clients vérifiés",
+      "SEO local peintre",
+    ],
+    cta: "Créer le site de mon entreprise de peinture",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un peintre en bâtiment ?",
+        answer:
+          "Un site vitrine pour peintre en bâtiment démarre à 500€. Ce prix inclut le portfolio avant/après, le formulaire de devis, les pages par spécialité, les certifications et un an d'hébergement.",
+      },
+      {
+        question: "Comment montrer la qualité de mon travail en ligne ?",
+        answer:
+          "Nous créons un portfolio avec slider avant/après pour chaque chantier. Les photos de vos réalisations sont votre meilleur argument commercial. Nous vous conseillons aussi sur la prise de photos de chantier.",
+      },
+      {
+        question: "Peut-on détailler mes différentes spécialités ?",
+        answer:
+          "Oui, peinture intérieure, ravalement de façade, décoration, enduit, laquage : chaque spécialité a sa propre page optimisée avec explications et photos de réalisations correspondantes.",
+      },
+      {
+        question: "Comment rassurer les clients sur mes qualifications ?",
+        answer:
+          "Votre site affiche clairement vos certifications (Qualibat, RGE), vos assurances décennale et RC Pro, ainsi que vos vrais avis clients. Cette transparence est décisive pour remporter des chantiers.",
+      },
+    ],
+    caseStudy: {
+      client: "Peinture Couleurs & Créations",
+      sector: "Peinture en bâtiment — Montpellier",
+      challenge:
+        "L'artisan avait un excellent savoir-faire mais aucune visibilité en ligne. Ses concurrents avec un site captaient les clients qui cherchaient sur Google. Il perdait des chantiers régulièrement.",
+      solution:
+        "Création d'un site avec portfolio avant/après, pages par spécialité, certifications Qualibat mises en avant, formulaire de devis et SEO local sur 'peintre Montpellier'.",
+      results: [
+        "+20 demandes de devis/mois en 3 mois",
+        "1ère page Google sur 'peintre Montpellier'",
+        "+40% de chiffre d'affaires en 6 mois",
+        "Panier moyen +30% (clients mieux qualifiés)",
+      ],
+      testimonial:
+        "Les clients arrivent en ayant déjà vu mes chantiers. Ils savent ce que je fais et sont prêts à payer le juste prix. Plus besoin de me battre sur les tarifs.",
+      author: "David Fernandez",
+      role: "Gérant, Peinture Couleurs & Créations",
+      photo: "/images/testimonials/peintre.webp",
+    },
+    stats: [
+      {
+        value: "72%",
+        label: "des particuliers cherchent un peintre sur internet",
+      },
+      {
+        value: "3x",
+        label: "plus de devis avec un portfolio en ligne",
+      },
+      {
+        value: "65%",
+        label: "des clients choisissent sur la base des photos de réalisations",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre activité",
+        desc: "Nous étudions vos spécialités, vos réalisations phares et votre zone d'intervention pour concevoir un site qui valorise votre savoir-faire.",
+      },
+      {
+        step: "02",
+        title: "Portfolio & design professionnel",
+        desc: "Création d'un portfolio avant/après, pages par spécialité et mise en avant de vos certifications et assurances.",
+      },
+      {
+        step: "03",
+        title: "Devis en ligne & SEO",
+        desc: "Intégration du formulaire de devis détaillé, optimisation Google My Business et référencement local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & suivi",
+        desc: "Mise en ligne, formation à l'ajout de nouvelles réalisations et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "menuisier",
+    name: "Menuisier",
+    emoji: "🪵",
+    description:
+      "Valorisez votre artisanat avec un site mettant en lumière vos créations sur-mesure, votre savoir-faire et un formulaire de devis personnalisé.",
+    painPoints: [
+      "Savoir-faire artisanal invisible en ligne",
+      "Difficulté à justifier les prix du sur-mesure",
+      "Concurrence de l'industriel et du low-cost",
+      "Pas de galerie de réalisations accessible",
+    ],
+    solutions: [
+      "Portfolio de créations sur-mesure",
+      "Pages par type de réalisation",
+      "Formulaire de devis personnalisé",
+      "SEO local menuisier artisan",
+    ],
+    features: [
+      "Galerie de réalisations HD",
+      "Pages par spécialité (cuisine, dressing, escalier...)",
+      "Formulaire de devis sur-mesure",
+      "Section matériaux et essences de bois",
+      "Témoignages clients",
+      "SEO local menuisier",
+    ],
+    cta: "Créer le site de mon atelier de menuiserie",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un menuisier ?",
+        answer:
+          "Un site vitrine pour menuisier démarre à 500€. Ce prix inclut la galerie de réalisations, le formulaire de devis, les pages par spécialité, la section matériaux et un an d'hébergement.",
+      },
+      {
+        question: "Comment mettre en valeur mes créations sur-mesure ?",
+        answer:
+          "Nous créons une galerie HD avec des photos de chaque réalisation : cuisines, dressings, escaliers, meubles. Chaque projet est présenté avec les matériaux utilisés et les contraintes relevées. C'est ce qui justifie le prix du sur-mesure.",
+      },
+      {
+        question: "Peut-on présenter les essences de bois utilisées ?",
+        answer:
+          "Oui, une section dédiée présente vos matériaux de prédilection : chêne, noyer, hêtre, bois exotiques. Cela éduque le client et valorise la qualité de vos créations par rapport à l'industriel.",
+      },
+      {
+        question: "Le formulaire de devis est-il adapté à la menuiserie ?",
+        answer:
+          "Absolument. Le client précise le type de projet, les dimensions, l'essence de bois souhaitée et peut joindre des photos ou croquis. Vous recevez des demandes détaillées et qualifiées.",
+      },
+    ],
+    caseStudy: {
+      client: "Atelier Bois & Créations",
+      sector: "Menuiserie sur-mesure — Strasbourg",
+      challenge:
+        "L'artisan menuisier avait un carnet de commandes irrégulier. Ses créations étaient magnifiques mais invisibles en ligne. Il perdait des clients face à des concurrents industriels moins chers.",
+      solution:
+        "Création d'un site artisanal avec galerie de réalisations HD, pages par spécialité, section essences de bois, formulaire de devis et SEO local sur 'menuisier Strasbourg'.",
+      results: [
+        "+15 demandes de devis/mois qualifiées",
+        "1ère page Google sur 'menuisier sur-mesure Strasbourg'",
+        "Carnet de commandes rempli 3 mois à l'avance",
+        "Panier moyen +50% (clients sensibles à la qualité)",
+      ],
+      testimonial:
+        "Les clients comprennent enfin la valeur du sur-mesure en voyant mes réalisations. Je ne me bats plus sur les prix, je travaille avec des gens qui apprécient l'artisanat.",
+      author: "Laurent Keller",
+      role: "Maître menuisier, Atelier Bois & Créations",
+      photo: "/images/testimonials/menuisier.webp",
+    },
+    stats: [
+      {
+        value: "69%",
+        label: "des particuliers cherchent un menuisier sur internet",
+      },
+      {
+        value: "4x",
+        label: "plus de demandes avec une galerie de réalisations en ligne",
+      },
+      {
+        value: "58%",
+        label: "des clients du sur-mesure choisissent sur la qualité, pas le prix",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Découverte de votre atelier",
+        desc: "Nous échangeons sur vos spécialités, vos réalisations phares et votre clientèle pour concevoir un site qui reflète votre artisanat.",
+      },
+      {
+        step: "02",
+        title: "Galerie & design artisanal",
+        desc: "Création d'un design chaleureux avec galerie HD, pages par spécialité et section essences de bois.",
+      },
+      {
+        step: "03",
+        title: "Devis en ligne & SEO",
+        desc: "Intégration du formulaire de devis personnalisé, optimisation Google My Business et référencement local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à l'ajout de nouvelles réalisations et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "carreleur",
+    name: "Carreleur",
+    emoji: "🔲",
+    description:
+      "Attirez des chantiers qualifiés avec un site présentant vos réalisations carrelage, vos spécialités et un formulaire de devis en ligne.",
+    painPoints: [
+      "Réalisations invisibles en ligne",
+      "Concurrence forte des grandes surfaces",
+      "Difficulté à trouver des chantiers réguliers",
+      "Pas de preuve de qualité accessible",
+    ],
+    solutions: [
+      "Portfolio de réalisations carrelage HD",
+      "Pages par type de pose (salle de bain, terrasse, sol...)",
+      "Formulaire de devis avec upload photos",
+      "SEO local carreleur optimisé",
+    ],
+    features: [
+      "Portfolio avant/après carrelage",
+      "Pages par type de pose",
+      "Formulaire de devis avec photos",
+      "Section matériaux et tendances",
+      "Avis clients vérifiés",
+      "SEO local carreleur",
+    ],
+    cta: "Créer le site de mon entreprise de carrelage",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un carreleur ?",
+        answer:
+          "Un site vitrine pour carreleur démarre à 500€. Ce prix inclut le portfolio avant/après, le formulaire de devis, les pages par type de pose, les avis clients et un an d'hébergement.",
+      },
+      {
+        question: "Comment montrer la qualité de mes poses ?",
+        answer:
+          "Nous créons un portfolio avant/après avec des photos HD de vos réalisations : salles de bain, terrasses, sols, crédences. Les finitions et détails sont mis en valeur pour démontrer votre expertise.",
+      },
+      {
+        question: "Peut-on présenter les différents matériaux ?",
+        answer:
+          "Oui, une section dédiée présente les matériaux que vous maîtrisez : grès cérame, faïence, mosaïque, pierre naturelle, carreaux de ciment. Cela aide le client à choisir et valorise votre polyvalence.",
+      },
+      {
+        question: "Le formulaire de devis est-il adapté au carrelage ?",
+        answer:
+          "Absolument. Le client précise le type de pièce, la surface, le matériau souhaité et peut joindre des photos du support existant. Vous recevez des demandes précises pour chiffrer rapidement.",
+      },
+    ],
+    caseStudy: {
+      client: "Carrelage Pro Côte d'Azur",
+      sector: "Carrelage — Nice et alentours",
+      challenge:
+        "Le carreleur avait un excellent niveau de finition mais aucune présence en ligne. Les particuliers rénovant leur salle de bain cherchaient sur Google et trouvaient ses concurrents.",
+      solution:
+        "Création d'un site avec portfolio avant/après, pages par type de pose, section matériaux tendances, formulaire de devis et SEO local sur 'carreleur Nice'.",
+      results: [
+        "+18 demandes de devis/mois en 3 mois",
+        "1ère page Google sur 'carreleur Nice'",
+        "+45% de chiffre d'affaires en 6 mois",
+        "90% des devis acceptés (clients qualifiés)",
+      ],
+      testimonial:
+        "Mon site montre ce que je sais faire mieux que n'importe quel discours. Les clients me contactent en ayant déjà choisi leur style. Les chantiers s'enchaînent sans interruption.",
+      author: "Marco Rossi",
+      role: "Gérant, Carrelage Pro Côte d'Azur",
+      photo: "/images/testimonials/carreleur.webp",
+    },
+    stats: [
+      {
+        value: "74%",
+        label: "des particuliers en rénovation cherchent un carreleur sur Google",
+      },
+      {
+        value: "3x",
+        label: "plus de devis avec un portfolio avant/après",
+      },
+      {
+        value: "62%",
+        label: "des clients choisissent sur la base des photos de réalisations",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre activité",
+        desc: "Nous étudions vos spécialités, réalisations et zone d'intervention pour concevoir un site qui met en valeur votre savoir-faire.",
+      },
+      {
+        step: "02",
+        title: "Portfolio & design",
+        desc: "Création d'un portfolio avant/après soigné, pages par type de pose et section matériaux tendances.",
+      },
+      {
+        step: "03",
+        title: "Devis en ligne & SEO",
+        desc: "Intégration du formulaire de devis avec upload photos, optimisation Google My Business et référencement local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & suivi",
+        desc: "Mise en ligne, formation à l'ajout de nouvelles réalisations et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "chauffagiste-climatisation",
+    name: "Chauffagiste / Climatisation",
+    emoji: "🔥",
+    description:
+      "Générez des demandes d'intervention et de devis grâce à un site professionnel présentant vos services, vos certifications et un numéro d'urgence.",
+    painPoints: [
+      "Peu visible sur les recherches d'urgence",
+      "Difficile de prouver ses certifications (RGE, Qualibat)",
+      "Concurrence forte sur le local",
+      "Saisonnalité de l'activité difficile à gérer",
+    ],
+    solutions: [
+      "Site avec numéro d'urgence cliquable",
+      "Certifications RGE et Qualibat mises en avant",
+      "Pages par service (chaudière, clim, pompe à chaleur)",
+      "SEO local chauffagiste / climaticien",
+    ],
+    features: [
+      "Numéro d'urgence cliquable",
+      "Certifications RGE / Qualibat affichées",
+      "Pages par type de service",
+      "Formulaire de devis en ligne",
+      "Section aides financières (MaPrimeRénov')",
+      "SEO local chauffagiste",
+    ],
+    cta: "Créer le site de mon entreprise de chauffage",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un chauffagiste ?",
+        answer:
+          "Un site pour chauffagiste/climaticien démarre à 500€. Ce prix inclut les pages services, les certifications, le formulaire de devis, la section aides financières et un an d'hébergement.",
+      },
+      {
+        question: "Peut-on mettre en avant nos certifications RGE ?",
+        answer:
+          "Oui, vos certifications RGE, Qualibat et QualiPAC sont affichées de manière visible sur toutes les pages. C'est un critère décisif pour les clients qui veulent bénéficier des aides financières.",
+      },
+      {
+        question: "Peut-on informer sur les aides financières ?",
+        answer:
+          "Absolument. Une section dédiée présente MaPrimeRénov', les CEE et les aides locales. Les clients comprennent qu'ils peuvent financer une partie des travaux, ce qui déclenche plus de demandes.",
+      },
+      {
+        question: "Le site sera-t-il visible en cas de panne ?",
+        answer:
+          "Oui, nous optimisons votre site pour les recherches d'urgence ('chauffagiste urgence + ville', 'panne chaudière + ville'). Le numéro est cliquable pour un appel immédiat sur mobile.",
+      },
+    ],
+    caseStudy: {
+      client: "Confort Thermique Services",
+      sector: "Chauffage & climatisation — Grenoble",
+      challenge:
+        "L'entreprise avait du mal à remplir son planning en intersaison. Les certifications RGE n'étaient pas visibles et les prospects ne savaient pas qu'ils pouvaient bénéficier d'aides financières.",
+      solution:
+        "Création d'un site professionnel avec pages par service, certifications mises en avant, section MaPrimeRénov', formulaire de devis et SEO local sur 'chauffagiste Grenoble'.",
+      results: [
+        "+30 demandes de devis/mois",
+        "Planning rempli même en intersaison",
+        "1ère page Google sur 'chauffagiste Grenoble'",
+        "+55% de chiffre d'affaires en 8 mois",
+      ],
+      testimonial:
+        "La section sur les aides financières a tout changé. Les clients nous contactent en sachant déjà qu'ils peuvent être aidés. Le planning ne désemplit plus, même hors saison.",
+      author: "Patrick Girard",
+      role: "Gérant, Confort Thermique Services",
+      photo: "/images/testimonials/chauffagiste.webp",
+    },
+    stats: [
+      {
+        value: "80%",
+        label: "des particuliers cherchent un chauffagiste sur Google",
+      },
+      {
+        value: "3x",
+        label: "plus de devis avec les aides financières affichées",
+      },
+      {
+        value: "67%",
+        label: "des clients vérifient la certification RGE avant de contacter",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre activité",
+        desc: "Nous étudions vos services, certifications, zone d'intervention et clientèle pour concevoir un site qui génère des demandes qualifiées.",
+      },
+      {
+        step: "02",
+        title: "Design & certifications",
+        desc: "Création d'un site professionnel avec pages services, certifications visibles et section aides financières.",
+      },
+      {
+        step: "03",
+        title: "Devis en ligne & SEO",
+        desc: "Intégration du formulaire de devis, optimisation Google My Business et référencement local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & suivi",
+        desc: "Mise en ligne, formation à la gestion des demandes et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "agence-de-communication",
+    name: "Agence de communication",
+    emoji: "📢",
+    description:
+      "Démontrez votre expertise créative avec un site portfolio percutant présentant vos réalisations, vos services et vos études de cas clients.",
+    painPoints: [
+      "Site qui ne reflète pas la créativité de l'agence",
+      "Portfolio peu mis en valeur",
+      "Difficulté à attirer des clients premium",
+      "Pas de preuve sociale convaincante",
+    ],
+    solutions: [
+      "Site portfolio créatif et immersif",
+      "Études de cas clients détaillées",
+      "Pages services par expertise",
+      "Blog stratégie & tendances",
+    ],
+    features: [
+      "Portfolio immersif avec filtres",
+      "Études de cas détaillées",
+      "Pages par expertise (branding, digital, social...)",
+      "Blog stratégie communication",
+      "Section équipe créative",
+      "SEO agence de communication",
+    ],
+    cta: "Créer le site de mon agence",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour une agence de communication ?",
+        answer:
+          "Un site portfolio pour agence de communication démarre à 800€. Ce prix inclut le portfolio interactif, les études de cas, les pages par expertise, le blog et un an d'hébergement.",
+      },
+      {
+        question: "Comment le site reflétera-t-il notre créativité ?",
+        answer:
+          "Nous concevons un site qui EST votre meilleure réalisation. Animations soignées, transitions fluides, galerie immersive : votre site prouve votre talent avant même que le prospect ne lise une ligne.",
+      },
+      {
+        question: "Peut-on présenter des études de cas détaillées ?",
+        answer:
+          "Oui, chaque étude de cas présente le brief, la stratégie, les livrables et les résultats chiffrés. C'est le format le plus convaincant pour démontrer votre valeur ajoutée et justifier vos tarifs.",
+      },
+      {
+        question: "Le blog peut-il attirer des prospects ?",
+        answer:
+          "Absolument. Des articles sur les tendances com, le branding, le social media attirent du trafic qualifié et positionnent votre agence comme experte. C'est un excellent levier d'acquisition organique.",
+      },
+    ],
+    caseStudy: {
+      client: "Studio Graphène",
+      sector: "Agence de communication — Paris",
+      challenge:
+        "L'agence avait un site daté qui ne reflétait pas la qualité de ses réalisations. Les prospects premium allaient chez des concurrents avec un meilleur site. Le portfolio n'était pas interactif.",
+      solution:
+        "Création d'un site portfolio immersif avec galerie filtrée par catégorie, études de cas détaillées, animations Framer Motion, blog stratégie et pages par expertise.",
+      results: [
+        "+60% de demandes prospects premium en 3 mois",
+        "Panier moyen client +35%",
+        "3 prix créatifs remportés mis en avant",
+        "Temps moyen sur site : 3min45",
+      ],
+      testimonial:
+        "Notre site est enfin à la hauteur de notre travail. Les prospects arrivent impressionnés et signent plus vite. ConvertiLab a compris que notre site devait être notre meilleure vitrine.",
+      author: "Léa Moreau",
+      role: "Directrice créative, Studio Graphène",
+      photo: "/images/testimonials/agence-communication.webp",
+    },
+    stats: [
+      {
+        value: "87%",
+        label: "des clients visitent le site d'une agence avant de la contacter",
+      },
+      {
+        value: "4x",
+        label: "plus de demandes avec un portfolio interactif",
+      },
+      {
+        value: "71%",
+        label: "des décideurs jugent une agence sur la qualité de son propre site",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Immersion dans votre agence",
+        desc: "Nous analysons votre positionnement, vos meilleures réalisations et votre clientèle cible pour concevoir un site qui incarne votre créativité.",
+      },
+      {
+        step: "02",
+        title: "Design & portfolio immersif",
+        desc: "Création d'un design percutant avec portfolio interactif, études de cas et animations qui reflètent votre ADN créatif.",
+      },
+      {
+        step: "03",
+        title: "Blog & SEO",
+        desc: "Mise en place du blog stratégie, optimisation SEO et intégration des réseaux sociaux.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à l'ajout de projets et études de cas, suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "cabinet-recrutement",
+    name: "Cabinet de recrutement",
+    emoji: "🤝",
+    description:
+      "Attirez les meilleurs talents et les entreprises clientes avec un site professionnel présentant vos offres, votre expertise sectorielle et vos résultats.",
+    painPoints: [
+      "Difficulté à attirer des candidats qualifiés",
+      "Site qui ne différencie pas des job boards",
+      "Expertise sectorielle peu visible",
+      "Pas de preuve de résultats",
+    ],
+    solutions: [
+      "Site double cible (entreprises + candidats)",
+      "Pages par secteur d'expertise",
+      "Espace offres d'emploi intégré",
+      "Études de cas recrutement réussies",
+    ],
+    features: [
+      "Espace offres d'emploi",
+      "Formulaire candidature en ligne",
+      "Pages par secteur d'expertise",
+      "Études de cas placement",
+      "Blog RH et emploi",
+      "SEO cabinet recrutement",
+    ],
+    cta: "Créer le site de mon cabinet de recrutement",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un cabinet de recrutement ?",
+        answer:
+          "Un site pour cabinet de recrutement démarre à 800€. Ce prix inclut l'espace offres d'emploi, le formulaire candidature, les pages par secteur, les études de cas et un an d'hébergement.",
+      },
+      {
+        question: "Peut-on gérer les offres d'emploi depuis le site ?",
+        answer:
+          "Oui, un panneau d'administration vous permet de publier, modifier et archiver vos offres d'emploi. Les candidats postulent directement via le site avec CV et lettre de motivation.",
+      },
+      {
+        question: "Comment attirer à la fois candidats et entreprises ?",
+        answer:
+          "Le site est conçu avec deux parcours distincts : un espace entreprise (expertise, études de cas, formulaire de brief) et un espace candidat (offres, candidature spontanée, conseils carrière).",
+      },
+      {
+        question: "Peut-on publier des articles RH ?",
+        answer:
+          "Absolument. Un blog RH avec des articles sur le marché de l'emploi, les tendances recrutement et les conseils carrière attire du trafic qualifié et renforce votre position d'expert.",
+      },
+    ],
+    caseStudy: {
+      client: "Talent Connect",
+      sector: "Cabinet de recrutement IT — Paris",
+      challenge:
+        "Le cabinet peinait à attirer des candidats tech qualifiés. Le site était générique et ne mettait pas en avant l'expertise IT. Les entreprises clientes ne voyaient pas la différence avec un job board.",
+      solution:
+        "Création d'un site double parcours (entreprises/candidats) avec offres d'emploi filtrables, pages par expertise tech, études de cas placements réussis et blog RH tech.",
+      results: [
+        "+200% de candidatures qualifiées en 4 mois",
+        "+40% de clients entreprises en 6 mois",
+        "Délai moyen de placement réduit de 30%",
+        "85% de taux de satisfaction client",
+      ],
+      testimonial:
+        "Notre site attire enfin les bons profils. Les candidats tech postulent directement et les entreprises comprennent notre valeur ajoutée. Le ROI est énorme.",
+      author: "Nicolas Petit",
+      role: "Fondateur, Talent Connect",
+      photo: "/images/testimonials/recrutement.webp",
+    },
+    stats: [
+      {
+        value: "78%",
+        label: "des candidats consultent le site du cabinet avant de postuler",
+      },
+      {
+        value: "3x",
+        label: "plus de candidatures avec un espace emploi bien conçu",
+      },
+      {
+        value: "65%",
+        label: "des entreprises choisissent un cabinet après avoir vu son site",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre cabinet",
+        desc: "Nous étudions vos secteurs d'expertise, votre méthodologie et vos cibles (entreprises et candidats) pour concevoir un site percutant.",
+      },
+      {
+        step: "02",
+        title: "Design & double parcours",
+        desc: "Création d'un site avec parcours entreprise et candidat, espace offres d'emploi et études de cas.",
+      },
+      {
+        step: "03",
+        title: "Blog RH & SEO",
+        desc: "Mise en place du blog, optimisation SEO sur vos secteurs d'expertise et intégration des réseaux sociaux.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à la gestion des offres et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "centre-formation-professionnelle",
+    name: "Centre de formation professionnelle",
+    emoji: "🎓",
+    description:
+      "Remplissez vos sessions de formation avec un site présentant votre catalogue, vos certifications Qualiopi et un formulaire d'inscription en ligne.",
+    painPoints: [
+      "Catalogue de formations peu visible en ligne",
+      "Inscription fastidieuse par téléphone/email",
+      "Certification Qualiopi peu mise en avant",
+      "Difficulté à remplir les sessions",
+    ],
+    solutions: [
+      "Catalogue de formations en ligne filtrable",
+      "Formulaire d'inscription en ligne",
+      "Certification Qualiopi mise en avant",
+      "SEO formation professionnelle",
+    ],
+    features: [
+      "Catalogue formations avec filtres",
+      "Fiches formation détaillées",
+      "Formulaire d'inscription en ligne",
+      "Certification Qualiopi affichée",
+      "Section financement (CPF, OPCO)",
+      "SEO centre de formation",
+    ],
+    cta: "Créer le site de mon centre de formation",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un centre de formation ?",
+        answer:
+          "Un site pour centre de formation démarre à 800€. Ce prix inclut le catalogue filtrable, les fiches formation, le formulaire d'inscription, la certification Qualiopi et un an d'hébergement.",
+      },
+      {
+        question: "Peut-on présenter chaque formation en détail ?",
+        answer:
+          "Oui, chaque formation a sa propre page avec programme détaillé, durée, tarif, prérequis, objectifs pédagogiques et modalités d'évaluation. C'est conforme aux exigences Qualiopi et facilite la décision.",
+      },
+      {
+        question: "Comment informer sur les financements possibles ?",
+        answer:
+          "Une section dédiée explique les dispositifs de financement : CPF, OPCO, Pôle Emploi, plan de formation entreprise. Les stagiaires comprennent qu'ils peuvent financer leur formation, ce qui lève le frein budgétaire.",
+      },
+      {
+        question: "Les stagiaires peuvent-ils s'inscrire en ligne ?",
+        answer:
+          "Oui, un formulaire d'inscription en ligne permet de choisir la formation, la session et de soumettre sa demande. Vous recevez les inscriptions et pouvez valider ou recontacter le stagiaire.",
+      },
+    ],
+    caseStudy: {
+      client: "FormaPro Academy",
+      sector: "Formation professionnelle — Lyon",
+      challenge:
+        "Le centre de formation avait du mal à remplir ses sessions. Le catalogue n'était pas en ligne, les inscriptions se faisaient par téléphone et la certification Qualiopi n'était pas visible.",
+      solution:
+        "Création d'un site avec catalogue filtrable, fiches formation complètes, formulaire d'inscription, section financement CPF/OPCO et certification Qualiopi mise en avant. SEO sur 'formation professionnelle Lyon'.",
+      results: [
+        "+75% d'inscriptions en ligne en 4 mois",
+        "Taux de remplissage sessions : 95%",
+        "1ère page Google sur 5 formations clés",
+        "+40% de chiffre d'affaires en 6 mois",
+      ],
+      testimonial:
+        "Nos sessions sont pleines depuis qu'on a le site. Les stagiaires s'inscrivent en ligne, comprennent les financements et arrivent préparés. Un vrai gain de temps pour nous.",
+      author: "Nathalie Durand",
+      role: "Directrice, FormaPro Academy",
+      photo: "/images/testimonials/formation.webp",
+    },
+    stats: [
+      {
+        value: "82%",
+        label: "des professionnels cherchent une formation sur Google",
+      },
+      {
+        value: "3x",
+        label: "plus d'inscriptions avec un catalogue en ligne",
+      },
+      {
+        value: "70%",
+        label: "des stagiaires vérifient la certification Qualiopi avant de s'inscrire",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre offre",
+        desc: "Nous étudions votre catalogue de formations, vos certifications et votre public cible pour concevoir un site efficace.",
+      },
+      {
+        step: "02",
+        title: "Catalogue & fiches formation",
+        desc: "Création d'un catalogue filtrable avec fiches détaillées par formation, conformes aux exigences Qualiopi.",
+      },
+      {
+        step: "03",
+        title: "Inscription & SEO",
+        desc: "Intégration du formulaire d'inscription, section financement et optimisation SEO par formation.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à la gestion du catalogue et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "societe-nettoyage",
+    name: "Société de nettoyage",
+    emoji: "🧹",
+    description:
+      "Décrochez des contrats de nettoyage avec un site professionnel présentant vos prestations, vos références clients et un formulaire de devis en ligne.",
+    painPoints: [
+      "Difficulté à décrocher des contrats B2B",
+      "Pas de références clients visibles",
+      "Concurrence forte sur les prix",
+      "Image de marque peu professionnelle",
+    ],
+    solutions: [
+      "Site pro avec références clients",
+      "Pages par type de prestation",
+      "Formulaire de devis B2B détaillé",
+      "SEO local société de nettoyage",
+    ],
+    features: [
+      "Pages par prestation (bureaux, copro, vitres...)",
+      "Références clients et logos",
+      "Formulaire de devis B2B",
+      "Certifications qualité affichées",
+      "Section éco-responsabilité",
+      "SEO local nettoyage",
+    ],
+    cta: "Créer le site de ma société de nettoyage",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour une société de nettoyage ?",
+        answer:
+          "Un site pour société de nettoyage démarre à 500€. Ce prix inclut les pages prestations, les références clients, le formulaire de devis B2B, les certifications et un an d'hébergement.",
+      },
+      {
+        question: "Peut-on afficher nos références clients ?",
+        answer:
+          "Oui, une section dédiée affiche les logos de vos clients (avec leur accord), les types de locaux entretenus et les témoignages. C'est l'argument le plus convaincant pour décrocher de nouveaux contrats B2B.",
+      },
+      {
+        question: "Le formulaire de devis est-il adapté au B2B ?",
+        answer:
+          "Absolument. Le formulaire permet de préciser le type de locaux, la surface, la fréquence souhaitée et les prestations spécifiques. Vous recevez des demandes détaillées pour chiffrer précisément.",
+      },
+      {
+        question: "Peut-on mettre en avant notre démarche éco-responsable ?",
+        answer:
+          "Oui, une section dédiée présente vos produits écologiques, votre gestion des déchets et vos certifications environnementales. C'est un critère de choix de plus en plus important pour les entreprises.",
+      },
+    ],
+    caseStudy: {
+      client: "Net & Clean Pro",
+      sector: "Nettoyage professionnel — Lille",
+      challenge:
+        "L'entreprise dépendait de quelques gros contrats et avait du mal à en décrocher de nouveaux. Le site existant était un simple page web sans références ni preuve de professionnalisme.",
+      solution:
+        "Création d'un site professionnel avec pages par prestation, logos clients, formulaire de devis B2B, certifications qualité et section éco-responsable. SEO sur 'société nettoyage Lille'.",
+      results: [
+        "+12 nouveaux contrats B2B en 6 mois",
+        "+35% de chiffre d'affaires annuel",
+        "1ère page Google sur 'nettoyage bureaux Lille'",
+        "Portfolio client diversifié (moins de dépendance)",
+      ],
+      testimonial:
+        "Le site nous a donné une image professionnelle qui correspond à la qualité de notre travail. Les prospects nous prennent au sérieux dès le premier contact. Les contrats arrivent régulièrement.",
+      author: "Ahmed Benali",
+      role: "Directeur, Net & Clean Pro",
+      photo: "/images/testimonials/nettoyage.webp",
+    },
+    stats: [
+      {
+        value: "75%",
+        label: "des entreprises cherchent un prestataire de nettoyage en ligne",
+      },
+      {
+        value: "3x",
+        label: "plus de contrats avec des références clients visibles",
+      },
+      {
+        value: "68%",
+        label: "des décideurs vérifient le site avant de demander un devis",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre activité",
+        desc: "Nous étudions vos prestations, références clients et positionnement pour concevoir un site qui inspire confiance aux décideurs.",
+      },
+      {
+        step: "02",
+        title: "Design & références",
+        desc: "Création d'un site professionnel avec pages prestations, logos clients, certifications et section éco-responsable.",
+      },
+      {
+        step: "03",
+        title: "Devis B2B & SEO",
+        desc: "Intégration du formulaire de devis B2B, optimisation Google My Business et référencement local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & suivi",
+        desc: "Mise en ligne, formation à la gestion des demandes et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "transport-logistique",
+    name: "Transport / Logistique",
+    emoji: "🚛",
+    description:
+      "Attirez de nouveaux clients professionnels avec un site présentant votre flotte, vos services logistiques et un formulaire de demande de devis transport.",
+    painPoints: [
+      "Pas de visibilité auprès des expéditeurs",
+      "Flotte et services peu mis en valeur",
+      "Concurrence forte des grandes plateformes",
+      "Image de marque pas à la hauteur",
+    ],
+    solutions: [
+      "Site professionnel avec présentation flotte",
+      "Pages par service logistique",
+      "Formulaire de demande de cotation",
+      "SEO transport et logistique",
+    ],
+    features: [
+      "Présentation de la flotte",
+      "Pages par service (transport, stockage, dernier km...)",
+      "Formulaire de demande de cotation",
+      "Certifications et agréments affichés",
+      "Section couverture géographique",
+      "SEO transport logistique",
+    ],
+    cta: "Créer le site de mon entreprise de transport",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour une entreprise de transport ?",
+        answer:
+          "Un site pour entreprise de transport/logistique démarre à 800€. Ce prix inclut la présentation de la flotte, les pages services, le formulaire de cotation, les certifications et un an d'hébergement.",
+      },
+      {
+        question: "Peut-on présenter notre flotte de véhicules ?",
+        answer:
+          "Oui, une section dédiée présente vos véhicules avec photos, capacités, types de marchandises et certifications (frigorifique, ADR, etc.). Cela rassure les expéditeurs sur votre capacité à traiter leurs envois.",
+      },
+      {
+        question: "Le formulaire de cotation est-il adapté au transport ?",
+        answer:
+          "Absolument. Le formulaire permet de préciser l'origine, la destination, le type de marchandise, le volume/poids et la date souhaitée. Vous recevez des demandes précises pour chiffrer rapidement.",
+      },
+      {
+        question: "Peut-on afficher notre couverture géographique ?",
+        answer:
+          "Oui, une carte interactive montre votre couverture géographique (national, régional, international). Les expéditeurs voient immédiatement si vous desservez leur zone.",
+      },
+    ],
+    caseStudy: {
+      client: "Trans Express Sud",
+      sector: "Transport routier — Marseille",
+      challenge:
+        "L'entreprise de transport avait une flotte de 25 véhicules mais aucune présence en ligne. Les expéditeurs ne la trouvaient pas et les véhicules roulaient parfois à vide sur certaines lignes.",
+      solution:
+        "Création d'un site professionnel avec présentation de la flotte, pages par service, formulaire de cotation, couverture géographique et SEO sur 'transport routier Marseille'.",
+      results: [
+        "+20 demandes de cotation/mois",
+        "Taux de remplissage flotte +25%",
+        "1ère page Google sur 'transport Marseille'",
+        "+30% de chiffre d'affaires en 8 mois",
+      ],
+      testimonial:
+        "Le site nous a ouvert de nouveaux marchés. Des expéditeurs qui ne nous connaissaient pas nous contactent chaque semaine. Les véhicules roulent à plein maintenant.",
+      author: "Michel Castaing",
+      role: "Directeur, Trans Express Sud",
+      photo: "/images/testimonials/transport.webp",
+    },
+    stats: [
+      {
+        value: "72%",
+        label: "des expéditeurs cherchent un transporteur sur internet",
+      },
+      {
+        value: "3x",
+        label: "plus de demandes avec un formulaire de cotation en ligne",
+      },
+      {
+        value: "64%",
+        label: "des décideurs logistiques consultent le site avant de contacter",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de votre activité",
+        desc: "Nous étudions votre flotte, vos services, votre couverture et vos cibles pour concevoir un site qui attire des expéditeurs qualifiés.",
+      },
+      {
+        step: "02",
+        title: "Design & présentation flotte",
+        desc: "Création d'un site professionnel avec présentation de la flotte, pages services et couverture géographique.",
+      },
+      {
+        step: "03",
+        title: "Cotation & SEO",
+        desc: "Intégration du formulaire de cotation, optimisation Google My Business et référencement transport.",
+      },
+      {
+        step: "04",
+        title: "Lancement & suivi",
+        desc: "Mise en ligne, formation à la gestion des demandes et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "opticien",
+    name: "Opticien",
+    emoji: "👓",
+    description:
+      "Attirez plus de clients dans votre magasin d'optique avec un site moderne présentant vos collections, vos services et la prise de RDV en ligne.",
+    painPoints: [
+      "Concurrence forte des opticiens en ligne",
+      "Collections de montures non visibles sur le web",
+      "Pas de prise de RDV en ligne",
+      "Faible visibilité locale",
+    ],
+    solutions: [
+      "Catalogue montures en ligne avec photos",
+      "Prise de RDV examen de vue en ligne",
+      "Page services (lentilles, basse vision, sport...)",
+      "SEO local opticien optimisé",
+    ],
+    features: [
+      "Catalogue montures avec filtres",
+      "Prise de RDV examen de vue",
+      "Pages par service optique",
+      "Section mutuelles et remboursements",
+      "Galerie photos du magasin",
+      "SEO local opticien",
+    ],
+    cta: "Créer le site de mon magasin d'optique",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour un opticien ?",
+        answer:
+          "Un site pour opticien démarre à 500€. Ce prix inclut le catalogue montures, la prise de RDV, les pages services, la section mutuelles et un an d'hébergement. La vente en ligne de lentilles peut être ajoutée en option.",
+      },
+      {
+        question: "Peut-on présenter nos collections de montures ?",
+        answer:
+          "Oui, un catalogue en ligne avec photos, filtres par marque/style/prix permet à vos clients de découvrir vos collections avant de se déplacer. Cela génère du trafic en magasin qualifié.",
+      },
+      {
+        question: "Les clients peuvent-ils prendre RDV pour un examen de vue ?",
+        answer:
+          "Absolument. Un système de prise de rendez-vous en ligne permet de choisir le type de prestation (examen de vue, adaptation lentilles) et le créneau. Vous gérez votre planning simplement.",
+      },
+      {
+        question: "Peut-on informer sur les remboursements mutuelles ?",
+        answer:
+          "Oui, une section dédiée explique les remboursements Sécurité sociale et mutuelles, le 100% Santé et les aides possibles. C'est une information très recherchée par les patients.",
+      },
+    ],
+    caseStudy: {
+      client: "Optique du Centre",
+      sector: "Opticien — Toulouse centre",
+      challenge:
+        "Le magasin souffrait de la concurrence en ligne et perdait des clients. Les collections n'étaient pas visibles sur le web et les rendez-vous se prenaient uniquement par téléphone.",
+      solution:
+        "Création d'un site avec catalogue montures filtrable, prise de RDV en ligne, section mutuelles, galerie du magasin et SEO local sur 'opticien Toulouse centre'.",
+      results: [
+        "+40% de RDV examen de vue en 3 mois",
+        "+25% de fréquentation en magasin",
+        "1ère page Google sur 'opticien Toulouse centre'",
+        "+30% de ventes de montures premium",
+      ],
+      testimonial:
+        "Les clients arrivent en ayant déjà repéré des montures sur notre site. Ils passent moins de temps à choisir et achètent plus de modèles premium. Le site a relancé notre activité.",
+      author: "Sophie Fabre",
+      role: "Gérante, Optique du Centre",
+      photo: "/images/testimonials/opticien.webp",
+    },
+    stats: [
+      {
+        value: "70%",
+        label: "des porteurs de lunettes cherchent un opticien sur Google",
+      },
+      {
+        value: "3x",
+        label: "plus de RDV avec un système de réservation en ligne",
+      },
+      {
+        value: "65%",
+        label: "des clients consultent les collections en ligne avant de se déplacer",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Découverte de votre magasin",
+        desc: "Nous analysons vos collections, services et clientèle pour concevoir un site qui génère du trafic en magasin.",
+      },
+      {
+        step: "02",
+        title: "Catalogue & design",
+        desc: "Création d'un catalogue montures élégant avec filtres, photos HD et pages par service optique.",
+      },
+      {
+        step: "03",
+        title: "RDV en ligne & SEO",
+        desc: "Intégration de la prise de RDV, section mutuelles et optimisation SEO local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à la gestion du catalogue et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "pharmacie",
+    name: "Pharmacie",
+    emoji: "💊",
+    description:
+      "Fidélisez vos patients avec un site présentant vos services, vos horaires de garde, vos spécialités et la possibilité de commander en ligne.",
+    painPoints: [
+      "Horaires de garde introuvables en ligne",
+      "Services spécialisés peu connus",
+      "Concurrence des pharmacies en ligne",
+      "Pas de relation digitale avec les patients",
+    ],
+    solutions: [
+      "Site avec horaires de garde en temps réel",
+      "Pages par service spécialisé",
+      "Click & collect ordonnances",
+      "SEO local pharmacie optimisé",
+    ],
+    features: [
+      "Horaires et gardes en temps réel",
+      "Pages par service (vaccination, orthopédie, nutrition...)",
+      "Click & collect ordonnances",
+      "Section conseils santé",
+      "Présentation de l'équipe",
+      "SEO local pharmacie",
+    ],
+    cta: "Créer le site de ma pharmacie",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour une pharmacie ?",
+        answer:
+          "Un site pour pharmacie démarre à 500€. Ce prix inclut les horaires de garde, les pages services, le click & collect, la section conseils santé et un an d'hébergement.",
+      },
+      {
+        question: "Peut-on afficher les horaires de garde ?",
+        answer:
+          "Oui, vos horaires d'ouverture et de garde sont clairement affichés et facilement modifiables. C'est l'information la plus recherchée par les patients et un excellent levier SEO local.",
+      },
+      {
+        question: "Peut-on proposer le click & collect d'ordonnances ?",
+        answer:
+          "Absolument. Les patients envoient leur ordonnance en photo via le site, vous préparez la commande et ils la récupèrent sans attente. Cela fluidifie le service et fidélise la clientèle.",
+      },
+      {
+        question: "Peut-on présenter nos spécialités ?",
+        answer:
+          "Oui, vaccination, orthopédie, nutrition, aromathérapie, maintien à domicile : chaque spécialité a sa page dédiée. Cela attire les patients qui recherchent ces services spécifiques.",
+      },
+    ],
+    caseStudy: {
+      client: "Pharmacie du Parc",
+      sector: "Pharmacie — Annecy",
+      challenge:
+        "La pharmacie avait développé des services spécialisés (nutrition, aromathérapie, orthopédie) mais les patients n'en avaient pas connaissance. Les gardes étaient introuvables en ligne.",
+      solution:
+        "Création d'un site avec horaires de garde, pages par spécialité, click & collect ordonnances, conseils santé et SEO local sur 'pharmacie Annecy'.",
+      results: [
+        "+35% de fréquentation en 4 mois",
+        "+60% de patients en nutrition et aromathérapie",
+        "1ère page Google sur 'pharmacie Annecy'",
+        "150 ordonnances click & collect/mois",
+      ],
+      testimonial:
+        "Nos patients découvrent nos services spécialisés grâce au site. Le click & collect est un succès, les gens adorent ne plus attendre. C'est un vrai plus pour notre officine.",
+      author: "Dr. Anne-Marie Petit",
+      role: "Pharmacienne titulaire, Pharmacie du Parc",
+      photo: "/images/testimonials/pharmacie.webp",
+    },
+    stats: [
+      {
+        value: "85%",
+        label: "des patients cherchent une pharmacie de garde sur Google",
+      },
+      {
+        value: "3x",
+        label: "plus de fréquentation avec des services visibles en ligne",
+      },
+      {
+        value: "72%",
+        label: "des patients apprécient le click & collect en pharmacie",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Découverte de votre officine",
+        desc: "Nous analysons vos services, spécialités et clientèle pour concevoir un site qui fidélise vos patients et en attire de nouveaux.",
+      },
+      {
+        step: "02",
+        title: "Design & services",
+        desc: "Création d'un site professionnel avec horaires de garde, pages par spécialité et présentation de l'équipe.",
+      },
+      {
+        step: "03",
+        title: "Click & collect & SEO",
+        desc: "Mise en place du click & collect ordonnances, section conseils santé et optimisation SEO local.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à la gestion des horaires et du click & collect, suivi pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "librairie",
+    name: "Librairie",
+    emoji: "📚",
+    description:
+      "Faites vivre votre librairie en ligne avec un site présentant vos coups de coeur, vos événements littéraires et la commande de livres en ligne.",
+    painPoints: [
+      "Concurrence écrasante d'Amazon",
+      "Coups de coeur et sélections non visibles",
+      "Événements littéraires peu promus",
+      "Pas de commande en ligne possible",
+    ],
+    solutions: [
+      "Site avec coups de coeur et sélections",
+      "Page événements littéraires",
+      "Commande en ligne avec retrait en magasin",
+      "Blog chroniques et recommandations",
+    ],
+    features: [
+      "Coups de coeur et sélections thématiques",
+      "Page événements (dédicaces, lectures...)",
+      "Commande en ligne & retrait magasin",
+      "Blog chroniques littéraires",
+      "Newsletter recommandations",
+      "SEO local librairie",
+    ],
+    cta: "Créer le site de ma librairie",
+    faqItems: [
+      {
+        question: "Combien coûte un site pour une librairie ?",
+        answer:
+          "Un site pour librairie démarre à 500€. Ce prix inclut les coups de coeur, la page événements, la commande en ligne avec retrait, le blog et un an d'hébergement.",
+      },
+      {
+        question: "Peut-on concurrencer Amazon avec un site ?",
+        answer:
+          "L'objectif n'est pas de concurrencer Amazon sur la logistique, mais de proposer ce qu'il ne peut pas : vos conseils personnalisés, vos sélections, vos événements et le lien humain. Votre site valorise cette différence.",
+      },
+      {
+        question: "Les clients peuvent-ils commander et retirer en magasin ?",
+        answer:
+          "Oui, le système click & collect permet de commander un livre en ligne et de le retirer en magasin. C'est le meilleur compromis entre la commodité du digital et le plaisir de la librairie.",
+      },
+      {
+        question: "Peut-on promouvoir nos événements littéraires ?",
+        answer:
+          "Absolument. Une page dédiée présente vos prochains événements (dédicaces, lectures, clubs de lecture) avec inscription en ligne. La newsletter informe vos lecteurs fidèles des nouveautés.",
+      },
+    ],
+    caseStudy: {
+      client: "Librairie Les Mots Bleus",
+      sector: "Librairie indépendante — Aix-en-Provence",
+      challenge:
+        "La librairie perdait des clients au profit d'Amazon. Les coups de coeur du libraire étaient méconnus et les événements littéraires attiraient peu de monde faute de promotion.",
+      solution:
+        "Création d'un site avec coups de coeur hebdomadaires, page événements, commande en ligne avec retrait, blog chroniques et newsletter. SEO local sur 'librairie Aix-en-Provence'.",
+      results: [
+        "+50% de fréquentation en 4 mois",
+        "Événements littéraires complets à 90%",
+        "1ère page Google sur 'librairie Aix-en-Provence'",
+        "800 abonnés newsletter en 6 mois",
+      ],
+      testimonial:
+        "Le site a redonné vie à ma librairie. Les clients viennent pour mes coups de coeur, les événements affichent complet et je reçois des commandes en ligne tous les jours. Amazon ne peut pas offrir ça.",
+      author: "Marie-Claire Fontaine",
+      role: "Libraire, Les Mots Bleus",
+      photo: "/images/testimonials/librairie.webp",
+    },
+    stats: [
+      {
+        value: "60%",
+        label: "des lecteurs préfèrent acheter dans une librairie indépendante",
+      },
+      {
+        value: "3x",
+        label: "plus de fréquentation avec des événements promus en ligne",
+      },
+      {
+        value: "75%",
+        label: "des clients fidèles consultent les coups de coeur du libraire",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Découverte de votre librairie",
+        desc: "Nous échangeons sur votre identité, vos sélections et vos événements pour créer un site qui reflète l'âme de votre librairie.",
+      },
+      {
+        step: "02",
+        title: "Design & coups de coeur",
+        desc: "Création d'un design chaleureux avec section coups de coeur, sélections thématiques et page événements.",
+      },
+      {
+        step: "03",
+        title: "Commande & newsletter",
+        desc: "Mise en place de la commande en ligne avec retrait, du blog chroniques et de la newsletter.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à la gestion des coups de coeur et événements, suivi pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "maroquinerie-pret-a-porter",
+    name: "Maroquinerie / Prêt-à-porter",
+    emoji: "👜",
+    description:
+      "Sublimez vos collections avec un site e-commerce élégant présentant vos créations, votre savoir-faire et une expérience d'achat premium en ligne.",
+    painPoints: [
+      "Collections non visibles en ligne",
+      "Pas de vente en ligne possible",
+      "Image de marque pas cohérente sur le web",
+      "Concurrence des marketplaces (Zalando, Vinted)",
+    ],
+    solutions: [
+      "Site e-commerce avec design premium",
+      "Catalogue collections avec lookbook",
+      "Expérience d'achat fluide et élégante",
+      "Storytelling marque et savoir-faire",
+    ],
+    features: [
+      "Boutique en ligne élégante",
+      "Lookbook et photos lifestyle",
+      "Fiches produits détaillées",
+      "Paiement sécurisé multi-moyens",
+      "Page savoir-faire et histoire",
+      "SEO mode et maroquinerie",
+    ],
+    cta: "Créer la boutique en ligne de ma marque",
+    faqItems: [
+      {
+        question: "Combien coûte un site e-commerce pour la mode ?",
+        answer:
+          "Un site e-commerce pour maroquinerie ou prêt-à-porter démarre à 1500€. Ce prix inclut la boutique en ligne, le lookbook, les fiches produits, le paiement sécurisé, la page savoir-faire et un an d'hébergement.",
+      },
+      {
+        question: "Le site mettra-t-il en valeur nos créations ?",
+        answer:
+          "Oui, chaque collection bénéficie d'un lookbook avec photos lifestyle. Les fiches produits présentent chaque pièce avec plusieurs vues, les matières, le guide des tailles et les détails de fabrication.",
+      },
+      {
+        question: "Peut-on raconter l'histoire de notre marque ?",
+        answer:
+          "Absolument. Une page dédiée raconte votre histoire, votre savoir-faire, vos engagements et vos matières. Le storytelling crée une connexion émotionnelle et justifie le prix de vos créations.",
+      },
+      {
+        question: "Comment se démarquer des marketplaces ?",
+        answer:
+          "Votre site offre ce que Zalando ne peut pas : votre univers de marque, votre storytelling, une expérience d'achat premium et une relation directe avec vos clients. Vous maîtrisez votre image et vos marges.",
+      },
+    ],
+    caseStudy: {
+      client: "Maison Éloïse",
+      sector: "Maroquinerie artisanale — Paris",
+      challenge:
+        "La créatrice vendait uniquement en boutique et sur des marchés. Ses sacs en cuir artisanaux n'étaient pas visibles en ligne. Elle perdait des ventes face à des marques avec un e-commerce.",
+      solution:
+        "Création d'un site e-commerce premium avec lookbook, fiches produits détaillées, page savoir-faire artisanal, paiement Stripe et SEO sur 'maroquinerie artisanale Paris'.",
+      results: [
+        "+150 ventes en ligne en 6 mois",
+        "35% du CA généré par le site",
+        "1ère page Google sur 'sac cuir artisanal Paris'",
+        "Panier moyen en ligne : 280€",
+      ],
+      testimonial:
+        "Mon site a transformé mon activité. Des clientes du monde entier découvrent mes créations et commandent en ligne. Le lookbook et la page savoir-faire font toute la différence.",
+      author: "Éloïse Marchand",
+      role: "Créatrice, Maison Éloïse",
+      photo: "/images/testimonials/maroquinerie.webp",
+    },
+    stats: [
+      {
+        value: "80%",
+        label: "des achats mode commencent par une recherche en ligne",
+      },
+      {
+        value: "4x",
+        label: "plus de ventes avec un lookbook et des photos lifestyle",
+      },
+      {
+        value: "68%",
+        label: "des clients premium achètent sur le site de la marque directement",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Immersion dans votre univers",
+        desc: "Nous analysons votre marque, vos collections et votre clientèle pour créer un site e-commerce qui incarne votre identité.",
+      },
+      {
+        step: "02",
+        title: "Design & lookbook",
+        desc: "Création d'un design premium avec lookbook, fiches produits, page savoir-faire et photos lifestyle.",
+      },
+      {
+        step: "03",
+        title: "E-commerce & paiement",
+        desc: "Intégration de la boutique en ligne, du paiement Stripe sécurisé et des options de livraison.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à la gestion des produits et commandes, suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
 ];
 
 export const getSectorBySlug = (slug: string) =>

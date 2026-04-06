@@ -1699,6 +1699,1656 @@ export const cities: City[] = [
       },
     ],
   },
+  {
+    slug: "toulon",
+    name: "Toulon",
+    department: "Var",
+    region: "Provence-Alpes-Côte d'Azur",
+    postalCode: "83000",
+    lat: "43.1242",
+    lng: "5.9280",
+    population: "180 000",
+    description:
+      "Premier port militaire français, Toulon est aussi un pôle économique dynamique du Var avec un tissu de PME, commerces et acteurs du tourisme méditerranéen.",
+    stats: {
+      entreprises: "12 500 entreprises",
+      searches: "3 800 recherches/mois pour 'site web Toulon'",
+    },
+    keywords: [
+      "agence web Toulon",
+      "création site internet Toulon",
+      "SEO Toulon",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Toulon ?",
+        answer:
+          "Un site vitrine professionnel à Toulon démarre à 500€ et un site e-commerce à 800€. Nous adaptons chaque projet aux besoins spécifiques des entreprises toulonnaises après un audit gratuit.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab comme agence web à Toulon ?",
+        answer:
+          "Nous comprenons les enjeux du marché varois : tourisme, nautisme, commerce de proximité. Notre expertise en SEO local et en création de sites performants permet aux entreprises toulonnaises de se démarquer en ligne.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Toulon ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, incluant design sur-mesure, développement et optimisation SEO. Les projets e-commerce plus complexes prennent 10 à 14 jours.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de tous secteurs à Toulon ?",
+        answer:
+          "Oui, nous accompagnons des restaurateurs du port, des hôteliers, des artisans, des professions libérales et des commerces du centre-ville de Toulon dans leur transformation digitale.",
+      },
+      {
+        question: "Proposez-vous le référencement SEO local pour Toulon ?",
+        answer:
+          "Absolument. Nous optimisons votre visibilité sur les recherches locales à Toulon et dans le Var : fiche Google Business, mots-clés géolocalisés, avis clients et citations locales.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Grâce à ConvertiLab, notre restaurant sur le port de Toulon a vu ses réservations en ligne augmenter de 55%. Le site est magnifique et parfaitement référencé.",
+        author: "Marc Olivier",
+        role: "Restaurateur",
+        company: "La Table du Port Toulon",
+        metric: "+55% de réservations en ligne",
+        photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Un site livré en 5 jours, rapide et élégant. Nos clients toulonnais nous trouvent enfin sur Google. Investissement rentabilisé en un mois.",
+        author: "Claire Dupont",
+        role: "Gérante",
+        company: "Institut Beauté Méditerranée",
+        metric: "ROI en 1 mois",
+        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "reims",
+    name: "Reims",
+    department: "Marne",
+    region: "Grand Est",
+    postalCode: "51100",
+    lat: "49.2583",
+    lng: "3.7501",
+    population: "185 000",
+    description:
+      "Capitale du Champagne et ville universitaire majeure, Reims possède un écosystème économique riche entre viticulture, industrie et services aux entreprises.",
+    stats: {
+      entreprises: "14 000 entreprises",
+      searches: "3 500 recherches/mois pour 'site web Reims'",
+    },
+    keywords: [
+      "agence web Reims",
+      "création site internet Reims",
+      "SEO Reims",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Reims ?",
+        answer:
+          "Chez ConvertiLab, un site vitrine professionnel à Reims commence à 500€ et un site e-commerce à 800€. Chaque projet est adapté aux besoins des entreprises rémoises.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab comme agence web à Reims ?",
+        answer:
+          "Nous maîtrisons les spécificités du marché rémois : maisons de Champagne, tourisme œnologique, commerces du centre-ville. Notre approche allie performance technique et connaissance locale.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Reims ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés. Ce délai inclut le design, le développement, l'optimisation SEO et la mise en ligne.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de tous secteurs à Reims ?",
+        answer:
+          "Oui, nous accompagnons des maisons de Champagne, des restaurateurs, des artisans, des professions libérales et des startups rémoises dans leur présence digitale.",
+      },
+      {
+        question: "Proposez-vous le référencement SEO local pour Reims ?",
+        answer:
+          "Oui, le SEO local est essentiel à Reims. Nous optimisons votre fiche Google Business, vos mots-clés locaux et votre contenu pour que vos clients rémois vous trouvent facilement.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre maison de Champagne avait besoin d'un site à la hauteur de notre image. ConvertiLab a créé un site élégant qui a doublé nos demandes de visites privées.",
+        author: "Philippe Martin",
+        role: "Directeur commercial",
+        company: "Champagne Martin & Fils",
+        metric: "x2 demandes de visites",
+        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site impeccable, livré dans les délais. Notre cabinet d'avocats à Reims reçoit maintenant 12 nouveaux contacts par mois grâce au SEO local.",
+        author: "Isabelle Renard",
+        role: "Avocate associée",
+        company: "Cabinet Renard & Associés",
+        metric: "+12 contacts/mois",
+        photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "saint-etienne",
+    name: "Saint-Étienne",
+    department: "Loire",
+    region: "Auvergne-Rhône-Alpes",
+    postalCode: "42000",
+    lat: "45.4397",
+    lng: "4.3872",
+    population: "175 000",
+    description:
+      "Ville industrielle en pleine reconversion, Saint-Étienne est labellisée Ville de Design UNESCO et développe un écosystème innovant mêlant industrie, numérique et création.",
+    stats: {
+      entreprises: "11 800 entreprises",
+      searches: "2 900 recherches/mois pour 'site web Saint-Étienne'",
+    },
+    keywords: [
+      "agence web Saint-Étienne",
+      "création site internet Saint-Étienne",
+      "SEO Saint-Étienne",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Saint-Étienne ?",
+        answer:
+          "Un site vitrine professionnel à Saint-Étienne démarre à 500€ et un site e-commerce à 800€. Nous proposons des solutions adaptées au budget des entreprises stéphanoises.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Saint-Étienne ?",
+        answer:
+          "Saint-Étienne est une ville de design et d'innovation. Nous créons des sites qui reflètent cette identité créative tout en étant optimisés pour convertir vos visiteurs en clients.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Saint-Étienne ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés. Pour les projets e-commerce, comptez 10 à 14 jours avec toutes les fonctionnalités incluses.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises stéphanoises ?",
+        answer:
+          "Oui, nous accompagnons des entreprises de tous secteurs à Saint-Étienne : industrie, design, commerce, santé, artisanat et services aux professionnels.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Saint-Étienne ?",
+        answer:
+          "Absolument. Nous optimisons votre référencement local pour que les Stéphanois vous trouvent en premier sur Google, avec un travail ciblé sur votre fiche Google Business et vos mots-clés locaux.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "ConvertiLab a compris l'ADN design de notre studio stéphanois. Le site qu'ils ont créé nous a permis de décrocher 3 nouveaux contrats en un mois.",
+        author: "Julie Faure",
+        role: "Directrice artistique",
+        company: "Studio Créatif 42",
+        metric: "3 contrats en 1 mois",
+        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Notre PME industrielle avait un site vieillissant. ConvertiLab l'a modernisé et nos demandes de devis ont bondi de 70%. Excellent travail.",
+        author: "Éric Bonnard",
+        role: "Gérant",
+        company: "Bonnard Industries",
+        metric: "+70% de demandes de devis",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "le-havre",
+    name: "Le Havre",
+    department: "Seine-Maritime",
+    region: "Normandie",
+    postalCode: "76600",
+    lat: "49.4944",
+    lng: "0.1079",
+    population: "170 000",
+    description:
+      "Premier port de France pour le commerce extérieur, Le Havre est un hub logistique et industriel majeur avec un tissu économique tourné vers le maritime et l'international.",
+    stats: {
+      entreprises: "10 500 entreprises",
+      searches: "2 600 recherches/mois pour 'site web Le Havre'",
+    },
+    keywords: [
+      "agence web Le Havre",
+      "création site internet Le Havre",
+      "SEO Le Havre",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web au Havre ?",
+        answer:
+          "Un site vitrine professionnel au Havre commence à 500€ et un site e-commerce à 800€. Nous adaptons nos offres aux entreprises havraises de toutes tailles.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab comme agence web au Havre ?",
+        answer:
+          "Nous comprenons les enjeux du marché havrais : logistique, maritime, commerce international. Nos sites sont conçus pour générer des leads qualifiés et renforcer votre crédibilité.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré au Havre ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés, avec design sur-mesure, développement et optimisation SEO inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises du Havre ?",
+        answer:
+          "Oui, nous accompagnons des entreprises havraises de tous secteurs : logistique, transport, commerce, restauration, services aux entreprises et professions libérales.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Le Havre ?",
+        answer:
+          "Oui, nous optimisons votre visibilité locale au Havre et en Seine-Maritime grâce au SEO local, à l'optimisation de votre fiche Google Business et à un contenu géolocalisé.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre société de transit maritime avait besoin d'un site professionnel et bilingue. ConvertiLab a livré un site impeccable qui rassure nos clients internationaux.",
+        author: "Jean-Marc Leroy",
+        role: "Directeur",
+        company: "Leroy Transit Maritime",
+        metric: "+35% de contacts internationaux",
+        photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Excellent travail ! Notre boulangerie-pâtisserie du Havre est maintenant en première page Google. Les commandes en ligne ont explosé.",
+        author: "Nathalie Perrin",
+        role: "Pâtissière",
+        company: "Maison Perrin Le Havre",
+        metric: "Page 1 Google en 6 semaines",
+        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "clermont-ferrand",
+    name: "Clermont-Ferrand",
+    department: "Puy-de-Dôme",
+    region: "Auvergne-Rhône-Alpes",
+    postalCode: "63000",
+    lat: "45.7772",
+    lng: "3.0870",
+    population: "147 000",
+    description:
+      "Capitale de l'Auvergne et berceau de Michelin, Clermont-Ferrand est un pôle industriel et universitaire dynamique avec un écosystème de startups en forte croissance.",
+    stats: {
+      entreprises: "10 200 entreprises",
+      searches: "2 400 recherches/mois pour 'site web Clermont-Ferrand'",
+    },
+    keywords: [
+      "agence web Clermont-Ferrand",
+      "création site internet Clermont-Ferrand",
+      "SEO Clermont-Ferrand",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Clermont-Ferrand ?",
+        answer:
+          "Un site vitrine professionnel à Clermont-Ferrand démarre à 500€ et un site e-commerce à 800€. Nous offrons un excellent rapport qualité-prix aux entreprises clermontoises.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Clermont-Ferrand ?",
+        answer:
+          "Nous connaissons le marché auvergnat et ses spécificités. Notre approche technique avancée et notre expertise SEO locale permettent aux entreprises clermontoises de gagner en visibilité rapidement.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Clermont-Ferrand ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés. Ce délai inclut design, développement, SEO et mise en ligne.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Clermont-Ferrand ?",
+        answer:
+          "Oui, nous accompagnons des entreprises clermontoises de tous secteurs : industrie, tech, commerce, tourisme, santé et services aux professionnels.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Clermont-Ferrand ?",
+        answer:
+          "Absolument. Nous optimisons votre référencement local pour les recherches clermontoises et auvergnates, incluant votre fiche Google Business et un contenu ciblé.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre startup cleantech clermontoise avait besoin d'un site qui inspire confiance aux investisseurs. ConvertiLab a livré au-delà de nos attentes. Résultat : 2 levées de fonds facilitées.",
+        author: "Antoine Roche",
+        role: "CEO",
+        company: "GreenTech Auvergne",
+        metric: "2 levées de fonds facilitées",
+        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "En tant que fromagère AOP, j'avais besoin d'un site e-commerce qui reflète l'authenticité de nos produits. ConvertiLab a parfaitement capté notre identité.",
+        author: "Marie-Claire Dupuy",
+        role: "Gérante",
+        company: "Fromages d'Auvergne",
+        metric: "+80% de ventes en ligne",
+        photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "tours",
+    name: "Tours",
+    department: "Indre-et-Loire",
+    region: "Centre-Val de Loire",
+    postalCode: "37000",
+    lat: "47.3941",
+    lng: "0.6848",
+    population: "138 000",
+    description:
+      "Ville d'art et d'histoire au cœur des châteaux de la Loire, Tours combine tourisme, université et services aux entreprises dans un cadre de vie attractif.",
+    stats: {
+      entreprises: "9 500 entreprises",
+      searches: "2 200 recherches/mois pour 'site web Tours'",
+    },
+    keywords: [
+      "agence web Tours",
+      "création site internet Tours",
+      "SEO Tours",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Tours ?",
+        answer:
+          "Un site vitrine professionnel à Tours démarre à 500€ et un site e-commerce à 800€. Nous proposons des solutions sur-mesure pour les entreprises tourangelles.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab comme agence web à Tours ?",
+        answer:
+          "Nous comprenons les enjeux du marché tourangeau : tourisme, gastronomie, artisanat, services. Nos sites allient élégance et performance pour convertir vos visiteurs.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Tours ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés, design, développement et SEO inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Tours ?",
+        answer:
+          "Oui, nous accompagnons des entreprises tourangelles de tous secteurs : hôtellerie, restauration, vignerons, commerces, artisans et professions libérales.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Tours ?",
+        answer:
+          "Oui, nous optimisons votre visibilité locale à Tours et en Indre-et-Loire pour que vos clients vous trouvent en premier sur Google.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre domaine viticole avait besoin d'un site à la hauteur de nos vins. ConvertiLab a créé une vitrine en ligne qui a triplé nos ventes directes.",
+        author: "François Delorme",
+        role: "Vigneron",
+        company: "Domaine Delorme Vouvray",
+        metric: "x3 ventes directes",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site élégant et efficace pour notre hôtel de charme. Les réservations directes ont augmenté de 45%, réduisant notre dépendance aux OTA.",
+        author: "Camille Bertrand",
+        role: "Directrice",
+        company: "Hôtel Le Jardin de Tours",
+        metric: "+45% réservations directes",
+        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "limoges",
+    name: "Limoges",
+    department: "Haute-Vienne",
+    region: "Nouvelle-Aquitaine",
+    postalCode: "87000",
+    lat: "45.8336",
+    lng: "1.2611",
+    population: "132 000",
+    description:
+      "Capitale des arts du feu et de la porcelaine, Limoges est une ville industrielle et artisanale avec un savoir-faire reconnu mondialement.",
+    stats: {
+      entreprises: "8 200 entreprises",
+      searches: "1 800 recherches/mois pour 'site web Limoges'",
+    },
+    keywords: [
+      "agence web Limoges",
+      "création site internet Limoges",
+      "SEO Limoges",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Limoges ?",
+        answer:
+          "Un site vitrine professionnel à Limoges démarre à 500€ et un site e-commerce à 800€. Idéal pour les artisans et entreprises limougeaudes qui veulent développer leur visibilité.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Limoges ?",
+        answer:
+          "Nous valorisons le savoir-faire limougeaud en ligne. Que vous soyez porcelainier, artisan ou commerçant, nous créons des sites qui mettent en avant votre excellence.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Limoges ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, avec design sur-mesure et optimisation SEO inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des artisans de Limoges ?",
+        answer:
+          "Oui, nous accompagnons de nombreux artisans et entreprises limougeauds : porcelainiers, émailleurs, commerces, restaurateurs et professions libérales.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Limoges ?",
+        answer:
+          "Absolument. Nous optimisons votre visibilité sur Google à Limoges et en Haute-Vienne pour attirer une clientèle locale et touristique.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre atelier de porcelaine avait besoin d'un site e-commerce digne de notre savoir-faire. ConvertiLab a livré un site magnifique, nos ventes internationales ont doublé.",
+        author: "Hélène Marchand",
+        role: "Maître porcelainière",
+        company: "Porcelaine Marchand Limoges",
+        metric: "x2 ventes internationales",
+        photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Très satisfait du site créé pour mon cabinet. Le SEO local me permet de recevoir 10 nouveaux patients par mois via Google.",
+        author: "Dr. Pierre Lamy",
+        role: "Kinésithérapeute",
+        company: "Cabinet Lamy Limoges",
+        metric: "+10 patients/mois",
+        photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "amiens",
+    name: "Amiens",
+    department: "Somme",
+    region: "Hauts-de-France",
+    postalCode: "80000",
+    lat: "49.8941",
+    lng: "2.2958",
+    population: "135 000",
+    description:
+      "Capitale de la Picardie et ville universitaire, Amiens est un pôle économique des Hauts-de-France avec un secteur tertiaire et industriel diversifié.",
+    stats: {
+      entreprises: "8 800 entreprises",
+      searches: "2 000 recherches/mois pour 'site web Amiens'",
+    },
+    keywords: [
+      "agence web Amiens",
+      "création site internet Amiens",
+      "SEO Amiens",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Amiens ?",
+        answer:
+          "Un site vitrine professionnel à Amiens démarre à 500€ et un site e-commerce à 800€. Nous offrons des tarifs compétitifs pour les entreprises amiénoises.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Amiens ?",
+        answer:
+          "Nous connaissons le tissu économique picard et les besoins des entreprises amiénoises. Nos sites performants vous aident à vous démarquer sur un marché local en pleine évolution.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Amiens ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés. Design, développement, SEO et mise en ligne sont inclus dans ce délai.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises d'Amiens ?",
+        answer:
+          "Oui, nous accompagnons des entreprises amiénoises de tous secteurs : commerce, industrie, artisanat, santé, tourisme et services aux entreprises.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Amiens ?",
+        answer:
+          "Oui, nous optimisons votre référencement local à Amiens et dans la Somme pour maximiser votre visibilité auprès des clients de proximité.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre brasserie artisanale avait besoin d'un site qui reflète notre passion. ConvertiLab a créé un site superbe et nos commandes en ligne ont explosé de 60%.",
+        author: "Romain Vasseur",
+        role: "Brasseur",
+        company: "Brasserie Picarde",
+        metric: "+60% de commandes en ligne",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Enfin un site professionnel pour notre cabinet ! Les prises de rendez-vous en ligne ont simplifié notre quotidien et attiré de nouveaux patients.",
+        author: "Dr. Sophie Lecomte",
+        role: "Médecin généraliste",
+        company: "Cabinet Médical Saint-Leu",
+        metric: "+25 RDV en ligne/mois",
+        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "perpignan",
+    name: "Perpignan",
+    department: "Pyrénées-Orientales",
+    region: "Occitanie",
+    postalCode: "66000",
+    lat: "42.6986",
+    lng: "2.8956",
+    population: "122 000",
+    description:
+      "Ville catalane au carrefour franco-espagnol, Perpignan est un pôle commercial et touristique dynamique avec un tissu de PME tourné vers la Méditerranée.",
+    stats: {
+      entreprises: "7 800 entreprises",
+      searches: "1 900 recherches/mois pour 'site web Perpignan'",
+    },
+    keywords: [
+      "agence web Perpignan",
+      "création site internet Perpignan",
+      "SEO Perpignan",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Perpignan ?",
+        answer:
+          "Un site vitrine professionnel à Perpignan démarre à 500€ et un site e-commerce à 800€. Nous proposons des solutions adaptées aux entreprises perpignanaises.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Perpignan ?",
+        answer:
+          "Nous comprenons la double culture franco-catalane de Perpignan et les enjeux du marché local : tourisme, commerce transfrontalier, artisanat. Nos sites sont conçus pour convertir.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Perpignan ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, incluant design, développement et optimisation SEO.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Perpignan ?",
+        answer:
+          "Oui, nous accompagnons des commerçants, restaurateurs, vignerons, artisans et professions libérales de Perpignan et des Pyrénées-Orientales.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Perpignan ?",
+        answer:
+          "Absolument. Nous optimisons votre visibilité sur les recherches locales à Perpignan et dans les Pyrénées-Orientales, en français et en catalan si nécessaire.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre domaine viticole en Roussillon avait besoin d'un site bilingue français-catalan. ConvertiLab a parfaitement répondu à nos attentes. Les ventes en ligne ont décollé.",
+        author: "Jordi Pujol",
+        role: "Vigneron",
+        company: "Domaine Pujol Roussillon",
+        metric: "+90% de ventes en ligne",
+        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Un site rapide, beau et efficace pour notre agence immobilière. Nos demandes de visites ont augmenté de 50% depuis la mise en ligne.",
+        author: "Laura Martinez",
+        role: "Directrice",
+        company: "Immo Catalan Perpignan",
+        metric: "+50% demandes de visites",
+        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "metz",
+    name: "Metz",
+    department: "Moselle",
+    region: "Grand Est",
+    postalCode: "57000",
+    lat: "49.1193",
+    lng: "6.1757",
+    population: "120 000",
+    description:
+      "Ville d'art et de culture au carrefour européen, Metz est un pôle tertiaire et technologique majeur du Grand Est avec le Centre Pompidou-Metz comme emblème.",
+    stats: {
+      entreprises: "8 500 entreprises",
+      searches: "2 100 recherches/mois pour 'site web Metz'",
+    },
+    keywords: [
+      "agence web Metz",
+      "création site internet Metz",
+      "SEO Metz",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Metz ?",
+        answer:
+          "Un site vitrine professionnel à Metz démarre à 500€ et un site e-commerce à 800€. Nous adaptons chaque projet aux besoins des entreprises messines.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab comme agence web à Metz ?",
+        answer:
+          "Nous comprenons le marché messin et sa dimension transfrontalière avec le Luxembourg et l'Allemagne. Nos sites multilingues et performants répondent à ces enjeux spécifiques.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Metz ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés. Ce délai inclut design, développement, SEO et mise en ligne.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Metz ?",
+        answer:
+          "Oui, nous accompagnons des entreprises messines de tous secteurs : tech, commerce, restauration, services aux entreprises et professions libérales.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Metz ?",
+        answer:
+          "Oui, nous optimisons votre visibilité locale à Metz et en Moselle. Notre expertise en SEO transfrontalier est un atout unique pour toucher les marchés voisins.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre cabinet de conseil travaille avec des clients luxembourgeois et allemands. ConvertiLab a créé un site trilingue qui a boosté notre crédibilité internationale.",
+        author: "Alexandre Weber",
+        role: "Consultant",
+        company: "Weber Conseil Metz",
+        metric: "+40% de clients internationaux",
+        photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site parfait pour notre boutique du centre-ville de Metz. Le e-commerce nous permet de vendre nos spécialités lorraines dans toute la France.",
+        author: "Catherine Muller",
+        role: "Commerçante",
+        company: "Saveurs de Lorraine",
+        metric: "Livraison France entière",
+        photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "besancon",
+    name: "Besançon",
+    department: "Doubs",
+    region: "Bourgogne-Franche-Comté",
+    postalCode: "25000",
+    lat: "47.2378",
+    lng: "6.0241",
+    population: "120 000",
+    description:
+      "Capitale historique de l'horlogerie française, Besançon est une ville universitaire et industrielle dynamique avec un secteur microtechnique de pointe.",
+    stats: {
+      entreprises: "7 500 entreprises",
+      searches: "1 600 recherches/mois pour 'site web Besançon'",
+    },
+    keywords: [
+      "agence web Besançon",
+      "création site internet Besançon",
+      "SEO Besançon",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Besançon ?",
+        answer:
+          "Un site vitrine professionnel à Besançon démarre à 500€ et un site e-commerce à 800€. Nous offrons des solutions adaptées aux entreprises bisontines.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Besançon ?",
+        answer:
+          "Nous comprenons le tissu économique bisontin : microtechniques, horlogerie, université, tourisme vert. Nos sites sont conçus pour valoriser votre expertise locale.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Besançon ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, incluant design, développement et optimisation SEO.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Besançon ?",
+        answer:
+          "Oui, nous accompagnons des entreprises bisontines de tous secteurs : industrie, microtechniques, commerce, tourisme et services.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Besançon ?",
+        answer:
+          "Absolument. Nous optimisons votre référencement local à Besançon et dans le Doubs pour attirer une clientèle de proximité.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre entreprise de microtechniques avait besoin d'un site vitrine technique et crédible. ConvertiLab a livré un site qui nous a permis de décrocher un contrat majeur.",
+        author: "Laurent Girard",
+        role: "Directeur technique",
+        company: "MicroTech Besançon",
+        metric: "1 contrat majeur décroché",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site superbe pour notre fromagerie comtoise. Les commandes en ligne de Comté et Morbier ont décollé depuis la mise en ligne.",
+        author: "Anne-Marie Vuillemin",
+        role: "Fromagère",
+        company: "Fromagerie Vuillemin",
+        metric: "+75% de commandes en ligne",
+        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "orleans",
+    name: "Orléans",
+    department: "Loiret",
+    region: "Centre-Val de Loire",
+    postalCode: "45000",
+    lat: "47.9029",
+    lng: "1.9093",
+    population: "116 000",
+    description:
+      "Préfecture du Loiret et métropole du Centre-Val de Loire, Orléans est un pôle cosmétique et pharmaceutique majeur avec un tissu économique diversifié.",
+    stats: {
+      entreprises: "8 000 entreprises",
+      searches: "1 800 recherches/mois pour 'site web Orléans'",
+    },
+    keywords: [
+      "agence web Orléans",
+      "création site internet Orléans",
+      "SEO Orléans",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Orléans ?",
+        answer:
+          "Un site vitrine professionnel à Orléans démarre à 500€ et un site e-commerce à 800€. Nous proposons des solutions sur-mesure pour les entreprises orléanaises.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Orléans ?",
+        answer:
+          "Nous connaissons le marché orléanais et ses spécificités : cosmétique, pharma, logistique, commerce. Nos sites performants vous aident à gagner en visibilité.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Orléans ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés, avec design, développement et SEO inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises d'Orléans ?",
+        answer:
+          "Oui, nous accompagnons des entreprises orléanaises de tous secteurs : cosmétique, pharmaceutique, commerce, restauration et services aux entreprises.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Orléans ?",
+        answer:
+          "Oui, nous optimisons votre visibilité locale à Orléans et dans le Loiret pour que vos clients vous trouvent en premier sur Google.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre laboratoire cosmétique avait besoin d'un site e-commerce premium. ConvertiLab a créé une boutique en ligne qui a triplé nos ventes directes en 3 mois.",
+        author: "Sandrine Moreau",
+        role: "Directrice",
+        company: "Cosmétiques Loire",
+        metric: "x3 ventes en 3 mois",
+        photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Excellent travail pour notre agence immobilière orléanaise. Le site génère 20 contacts qualifiés par mois, un vrai accélérateur de business.",
+        author: "Benoît Garnier",
+        role: "Agent immobilier",
+        company: "Garnier Immobilier Orléans",
+        metric: "+20 contacts/mois",
+        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "rouen",
+    name: "Rouen",
+    department: "Seine-Maritime",
+    region: "Normandie",
+    postalCode: "76000",
+    lat: "49.4432",
+    lng: "1.0999",
+    population: "113 000",
+    description:
+      "Capitale historique de la Normandie, Rouen est un pôle économique majeur alliant patrimoine, industrie portuaire et services aux entreprises.",
+    stats: {
+      entreprises: "9 200 entreprises",
+      searches: "2 300 recherches/mois pour 'site web Rouen'",
+    },
+    keywords: [
+      "agence web Rouen",
+      "création site internet Rouen",
+      "SEO Rouen",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Rouen ?",
+        answer:
+          "Un site vitrine professionnel à Rouen démarre à 500€ et un site e-commerce à 800€. Nous adaptons nos solutions aux entreprises rouennaises de toutes tailles.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab comme agence web à Rouen ?",
+        answer:
+          "Nous comprenons le marché normand et les besoins des entreprises rouennaises. Notre expertise technique et SEO locale vous garantit un site performant et bien référencé.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Rouen ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, incluant design sur-mesure, développement et optimisation SEO.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Rouen ?",
+        answer:
+          "Oui, nous accompagnons des entreprises rouennaises de tous secteurs : industrie, logistique, commerce, tourisme, restauration et professions libérales.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Rouen ?",
+        answer:
+          "Absolument. Nous optimisons votre visibilité sur les recherches locales à Rouen et en Seine-Maritime pour attirer davantage de clients de proximité.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre restaurant près de la cathédrale de Rouen a vu ses réservations en ligne bondir de 65% grâce au site créé par ConvertiLab. Un investissement très rentable.",
+        author: "Michel Dupont",
+        role: "Chef restaurateur",
+        company: "Le Bistrot Normand",
+        metric: "+65% de réservations",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site professionnel et élégant pour notre cabinet d'architectes. Nous recevons régulièrement des contacts qualifiés grâce au SEO local.",
+        author: "Émilie Normand",
+        role: "Architecte",
+        company: "Atelier Normand Architecture",
+        metric: "+15 contacts qualifiés/mois",
+        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "caen",
+    name: "Caen",
+    department: "Calvados",
+    region: "Normandie",
+    postalCode: "14000",
+    lat: "49.1829",
+    lng: "-0.3707",
+    population: "108 000",
+    description:
+      "Ville universitaire et numérique de Normandie, Caen est un pôle d'innovation avec un écosystème tech en plein essor et un secteur tertiaire dynamique.",
+    stats: {
+      entreprises: "7 800 entreprises",
+      searches: "1 900 recherches/mois pour 'site web Caen'",
+    },
+    keywords: [
+      "agence web Caen",
+      "création site internet Caen",
+      "SEO Caen",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Caen ?",
+        answer:
+          "Un site vitrine professionnel à Caen démarre à 500€ et un site e-commerce à 800€. Nous proposons des tarifs compétitifs pour les entreprises caennaises.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Caen ?",
+        answer:
+          "Caen est un hub numérique en pleine croissance. Nous créons des sites modernes et performants qui reflètent le dynamisme de l'écosystème caennais.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Caen ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés. Ce délai inclut design, développement, SEO et mise en ligne.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Caen ?",
+        answer:
+          "Oui, nous accompagnons des startups, PME, commerces, artisans et professions libérales caennaises dans leur transformation digitale.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Caen ?",
+        answer:
+          "Oui, nous optimisons votre référencement local à Caen et dans le Calvados pour maximiser votre visibilité auprès des clients normands.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre startup edtech caennaise avait besoin d'un site convaincant pour lever des fonds. ConvertiLab a livré en 5 jours un site qui a impressionné nos investisseurs.",
+        author: "Maxime Leblanc",
+        role: "CEO",
+        company: "EduTech Normandie",
+        metric: "Levée de fonds réussie",
+        photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Excellent site pour notre crêperie normande. Les touristes nous trouvent facilement sur Google et nos commandes à emporter ont explosé.",
+        author: "Aurélie Leclerc",
+        role: "Gérante",
+        company: "Crêperie du Château Caen",
+        metric: "+80% commandes à emporter",
+        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "nancy",
+    name: "Nancy",
+    department: "Meurthe-et-Moselle",
+    region: "Grand Est",
+    postalCode: "54000",
+    lat: "48.6921",
+    lng: "6.1844",
+    population: "105 000",
+    description:
+      "Ville d'Art nouveau et universitaire majeure, Nancy est un pôle d'excellence en santé, numérique et industries créatives dans le Grand Est.",
+    stats: {
+      entreprises: "7 800 entreprises",
+      searches: "1 800 recherches/mois pour 'site web Nancy'",
+    },
+    keywords: [
+      "agence web Nancy",
+      "création site internet Nancy",
+      "SEO Nancy",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Nancy ?",
+        answer:
+          "Un site vitrine professionnel à Nancy démarre à 500€ et un site e-commerce à 800€. Nous adaptons nos solutions au budget des entreprises nancéiennes.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Nancy ?",
+        answer:
+          "Nous comprenons le tissu économique nancéien : santé, université, Art nouveau, commerce. Nos sites conjuguent esthétique et performance pour vous démarquer.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Nancy ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, avec design sur-mesure, développement et SEO inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Nancy ?",
+        answer:
+          "Oui, nous accompagnons des entreprises nancéiennes de tous secteurs : santé, tech, commerce, artisanat, restauration et professions libérales.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Nancy ?",
+        answer:
+          "Absolument. Nous optimisons votre visibilité sur Google à Nancy et en Meurthe-et-Moselle pour attirer une clientèle locale qualifiée.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre galerie d'art nancéienne avait besoin d'un site qui sublime nos œuvres. ConvertiLab a créé un site magnifique qui a attiré des collectionneurs du monde entier.",
+        author: "Isabelle Clement",
+        role: "Galeriste",
+        company: "Galerie Art Nouveau Nancy",
+        metric: "+30% de ventes en galerie",
+        photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Un site performant pour notre pharmacie. Les clients nous trouvent facilement et la prise de rendez-vous en ligne a simplifié notre organisation.",
+        author: "Dr. François Petit",
+        role: "Pharmacien",
+        company: "Pharmacie Place Stanislas",
+        metric: "+45% de RDV en ligne",
+        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "argenteuil",
+    name: "Argenteuil",
+    department: "Val-d'Oise",
+    region: "Île-de-France",
+    postalCode: "95100",
+    lat: "48.9472",
+    lng: "2.2467",
+    population: "113 000",
+    description:
+      "Plus grande ville du Val-d'Oise, Argenteuil est un pôle économique francilien dynamique avec de nombreuses PME et commerces de proximité.",
+    stats: {
+      entreprises: "6 800 entreprises",
+      searches: "1 500 recherches/mois pour 'site web Argenteuil'",
+    },
+    keywords: [
+      "agence web Argenteuil",
+      "création site internet Argenteuil",
+      "SEO Argenteuil",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Argenteuil ?",
+        answer:
+          "Un site vitrine professionnel à Argenteuil démarre à 500€ et un site e-commerce à 800€. Nous offrons des tarifs compétitifs pour les entreprises argenteuillaises.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Argenteuil ?",
+        answer:
+          "Nous connaissons le tissu économique du Val-d'Oise et les besoins des entreprises argenteuillaises. Notre proximité avec Paris nous permet d'offrir une expertise de premier plan à des tarifs accessibles.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Argenteuil ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, incluant design, développement et optimisation SEO.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises d'Argenteuil ?",
+        answer:
+          "Oui, nous accompagnons des commerces, artisans, professions libérales et PME d'Argenteuil et du Val-d'Oise dans leur transformation digitale.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Argenteuil ?",
+        answer:
+          "Oui, nous optimisons votre visibilité locale à Argenteuil et dans le Val-d'Oise pour attirer des clients de proximité.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre salon de coiffure à Argenteuil a gagné en visibilité grâce au site de ConvertiLab. Les prises de rendez-vous en ligne ont augmenté de 70%.",
+        author: "Fatima Benali",
+        role: "Gérante",
+        company: "Salon Élégance Argenteuil",
+        metric: "+70% de RDV en ligne",
+        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site professionnel livré rapidement pour notre entreprise de BTP. Nos clients nous prennent plus au sérieux et les demandes de devis ont bondi.",
+        author: "Karim Meziane",
+        role: "Gérant",
+        company: "KM Bâtiment Argenteuil",
+        metric: "+50% demandes de devis",
+        photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "montreuil",
+    name: "Montreuil",
+    department: "Seine-Saint-Denis",
+    region: "Île-de-France",
+    postalCode: "93100",
+    lat: "48.8638",
+    lng: "2.4483",
+    population: "111 000",
+    description:
+      "Ville créative aux portes de Paris, Montreuil est un hub artistique et entrepreneurial avec un écosystème de startups, d'artisans et de créateurs.",
+    stats: {
+      entreprises: "7 200 entreprises",
+      searches: "1 600 recherches/mois pour 'site web Montreuil'",
+    },
+    keywords: [
+      "agence web Montreuil",
+      "création site internet Montreuil",
+      "SEO Montreuil",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Montreuil ?",
+        answer:
+          "Un site vitrine professionnel à Montreuil démarre à 500€ et un site e-commerce à 800€. Nous proposons des solutions créatives adaptées à l'esprit montreuillois.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Montreuil ?",
+        answer:
+          "Montreuil est une ville de créateurs et d'entrepreneurs. Nous créons des sites qui reflètent cette énergie créative tout en étant optimisés pour la conversion.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Montreuil ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés. Design, développement et SEO sont inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Montreuil ?",
+        answer:
+          "Oui, nous accompagnons des artistes, artisans, startups, commerces et professions libérales de Montreuil dans leur présence en ligne.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Montreuil ?",
+        answer:
+          "Absolument. Nous optimisons votre visibilité locale à Montreuil et en Seine-Saint-Denis pour que vos clients vous trouvent facilement.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre atelier de céramique à Montreuil avait besoin d'un site e-commerce artisanal. ConvertiLab a créé une boutique en ligne qui reflète notre univers. Les ventes ont doublé.",
+        author: "Léa Martin",
+        role: "Céramiste",
+        company: "Atelier Terre & Feu",
+        metric: "x2 ventes en ligne",
+        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Excellent site pour notre coworking montreuillois. L'outil de réservation en ligne a boosté notre taux d'occupation de 40%.",
+        author: "David Cohen",
+        role: "Fondateur",
+        company: "Le Lab Montreuil",
+        metric: "+40% taux d'occupation",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "saint-denis",
+    name: "Saint-Denis",
+    department: "Seine-Saint-Denis",
+    region: "Île-de-France",
+    postalCode: "93200",
+    lat: "48.9362",
+    lng: "2.3574",
+    population: "113 000",
+    description:
+      "Ville olympique et siège de grandes entreprises, Saint-Denis est un pôle économique majeur du nord francilien en pleine transformation urbaine.",
+    stats: {
+      entreprises: "7 500 entreprises",
+      searches: "1 700 recherches/mois pour 'site web Saint-Denis'",
+    },
+    keywords: [
+      "agence web Saint-Denis",
+      "création site internet Saint-Denis",
+      "SEO Saint-Denis",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Saint-Denis ?",
+        answer:
+          "Un site vitrine professionnel à Saint-Denis démarre à 500€ et un site e-commerce à 800€. Nous proposons des solutions adaptées aux entreprises dionysiennes.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Saint-Denis ?",
+        answer:
+          "Saint-Denis est en plein renouveau économique. Nous créons des sites modernes qui accompagnent la dynamique de transformation de la ville et de ses entreprises.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Saint-Denis ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, avec design, développement et SEO inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Saint-Denis ?",
+        answer:
+          "Oui, nous accompagnons des entreprises dionysiennes de tous secteurs : commerce, restauration, services, artisanat et professions libérales.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Saint-Denis ?",
+        answer:
+          "Oui, nous optimisons votre visibilité locale à Saint-Denis et en Seine-Saint-Denis pour maximiser votre présence sur Google.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre restaurant près du Stade de France avait besoin d'un site performant pour les jours de match. ConvertiLab a livré un site avec réservation en ligne qui a boosté notre chiffre de 45%.",
+        author: "Amadou Diallo",
+        role: "Restaurateur",
+        company: "Le Stade Gourmand",
+        metric: "+45% de chiffre d'affaires",
+        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site impeccable pour notre cabinet comptable. Nos clients nous trouvent facilement et la prise de rendez-vous en ligne nous fait gagner un temps précieux.",
+        author: "Nadia Khelifi",
+        role: "Expert-comptable",
+        company: "Cabinet Khelifi & Associés",
+        metric: "+30 RDV/mois en ligne",
+        photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "creteil",
+    name: "Créteil",
+    department: "Val-de-Marne",
+    region: "Île-de-France",
+    postalCode: "94000",
+    lat: "48.7904",
+    lng: "2.4556",
+    population: "92 000",
+    description:
+      "Préfecture du Val-de-Marne, Créteil est un pôle administratif, universitaire et commercial majeur du sud-est francilien.",
+    stats: {
+      entreprises: "5 800 entreprises",
+      searches: "1 300 recherches/mois pour 'site web Créteil'",
+    },
+    keywords: [
+      "agence web Créteil",
+      "création site internet Créteil",
+      "SEO Créteil",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Créteil ?",
+        answer:
+          "Un site vitrine professionnel à Créteil démarre à 500€ et un site e-commerce à 800€. Nous offrons des solutions adaptées aux entreprises cristoliennes.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Créteil ?",
+        answer:
+          "Nous connaissons le marché val-de-marnais et les besoins des entreprises cristoliennes. Notre expertise digitale vous aide à vous démarquer localement.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Créteil ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, incluant design, développement et optimisation SEO.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Créteil ?",
+        answer:
+          "Oui, nous accompagnons des commerces, professions libérales, PME et artisans de Créteil et du Val-de-Marne.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Créteil ?",
+        answer:
+          "Oui, nous optimisons votre visibilité locale à Créteil et dans le Val-de-Marne pour attirer des clients de proximité.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre centre médical à Créteil avait besoin d'un site clair et professionnel. ConvertiLab a livré un site parfait qui facilite la prise de rendez-vous de nos patients.",
+        author: "Dr. Sarah Benoit",
+        role: "Médecin",
+        company: "Centre Médical Créteil",
+        metric: "+60% de RDV en ligne",
+        photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site e-commerce efficace pour notre boutique de Créteil Soleil. Les ventes en ligne complètent parfaitement notre activité en magasin.",
+        author: "Thierry Dupuis",
+        role: "Commerçant",
+        company: "Mode & Style Créteil",
+        metric: "+35% de CA global",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "vitry-sur-seine",
+    name: "Vitry-sur-Seine",
+    department: "Val-de-Marne",
+    region: "Île-de-France",
+    postalCode: "94400",
+    lat: "48.7875",
+    lng: "2.3928",
+    population: "95 000",
+    description:
+      "Ville d'art contemporain et pôle industriel du Val-de-Marne, Vitry-sur-Seine est en pleine mutation économique avec l'arrivée du Grand Paris Express.",
+    stats: {
+      entreprises: "4 500 entreprises",
+      searches: "1 100 recherches/mois pour 'site web Vitry-sur-Seine'",
+    },
+    keywords: [
+      "agence web Vitry-sur-Seine",
+      "création site internet Vitry-sur-Seine",
+      "SEO Vitry-sur-Seine",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Vitry-sur-Seine ?",
+        answer:
+          "Un site vitrine professionnel à Vitry-sur-Seine démarre à 500€ et un site e-commerce à 800€. Nous proposons des solutions adaptées aux entreprises vitriotes.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Vitry-sur-Seine ?",
+        answer:
+          "Vitry est en pleine transformation avec le Grand Paris Express. Nous aidons les entreprises vitriotes à prendre leur place digitale dans ce nouveau paysage économique.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Vitry-sur-Seine ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés, avec design, développement et SEO inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Vitry-sur-Seine ?",
+        answer:
+          "Oui, nous accompagnons des commerces, artisans, artistes et PME de Vitry-sur-Seine dans leur présence en ligne.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Vitry-sur-Seine ?",
+        answer:
+          "Absolument. Nous optimisons votre référencement local à Vitry et dans le Val-de-Marne.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre galerie de street art à Vitry avait besoin d'un site qui reflète notre identité créative. ConvertiLab a parfaitement compris notre univers. Les visites ont explosé.",
+        author: "Julien Moreau",
+        role: "Galeriste",
+        company: "Galerie Urbaine Vitry",
+        metric: "+120% de visiteurs",
+        photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Excellent site pour notre entreprise de plomberie. Les demandes d'intervention en ligne ont simplifié notre gestion et augmenté notre clientèle.",
+        author: "Patricia Roux",
+        role: "Gérante",
+        company: "Roux Plomberie Vitry",
+        metric: "+25 interventions/mois",
+        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "asnieres-sur-seine",
+    name: "Asnières-sur-Seine",
+    department: "Hauts-de-Seine",
+    region: "Île-de-France",
+    postalCode: "92600",
+    lat: "48.9117",
+    lng: "2.2833",
+    population: "87 000",
+    description:
+      "Ville résidentielle et commerçante des Hauts-de-Seine, Asnières-sur-Seine accueille un tissu dynamique de PME, commerces et professions libérales.",
+    stats: {
+      entreprises: "5 200 entreprises",
+      searches: "1 200 recherches/mois pour 'site web Asnières-sur-Seine'",
+    },
+    keywords: [
+      "agence web Asnières-sur-Seine",
+      "création site internet Asnières-sur-Seine",
+      "SEO Asnières-sur-Seine",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Asnières-sur-Seine ?",
+        answer:
+          "Un site vitrine professionnel à Asnières-sur-Seine démarre à 500€ et un site e-commerce à 800€. Nous offrons un excellent rapport qualité-prix aux entreprises asniéroises.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Asnières-sur-Seine ?",
+        answer:
+          "Nous connaissons le marché des Hauts-de-Seine et les besoins des entreprises asniéroises. Notre expertise locale vous garantit un site optimisé pour votre zone de chalandise.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Asnières ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, incluant design, développement et optimisation SEO.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises d'Asnières ?",
+        answer:
+          "Oui, nous accompagnons des commerces, professions libérales, artisans et PME d'Asnières-sur-Seine et des Hauts-de-Seine.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Asnières-sur-Seine ?",
+        answer:
+          "Oui, nous optimisons votre visibilité locale à Asnières et dans les Hauts-de-Seine pour attirer des clients de proximité.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre cabinet dentaire à Asnières a vu ses prises de rendez-vous en ligne tripler grâce au site créé par ConvertiLab. Interface claire et rassurante pour nos patients.",
+        author: "Dr. Anne-Sophie Blanc",
+        role: "Chirurgien-dentiste",
+        company: "Cabinet Dentaire Asnières",
+        metric: "x3 RDV en ligne",
+        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site professionnel pour notre agence immobilière. Les estimations en ligne génèrent des contacts qualifiés chaque semaine.",
+        author: "Olivier Martin",
+        role: "Agent immobilier",
+        company: "Martin Immobilier Asnières",
+        metric: "+18 estimations/mois",
+        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "colombes",
+    name: "Colombes",
+    department: "Hauts-de-Seine",
+    region: "Île-de-France",
+    postalCode: "92700",
+    lat: "48.9233",
+    lng: "2.2522",
+    population: "86 000",
+    description:
+      "Ville dynamique des Hauts-de-Seine, Colombes combine activité économique, cadre de vie agréable et un tissu de PME et commerces en plein développement.",
+    stats: {
+      entreprises: "4 800 entreprises",
+      searches: "1 100 recherches/mois pour 'site web Colombes'",
+    },
+    keywords: [
+      "agence web Colombes",
+      "création site internet Colombes",
+      "SEO Colombes",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Colombes ?",
+        answer:
+          "Un site vitrine professionnel à Colombes démarre à 500€ et un site e-commerce à 800€. Nous adaptons nos offres aux entreprises colombiennes.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Colombes ?",
+        answer:
+          "Nous comprenons les enjeux des entreprises des Hauts-de-Seine. Notre expertise en création de sites et SEO local permet aux commerces colombiens de gagner en visibilité.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Colombes ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés, design, développement et SEO inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Colombes ?",
+        answer:
+          "Oui, nous accompagnons des commerces, artisans, professions libérales et PME de Colombes dans leur développement digital.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Colombes ?",
+        answer:
+          "Absolument. Nous optimisons votre référencement local à Colombes et dans les Hauts-de-Seine.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre boulangerie artisanale de Colombes a enfin un site digne de nos produits. Les commandes de gâteaux en ligne représentent maintenant 30% de notre chiffre d'affaires.",
+        author: "Pierre Bouillon",
+        role: "Boulanger",
+        company: "Boulangerie Bouillon Colombes",
+        metric: "30% du CA en ligne",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site moderne et efficace pour notre auto-école. Les inscriptions en ligne ont augmenté de 55% depuis la refonte par ConvertiLab.",
+        author: "Stéphanie Petit",
+        role: "Directrice",
+        company: "Auto-École Colombes Centre",
+        metric: "+55% inscriptions en ligne",
+        photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "saint-cloud",
+    name: "Saint-Cloud",
+    department: "Hauts-de-Seine",
+    region: "Île-de-France",
+    postalCode: "92210",
+    lat: "48.8444",
+    lng: "2.2189",
+    population: "30 000",
+    description:
+      "Ville résidentielle haut de gamme des Hauts-de-Seine, Saint-Cloud accueille des sièges sociaux, des professions libérales et un commerce de qualité.",
+    stats: {
+      entreprises: "3 200 entreprises",
+      searches: "800 recherches/mois pour 'site web Saint-Cloud'",
+    },
+    keywords: [
+      "agence web Saint-Cloud",
+      "création site internet Saint-Cloud",
+      "SEO Saint-Cloud",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Saint-Cloud ?",
+        answer:
+          "Un site vitrine professionnel à Saint-Cloud démarre à 500€ et un site e-commerce à 800€. Nous créons des sites premium adaptés à l'image haut de gamme de la ville.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Saint-Cloud ?",
+        answer:
+          "Saint-Cloud est une ville d'excellence. Nous créons des sites à la hauteur de cette exigence, avec un design soigné et des performances optimales.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Saint-Cloud ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, avec design premium, développement et SEO inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Saint-Cloud ?",
+        answer:
+          "Oui, nous accompagnons des professions libérales, cabinets, commerces de qualité et entreprises de Saint-Cloud dans leur présence digitale.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Saint-Cloud ?",
+        answer:
+          "Oui, nous optimisons votre visibilité locale à Saint-Cloud et dans les Hauts-de-Seine pour toucher une clientèle premium de proximité.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre cabinet d'avocats à Saint-Cloud avait besoin d'un site sobre et professionnel. ConvertiLab a livré exactement ce que nous voulions. Les consultations en ligne ont triplé.",
+        author: "Maître Caroline Lefèvre",
+        role: "Avocate",
+        company: "Cabinet Lefèvre Saint-Cloud",
+        metric: "x3 consultations en ligne",
+        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Excellent site pour notre restaurant gastronomique. La réservation en ligne et le menu digital ont modernisé notre image.",
+        author: "Chef Arnaud Delmas",
+        role: "Chef cuisinier",
+        company: "La Table de Saint-Cloud",
+        metric: "+40% de réservations",
+        photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "suresnes",
+    name: "Suresnes",
+    department: "Hauts-de-Seine",
+    region: "Île-de-France",
+    postalCode: "92150",
+    lat: "48.8714",
+    lng: "2.2292",
+    population: "49 000",
+    description:
+      "Ville dynamique des Hauts-de-Seine avec une vue imprenable sur Paris, Suresnes accueille des sièges d'entreprises et un commerce local florissant.",
+    stats: {
+      entreprises: "3 800 entreprises",
+      searches: "900 recherches/mois pour 'site web Suresnes'",
+    },
+    keywords: [
+      "agence web Suresnes",
+      "création site internet Suresnes",
+      "SEO Suresnes",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Suresnes ?",
+        answer:
+          "Un site vitrine professionnel à Suresnes démarre à 500€ et un site e-commerce à 800€. Nous offrons des solutions sur-mesure pour les entreprises suresnois.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Suresnes ?",
+        answer:
+          "Nous connaissons le tissu économique suresnois et les attentes de ses entreprises. Notre proximité et notre réactivité sont un vrai plus pour votre projet digital.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Suresnes ?",
+        answer:
+          "Nous livrons votre site en 7 jours ouvrés, incluant design, développement et optimisation SEO.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises de Suresnes ?",
+        answer:
+          "Oui, nous accompagnons des PME, commerces, professions libérales et artisans de Suresnes dans leur transformation digitale.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Suresnes ?",
+        answer:
+          "Absolument. Nous optimisons votre visibilité locale à Suresnes et dans les Hauts-de-Seine pour attirer des clients de proximité.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre agence d'architecture à Suresnes a gagné en crédibilité grâce au portfolio en ligne créé par ConvertiLab. Les projets affluent depuis la mise en ligne.",
+        author: "Nicolas Ferrand",
+        role: "Architecte",
+        company: "Ferrand Architecture Suresnes",
+        metric: "+60% de projets entrants",
+        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Site clair et professionnel pour notre crèche. Les parents nous trouvent facilement et les inscriptions en ligne ont simplifié notre gestion.",
+        author: "Virginie Thomas",
+        role: "Directrice",
+        company: "Crèche Les Petits Suresnois",
+        metric: "+45% inscriptions en ligne",
+        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
+  {
+    slug: "issy-les-moulineaux",
+    name: "Issy-les-Moulineaux",
+    department: "Hauts-de-Seine",
+    region: "Île-de-France",
+    postalCode: "92130",
+    lat: "48.8235",
+    lng: "2.2735",
+    population: "69 000",
+    description:
+      "Pôle numérique et média des Hauts-de-Seine, Issy-les-Moulineaux accueille les sièges de grands groupes tech et média avec un écosystème digital très développé.",
+    stats: {
+      entreprises: "6 500 entreprises",
+      searches: "1 400 recherches/mois pour 'site web Issy-les-Moulineaux'",
+    },
+    keywords: [
+      "agence web Issy-les-Moulineaux",
+      "création site internet Issy-les-Moulineaux",
+      "SEO Issy-les-Moulineaux",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte un site web à Issy-les-Moulineaux ?",
+        answer:
+          "Un site vitrine professionnel à Issy-les-Moulineaux démarre à 500€ et un site e-commerce à 800€. Nous proposons des solutions digitales à la hauteur de cette ville tech.",
+      },
+      {
+        question: "Pourquoi choisir ConvertiLab à Issy-les-Moulineaux ?",
+        answer:
+          "Issy est la capitale du numérique en Île-de-France. Nous créons des sites qui répondent aux standards élevés de cet écosystème tech exigeant.",
+      },
+      {
+        question: "En combien de temps mon site sera-t-il livré à Issy ?",
+        answer:
+          "Votre site est livré en 7 jours ouvrés, avec design moderne, développement et SEO inclus.",
+      },
+      {
+        question: "Travaillez-vous avec des entreprises d'Issy-les-Moulineaux ?",
+        answer:
+          "Oui, nous accompagnons des startups, PME tech, commerces et professions libérales d'Issy-les-Moulineaux dans leur présence digitale.",
+      },
+      {
+        question: "Proposez-vous le SEO local pour Issy-les-Moulineaux ?",
+        answer:
+          "Oui, nous optimisons votre visibilité locale à Issy-les-Moulineaux et dans les Hauts-de-Seine, même dans un environnement digital très concurrentiel.",
+      },
+    ],
+    testimonials: [
+      {
+        text: "Notre startup SaaS à Issy avait besoin d'un site qui convertit. ConvertiLab a créé une landing page qui a doublé notre taux d'inscription en un mois.",
+        author: "Romain Leclerc",
+        role: "CEO",
+        company: "CloudFlow Issy",
+        metric: "x2 taux d'inscription",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
+      },
+      {
+        text: "Excellent site pour notre cabinet de recrutement. Le formulaire intelligent filtre les candidatures et nous fait gagner un temps précieux.",
+        author: "Marie-Laure Duval",
+        role: "Directrice",
+        company: "Talents & Co Issy",
+        metric: "+50% de candidatures qualifiées",
+        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
+      },
+    ],
+  },
 ];
 
 export const getCityBySlug = (slug: string) =>
