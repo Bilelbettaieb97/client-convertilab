@@ -35,14 +35,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(ville);
   if (!city) return { title: "Page introuvable" };
 
-  const title = `Cr\u00e9ation Site Internet ${city.name} | Devis Gratuit`;
-  const description = `Cr\u00e9ation de site internet \u00e0 ${city.name} \u00e0 partir de 500\u20ac. Site vitrine, e-commerce, landing page. Livr\u00e9 en 7 jours. Devis gratuit.`;
+  const title = `Création Site Internet ${city.name} | Devis Gratuit`;
+  const description = `Création de site internet à ${city.name} à partir de 500€. Site vitrine, e-commerce, landing page. Livré en 7 jours. Devis gratuit.`;
 
   return {
     title,
     description,
     keywords: [
-      `cr\u00e9ation site internet ${city.name}`,
+      `création site internet ${city.name}`,
       `site web ${city.name}`,
       `agence web ${city.name}`,
       `site vitrine ${city.name}`,
@@ -75,12 +75,12 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
     {
       icon: Globe,
       name: "Site Vitrine",
-      price: "500\u20ac",
+      price: "500€",
       features: [
         "Design sur-mesure responsive",
-        "5 pages optimis\u00e9es SEO",
+        "5 pages optimisées SEO",
         "Formulaire de contact",
-        "H\u00e9bergement 1 an inclus",
+        "Hébergement 1 an inclus",
         "Certificat SSL",
       ],
       href: "/prix/site-vitrine",
@@ -89,10 +89,10 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
     {
       icon: Store,
       name: "Site E-commerce",
-      price: "800\u20ac",
+      price: "800€",
       features: [
-        "Catalogue produits illimit\u00e9",
-        "Paiement s\u00e9curis\u00e9 Stripe",
+        "Catalogue produits illimité",
+        "Paiement sécurisé Stripe",
         "Gestion des commandes",
         "SEO e-commerce",
         "Formation incluse",
@@ -103,11 +103,11 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
     {
       icon: Rocket,
       name: "Landing Page",
-      price: "500\u20ac",
+      price: "500€",
       features: [
-        "Page de conversion optimis\u00e9e",
+        "Page de conversion optimisée",
         "A/B testing",
-        "Int\u00e9gration analytics",
+        "Intégration analytics",
         "Design persuasif",
         "Livraison en 5 jours",
       ],
@@ -117,27 +117,27 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
   ];
 
   const avantages = [
-    { icon: Clock, title: "Livr\u00e9 en 7 jours", desc: "Votre site est en ligne rapidement, sans compromis sur la qualit\u00e9." },
-    { icon: BadgeCheck, title: "Vous \u00eates propri\u00e9taire", desc: "Le code source et le nom de domaine vous appartiennent \u00e0 100%." },
-    { icon: Search, title: "SEO int\u00e9gr\u00e9", desc: "Chaque site est optimis\u00e9 pour appara\u00eetre sur Google d\u00e8s le lancement." },
-    { icon: Headphones, title: "Support r\u00e9actif", desc: "Une \u00e9quipe disponible pour r\u00e9pondre \u00e0 vos questions sous 24h." },
-    { icon: Shield, title: "S\u00e9curis\u00e9 & performant", desc: "Technologies modernes, certificat SSL, h\u00e9bergement rapide." },
+    { icon: Clock, title: "Livré en 7 jours", desc: "Votre site est en ligne rapidement, sans compromis sur la qualité." },
+    { icon: BadgeCheck, title: "Vous êtes propriétaire", desc: "Le code source et le nom de domaine vous appartiennent à 100%." },
+    { icon: Search, title: "SEO intégré", desc: "Chaque site est optimisé pour apparaître sur Google dès le lancement." },
+    { icon: Headphones, title: "Support réactif", desc: "Une équipe disponible pour répondre à vos questions sous 24h." },
+    { icon: Shield, title: "Sécurisé & performant", desc: "Technologies modernes, certificat SSL, hébergement rapide." },
     { icon: Zap, title: "Technologies modernes", desc: "Next.js, React, Tailwind CSS pour des performances optimales." },
   ];
 
   const etapes = [
-    { num: "01", title: "Appel d\u00e9couverte", desc: "30 minutes pour comprendre votre projet, vos objectifs et votre march\u00e9." },
-    { num: "02", title: "Maquette & Design", desc: "Nous cr\u00e9ons une maquette sur-mesure valid\u00e9e avant le d\u00e9veloppement." },
-    { num: "03", title: "D\u00e9veloppement", desc: "Code propre, responsive, optimis\u00e9 SEO. Vous suivez l\u2019avancement en direct." },
-    { num: "04", title: "Mise en ligne", desc: "D\u00e9ploiement, tests finaux et formation \u00e0 la gestion de votre site." },
+    { num: "01", title: "Appel découverte", desc: "30 minutes pour comprendre votre projet, vos objectifs et votre marché." },
+    { num: "02", title: "Maquette & Design", desc: "Nous créons une maquette sur-mesure validée avant le développement." },
+    { num: "03", title: "Développement", desc: "Code propre, responsive, optimisé SEO. Vous suivez l’avancement en direct." },
+    { num: "04", title: "Mise en ligne", desc: "Déploiement, tests finaux et formation à la gestion de votre site." },
   ];
 
   const structuredData = [
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      name: `ConvertiLab - Cr\u00e9ation Site Internet ${city.name}`,
-      description: `Agence de cr\u00e9ation de sites internet \u00e0 ${city.name}. Sites vitrines, e-commerce et landing pages.`,
+      name: `ConvertiLab - Création Site Internet ${city.name}`,
+      description: `Agence de création de sites internet à ${city.name}. Sites vitrines, e-commerce et landing pages.`,
       url: `${SITE.url}/creation-site-internet/${city.slug}`,
       telephone: SITE.phone,
       email: SITE.email,
@@ -153,7 +153,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
         latitude: city.lat,
         longitude: city.lng,
       },
-      priceRange: "\u20ac\u20ac",
+      priceRange: "€€",
       areaServed: { "@type": "City", name: city.name },
     },
     {
@@ -161,8 +161,8 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Accueil", item: SITE.url },
-        { "@type": "ListItem", position: 2, name: "Cr\u00e9ation Site Internet", item: `${SITE.url}/creation-site-internet` },
-        { "@type": "ListItem", position: 3, name: `Cr\u00e9ation Site Internet ${city.name}`, item: `${SITE.url}/creation-site-internet/${city.slug}` },
+        { "@type": "ListItem", position: 2, name: "Création Site Internet", item: `${SITE.url}/creation-site-internet` },
+        { "@type": "ListItem", position: 3, name: `Création Site Internet ${city.name}`, item: `${SITE.url}/creation-site-internet/${city.slug}` },
       ],
     },
     {
@@ -195,7 +195,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
             <nav className="flex items-center gap-2 text-sm text-gray-500">
               <Link href="/" className="hover:text-purple-600 transition-colors">Accueil</Link>
               <ChevronRight className="w-3 h-3" />
-              <span className="text-gray-800 font-medium">Cr\u00e9ation Site Internet {city.name}</span>
+              <span className="text-gray-800 font-medium">Création Site Internet {city.name}</span>
             </nav>
           </div>
         </div>
@@ -209,14 +209,14 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
               <span className="text-sm font-medium">{city.name} ({city.department})</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Cr\u00e9ation de Site Internet{" "}
+              Création de Site Internet{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-amber-300">
-                \u00e0 {city.name}
+                à {city.name}
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-purple-100 max-w-2xl mb-4">
-              Votre site web professionnel, livr\u00e9 en 7 jours.{" "}
-              <span className="font-semibold text-white">\u00c0 partir de {PRICING.vitrine.label}.</span>
+              Votre site web professionnel, livré en 7 jours.{" "}
+              <span className="font-semibold text-white">À partir de {PRICING.vitrine.label}.</span>
             </p>
             <p className="text-purple-200 max-w-2xl mb-8">
               {city.description}
@@ -229,12 +229,12 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
               </Button>
               <Button asChild size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 text-base">
                 <Link href="/portfolio">
-                  Voir nos r\u00e9alisations
+                  Voir nos réalisations
                 </Link>
               </Button>
             </div>
             <div className="flex items-center gap-6 mt-8 text-sm text-purple-200">
-              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-green-400" /> +150 sites livr\u00e9s</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-green-400" /> +150 sites livrés</span>
               <span className="flex items-center gap-1.5"><Star className="w-4 h-4 text-amber-400" /> 4.9/5 avis</span>
               <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-blue-400" /> 7 jours</span>
             </div>
@@ -246,10 +246,10 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
           <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                Nos offres de cr\u00e9ation de site internet \u00e0 {city.name}
+                Nos offres de création de site internet à {city.name}
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Des solutions adapt\u00e9es \u00e0 chaque budget et chaque besoin. Tous nos sites sont livr\u00e9s cl\u00e9 en main.
+                Des solutions adaptées à chaque budget et chaque besoin. Tous nos sites sont livrés clé en main.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -285,7 +285,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
                   </ul>
                   <Button asChild className={`w-full font-semibold ${offre.popular ? "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white" : ""}`} variant={offre.popular ? "default" : "outline"}>
                     <Link href={offre.href}>
-                      Voir les d\u00e9tails <ArrowRight className="ml-2 w-4 h-4" />
+                      Voir les détails <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
                   </Button>
                 </div>
@@ -299,10 +299,10 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
           <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                Pourquoi choisir ConvertiLab \u00e0 {city.name} ?
+                Pourquoi choisir ConvertiLab à {city.name} ?
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Une agence qui s\u2019engage sur des r\u00e9sultats concrets, pas juste des promesses.
+                Une agence qui s’engage sur des résultats concrets, pas juste des promesses.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -325,7 +325,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
             <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
               <div className="text-center mb-12">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                  Ce que disent nos clients \u00e0 {city.name}
+                  Ce que disent nos clients à {city.name}
                 </h2>
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -362,10 +362,10 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
           <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                Comment \u00e7a marche ?
+                Comment ça marche ?
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Un processus simple et transparent, de l\u2019id\u00e9e \u00e0 la mise en ligne.
+                Un processus simple et transparent, de l’idée à la mise en ligne.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -386,7 +386,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
             <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
               <div className="text-center mb-12">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                  Questions fr\u00e9quentes sur la cr\u00e9ation de site \u00e0 {city.name}
+                  Questions fréquentes sur la création de site à {city.name}
                 </h2>
               </div>
               <div className="space-y-4">
@@ -410,10 +410,10 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
         <section className="py-16 sm:py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white">
           <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              Pr\u00eat \u00e0 lancer votre site internet \u00e0 {city.name} ?
+              Prêt à lancer votre site internet à {city.name} ?
             </h2>
             <p className="text-purple-200 text-lg mb-8 max-w-2xl mx-auto">
-              Obtenez votre devis gratuit en moins de 2 minutes. Sans engagement, r\u00e9ponse sous 24h.
+              Obtenez votre devis gratuit en moins de 2 minutes. Sans engagement, réponse sous 24h.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-white text-purple-900 hover:bg-gray-100 font-bold px-8 text-base">
@@ -438,7 +438,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
               className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold transition-colors"
             >
               <MapPin className="w-4 h-4" />
-              En savoir plus sur notre agence \u00e0 {city.name}
+              En savoir plus sur notre agence à {city.name}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
