@@ -134,7 +134,7 @@ export default function IdentiteVisuelleClient() {
       </section>
 
       <ServiceFAQ faqs={[
-        { q: "Combien coute la creation d'un logo professionnel ?", a: "La creation d'un logo professionnel avec charte graphique complete demarre a partir de 490\u20ac. Le tarif varie selon la complexite du projet et les livrables souhaites (declinaisons, supports print, etc.)." },
+        { q: "Combien coute la creation d'un logo professionnel ?", a: "La creation d'un logo professionnel avec charte graphique complete demarre a partir de 490€. Le tarif varie selon la complexite du projet et les livrables souhaites (declinaisons, supports print, etc.)." },
         { q: "Combien de propositions de logo vais-je recevoir ?", a: "Nous proposons 3 directions creatives distinctes basees sur le brief. Apres votre choix, 2 tours de revisions sont inclus pour affiner le logo retenu jusqu'a satisfaction complete." },
         { q: "Quels fichiers sont livres avec l'identite visuelle ?", a: "Vous recevez les fichiers sources (AI, EPS, PSD), les versions web optimisees (SVG, PNG), les declinaisons print (CMJN), un guide d'utilisation et la charte graphique complete au format PDF." },
         { q: "Puis-je utiliser mon logo sur tous les supports ?", a: "Absolument. Nous livrons toutes les declinaisons necessaires : fond clair, fond fonce, monochrome, favicon, reseaux sociaux, carte de visite, etc. Votre logo est utilisable partout sans restriction." },

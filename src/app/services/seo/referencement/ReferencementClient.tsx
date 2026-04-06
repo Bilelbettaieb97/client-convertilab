@@ -132,7 +132,7 @@ export default function ReferencementClient() {
       </section>
 
       <ServiceFAQ faqs={[
-        { q: "Combien coute une prestation de referencement SEO ?", a: "Nos forfaits SEO demarrent a partir de 490\u20ac/mois. Le tarif depend de la concurrence sur vos mots-cles, du volume de pages a optimiser et de vos objectifs. Nous etablissons un devis personnalise apres audit." },
+        { q: "Combien coute une prestation de referencement SEO ?", a: "Nos forfaits SEO demarrent a partir de 490€/mois. Le tarif depend de la concurrence sur vos mots-cles, du volume de pages a optimiser et de vos objectifs. Nous etablissons un devis personnalise apres audit." },
         { q: "Faut-il un contrat longue duree pour le SEO ?", a: "Nous recommandons un engagement de 6 mois minimum pour voir des resultats significatifs, mais il n'y a pas de contrat contraignant. Le SEO est un travail continu qui porte ses fruits sur la duree." },
         { q: "Que comprend votre prestation de netlinking ?", a: "Notre strategie de netlinking inclut l'identification de sites autoritaires dans votre secteur, la creation de contenus qualitatifs pour obtenir des backlinks naturels, et le suivi du profil de liens." },
         { q: "Travaillez-vous sur tous les types de sites ?", a: "Oui, nous intervenons sur les sites vitrines, e-commerce, blogs, applications web et sites institutionnels. Chaque strategie est adaptee a votre secteur d'activite et a vos objectifs commerciaux." },

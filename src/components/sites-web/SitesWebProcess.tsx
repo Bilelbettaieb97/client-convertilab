@@ -1,8 +1,8 @@
 const steps = [
   { number: "01", title: "Consultation gratuite", description: "On echange sur vos objectifs et besoins. Devis detaille sous 24h." },
   { number: "02", title: "Maquette & validation", description: "Vous validez le design avant tout developpement. Modifications illimitees." },
-  { number: "03", title: "Developpement", description: "Votre site prend vie. Vous suivez l\u0027avancement en temps reel." },
-  { number: "04", title: "Livraison & formation", description: "Mise en ligne, formation a l\u0027utilisation, et support technique inclus." },
+  { number: "03", title: "Developpement", description: "Votre site prend vie. Vous suivez l'avancement en temps reel." },
+  { number: "04", title: "Livraison & formation", description: "Mise en ligne, formation a l'utilisation, et support technique inclus." },
 ];
 
 const SitesWebProcess = () => {
