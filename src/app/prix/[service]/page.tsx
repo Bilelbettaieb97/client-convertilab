@@ -260,7 +260,7 @@ export default async function PricingDetailPage({ params }: Props) {
                 href={SITE.calendly}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-xl transition-colors"
               >
                 Prendre rendez-vous
               </Link>

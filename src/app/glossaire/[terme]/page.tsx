@@ -290,7 +290,7 @@ export default async function GlossaryTermPage({ params }: Props) {
                 <Button
                   asChild
                   variant="outline"
-                  className="border-white text-white hover:bg-white/10"
+                  className="border-white text-white"
                 >
                   <Link href="/contact">Nous contacter</Link>
                 </Button>

@@ -261,7 +261,7 @@ export default function AboutPage() {
                     Prendre rendez-vous <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
+                <Button asChild size="lg" variant="outline" className="border-white text-white px-8 py-6 text-lg">
                   <Link href="/portfolio">
                     Voir mes réalisations
                   </Link>

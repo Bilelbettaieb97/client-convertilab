@@ -41,7 +41,7 @@ export default function ApplicationWebContent() {
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">Arretez de perdre du temps sur des taches manuelles. Nos apps sur-mesure <strong>boostent votre productivite de +65%</strong> en moyenne.</p>
             <div className="flex flex-wrap gap-4 mb-8">
               <Button asChild size="lg" className="bg-white text-slate-800 hover:bg-gray-100 text-lg px-8 py-6 shadow-2xl"><Link href="/contact"><Zap className="mr-2 w-5 h-5" />Demander un devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link></Button>
-              <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6"><a href={SITE.calendly} target="_blank" rel="noopener noreferrer"><Calendar className="mr-2 w-5 h-5" />Appel decouverte 15 min</a></Button>
+              <Button asChild variant="outline" size="lg" className="border-white/30 text-white text-lg px-8 py-6"><a href={SITE.calendly} target="_blank" rel="noopener noreferrer"><Calendar className="mr-2 w-5 h-5" />Appel decouverte 15 min</a></Button>
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-white/80">
               <div className="flex items-center gap-2"><div className="flex -space-x-1">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div><span className="font-medium text-white">4.9/5</span><span>sur 47 avis</span></div>
@@ -89,7 +89,7 @@ export default function ApplicationWebContent() {
         <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Discutons de vos besoins et definissons ensemble la meilleure solution technique. <strong>Consultation gratuite, sans engagement.</strong></p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
           <Button asChild size="lg" className="bg-white text-slate-800 hover:bg-gray-100 text-lg px-8 py-6 shadow-2xl"><Link href="/contact">Demander un devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link></Button>
-          <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6"><a href={SITE.calendly} target="_blank" rel="noopener noreferrer"><Calendar className="mr-2 w-5 h-5" />Appel gratuit 15 min</a></Button>
+          <Button asChild variant="outline" size="lg" className="border-white/30 text-white text-lg px-8 py-6"><a href={SITE.calendly} target="_blank" rel="noopener noreferrer"><Calendar className="mr-2 w-5 h-5" />Appel gratuit 15 min</a></Button>
         </div>
         <p className="text-white/60 text-sm">Reponse sous 24h - Devis gratuit et sans engagement - Paiement en 3x sans frais</p>
       </div></section>

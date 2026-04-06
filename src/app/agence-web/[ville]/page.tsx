@@ -631,7 +631,7 @@ export default async function CityPage({ params }: Props) {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg"
+                  className="border-white text-white px-8 py-6 text-lg"
                 >
                   <Link href={`tel:${SITE.phone}`}>
                     <Phone className="mr-2 w-5 h-5" />

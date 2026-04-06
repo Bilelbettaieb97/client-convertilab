@@ -311,7 +311,7 @@ export default function OffreSpecialeClient() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                       <Link href="/">
-                        <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                        <Button variant="outline" className="border-white/20 text-white">
                           Retour à l&apos;accueil
                         </Button>
                       </Link>
@@ -415,7 +415,7 @@ export default function OffreSpecialeClient() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyUs.map((item, i) => (
-              <div key={i} className="bg-white/5 rounded-2xl p-6 hover:bg-white/10 transition-all border border-white/10">
+              <div key={i} className="bg-white/5 rounded-2xl p-6 transition-all border border-white/10">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
