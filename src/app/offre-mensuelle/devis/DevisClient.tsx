@@ -195,15 +195,16 @@ export default function DevisClient() {
     setIsSubmitting(true);
     try {
       const selectedOffer = offers.find((o) => o.value === formData.offer);
-      const { error } = await supabase.from("contact_submissions").insert([
+      const { error } = await supabase.from("devis_submissions").insert([
         {
           name: formData.name,
           email: formData.email,
           company: formData.company,
           phone: formData.phone,
-          project: "vitrine",
-          main_challenge: formData.sector,
-          message: `Offre: ${selectedOffer?.name} (${selectedOffer?.price}eur/mois) | Secteur: ${formData.sector} | ${formData.companyDescription ? "Description: " + formData.companyDescription : ""} ${formData.message ? "| Message: " + formData.message : ""}`.trim(),
+          sector: formData.sector,
+          company_description: formData.companyDescription || null,
+          offer: selectedOffer ? `${selectedOffer.name} (${selectedOffer.price}€/mois)` : formData.offer,
+          message: formData.message || null,
         },
       ]);
       if (error) throw error;
