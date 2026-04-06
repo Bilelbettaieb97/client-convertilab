@@ -227,7 +227,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
                   Devis gratuit <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 text-base">
+              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white bg-white/10 hover:bg-white/20 font-semibold px-8 text-base">
                 <Link href="/portfolio">
                   Voir nos réalisations
                 </Link>
@@ -421,7 +421,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
                   Demander un devis gratuit <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 text-base">
+              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white bg-white/10 hover:bg-white/20 font-semibold px-8 text-base">
                 <Link href="/contact">
                   Nous contacter
                 </Link>
