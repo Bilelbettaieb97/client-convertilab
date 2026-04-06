@@ -1,0 +1,236 @@
+import { NextRequest, NextResponse } from "next/server";
+import { analyzeSite } from "@/lib/seo/analyzer";
+import { generateReportHtml } from "@/lib/seo/report-template";
+import { createClient } from "@supabase/supabase-js";
+import { Resend } from "resend";
+
+export const maxDuration = 60;
+export const dynamic = "force-dynamic";
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+async function generatePdf(html: string): Promise<Buffer> {
+  // Dynamic import to avoid bundling issues
+  const puppeteer = await import("puppeteer-core");
+  const chromium = await import("@sparticuz/chromium");
+
+  const browser = await puppeteer.default.launch({
+    args: chromium.default.args,
+    defaultViewport: { width: 1200, height: 800 },
+    executablePath: await chromium.default.executablePath(),
+    headless: true,
+  });
+
+  const page = await browser.newPage();
+  await page.setContent(html, { waitUntil: "networkidle0", timeout: 15000 });
+  const pdf = await page.pdf({
+    format: "A4",
+    printBackground: true,
+    margin: { top: "10mm", right: "10mm", bottom: "10mm", left: "10mm" },
+  });
+  await browser.close();
+
+  return Buffer.from(pdf);
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+    const { url, name, email, phone, company } = body;
+
+    if (!url || !name || !email) {
+      return NextResponse.json(
+        { error: "URL, nom et email sont requis." },
+        { status: 400 }
+      );
+    }
+
+    // 1. Analyze the site
+    const audit = await analyzeSite(url);
+
+    // 2. Generate HTML report
+    const reportHtml = generateReportHtml(audit);
+
+    // 3. Generate PDF
+    let pdfBuffer: Buffer | null = null;
+    try {
+      pdfBuffer = await generatePdf(reportHtml);
+    } catch (pdfError) {
+      console.error("PDF generation failed, will send HTML link instead:", pdfError);
+    }
+
+    // 4. Store lead + results in Supabase
+    const { error: dbError } = await supabase.from("seo_audits").insert({
+      website_url: audit.url,
+      domain: audit.domain,
+      name,
+      email,
+      phone: phone || null,
+      company: company || null,
+      score_global: audit.scores.global,
+      score_technique: audit.scores.technique,
+      score_onpage: audit.scores.onPage,
+      score_schema: audit.scores.schema,
+      score_mobile: audit.scores.mobile,
+      score_contenu: audit.scores.contenu,
+      score_geo: audit.scores.geo,
+      score_performance: audit.scores.performance,
+      score_securite: audit.scores.securite,
+      grade: audit.grade,
+      issues_count: audit.issues.length,
+      critical_count: audit.issues.filter(i => i.priority === "critical").length,
+      report_html: reportHtml,
+      email_sent: false,
+    });
+
+    if (dbError) {
+      console.error("Supabase insert error:", dbError);
+    }
+
+    // 5. Send email with PDF
+    let emailSent = false;
+    try {
+      const emailConfig: {
+        from: string;
+        to: string;
+        subject: string;
+        html: string;
+        attachments?: { filename: string; content: Buffer }[];
+      } = {
+        from: "ConvertiLab <audit@convertilab.com>",
+        to: email,
+        subject: `Votre Audit SEO — ${audit.domain} — Score : ${audit.scores.global}/100 (${audit.grade})`,
+        html: getEmailHtml(name, audit.domain, audit.scores.global, audit.grade, audit.gradeLabel, audit.issues.filter(i => i.priority === "critical").length, audit.strengths.slice(0, 3)),
+      };
+
+      if (pdfBuffer) {
+        emailConfig.attachments = [
+          {
+            filename: `audit-seo-${audit.domain}-${new Date().toISOString().split("T")[0]}.pdf`,
+            content: pdfBuffer,
+          },
+        ];
+      }
+
+      await resend.emails.send(emailConfig);
+      emailSent = true;
+
+      // Update email_sent status
+      await supabase
+        .from("seo_audits")
+        .update({ email_sent: true })
+        .eq("email", email)
+        .eq("domain", audit.domain)
+        .order("created_at", { ascending: false })
+        .limit(1);
+    } catch (emailError) {
+      console.error("Email send failed:", emailError);
+    }
+
+    // 6. Send notification to agency
+    try {
+      await resend.emails.send({
+        from: "ConvertiLab <audit@convertilab.com>",
+        to: "contact@convertilab.com",
+        subject: `Nouveau lead SEO Check — ${name} — ${audit.domain} (${audit.scores.global}/100)`,
+        html: `
+          <h2>Nouveau lead via SEO Check</h2>
+          <p><strong>Nom :</strong> ${name}</p>
+          <p><strong>Email :</strong> ${email}</p>
+          <p><strong>Tel :</strong> ${phone || "Non renseigne"}</p>
+          <p><strong>Entreprise :</strong> ${company || "Non renseigne"}</p>
+          <hr>
+          <p><strong>Site audite :</strong> ${audit.domain}</p>
+          <p><strong>Score :</strong> ${audit.scores.global}/100 (${audit.grade})</p>
+          <p><strong>Problemes critiques :</strong> ${audit.issues.filter(i => i.priority === "critical").length}</p>
+          <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
+        `,
+      });
+    } catch {
+      // Non-blocking
+    }
+
+    // 7. Return results to frontend
+    return NextResponse.json({
+      success: true,
+      emailSent,
+      audit: {
+        domain: audit.domain,
+        scores: audit.scores,
+        grade: audit.grade,
+        gradeLabel: audit.gradeLabel,
+        issues: audit.issues.slice(0, 5),
+        strengths: audit.strengths.slice(0, 5),
+        totalIssues: audit.issues.length,
+        criticalIssues: audit.issues.filter(i => i.priority === "critical").length,
+      },
+    });
+  } catch (error) {
+    console.error("SEO Check error:", error);
+    return NextResponse.json(
+      { error: "Une erreur est survenue lors de l'analyse. Verifiez l'URL et reessayez." },
+      { status: 500 }
+    );
+  }
+}
+
+function getEmailHtml(name: string, domain: string, score: number, grade: string, gradeLabel: string, criticalCount: number, strengths: string[]): string {
+  const scoreColor = score >= 80 ? "#22c55e" : score >= 60 ? "#eab308" : score >= 40 ? "#f97316" : "#ef4444";
+
+  return `
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body style="font-family:Arial,sans-serif;background:#f4f4f8;margin:0;padding:0;">
+<div style="max-width:600px;margin:0 auto;padding:20px;">
+
+<div style="background:#0a0a1a;border-radius:16px;padding:40px;text-align:center;color:#fff;">
+  <div style="font-size:12px;color:#a29bfe;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">Audit SEO Complet</div>
+  <h1 style="font-size:28px;margin:0 0 8px;">Votre rapport est pret !</h1>
+  <p style="color:#8888aa;font-size:14px;margin:0;">Audit de <strong style="color:#a29bfe;">${domain}</strong></p>
+</div>
+
+<div style="background:#fff;border-radius:16px;padding:30px;margin-top:16px;text-align:center;">
+  <p style="color:#666;font-size:14px;margin:0 0 20px;">Bonjour <strong>${name}</strong>,</p>
+  <p style="color:#666;font-size:14px;margin:0 0 24px;">Voici les resultats de l'analyse SEO de votre site <strong>${domain}</strong>.</p>
+
+  <div style="background:#f8f9fa;border-radius:12px;padding:24px;margin:20px 0;">
+    <div style="font-size:48px;font-weight:900;color:${scoreColor};line-height:1;">${score}/100</div>
+    <div style="font-size:18px;color:#666;margin-top:4px;">Grade : <strong style="color:${scoreColor};">${grade}</strong> — ${gradeLabel}</div>
+  </div>
+
+  ${criticalCount > 0 ? `
+  <div style="background:#fff0f0;border-radius:12px;padding:16px;margin:16px 0;border-left:4px solid #ef4444;">
+    <p style="color:#ef4444;font-weight:700;margin:0;font-size:14px;">${criticalCount} probleme(s) critique(s) detecte(s)</p>
+    <p style="color:#888;font-size:12px;margin:6px 0 0;">Consultez le rapport PDF en piece jointe pour voir les details et les solutions.</p>
+  </div>` : ""}
+
+  ${strengths.length > 0 ? `
+  <div style="background:#f0fff4;border-radius:12px;padding:16px;margin:16px 0;border-left:4px solid #22c55e;text-align:left;">
+    <p style="color:#22c55e;font-weight:700;margin:0 0 8px;font-size:14px;">Points forts</p>
+    ${strengths.map(s => `<p style="color:#666;font-size:12px;margin:4px 0;">\u2713 ${s}</p>`).join("")}
+  </div>` : ""}
+
+  <p style="color:#888;font-size:13px;margin:20px 0;">Le rapport PDF complet avec toutes les recommandations est en <strong>piece jointe</strong> de cet email.</p>
+</div>
+
+<div style="background:#1a1040;border-radius:16px;padding:30px;margin-top:16px;text-align:center;color:#fff;">
+  <h2 style="font-size:20px;margin:0 0 8px;">Besoin d'aide pour corriger tout ca ?</h2>
+  <p style="color:#8888aa;font-size:13px;margin:0 0 20px;">Notre equipe peut prendre en charge toutes les corrections et optimisations.</p>
+  <a href="https://convertilab.com/contact" style="display:inline-block;background:#6c5ce7;color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">Prendre rendez-vous gratuit</a>
+  <p style="color:#5a5a7a;font-size:11px;margin-top:16px;">
+    <a href="https://convertilab.com" style="color:#a29bfe;text-decoration:none;">convertilab.com</a> &bull;
+    <a href="tel:+33616477245" style="color:#a29bfe;text-decoration:none;">06 16 47 72 45</a> &bull;
+    <a href="mailto:contact@convertilab.com" style="color:#a29bfe;text-decoration:none;">contact@convertilab.com</a>
+  </p>
+</div>
+
+</div>
+</body>
+</html>`;
+}
