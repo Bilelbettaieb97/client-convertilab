@@ -20,13 +20,13 @@ const SimplifiedContact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-start">
-          {/* Contact Form */}
-          <div className="order-2 lg:order-1">
+          {/* Contact Form — en premier sur mobile pour conversion */}
+          <div className="order-1 lg:order-1">
             <ContactForm />
           </div>
 
           {/* Contact Info */}
-          <div className="order-1 lg:order-2 space-y-6 sm:space-y-8">
+          <div className="order-2 lg:order-2 space-y-6 sm:space-y-8">
             <ContactInfo />
             <NewsletterSubscription />
           </div>

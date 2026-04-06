@@ -146,7 +146,7 @@ const Services = () => {
         </div>
 
         <Tabs defaultValue="sites-web" className="w-full">
-          <TabsList className="w-full max-w-3xl mx-auto grid grid-cols-5 mb-12 h-auto p-1.5 bg-muted/70 backdrop-blur-sm rounded-2xl">
+          <TabsList className="w-full max-w-3xl mx-auto flex overflow-x-auto sm:grid sm:grid-cols-5 mb-12 h-auto p-1.5 bg-muted/70 backdrop-blur-sm rounded-2xl scrollbar-hide gap-1 sm:gap-0">
             {[
               { value: "sites-web", icon: <Globe className="w-5 h-5" />, label: "Sites Web", gradient: "data-[state=active]:from-violet-500 data-[state=active]:to-purple-600" },
               { value: "seo", icon: <Search className="w-5 h-5" />, label: "SEO", gradient: "data-[state=active]:from-emerald-500 data-[state=active]:to-teal-600" },
@@ -157,7 +157,7 @@ const Services = () => {
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className={`flex items-center justify-center gap-2 py-3 px-2 sm:px-3 text-sm rounded-xl transition-all duration-300 min-h-[48px] data-[state=active]:bg-gradient-to-r ${tab.gradient} data-[state=active]:text-white data-[state=active]:shadow-lg`}
+                className={`flex items-center justify-center gap-2 py-3 px-4 sm:px-3 text-sm rounded-xl transition-all duration-300 min-h-[48px] min-w-[56px] flex-shrink-0 sm:flex-shrink sm:min-w-0 data-[state=active]:bg-gradient-to-r ${tab.gradient} data-[state=active]:text-white data-[state=active]:shadow-lg`}
               >
                 {tab.icon}
                 <span className="hidden sm:inline font-medium">{tab.label}</span>

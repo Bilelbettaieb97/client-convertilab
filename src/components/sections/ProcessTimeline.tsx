@@ -221,7 +221,7 @@ const ProcessTimeline = () => {
                         {/* Numéro d'étape */}
                         <div className="relative">
                           <div
-                            className={`text-6xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br ${step.gradient} opacity-30`}
+                            className={`text-4xl sm:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br ${step.gradient} opacity-30`}
                           >
                             {step.number}
                           </div>
@@ -229,7 +229,7 @@ const ProcessTimeline = () => {
 
                         {/* Icône */}
                         <div
-                          className={`relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center shadow-2xl ${step.glowColor} group-hover:shadow-2xl group-hover:scale-110 transition-all duration-500 flex-shrink-0`}
+                          className={`relative w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center shadow-2xl ${step.glowColor} group-hover:shadow-2xl group-hover:scale-110 transition-all duration-500 flex-shrink-0`}
                         >
                           <step.icon
                             className="w-8 h-8 sm:w-10 sm:h-10 text-white"

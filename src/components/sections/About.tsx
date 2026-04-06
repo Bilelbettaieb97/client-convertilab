@@ -74,7 +74,7 @@ const About = () => {
           <h3 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
             Notre approche
           </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (
