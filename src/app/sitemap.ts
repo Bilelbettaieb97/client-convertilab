@@ -97,5 +97,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   ];
 
-  return [...staticEntries, ...blogEntries, ...cityEntries, ...sectorEntries, ...glossaryEntries];
+  const creationSiteTargetSlugs = [
+    "paris", "lyon", "marseille", "bordeaux", "toulouse",
+    "nice", "nantes", "lille", "montpellier", "strasbourg",
+  ];
+
+  const creationSiteEntries: MetadataRoute.Sitemap = cities
+    .filter((city) => creationSiteTargetSlugs.includes(city.slug))
+    .map((city) => ({
+      url: `${SITE.url}/creation-site-internet/${city.slug}`,
+      lastModified: siteLastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    }));
+
+  return [...staticEntries, ...blogEntries, ...cityEntries, ...sectorEntries, ...glossaryEntries, ...creationSiteEntries];
 }

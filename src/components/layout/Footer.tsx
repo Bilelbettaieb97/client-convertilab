@@ -43,6 +43,9 @@ const Footer = () => {
     { name: "Glossaire Marketing", href: "/glossaire" },
     { name: "Demande de maquette", href: "/demande-maquette" },
     { name: "Estimation de prix", href: "/estimation-prix-site-web" },
+    { name: "Nos tarifs", href: "/prix" },
+    { name: "Comparatifs", href: "/comparatifs" },
+    { name: "Guides", href: "/guide/creer-site-internet" },
     { name: "Politique de confidentialité", href: "/politique-de-confidentialite" },
   ];
 
