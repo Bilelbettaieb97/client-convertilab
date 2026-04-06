@@ -48,14 +48,17 @@ const NewsletterSubscription = () => {
         throw error;
       }
 
-      // Send email notification
-      const { error: notifyError } = await supabase.functions.invoke('notify-contact', {
-        body: {
-          type: 'newsletter',
-          email: trimmedEmail,
-        },
-      });
-      if (notifyError) console.error('Newsletter notification error:', notifyError);
+      // Non-bloquant : si la notification échoue, on continue quand même
+      try {
+        await supabase.functions.invoke('notify-contact', {
+          body: {
+            type: 'newsletter',
+            email: trimmedEmail,
+          },
+        });
+      } catch {
+        // Notification échouée mais les données sont enregistrées dans Supabase
+      }
 
       // Track Google Ads conversion
       if (typeof window !== 'undefined' && (window as any).trackFormConversion) {

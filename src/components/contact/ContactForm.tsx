@@ -143,13 +143,13 @@ const ContactForm = () => {
 
       if (error) throw error;
 
-      // Send email notification to owner
-      const { error: notifyError } = await supabase.functions.invoke('notify-contact', {
-        body: formData,
-      });
-
-      if (notifyError) {
-        console.error('Email notification error:', notifyError);
+      // Non-bloquant : si la notification échoue, on continue quand même
+      try {
+        await supabase.functions.invoke('notify-contact', {
+          body: formData,
+        });
+      } catch {
+        // Notification échouée mais les données sont enregistrées dans Supabase
       }
 
       if (typeof window !== 'undefined' && (window as any).trackFormConversion) {

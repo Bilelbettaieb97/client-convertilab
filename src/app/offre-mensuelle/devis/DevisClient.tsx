@@ -208,16 +208,21 @@ export default function DevisClient() {
       ]);
       if (error) throw error;
 
-      await supabase.functions.invoke("notify-contact", {
-        body: {
-          type: "devis",
-          ...formData,
-          project: "vitrine",
-          offer: formData.offer,
-          offerName: selectedOffer?.name,
-          offerPrice: selectedOffer?.price,
-        },
-      });
+      // Non-bloquant : si la notification échoue, on continue quand même
+      try {
+        await supabase.functions.invoke("notify-contact", {
+          body: {
+            type: "devis",
+            ...formData,
+            project: "vitrine",
+            offer: formData.offer,
+            offerName: selectedOffer?.name,
+            offerPrice: selectedOffer?.price,
+          },
+        });
+      } catch {
+        // Notification échouée mais les données sont enregistrées dans Supabase
+      }
 
       const end = Date.now() + 2500;
       const frame = () => {
