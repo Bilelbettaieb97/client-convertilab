@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
-import { caseStudies, getFullCaseStudyBySlug } from "@/data/case-studies";
+import { caseStudies, getFullCaseStudyBySlug, getCaseStudyBySlug } from "@/data/case-studies";
+import { getSectorBySlug } from "@/data/sectors";
 import { notFound } from "next/navigation";
 import CaseStudyPageClient from "./CaseStudyPageClient";
 
@@ -71,7 +72,19 @@ export default async function CaseStudyPage({ params }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <CaseStudyPageClient caseStudy={caseStudy} slug={slug} previous={previous} next={next} />
+      <CaseStudyPageClient
+        caseStudy={caseStudy}
+        slug={slug}
+        previous={previous}
+        next={next}
+        relatedSector={(() => {
+          const simpleCaseStudy = getCaseStudyBySlug(slug);
+          if (!simpleCaseStudy?.relatedSector) return undefined;
+          const sector = getSectorBySlug(simpleCaseStudy.relatedSector);
+          if (!sector) return undefined;
+          return { slug: sector.slug, name: sector.name };
+        })()}
+      />
     </>
   );
 }

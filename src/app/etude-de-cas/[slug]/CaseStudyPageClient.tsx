@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Breadcrumb,
@@ -51,11 +51,17 @@ interface CaseStudyData {
   role: string;
 }
 
+interface RelatedSector {
+  slug: string;
+  name: string;
+}
+
 interface Props {
   caseStudy: CaseStudyData;
   slug: string;
   previous?: NavigationProject;
   next?: NavigationProject;
+  relatedSector?: RelatedSector;
 }
 
 export default function CaseStudyPageClient({
@@ -63,6 +69,7 @@ export default function CaseStudyPageClient({
   slug,
   previous,
   next,
+  relatedSector,
 }: Props) {
   return (
     <div className="min-h-screen bg-background">
@@ -130,6 +137,30 @@ export default function CaseStudyPageClient({
       <CaseStudyTimeline timeline={caseStudy.timeline} />
 
       <CaseStudyCTA results={caseStudy.results} />
+
+      {relatedSector && (
+        <section className="py-12">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8 sm:p-10 border border-purple-100 text-center">
+              <p className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                Vous aussi vous êtes dans le secteur {relatedSector.name.toLowerCase()} ?
+              </p>
+              <p className="text-gray-600 mb-6">
+                Découvrez notre offre spécialement conçue pour les professionnels de votre secteur.
+              </p>
+              <Button
+                asChild
+                size="lg"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8"
+              >
+                <Link href={`/solutions/${relatedSector.slug}`}>
+                  Découvrir notre offre {relatedSector.name.toLowerCase()} <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
 
       <CaseStudyNavigation
         previousProject={previous}

@@ -19,6 +19,7 @@ export interface CaseStudy {
   author: string;
   slug: string;
   category: "site-vitrine" | "landing-page" | "e-commerce" | "portfolio";
+  relatedSector?: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -41,6 +42,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Monsieur Arancini",
     slug: "monsieur-arancini",
     category: "site-vitrine",
+    relatedSector: "restaurant",
   },
   {
     icon: "ShoppingCart",
@@ -61,6 +63,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Funestore",
     slug: "funestore",
     category: "e-commerce",
+    relatedSector: "ecommerce",
   },
   {
     icon: "BookOpen",
@@ -81,6 +84,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Gilles",
     slug: "papapret",
     category: "landing-page",
+    relatedSector: "coach",
   },
   {
     icon: "Home",
@@ -101,6 +105,7 @@ export const caseStudies: CaseStudy[] = [
     author: "ACB Rénovation",
     slug: "acb-renovation",
     category: "site-vitrine",
+    relatedSector: "artisan",
   },
   {
     icon: "Home",
@@ -121,6 +126,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Eleva Conciergerie",
     slug: "eleva-conciergerie",
     category: "site-vitrine",
+    relatedSector: "hotel-chambre-hotes",
   },
   {
     icon: "Users",
@@ -141,6 +147,7 @@ export const caseStudies: CaseStudy[] = [
     author: "ADSB Wissembourg",
     slug: "adsb-wissembourg",
     category: "site-vitrine",
+    relatedSector: "association-don-sang",
   },
   {
     icon: "Briefcase",
@@ -161,6 +168,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Alliance Sécurité Incendie",
     slug: "alliance-securite-incendie",
     category: "site-vitrine",
+    relatedSector: "securite-incendie",
   },
   {
     icon: "Sparkles",
@@ -181,6 +189,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Tri Event",
     slug: "trievent",
     category: "site-vitrine",
+    relatedSector: "recyclage-evenementiel",
   },
   {
     icon: "Sparkles",
@@ -201,6 +210,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Le Temple de l'Énergie",
     slug: "temple-zen",
     category: "site-vitrine",
+    relatedSector: "institut-beaute",
   },
   {
     icon: "BookOpen",
@@ -221,6 +231,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Institut Nomad",
     slug: "institut-nomad",
     category: "site-vitrine",
+    relatedSector: "ecole-formation",
   },
   {
     icon: "Sparkles",
@@ -241,6 +252,7 @@ export const caseStudies: CaseStudy[] = [
     author: "AH Studio Caen",
     slug: "ah-studio",
     category: "portfolio",
+    relatedSector: "photographe",
   },
   {
     icon: "Sparkles",
@@ -261,6 +273,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Vinoboat Prestige",
     slug: "vinoboat",
     category: "landing-page",
+    relatedSector: "agence-de-voyage",
   },
   {
     icon: "Sparkles",
@@ -281,6 +294,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Couleur Sable by K",
     slug: "couleur-sable",
     category: "site-vitrine",
+    relatedSector: "salon-de-coiffure",
   },
   {
     icon: "Sparkles",
@@ -301,6 +315,7 @@ export const caseStudies: CaseStudy[] = [
     author: "FilmReel Gallery",
     slug: "filmreel-gallery",
     category: "portfolio",
+    relatedSector: "agence-de-communication",
   },
   {
     icon: "Sparkles",
@@ -321,6 +336,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Art des Roses",
     slug: "art-des-roses",
     category: "e-commerce",
+    relatedSector: "ecommerce",
   },
   {
     icon: "Sparkles",
@@ -341,6 +357,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Segermès",
     slug: "segermes",
     category: "e-commerce",
+    relatedSector: "ecommerce",
   },
   {
     icon: "Sparkles",
@@ -361,6 +378,7 @@ export const caseStudies: CaseStudy[] = [
     author: "Spectacle",
     slug: "spectacle",
     category: "landing-page",
+    relatedSector: "spectacle-evenementiel",
   },
   {
     icon: "Sparkles",
@@ -381,6 +399,7 @@ export const caseStudies: CaseStudy[] = [
     author: "L'Écrin de Séoul",
     slug: "ecrin-de-seoul",
     category: "e-commerce",
+    relatedSector: "ecommerce",
   },
 ];
 

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SITE, PRICING } from "@/lib/constants";
 import { sectors, getSectorBySlug } from "@/data/sectors";
+import { caseStudies } from "@/data/case-studies";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -511,6 +512,59 @@ export default async function SectorPage({ params }: Props) {
           </p>
         </div>
       </section>
+
+      {/* ============================================================ */}
+      {/* 8b. NOS REALISATIONS DANS CE SECTEUR */}
+      {/* ============================================================ */}
+      {(() => {
+        const relatedStudies = caseStudies.filter(
+          (cs) => cs.relatedSector === sector.slug
+        );
+        if (relatedStudies.length === 0) return null;
+        return (
+          <section className="py-16 sm:py-24 bg-gray-50">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
+                Nos réalisations dans le secteur{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  {sector.name.toLowerCase()}
+                </span>
+              </h2>
+              <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Découvrez les projets que nous avons réalisés pour des professionnels de votre secteur.
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {relatedStudies.map((cs) => (
+                  <Link
+                    key={cs.slug}
+                    href={`/etude-de-cas/${cs.slug}`}
+                    className="group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-all"
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <Image
+                        src={cs.image}
+                        alt={cs.client}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <p className="text-sm text-purple-600 font-medium mb-1">{cs.sector}</p>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                        {cs.client}
+                      </h3>
+                      <p className="text-sm text-gray-600 line-clamp-2">{cs.description}</p>
+                      <span className="inline-flex items-center gap-1 text-sm text-purple-600 font-medium mt-3">
+                        Voir l&apos;étude de cas <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* ============================================================ */}
       {/* 9. CTA FINAL */}

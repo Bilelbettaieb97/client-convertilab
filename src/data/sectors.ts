@@ -5330,6 +5330,426 @@ export const sectors: Sector[] = [
       },
     ],
   },
+  {
+    slug: "association-don-sang",
+    name: "Association & ONG",
+    emoji: "🤝",
+    description:
+      "Créez un site professionnel pour votre association : collecte de dons en ligne, agenda des événements, recrutement de bénévoles et communication engageante pour fédérer votre communauté.",
+    painPoints: [
+      "Pas de visibilité en ligne pour les collectes",
+      "Difficulté à recruter des bénévoles",
+      "Communication peu engageante sur les réseaux",
+      "Pas de système de don en ligne",
+    ],
+    solutions: [
+      "Site vitrine engageant avec appels à l'action clairs",
+      "Agenda des événements et collectes à venir",
+      "Formulaire de don et d'inscription bénévole",
+      "Espace actualités et témoignages",
+    ],
+    features: [
+      "Page d'accueil engageante",
+      "Agenda des événements",
+      "Formulaire de don en ligne",
+      "Inscription bénévole",
+      "Galerie photos événements",
+      "SEO local association",
+    ],
+    cta: "Créer le site de mon association",
+    faqItems: [
+      {
+        question: "Combien coûte un site web pour une association ?",
+        answer:
+          "Nos sites pour associations démarrent à 500€. Ce tarif inclut le design engageant, l'agenda des événements, le formulaire de don, l'espace bénévole et un an d'hébergement. Nous proposons des tarifs adaptés aux structures associatives.",
+      },
+      {
+        question: "Peut-on intégrer un système de don en ligne ?",
+        answer:
+          "Oui, nous intégrons un formulaire de don sécurisé sur votre site, avec possibilité de paiement par carte bancaire via Stripe. Vous pouvez aussi proposer des dons récurrents et émettre des reçus fiscaux.",
+      },
+      {
+        question: "Le site peut-il afficher un calendrier d'événements ?",
+        answer:
+          "Absolument. Nous créons un agenda interactif qui affiche vos prochaines collectes, réunions et événements. Vous pouvez le mettre à jour facilement via le panneau d'administration.",
+      },
+      {
+        question: "Comment recruter des bénévoles via le site ?",
+        answer:
+          "Nous intégrons un formulaire d'inscription bénévole avec les informations nécessaires. Les visiteurs peuvent s'inscrire directement et vous recevez une notification par email à chaque inscription.",
+      },
+    ],
+    caseStudy: {
+      client: "ADSB Wissembourg",
+      sector: "Association de donneurs de sang — Alsace",
+      challenge:
+        "L'association n'avait aucune présence en ligne et communiquait uniquement par affichage papier. Les collectes étaient peu fréquentées et le recrutement de nouveaux donneurs stagnait.",
+      solution:
+        "Nous avons créé un site vitrine engageant avec un agenda des collectes, un espace d'information sur le don de sang, des appels à l'action clairs et une galerie photos des événements.",
+      results: [
+        "+80% de visibilité sur les collectes locales",
+        "Agenda en ligne consulté par 200+ personnes/mois",
+        "+35% de nouveaux donneurs inscrits",
+        "Communication digitale professionnelle",
+      ],
+      testimonial:
+        "Le site nous a permis de toucher une audience bien plus large. Les gens découvrent nos collectes en ligne et viennent donner leur sang. C'est un outil indispensable pour notre association.",
+      author: "Président ADSB",
+      role: "Président, ADSB Wissembourg",
+      photo: "/images/testimonials/association.webp",
+    },
+    stats: [
+      {
+        value: "68%",
+        label: "des donateurs recherchent les collectes en ligne avant de se déplacer",
+      },
+      {
+        value: "2x",
+        label: "plus de bénévoles recrutés avec un site professionnel",
+      },
+      {
+        value: "75%",
+        label: "des associations visibles en ligne augmentent leurs dons",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Comprendre votre mission",
+        desc: "Nous analysons votre association, votre mission, votre public cible et vos besoins de communication pour créer un site engageant.",
+      },
+      {
+        step: "02",
+        title: "Design engageant",
+        desc: "Création d'un design qui inspire confiance avec des visuels forts, un agenda d'événements et des appels à l'action clairs.",
+      },
+      {
+        step: "03",
+        title: "Dons & bénévolat",
+        desc: "Intégration des formulaires de don en ligne, d'inscription bénévole et de l'agenda des collectes et événements.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à la gestion de l'agenda et des contenus, suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "securite-incendie",
+    name: "Sécurité & Protection Incendie",
+    emoji: "🔥",
+    description:
+      "Positionnez votre entreprise de sécurité incendie avec un site professionnel qui met en avant votre expertise : extincteurs, formations, audits de conformité et interventions rapides.",
+    painPoints: [
+      "Image en ligne pas à la hauteur de l'expertise",
+      "Peu de demandes de devis en ligne",
+      "Concurrence forte sur les mots-clés locaux",
+      "Services techniques mal présentés",
+    ],
+    solutions: [
+      "Site professionnel avec structuration des services",
+      "Pages dédiées par type d'intervention",
+      "Formulaire de demande de devis rapide",
+      "Mise en avant certifications et conformité",
+    ],
+    features: [
+      "Pages services structurées",
+      "Formulaire devis rapide",
+      "Certifications mises en avant",
+      "Galerie interventions",
+      "Zone d'intervention géolocalisée",
+      "SEO local sécurité incendie",
+    ],
+    cta: "Créer le site de mon entreprise sécurité",
+    faqItems: [
+      {
+        question: "Combien coûte un site web pour une entreprise de sécurité incendie ?",
+        answer:
+          "Nos sites pour entreprises de sécurité incendie démarrent à 500€. Ce tarif inclut la structuration de vos services, le formulaire de devis, la mise en avant de vos certifications et un an d'hébergement.",
+      },
+      {
+        question: "Peut-on mettre en avant nos certifications et agréments ?",
+        answer:
+          "Oui, nous créons une section dédiée à vos certifications (APSAD, NF, etc.), agréments et qualifications. Ces éléments sont mis en avant sur la page d'accueil pour rassurer immédiatement les visiteurs.",
+      },
+      {
+        question: "Le site peut-il générer des demandes de devis ?",
+        answer:
+          "Absolument. Nous intégrons un formulaire de demande de devis détaillé avec choix du type d'intervention, et des boutons d'appel à l'action sur chaque page service pour maximiser les conversions.",
+      },
+      {
+        question: "Peut-on présenter les différents types de services ?",
+        answer:
+          "Oui, nous créons des pages dédiées pour chaque service : installation d'extincteurs, formation incendie, audit de conformité, maintenance des systèmes de sécurité, etc. Chaque page est optimisée pour le SEO.",
+      },
+    ],
+    caseStudy: {
+      client: "Alliance Sécurité Incendie",
+      sector: "Sécurité incendie — Île-de-France",
+      challenge:
+        "Alliance Sécurité Incendie gérait plus de 150 copropriétés mais n'avait aucun site web. L'entreprise perdait des opportunités face à des concurrents mieux référencés en ligne.",
+      solution:
+        "Nous avons créé un site professionnel B2B avec une structuration claire des services techniques, des pages dédiées par type d'intervention, un formulaire de devis optimisé et une mise en avant de l'expertise.",
+      results: [
+        "+60% de demandes de devis en ligne",
+        "Positionnement expert renforcé",
+        "1ère page Google sur les mots-clés locaux",
+        "+40% de nouveaux contrats en 6 mois",
+      ],
+      testimonial:
+        "Le site reflète parfaitement notre expertise et nous aide à présenter efficacement nos services. Les demandes de devis ont augmenté significativement.",
+      author: "Alliance Sécurité Incendie",
+      role: "Dirigeant, Alliance Sécurité Incendie",
+      photo: "/images/testimonials/securite.webp",
+    },
+    stats: [
+      {
+        value: "85%",
+        label: "des entreprises cherchent un prestataire sécurité incendie en ligne",
+      },
+      {
+        value: "3x",
+        label: "plus de demandes de devis avec un site professionnel structuré",
+      },
+      {
+        value: "92%",
+        label: "des décideurs consultent le site web avant de choisir un prestataire",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Analyse de vos services",
+        desc: "Nous analysons vos services, vos certifications, votre zone d'intervention et vos clients cibles pour créer un site qui inspire confiance.",
+      },
+      {
+        step: "02",
+        title: "Design professionnel B2B",
+        desc: "Création d'un design sobre et professionnel avec structuration claire des services, certifications et références clients.",
+      },
+      {
+        step: "03",
+        title: "Devis & conversion",
+        desc: "Intégration du formulaire de devis, des pages services optimisées SEO et des appels à l'action stratégiques.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à la gestion du contenu et des demandes, suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "recyclage-evenementiel",
+    name: "Recyclage & Environnement",
+    emoji: "♻️",
+    description:
+      "Valorisez votre engagement écologique avec un site professionnel pour votre entreprise de tri, recyclage et gestion des déchets. Mettez en avant votre démarche RSE et attirez de nouveaux clients.",
+    painPoints: [
+      "Engagement écologique peu visible en ligne",
+      "Difficulté à se démarquer de la concurrence",
+      "Services de tri et recyclage mal présentés",
+      "Pas de système de demande de devis en ligne",
+    ],
+    solutions: [
+      "Site éco-responsable avec positionnement vert",
+      "Pages dédiées par type de service (tri, collecte, recyclage)",
+      "Mise en avant des chiffres et engagements RSE",
+      "Formulaire de demande de devis et contact rapide",
+    ],
+    features: [
+      "Design éco-responsable",
+      "Pages services détaillées",
+      "Chiffres clés et impact RSE",
+      "Formulaire devis gratuit",
+      "Galerie interventions",
+      "SEO local recyclage",
+    ],
+    cta: "Créer le site de mon entreprise recyclage",
+    faqItems: [
+      {
+        question: "Combien coûte un site web pour une entreprise de recyclage ?",
+        answer:
+          "Nos sites pour entreprises de recyclage et environnement démarrent à 500€. Ce tarif inclut un design éco-responsable, la structuration de vos services, le formulaire de devis et un an d'hébergement.",
+      },
+      {
+        question: "Le design reflétera-t-il notre engagement écologique ?",
+        answer:
+          "Oui, nous créons un design avec une identité visuelle verte et éco-responsable qui reflète vos valeurs. Les couleurs, les visuels et le contenu sont pensés pour communiquer votre engagement environnemental.",
+      },
+      {
+        question: "Peut-on afficher nos chiffres d'impact environnemental ?",
+        answer:
+          "Absolument. Nous mettons en avant vos chiffres clés (tonnes recyclées, taux de valorisation, etc.) avec des visuels impactants pour démontrer votre engagement concret.",
+      },
+      {
+        question: "Le site peut-il cibler les entreprises (B2B) ?",
+        answer:
+          "Oui, nous structurons le site pour cibler à la fois les particuliers et les entreprises. Des pages dédiées aux solutions B2B avec formulaire de demande de devis personnalisé permettent de générer des leads qualifiés.",
+      },
+    ],
+    caseStudy: {
+      client: "Tri Event",
+      sector: "Recyclage événementiel — France",
+      challenge:
+        "Tri Event, spécialisée dans le tri et recyclage lors d'événements, n'avait pas de site web pour présenter son activité. L'entreprise communiquait uniquement par le bouche-à-oreille et perdait des marchés.",
+      solution:
+        "Nous avons créé un site vitrine éco-responsable avec un positionnement vert fort, une structuration claire de l'offre tri/recyclage événementiel, des CTAs pour les demandes de devis et une mise en avant de l'impact écologique.",
+      results: [
+        "+70% de visibilité en ligne",
+        "Positionnement écologique renforcé",
+        "+50% de demandes de devis en 3 mois",
+        "Image professionnelle et engagée",
+      ],
+      testimonial:
+        "Le site reflète parfaitement notre engagement écologique et notre activité. Le rendu est professionnel, clair et nous amène de nouveaux clients.",
+      author: "Tri Event",
+      role: "Fondateur, Tri Event",
+      photo: "/images/testimonials/recyclage.webp",
+    },
+    stats: [
+      {
+        value: "78%",
+        label: "des organisateurs d'événements cherchent un prestataire recyclage en ligne",
+      },
+      {
+        value: "2.5x",
+        label: "plus de contrats avec une présence digitale professionnelle",
+      },
+      {
+        value: "90%",
+        label: "des entreprises vérifient l'engagement RSE d'un prestataire avant de le choisir",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Comprendre votre activité",
+        desc: "Nous analysons vos services de tri et recyclage, votre positionnement écologique et vos clients cibles pour créer un site engageant.",
+      },
+      {
+        step: "02",
+        title: "Design éco-responsable",
+        desc: "Création d'un design vert et moderne avec mise en avant de vos engagements, chiffres d'impact et services détaillés.",
+      },
+      {
+        step: "03",
+        title: "Devis & impact RSE",
+        desc: "Intégration du formulaire de devis, des pages services optimisées et des sections chiffres clés et impact environnemental.",
+      },
+      {
+        step: "04",
+        title: "Lancement & formation",
+        desc: "Mise en ligne, formation à la gestion du contenu et suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
+  {
+    slug: "spectacle-evenementiel",
+    name: "Spectacle & Événementiel",
+    emoji: "🎭",
+    description:
+      "Promouvez vos spectacles et événements avec un site immersif : billetterie en ligne, galerie artistes, calendrier des représentations et design dynamique qui donne envie.",
+    painPoints: [
+      "Spectacles peu visibles en ligne",
+      "Pas de système de billetterie intégré",
+      "Communication dispersée sur les réseaux",
+      "Pas de calendrier des représentations",
+    ],
+    solutions: [
+      "Site immersif avec design dynamique et visuel",
+      "Billetterie en ligne intégrée",
+      "Calendrier des représentations et tournées",
+      "Galerie artistes, photos et vidéos",
+    ],
+    features: [
+      "Design immersif et dynamique",
+      "Billetterie en ligne",
+      "Calendrier représentations",
+      "Galerie photos et vidéos",
+      "Pages artistes dédiées",
+      "SEO événementiel local",
+    ],
+    cta: "Créer le site de mon spectacle",
+    faqItems: [
+      {
+        question: "Combien coûte un site web pour un spectacle ou un événement ?",
+        answer:
+          "Nos sites pour le spectacle et l'événementiel démarrent à 500€. Ce tarif inclut le design immersif, la billetterie en ligne, le calendrier des représentations et un an d'hébergement.",
+      },
+      {
+        question: "Peut-on intégrer une billetterie en ligne ?",
+        answer:
+          "Oui, nous intégrons un système de billetterie en ligne sécurisé avec paiement par carte bancaire. Vous pouvez gérer les places, les tarifs et les promotions directement depuis votre panneau d'administration.",
+      },
+      {
+        question: "Le site peut-il afficher un calendrier de tournée ?",
+        answer:
+          "Absolument. Nous créons un calendrier interactif avec les dates, lieux et liens de réservation pour chaque représentation. Le calendrier est facilement modifiable à tout moment.",
+      },
+      {
+        question: "Comment mettre en valeur les artistes et le spectacle ?",
+        answer:
+          "Nous créons des pages dédiées avec biographies, photos, vidéos extraits et revue de presse. Le design immersif plonge le visiteur dans l'univers du spectacle pour lui donner envie de réserver.",
+      },
+    ],
+    caseStudy: {
+      client: "Spectacle",
+      sector: "Spectacle vivant — France",
+      challenge:
+        "La compagnie n'avait qu'une page Facebook pour communiquer sur ses spectacles. Sans site web dédié, la billetterie passait uniquement par des plateformes tierces qui prenaient de grosses commissions.",
+      solution:
+        "Nous avons créé une landing page immersive avec un design dynamique, une présentation percutante du spectacle, une billetterie en ligne intégrée et un calendrier des représentations.",
+      results: [
+        "+90% de réservations en ligne directes",
+        "Suppression des commissions plateformes tierces",
+        "+60% de visibilité sur Google",
+        "Image artistique professionnelle",
+      ],
+      testimonial:
+        "Le site met parfaitement en valeur notre spectacle. Il est dynamique, immersif et donne immédiatement envie de réserver. Un vrai outil de promotion.",
+      author: "Directeur artistique",
+      role: "Directeur artistique, Compagnie",
+      photo: "/images/testimonials/spectacle.webp",
+    },
+    stats: [
+      {
+        value: "82%",
+        label: "des spectateurs réservent leurs places en ligne",
+      },
+      {
+        value: "3x",
+        label: "plus de ventes de billets avec un site dédié vs réseaux sociaux seuls",
+      },
+      {
+        value: "70%",
+        label: "des spectateurs découvrent un spectacle via une recherche Google",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Immersion dans votre univers",
+        desc: "Nous découvrons votre spectacle, vos artistes, votre public cible et vos besoins pour créer un site qui transmet l'émotion.",
+      },
+      {
+        step: "02",
+        title: "Design immersif",
+        desc: "Création d'un design dynamique avec visuels percutants, vidéos extraits, galerie artistes et ambiance qui donne envie.",
+      },
+      {
+        step: "03",
+        title: "Billetterie & calendrier",
+        desc: "Intégration de la billetterie en ligne sécurisée, du calendrier de tournée et des liens de réservation.",
+      },
+      {
+        step: "04",
+        title: "Lancement & promotion",
+        desc: "Mise en ligne, formation à la gestion de la billetterie et du calendrier, suivi des performances pendant 30 jours.",
+      },
+    ],
+  },
 ];
 
 export const getSectorBySlug = (slug: string) =>
