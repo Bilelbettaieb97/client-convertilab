@@ -131,7 +131,7 @@ const Footer = () => {
             </p>
 
             {/* Réseaux sociaux */}
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
