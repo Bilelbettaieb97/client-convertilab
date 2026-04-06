@@ -3,6 +3,10 @@ import { analyzeSite } from "@/lib/seo/analyzer";
 import { generateReportHtml } from "@/lib/seo/report-template";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
+import { renderToBuffer } from "@react-pdf/renderer";
+import React from "react";
+import { SeoAuditPdf } from "@/lib/seo/pdf-template";
+import type { SeoAuditResult } from "@/lib/seo/analyzer";
 
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
@@ -14,26 +18,10 @@ const supabase = createClient(
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-async function generatePdf(html: string): Promise<Buffer> {
-  const chromium = (await import("@sparticuz/chromium")).default;
-  const puppeteer = (await import("puppeteer-core")).default;
-
-  const browser = await puppeteer.launch({
-    args: chromium.args,
-    defaultViewport: { width: 1200, height: 800 },
-    executablePath: await chromium.executablePath(),
-    headless: true,
-  });
-
-  const page = await browser.newPage();
-  await page.setContent(html, { waitUntil: "networkidle0", timeout: 15000 });
-  const pdf = await page.pdf({
-    format: "A4",
-    printBackground: true,
-    margin: { top: "10mm", right: "10mm", bottom: "10mm", left: "10mm" },
-  });
-  await browser.close();
-  return Buffer.from(pdf);
+async function generatePdf(audit: SeoAuditResult): Promise<Buffer> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const buffer = await renderToBuffer(React.createElement(SeoAuditPdf, { audit }) as any);
+  return Buffer.from(buffer);
 }
 
 export async function POST(request: NextRequest) {
@@ -54,10 +42,10 @@ export async function POST(request: NextRequest) {
     // 2. Generate HTML report
     const reportHtml = generateReportHtml(audit);
 
-    // 3. Generate PDF (fallback to HTML attachment if it fails)
+    // 3. Generate PDF
     let pdfBuffer: Buffer | null = null;
     try {
-      pdfBuffer = await generatePdf(reportHtml);
+      pdfBuffer = await generatePdf(audit);
     } catch (err) {
       console.error("PDF generation failed, fallback to HTML:", err);
     }
