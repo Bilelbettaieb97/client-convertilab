@@ -115,7 +115,15 @@ export default function DevisServicePage() {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.from("contact_submissions").insert([formData]);
+      const { error } = await supabase.from("devis_submissions").insert([{
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        sector: formData.project,
+        offer: devisService?.name || service,
+        message: formData.message,
+      }]);
       if (error) throw error;
 
       // Non-bloquant notification
