@@ -88,7 +88,7 @@ export default function SeoCheckForm() {
       });
 
       clearInterval(interval);
-      setAnalysisStep(ANALYSIS_STEPS.length - 1);
+      setAnalysisStep(ANALYSIS_STEPS.length);
 
       if (!res.ok) {
         const data = await res.json();
@@ -98,11 +98,15 @@ export default function SeoCheckForm() {
       const data = await res.json();
       setResult(data.audit);
       setEmailSent(data.emailSent);
+
+      // Small delay so user sees all steps completed before switching
+      await new Promise(r => setTimeout(r, 800));
+      setIsAnalyzing(false);
       setStep(4);
     } catch (err: unknown) {
       clearInterval(interval);
-      setError(err instanceof Error ? err.message : "Une erreur est survenue. Verifiez l'URL et reessayez.");
       setIsAnalyzing(false);
+      setError(err instanceof Error ? err.message : "Une erreur est survenue. Verifiez l'URL et reessayez.");
     }
   };
 
@@ -273,48 +277,87 @@ export default function SeoCheckForm() {
         {/* ANALYZING STATE */}
         {isAnalyzing && (
           <motion.div key="analyzing" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-8">
-            <div className="relative w-20 h-20 mx-auto mb-6">
-              <div className="absolute inset-0 rounded-full border-4 border-white/10" />
-              <div className="absolute inset-0 rounded-full border-4 border-purple-500 border-t-transparent animate-spin" />
-              <Search className="absolute inset-0 m-auto w-8 h-8 text-purple-400" />
-            </div>
+            {analysisStep < ANALYSIS_STEPS.length ? (
+              <>
+                <div className="relative w-20 h-20 mx-auto mb-6">
+                  <div className="absolute inset-0 rounded-full border-4 border-white/10" />
+                  <div className="absolute inset-0 rounded-full border-4 border-purple-500 border-t-transparent animate-spin" />
+                  <Search className="absolute inset-0 m-auto w-8 h-8 text-purple-400" />
+                </div>
 
-            <h2 className="text-xl font-bold text-white mb-2">Analyse en cours...</h2>
-            <p className="text-white/50 text-sm mb-8">{url}</p>
+                <h2 className="text-xl font-bold text-white mb-2">Analyse en cours...</h2>
+                <p className="text-white/50 text-sm mb-8">{url}</p>
 
-            <div className="max-w-md mx-auto space-y-3">
-              {ANALYSIS_STEPS.map((label, i) => (
+                <div className="max-w-md mx-auto space-y-3">
+                  {ANALYSIS_STEPS.map((label, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: i <= analysisStep ? 1 : 0.3, x: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                      className="flex items-center gap-3 text-sm"
+                    >
+                      {i < analysisStep ? (
+                        <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      ) : i === analysisStep ? (
+                        <Loader2 className="w-4 h-4 text-purple-400 animate-spin flex-shrink-0" />
+                      ) : (
+                        <div className="w-4 h-4 rounded-full border border-white/20 flex-shrink-0" />
+                      )}
+                      <span className={i <= analysisStep ? "text-white/80" : "text-white/30"}>{label}</span>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Progress bar */}
+                <div className="mt-8 max-w-md mx-auto">
+                  <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+                      initial={{ width: "0%" }}
+                      animate={{ width: `${((analysisStep + 1) / ANALYSIS_STEPS.length) * 100}%` }}
+                      transition={{ duration: 0.5 }}
+                    />
+                  </div>
+                  <p className="text-xs text-white/30 mt-2">{Math.round(((analysisStep + 1) / ANALYSIS_STEPS.length) * 100)}%</p>
+                </div>
+              </>
+            ) : (
+              <>
                 <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: i <= analysisStep ? 1 : 0.3, x: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex items-center gap-3 text-sm"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: "spring", damping: 10 }}
                 >
-                  {i < analysisStep ? (
-                    <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                  ) : i === analysisStep ? (
-                    <Loader2 className="w-4 h-4 text-purple-400 animate-spin flex-shrink-0" />
-                  ) : (
-                    <div className="w-4 h-4 rounded-full border border-white/20 flex-shrink-0" />
-                  )}
-                  <span className={i <= analysisStep ? "text-white/80" : "text-white/30"}>{label}</span>
+                  <CheckCircle2 className="w-20 h-20 text-green-400 mx-auto mb-6" />
                 </motion.div>
-              ))}
-            </div>
 
-            {/* Progress bar */}
-            <div className="mt-8 max-w-md mx-auto">
-              <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                <motion.div
-                  className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
-                  initial={{ width: "0%" }}
-                  animate={{ width: `${((analysisStep + 1) / ANALYSIS_STEPS.length) * 100}%` }}
-                  transition={{ duration: 0.5 }}
-                />
-              </div>
-              <p className="text-xs text-white/30 mt-2">{Math.round(((analysisStep + 1) / ANALYSIS_STEPS.length) * 100)}%</p>
-            </div>
+                <h2 className="text-xl font-bold text-white mb-2">Analyse terminee !</h2>
+                <p className="text-white/50 text-sm mb-6">
+                  Vous allez recevoir un <strong className="text-white">rapport PDF complet</strong> sur votre boite mail <strong className="text-purple-400">{email}</strong>.
+                </p>
+
+                <div className="bg-white/5 border border-white/10 rounded-xl p-4 max-w-md mx-auto text-left">
+                  <div className="flex items-start gap-3">
+                    <Mail className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-white text-sm font-medium mb-1">Verifiez votre boite de reception</p>
+                      <p className="text-white/40 text-xs">
+                        Si vous ne recevez pas le rapport d&apos;ici 10 minutes, verifiez vos spams ou contactez-nous a{" "}
+                        <a href="mailto:contact@convertilab.com" className="text-purple-400 underline">contact@convertilab.com</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 max-w-md mx-auto">
+                  <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div className="h-full bg-green-500 rounded-full w-full" />
+                  </div>
+                  <p className="text-xs text-green-400 mt-2">100% — Analyse complete</p>
+                </div>
+              </>
+            )}
           </motion.div>
         )}
 
