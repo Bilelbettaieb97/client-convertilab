@@ -60,59 +60,60 @@ export async function POST(request: NextRequest) {
       console.error("Supabase insert error:", dbError);
     }
 
-    // 4. Send email with HTML report as attachment
-    let emailSent = false;
-    try {
-      await resend.emails.send({
-        from: "ConvertiLab <bilel@convertilab.com>",
-        to: email,
-        subject: `Votre Audit SEO — ${audit.domain} — Score : ${audit.scores.global}/100 (${audit.grade})`,
-        html: getEmailHtml(name, audit.domain, audit.scores.global, audit.grade, audit.gradeLabel, audit.issues.filter(i => i.priority === "critical").length, audit.strengths.slice(0, 3)),
-        attachments: [
-          {
-            filename: `audit-seo-${audit.domain}-${new Date().toISOString().split("T")[0]}.html`,
-            content: Buffer.from(reportHtml, "utf-8"),
-          },
-        ],
-      });
-      emailSent = true;
-
-      // Update email_sent status
-      await supabase
+    // 4. Fire-and-forget: send emails in background (don't block the response)
+    const emailPromise = resend.emails.send({
+      from: "ConvertiLab <bilel@convertilab.com>",
+      to: email,
+      subject: `Votre Audit SEO — ${audit.domain} — Score : ${audit.scores.global}/100 (${audit.grade})`,
+      html: getEmailHtml(name, audit.domain, audit.scores.global, audit.grade, audit.gradeLabel, audit.issues.filter(i => i.priority === "critical").length, audit.strengths.slice(0, 3)),
+      attachments: [
+        {
+          filename: `audit-seo-${audit.domain}-${new Date().toISOString().split("T")[0]}.html`,
+          content: Buffer.from(reportHtml, "utf-8"),
+        },
+      ],
+    }).then(() => {
+      supabase
         .from("seo_audits")
         .update({ email_sent: true })
         .eq("email", email)
         .eq("domain", audit.domain)
         .order("created_at", { ascending: false })
-        .limit(1);
-    } catch (emailError) {
-      console.error("Email send failed:", emailError);
-    }
+        .limit(1)
+        .then(() => {});
+    }).catch((err) => {
+      console.error("Email send failed:", err);
+    });
 
-    // 5. Send notification to agency
-    try {
-      await resend.emails.send({
-        from: "ConvertiLab <bilel@convertilab.com>",
-        to: "contact@convertilab.com",
-        subject: `Nouveau lead SEO Check — ${name} — ${audit.domain} (${audit.scores.global}/100)`,
-        html: `
-          <h2>Nouveau lead via SEO Check</h2>
-          <p><strong>Nom :</strong> ${name}</p>
-          <p><strong>Email :</strong> ${email}</p>
-          <p><strong>Tel :</strong> ${phone || "Non renseigne"}</p>
-          <p><strong>Entreprise :</strong> ${company || "Non renseigne"}</p>
-          <hr>
-          <p><strong>Site audite :</strong> ${audit.domain}</p>
-          <p><strong>Score :</strong> ${audit.scores.global}/100 (${audit.grade})</p>
-          <p><strong>Problemes critiques :</strong> ${audit.issues.filter(i => i.priority === "critical").length}</p>
-          <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
-        `,
-      });
-    } catch {
-      // Non-blocking
-    }
+    // Agency notification (non-blocking)
+    const notifPromise = resend.emails.send({
+      from: "ConvertiLab <bilel@convertilab.com>",
+      to: "contact@convertilab.com",
+      subject: `Nouveau lead SEO Check — ${name} — ${audit.domain} (${audit.scores.global}/100)`,
+      html: `
+        <h2>Nouveau lead via SEO Check</h2>
+        <p><strong>Nom :</strong> ${name}</p>
+        <p><strong>Email :</strong> ${email}</p>
+        <p><strong>Tel :</strong> ${phone || "Non renseigne"}</p>
+        <p><strong>Entreprise :</strong> ${company || "Non renseigne"}</p>
+        <hr>
+        <p><strong>Site audite :</strong> ${audit.domain}</p>
+        <p><strong>Score :</strong> ${audit.scores.global}/100 (${audit.grade})</p>
+        <p><strong>Problemes critiques :</strong> ${audit.issues.filter(i => i.priority === "critical").length}</p>
+        <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
+      `,
+    }).catch(() => {});
 
-    // 6. Return results to frontend
+    // Wait max 5s for emails, then respond anyway
+    const emailSent = await Promise.race([
+      emailPromise.then(() => true),
+      new Promise<boolean>(resolve => setTimeout(() => resolve(false), 5000)),
+    ]);
+
+    // Keep promises alive so Vercel doesn't kill them
+    void notifPromise;
+
+    // 5. Return results to frontend
     return NextResponse.json({
       success: true,
       emailSent,
