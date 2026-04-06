@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
     let emailSent = false;
     try {
       await resend.emails.send({
-        from: "ConvertiLab <audit@convertilab.com>",
+        from: "ConvertiLab <bilel@convertilab.com>",
         to: email,
         subject: `Votre Audit SEO — ${audit.domain} — Score : ${audit.scores.global}/100 (${audit.grade})`,
         html: getEmailHtml(name, audit.domain, audit.scores.global, audit.grade, audit.gradeLabel, audit.issues.filter(i => i.priority === "critical").length, audit.strengths.slice(0, 3)),
@@ -92,7 +92,7 @@ export async function POST(request: NextRequest) {
     // 5. Send notification to agency
     try {
       await resend.emails.send({
-        from: "ConvertiLab <audit@convertilab.com>",
+        from: "ConvertiLab <bilel@convertilab.com>",
         to: "contact@convertilab.com",
         subject: `Nouveau lead SEO Check — ${name} — ${audit.domain} (${audit.scores.global}/100)`,
         html: `
