@@ -14,30 +14,6 @@ const supabase = createClient(
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-async function generatePdf(html: string): Promise<Buffer> {
-  // Dynamic import to avoid bundling issues
-  const puppeteer = await import("puppeteer-core");
-  const chromium = await import("@sparticuz/chromium");
-
-  const browser = await puppeteer.default.launch({
-    args: chromium.default.args,
-    defaultViewport: { width: 1200, height: 800 },
-    executablePath: await chromium.default.executablePath(),
-    headless: true,
-  });
-
-  const page = await browser.newPage();
-  await page.setContent(html, { waitUntil: "networkidle0", timeout: 15000 });
-  const pdf = await page.pdf({
-    format: "A4",
-    printBackground: true,
-    margin: { top: "10mm", right: "10mm", bottom: "10mm", left: "10mm" },
-  });
-  await browser.close();
-
-  return Buffer.from(pdf);
-}
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -56,15 +32,7 @@ export async function POST(request: NextRequest) {
     // 2. Generate HTML report
     const reportHtml = generateReportHtml(audit);
 
-    // 3. Generate PDF
-    let pdfBuffer: Buffer | null = null;
-    try {
-      pdfBuffer = await generatePdf(reportHtml);
-    } catch (pdfError) {
-      console.error("PDF generation failed, will send HTML link instead:", pdfError);
-    }
-
-    // 4. Store lead + results in Supabase
+    // 3. Store lead + results in Supabase
     const { error: dbError } = await supabase.from("seo_audits").insert({
       website_url: audit.url,
       domain: audit.domain,
@@ -92,32 +60,21 @@ export async function POST(request: NextRequest) {
       console.error("Supabase insert error:", dbError);
     }
 
-    // 5. Send email with PDF
+    // 4. Send email with HTML report as attachment
     let emailSent = false;
     try {
-      const emailConfig: {
-        from: string;
-        to: string;
-        subject: string;
-        html: string;
-        attachments?: { filename: string; content: Buffer }[];
-      } = {
+      await resend.emails.send({
         from: "ConvertiLab <audit@convertilab.com>",
         to: email,
         subject: `Votre Audit SEO — ${audit.domain} — Score : ${audit.scores.global}/100 (${audit.grade})`,
         html: getEmailHtml(name, audit.domain, audit.scores.global, audit.grade, audit.gradeLabel, audit.issues.filter(i => i.priority === "critical").length, audit.strengths.slice(0, 3)),
-      };
-
-      if (pdfBuffer) {
-        emailConfig.attachments = [
+        attachments: [
           {
-            filename: `audit-seo-${audit.domain}-${new Date().toISOString().split("T")[0]}.pdf`,
-            content: pdfBuffer,
+            filename: `audit-seo-${audit.domain}-${new Date().toISOString().split("T")[0]}.html`,
+            content: Buffer.from(reportHtml, "utf-8"),
           },
-        ];
-      }
-
-      await resend.emails.send(emailConfig);
+        ],
+      });
       emailSent = true;
 
       // Update email_sent status
@@ -132,7 +89,7 @@ export async function POST(request: NextRequest) {
       console.error("Email send failed:", emailError);
     }
 
-    // 6. Send notification to agency
+    // 5. Send notification to agency
     try {
       await resend.emails.send({
         from: "ConvertiLab <audit@convertilab.com>",
@@ -155,7 +112,7 @@ export async function POST(request: NextRequest) {
       // Non-blocking
     }
 
-    // 7. Return results to frontend
+    // 6. Return results to frontend
     return NextResponse.json({
       success: true,
       emailSent,
@@ -207,7 +164,7 @@ function getEmailHtml(name: string, domain: string, score: number, grade: string
   ${criticalCount > 0 ? `
   <div style="background:#fff0f0;border-radius:12px;padding:16px;margin:16px 0;border-left:4px solid #ef4444;">
     <p style="color:#ef4444;font-weight:700;margin:0;font-size:14px;">${criticalCount} probleme(s) critique(s) detecte(s)</p>
-    <p style="color:#888;font-size:12px;margin:6px 0 0;">Consultez le rapport PDF en piece jointe pour voir les details et les solutions.</p>
+    <p style="color:#888;font-size:12px;margin:6px 0 0;">Ouvrez le rapport HTML en piece jointe pour les details et solutions.</p>
   </div>` : ""}
 
   ${strengths.length > 0 ? `
@@ -216,7 +173,7 @@ function getEmailHtml(name: string, domain: string, score: number, grade: string
     ${strengths.map(s => `<p style="color:#666;font-size:12px;margin:4px 0;">\u2713 ${s}</p>`).join("")}
   </div>` : ""}
 
-  <p style="color:#888;font-size:13px;margin:20px 0;">Le rapport PDF complet avec toutes les recommandations est en <strong>piece jointe</strong> de cet email.</p>
+  <p style="color:#888;font-size:13px;margin:20px 0;">Le rapport complet est en <strong>piece jointe</strong>. Ouvrez-le dans votre navigateur puis <strong>Ctrl+P</strong> (ou Cmd+P) pour l'enregistrer en PDF.</p>
 </div>
 
 <div style="background:#1a1040;border-radius:16px;padding:30px;margin-top:16px;text-align:center;color:#fff;">
