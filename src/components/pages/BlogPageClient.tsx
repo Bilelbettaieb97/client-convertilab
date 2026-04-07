@@ -14,7 +14,7 @@ import { supabase } from "@/lib/supabase/client";
 import { blogArticles as staticArticles } from "@/data/blog-articles";
 import type { BlogArticle } from "@/data/blog-articles";
 
-const categories = ["Tous", "Business", "Web Design", "SEO", "Technique"];
+const categories = ["Tous", "Business", "Web Design", "SEO", "Technique", "Performance", "Design", "Publicité", "Juridique", "Stratégie", "Analyse"];
 
 export default function BlogPageClient() {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
@@ -43,7 +43,10 @@ export default function BlogPageClient() {
             publishedAt: a.published_at || new Date().toISOString(),
             author: { name: a.author_name || "ConvertiLab" },
           }));
-          setArticles(mapped);
+          // Fusionner : Supabase d'abord, puis statiques qui ne sont pas dans Supabase
+          const supabaseSlugs = new Set(mapped.map((a) => a.slug));
+          const uniqueStatic = staticArticles.filter((a) => !supabaseSlugs.has(a.slug));
+          setArticles([...mapped, ...uniqueStatic]);
         }
       } catch {
         // Fallback to static articles — already set
