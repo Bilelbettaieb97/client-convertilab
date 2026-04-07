@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import MentionsLegalesForm from "@/components/mentions-legales/MentionsLegalesForm";
 import { SITE } from "@/lib/constants";
+import Navigation from "@/components/layout/Navigation";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Generateur de Mentions Legales Gratuit — Conforme RGPD | ConvertiLab",
@@ -86,7 +88,8 @@ export default function GenerateurMentionsLegalesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="min-h-screen bg-[#0a0a1a]">
+      <Navigation />
+      <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
         <section className="relative pt-32 pb-16 px-4 overflow-hidden">
           {/* Background effects */}
@@ -183,6 +186,7 @@ export default function GenerateurMentionsLegalesPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

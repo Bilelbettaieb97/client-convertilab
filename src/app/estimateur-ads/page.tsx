@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import AdsEstimatorForm from "@/components/estimateur-ads/AdsEstimatorForm";
 import { SITE } from "@/lib/constants";
+import Navigation from "@/components/layout/Navigation";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Simulateur ROI Google Ads & Meta Ads Gratuit | ConvertiLab",
@@ -89,7 +91,8 @@ export default function EstimateurAdsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="min-h-screen bg-[#0a0a1a]">
+      <Navigation />
+      <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
         <section className="relative pt-32 pb-16 px-4 overflow-hidden">
           {/* Background effects */}
@@ -186,6 +189,7 @@ export default function EstimateurAdsPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

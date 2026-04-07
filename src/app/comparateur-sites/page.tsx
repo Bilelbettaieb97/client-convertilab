@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import ComparateurForm from "@/components/comparateur-sites/ComparateurForm";
 import { SITE } from "@/lib/constants";
+import Navigation from "@/components/layout/Navigation";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Comparateur de Sites Web Gratuit — Votre site vs la concurrence | ConvertiLab",
@@ -86,7 +88,8 @@ export default function ComparateurSitesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="min-h-screen bg-[#0a0a1a]">
+      <Navigation />
+      <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
         <section className="relative pt-32 pb-16 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.15),transparent_60%)]" />
@@ -181,6 +184,7 @@ export default function ComparateurSitesPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
