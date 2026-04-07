@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, Share2, ExternalLink } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Share2, ExternalLink, ArrowRight, Sparkles } from "lucide-react";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import BlogCard from "@/components/blog/BlogCard";
@@ -223,6 +223,41 @@ export default function BlogArticleClient({ article, relatedArticles }: Props) {
               <article className="prose prose-lg max-w-none">
                 {formatContent(article.content)}
               </article>
+
+              {/* CTA Outil Gratuit — affiché si l'article a le tag "Outil gratuit" */}
+              {article.tags.includes("Outil gratuit") && (() => {
+                const toolMap: Record<string, { url: string; name: string; emoji: string; desc: string }> = {
+                  "audit-seo-gratuit-guide": { url: "/seo-check", name: "Audit SEO Gratuit", emoji: "🔍", desc: "Analysez 60+ points SEO de votre site en 60 secondes" },
+                  "tester-vitesse-site-web": { url: "/speed-check", name: "Audit Vitesse", emoji: "⚡", desc: "Testez la performance et les Core Web Vitals de votre site" },
+                  "audit-design-ux-site-web": { url: "/design-score", name: "Audit Design & UX", emoji: "🎨", desc: "Évaluez l'expérience utilisateur et le design de votre site" },
+                  "estimer-roi-google-ads-meta-ads": { url: "/estimateur-ads", name: "Estimateur ROI Ads", emoji: "📊", desc: "Calculez le retour sur investissement de vos campagnes publicitaires" },
+                  "generateur-mentions-legales-gratuit": { url: "/generateur-mentions-legales", name: "Générateur Mentions Légales", emoji: "📋", desc: "Créez vos mentions légales, CGU et politique de confidentialité" },
+                  "generateur-robots-txt-sitemap-xml": { url: "/generateur-robots-sitemap", name: "Générateur Robots & Sitemap", emoji: "🤖", desc: "Générez vos fichiers robots.txt et sitemap.xml optimisés" },
+                  "rapport-sectoriel-analyse-concurrence": { url: "/rapport-sectoriel", name: "Rapport Sectoriel", emoji: "📈", desc: "Analysez votre marché et la concurrence de votre secteur" },
+                  "comparateur-sites-web-concurrent": { url: "/comparateur-sites", name: "Comparateur Sites", emoji: "🔄", desc: "Comparez votre site web avec celui de vos concurrents" },
+                };
+                const tool = toolMap[article.slug];
+                if (!tool) return null;
+                return (
+                  <div className="my-10 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Sparkles className="w-5 h-5" />
+                        <span className="text-sm font-semibold text-white/80">Outil 100% gratuit</span>
+                      </div>
+                      <div className="text-3xl mb-2">{tool.emoji}</div>
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2">{tool.name}</h3>
+                      <p className="text-white/80 mb-6">{tool.desc}</p>
+                      <Link href={tool.url}>
+                        <Button size="lg" className="bg-white text-green-700 hover:bg-gray-100 font-bold px-8 py-6 text-base shadow-xl">
+                          Essayer maintenant <ArrowRight className="ml-2 w-5 h-5" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })()}
 
               {/* Share */}
               <Card className="mt-12 p-6 bg-muted/50 border-0">
