@@ -42,7 +42,7 @@ export interface ChatMessage {
   link?: { label: string; href: string };
 }
 
-export type ChatStep = 1 | 2 | 3 | 4 | 5 | 6 | 7 | null;
+export type ChatStep = 1 | 2 | "2b" | 3 | 4 | 5 | 6 | 7 | null;
 
 interface ChatWindowProps {
   messages: ChatMessage[];
@@ -73,7 +73,7 @@ function getInputConfig(step: ChatStep): {
   icon: typeof Globe;
   type: string;
 } | null {
-  if (step === 2)
+  if (step === 2 || step === "2b")
     return {
       placeholder: "https://monsite.com",
       icon: Globe,
