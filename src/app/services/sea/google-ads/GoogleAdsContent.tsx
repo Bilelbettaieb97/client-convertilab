@@ -55,6 +55,21 @@ export default function GoogleAdsContent() {
         { q: "Que comprend votre gestion de campagnes ?", a: "Notre gestion inclut la recherche de mots-cles, la creation d'annonces, la configuration du tracking, l'optimisation continue des encheres, les tests A/B et des rapports hebdomadaires detailles." }
       ]} />
 
+      {/* Outil gratuit */}
+      <div className="container mx-auto px-4 my-8">
+        <div className="p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl border border-blue-100">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="font-bold text-gray-900">Estimez votre ROI Google Ads gratuitement</p>
+              <p className="text-sm text-gray-600">Simulez vos campagnes et anticipez vos resultats</p>
+            </div>
+            <Link href="/estimateur-ads" className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold hover:bg-blue-700 whitespace-nowrap">
+              Estimer mon ROI <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-500 text-white"><div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Pret a booster vos ventes ?</h2>
         <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Obtenez un audit gratuit de votre compte Google Ads ou lancez vos premieres campagnes.</p>

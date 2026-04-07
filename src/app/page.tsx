@@ -257,28 +257,48 @@ export default function HomePage() {
             <Testimonials />
           </section>
         </AnimatedSection>
-        {/* Lead Magnet — Audit SEO Gratuit */}
-        <section className="py-12 sm:py-16 bg-gradient-to-r from-green-600 to-emerald-600 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-50"></div>
-          <div className="container mx-auto px-4 max-w-5xl relative z-10">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-              <div className="text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 bg-white/20 px-3 py-1.5 rounded-full text-sm font-bold text-white mb-3">
-                  <span>🔍</span> 100% Gratuit — 60 secondes
-                </div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
-                  Votre site est-il bien référencé ?
-                </h2>
-                <p className="text-white/80 text-base sm:text-lg">
-                  Audit SEO complet avec 60+ points de contrôle. Rapport PDF envoyé par email.
-                </p>
-              </div>
-              <Link href="/seo-check">
-                <Button size="lg" className="bg-white text-green-700 hover:bg-gray-100 px-8 py-6 text-lg font-bold shadow-xl whitespace-nowrap">
-                  Analyser mon site gratuitement
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
+        {/* Boite a outils — 8 outils gratuits */}
+        <section className="py-16 sm:py-20 bg-gray-900 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/10"></div>
+          <div className="container mx-auto px-4 max-w-6xl relative z-10">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                Nos outils gratuits
+              </h2>
+              <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
+                Analysez, testez et optimisez votre site web en quelques clics. 100% gratuit, sans inscription.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+              {[
+                { emoji: "\uD83D\uDD0D", name: "Audit SEO", description: "Analysez 60+ points SEO", href: "/seo-check" },
+                { emoji: "\u26A1", name: "Audit Vitesse", description: "Testez la performance", href: "/speed-check" },
+                { emoji: "\uD83C\uDFA8", name: "Audit Design", description: "\u00C9valuez l'UX/UI", href: "/design-score" },
+                { emoji: "\uD83D\uDCCA", name: "Estimateur Ads", description: "Estimez votre ROI", href: "/estimateur-ads" },
+                { emoji: "\uD83D\uDCCB", name: "Mentions L\u00E9gales", description: "G\u00E9n\u00E9rez vos CGU", href: "/generateur-mentions-legales" },
+                { emoji: "\uD83E\uDD16", name: "Robots & Sitemap", description: "Cr\u00E9ez vos fichiers", href: "/generateur-robots-sitemap" },
+                { emoji: "\uD83D\uDCC8", name: "Rapport Sectoriel", description: "Analysez votre march\u00E9", href: "/rapport-sectoriel" },
+                { emoji: "\uD83D\uDD04", name: "Comparateur", description: "Comparez les sites", href: "/comparateur-sites" },
+              ].map((tool) => (
+                <Link
+                  key={tool.href}
+                  href={tool.href}
+                  className="group relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-300"
+                >
+                  <span className="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-500/20 text-green-400 border border-green-500/30">
+                    Gratuit
+                  </span>
+                  <div className="text-3xl mb-3">{tool.emoji}</div>
+                  <h3 className="text-white font-semibold text-lg mb-1 group-hover:text-purple-300 transition-colors">
+                    {tool.name}
+                  </h3>
+                  <p className="text-gray-400 text-sm">{tool.description}</p>
+                  <div className="mt-4 flex items-center text-sm font-medium text-purple-400 group-hover:text-purple-300 transition-colors">
+                    Essayer
+                    <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

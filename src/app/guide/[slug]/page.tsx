@@ -255,6 +255,58 @@ export default async function GuidePage({ params }: PageProps) {
           </div>
         </section>
 
+        {/* Outils gratuits contextuels */}
+        <section className="py-8">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto space-y-4">
+              {/* SEO Check — guides contenant "seo" */}
+              {slug.includes("seo") && (
+                <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-100">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                      <p className="font-bold text-slate-900">Testez votre SEO gratuitement</p>
+                      <p className="text-sm text-slate-600">Audit complet de 60+ points en 60 secondes</p>
+                    </div>
+                    <Link href="/seo-check" className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold hover:bg-purple-700 whitespace-nowrap">
+                      Lancer l&apos;audit <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {/* Speed Check — guides contenant "site-internet" ou "convertit" */}
+              {(slug.includes("site-internet") || slug.includes("convertit")) && (
+                <div className="p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl border border-blue-100">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                      <p className="font-bold text-slate-900">Testez la vitesse de votre site</p>
+                      <p className="text-sm text-slate-600">Analysez les performances et obtenez des recommandations</p>
+                    </div>
+                    <Link href="/speed-check" className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold hover:bg-blue-700 whitespace-nowrap">
+                      Tester la vitesse <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {/* Mentions legales — guides contenant "site-internet" */}
+              {slug.includes("site-internet") && (
+                <div className="p-6 bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl border border-gray-200">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                      <p className="font-bold text-slate-900">Generez vos mentions legales</p>
+                      <p className="text-sm text-slate-600">Conformes RGPD, prets a integrer sur votre site</p>
+                    </div>
+                    <Link href="/generateur-mentions-legales" className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg text-sm font-semibold hover:bg-gray-900 whitespace-nowrap">
+                      Generer mes mentions <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-16 md:py-20 bg-gradient-to-br from-purple-600 to-pink-500">
           <div className="container mx-auto px-4 sm:px-6">

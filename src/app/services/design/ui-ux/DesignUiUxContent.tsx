@@ -55,6 +55,21 @@ export default function DesignUiUxContent() {
         { q: "Faites-vous des tests utilisateurs ?", a: "Oui, nous realisons des tests d'utilisabilite avec de vrais utilisateurs pour valider les parcours et identifier les points de friction. Les resultats alimentent les iterations de design." }
       ]} />
 
+      {/* Outil gratuit */}
+      <div className="container mx-auto px-4 my-8">
+        <div className="p-6 bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl border border-pink-100">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="font-bold text-gray-900">Evaluez le design de votre site gratuitement</p>
+              <p className="text-sm text-gray-600">Score UX, accessibilite, coherence visuelle en quelques clics</p>
+            </div>
+            <Link href="/design-score" className="inline-flex items-center gap-2 px-4 py-2 bg-pink-600 text-white rounded-lg text-sm font-semibold hover:bg-pink-700 whitespace-nowrap">
+              Evaluer mon design <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <section className="py-20 bg-gradient-to-r from-pink-500 to-rose-500 text-white"><div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Pret a ameliorer votre UX ?</h2>
         <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Discutons de votre projet et creons ensemble une experience utilisateur exceptionnelle.</p>

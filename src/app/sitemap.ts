@@ -38,6 +38,13 @@ const staticRoutes = [
   "/agence-web",
   "/solutions",
   "/seo-check",
+  "/speed-check",
+  "/design-score",
+  "/estimateur-ads",
+  "/generateur-mentions-legales",
+  "/generateur-robots-sitemap",
+  "/rapport-sectoriel",
+  "/comparateur-sites",
   "/prix",
   "/comparatifs",
 ];

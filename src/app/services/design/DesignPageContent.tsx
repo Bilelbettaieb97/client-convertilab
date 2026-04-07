@@ -97,6 +97,21 @@ export default function DesignPageContent() {
         { q: "Travaillez-vous avec Figma ?", a: "Oui, Figma est notre outil principal pour le design UI/UX. Vous accedez a vos maquettes en temps reel, pouvez commenter et suivre l'avancement. Les prototypes interactifs sont egalement realises sur Figma." }
       ]} />
 
+      {/* Outil gratuit */}
+      <div className="container mx-auto px-4 sm:px-6 my-8">
+        <div className="p-6 bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl border border-pink-100">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="font-bold text-gray-900">Evaluez le design de votre site gratuitement</p>
+              <p className="text-sm text-gray-600">Score UX, accessibilite, coherence visuelle en quelques clics</p>
+            </div>
+            <Link href="/design-score" className="inline-flex items-center gap-2 px-4 py-2 bg-pink-600 text-white rounded-lg text-sm font-semibold hover:bg-pink-700 whitespace-nowrap">
+              Evaluer mon design <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <section className="py-20 bg-gradient-to-r from-pink-500 to-rose-600"><div className="container mx-auto px-4 sm:px-6 text-center">
         <h2 className="text-3xl font-bold text-white mb-4">Pret a transformer votre image ?</h2>
         <p className="text-white/80 mb-8 max-w-xl mx-auto">Discutons de votre projet de design et creons ensemble une identite qui vous ressemble.</p>

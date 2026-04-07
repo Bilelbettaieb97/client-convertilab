@@ -35,19 +35,20 @@ const Footer = () => {
     { name: "Contact", href: "/contact" },
     { name: "Offre Spéciale", href: "/offre-speciale" },
     { name: "Offre Mensuelle", href: "/offre-mensuelle" },
-    { name: "Audit SEO Gratuit", href: "/seo-check" },
-  ];
-
-  const resources = [
     { name: "Agence Web par ville", href: "/agence-web" },
     { name: "Solutions par secteur", href: "/solutions" },
     { name: "Glossaire Marketing", href: "/glossaire" },
-    { name: "Demande de maquette", href: "/demande-maquette" },
-    { name: "Estimation de prix", href: "/estimation-prix-site-web" },
-    { name: "Nos tarifs", href: "/prix" },
-    { name: "Comparatifs", href: "/comparatifs" },
-    { name: "Guides", href: "/guide/creer-site-internet" },
-    { name: "Politique de confidentialité", href: "/politique-de-confidentialite" },
+  ];
+
+  const toolsLinks = [
+    { name: "Audit SEO", href: "/seo-check" },
+    { name: "Audit Vitesse", href: "/speed-check" },
+    { name: "Audit Design", href: "/design-score" },
+    { name: "Estimateur Ads", href: "/estimateur-ads" },
+    { name: "Mentions Légales", href: "/generateur-mentions-legales" },
+    { name: "Robots & Sitemap", href: "/generateur-robots-sitemap" },
+    { name: "Rapport Sectoriel", href: "/rapport-sectoriel" },
+    { name: "Comparateur", href: "/comparateur-sites" },
   ];
 
   const socialLinks = [
@@ -192,11 +193,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Ressources */}
+          {/* Outils gratuits */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Ressources</h4>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Outils gratuits</h4>
             <ul className="space-y-2.5">
-              {resources.map((item) => (
+              {toolsLinks.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-sm text-gray-400 hover:text-purple-400 transition-colors">
                     {item.name}

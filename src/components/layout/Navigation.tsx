@@ -108,6 +108,17 @@ const Navigation = () => {
     { label: "Nos tarifs", href: "/prix", badge: null },
   ];
 
+  const toolsItems = [
+    { label: "Audit SEO Gratuit", href: "/seo-check", badge: "Populaire" },
+    { label: "Audit Vitesse", href: "/speed-check", badge: null },
+    { label: "Audit Design & UX", href: "/design-score", badge: null },
+    { label: "Estimateur ROI Ads", href: "/estimateur-ads", badge: null },
+    { label: "Mentions Légales", href: "/generateur-mentions-legales", badge: null },
+    { label: "Robots.txt & Sitemap", href: "/generateur-robots-sitemap", badge: null },
+    { label: "Rapport Sectoriel", href: "/rapport-sectoriel", badge: null },
+    { label: "Comparateur Sites", href: "/comparateur-sites", badge: null },
+  ];
+
   const openCalendly = () => {
     window.open(SITE.calendly, '_blank');
   };
@@ -296,7 +307,7 @@ const Navigation = () => {
               </div>
             </div>
 
-            {navItems.map((item) => (
+            {navItems.filter(item => item.label !== 'Contact').map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
@@ -307,6 +318,41 @@ const Navigation = () => {
                 <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 ${pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
             ))}
+
+            {/* Outils dropdown */}
+            <div className="relative group/tools">
+              <button className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer flex items-center gap-1 ${pathname.startsWith('/seo-check') || pathname.startsWith('/speed-check') || pathname.startsWith('/design-score') || pathname.startsWith('/estimateur-ads') || pathname.startsWith('/generateur') || pathname.startsWith('/rapport-sectoriel') || pathname.startsWith('/comparateur-sites') ? 'text-purple-600' : ''}`}>
+                Outils
+                <ChevronDown className="w-3 h-3 transition-transform group-hover/tools:rotate-180" />
+              </button>
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover/tools:opacity-100 group-hover/tools:visible transition-all duration-200">
+                <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2 w-56">
+                  {toolsItems.map((tool) => (
+                    <Link
+                      key={tool.href}
+                      href={tool.href}
+                      className="flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors"
+                    >
+                      {tool.label}
+                      {tool.badge && (
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-100 text-green-700">
+                          {tool.badge}
+                        </span>
+                      )}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Contact link */}
+            <Link
+              href="/contact"
+              className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer relative group flex items-center gap-1 ${pathname === '/contact' ? 'text-purple-600' : ''}`}
+            >
+              Contact
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 ${pathname === '/contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+            </Link>
           </div>
 
           {/* CTA Buttons - Desktop */}
@@ -384,6 +430,26 @@ const Navigation = () => {
                     {offer.badge && (
                       <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${offer.badge === 'Populaire' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}`}>
                         {offer.badge}
+                      </span>
+                    )}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Mobile Outils gratuits */}
+              <div className="px-3 py-2">
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Outils gratuits</p>
+                {toolsItems.map((tool) => (
+                  <Link
+                    key={tool.href}
+                    href={tool.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`flex items-center justify-between w-full px-3 py-2.5 text-base hover:text-purple-600 hover:bg-gray-50 rounded-md transition-colors duration-200 ${pathname === tool.href ? 'text-purple-600 bg-purple-50' : 'text-gray-600'}`}
+                  >
+                    {tool.label}
+                    {tool.badge && (
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-100 text-green-700">
+                        {tool.badge}
                       </span>
                     )}
                   </Link>

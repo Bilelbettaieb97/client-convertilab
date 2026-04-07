@@ -55,6 +55,21 @@ export default function MetaAdsContent() {
         { q: "Puis-je voir les resultats en temps reel ?", a: "Oui, vous avez acces a un tableau de bord en temps reel et recevez des rapports hebdomadaires detailles avec les metriques cles : impressions, clics, conversions, cout par acquisition et ROAS." }
       ]} />
 
+      {/* Outil gratuit */}
+      <div className="container mx-auto px-4 my-8">
+        <div className="p-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl border border-pink-100">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="font-bold text-gray-900">Estimez votre ROI Meta Ads gratuitement</p>
+              <p className="text-sm text-gray-600">Simulez vos campagnes Facebook et Instagram</p>
+            </div>
+            <Link href="/estimateur-ads" className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold hover:bg-purple-700 whitespace-nowrap">
+              Estimer mon ROI <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <section className="py-20 bg-gradient-to-r from-pink-500 to-purple-500 text-white"><div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Pret a conquerir les reseaux sociaux ?</h2>
         <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Developpez votre presence sur Facebook et Instagram avec des campagnes performantes.</p>

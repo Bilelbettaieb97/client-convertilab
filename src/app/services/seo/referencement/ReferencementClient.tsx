@@ -138,6 +138,32 @@ export default function ReferencementClient() {
         { q: "Travaillez-vous sur tous les types de sites ?", a: "Oui, nous intervenons sur les sites vitrines, e-commerce, blogs, applications web et sites institutionnels. Chaque strategie est adaptee a votre secteur d'activite et a vos objectifs commerciaux." },
       ]} />
 
+      {/* Outils gratuits */}
+      <div className="container mx-auto px-4 my-8 space-y-4">
+        <div className="p-6 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl border border-emerald-100">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="font-bold text-gray-900">Testez votre SEO gratuitement</p>
+              <p className="text-sm text-gray-600">Audit complet de 60+ points en 60 secondes</p>
+            </div>
+            <Link href="/seo-check" className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded-lg text-sm font-semibold hover:bg-emerald-700 whitespace-nowrap">
+              Lancer l&apos;audit <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+        <div className="p-6 bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl border border-gray-200">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="font-bold text-gray-900">Generez votre robots.txt et sitemap.xml</p>
+              <p className="text-sm text-gray-600">Fichiers techniques SEO prets a deployer en quelques clics</p>
+            </div>
+            <Link href="/generateur-robots-sitemap" className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg text-sm font-semibold hover:bg-gray-900 whitespace-nowrap">
+              Generer mes fichiers <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <section className="py-20 bg-gradient-to-r from-emerald-500 to-teal-500 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Pret a booster votre visibilite ?</h2>
