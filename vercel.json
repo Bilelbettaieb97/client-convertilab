@@ -3,6 +3,42 @@
     "src/app/api/seo-check/route.ts": {
       "memory": 1024,
       "maxDuration": 60
+    },
+    "src/app/api/speed-check/route.ts": {
+      "memory": 1024,
+      "maxDuration": 60
+    },
+    "src/app/api/design-score/route.ts": {
+      "memory": 1024,
+      "maxDuration": 60
+    },
+    "src/app/api/estimateur-ads/route.ts": {
+      "memory": 512,
+      "maxDuration": 30
+    },
+    "src/app/api/pricing-calculator/route.ts": {
+      "memory": 512,
+      "maxDuration": 30
+    },
+    "src/app/api/mentions-legales/route.ts": {
+      "memory": 512,
+      "maxDuration": 30
+    },
+    "src/app/api/robots-generator/route.ts": {
+      "memory": 1024,
+      "maxDuration": 60
+    },
+    "src/app/api/rapport-sectoriel/route.ts": {
+      "memory": 1024,
+      "maxDuration": 60
+    },
+    "src/app/api/comparateur-sites/route.ts": {
+      "memory": 1024,
+      "maxDuration": 120
+    },
+    "src/app/api/chatbot-audit/route.ts": {
+      "memory": 1024,
+      "maxDuration": 60
     }
   }
 }
