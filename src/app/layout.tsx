@@ -4,6 +4,7 @@ import "./globals.css";
 import { SITE, DEFAULT_OG_IMAGE } from "@/lib/constants";
 import { GoogleAnalytics, GoogleTagManager, MetaPixel, GTMNoscript, MetaPixelNoscript } from "@/components/Analytics";
 import { Toaster } from "@/components/ui/sonner";
+import { ChatWidget } from "@/components/chatbot";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -86,6 +87,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <GoogleTagManager />
         <MetaPixel />
+        <ChatWidget />
       </body>
     </html>
   );
