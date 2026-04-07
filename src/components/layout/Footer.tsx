@@ -35,6 +35,7 @@ const Footer = () => {
     { name: "Contact", href: "/contact" },
     { name: "Offre Spéciale", href: "/offre-speciale" },
     { name: "Offre Mensuelle", href: "/offre-mensuelle" },
+    { name: "Audit SEO Gratuit", href: "/seo-check" },
   ];
 
   const resources = [

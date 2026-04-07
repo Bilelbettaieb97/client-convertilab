@@ -314,11 +314,11 @@ const Navigation = () => {
             <Button
               asChild
               variant="outline"
-              className="border-2 border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white px-5 py-2 font-semibold transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-5 py-2 font-semibold transition-all duration-300 transform hover:scale-105"
             >
-              <Link href="/demande-maquette">
-                <Sparkles className="mr-2 w-4 h-4" />
-                Maquette gratuite
+              <Link href="/seo-check">
+                <Search className="mr-2 w-4 h-4" />
+                Audit SEO Gratuit
               </Link>
             </Button>
 
@@ -405,11 +405,11 @@ const Navigation = () => {
                 <Button
                   asChild
                   variant="outline"
-                  className="w-full border-2 border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white font-semibold"
+                  className="w-full border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white font-semibold"
                 >
-                  <Link href="/demande-maquette" onClick={() => setIsMenuOpen(false)}>
-                    <Sparkles className="mr-2 w-4 h-4" />
-                    Maquette gratuite
+                  <Link href="/seo-check" onClick={() => setIsMenuOpen(false)}>
+                    <Search className="mr-2 w-4 h-4" />
+                    Audit SEO Gratuit
                   </Link>
                 </Button>
 

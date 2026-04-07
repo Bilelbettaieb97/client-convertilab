@@ -37,6 +37,9 @@ const staticRoutes = [
   "/politique-de-confidentialite",
   "/agence-web",
   "/solutions",
+  "/seo-check",
+  "/prix",
+  "/comparatifs",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

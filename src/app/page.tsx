@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SITE } from "@/lib/constants";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/layout/Navigation";
 import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
@@ -254,6 +257,32 @@ export default function HomePage() {
             <Testimonials />
           </section>
         </AnimatedSection>
+        {/* Lead Magnet — Audit SEO Gratuit */}
+        <section className="py-12 sm:py-16 bg-gradient-to-r from-green-600 to-emerald-600 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-50"></div>
+          <div className="container mx-auto px-4 max-w-5xl relative z-10">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 bg-white/20 px-3 py-1.5 rounded-full text-sm font-bold text-white mb-3">
+                  <span>🔍</span> 100% Gratuit — 60 secondes
+                </div>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
+                  Votre site est-il bien référencé ?
+                </h2>
+                <p className="text-white/80 text-base sm:text-lg">
+                  Audit SEO complet avec 60+ points de contrôle. Rapport PDF envoyé par email.
+                </p>
+              </div>
+              <Link href="/seo-check">
+                <Button size="lg" className="bg-white text-green-700 hover:bg-gray-100 px-8 py-6 text-lg font-bold shadow-xl whitespace-nowrap">
+                  Analyser mon site gratuitement
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <AnimatedSection animation="scale">
           <About />
         </AnimatedSection>
