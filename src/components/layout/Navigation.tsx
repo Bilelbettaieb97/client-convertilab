@@ -57,7 +57,6 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Portfolio", href: "/portfolio" },
-    { label: "À propos", href: "/a-propos" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ];
@@ -191,45 +190,13 @@ const Navigation = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            {/* Offres Dropdown — avec icônes et descriptions */}
-            <div className="relative group/offers">
-              <button className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer flex items-center gap-1 ${pathname.startsWith('/offre') || pathname.startsWith('/estimation') || pathname.startsWith('/demande') || pathname.startsWith('/prix') ? 'text-purple-600' : ''}`}>
-                Offres <ChevronDown className="w-3 h-3 transition-transform group-hover/offers:rotate-180" />
-              </button>
-              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover/offers:opacity-100 group-hover/offers:visible transition-all duration-200 z-50">
-                <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-2 w-72">
-                  {offerItems.map((offer) => (
-                    <Link key={offer.href} href={offer.href} className="group flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-purple-50 transition-all duration-200">
-                      <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-purple-100 group-hover:bg-gradient-to-br group-hover:from-purple-500 group-hover:to-pink-500 transition-all duration-200 flex-shrink-0 mt-0.5">
-                        <offer.icon className="w-4 h-4 text-purple-600 group-hover:text-white transition-colors" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-semibold text-gray-800 group-hover:text-purple-700">{offer.label}</span>
-                          {offer.badge && (
-                            <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${offer.badge === 'Populaire' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}`}>
-                              {offer.badge}
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-xs text-gray-500 mt-0.5">{offer.desc}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+            {/* Portfolio — preuve sociale immédiate */}
+            <Link href="/portfolio" className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer relative group ${pathname === '/portfolio' ? 'text-purple-600' : ''}`}>
+              Portfolio
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 ${pathname === '/portfolio' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+            </Link>
 
-            {/* Nav links */}
-            {navItems.filter(item => item.label !== 'Contact').map((item) => (
-              <Link key={item.label} href={item.href} className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer relative group flex items-center gap-1 ${pathname === item.href ? 'text-purple-600' : ''}`}>
-                {item.label === 'Blog' && <BookOpen className="w-4 h-4" />}
-                {item.label}
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 ${pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-              </Link>
-            ))}
-
-            {/* Outils Dropdown — avec icônes et descriptions */}
+            {/* Outils Dropdown — lead magnet, capture les non-prêts */}
             <div className="relative group/tools">
               <button className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer flex items-center gap-1 ${isToolActive ? 'text-purple-600' : ''}`}>
                 Outils <ChevronDown className="w-3 h-3 transition-transform group-hover/tools:rotate-180" />
@@ -263,6 +230,42 @@ const Navigation = () => {
                 </div>
               </div>
             </div>
+
+            {/* Offres Dropdown — après la confiance (portfolio + outils) */}
+            <div className="relative group/offers">
+              <button className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer flex items-center gap-1 ${pathname.startsWith('/offre') || pathname.startsWith('/estimation') || pathname.startsWith('/demande') || pathname.startsWith('/prix') ? 'text-purple-600' : ''}`}>
+                Offres <ChevronDown className="w-3 h-3 transition-transform group-hover/offers:rotate-180" />
+              </button>
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover/offers:opacity-100 group-hover/offers:visible transition-all duration-200 z-50">
+                <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-2 w-72">
+                  {offerItems.map((offer) => (
+                    <Link key={offer.href} href={offer.href} className="group flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-purple-50 transition-all duration-200">
+                      <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-purple-100 group-hover:bg-gradient-to-br group-hover:from-purple-500 group-hover:to-pink-500 transition-all duration-200 flex-shrink-0 mt-0.5">
+                        <offer.icon className="w-4 h-4 text-purple-600 group-hover:text-white transition-colors" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm font-semibold text-gray-800 group-hover:text-purple-700">{offer.label}</span>
+                          {offer.badge && (
+                            <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${offer.badge === 'Populaire' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}`}>
+                              {offer.badge}
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-xs text-gray-500 mt-0.5">{offer.desc}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Blog */}
+            <Link href="/blog" className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer relative group flex items-center gap-1 ${pathname.startsWith('/blog') ? 'text-purple-600' : ''}`}>
+              <BookOpen className="w-4 h-4" />
+              Blog
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 ${pathname.startsWith('/blog') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+            </Link>
 
             {/* Contact */}
             <Link href="/contact" className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group ${pathname === '/contact' ? 'text-purple-600' : ''}`}>
@@ -311,30 +314,12 @@ const Navigation = () => {
                 )}
               </div>
 
-              {/* Offres */}
-              <div>
-                <button onClick={() => setIsOffresOpen(!isOffresOpen)} className={`flex items-center justify-between w-full px-3 py-3 rounded-xl transition-colors duration-200 font-medium text-base ${pathname.startsWith('/offre') || pathname.startsWith('/prix') ? 'text-purple-600 bg-purple-50' : 'text-gray-700 hover:bg-gray-50'}`}>
-                  <span className="flex items-center gap-2"><Zap className="w-5 h-5" /> Offres</span>
-                  <ChevronDown className={`w-5 h-5 transition-transform ${isOffresOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {isOffresOpen && (
-                  <div className="pl-4 mt-1 space-y-0.5">
-                    {offerItems.map((offer) => (
-                      <Link key={offer.href} href={offer.href} onClick={() => setIsMenuOpen(false)} className="flex items-center justify-between w-full px-3 py-2.5 text-sm hover:text-purple-600 hover:bg-gray-50 rounded-lg transition-colors">
-                        <span className="flex items-center gap-3">
-                          <offer.icon className="w-4 h-4 text-purple-400" />
-                          <span className="text-gray-600">{offer.label}</span>
-                        </span>
-                        {offer.badge && (
-                          <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${offer.badge === 'Populaire' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}`}>{offer.badge}</span>
-                        )}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              {/* Portfolio — preuve sociale */}
+              <Link href="/portfolio" onClick={() => setIsMenuOpen(false)} className={`flex items-center gap-3 w-full px-3 py-3 rounded-xl transition-colors duration-200 font-medium text-base ${pathname === '/portfolio' ? 'text-purple-600 bg-purple-50' : 'text-gray-700 hover:bg-gray-50'}`}>
+                <Globe className="w-5 h-5" /> Portfolio
+              </Link>
 
-              {/* Outils */}
+              {/* Outils — lead magnet */}
               <div>
                 <button onClick={() => setIsOutilsOpen(!isOutilsOpen)} className={`flex items-center justify-between w-full px-3 py-3 rounded-xl transition-colors duration-200 font-medium text-base ${isToolActive ? 'text-green-600 bg-green-50' : 'text-gray-700 hover:bg-gray-50'}`}>
                   <span className="flex items-center gap-2"><Search className="w-5 h-5" /> Outils gratuits</span>
@@ -357,16 +342,36 @@ const Navigation = () => {
                 )}
               </div>
 
-              {/* Nav links */}
-              {navItems.map((item) => (
-                <Link key={item.label} href={item.href} onClick={() => setIsMenuOpen(false)} className={`flex items-center gap-3 w-full px-3 py-3 rounded-xl transition-colors duration-200 font-medium text-base ${pathname === item.href ? 'text-purple-600 bg-purple-50' : 'text-gray-700 hover:bg-gray-50'}`}>
-                  {item.label === 'Blog' && <BookOpen className="w-5 h-5" />}
-                  {item.label === 'Portfolio' && <Globe className="w-5 h-5" />}
-                  {item.label === 'À propos' && <FileText className="w-5 h-5" />}
-                  {item.label === 'Contact' && <Target className="w-5 h-5" />}
-                  {item.label}
-                </Link>
-              ))}
+              {/* Offres — après confiance */}
+              <div>
+                <button onClick={() => setIsOffresOpen(!isOffresOpen)} className={`flex items-center justify-between w-full px-3 py-3 rounded-xl transition-colors duration-200 font-medium text-base ${pathname.startsWith('/offre') || pathname.startsWith('/prix') ? 'text-purple-600 bg-purple-50' : 'text-gray-700 hover:bg-gray-50'}`}>
+                  <span className="flex items-center gap-2"><Zap className="w-5 h-5" /> Offres</span>
+                  <ChevronDown className={`w-5 h-5 transition-transform ${isOffresOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isOffresOpen && (
+                  <div className="pl-4 mt-1 space-y-0.5">
+                    {offerItems.map((offer) => (
+                      <Link key={offer.href} href={offer.href} onClick={() => setIsMenuOpen(false)} className="flex items-center justify-between w-full px-3 py-2.5 text-sm hover:text-purple-600 hover:bg-gray-50 rounded-lg transition-colors">
+                        <span className="flex items-center gap-3">
+                          <offer.icon className="w-4 h-4 text-purple-400" />
+                          <span className="text-gray-600">{offer.label}</span>
+                        </span>
+                        {offer.badge && (
+                          <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${offer.badge === 'Populaire' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}`}>{offer.badge}</span>
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Blog + Contact */}
+              <Link href="/blog" onClick={() => setIsMenuOpen(false)} className={`flex items-center gap-3 w-full px-3 py-3 rounded-xl transition-colors duration-200 font-medium text-base ${pathname.startsWith('/blog') ? 'text-purple-600 bg-purple-50' : 'text-gray-700 hover:bg-gray-50'}`}>
+                <BookOpen className="w-5 h-5" /> Blog
+              </Link>
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)} className={`flex items-center gap-3 w-full px-3 py-3 rounded-xl transition-colors duration-200 font-medium text-base ${pathname === '/contact' ? 'text-purple-600 bg-purple-50' : 'text-gray-700 hover:bg-gray-50'}`}>
+                <Target className="w-5 h-5" /> Contact
+              </Link>
 
               {/* CTA Mobile */}
               <div className="pt-3 space-y-2 border-t border-gray-100 mt-2">
