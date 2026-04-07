@@ -57,7 +57,7 @@ const features = [
   {
     icon: "\uD83D\uDCCA",
     title: "Donnees sectorielles",
-    desc: "CPC, CTR et taux de conversion reels pour 25+ secteurs d'activite.",
+    desc: "CPC, CTR et taux de conversion reels pour 65+ secteurs d'activite.",
   },
   {
     icon: "\uD83D\uDCC5",

@@ -172,16 +172,16 @@ export function DesignAuditPdf({ audit }: { audit: DesignAuditResult }) {
 
         <Sh n="5" t="Glossaire UX/Design" />
         <GlossaryCompact terms={[
-          { t: "CTA", d: "Call-to-Action — bouton incitant a l'action" },
-          { t: "UX", d: "User Experience — experience utilisateur globale" },
+          { t: "CTA", d: "Call-to-Action — bouton incitant a l'action", slug: "cta" },
+          { t: "UX", d: "User Experience — experience utilisateur globale", slug: "ux" },
           { t: "Above the fold", d: "Zone visible sans scroller" },
           { t: "Trust Signal", d: "Element renfor\u00E7ant la confiance (avis, logos)" },
           { t: "Social Proof", d: "Preuve sociale — temoignages, chiffres" },
-          { t: "Responsive", d: "Design adapte a toutes les tailles d'ecran" },
+          { t: "Responsive", d: "Design adapte a toutes les tailles d'ecran", slug: "responsive" },
           { t: "A11y", d: "Accessibilite — site utilisable par tous" },
           { t: "Breadcrumb", d: "Fil d'Ariane — chemin de navigation" },
           { t: "Hero Section", d: "Premiere section visible d'une page" },
-          { t: "CRO", d: "Conversion Rate Optimization" },
+          { t: "CRO", d: "Conversion Rate Optimization", slug: "cro" },
           { t: "Wireframe", d: "Maquette fil de fer — structure de la page" },
           { t: "Heatmap", d: "Carte de chaleur des clics et scrolls" },
         ]} />

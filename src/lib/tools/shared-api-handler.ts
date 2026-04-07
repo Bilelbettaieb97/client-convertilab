@@ -103,6 +103,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
       return NextResponse.json({
         success: true,
         emailSent,
+        pdfBase64: pdfBuffer && pdfBuffer.length > 0 ? pdfBuffer.toString("base64") : null,
         ...config.buildResponsePayload(result),
       });
     } catch (error) {

@@ -191,12 +191,16 @@ export function IssueCard({ index, title, priority, description, fix }: { index:
   );
 }
 
-export function GlossaryCompact({ terms }: { terms: { t: string; d: string }[] }) {
+export function GlossaryCompact({ terms }: { terms: { t: string; d: string; slug?: string }[] }) {
   return (
     <View style={{ flexDirection: "row", flexWrap: "wrap", marginBottom: 8 }}>
       {terms.map((g, i) => (
         <View key={i} style={{ width: "33%", paddingVertical: 2, paddingRight: 6 }}>
-          <Text style={{ fontSize: 7, fontWeight: "bold", color: c.accent2 }}>{g.t}</Text>
+          {g.slug ? (
+            <Link src={`https://convertilab.com/glossaire/${g.slug}`} style={{ fontSize: 7, fontWeight: "bold", color: c.accent2, textDecoration: "none" }}>{g.t}</Link>
+          ) : (
+            <Text style={{ fontSize: 7, fontWeight: "bold", color: c.accent2 }}>{g.t}</Text>
+          )}
           <Text style={{ fontSize: 6, color: c.text2 }}>{g.d}</Text>
         </View>
       ))}

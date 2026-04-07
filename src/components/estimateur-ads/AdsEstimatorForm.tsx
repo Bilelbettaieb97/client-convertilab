@@ -22,6 +22,7 @@ import {
   MapPin,
   Target,
   Calendar,
+  Download,
 } from "lucide-react";
 import AnalysisProgress from "@/components/tools/AnalysisProgress";
 
@@ -52,6 +53,48 @@ const SECTORS = [
   { slug: "demenagement", label: "Demenagement", emoji: "\uD83D\uDE9A" },
   { slug: "traiteur", label: "Traiteur", emoji: "\uD83C\uDF72" },
   { slug: "psychologue", label: "Psychologue", emoji: "\uD83E\uDDE0" },
+  { slug: "menuisier", label: "Menuisier", emoji: "\uD83E\uDE9A" },
+  { slug: "serrurier", label: "Serrurier", emoji: "\uD83D\uDD10" },
+  { slug: "paysagiste", label: "Paysagiste", emoji: "\uD83C\uDF3F" },
+  { slug: "osteopathe", label: "Osteopathe", emoji: "\uD83E\uDDBD" },
+  { slug: "opticien", label: "Opticien", emoji: "\uD83D\uDC53" },
+  { slug: "pharmacie", label: "Pharmacie", emoji: "\uD83D\uDC8A" },
+  { slug: "agence-immobiliere", label: "Agence immobiliere", emoji: "\uD83C\uDFE2" },
+  { slug: "agence-voyage", label: "Agence de voyage", emoji: "\u2708\uFE0F" },
+  { slug: "auto-ecole", label: "Auto-ecole", emoji: "\uD83D\uDE97" },
+  { slug: "creche", label: "Creche", emoji: "\uD83D\uDC76" },
+  { slug: "demenageur", label: "Demenageur", emoji: "\uD83D\uDCE6" },
+  { slug: "notaire", label: "Notaire", emoji: "\uD83D\uDCDC" },
+  { slug: "expert-comptable", label: "Expert-comptable", emoji: "\uD83D\uDCC8" },
+  { slug: "wedding-planner", label: "Wedding Planner", emoji: "\uD83D\uDC8D" },
+  { slug: "decorateur", label: "Decorateur d'interieur", emoji: "\uD83C\uDFA8" },
+  { slug: "graphiste", label: "Graphiste / Designer", emoji: "\uD83D\uDD8C\uFE0F" },
+  { slug: "consultant", label: "Consultant", emoji: "\uD83D\uDCBC" },
+  { slug: "formateur", label: "Formateur", emoji: "\uD83C\uDF93" },
+  { slug: "nutritionniste", label: "Nutritionniste", emoji: "\uD83E\uDD57" },
+  { slug: "kine", label: "Kinesitherapeute", emoji: "\uD83E\uDDD8" },
+  { slug: "podologue", label: "Podologue", emoji: "\uD83E\uDDB6" },
+  { slug: "dermatologue", label: "Dermatologue", emoji: "\uD83E\uDE7A" },
+  { slug: "chirurgien-dentiste", label: "Chirurgien-dentiste", emoji: "\uD83E\uDDB7" },
+  { slug: "orthophoniste", label: "Orthophoniste", emoji: "\uD83D\uDDE3\uFE0F" },
+  { slug: "sage-femme", label: "Sage-femme", emoji: "\uD83D\uDC76" },
+  { slug: "infirmier", label: "Infirmier / IDEL", emoji: "\uD83C\uDFE5" },
+  { slug: "taxi", label: "Taxi / VTC", emoji: "\uD83D\uDE95" },
+  { slug: "pressing", label: "Pressing / Teinturerie", emoji: "\uD83D\uDC54" },
+  { slug: "bijoutier", label: "Bijoutier / Joaillier", emoji: "\uD83D\uDC8E" },
+  { slug: "caviste", label: "Caviste", emoji: "\uD83C\uDF77" },
+  { slug: "fromagerie", label: "Fromagerie", emoji: "\uD83E\uDDC0" },
+  { slug: "chocolatier", label: "Chocolatier", emoji: "\uD83C\uDF6B" },
+  { slug: "primeur", label: "Primeur", emoji: "\uD83C\uDF4E" },
+  { slug: "epicerie", label: "Epicerie fine", emoji: "\uD83D\uDED2" },
+  { slug: "librairie", label: "Librairie", emoji: "\uD83D\uDCDA" },
+  { slug: "spa", label: "Spa / Bien-etre", emoji: "\uD83E\uDDD6" },
+  { slug: "yoga", label: "Yoga", emoji: "\uD83E\uDDD8" },
+  { slug: "pilates", label: "Pilates", emoji: "\uD83E\uDDD8" },
+  { slug: "crossfit", label: "CrossFit", emoji: "\uD83C\uDFCB\uFE0F" },
+  { slug: "salle-de-sport", label: "Salle de sport", emoji: "\uD83D\uDCAA" },
+  { slug: "tatoueur", label: "Tatoueur", emoji: "\uD83C\uDFA8" },
+  { slug: "barbier", label: "Barbier", emoji: "\u2702\uFE0F" },
 ];
 
 const PLATFORMS = [
@@ -112,6 +155,7 @@ export default function AdsEstimatorForm() {
   const [result, setResult] = useState<ProjectionData | null>(null);
   const [emailSent, setEmailSent] = useState(false);
   const [error, setError] = useState("");
+  const [pdfBase64, setPdfBase64] = useState<string | null>(null);
   const [sectorSearch, setSectorSearch] = useState("");
 
   const isValidEmail = (e: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
@@ -173,10 +217,7 @@ export default function AdsEstimatorForm() {
       const data = await res.json();
       setResult(data.projection);
       setEmailSent(data.emailSent);
-
-      await new Promise((r) => setTimeout(r, 800));
-      setIsAnalyzing(false);
-      setStep(5);
+      setPdfBase64(data.pdfBase64 || null);
     } catch (err: unknown) {
       clearInterval(interval);
       setIsAnalyzing(false);
@@ -587,6 +628,7 @@ export default function AdsEstimatorForm() {
               currentStep={analysisStep}
               isComplete={analysisStep >= ANALYSIS_STEPS.length}
               email={email}
+              onViewResults={() => { setIsAnalyzing(false); setStep(5); }}
             />
           </motion.div>
         )}
@@ -691,6 +733,19 @@ export default function AdsEstimatorForm() {
                     <strong className="text-purple-300">{email}</strong>.
                   </p>
                 </div>
+              </div>
+            )}
+
+            {/* Download PDF */}
+            {pdfBase64 && (
+              <div className="mb-6 text-center">
+                <a
+                  href={`data:application/pdf;base64,${pdfBase64}`}
+                  download="rapport-estimateur-ads.pdf"
+                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
+                >
+                  <Download className="w-4 h-4" /> Telecharger le PDF
+                </a>
               </div>
             )}
 

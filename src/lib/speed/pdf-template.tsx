@@ -127,15 +127,15 @@ export function SpeedAuditPdf({ audit }: { audit: SpeedAuditResult }) {
 
         <Sh n="5" t="Glossaire Vitesse" />
         <GlossaryCompact terms={[
-          { t: "TTFB", d: "Time to First Byte — temps avant le 1er octet recu" },
-          { t: "FCP", d: "First Contentful Paint — 1er element visible" },
-          { t: "LCP", d: "Largest Contentful Paint — plus gros element visible" },
-          { t: "CLS", d: "Cumulative Layout Shift — stabilite visuelle" },
-          { t: "WebP", d: "Format image 25-35% plus leger que JPEG/PNG" },
-          { t: "Lazy Loading", d: "Chargement differe des images hors ecran" },
-          { t: "CDN", d: "Content Delivery Network — serveurs proches des visiteurs" },
+          { t: "TTFB", d: "Time to First Byte — temps avant le 1er octet recu", slug: "ttfb" },
+          { t: "FCP", d: "First Contentful Paint — 1er element visible", slug: "fcp" },
+          { t: "LCP", d: "Largest Contentful Paint — plus gros element visible", slug: "lcp" },
+          { t: "CLS", d: "Cumulative Layout Shift — stabilite visuelle", slug: "cls" },
+          { t: "WebP", d: "Format image 25-35% plus leger que JPEG/PNG", slug: "webp" },
+          { t: "Lazy Loading", d: "Chargement differe des images hors ecran", slug: "lazy-loading" },
+          { t: "CDN", d: "Content Delivery Network — serveurs proches des visiteurs", slug: "cdn" },
           { t: "Minification", d: "Suppression du code inutile (espaces, commentaires)" },
-          { t: "Gzip/Brotli", d: "Compression des fichiers envoyes au navigateur" },
+          { t: "Gzip/Brotli", d: "Compression des fichiers envoyes au navigateur", slug: "gzip" },
           { t: "Preconnect", d: "Connexion anticipee aux serveurs tiers" },
           { t: "Critical CSS", d: "CSS inline pour le contenu visible immediatement" },
           { t: "Render Blocking", d: "Ressources qui bloquent l'affichage de la page" },

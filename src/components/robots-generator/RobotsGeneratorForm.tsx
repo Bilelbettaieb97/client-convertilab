@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import {
   Globe, ArrowRight, ArrowLeft, User, Mail,
   Shield, Zap, CheckCircle2, Search, FileText,
-  Bot, Loader2,
+  Bot, Loader2, Download,
 } from "lucide-react";
 import AnalysisProgress from "@/components/tools/AnalysisProgress";
 
@@ -44,6 +44,7 @@ export default function RobotsGeneratorForm() {
   const [result, setResult] = useState<RobotsApiResult | null>(null);
   const [emailSent, setEmailSent] = useState(false);
   const [error, setError] = useState("");
+  const [pdfBase64, setPdfBase64] = useState<string | null>(null);
 
   const isValidUrl = (u: string) => {
     const pattern = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/.*)?$/;
@@ -85,10 +86,7 @@ export default function RobotsGeneratorForm() {
       const data = await res.json();
       setResult(data.result);
       setEmailSent(data.emailSent);
-
-      await new Promise(r => setTimeout(r, 800));
-      setIsAnalyzing(false);
-      setStep(4);
+      setPdfBase64(data.pdfBase64 || null);
     } catch (err: unknown) {
       clearInterval(interval);
       setIsAnalyzing(false);
@@ -245,6 +243,9 @@ export default function RobotsGeneratorForm() {
               isComplete={analysisStep >= ANALYSIS_STEPS.length}
               url={url}
               email={email}
+              onViewResults={() => { setIsAnalyzing(false); setStep(4); }}
+              completeTitle="Generation terminee !"
+              completeMessage={`Vous allez recevoir vos fichiers robots.txt et sitemap.xml sur votre boite mail ${email}.`}
             />
           </motion.div>
         )}
@@ -282,6 +283,19 @@ export default function RobotsGeneratorForm() {
                 {emailSent ? `Fichiers envoyes a ${email}` : "Les fichiers seront disponibles prochainement par email."}
               </p>
             </motion.div>
+
+            {/* Download PDF */}
+            {pdfBase64 && (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="mb-6 text-center">
+                <a
+                  href={`data:application/pdf;base64,${pdfBase64}`}
+                  download={`rapport-robots-${result.domain}.pdf`}
+                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
+                >
+                  <Download className="w-4 h-4" /> Telecharger le PDF
+                </a>
+              </motion.div>
+            )}
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 mb-6">

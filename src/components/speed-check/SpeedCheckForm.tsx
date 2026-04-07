@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import {
   Globe, ArrowRight, ArrowLeft, User, Mail, Phone, Building2,
   Search, Loader2, CheckCircle2, AlertTriangle, TrendingUp,
-  Shield, Zap, FileText,
+  Shield, Zap, FileText, Download,
 } from "lucide-react";
 
 interface SpeedResult {
@@ -54,6 +54,7 @@ export default function SpeedCheckForm() {
   const [result, setResult] = useState<SpeedResult | null>(null);
   const [emailSent, setEmailSent] = useState(false);
   const [error, setError] = useState("");
+  const [pdfBase64, setPdfBase64] = useState<string | null>(null);
 
   const isValidUrl = (u: string) => {
     const pattern = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/.*)?$/;
@@ -95,10 +96,7 @@ export default function SpeedCheckForm() {
       const data = await res.json();
       setResult(data.audit);
       setEmailSent(data.emailSent);
-
-      await new Promise(r => setTimeout(r, 800));
-      setIsAnalyzing(false);
-      setStep(4);
+      setPdfBase64(data.pdfBase64 || null);
     } catch (err: unknown) {
       clearInterval(interval);
       setIsAnalyzing(false);
@@ -329,7 +327,7 @@ export default function SpeedCheckForm() {
                   <strong className="text-purple-400">{email}</strong>.
                 </p>
 
-                <div className="bg-white/5 border border-white/10 rounded-xl p-4 max-w-md mx-auto text-left">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-4 max-w-md mx-auto text-left mb-6">
                   <div className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
                     <div>
@@ -341,6 +339,10 @@ export default function SpeedCheckForm() {
                     </div>
                   </div>
                 </div>
+
+                <Button onClick={() => { setIsAnalyzing(false); setStep(4); }} className="bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl px-8 py-3">
+                  Voir les resultats <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
 
                 <div className="mt-6 max-w-md mx-auto">
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
@@ -387,6 +389,19 @@ export default function SpeedCheckForm() {
                 {emailSent ? `Rapport PDF envoye a ${email}` : "Le rapport PDF sera disponible prochainement par email."}
               </p>
             </motion.div>
+
+            {/* Download PDF */}
+            {pdfBase64 && (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="mb-6 text-center">
+                <a
+                  href={`data:application/pdf;base64,${pdfBase64}`}
+                  download={`rapport-vitesse-${result.domain}.pdf`}
+                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
+                >
+                  <Download className="w-4 h-4" /> Telecharger le PDF
+                </a>
+              </motion.div>
+            )}
 
             {/* Score grid */}
             <div className="grid grid-cols-2 gap-3 mb-6">

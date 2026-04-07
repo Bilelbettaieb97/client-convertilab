@@ -8,7 +8,7 @@ import {
   ArrowRight, ArrowLeft, User, Mail, Building2,
   MapPin, FileText, Globe, Cookie, Shield,
   CheckCircle2, Loader2, Zap, Server, Phone,
-  Hash, UserCircle, Search,
+  Hash, UserCircle, Search, Download,
 } from "lucide-react";
 import AnalysisProgress from "@/components/tools/AnalysisProgress";
 
@@ -80,6 +80,7 @@ export default function MentionsLegalesForm() {
   const [result, setResult] = useState<MentionsLegalesApiResult | null>(null);
   const [emailSent, setEmailSent] = useState(false);
   const [error, setError] = useState("");
+  const [pdfBase64, setPdfBase64] = useState<string | null>(null);
 
   const isValidEmail = (e: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
 
@@ -135,10 +136,7 @@ export default function MentionsLegalesForm() {
       const data = await res.json();
       setResult(data.result);
       setEmailSent(data.emailSent);
-
-      await new Promise(r => setTimeout(r, 800));
-      setIsAnalyzing(false);
-      setStep(7);
+      setPdfBase64(data.pdfBase64 || null);
     } catch (err: unknown) {
       clearInterval(interval);
       setIsAnalyzing(false);
@@ -481,6 +479,7 @@ export default function MentionsLegalesForm() {
               currentStep={analysisStep}
               isComplete={analysisStep >= ANALYSIS_STEPS.length}
               email={email}
+              onViewResults={() => { setIsAnalyzing(false); setStep(7); }}
             />
           </motion.div>
         )}
@@ -517,6 +516,19 @@ export default function MentionsLegalesForm() {
                 {emailSent ? `Document PDF envoye a ${email}` : "Le document sera disponible prochainement par email."}
               </p>
             </motion.div>
+
+            {/* Download PDF */}
+            {pdfBase64 && (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="mb-6 text-center">
+                <a
+                  href={`data:application/pdf;base64,${pdfBase64}`}
+                  download={`mentions-legales-${result.companyName}.pdf`}
+                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
+                >
+                  <Download className="w-4 h-4" /> Telecharger le PDF
+                </a>
+              </motion.div>
+            )}
 
             {/* Preview sections */}
             <div className="space-y-4 mb-6">

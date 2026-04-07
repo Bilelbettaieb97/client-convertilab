@@ -133,6 +133,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       emailSent,
+      pdfBase64: pdfBuffer && pdfBuffer.length > 0 ? pdfBuffer.toString("base64") : null,
       audit: {
         domain: audit.domain,
         scores: audit.scores,

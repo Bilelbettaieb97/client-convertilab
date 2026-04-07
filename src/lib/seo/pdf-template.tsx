@@ -351,21 +351,21 @@ export function SeoAuditPdf({ audit }: { audit: SeoAuditResult }) {
         <Sh n="5" t="Glossaire SEO" />
         <View style={{ flexDirection: "row", flexWrap: "wrap", marginBottom: 8 }}>
           {[
-            { t: "SEO", d: "Optimiser pour apparaitre en haut de Google" },
-            { t: "GEO", d: "Optimiser pour etre cite par les IA" },
-            { t: "E-E-A-T", d: "Experience, Expertise, Autorite, Trust" },
-            { t: "JSON-LD", d: "Code invisible pour Google (FAQ, avis)" },
-            { t: "Meta desc.", d: "Texte sous le titre dans Google" },
-            { t: "Canonical", d: "Indique la page originale a Google" },
-            { t: "Sitemap", d: "Plan du site pour l'indexation" },
-            { t: "robots.txt", d: "Directives pour les robots" },
-            { t: "Alt text", d: "Texte decrivant une image" },
-            { t: "Web Vitals", d: "Metriques Google de vitesse" },
-            { t: "Backlink", d: "Lien externe = vote de confiance" },
-            { t: "Rich Snippet", d: "Resultat Google enrichi" },
+            { t: "SEO", d: "Optimiser pour apparaitre en haut de Google", slug: "seo" },
+            { t: "GEO", d: "Optimiser pour etre cite par les IA", slug: "geo" },
+            { t: "E-E-A-T", d: "Experience, Expertise, Autorite, Trust", slug: "e-e-a-t" },
+            { t: "JSON-LD", d: "Code invisible pour Google (FAQ, avis)", slug: "json-ld" },
+            { t: "Meta desc.", d: "Texte sous le titre dans Google", slug: "meta-description" },
+            { t: "Canonical", d: "Indique la page originale a Google", slug: "canonical" },
+            { t: "Sitemap", d: "Plan du site pour l'indexation", slug: "sitemap" },
+            { t: "robots.txt", d: "Directives pour les robots", slug: "robots-txt" },
+            { t: "Alt text", d: "Texte decrivant une image", slug: "alt-text" },
+            { t: "Web Vitals", d: "Metriques Google de vitesse", slug: "core-web-vitals" },
+            { t: "Backlink", d: "Lien externe = vote de confiance", slug: "backlink" },
+            { t: "Rich Snippet", d: "Resultat Google enrichi", slug: "rich-snippet" },
           ].map((g, i) => (
             <View key={i} style={{ width: "33%", paddingVertical: 2, paddingRight: 6 }}>
-              <Text style={{ fontSize: 7, fontWeight: "bold", color: c.accent2 }}>{g.t}</Text>
+              <Link src={`https://convertilab.com/glossaire/${g.slug}`} style={{ fontSize: 7, fontWeight: "bold", color: c.accent2, textDecoration: "none" }}>{g.t}</Link>
               <Text style={{ fontSize: 6, color: c.text2 }}>{g.d}</Text>
             </View>
           ))}

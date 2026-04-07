@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Loader2, Search, Mail } from "lucide-react";
+import { CheckCircle2, Loader2, Search, Mail, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface AnalysisProgressProps {
   steps: string[];
@@ -9,9 +10,12 @@ interface AnalysisProgressProps {
   isComplete: boolean;
   url?: string;
   email?: string;
+  onViewResults?: () => void;
+  completeTitle?: string;
+  completeMessage?: string;
 }
 
-export default function AnalysisProgress({ steps, currentStep, isComplete, url, email }: AnalysisProgressProps) {
+export default function AnalysisProgress({ steps, currentStep, isComplete, url, email, onViewResults, completeTitle, completeMessage }: AnalysisProgressProps) {
   if (isComplete) {
     return (
       <div className="text-center py-8">
@@ -23,13 +27,15 @@ export default function AnalysisProgress({ steps, currentStep, isComplete, url, 
           <CheckCircle2 className="w-20 h-20 text-green-400 mx-auto mb-6" />
         </motion.div>
 
-        <h2 className="text-xl font-bold text-white mb-2">Analyse terminee !</h2>
+        <h2 className="text-xl font-bold text-white mb-2">{completeTitle || "Analyse terminee !"}</h2>
         <p className="text-white/50 text-sm mb-6">
-          Vous allez recevoir un <strong className="text-white">rapport PDF complet</strong> sur votre boite mail{" "}
-          {email && <strong className="text-purple-400">{email}</strong>}.
+          {completeMessage || (
+            <>Vous allez recevoir un <strong className="text-white">rapport PDF complet</strong> sur votre boite mail{" "}
+            {email && <strong className="text-purple-400">{email}</strong>}.</>
+          )}
         </p>
 
-        <div className="bg-white/5 border border-white/10 rounded-xl p-4 max-w-md mx-auto text-left">
+        <div className="bg-white/5 border border-white/10 rounded-xl p-4 max-w-md mx-auto text-left mb-6">
           <div className="flex items-start gap-3">
             <Mail className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
             <div>
@@ -41,6 +47,12 @@ export default function AnalysisProgress({ steps, currentStep, isComplete, url, 
             </div>
           </div>
         </div>
+
+        {onViewResults && (
+          <Button onClick={onViewResults} className="bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl px-8 py-3">
+            Voir les resultats <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
+        )}
 
         <div className="mt-6 max-w-md mx-auto">
           <div className="h-2 bg-white/10 rounded-full overflow-hidden">
