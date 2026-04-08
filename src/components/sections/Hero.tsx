@@ -96,14 +96,18 @@ const Hero = () => {
 
             {/* Main Heading - Benefit-focused */}
             <h1 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight animate-slide-up min-h-[4.5rem] sm:min-h-[6rem] lg:min-h-[7.5rem] xl:min-h-[9rem]">
+              <span className="block">
+                Votre agence web crée
+              </span>
               <span className="block whitespace-nowrap">
-                Votre agence web crée votre{" "}
+                votre{" "}
                 <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 will-change-transform min-w-[100px] sm:min-w-[160px]">
                   {displayedText}<span className="animate-pulse text-purple-600">|</span>
                 </span>
-              </span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                en 7 Jours
+                {" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  en 7 Jours
+                </span>
               </span>
             </h1>
 
