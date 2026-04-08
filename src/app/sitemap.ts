@@ -3,6 +3,7 @@ import { SITE } from "@/lib/constants";
 import { cities } from "@/data/cities";
 import { sectors } from "@/data/sectors";
 import { glossaryTerms } from "@/data/glossary";
+import { blogArticles } from "@/data/blog-articles";
 
 const staticRoutes = [
   "",
@@ -59,8 +60,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: route === "" ? 1.0 : route.startsWith("/services") ? 0.8 : 0.7,
   }));
 
-  // Blog articles from Supabase
-  let blogEntries: MetadataRoute.Sitemap = [];
+  // Blog articles — static + Supabase (merged, no duplicates)
+  const staticBlogEntries: MetadataRoute.Sitemap = blogArticles.map((a) => ({
+    url: `${SITE.url}/blog/${a.slug}`,
+    lastModified: siteLastModified,
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+  const staticBlogSlugs = new Set(blogArticles.map((a) => a.slug));
+
+  let supabaseBlogEntries: MetadataRoute.Sitemap = [];
   try {
     const { createClient } = await import("@supabase/supabase-js");
     const supabase = createClient(
@@ -72,7 +81,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .select("slug, updated_at")
       .eq("published", true);
     if (articles) {
-      blogEntries = articles.map((a) => ({
+      supabaseBlogEntries = articles
+        .filter((a) => !staticBlogSlugs.has(a.slug))
+        .map((a) => ({
         url: `${SITE.url}/blog/${a.slug}`,
         lastModified: new Date(a.updated_at),
         changeFrequency: "weekly" as const,
@@ -120,6 +131,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     }));
+
+  const blogEntries = [...staticBlogEntries, ...supabaseBlogEntries];
 
   return [...staticEntries, ...blogEntries, ...cityEntries, ...sectorEntries, ...glossaryEntries, ...creationSiteEntries];
 }
