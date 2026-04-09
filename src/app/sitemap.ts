@@ -36,6 +36,7 @@ const staticRoutes = [
   "/demande-maquette",
   "/estimation-prix-site-web",
   "/politique-de-confidentialite",
+  "/politique-de-cookies",
   "/agence-web",
   "/solutions",
   "/seo-check",

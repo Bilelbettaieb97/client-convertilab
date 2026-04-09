@@ -7,6 +7,8 @@ import { Toaster } from "@/components/ui/sonner";
 import { ChatWidget } from "@/components/chatbot";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import CookieBanner from "@/components/cookies/CookieBanner";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -73,6 +75,39 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* Google Consent Mode v2 — initialise par défaut tout en "denied" (RGPD) */}
+        <Script id="google-consent-mode" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'analytics_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'functionality_storage': 'denied',
+              'personalization_storage': 'denied',
+              'security_storage': 'granted',
+              'wait_for_update': 500
+            });
+            // Restaurer le consentement précédent depuis localStorage
+            try {
+              var stored = localStorage.getItem('convertilab_consent');
+              if (stored) {
+                var c = JSON.parse(stored);
+                gtag('consent', 'update', {
+                  'analytics_storage': c.analytics ? 'granted' : 'denied',
+                  'ad_storage': c.marketing ? 'granted' : 'denied',
+                  'ad_user_data': c.marketing ? 'granted' : 'denied',
+                  'ad_personalization': c.marketing ? 'granted' : 'denied',
+                  'functionality_storage': c.preferences ? 'granted' : 'denied',
+                  'personalization_storage': c.preferences ? 'granted' : 'denied'
+                });
+              }
+            } catch (e) {}
+          `}
+        </Script>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg focus:text-purple-600 focus:font-semibold">
           Aller au contenu principal
         </a>
@@ -88,6 +123,7 @@ export default function RootLayout({
         <GoogleTagManager />
         <MetaPixel />
         <ChatWidget />
+        <CookieBanner />
       </body>
     </html>
   );
