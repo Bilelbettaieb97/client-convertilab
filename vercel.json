@@ -1,4 +1,18 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "convertilab.com" }],
+      "destination": "https://www.convertilab.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "convertilab.fr" }],
+      "destination": "https://www.convertilab.fr/:path*",
+      "permanent": true
+    }
+  ],
   "functions": {
     "src/app/api/seo-check/route.ts": {
       "memory": 1024,
