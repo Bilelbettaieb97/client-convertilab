@@ -75,9 +75,9 @@ function getInputConfig(step: ChatStep): {
 } | null {
   if (step === 2 || step === "2b")
     return {
-      placeholder: "https://monsite.com",
+      placeholder: "exemple.com ou https://exemple.com",
       icon: Globe,
-      type: "url",
+      type: "text",
     };
   if (step === 5)
     return {
