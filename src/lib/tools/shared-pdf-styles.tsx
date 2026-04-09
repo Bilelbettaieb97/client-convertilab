@@ -144,7 +144,7 @@ export function CtaSection() {
       <Text style={{ fontSize: 8, color: c.text2, marginBottom: 10, textAlign: "center" }}>
         L&apos;equipe ConvertiLab peut prendre en charge toutes les corrections et optimisations.
       </Text>
-      <Link src="https://convertilab.com/contact" style={{ backgroundColor: c.accent, color: c.white, paddingVertical: 7, paddingHorizontal: 20, borderRadius: 7, fontSize: 9, fontWeight: "bold", textDecoration: "none" }}>
+      <Link src="https://www.convertilab.com/contact" style={{ backgroundColor: c.accent, color: c.white, paddingVertical: 7, paddingHorizontal: 20, borderRadius: 7, fontSize: 9, fontWeight: "bold", textDecoration: "none" }}>
         Prendre rendez-vous gratuit
       </Link>
       <View style={{ height: 6 }} />
@@ -197,7 +197,7 @@ export function GlossaryCompact({ terms }: { terms: { t: string; d: string; slug
       {terms.map((g, i) => (
         <View key={i} style={{ width: "33%", paddingVertical: 2, paddingRight: 6 }}>
           {g.slug ? (
-            <Link src={`https://convertilab.com/glossaire/${g.slug}`} style={{ fontSize: 7, fontWeight: "bold", color: c.accent2, textDecoration: "none" }}>{g.t}</Link>
+            <Link src={`https://www.convertilab.com/glossaire/${g.slug}`} style={{ fontSize: 7, fontWeight: "bold", color: c.accent2, textDecoration: "none" }}>{g.t}</Link>
           ) : (
             <Text style={{ fontSize: 7, fontWeight: "bold", color: c.accent2 }}>{g.t}</Text>
           )}

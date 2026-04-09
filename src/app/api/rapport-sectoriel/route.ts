@@ -57,7 +57,7 @@ export const POST = createToolHandler<SectorReportInput, SectorReportResult>({
       highlights: report.painPoints.slice(0, 3),
       isPdf,
       ctaText: "Lancer mon projet digital",
-      ctaUrl: "https://convertilab.com/contact",
+      ctaUrl: "https://www.convertilab.com/contact",
     });
   },
 

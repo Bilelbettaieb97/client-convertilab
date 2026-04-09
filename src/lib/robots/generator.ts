@@ -35,7 +35,7 @@ export async function generateRobotsSitemap(rawUrl: string): Promise<RobotsResul
   try {
     const response = await fetch(url, {
       headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; ConvertiLabBot/1.0; +https://convertilab.com)",
+        "User-Agent": "Mozilla/5.0 (compatible; ConvertiLabBot/1.0; +https://www.convertilab.com)",
         "Accept": "text/html,application/xhtml+xml",
       },
       signal: AbortSignal.timeout(15000),

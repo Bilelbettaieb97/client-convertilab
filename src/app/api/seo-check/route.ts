@@ -197,9 +197,9 @@ function getEmailHtml(name: string, domain: string, score: number, grade: string
 <div style="background:#1a1040;border-radius:16px;padding:30px;margin-top:16px;text-align:center;color:#fff;">
   <h2 style="font-size:20px;margin:0 0 8px;">Besoin d'aide pour corriger tout ca ?</h2>
   <p style="color:#8888aa;font-size:13px;margin:0 0 20px;">Notre equipe peut prendre en charge toutes les corrections et optimisations.</p>
-  <a href="https://convertilab.com/contact" style="display:inline-block;background:#6c5ce7;color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">Prendre rendez-vous gratuit</a>
+  <a href="https://www.convertilab.com/contact" style="display:inline-block;background:#6c5ce7;color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">Prendre rendez-vous gratuit</a>
   <p style="color:#5a5a7a;font-size:11px;margin-top:16px;">
-    <a href="https://convertilab.com" style="color:#a29bfe;text-decoration:none;">convertilab.com</a> &bull;
+    <a href="https://www.convertilab.com" style="color:#a29bfe;text-decoration:none;">convertilab.com</a> &bull;
     <a href="tel:+33616477245" style="color:#a29bfe;text-decoration:none;">06 16 47 72 45</a> &bull;
     <a href="mailto:contact@convertilab.com" style="color:#a29bfe;text-decoration:none;">contact@convertilab.com</a>
   </p>

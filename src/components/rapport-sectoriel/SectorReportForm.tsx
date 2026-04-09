@@ -423,7 +423,7 @@ export default function SectorReportForm() {
                 Notre equipe peut creer votre site et mettre en place toute la strategie digitale pour votre secteur.
               </p>
               <a
-                href="https://convertilab.com/contact"
+                href="https://www.convertilab.com/contact"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-colors"
               >
                 Consultation gratuite <ArrowRight className="w-4 h-4" />

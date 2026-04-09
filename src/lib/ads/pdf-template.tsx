@@ -301,7 +301,7 @@ function PageAction({ data }: { data: AdsProjectionResult }) {
         <Text style={{ fontSize: 8, color: c.text2, marginBottom: 10, textAlign: "center" }}>
           Confiez vos campagnes Google Ads et Meta Ads a notre equipe. 1ere consultation gratuite.
         </Text>
-        <Link src="https://convertilab.com/contact" style={{ backgroundColor: c.accent, color: c.white, paddingVertical: 7, paddingHorizontal: 20, borderRadius: 7, fontSize: 9, fontWeight: "bold", textDecoration: "none" }}>
+        <Link src="https://www.convertilab.com/contact" style={{ backgroundColor: c.accent, color: c.white, paddingVertical: 7, paddingHorizontal: 20, borderRadius: 7, fontSize: 9, fontWeight: "bold", textDecoration: "none" }}>
           Prendre rendez-vous gratuit
         </Link>
         <View style={{ height: 6 }} />

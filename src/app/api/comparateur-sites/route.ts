@@ -64,7 +64,7 @@ export const POST = createToolHandler<ComparisonInput, ComparisonResult>({
       ],
       isPdf,
       ctaText: "Depasser votre concurrent",
-      ctaUrl: "https://convertilab.com/contact",
+      ctaUrl: "https://www.convertilab.com/contact",
     });
   },
 

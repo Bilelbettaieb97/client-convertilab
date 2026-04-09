@@ -1,6 +1,6 @@
 export const SITE = {
   name: "ConvertiLab",
-  url: "https://convertilab.com",
+  url: "https://www.convertilab.com",
   email: "contact@convertilab.com",
   phone: "+33616477245",
   phoneDisplay: "06 16 47 72 45",

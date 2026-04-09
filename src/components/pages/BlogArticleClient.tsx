@@ -126,7 +126,7 @@ function renderInline(text: string): React.ReactNode {
 export default function BlogArticleClient({ article, relatedArticles }: Props) {
   const router = useRouter();
 
-  const shareUrl = `https://convertilab.com/blog/${article.slug}`;
+  const shareUrl = `https://www.convertilab.com/blog/${article.slug}`;
   const shareText = encodeURIComponent(article.title);
 
   return (

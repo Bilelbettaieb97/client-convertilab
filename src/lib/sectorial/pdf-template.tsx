@@ -238,7 +238,7 @@ export function SectorReportPdf({ report }: { report: SectorReportResult }) {
           <Text style={{ fontSize: 8, color: c.text2, marginBottom: 10, textAlign: "center" }}>
             Consultation gratuite de 30 minutes pour definir votre strategie {report.sector.name.toLowerCase()}.
           </Text>
-          <Link src="https://convertilab.com/contact" style={{ backgroundColor: c.accent, color: c.white, paddingVertical: 7, paddingHorizontal: 20, borderRadius: 7, fontSize: 9, fontWeight: "bold", textDecoration: "none" }}>
+          <Link src="https://www.convertilab.com/contact" style={{ backgroundColor: c.accent, color: c.white, paddingVertical: 7, paddingHorizontal: 20, borderRadius: 7, fontSize: 9, fontWeight: "bold", textDecoration: "none" }}>
             Prendre rendez-vous gratuit
           </Link>
           <View style={{ height: 6 }} />

@@ -209,7 +209,7 @@ export function MentionsLegalesPdf({ result }: { result: MentionsLegalesResult }
           <Text style={s.ctaDesc}>
             L&apos;equipe ConvertiLab peut vous accompagner sur le RGPD, les CGV et la conformite legale de votre site.
           </Text>
-          <Link src="https://convertilab.com/contact" style={s.ctaButton}>
+          <Link src="https://www.convertilab.com/contact" style={s.ctaButton}>
             Prendre rendez-vous gratuit
           </Link>
           <View style={{ height: 6 }} />

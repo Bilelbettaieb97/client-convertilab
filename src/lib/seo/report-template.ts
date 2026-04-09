@@ -168,7 +168,7 @@ tr:last-child td{border-bottom:none}
 <div class="date">${date} — 8 categories &bull; 60+ points de controle</div>
 <div class="agency">
 Audit realise par <strong>ConvertiLab</strong> — Agence Web Paris & Ile-de-France<br>
-<a href="https://convertilab.com">convertilab.com</a> &bull; contact@convertilab.com &bull; +33 6 16 47 72 45
+<a href="https://www.convertilab.com">convertilab.com</a> &bull; contact@convertilab.com &bull; +33 6 16 47 72 45
 </div>
 </div>
 
@@ -415,13 +415,13 @@ ${issues.filter(i => i.priority === "recommended").slice(0, 3).map(i => `<li>${i
 <h2>Besoin d'aide pour corriger tout ca ?</h2>
 <p>L'equipe ConvertiLab peut prendre en charge l'ensemble des corrections et optimisations identifiees dans cet audit.</p>
 <div class="cta-btns">
-<a href="https://convertilab.com/contact" class="btn btn-pri">Prendre rendez-vous gratuit</a>
-<a href="https://convertilab.com/services/seo" class="btn btn-sec">Nos services SEO</a>
+<a href="https://www.convertilab.com/contact" class="btn btn-pri">Prendre rendez-vous gratuit</a>
+<a href="https://www.convertilab.com/services/seo" class="btn btn-sec">Nos services SEO</a>
 </div>
 <div class="cta-info">
 <a href="tel:+33616477245">+33 6 16 47 72 45</a> &bull;
 <a href="mailto:contact@convertilab.com">contact@convertilab.com</a> &bull;
-<a href="https://convertilab.com">convertilab.com</a>
+<a href="https://www.convertilab.com">convertilab.com</a>
 </div>
 </div>
 
@@ -429,7 +429,7 @@ ${issues.filter(i => i.priority === "recommended").slice(0, 3).map(i => `<li>${i
 <div class="footer">
 <p><strong>Audit SEO realise par ConvertiLab</strong><br>
 Agence Web Paris & Ile-de-France<br>
-<a href="https://convertilab.com">convertilab.com</a> &bull;
+<a href="https://www.convertilab.com">convertilab.com</a> &bull;
 <a href="mailto:contact@convertilab.com">contact@convertilab.com</a></p>
 <p style="margin-top:10px">Document genere le ${date} &bull; Ce rapport est confidentiel.</p>
 </div>

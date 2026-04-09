@@ -286,7 +286,7 @@ export function ComparisonPdf({ result }: { result: ComparisonResult }) {
           <Text style={{ fontSize: 8, color: c.text2, marginBottom: 10, textAlign: "center" }}>
             L&apos;equipe ConvertiLab peut prendre en charge toutes les optimisations identifiees.
           </Text>
-          <Link src="https://convertilab.com/contact" style={{ backgroundColor: c.accent, color: c.white, paddingVertical: 7, paddingHorizontal: 20, borderRadius: 7, fontSize: 9, fontWeight: "bold", textDecoration: "none" }}>
+          <Link src="https://www.convertilab.com/contact" style={{ backgroundColor: c.accent, color: c.white, paddingVertical: 7, paddingHorizontal: 20, borderRadius: 7, fontSize: 9, fontWeight: "bold", textDecoration: "none" }}>
             Prendre rendez-vous gratuit
           </Link>
           <View style={{ height: 6 }} />

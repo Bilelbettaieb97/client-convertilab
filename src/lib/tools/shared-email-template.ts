@@ -20,7 +20,7 @@ export function buildToolEmailHtml(params: EmailParams): string {
     toolLabel, lead, domain, score, grade, gradeLabel,
     highlights = [], warnings = [], isPdf,
     ctaText = "Prendre rendez-vous gratuit",
-    ctaUrl = "https://convertilab.com/contact",
+    ctaUrl = "https://www.convertilab.com/contact",
   } = params;
 
   const sc = score !== undefined ? scoreColor(score) : "#6c5ce7";
@@ -67,7 +67,7 @@ export function buildToolEmailHtml(params: EmailParams): string {
   <p style="color:#8888aa;font-size:13px;margin:0 0 20px;">Notre equipe peut vous accompagner sur tous ces sujets.</p>
   <a href="${ctaUrl}" style="display:inline-block;background:#6c5ce7;color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">${ctaText}</a>
   <p style="color:#5a5a7a;font-size:11px;margin-top:16px;">
-    <a href="https://convertilab.com" style="color:#a29bfe;text-decoration:none;">convertilab.com</a> &bull;
+    <a href="https://www.convertilab.com" style="color:#a29bfe;text-decoration:none;">convertilab.com</a> &bull;
     <a href="tel:+33616477245" style="color:#a29bfe;text-decoration:none;">06 16 47 72 45</a> &bull;
     <a href="mailto:contact@convertilab.com" style="color:#a29bfe;text-decoration:none;">contact@convertilab.com</a>
   </p>

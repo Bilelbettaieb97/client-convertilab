@@ -778,7 +778,7 @@ export default function AdsEstimatorForm() {
                 Premiere consultation gratuite.
               </p>
               <a
-                href="https://convertilab.com/contact"
+                href="https://www.convertilab.com/contact"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
               >
                 Prendre rendez-vous gratuit <ArrowRight className="w-4 h-4" />
