@@ -131,11 +131,11 @@ export default function ChatWidget() {
         setSelectedTool(tool.id);
         setStep(2);
 
-        if (tool.id === "compare") {
-          pushDelayed([botMsg("Entrez l\u2019URL de votre site web :")]);
-        } else {
-          pushDelayed([botMsg(`${tool.emoji} ${tool.desc}\n\nEntrez l\u2019URL de votre site web :`)]);
-        }
+        // Clear chat and start a fresh focused conversation for this tool
+        const introMsg = tool.id === "compare"
+          ? botMsg(`${tool.emoji} ${tool.label}\n\n${tool.desc}\n\nEntrez l\u2019URL de votre site web :`)
+          : botMsg(`${tool.emoji} ${tool.label}\n\n${tool.desc}\n\nEntrez l\u2019URL de votre site web :`);
+        setMessages([introMsg]);
       }
       return;
     }
@@ -146,11 +146,11 @@ export default function ChatWidget() {
         setStep(5);
         pushDelayed([botMsg("Parfait ! Quel est votre pr\u00E9nom ?")]);
       } else if (label.includes("autre outil")) {
-        // Reset for new tool
+        // Reset for new tool — clear chat
         setStep(1);
         setAuditData(null);
         setSelectedTool(null);
-        pushDelayed([
+        setMessages([
           botMsg("Quel outil souhaitez-vous utiliser ?", {
             type: "buttons",
             buttons: [
@@ -181,7 +181,7 @@ export default function ChatWidget() {
         setStep(1);
         setAuditData(null);
         setSelectedTool(null);
-        pushDelayed([
+        setMessages([
           botMsg("Quel outil souhaitez-vous utiliser ?", {
             type: "buttons",
             buttons: [
