@@ -259,30 +259,78 @@ export default function ChatWidget() {
         })
         .then(() => {}, (err: unknown) => console.error("Supabase error:", err));
 
-      // Fire-and-forget: send full PDF report via the tool's report API
+      // Show loading message while we wait for the PDF
+      const loadingMsg = botMsg("G\u00E9n\u00E9ration du rapport PDF...", { type: "loading" });
+      push(loadingMsg);
+
+      // Call the tool's report API and WAIT for the response (to get the PDF base64)
       if (tool?.reportApi) {
         const body: Record<string, string> = { url, name, email };
         if (selectedTool === "compare" && userInputs.urlB) {
           body.urlA = url;
           body.urlB = userInputs.urlB;
         }
-        fetch(tool.reportApi, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(body),
-        }).catch(() => {});
-      }
 
-      setStep(7);
-      pushDelayed([
-        botMsg(`Merci ${name} ! Le rapport complet a \u00E9t\u00E9 envoy\u00E9 \u00E0 ${email}.`),
-      ]);
-      pushDelayed([
-        botMsg("Que souhaitez-vous faire ensuite ?", {
-          type: "buttons",
-          buttons: ["Prendre rendez-vous (gratuit)", "Essayer un autre outil", "Non merci, \u00E7a ira"],
-        }),
-      ], 1200);
+        try {
+          const reportRes = await fetch(tool.reportApi, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+          });
+
+          // Remove loading
+          setMessages((prev) => prev.filter((m) => m.id !== loadingMsg.id));
+
+          const reportData = await reportRes.json().catch(() => ({}));
+          const pdfBase64 = reportData?.pdfBase64 as string | undefined;
+          const domain = auditData?.domain || url.replace(/https?:\/\//, "").split("/")[0];
+          const date = new Date().toISOString().split("T")[0];
+
+          setStep(7);
+
+          push(
+            botMsg(`Merci ${name} ! Le rapport complet a \u00E9t\u00E9 envoy\u00E9 \u00E0 ${email}.`)
+          );
+
+          // If we got a PDF, offer download
+          if (pdfBase64) {
+            pushDelayed([
+              botMsg("Vous pouvez aussi le t\u00E9l\u00E9charger directement :", {
+                type: "download",
+                download: {
+                  filename: `rapport-${tool.id}-${domain}-${date}.pdf`,
+                  base64: pdfBase64,
+                },
+              }),
+            ], 600);
+          }
+
+          pushDelayed([
+            botMsg("Que souhaitez-vous faire ensuite ?", {
+              type: "buttons",
+              buttons: ["Prendre rendez-vous (gratuit)", "Essayer un autre outil", "Non merci, \u00E7a ira"],
+            }),
+          ], 1200);
+        } catch {
+          setMessages((prev) => prev.filter((m) => m.id !== loadingMsg.id));
+          setStep(7);
+          push(
+            botMsg(`Merci ${name} ! Le rapport sera envoy\u00E9 \u00E0 ${email} d\u2019ici quelques instants.`)
+          );
+          pushDelayed([
+            botMsg("Que souhaitez-vous faire ensuite ?", {
+              type: "buttons",
+              buttons: ["Prendre rendez-vous (gratuit)", "Essayer un autre outil", "Non merci, \u00E7a ira"],
+            }),
+          ], 1200);
+        }
+      } else {
+        setMessages((prev) => prev.filter((m) => m.id !== loadingMsg.id));
+        setStep(7);
+        push(
+          botMsg(`Merci ${name} ! Le rapport sera envoy\u00E9 \u00E0 ${email}.`)
+        );
+      }
       return;
     }
   }

@@ -12,6 +12,8 @@ import {
   AlertTriangle,
   Calendar,
   ExternalLink,
+  Download,
+  FileText,
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
@@ -25,7 +27,8 @@ export type MessageType =
   | "loading"
   | "strengths"
   | "issues"
-  | "link";
+  | "link"
+  | "download";
 
 export interface ChatMessage {
   id: string;
@@ -40,6 +43,7 @@ export interface ChatMessage {
   };
   items?: string[];
   link?: { label: string; href: string };
+  download?: { filename: string; base64: string };
 }
 
 export type ChatStep = 1 | 2 | "2b" | 3 | 4 | 5 | 6 | 7 | null;
@@ -245,6 +249,32 @@ function MessageBubble({ message }: { message: ChatMessage }) {
               </li>
             ))}
           </ul>
+        </div>
+      </motion.div>
+    );
+  }
+
+  if (message.type === "download" && message.download) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="flex items-start gap-2"
+      >
+        <BotAvatar />
+        <div className="max-w-[280px] rounded-xl rounded-tl-sm bg-purple-600/20 px-3 py-3">
+          <div className="mb-2 flex items-center gap-2">
+            <FileText className="h-4 w-4 text-purple-300" />
+            <p className="text-sm font-semibold text-white/90">{message.content}</p>
+          </div>
+          <a
+            href={`data:application/pdf;base64,${message.download.base64}`}
+            download={message.download.filename}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-purple-600 px-3 py-2 text-xs font-bold text-white transition-colors hover:bg-purple-500"
+          >
+            <Download className="h-4 w-4" />
+            Telecharger le rapport PDF
+          </a>
         </div>
       </motion.div>
     );
