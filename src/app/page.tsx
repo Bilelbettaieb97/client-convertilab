@@ -160,9 +160,19 @@ const faqSchema = {
 
 const reviewsSchema = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Services de Marketing Digital ConvertiLab",
-  provider: { "@type": "Organization", name: SITE.name },
+  "@type": "LocalBusiness",
+  "@id": `${SITE.url}#localbusiness-reviews`,
+  name: SITE.name,
+  url: SITE.url,
+  telephone: SITE.phone,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Rueil-Malmaison",
+    postalCode: "92500",
+    addressRegion: "Île-de-France",
+    addressCountry: "FR",
+  },
+  priceRange: "€€",
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
@@ -170,10 +180,34 @@ const reviewsSchema = {
     bestRating: "5",
   },
   review: [
-    { "@type": "Review", author: { "@type": "Person", name: "Marie Dubois" }, reviewBody: "Notre chiffre d'affaires en ligne a augmenté de 250% grâce à leur stratégie digitale !", reviewRating: { "@type": "Rating", ratingValue: "5" } },
-    { "@type": "Review", author: { "@type": "Person", name: "Thomas Laurent" }, reviewBody: "50+ leads qualifiés par mois grâce aux Meta Ads et au social media.", reviewRating: { "@type": "Rating", ratingValue: "5" } },
-    { "@type": "Review", author: { "@type": "Person", name: "Sophie Martin" }, reviewBody: "On est passé de 5 à 30 demandes de devis par semaine avec le SEO + Google Ads.", reviewRating: { "@type": "Rating", ratingValue: "5" } },
-    { "@type": "Review", author: { "@type": "Person", name: "Alexandre Chen" }, reviewBody: "Notre coût par acquisition a baissé de 60% grâce à leur approche data-driven.", reviewRating: { "@type": "Rating", ratingValue: "5" } },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Marie Dubois" },
+      datePublished: "2026-02-15",
+      reviewBody: "Notre chiffre d'affaires en ligne a augmenté de 250% grâce à leur stratégie digitale !",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Thomas Laurent" },
+      datePublished: "2026-02-22",
+      reviewBody: "50+ leads qualifiés par mois grâce aux Meta Ads et au social media.",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Sophie Martin" },
+      datePublished: "2026-03-05",
+      reviewBody: "On est passé de 5 à 30 demandes de devis par semaine avec le SEO + Google Ads.",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Alexandre Chen" },
+      datePublished: "2026-03-18",
+      reviewBody: "Notre coût par acquisition a baissé de 60% grâce à leur approche data-driven.",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    },
   ],
 };
 
