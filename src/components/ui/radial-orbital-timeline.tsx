@@ -96,7 +96,7 @@ export default function RadialOrbitalTimeline({
 
   const calculateNodePosition = (index: number, total: number) => {
     const angle = ((index / total) * 360 + rotationAngle) % 360;
-    const radius = 180;
+    const radius = 220;
     const radian = (angle * Math.PI) / 180;
     const x = radius * Math.cos(radian);
     const y = radius * Math.sin(radian);
@@ -129,14 +129,14 @@ export default function RadialOrbitalTimeline({
 
   return (
     <div
-      className="w-full h-full min-h-[640px] flex flex-col items-center justify-center bg-transparent overflow-hidden relative"
+      className="w-full h-full min-h-[720px] flex flex-col items-center justify-center bg-transparent overflow-hidden relative"
       ref={containerRef}
       onClick={handleContainerClick}
     >
       {/* Background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.18),transparent_70%)] pointer-events-none" />
 
-      <div className="relative w-full max-w-4xl h-full flex items-center justify-center">
+      <div className="relative w-full max-w-5xl h-full flex items-center justify-center">
         <div
           className="absolute w-full h-full flex items-center justify-center"
           ref={orbitRef}
@@ -157,8 +157,8 @@ export default function RadialOrbitalTimeline({
           </div>
 
           {/* Orbit circle */}
-          <div className="absolute w-[360px] h-[360px] rounded-full border border-purple-400/15"></div>
-          <div className="absolute w-[400px] h-[400px] rounded-full border border-pink-400/10"></div>
+          <div className="absolute w-[440px] h-[440px] rounded-full border border-purple-400/15"></div>
+          <div className="absolute w-[480px] h-[480px] rounded-full border border-pink-400/10"></div>
 
           {timelineData.map((item, index) => {
             const position = calculateNodePosition(index, timelineData.length);
