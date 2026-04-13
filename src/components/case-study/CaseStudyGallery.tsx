@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -24,7 +25,7 @@ export default function CaseStudyGallery({ images }: { images: GalleryImage[] })
         <div ref={gridRef} className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto transition-all duration-700 delay-200 ${gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           {images.map((image, index) => (
             <Card key={index} className="overflow-hidden cursor-pointer group border-2 hover:border-primary/50 transition-all hover:shadow-xl" onClick={() => setSelectedIndex(index)}>
-              <div className="relative aspect-video overflow-hidden"><img src={image.src} alt={image.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" width={400} height={225} /><div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" /></div>
+              <div className="relative aspect-video overflow-hidden"><Image src={image.src} alt={image.alt} fill className="object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" /><div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" /></div>
               <div className="p-4"><p className="text-sm font-medium text-muted-foreground">{image.caption}</p></div>
             </Card>
           ))}
@@ -35,7 +36,7 @@ export default function CaseStudyGallery({ images }: { images: GalleryImage[] })
               <>
                 <div className="absolute top-2 right-2 z-50"><Button variant="ghost" size="icon" className="text-white hover:bg-white/20" onClick={() => setSelectedIndex(null)}><X className="w-6 h-6" /></Button></div>
                 <div className="absolute top-2 left-2 z-50 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-medium">{selectedIndex + 1} / {images.length}</div>
-                <div className="overflow-y-auto flex-1"><img src={images[selectedIndex].src} alt={images[selectedIndex].alt} className="w-full h-auto" /></div>
+                <div className="overflow-y-auto flex-1"><Image src={images[selectedIndex].src} alt={images[selectedIndex].alt} width={1920} height={1080} className="w-full h-auto" sizes="95vw" /></div>
                 <div className="bg-black/80 p-4 shrink-0"><p className="text-white text-lg font-medium text-center">{images[selectedIndex].caption}</p></div>
                 {selectedIndex > 0 && <Button variant="ghost" size="icon" className="absolute left-2 top-1/2 -translate-y-1/2 z-50 text-white hover:bg-white/20 w-12 h-12" onClick={() => setSelectedIndex(selectedIndex - 1)}><ChevronLeft className="w-8 h-8" /></Button>}
                 {selectedIndex < images.length - 1 && <Button variant="ghost" size="icon" className="absolute right-2 top-1/2 -translate-y-1/2 z-50 text-white hover:bg-white/20 w-12 h-12" onClick={() => setSelectedIndex(selectedIndex + 1)}><ChevronRight className="w-8 h-8" /></Button>}

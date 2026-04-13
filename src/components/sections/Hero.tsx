@@ -1,40 +1,16 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Rocket, Shield, Calendar, Clock, CheckCircle, Users, Zap } from "lucide-react";
+import { ArrowRight, Rocket, Shield, Calendar, CheckCircle, Users, Flame } from "lucide-react";
 import { lazy, Suspense, useState, useEffect } from "react";
 import Link from "next/link";
 import { SITE } from "@/lib/constants";
-
-function useCountdown() {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0 });
-  useEffect(() => {
-    function getEndOfMonth() {
-      const now = new Date();
-      return new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
-    }
-    function calc() {
-      const diff = getEndOfMonth().getTime() - Date.now();
-      if (diff <= 0) return { days: 0, hours: 0, minutes: 0 };
-      return {
-        days: Math.floor(diff / 86400000),
-        hours: Math.floor((diff % 86400000) / 3600000),
-        minutes: Math.floor((diff % 3600000) / 60000),
-      };
-    }
-    setTimeLeft(calc());
-    const timer = setInterval(() => setTimeLeft(calc()), 60000);
-    return () => clearInterval(timer);
-  }, []);
-  return timeLeft;
-}
 
 const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
 
 const rotatingWords = ["Business", "Boutique", "Projet", "Marque"];
 
 const Hero = () => {
-  const countdown = useCountdown();
   const [wordIndex, setWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -65,9 +41,6 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [displayedText, isDeleting, wordIndex]);
 
-  const openPriceEstimator = () => {
-    window.open("https://estimationdesiteweb.lovable.app/", "_blank");
-  };
   const openCalendly = () => {
     window.open(SITE.calendly, "_blank");
   };
@@ -84,30 +57,28 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left - Information */}
           <div className="text-center lg:text-left">
-            {/* Urgency Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm bg-gradient-to-r from-orange-50 to-yellow-50 border border-orange-200 text-orange-800 rounded-full animate-fade-in shadow-lg">
-              <Zap className="w-4 h-4 text-orange-600" />
-              <span className="font-bold">Offre audit gratuit</span>
-              <span className="hidden sm:inline">—</span>
-              <span className="font-mono font-bold text-orange-700">
-                {countdown.days}j {countdown.hours}h {countdown.minutes}m
-              </span>
+            {/* Urgency Badge — Places limitées réelles */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-xs sm:text-sm bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 text-red-800 rounded-full animate-fade-in shadow-lg">
+              <Flame className="w-4 h-4 text-red-600 animate-pulse" />
+              <span className="font-bold">3 places restantes</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="hidden sm:inline font-semibold">Devis gratuit ce mois-ci</span>
+              <span className="sm:hidden font-semibold">ce mois</span>
             </div>
 
-            {/* Main Heading - Benefit-focused */}
-            <h1 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight animate-slide-up min-h-[4.5rem] sm:min-h-[6rem] lg:min-h-[7.5rem] xl:min-h-[9rem]">
+            {/* Main Heading - Mobile-optimized typography */}
+            <h1 className="text-[1.6rem] xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-[1.15] sm:leading-tight animate-slide-up">
               <span className="block">
                 Votre agence web crée
               </span>
-              <span className="block whitespace-nowrap">
+              <span className="block">
                 votre{" "}
-                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 will-change-transform min-w-[100px] sm:min-w-[160px]">
+                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 will-change-transform min-w-[90px] sm:min-w-[160px]">
                   {displayedText}<span className="animate-pulse text-purple-600">|</span>
                 </span>
-                {" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                  en 7 Jours
-                </span>
+              </span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                en 7 Jours
               </span>
             </h1>
 
@@ -186,7 +157,7 @@ const Hero = () => {
           {/* Right - Contact Form (lazy loaded) */}
           <div className="animate-fade-in">
             <Suspense fallback={
-               <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-100 p-6 min-h-[440px] sm:min-h-[480px] flex items-center justify-center" style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 480px' } as React.CSSProperties}>
+              <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-100 p-6 min-h-[440px] sm:min-h-[480px] flex items-center justify-center">
                 <div className="w-8 h-8 border-4 border-purple-600 border-t-transparent rounded-full animate-spin" />
               </div>
             }>

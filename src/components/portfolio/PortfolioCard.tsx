@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Star, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface PortfolioCase {
   icon: React.ReactNode;
@@ -37,19 +38,13 @@ const PortfolioCard = ({ caseStudy }: PortfolioCardProps) => {
     <Card className={`group bg-card border border-border shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col ${caseStudy.slug ? 'cursor-pointer' : ''}`}>
       <div className="relative overflow-hidden rounded-t-lg">
         <AspectRatio ratio={16 / 9}>
-          <img
+          <Image
             src={caseStudy.image}
             alt={`${caseStudy.title} - ${caseStudy.client} | Portfolio ConvertiLab`}
-            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
-            width={371}
-            height={238}
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 371px"
-            decoding="async"
-            fetchPriority="low"
-            onError={(e) => {
-              e.currentTarget.src = "https://images.unsplash.com/photo-1486754735734-325b5831c3ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60";
-            }}
           />
         </AspectRatio>
         <div className="absolute top-3 right-3">

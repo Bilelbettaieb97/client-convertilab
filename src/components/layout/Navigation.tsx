@@ -104,7 +104,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center lg:flex-none absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
             <Link href="/" className="cursor-pointer flex items-center gap-2" aria-label="ConvertiLab - Accueil">
-              <Image src="/images/icon-c.png" alt="" width={48} height={48} className="h-9 w-9 sm:h-11 sm:w-11 flex-shrink-0" priority />
+              <Image src="/images/icon-c.png" alt="Logo ConvertiLab" width={48} height={48} className="h-9 w-9 sm:h-11 sm:w-11 flex-shrink-0" priority />
               <div className="flex flex-col leading-none">
                 <span className="text-[20px] sm:text-[26px] font-bold tracking-tight">
                   <span className="text-gray-900">Converti</span><span className="text-[#EC4899]">Lab</span>

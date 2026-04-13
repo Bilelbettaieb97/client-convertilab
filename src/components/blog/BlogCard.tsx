@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
@@ -17,14 +18,13 @@ const BlogCard = ({ article, featured = false }: BlogCardProps) => {
       <Card className={`group overflow-hidden border border-border shadow-sm hover:shadow-lg transition-all duration-500 bg-card ${featured ? "md:flex" : ""}`}>
         {/* Image */}
         <div className={`relative overflow-hidden ${featured ? "md:w-1/2" : "aspect-[16/10]"}`}>
-          <img
+          <Image
             src={article.image}
             alt={`${article.title} - ${article.category} | Blog ConvertiLab`}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
             loading="lazy"
-            decoding="async"
-            width={800}
-            height={500}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground border-0">
