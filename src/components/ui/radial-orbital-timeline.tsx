@@ -216,29 +216,29 @@ export default function RadialOrbitalTimeline({
                 </div>
 
                 {isExpanded && (
-                  <Card className="absolute top-24 left-1/2 -translate-x-1/2 w-72 bg-black/95 backdrop-blur-lg border-purple-500/40 shadow-2xl shadow-purple-500/20 overflow-visible">
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-px h-3 bg-purple-400/70"></div>
-                    <CardHeader className="pb-2">
+                  <Card className="absolute top-28 left-1/2 -translate-x-1/2 w-[360px] max-w-[92vw] bg-black/95 backdrop-blur-lg border-purple-500/40 shadow-2xl shadow-purple-500/30 overflow-visible rounded-2xl">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-px h-4 bg-purple-400/70"></div>
+                    <CardHeader className="pb-3 pt-5 px-6">
                       <div className="flex justify-between items-center">
-                        <Badge className={`px-2 text-[10px] ${getStatusStyles(item.status)}`}>
+                        <Badge className={`px-3 py-1 text-xs ${getStatusStyles(item.status)}`}>
                           {item.status === "popular" ? "POPULAIRE" : item.status === "new" ? "NOUVEAU" : "GRATUIT"}
                         </Badge>
-                        <span className="text-[10px] font-mono text-white/50">{item.date}</span>
+                        <span className="text-xs font-mono text-white/50">{item.date}</span>
                       </div>
-                      <CardTitle className="text-sm mt-2 text-white">{item.title}</CardTitle>
+                      <CardTitle className="text-xl mt-3 text-white font-bold">{item.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="text-xs text-white/80">
-                      <p>{item.content}</p>
+                    <CardContent className="text-sm text-white/80 px-6 pb-6">
+                      <p className="leading-relaxed">{item.content}</p>
 
-                      <div className="mt-4 pt-3 border-t border-purple-500/20">
-                        <div className="flex justify-between items-center text-xs mb-1">
-                          <span className="flex items-center text-white/70">
-                            <Zap size={10} className="mr-1" />
-                            Utilité
+                      <div className="mt-5 pt-4 border-t border-purple-500/20">
+                        <div className="flex justify-between items-center text-sm mb-2">
+                          <span className="flex items-center text-white/70 font-medium">
+                            <Zap size={14} className="mr-1.5" />
+                            Utilite
                           </span>
-                          <span className="font-mono text-white/80">{item.energy}%</span>
+                          <span className="font-mono text-white/90 font-bold">{item.energy}%</span>
                         </div>
-                        <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+                        <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                           <div
                             className="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500"
                             style={{ width: `${item.energy}%` }}
@@ -247,14 +247,14 @@ export default function RadialOrbitalTimeline({
                       </div>
 
                       {item.relatedIds.length > 0 && (
-                        <div className="mt-4 pt-3 border-t border-purple-500/20">
-                          <div className="flex items-center mb-2">
-                            <LinkIcon size={10} className="text-purple-300 mr-1" />
-                            <h4 className="text-[10px] uppercase tracking-wider font-bold text-purple-300">
-                              Outils liés
+                        <div className="mt-5 pt-4 border-t border-purple-500/20">
+                          <div className="flex items-center mb-3">
+                            <LinkIcon size={12} className="text-purple-300 mr-1.5" />
+                            <h4 className="text-xs uppercase tracking-wider font-bold text-purple-300">
+                              Outils lies
                             </h4>
                           </div>
-                          <div className="flex flex-wrap gap-1">
+                          <div className="flex flex-wrap gap-1.5">
                             {item.relatedIds.map((relatedId) => {
                               const relatedItem = timelineData.find((i) => i.id === relatedId);
                               return (
@@ -262,14 +262,14 @@ export default function RadialOrbitalTimeline({
                                   key={relatedId}
                                   variant="outline"
                                   size="sm"
-                                  className="flex items-center h-6 px-2 py-0 text-[10px] rounded-md border-purple-400/30 bg-transparent hover:bg-purple-500/20 text-white/80 hover:text-white transition-all"
+                                  className="flex items-center h-8 px-3 py-0 text-xs rounded-md border-purple-400/30 bg-transparent hover:bg-purple-500/20 text-white/80 hover:text-white transition-all"
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     toggleItem(relatedId);
                                   }}
                                 >
                                   {relatedItem?.title}
-                                  <ArrowRight size={8} className="ml-1 text-purple-300" />
+                                  <ArrowRight size={10} className="ml-1 text-purple-300" />
                                 </Button>
                               );
                             })}
@@ -279,9 +279,9 @@ export default function RadialOrbitalTimeline({
 
                       <Link
                         href={item.href}
-                        className="mt-4 flex items-center justify-center gap-1 px-3 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
+                        className="mt-5 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-bold hover:shadow-lg hover:shadow-purple-500/40 hover:scale-[1.02] transition-all"
                       >
-                        Tester l&apos;outil <ArrowRight className="w-3 h-3" />
+                        Tester l&apos;outil <ArrowRight className="w-4 h-4" />
                       </Link>
                     </CardContent>
                   </Card>
