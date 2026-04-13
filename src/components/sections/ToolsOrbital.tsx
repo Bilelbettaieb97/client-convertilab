@@ -117,33 +117,33 @@ export default function ToolsOrbital() {
           {/* LEFT — Text content */}
           <div className="lg:col-span-5 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-xs font-semibold uppercase tracking-wider mb-6">
-              &#128142; Lead magnets gratuits
+              &#9889; Diagnostics gratuits en 60 secondes
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight">
-              Pas pret a acheter ?{" "}
+              Votre site peut-il{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400">
-                Testez gratuitement
+                faire mieux ?
               </span>
             </h2>
 
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-              <strong className="text-white">8 outils professionnels</strong>, 100% gratuits, sans inscription. Cliquez sur un outil de l&apos;orbite pour le decouvrir et recevoir un rapport complet par email.
+              Decouvrez en 60 secondes ce qui freine votre site web. <strong className="text-white">Audit SEO, vitesse, design, ROI Ads</strong> — recevez un rapport detaille avec les points a corriger et un plan d&apos;action concret, directement dans votre boite mail.
             </p>
 
             {/* Quick stats */}
             <div className="grid grid-cols-3 gap-4 mb-8 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
                 <div className="text-2xl lg:text-3xl font-black text-white">8</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wider">Outils</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wider">Analyses disponibles</div>
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-2xl lg:text-3xl font-black text-white">60+</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wider">Points analyses</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wider">Points verifies</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl lg:text-3xl font-black text-white">2 min</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wider">En moyenne</div>
+                <div className="text-2xl lg:text-3xl font-black text-white">60s</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wider">Par diagnostic</div>
               </div>
             </div>
 
@@ -152,12 +152,12 @@ export default function ToolsOrbital() {
               href="/seo-check"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30"
             >
-              Commencer par un audit SEO
+              Lancer mon audit gratuit
               <ArrowRight className="w-4 h-4" />
             </Link>
 
             <p className="text-xs text-gray-500 mt-4">
-              Astuce : cliquez sur n&apos;importe quel outil de l&apos;orbite pour le tester
+              100% gratuit &bull; Sans inscription &bull; Rapport PDF en 60 secondes
             </p>
           </div>
 
