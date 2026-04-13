@@ -13,11 +13,15 @@ import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -75,8 +79,9 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Google Consent Mode v2 — initialise par défaut tout en "denied" (RGPD) */}
-        <Script id="google-consent-mode" strategy="beforeInteractive">
+        {/* Google Consent Mode v2 — initialise par defaut tout en "denied" (RGPD)
+            strategy="afterInteractive" safe because GA/GTM/Meta Pixel are lazyOnload */}
+        <Script id="google-consent-mode" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

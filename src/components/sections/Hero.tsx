@@ -73,7 +73,7 @@ const Hero = () => {
               </span>
               <span className="block">
                 votre{" "}
-                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 will-change-transform min-w-[90px] sm:min-w-[160px]">
+                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 will-change-transform min-w-[140px] sm:min-w-[200px] lg:min-w-[260px] text-left">
                   {displayedText}<span className="animate-pulse text-purple-600">|</span>
                 </span>
               </span>
