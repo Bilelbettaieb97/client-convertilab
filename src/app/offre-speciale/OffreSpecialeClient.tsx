@@ -88,20 +88,21 @@ export default function OffreSpecialeClient() {
         else { setError(`Erreur : ${dbError.message}`); }
       } else {
         // Notification email (non-bloquant — si ça échoue, on affiche quand même le remerciement)
-        try {
-          await supabase.functions.invoke("notify-contact", {
-            body: {
-              type: "offer",
-              name: formData.name.trim(),
-              email: formData.email.trim().toLowerCase(),
-              phone: `+33 ${phoneDigits}`,
-              company: formData.company.trim(),
-              message: `Type: ${selectedType === "vitrine" ? "Site Vitrine 5 pages" : "Landing Page"} | ${formData.message}`,
+        fetch("/api/notify", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            formType: "Offre Speciale",
+            name: formData.name.trim(),
+            email: formData.email.trim().toLowerCase(),
+            phone: `+33 ${phoneDigits}`,
+            company: formData.company.trim(),
+            fields: {
+              siteType: selectedType === "vitrine" ? "Site Vitrine 5 pages" : "Landing Page",
+              message: formData.message,
             },
-          });
-        } catch {
-          // Notification échouée mais la réservation est enregistrée — on continue
-        }
+          }),
+        }).catch(() => {});
 
         // Décrémenter immédiatement côté client
         setSpotsRemaining((prev) => Math.max(0, prev - 1));

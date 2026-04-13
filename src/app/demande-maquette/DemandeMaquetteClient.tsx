@@ -84,11 +84,23 @@ export default function DemandeMaquetteClient() {
       const { error } = await supabase.from("mockup_requests" as string).insert({ name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), current_site_url: form.current_site_url.trim() || null, sector: form.sector, site_type: form.site_type, design_style: form.design_style || null, description: form.description.trim() || null });
       if (error) throw error;
       // Non-bloquant : si la notification échoue, on continue quand même
-      try {
-        await supabase.functions.invoke("notify-contact", { body: { type: "mockup", name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), site_type: form.site_type, sector: form.sector, design_style: form.design_style || null, current_site_url: form.current_site_url.trim() || null, description: form.description.trim() || null } });
-      } catch {
-        // Notification échouée mais les données sont enregistrées dans Supabase
-      }
+      fetch("/api/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "Demande Maquette",
+          name: form.name.trim(),
+          email: form.email.trim(),
+          phone: form.phone.trim(),
+          fields: {
+            site_type: form.site_type,
+            sector: form.sector,
+            design_style: form.design_style || null,
+            current_site_url: form.current_site_url.trim() || null,
+            description: form.description.trim() || null,
+          },
+        }),
+      }).catch(() => {});
       setIsSubmitted(true);
     } catch {
       toast({ title: "Erreur", description: "Une erreur est survenue. Reessayez ou contactez-nous directement.", variant: "destructive" });

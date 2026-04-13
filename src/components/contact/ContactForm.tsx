@@ -144,13 +144,24 @@ const ContactForm = () => {
       if (error) throw error;
 
       // Non-bloquant : si la notification échoue, on continue quand même
-      try {
-        await supabase.functions.invoke('notify-contact', {
-          body: formData,
-        });
-      } catch {
-        // Notification échouée mais les données sont enregistrées dans Supabase
-      }
+      fetch("/api/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "Contact",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          fields: {
+            project: formData.project,
+            main_challenge: formData.main_challenge,
+            timeline: formData.timeline,
+            message: formData.message,
+            urgency: formData.urgency,
+          },
+        }),
+      }).catch(() => {});
 
       if (typeof window !== 'undefined' && (window as any).trackFormConversion) {
         (window as any).trackFormConversion();

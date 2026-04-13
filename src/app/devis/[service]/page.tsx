@@ -127,11 +127,25 @@ export default function DevisServicePage() {
       if (error) throw error;
 
       // Non-bloquant notification
-      try {
-        await supabase.functions.invoke("notify-contact", { body: formData });
-      } catch {
-        // Notification failed but data is saved
-      }
+      fetch("/api/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: `Devis - ${service}`,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          fields: {
+            project: formData.project,
+            service: devisService?.name || service,
+            message: formData.message,
+            main_challenge: formData.main_challenge,
+            timeline: formData.timeline,
+            urgency: formData.urgency,
+          },
+        }),
+      }).catch(() => {});
 
       if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).trackFormConversion) {
         ((window as unknown as Record<string, unknown>).trackFormConversion as () => void)();

@@ -210,20 +210,26 @@ export default function DevisClient() {
       if (error) throw error;
 
       // Non-bloquant : si la notification échoue, on continue quand même
-      try {
-        await supabase.functions.invoke("notify-contact", {
-          body: {
-            type: "devis",
-            ...formData,
+      fetch("/api/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "Offre Mensuelle",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          fields: {
+            sector: formData.sector,
+            companyDescription: formData.companyDescription,
             project: "vitrine",
             offer: formData.offer,
             offerName: selectedOffer?.name,
             offerPrice: selectedOffer?.price,
+            message: formData.message,
           },
-        });
-      } catch {
-        // Notification échouée mais les données sont enregistrées dans Supabase
-      }
+        }),
+      }).catch(() => {});
 
       const end = Date.now() + 2500;
       const frame = () => {

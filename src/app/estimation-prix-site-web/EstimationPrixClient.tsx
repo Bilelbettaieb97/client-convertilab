@@ -107,14 +107,32 @@ export default function EstimationPrixClient() {
     if (!form.name || !form.email || !form.phone) { toast({ title: "Champs requis", description: "Veuillez remplir tous les champs obligatoires.", variant: "destructive" }); return; }
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.from("price_estimations" as string).insert({ site_type: form.site_type, options: form.options, page_count: form.page_count || null, product_count: form.product_count || null, landing_objective: form.landing_objective || null, refonte_url: form.refonte_url.trim() || null, refonte_reasons: form.refonte_reasons, refonte_improvements: form.refonte_improvements, name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), company: form.company.trim() || null, description: form.description.trim() || null });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const { error } = await (supabase as any).from("price_estimations").insert({ site_type: form.site_type, options: form.options, page_count: form.page_count || null, product_count: form.product_count || null, landing_objective: form.landing_objective || null, refonte_url: form.refonte_url.trim() || null, refonte_reasons: form.refonte_reasons, refonte_improvements: form.refonte_improvements, name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), company: form.company.trim() || null, description: form.description.trim() || null });
       if (error) throw error;
       // Non-bloquant : si la notification échoue, on continue quand même
-      try {
-        await supabase.functions.invoke("notify-contact", { body: { type: "estimation", name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), company: form.company.trim() || null, site_type: form.site_type, options: form.options.join(", "), page_count: form.page_count || null, product_count: form.product_count || null, landing_objective: form.landing_objective || null, refonte_url: form.refonte_url.trim() || null, refonte_reasons: form.refonte_reasons.join(", "), refonte_improvements: form.refonte_improvements.join(", "), description: form.description.trim() || null } });
-      } catch {
-        // Notification échouée mais les données sont enregistrées dans Supabase
-      }
+      fetch("/api/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "Estimation Prix",
+          name: form.name.trim(),
+          email: form.email.trim(),
+          phone: form.phone.trim(),
+          company: form.company.trim() || null,
+          fields: {
+            site_type: form.site_type,
+            options: form.options.join(", "),
+            page_count: form.page_count || null,
+            product_count: form.product_count || null,
+            landing_objective: form.landing_objective || null,
+            refonte_url: form.refonte_url.trim() || null,
+            refonte_reasons: form.refonte_reasons.join(", "),
+            refonte_improvements: form.refonte_improvements.join(", "),
+            description: form.description.trim() || null,
+          },
+        }),
+      }).catch(() => {});
       setIsSubmitted(true);
     } catch { toast({ title: "Erreur", description: "Une erreur est survenue. Reessayez ou contactez-nous directement.", variant: "destructive" }); } finally { setIsSubmitting(false); }
   };

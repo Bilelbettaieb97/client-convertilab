@@ -49,16 +49,14 @@ const NewsletterSubscription = () => {
       }
 
       // Non-bloquant : si la notification échoue, on continue quand même
-      try {
-        await supabase.functions.invoke('notify-contact', {
-          body: {
-            type: 'newsletter',
-            email: trimmedEmail,
-          },
-        });
-      } catch {
-        // Notification échouée mais les données sont enregistrées dans Supabase
-      }
+      fetch("/api/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "Newsletter",
+          email: trimmedEmail,
+        }),
+      }).catch(() => {});
 
       // Track Google Ads conversion
       if (typeof window !== 'undefined' && (window as any).trackFormConversion) {
