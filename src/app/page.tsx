@@ -8,6 +8,7 @@ import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
 import Portfolio from "@/components/sections/Portfolio";
 import { CinematicHero } from "@/components/ui/cinematic-landing-hero";
+import ToolsOrbital from "@/components/sections/ToolsOrbital";
 import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
 import ProcessTimeline from "@/components/sections/ProcessTimeline";
@@ -316,60 +317,9 @@ export default function HomePage() {
           </section>
         </AnimatedSection>
 
-        {/* S6 — BOÎTE À OUTILS (dark) — lead magnet */}
+        {/* S6 — BOÎTE À OUTILS ORBITAL (dark) — lead magnet */}
         <AnimatedSection animation="fade-up">
-          <section className="py-20 sm:py-28 bg-gray-900 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-pink-900/20" />
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-pink-600/20 rounded-full blur-[120px]" />
-            <div className="container mx-auto px-4 max-w-6xl relative z-10">
-              <div className="text-center max-w-3xl mx-auto mb-14">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-xs font-semibold uppercase tracking-wider mb-6">
-                  💎 Lead magnets
-                </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                  Pas prêt à acheter ?{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400">
-                    Testez gratuitement
-                  </span>
-                </h2>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  8 outils professionnels, 100% gratuits, sans inscription. Analysez votre site en quelques secondes.
-                </p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {[
-                  { emoji: "🔍", name: "Audit SEO", description: "60+ points analysés", href: "/seo-check" },
-                  { emoji: "⚡", name: "Audit Vitesse", description: "Core Web Vitals", href: "/speed-check" },
-                  { emoji: "🎨", name: "Audit Design", description: "UX & UI scoring", href: "/design-score" },
-                  { emoji: "📊", name: "Estimateur Ads", description: "ROI prévisionnel", href: "/estimateur-ads" },
-                  { emoji: "📋", name: "Mentions Légales", description: "CGU automatiques", href: "/generateur-mentions-legales" },
-                  { emoji: "🤖", name: "Robots & Sitemap", description: "Fichiers techniques", href: "/generateur-robots-sitemap" },
-                  { emoji: "📈", name: "Rapport Sectoriel", description: "Analyse marché", href: "/rapport-sectoriel" },
-                  { emoji: "🔄", name: "Comparateur Sites", description: "Benchmark concurrents", href: "/comparateur-sites" },
-                ].map((tool) => (
-                  <Link
-                    key={tool.href}
-                    href={tool.href}
-                    className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-500/50 hover:-translate-y-1 transition-all duration-300"
-                  >
-                    <span className="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-500/20 text-green-400 border border-green-500/30">
-                      Gratuit
-                    </span>
-                    <div className="text-4xl mb-3">{tool.emoji}</div>
-                    <h3 className="text-white font-semibold text-base mb-1 group-hover:text-purple-300 transition-colors">
-                      {tool.name}
-                    </h3>
-                    <p className="text-gray-400 text-xs">{tool.description}</p>
-                    <div className="mt-4 flex items-center text-xs font-medium text-purple-400 group-hover:text-purple-300 transition-colors">
-                      Essayer
-                      <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
+          <ToolsOrbital />
         </AnimatedSection>
 
         {/* S7 — PROCESS (white) */}
