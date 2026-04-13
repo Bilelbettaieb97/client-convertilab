@@ -229,7 +229,7 @@ export function CinematicHero({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=4500",
+          end: "+=6500",
           pin: true,
           scrub: 1,
           anticipatePin: 1,
@@ -238,8 +238,10 @@ export function CinematicHero({
       });
 
       scrollTl
-        .to([".hero-text-wrapper-cl", ".bg-grid-cinematic"], { scale: 1.15, filter: "blur(20px)", opacity: 0.2, ease: "power2.inOut", duration: 2 }, 0)
-        .to(".main-card-cl", { y: 0, ease: "power3.inOut", duration: 2 }, 0)
+        // Hold the hero text visible for a while so users can read it
+        .to({}, { duration: 3 })
+        .to([".hero-text-wrapper-cl", ".bg-grid-cinematic"], { scale: 1.15, filter: "blur(20px)", opacity: 0.2, ease: "power2.inOut", duration: 2 })
+        .to(".main-card-cl", { y: 0, ease: "power3.inOut", duration: 2 }, "<")
         .to(".main-card-cl", { width: "100%", height: "100%", borderRadius: "0px", ease: "power3.inOut", duration: 1.5 })
         .fromTo(
           ".mockup-scroll-wrapper-cl",
