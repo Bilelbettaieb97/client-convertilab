@@ -7,6 +7,7 @@ import Navigation from "@/components/layout/Navigation";
 import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
 import Portfolio from "@/components/sections/Portfolio";
+import { CinematicHero } from "@/components/ui/cinematic-landing-hero";
 import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
 import ProcessTimeline from "@/components/sections/ProcessTimeline";
@@ -288,6 +289,25 @@ export default function HomePage() {
             <Portfolio />
           </section>
         </AnimatedSection>
+
+        {/* S4 — CINEMATIC MOBILE (dark) — showcase responsive */}
+        <section id="mobile-showcase" className="relative">
+          <CinematicHero
+            brandName="MOBILE"
+            tagline1="Vos clients sont"
+            tagline2="sur mobile."
+            cardHeading="100% responsive, 100% rapide."
+            cardDescription={
+              <>
+                <span className="text-white font-semibold">ConvertiLab</span> cree des sites web optimises mobile-first : design premium, vitesse de chargement sous 2s, et conversions maximales sur smartphone.
+              </>
+            }
+            metricValue={98}
+            metricLabel="Score Mobile"
+            ctaHeading="Pret pour un site mobile ?"
+            ctaDescription="Rejoignez les 150+ marques qui ont transforme leur trafic mobile en clients grace a ConvertiLab."
+          />
+        </section>
 
         {/* S5 — SERVICES (light gradient) */}
         <AnimatedSection animation="fade-up">
