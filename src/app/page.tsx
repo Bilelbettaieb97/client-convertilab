@@ -11,6 +11,7 @@ import { CinematicHero } from "@/components/ui/cinematic-landing-hero";
 import ToolsOrbital from "@/components/sections/ToolsOrbital";
 import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
+import TestimonialsColumnsSection from "@/components/sections/TestimonialsColumns";
 import ProcessTimeline from "@/components/sections/ProcessTimeline";
 import About from "@/components/sections/About";
 import Pricing from "@/components/sections/Pricing";
@@ -327,10 +328,10 @@ export default function HomePage() {
           <ProcessTimeline />
         </AnimatedSection>
 
-        {/* S9 — TÉMOIGNAGES (light gradient) */}
+        {/* S9 — TÉMOIGNAGES (dark, 3 scrolling columns) */}
         <AnimatedSection animation="fade-up" delay={100}>
           <section id="testimonials">
-            <Testimonials />
+            <TestimonialsColumnsSection />
           </section>
         </AnimatedSection>
 
