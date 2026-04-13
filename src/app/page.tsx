@@ -6,8 +6,6 @@ import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/layout/Navigation";
 import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
-import Problem from "@/components/sections/Problem";
-import Solution from "@/components/sections/Solution";
 import Portfolio from "@/components/sections/Portfolio";
 import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
@@ -279,26 +277,16 @@ export default function HomePage() {
           </section>
         </div>
 
-        {/* S2 — RÉALISATIONS / RÉSULTATS CLIENTS (light) */}
-        <AnimatedSection animation="fade-up">
-          <section id="portfolio">
-            <Portfolio />
-          </section>
-        </AnimatedSection>
-
-        {/* S3 — TRUST BAR (white) */}
+        {/* S2 — TRUST BAR (white) */}
         <AnimatedSection animation="fade-up">
           <TrustBar />
         </AnimatedSection>
 
-        {/* S3 — PROBLÈME (light gray) */}
+        {/* S3 — RÉALISATIONS / RÉSULTATS CLIENTS (light) */}
         <AnimatedSection animation="fade-up">
-          <Problem />
-        </AnimatedSection>
-
-        {/* S4 — SOLUTION (white) */}
-        <AnimatedSection animation="fade-up">
-          <Solution />
+          <section id="portfolio">
+            <Portfolio />
+          </section>
         </AnimatedSection>
 
         {/* S5 — SERVICES (light gradient) */}
