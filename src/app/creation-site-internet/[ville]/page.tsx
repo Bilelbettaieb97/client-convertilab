@@ -5,6 +5,7 @@ import { cities, getCityBySlug } from "@/data/cities";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle2,
@@ -338,8 +339,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
                     </div>
                     <p className="text-gray-700 text-sm mb-4 italic">&ldquo;{t.text}&rdquo;</p>
                     <div className="flex items-center gap-3">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={t.photo} alt={t.author} className="w-10 h-10 rounded-full object-cover" />
+                      <Image src={t.photo} alt={t.author} width={40} height={40} className="w-10 h-10 rounded-full object-cover" />
                       <div>
                         <p className="text-sm font-semibold text-gray-900">{t.author}</p>
                         <p className="text-xs text-gray-500">{t.role}, {t.company}</p>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -67,14 +68,13 @@ const ServiceCaseStudies = ({ category, title, subtitle, max }: ServiceCaseStudi
               className="group block rounded-2xl border border-border bg-card overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <div className="relative aspect-[16/10]">
-                <img
+                <Image
                   src={study.image}
                   alt={`${study.title} - ${study.client} | Realisation ConvertiLab`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
-                  decoding="async"
-                  width={640}
-                  height={400}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
               <div className="p-5">

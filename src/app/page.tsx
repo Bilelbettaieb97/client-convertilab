@@ -279,7 +279,14 @@ export default function HomePage() {
           </section>
         </div>
 
-        {/* S2 — TRUST BAR (white) */}
+        {/* S2 — RÉALISATIONS / RÉSULTATS CLIENTS (light) */}
+        <AnimatedSection animation="fade-up">
+          <section id="portfolio">
+            <Portfolio />
+          </section>
+        </AnimatedSection>
+
+        {/* S3 — TRUST BAR (white) */}
         <AnimatedSection animation="fade-up">
           <TrustBar />
         </AnimatedSection>
@@ -360,13 +367,6 @@ export default function HomePage() {
         {/* S7 — PROCESS (white) */}
         <AnimatedSection animation="fade-up" delay={100}>
           <ProcessTimeline />
-        </AnimatedSection>
-
-        {/* S8 — RÉALISATIONS (light) */}
-        <AnimatedSection animation="fade-up">
-          <section id="portfolio">
-            <Portfolio />
-          </section>
         </AnimatedSection>
 
         {/* S9 — TÉMOIGNAGES (light gradient) */}

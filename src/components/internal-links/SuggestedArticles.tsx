@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Calendar } from "lucide-react";
 import { blogArticles } from "@/data/blog-articles";
 
@@ -28,15 +29,14 @@ const SuggestedArticles = ({ exclude = [], max = 3, title = "Articles suggérés
               href={`/blog/${article.slug}`}
               className="group flex flex-col rounded-xl border border-border bg-card overflow-hidden hover:shadow-md hover:border-primary/40 transition-all"
             >
-              <div className="aspect-[16/10] overflow-hidden">
-                <img
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
                   src={article.image}
                   alt={`${article.title} - Blog ConvertiLab`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
-                  decoding="async"
-                  width={400}
-                  height={250}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
               <div className="p-5 flex flex-col flex-grow">
