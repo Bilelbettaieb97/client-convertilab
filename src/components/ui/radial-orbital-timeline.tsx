@@ -156,6 +156,23 @@ export default function RadialOrbitalTimeline({
             </div>
           </div>
 
+          {/* Click hint tooltip — visible only when no tool is expanded */}
+          {!activeNodeId && (
+            <div
+              className="absolute z-20 pointer-events-none"
+              style={{ top: "calc(50% + 56px)", left: "50%", transform: "translateX(-50%)" }}
+            >
+              <div className="relative animate-bounce">
+                <div className="bg-white text-purple-700 text-xs font-bold px-3 py-2 rounded-full shadow-xl shadow-purple-900/50 whitespace-nowrap flex items-center gap-1.5">
+                  <span className="text-base">&#128072;</span>
+                  <span>Cliquez sur un outil</span>
+                </div>
+                {/* Arrow pointing down */}
+                <div className="absolute left-1/2 -bottom-1 -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-white" />
+              </div>
+            </div>
+          )}
+
           {/* Orbit circle */}
           <div className="absolute w-[440px] h-[440px] rounded-full border border-purple-400/15"></div>
           <div className="absolute w-[480px] h-[480px] rounded-full border border-pink-400/10"></div>
@@ -200,7 +217,7 @@ export default function RadialOrbitalTimeline({
                 <div
                   className={`
                     w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 transform
-                    ${isExpanded ? "bg-gradient-to-br from-purple-500 to-pink-500 text-white border-white shadow-lg shadow-purple-500/60 scale-150" : isRelated ? "bg-purple-400/40 text-white border-purple-300 animate-pulse" : "bg-black text-white border-purple-400/50 hover:border-purple-300"}
+                    ${isExpanded ? "bg-gradient-to-br from-purple-500 to-pink-500 text-white border-white shadow-lg shadow-purple-500/60 scale-150" : isRelated ? "bg-purple-400/40 text-white border-purple-300 animate-pulse" : "bg-black text-white border-purple-400/50 hover:border-white hover:scale-125 hover:shadow-xl hover:shadow-purple-500/60 hover:bg-purple-600"}
                   `}
                 >
                   <Icon size={18} />
