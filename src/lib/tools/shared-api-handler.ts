@@ -61,13 +61,14 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
       // 5. Send email to client
       let emailSent = false;
       try {
-        await resend.emails.send({
+        const { error: sendErr } = await resend.emails.send({
           from: "ConvertiLab <bilel@convertilab.com>",
           to: lead.email,
           subject: config.buildEmailSubject(result),
           html: config.buildEmailHtml(lead, result, !!(hasPdf || attachments.length > 0)),
           attachments: attachments.length > 0 ? attachments : undefined,
         });
+        if (sendErr) throw sendErr;
         emailSent = true;
       } catch (err) {
         log(config.toolName, "email_client", err);

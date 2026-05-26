@@ -89,13 +89,14 @@ export async function POST(request: NextRequest) {
     // 6. Send email to client
     let emailSent = false;
     try {
-      await resend.emails.send({
+      const { error: sendErr } = await resend.emails.send({
         from: "ConvertiLab <bilel@convertilab.com>",
         to: email,
         subject: `Votre Audit SEO — ${audit.domain} — Score : ${audit.scores.global}/100 (${audit.grade})`,
         html: getEmailHtml(name, audit.domain, audit.scores.global, audit.grade, audit.gradeLabel, audit.issues.filter(i => i.priority === "critical").length, audit.strengths.slice(0, 3), !!pdfBuffer),
         attachments: [attachment],
       });
+      if (sendErr) throw sendErr;
       emailSent = true;
     } catch (emailError) {
       console.error("[SEO Check][email_client] ERREUR:", emailError instanceof Error ? emailError.message : emailError);
