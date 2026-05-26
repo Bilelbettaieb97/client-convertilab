@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
 const ADMIN_TOKEN = process.env.ADMIN_DASHBOARD_TOKEN || "convertilab-admin-2026";
@@ -16,40 +16,29 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const [
-    seoAudits,
-    speedAudits,
-    designAudits,
-    adsEstimations,
-    siteComparisons,
-    robotsGenerations,
-    sectorReports,
-    mentionsLegales,
-    chatbotLeads,
-  ] = await Promise.all([
-    supabase.from("seo_audits").select("id,name,email,phone,company,domain,score_global,grade,email_sent,created_at,report_html").order("created_at", { ascending: false }),
-    supabase.from("speed_audits").select("id,name,email,phone,company,domain,score_global,grade,email_sent,created_at,report_html").order("created_at", { ascending: false }),
-    supabase.from("design_audits").select("id,name,email,phone,company,domain,score_global,grade,email_sent,created_at,report_html").order("created_at", { ascending: false }),
-    supabase.from("ads_estimations").select("id,name,email,phone,company,sector,budget_monthly,estimated_roas,email_sent,created_at").order("created_at", { ascending: false }),
-    supabase.from("site_comparisons").select("id,name,email,phone,company,domain_a,domain_b,score_a,score_b,winner,email_sent,created_at,report_html").order("created_at", { ascending: false }),
-    supabase.from("robots_generations").select("id,name,email,phone,company,domain,urls_discovered,email_sent,created_at").order("created_at", { ascending: false }),
-    supabase.from("sector_reports").select("id,name,email,phone,company,sector_name,email_sent,created_at").order("created_at", { ascending: false }),
-    supabase.from("mentions_legales").select("id,name,email,phone,company,company_type,siret,email_sent,created_at").order("created_at", { ascending: false }),
-    supabase.from("chatbot_leads").select("id,name,email,phone,domain,score_global,grade,email_sent,created_at").order("created_at", { ascending: false }),
-  ]);
+  const { data, error } = await supabase.rpc("get_outils_dashboard", {
+    admin_token: ADMIN_TOKEN,
+  });
+
+  if (error) {
+    console.error("[admin/outils] error:", error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+
+  const d = data as Record<string, unknown[]>;
 
   return NextResponse.json({
     generated_at: new Date().toISOString(),
     outils: {
-      "SEO Check":         { icon: "🔍", leads: seoAudits.data || [],         cols: ["domain", "score_global", "grade"] },
-      "Speed Check":       { icon: "⚡", leads: speedAudits.data || [],       cols: ["domain", "score_global", "grade"] },
-      "Design Score":      { icon: "🎨", leads: designAudits.data || [],      cols: ["domain", "score_global", "grade"] },
-      "Estimateur Ads":    { icon: "📊", leads: adsEstimations.data || [],    cols: ["sector", "budget_monthly", "estimated_roas"] },
-      "Comparateur Sites": { icon: "⚖️",  leads: siteComparisons.data || [],  cols: ["domain_a", "domain_b", "winner"] },
-      "Robots Generator":  { icon: "⚙️",  leads: robotsGenerations.data || [], cols: ["domain", "urls_discovered"] },
-      "Rapport Sectoriel": { icon: "📈", leads: sectorReports.data || [],     cols: ["sector_name"] },
-      "Mentions Légales":  { icon: "📄", leads: mentionsLegales.data || [],   cols: ["company", "company_type", "siret"] },
-      "Chatbot Audit":     { icon: "🤖", leads: chatbotLeads.data || [],      cols: ["domain", "score_global", "grade"] },
+      "SEO Check":         { icon: "🔍", leads: d.seo_audits || [],         cols: ["domain", "score_global", "grade"] },
+      "Speed Check":       { icon: "⚡", leads: d.speed_audits || [],       cols: ["domain", "score_global", "grade"] },
+      "Design Score":      { icon: "🎨", leads: d.design_audits || [],      cols: ["domain", "score_global", "grade"] },
+      "Estimateur Ads":    { icon: "📊", leads: d.ads_estimations || [],    cols: ["sector", "budget_monthly", "estimated_roas"] },
+      "Comparateur Sites": { icon: "⚖️",  leads: d.site_comparisons || [],  cols: ["domain_a", "domain_b", "winner"] },
+      "Robots Generator":  { icon: "⚙️",  leads: d.robots_generations || [], cols: ["domain", "urls_discovered"] },
+      "Rapport Sectoriel": { icon: "📈", leads: d.sector_reports || [],     cols: ["sector_name"] },
+      "Mentions Légales":  { icon: "📄", leads: d.mentions_legales || [],   cols: ["company", "company_type", "siret"] },
+      "Chatbot Audit":     { icon: "🤖", leads: d.chatbot_leads || [],      cols: ["domain", "score_global", "grade"] },
     },
   });
 }
