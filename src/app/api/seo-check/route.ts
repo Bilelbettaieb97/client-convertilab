@@ -51,36 +51,28 @@ export async function POST(request: NextRequest) {
       console.error("PDF generation failed, fallback to HTML:", err);
     }
 
-    // 4. Store lead + results in Supabase — await pour récupérer l'id
-    let supabaseId: string | null = null;
-    try {
-      const { data: inserted, error: insertErr } = await supabase.from("seo_audits").insert({
-        website_url: audit.url,
-        domain: audit.domain,
-        name,
-        email,
-        phone: phone || null,
-        company: company || null,
-        score_global: audit.scores.global,
-        score_technique: audit.scores.technique,
-        score_onpage: audit.scores.onPage,
-        score_schema: audit.scores.schema,
-        score_mobile: audit.scores.mobile,
-        score_contenu: audit.scores.contenu,
-        score_geo: audit.scores.geo,
-        score_performance: audit.scores.performance,
-        score_securite: audit.scores.securite,
-        grade: audit.grade,
-        issues_count: audit.issues.length,
-        critical_count: audit.issues.filter(i => i.priority === "critical").length,
-        report_html: reportHtml,
-        email_sent: false,
-      }).select("id").single();
-      if (insertErr) console.error("Supabase insert error:", insertErr.message);
-      else supabaseId = (inserted as { id: string } | null)?.id ?? null;
-    } catch (err) {
-      console.error("Supabase insert exception:", err);
-    }
+    // 4. Préparer l'objet à insérer (email_sent sera mis à jour après envoi)
+    const supabaseRow = {
+      website_url: audit.url,
+      domain: audit.domain,
+      name,
+      email,
+      phone: phone || null,
+      company: company || null,
+      score_global: audit.scores.global,
+      score_technique: audit.scores.technique,
+      score_onpage: audit.scores.onPage,
+      score_schema: audit.scores.schema,
+      score_mobile: audit.scores.mobile,
+      score_contenu: audit.scores.contenu,
+      score_geo: audit.scores.geo,
+      score_performance: audit.scores.performance,
+      score_securite: audit.scores.securite,
+      grade: audit.grade,
+      issues_count: audit.issues.length,
+      critical_count: audit.issues.filter(i => i.priority === "critical").length,
+      report_html: reportHtml,
+    };
 
     // 5. Build attachment (PDF if available, HTML fallback)
     const attachment = pdfBuffer
@@ -104,18 +96,14 @@ export async function POST(request: NextRequest) {
         attachments: [attachment],
       });
       emailSent = true;
-
-      // Mise à jour email_sent par id
-      if (supabaseId) {
-        supabase
-          .from("seo_audits")
-          .update({ email_sent: true })
-          .eq("id", supabaseId)
-          .then(() => {}, () => {});
-      }
     } catch (emailError) {
       console.error("Email send failed:", emailError);
     }
+
+    // Insérer en Supabase avec email_sent correct (après l'envoi)
+    supabase.from("seo_audits")
+      .insert({ ...supabaseRow, email_sent: emailSent })
+      .then(() => {}, err => console.error("Supabase insert error:", err));
 
     // 7. Agency notification (non-blocking) + Pipedrive (awaited)
     resend.emails.send({
