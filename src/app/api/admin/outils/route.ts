@@ -10,10 +10,20 @@ const supabase = createClient(
 
 const ADMIN_TOKEN = process.env.ADMIN_DASHBOARD_TOKEN || "convertilab-admin-2026";
 
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204, headers: CORS_HEADERS });
+}
+
 export async function GET(request: NextRequest) {
   const token = request.nextUrl.searchParams.get("token");
   if (token !== ADMIN_TOKEN) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401, headers: CORS_HEADERS });
   }
 
   const { data, error } = await supabase.rpc("get_outils_dashboard", {
@@ -22,7 +32,7 @@ export async function GET(request: NextRequest) {
 
   if (error) {
     console.error("[admin/outils] error:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: error.message }, { status: 500, headers: CORS_HEADERS });
   }
 
   const d = data as Record<string, unknown[]>;
@@ -40,5 +50,5 @@ export async function GET(request: NextRequest) {
       "Mentions Légales":  { icon: "📄", leads: d.mentions_legales || [],   cols: ["company", "company_type", "siret"] },
       "Chatbot Audit":     { icon: "🤖", leads: d.chatbot_leads || [],      cols: ["domain", "score_global", "grade"] },
     },
-  });
+  }, { headers: CORS_HEADERS });
 }
