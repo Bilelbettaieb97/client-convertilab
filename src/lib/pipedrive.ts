@@ -1,6 +1,15 @@
 const PIPEDRIVE_TOKEN = process.env.PIPEDRIVE_API_TOKEN;
 const PIPEDRIVE_BASE = "https://api.pipedrive.com/v1";
 
+// Stage IDs — premier stage de chaque pipeline
+const STAGE_FORMULAIRES = 12; // Pipeline "Formulaires" → Nouveau
+const STAGE_OUTILS = 16;      // Pipeline "Outils" → Nouveau
+
+const FORMULAIRES_SOURCES = new Set([
+  "Contact", "Newsletter", "Devis", "Demande Maquette",
+  "Estimation Prix", "Offre Mensuelle", "HeroMiniForm",
+]);
+
 function formatValue(v: unknown): string {
   if (v === null || v === undefined || v === "") return "—";
   if (typeof v === "boolean") return v ? "Oui" : "Non";
@@ -48,37 +57,40 @@ export async function pushToPipedrive(
       personId = personData.data?.id ?? null;
     }
 
-    // Build note from extra fields
-    const noteLines = Object.entries(fields)
-      .filter(([, v]) => v !== null && v !== undefined && v !== "")
-      .map(([k, v]) => `• ${k.replace(/_/g, " ")}: ${formatValue(v)}`);
+    // Route vers le bon pipeline
+    const stageId = FORMULAIRES_SOURCES.has(formType) ? STAGE_FORMULAIRES : STAGE_OUTILS;
 
-    const noteContent = [
-      `Source: ${formType}`,
-      `Date: ${new Date().toLocaleString("fr-FR")}`,
-      ...(noteLines.length ? ["", ...noteLines] : []),
-    ].join("\n");
-
-    // Create lead
-    const leadBody: Record<string, unknown> = {
+    // Créer le deal dans le bon pipeline
+    const dealBody: Record<string, unknown> = {
       title: `${formType}${name ? ` — ${name}` : email ? ` — ${email}` : ""}`,
+      stage_id: stageId,
       ...(personId ? { person_id: personId } : {}),
     };
 
-    const leadRes = await fetch(`${PIPEDRIVE_BASE}/leads?api_token=${PIPEDRIVE_TOKEN}`, {
+    const dealRes = await fetch(`${PIPEDRIVE_BASE}/deals?api_token=${PIPEDRIVE_TOKEN}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(leadBody),
+      body: JSON.stringify(dealBody),
     });
-    const leadData = await leadRes.json();
-    const leadId = leadData.data?.id;
+    const dealData = await dealRes.json();
+    const dealId = dealData.data?.id;
 
-    // Add note to lead
-    if (leadId) {
+    // Ajouter une note avec tous les détails
+    if (dealId) {
+      const noteLines = Object.entries(fields)
+        .filter(([, v]) => v !== null && v !== undefined && v !== "")
+        .map(([k, v]) => `• ${k.replace(/_/g, " ")}: ${formatValue(v)}`);
+
+      const noteContent = [
+        `Source: ${formType}`,
+        `Date: ${new Date().toLocaleString("fr-FR")}`,
+        ...(noteLines.length ? ["", ...noteLines] : []),
+      ].join("\n");
+
       await fetch(`${PIPEDRIVE_BASE}/notes?api_token=${PIPEDRIVE_TOKEN}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content: noteContent, lead_id: leadId }),
+        body: JSON.stringify({ content: noteContent, deal_id: dealId }),
       });
     }
   } catch (err) {
