@@ -26,6 +26,9 @@ export interface MentionsLegalesResult {
   generatedAt: string;
   companyName: string;
   companyType: string;
+  siret: string;
+  address: string;
+  host: string;
 }
 
 const HOST_INFO: Record<string, { name: string; address: string }> = {
@@ -222,5 +225,8 @@ export function generateMentionsLegales(input: MentionsLegalesInput): MentionsLe
     generatedAt,
     companyName: input.companyName,
     companyType: companyTypeLabel,
+    siret: input.siret,
+    address: input.address,
+    host: input.host,
   };
 }

@@ -90,8 +90,11 @@ export const POST = createToolHandler<MentionsLegalesApiInput, MentionsLegalesRe
 
   buildSupabaseRow(lead: LeadInfo, result: MentionsLegalesResult) {
     return {
-      company_name: result.companyName,
+      company: result.companyName,
       company_type: result.companyType,
+      siret: result.siret,
+      address: result.address,
+      host: result.host,
     };
   },
 
