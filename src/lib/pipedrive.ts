@@ -1,14 +1,33 @@
 const PIPEDRIVE_TOKEN = process.env.PIPEDRIVE_API_TOKEN;
 const PIPEDRIVE_BASE = "https://api.pipedrive.com/v1";
 
-// Stage IDs — premier stage de chaque pipeline
+// Premier stage de chaque pipeline
 const STAGE_FORMULAIRES = 12; // Pipeline "Formulaires" → Nouveau
 const STAGE_OUTILS = 16;      // Pipeline "Outils" → Nouveau
 
-const FORMULAIRES_SOURCES = new Set([
-  "Contact", "Newsletter", "Devis", "Demande Maquette",
-  "Estimation Prix", "Offre Mensuelle", "HeroMiniForm",
-]);
+// Champ custom "Source" sur les deals
+const SOURCE_FIELD_KEY = "5e4c0a430208828f8b265769eb91b4af32c3a205";
+
+// Mapping formType → option ID du champ Source
+const SOURCE_OPTIONS: Record<string, number> = {
+  "Contact": 61,
+  "Newsletter": 62,
+  "Devis": 63,
+  "Demande Maquette": 64,
+  "Estimation Prix": 65,
+  "Offre Mensuelle": 66,
+  "HeroMiniForm": 67,
+  "Estimateur Ads": 68,
+  "Design Score": 69,
+  "SEO Check": 70,
+  "Comparateur Sites": 71,
+  "Speed Check": 72,
+  "Robots Generator": 73,
+  "Mentions Legales": 74,
+  "Rapport Sectoriel": 75,
+};
+
+const FORMULAIRES_SOURCES = new Set(Object.keys(SOURCE_OPTIONS).slice(0, 7));
 
 function formatValue(v: unknown): string {
   if (v === null || v === undefined || v === "") return "—";
@@ -57,14 +76,15 @@ export async function pushToPipedrive(
       personId = personData.data?.id ?? null;
     }
 
-    // Route vers le bon pipeline
+    // Router vers le bon pipeline + champ Source
     const stageId = FORMULAIRES_SOURCES.has(formType) ? STAGE_FORMULAIRES : STAGE_OUTILS;
+    const sourceOptionId = SOURCE_OPTIONS[formType] ?? null;
 
-    // Créer le deal dans le bon pipeline
     const dealBody: Record<string, unknown> = {
       title: `${formType}${name ? ` — ${name}` : email ? ` — ${email}` : ""}`,
       stage_id: stageId,
       ...(personId ? { person_id: personId } : {}),
+      ...(sourceOptionId ? { [SOURCE_FIELD_KEY]: sourceOptionId } : {}),
     };
 
     const dealRes = await fetch(`${PIPEDRIVE_BASE}/deals?api_token=${PIPEDRIVE_TOKEN}`, {
