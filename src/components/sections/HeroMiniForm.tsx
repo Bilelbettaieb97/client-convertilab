@@ -66,7 +66,7 @@ export default function HeroMiniForm() {
             source: "hero-mini-form",
           },
         }),
-      }).catch(() => {});
+      }).catch((err) => console.error("[notify] erreur envoi:", err));
 
       setIsSuccess(true);
     } catch (err) {

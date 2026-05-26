@@ -161,7 +161,7 @@ const ContactForm = () => {
             urgency: formData.urgency,
           },
         }),
-      }).catch(() => {});
+      }).catch((err) => console.error("[notify] erreur envoi:", err));
 
       if (typeof window !== 'undefined' && (window as any).trackFormConversion) {
         (window as any).trackFormConversion();

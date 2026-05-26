@@ -229,7 +229,7 @@ export default function DevisClient() {
             message: formData.message,
           },
         }),
-      }).catch(() => {});
+      }).catch((err) => console.error("[notify] erreur envoi:", err));
 
       const end = Date.now() + 2500;
       const frame = () => {

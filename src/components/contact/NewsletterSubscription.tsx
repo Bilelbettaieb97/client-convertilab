@@ -56,7 +56,7 @@ const NewsletterSubscription = () => {
           formType: "Newsletter",
           email: trimmedEmail,
         }),
-      }).catch(() => {});
+      }).catch((err) => console.error("[notify] erreur envoi:", err));
 
       // Track Google Ads conversion
       if (typeof window !== 'undefined' && (window as any).trackFormConversion) {

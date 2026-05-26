@@ -26,6 +26,7 @@ async function generatePdf(audit: SeoAuditResult): Promise<Buffer> {
 }
 
 export async function POST(request: NextRequest) {
+  const warnings: string[] = [];
   try {
     const body = await request.json();
     const { url, name, email, phone, company } = body;
@@ -97,13 +98,17 @@ export async function POST(request: NextRequest) {
       });
       emailSent = true;
     } catch (emailError) {
-      console.error("Email send failed:", emailError);
+      console.error("[SEO Check][email_client] ERREUR:", emailError instanceof Error ? emailError.message : emailError);
+      warnings.push("email_client_failed");
     }
 
     // Insérer en Supabase avec email_sent correct — await pour compléter avant return
     const { error: insertErr } = await supabase.from("seo_audits")
       .insert({ ...supabaseRow, email_sent: emailSent });
-    if (insertErr) console.error("Supabase insert error:", insertErr.message);
+    if (insertErr) {
+      console.error("[SEO Check][supabase_insert] ERREUR:", insertErr.message);
+      warnings.push("supabase_insert_failed");
+    }
 
     // 7. Agency notification (non-blocking) + Pipedrive (awaited)
     resend.emails.send({
@@ -122,18 +127,25 @@ export async function POST(request: NextRequest) {
         <p><strong>Problemes critiques :</strong> ${audit.issues.filter(i => i.priority === "critical").length}</p>
         <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
       `,
-    }).then(() => {}, () => {});
+    }).then(
+      () => {},
+      (err) => console.error("[SEO Check][email_agency] ERREUR:", err instanceof Error ? err.message : err)
+    );
 
     await pushToPipedrive("SEO Check", name, email, phone, company, {
       domain: audit.domain,
       score_global: audit.scores.global,
       grade: audit.grade,
-    }).catch(() => {});
+    }).catch((err) => {
+      console.error("[SEO Check][pipedrive] ERREUR:", err instanceof Error ? err.message : err);
+      warnings.push("pipedrive_failed");
+    });
 
     // 8. Return results to frontend
     return NextResponse.json({
       success: true,
       emailSent,
+      ...(warnings.length ? { warnings } : {}),
       pdfBase64: pdfBuffer && pdfBuffer.length > 0 ? pdfBuffer.toString("base64") : null,
       audit: {
         domain: audit.domain,
@@ -147,7 +159,7 @@ export async function POST(request: NextRequest) {
       },
     });
   } catch (error) {
-    console.error("SEO Check error:", error);
+    console.error("[SEO Check][fatal] ERREUR:", error instanceof Error ? error.message : error);
     return NextResponse.json(
       { error: "Une erreur est survenue lors de l'analyse. Verifiez l'URL et reessayez." },
       { status: 500 }

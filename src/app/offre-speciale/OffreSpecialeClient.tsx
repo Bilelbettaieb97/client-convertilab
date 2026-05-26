@@ -102,7 +102,7 @@ export default function OffreSpecialeClient() {
               message: formData.message,
             },
           }),
-        }).catch(() => {});
+        }).catch((err) => console.error("[notify] erreur envoi:", err));
 
         // Décrémenter immédiatement côté client
         setSpotsRemaining((prev) => Math.max(0, prev - 1));

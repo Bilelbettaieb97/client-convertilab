@@ -100,7 +100,7 @@ export default function DemandeMaquetteClient() {
             description: form.description.trim() || null,
           },
         }),
-      }).catch(() => {});
+      }).catch((err) => console.error("[notify] erreur envoi:", err));
       setIsSubmitted(true);
     } catch {
       toast({ title: "Erreur", description: "Une erreur est survenue. Reessayez ou contactez-nous directement.", variant: "destructive" });

@@ -11,8 +11,15 @@ const supabase = createClient(
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+function log(tool: string, step: string, err: unknown) {
+  const msg = err instanceof Error ? err.message : String(err);
+  console.error(`[${tool}][${step}] ERREUR: ${msg}`);
+}
+
 export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TResult>) {
   return async function POST(request: NextRequest) {
+    const warnings: string[] = [];
+
     try {
       const body = await request.json();
 
@@ -33,7 +40,8 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
       try {
         pdfBuffer = await config.generatePdf(result);
       } catch (err) {
-        console.error(`[${config.toolName}] PDF generation failed:`, err);
+        log(config.toolName, "PDF", err);
+        warnings.push("pdf_generation_failed");
       }
 
       // 4. Build attachments
@@ -61,11 +69,12 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           attachments: attachments.length > 0 ? attachments : undefined,
         });
         emailSent = true;
-      } catch (emailError) {
-        console.error(`[${config.toolName}] Email failed:`, emailError);
+      } catch (err) {
+        log(config.toolName, "email_client", err);
+        warnings.push("email_client_failed");
       }
 
-      // 6. Store in Supabase avec email_sent correct — await pour compléter avant return
+      // 6. Store in Supabase avec email_sent correct — awaité pour garantir la complétion
       const row = config.buildSupabaseRow(lead, result);
       const { error: insertErr } = await supabase
         .from(config.tableName)
@@ -77,9 +86,12 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           company: lead.company || null,
           email_sent: emailSent,
         });
-      if (insertErr) console.error(`[${config.toolName}] Supabase insert error:`, insertErr.message);
+      if (insertErr) {
+        log(config.toolName, "supabase_insert", insertErr.message);
+        warnings.push("supabase_insert_failed");
+      }
 
-      // 7. Agency notification (non-blocking) + Pipedrive (awaited)
+      // 7. Agency notification (fire-and-forget mais erreurs loggées)
       resend.emails.send({
         from: "ConvertiLab <bilel@convertilab.com>",
         to: ["contact@convertilab.com", "convertilab@gmail.com"],
@@ -92,8 +104,12 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           <p><strong>Entreprise :</strong> ${lead.company || "Non renseigne"}</p>
           <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
         `,
-      }).then(() => {}, () => {});
+      }).then(
+        () => {},
+        (err) => log(config.toolName, "email_agency", err)
+      );
 
+      // 8. Pipedrive — awaité pour garantir la complétion, erreurs loggées
       await pushToPipedrive(
         config.toolName,
         lead.name,
@@ -101,17 +117,21 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         lead.phone,
         lead.company,
         config.buildPipedriveFields ? config.buildPipedriveFields(result) : {}
-      ).catch(() => {});
+      ).catch((err) => {
+        log(config.toolName, "pipedrive", err);
+        warnings.push("pipedrive_failed");
+      });
 
-      // 8. Respond
+      // 9. Respond
       return NextResponse.json({
         success: true,
         emailSent,
+        ...(warnings.length ? { warnings } : {}),
         pdfBase64: pdfBuffer && pdfBuffer.length > 0 ? pdfBuffer.toString("base64") : null,
         ...config.buildResponsePayload(result),
       });
     } catch (error) {
-      console.error(`[${config.toolName}] Error:`, error);
+      log(config.toolName, "fatal", error);
       return NextResponse.json(
         { error: "Une erreur est survenue. Verifiez vos informations et reessayez." },
         { status: 500 }
