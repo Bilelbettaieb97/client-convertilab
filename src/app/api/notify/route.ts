@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
 
     await resend.emails.send({
       from: "ConvertiLab <bilel@convertilab.com>",
-      to: "contact@convertilab.com",
+      to: ["contact@convertilab.com", "convertilab@gmail.com"],
       replyTo: email,
       subject,
       html,
