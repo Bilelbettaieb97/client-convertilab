@@ -51,29 +51,36 @@ export async function POST(request: NextRequest) {
       console.error("PDF generation failed, fallback to HTML:", err);
     }
 
-    // 4. Store lead + results in Supabase
-    supabase.from("seo_audits").insert({
-      website_url: audit.url,
-      domain: audit.domain,
-      name,
-      email,
-      phone: phone || null,
-      company: company || null,
-      score_global: audit.scores.global,
-      score_technique: audit.scores.technique,
-      score_onpage: audit.scores.onPage,
-      score_schema: audit.scores.schema,
-      score_mobile: audit.scores.mobile,
-      score_contenu: audit.scores.contenu,
-      score_geo: audit.scores.geo,
-      score_performance: audit.scores.performance,
-      score_securite: audit.scores.securite,
-      grade: audit.grade,
-      issues_count: audit.issues.length,
-      critical_count: audit.issues.filter(i => i.priority === "critical").length,
-      report_html: reportHtml,
-      email_sent: false,
-    }).then(() => {}, err => console.error("Supabase insert error:", err));
+    // 4. Store lead + results in Supabase — await pour récupérer l'id
+    let supabaseId: string | null = null;
+    try {
+      const { data: inserted, error: insertErr } = await supabase.from("seo_audits").insert({
+        website_url: audit.url,
+        domain: audit.domain,
+        name,
+        email,
+        phone: phone || null,
+        company: company || null,
+        score_global: audit.scores.global,
+        score_technique: audit.scores.technique,
+        score_onpage: audit.scores.onPage,
+        score_schema: audit.scores.schema,
+        score_mobile: audit.scores.mobile,
+        score_contenu: audit.scores.contenu,
+        score_geo: audit.scores.geo,
+        score_performance: audit.scores.performance,
+        score_securite: audit.scores.securite,
+        grade: audit.grade,
+        issues_count: audit.issues.length,
+        critical_count: audit.issues.filter(i => i.priority === "critical").length,
+        report_html: reportHtml,
+        email_sent: false,
+      }).select("id").single();
+      if (insertErr) console.error("Supabase insert error:", insertErr.message);
+      else supabaseId = (inserted as { id: string } | null)?.id ?? null;
+    } catch (err) {
+      console.error("Supabase insert exception:", err);
+    }
 
     // 5. Build attachment (PDF if available, HTML fallback)
     const attachment = pdfBuffer
@@ -98,15 +105,14 @@ export async function POST(request: NextRequest) {
       });
       emailSent = true;
 
-      // Update email_sent in background
-      supabase
-        .from("seo_audits")
-        .update({ email_sent: true })
-        .eq("email", email)
-        .eq("domain", audit.domain)
-        .order("created_at", { ascending: false })
-        .limit(1)
-        .then(() => {}, () => {});
+      // Mise à jour email_sent par id
+      if (supabaseId) {
+        supabase
+          .from("seo_audits")
+          .update({ email_sent: true })
+          .eq("id", supabaseId)
+          .then(() => {}, () => {});
+      }
     } catch (emailError) {
       console.error("Email send failed:", emailError);
     }

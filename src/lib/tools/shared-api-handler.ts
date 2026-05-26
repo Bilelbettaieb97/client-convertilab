@@ -36,16 +36,27 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         console.error(`[${config.toolName}] PDF generation failed:`, err);
       }
 
-      // 4. Store in Supabase (non-blocking)
+      // 4. Store in Supabase — await pour récupérer l'id
       const row = config.buildSupabaseRow(lead, result);
-      supabase.from(config.tableName).insert({
-        ...row,
-        name: lead.name,
-        email: lead.email,
-        phone: lead.phone || null,
-        company: lead.company || null,
-        email_sent: false,
-      }).then(() => {}, (err) => console.error(`[${config.toolName}] Supabase error:`, err));
+      let supabaseId: string | null = null;
+      try {
+        const { data: inserted, error: insertErr } = await supabase
+          .from(config.tableName)
+          .insert({
+            ...row,
+            name: lead.name,
+            email: lead.email,
+            phone: lead.phone || null,
+            company: lead.company || null,
+            email_sent: false,
+          })
+          .select("id")
+          .single();
+        if (insertErr) console.error(`[${config.toolName}] Supabase insert error:`, insertErr.message);
+        else supabaseId = (inserted as { id: string } | null)?.id ?? null;
+      } catch (err) {
+        console.error(`[${config.toolName}] Supabase insert exception:`, err);
+      }
 
       // 5. Build attachments
       const attachments: { filename: string; content: Buffer }[] = [];
@@ -73,14 +84,14 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         });
         emailSent = true;
 
-        // Update email_sent
-        supabase
-          .from(config.tableName)
-          .update({ email_sent: true })
-          .eq("email", lead.email)
-          .order("created_at", { ascending: false })
-          .limit(1)
-          .then(() => {}, () => {});
+        // Mise à jour email_sent par id (seule méthode fiable avec PostgREST)
+        if (supabaseId) {
+          supabase
+            .from(config.tableName)
+            .update({ email_sent: true })
+            .eq("id", supabaseId)
+            .then(() => {}, (err) => console.error(`[${config.toolName}] email_sent update error:`, err));
+        }
       } catch (emailError) {
         console.error(`[${config.toolName}] Email failed:`, emailError);
       }
