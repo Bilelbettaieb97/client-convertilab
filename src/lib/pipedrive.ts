@@ -83,6 +83,8 @@ export async function pushToPipedrive(
     const dealBody: Record<string, unknown> = {
       title: `${formType}${name ? ` — ${name}` : email ? ` — ${email}` : ""}`,
       stage_id: stageId,
+      channel: 3, // Web forms
+      origin: "WebForms",
       ...(personId ? { person_id: personId } : {}),
       ...(sourceOptionId ? { [SOURCE_FIELD_KEY]: sourceOptionId } : {}),
     };
