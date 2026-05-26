@@ -6,6 +6,7 @@ import { Resend } from "resend";
 import { renderToBuffer } from "@react-pdf/renderer";
 import React from "react";
 import { SeoAuditPdf } from "@/lib/seo/pdf-template";
+import { pushToPipedrive } from "@/lib/pipedrive";
 import type { SeoAuditResult } from "@/lib/seo/analyzer";
 
 export const maxDuration = 60;
@@ -110,10 +111,10 @@ export async function POST(request: NextRequest) {
       console.error("Email send failed:", emailError);
     }
 
-    // 7. Agency notification (non-blocking)
+    // 7. Agency notification (non-blocking) + Pipedrive (awaited)
     resend.emails.send({
       from: "ConvertiLab <bilel@convertilab.com>",
-      to: "contact@convertilab.com",
+      to: ["contact@convertilab.com", "convertilab@gmail.com"],
       subject: `Nouveau lead SEO Check — ${name} — ${audit.domain} (${audit.scores.global}/100)`,
       html: `
         <h2>Nouveau lead via SEO Check</h2>
@@ -128,6 +129,12 @@ export async function POST(request: NextRequest) {
         <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
       `,
     }).then(() => {}, () => {});
+
+    await pushToPipedrive("SEO Check", name, email, phone, company, {
+      domain: audit.domain,
+      score_global: audit.scores.global,
+      grade: audit.grade,
+    }).catch(() => {});
 
     // 8. Return results to frontend
     return NextResponse.json({

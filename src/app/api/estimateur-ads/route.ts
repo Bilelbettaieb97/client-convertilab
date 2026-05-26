@@ -88,7 +88,6 @@ export const POST = createToolHandler<AdsEstimatorInput, AdsProjectionResult>({
   buildSupabaseRow(lead: LeadInfo, result: AdsProjectionResult) {
     return {
       sector: result.sector,
-      sector_label: result.sectorLabel,
       city: result.city || null,
       budget_monthly: result.budgetMonthly,
       avg_basket: result.avgBasket,
@@ -97,7 +96,6 @@ export const POST = createToolHandler<AdsEstimatorInput, AdsProjectionResult>({
       estimated_leads: result.monthlyLeads,
       estimated_revenue: result.monthlyRevenue,
       estimated_roas: result.monthlyRoas,
-      grade: result.grade,
     };
   },
 

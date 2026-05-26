@@ -75,11 +75,7 @@ export const POST = createToolHandler<SpeedCheckInput, SpeedAuditResult>({
       score_blocking: audit.scores.blocking,
       score_practices: audit.scores.practices,
       grade: audit.grade,
-      grade_label: audit.gradeLabel,
-      response_time: audit.responseTime,
-      page_weight: audit.pageWeight,
       issues_count: audit.issues.length,
-      critical_count: audit.issues.filter(i => i.priority === "critical").length,
     };
   },
 

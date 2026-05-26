@@ -85,7 +85,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         console.error(`[${config.toolName}] Email failed:`, emailError);
       }
 
-      // 7. Agency notification + Pipedrive (non-blocking)
+      // 7. Agency notification (non-blocking) + Pipedrive (awaited)
       resend.emails.send({
         from: "ConvertiLab <bilel@convertilab.com>",
         to: ["contact@convertilab.com", "convertilab@gmail.com"],
@@ -100,7 +100,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         `,
       }).then(() => {}, () => {});
 
-      pushToPipedrive(
+      await pushToPipedrive(
         config.toolName,
         lead.name,
         lead.email,

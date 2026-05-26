@@ -76,13 +76,7 @@ export const POST = createToolHandler<DesignScoreInput, DesignAuditResult>({
       score_images: audit.scores.images,
       score_navigation: audit.scores.navigation,
       grade: audit.grade,
-      grade_label: audit.gradeLabel,
-      cta_count: audit.ctaCount,
-      form_count: audit.formCount,
-      has_testimonials: audit.hasTestimonials,
-      has_legal_links: audit.hasLegalLinks,
       issues_count: audit.issues.length,
-      critical_count: audit.issues.filter(i => i.priority === "critical").length,
     };
   },
 
