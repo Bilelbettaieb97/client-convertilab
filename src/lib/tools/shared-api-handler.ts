@@ -65,9 +65,9 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         console.error(`[${config.toolName}] Email failed:`, emailError);
       }
 
-      // 6. Store in Supabase avec email_sent correct (après l'envoi)
+      // 6. Store in Supabase avec email_sent correct — await pour compléter avant return
       const row = config.buildSupabaseRow(lead, result);
-      supabase
+      const { error: insertErr } = await supabase
         .from(config.tableName)
         .insert({
           ...row,
@@ -76,8 +76,8 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           phone: lead.phone || null,
           company: lead.company || null,
           email_sent: emailSent,
-        })
-        .then(() => {}, (err) => console.error(`[${config.toolName}] Supabase insert error:`, err));
+        });
+      if (insertErr) console.error(`[${config.toolName}] Supabase insert error:`, insertErr.message);
 
       // 7. Agency notification (non-blocking) + Pipedrive (awaited)
       resend.emails.send({

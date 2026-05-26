@@ -100,10 +100,10 @@ export async function POST(request: NextRequest) {
       console.error("Email send failed:", emailError);
     }
 
-    // Insérer en Supabase avec email_sent correct (après l'envoi)
-    supabase.from("seo_audits")
-      .insert({ ...supabaseRow, email_sent: emailSent })
-      .then(() => {}, err => console.error("Supabase insert error:", err));
+    // Insérer en Supabase avec email_sent correct — await pour compléter avant return
+    const { error: insertErr } = await supabase.from("seo_audits")
+      .insert({ ...supabaseRow, email_sent: emailSent });
+    if (insertErr) console.error("Supabase insert error:", insertErr.message);
 
     // 7. Agency notification (non-blocking) + Pipedrive (awaited)
     resend.emails.send({
