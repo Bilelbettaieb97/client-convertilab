@@ -79,6 +79,15 @@ export const POST = createToolHandler<SpeedCheckInput, SpeedAuditResult>({
     };
   },
 
+  buildPipedriveFields(audit: SpeedAuditResult) {
+    return {
+      domain: audit.domain,
+      score_global: audit.scores.global,
+      grade: audit.grade,
+      critical_count: audit.issues.filter(i => i.priority === "critical").length,
+    };
+  },
+
   buildResponsePayload(audit: SpeedAuditResult) {
     return {
       audit: {

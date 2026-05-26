@@ -29,6 +29,38 @@ const SOURCE_OPTIONS: Record<string, number> = {
 
 const FORMULAIRES_SOURCES = new Set(Object.keys(SOURCE_OPTIONS).slice(0, 7));
 
+// Custom deal field keys (created via API)
+const FIELD_DOMAIN    = "43d9aed9b2c3498f85e3a1dd157ab30609c406ef"; // varchar
+const FIELD_GRADE     = "ba36aa8159c44a6b32579a2250ef74cc7c274fa5"; // varchar
+const FIELD_SCORE     = "4104ebb8631c9fe672a8e7240e14e6795ccad32c"; // double
+const FIELD_CRITICAL  = "5da08ebe43bda52c48386dcf3133a36c4ec3b4a5"; // double
+const FIELD_SECTOR    = "66df0173eeff6376c4893d7d39ad54515b043fe9"; // varchar
+const FIELD_ROAS      = "7181af71caa328c9dd915401cda03384617fa7ea"; // double
+const FIELD_BUDGET    = "838db9b0947b27640c671689346d3662a9c90556"; // double
+const FIELD_LEADS_MO  = "4409c52e261aa453f0bddaac5510685ce3c5d78c"; // double
+const FIELD_SITE_A    = "13fd62cc581f8197dac4162a5ccca1e4e5f29bed"; // varchar
+const FIELD_SITE_B    = "9ac7599082e38ed68231541c4cf52bb05f8837c2"; // varchar
+const FIELD_WINNER    = "bc30697022e9d94fe831a41d35d0aea02b7b8d41"; // varchar
+const FIELD_SIRET     = "e298b82cc05176257da713a810fb4e49e143241e"; // varchar
+const FIELD_LEGAL     = "e9225f3686fb55a748638ee855942fa9e1f3ab89"; // varchar
+
+// Maps incoming `fields` keys to Pipedrive custom field keys
+const FIELD_MAP: Record<string, string> = {
+  domain:          FIELD_DOMAIN,
+  grade:           FIELD_GRADE,
+  score_global:    FIELD_SCORE,
+  critical_count:  FIELD_CRITICAL,
+  sector:          FIELD_SECTOR,
+  roas:            FIELD_ROAS,
+  budget_monthly:  FIELD_BUDGET,
+  leads_monthly:   FIELD_LEADS_MO,
+  site_a:          FIELD_SITE_A,
+  site_b:          FIELD_SITE_B,
+  winner:          FIELD_WINNER,
+  siret:           FIELD_SIRET,
+  company_type:    FIELD_LEGAL,
+};
+
 function formatValue(v: unknown): string {
   if (v === null || v === undefined || v === "") return "—";
   if (typeof v === "boolean") return v ? "Oui" : "Non";
@@ -79,15 +111,23 @@ export async function pushToPipedrive(
     // Router vers le bon pipeline + champ Source
     const stageId = FORMULAIRES_SOURCES.has(formType) ? STAGE_FORMULAIRES : STAGE_OUTILS;
     const sourceOptionId = SOURCE_OPTIONS[formType] ?? null;
-
     const isFormulaires = FORMULAIRES_SOURCES.has(formType);
+
+    // Map known fields to Pipedrive custom field keys
+    const customFields: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(fields)) {
+      if (v !== null && v !== undefined && v !== "" && FIELD_MAP[k]) {
+        customFields[FIELD_MAP[k]] = v;
+      }
+    }
 
     const dealBody: Record<string, unknown> = {
       title: `${formType}${name ? ` — ${name}` : email ? ` — ${email}` : ""}`,
       stage_id: stageId,
-      channel: isFormulaires ? 3 : 6, // 3 = Web forms, 6 = Web visitors
+      channel: isFormulaires ? 3 : 6,
       ...(personId ? { person_id: personId } : {}),
       ...(sourceOptionId ? { [SOURCE_FIELD_KEY]: sourceOptionId } : {}),
+      ...customFields,
     };
 
     const dealRes = await fetch(`${PIPEDRIVE_BASE}/deals?api_token=${PIPEDRIVE_TOKEN}`, {
@@ -98,7 +138,7 @@ export async function pushToPipedrive(
     const dealData = await dealRes.json();
     const dealId = dealData.data?.id;
 
-    // Ajouter une note avec tous les détails
+    // Note de synthèse avec tous les détails non mappés + date
     if (dealId) {
       const noteLines = Object.entries(fields)
         .filter(([, v]) => v !== null && v !== undefined && v !== "")

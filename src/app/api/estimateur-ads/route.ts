@@ -99,6 +99,15 @@ export const POST = createToolHandler<AdsEstimatorInput, AdsProjectionResult>({
     };
   },
 
+  buildPipedriveFields(result: AdsProjectionResult) {
+    return {
+      sector: result.sector,
+      budget_monthly: result.budgetMonthly,
+      roas: result.monthlyRoas,
+      leads_monthly: result.monthlyLeads,
+    };
+  },
+
   buildResponsePayload(result: AdsProjectionResult) {
     return {
       projection: {

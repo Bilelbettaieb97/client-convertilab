@@ -98,6 +98,13 @@ export const POST = createToolHandler<MentionsLegalesApiInput, MentionsLegalesRe
     };
   },
 
+  buildPipedriveFields(result: MentionsLegalesResult) {
+    return {
+      siret: result.siret,
+      company_type: result.companyType,
+    };
+  },
+
   buildResponsePayload(result: MentionsLegalesResult) {
     return {
       result: {

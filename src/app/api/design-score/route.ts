@@ -80,6 +80,15 @@ export const POST = createToolHandler<DesignScoreInput, DesignAuditResult>({
     };
   },
 
+  buildPipedriveFields(audit: DesignAuditResult) {
+    return {
+      domain: audit.domain,
+      score_global: audit.scores.global,
+      grade: audit.grade,
+      critical_count: audit.issues.filter(i => i.priority === "critical").length,
+    };
+  },
+
   buildResponsePayload(audit: DesignAuditResult) {
     return {
       audit: {

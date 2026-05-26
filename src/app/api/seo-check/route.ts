@@ -136,6 +136,7 @@ export async function POST(request: NextRequest) {
       domain: audit.domain,
       score_global: audit.scores.global,
       grade: audit.grade,
+      critical_count: audit.issues.filter(i => i.priority === "critical").length,
     }).catch((err) => {
       console.error("[SEO Check][pipedrive] ERREUR:", err instanceof Error ? err.message : err);
       warnings.push("pipedrive_failed");

@@ -75,6 +75,12 @@ export const POST = createToolHandler<RobotsApiInput, RobotsResult>({
     };
   },
 
+  buildPipedriveFields(result: RobotsResult) {
+    return {
+      domain: result.domain,
+    };
+  },
+
   buildResponsePayload(result: RobotsResult) {
     return {
       result: {

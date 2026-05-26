@@ -68,6 +68,12 @@ export const POST = createToolHandler<SectorReportInput, SectorReportResult>({
     };
   },
 
+  buildPipedriveFields(report: SectorReportResult) {
+    return {
+      sector: report.sector.slug,
+    };
+  },
+
   buildResponsePayload(report: SectorReportResult) {
     return {
       report: {

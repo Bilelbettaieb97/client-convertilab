@@ -80,6 +80,15 @@ export const POST = createToolHandler<ComparisonInput, ComparisonResult>({
     };
   },
 
+  buildPipedriveFields(result: ComparisonResult) {
+    return {
+      site_a: result.siteA.domain,
+      site_b: result.siteB.domain,
+      score_global: Math.max(result.siteA.scores.global, result.siteB.scores.global),
+      winner: result.winner === "A" ? result.siteA.domain : result.winner === "B" ? result.siteB.domain : "Egalite",
+    };
+  },
+
   buildResponsePayload(result: ComparisonResult) {
     return {
       comparison: {
