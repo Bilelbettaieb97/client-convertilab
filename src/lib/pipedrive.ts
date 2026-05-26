@@ -80,11 +80,13 @@ export async function pushToPipedrive(
     const stageId = FORMULAIRES_SOURCES.has(formType) ? STAGE_FORMULAIRES : STAGE_OUTILS;
     const sourceOptionId = SOURCE_OPTIONS[formType] ?? null;
 
+    const isFormulaires = FORMULAIRES_SOURCES.has(formType);
+
     const dealBody: Record<string, unknown> = {
       title: `${formType}${name ? ` — ${name}` : email ? ` — ${email}` : ""}`,
       stage_id: stageId,
-      channel: 3, // Web forms
-      origin: "WebForms",
+      channel: isFormulaires ? 3 : 6, // 3 = Web forms, 6 = Web visitors
+      origin: isFormulaires ? "WebForms" : "WebVisitors",
       ...(personId ? { person_id: personId } : {}),
       ...(sourceOptionId ? { [SOURCE_FIELD_KEY]: sourceOptionId } : {}),
     };
