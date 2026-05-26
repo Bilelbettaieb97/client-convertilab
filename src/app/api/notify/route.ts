@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import { pushToPipedrive } from "@/lib/pipedrive";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 10;
+export const maxDuration = 30;
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

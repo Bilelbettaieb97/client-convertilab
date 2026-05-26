@@ -86,7 +86,6 @@ export async function pushToPipedrive(
       title: `${formType}${name ? ` — ${name}` : email ? ` — ${email}` : ""}`,
       stage_id: stageId,
       channel: isFormulaires ? 3 : 6, // 3 = Web forms, 6 = Web visitors
-      origin: isFormulaires ? "WebForms" : "WebVisitors",
       ...(personId ? { person_id: personId } : {}),
       ...(sourceOptionId ? { [SOURCE_FIELD_KEY]: sourceOptionId } : {}),
     };
