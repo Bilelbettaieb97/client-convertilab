@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 import type { ToolConfig, LeadInfo } from "./shared-types";
+import { pushToPipedrive } from "@/lib/pipedrive";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -84,10 +85,10 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         console.error(`[${config.toolName}] Email failed:`, emailError);
       }
 
-      // 7. Agency notification (non-blocking)
+      // 7. Agency notification + Pipedrive (non-blocking)
       resend.emails.send({
         from: "ConvertiLab <bilel@convertilab.com>",
-        to: "contact@convertilab.com",
+        to: ["contact@convertilab.com", "convertilab@gmail.com"],
         subject: `Nouveau lead ${config.toolName} — ${lead.name}`,
         html: `
           <h2>Nouveau lead via ${config.toolName}</h2>
@@ -98,6 +99,15 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
         `,
       }).then(() => {}, () => {});
+
+      pushToPipedrive(
+        config.toolName,
+        lead.name,
+        lead.email,
+        lead.phone,
+        lead.company,
+        config.buildPipedriveFields ? config.buildPipedriveFields(result) : {}
+      ).catch(() => {});
 
       // 8. Respond
       return NextResponse.json({

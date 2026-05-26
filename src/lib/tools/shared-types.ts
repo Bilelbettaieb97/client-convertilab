@@ -25,6 +25,8 @@ export interface ToolConfig<TInput, TResult> {
   attachmentExt?: string;
   /** Generate extra attachments (e.g. robots.txt + sitemap.xml) */
   buildExtraAttachments?: (result: TResult) => { filename: string; content: Buffer }[];
+  /** Extra fields to include in the Pipedrive lead note */
+  buildPipedriveFields?: (result: TResult) => Record<string, unknown>;
 }
 
 export function getGrade(score: number): { grade: string; gradeLabel: string } {
