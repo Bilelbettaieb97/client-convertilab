@@ -10,24 +10,38 @@ const SOURCE_FIELD_KEY = "5e4c0a430208828f8b265769eb91b4af32c3a205";
 
 // Mapping formType → option ID du champ Source
 const SOURCE_OPTIONS: Record<string, number> = {
-  "Contact": 61,
-  "Newsletter": 62,
-  "Devis": 63,
+  // Formulaires — Pipeline 2
+  "Contact":          61,
+  "Newsletter":       62,
+  "Devis":            63,
   "Demande Maquette": 64,
-  "Estimation Prix": 65,
-  "Offre Mensuelle": 66,
-  "HeroMiniForm": 67,
-  "Estimateur Ads": 68,
-  "Design Score": 69,
-  "SEO Check": 70,
-  "Comparateur Sites": 71,
-  "Speed Check": 72,
+  "Estimation Prix":  65,
+  "Offre Mensuelle":  66,
+  "HeroMiniForm":     67,
+  "Offre Speciale":   76,
+  // Outils — Pipeline 3
+  "Estimateur Ads":   68,
+  "Design Score":     69,
+  "SEO Check":        70,
+  "Comparateur Sites":71,
+  "Speed Check":      72,
   "Robots Generator": 73,
   "Mentions Legales": 74,
-  "Rapport Sectoriel": 75,
+  "Rapport Sectoriel":75,
+  "Chatbot Audit":    77,
 };
 
-const FORMULAIRES_SOURCES = new Set(Object.keys(SOURCE_OPTIONS).slice(0, 7));
+// Explicit set — ne jamais utiliser slice() sur SOURCE_OPTIONS
+const FORMULAIRES_SOURCES = new Set([
+  "Contact",
+  "Newsletter",
+  "Devis",
+  "Demande Maquette",
+  "Estimation Prix",
+  "Offre Mensuelle",
+  "Offre Speciale",
+  "HeroMiniForm",
+]);
 
 // Custom deal field keys (created via API)
 const FIELD_DOMAIN    = "43d9aed9b2c3498f85e3a1dd157ab30609c406ef"; // varchar
