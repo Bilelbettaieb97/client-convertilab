@@ -5,6 +5,7 @@ import { buildToolEmailHtml } from "@/lib/tools/shared-email-template";
 import { compareSites } from "@/lib/comparison/comparator";
 import { ComparisonPdf } from "@/lib/comparison/pdf-template";
 import type { ComparisonResult } from "@/lib/comparison/comparator";
+import { firstName } from "@/lib/email-series";
 import type { LeadInfo } from "@/lib/tools/shared-types";
 
 export const maxDuration = 120;
@@ -86,6 +87,19 @@ export const POST = createToolHandler<ComparisonInput, ComparisonResult>({
       site_b: result.siteB.domain,
       score_global: Math.max(result.siteA.scores.global, result.siteB.scores.global),
       winner: result.winner === "A" ? result.siteA.domain : result.winner === "B" ? result.siteB.domain : "Egalite",
+    };
+  },
+
+  buildSeriesContext(result: ComparisonResult, lead: LeadInfo) {
+    const winnerDomain =
+      result.winner === "A" ? result.siteA.domain :
+      result.winner === "B" ? result.siteB.domain :
+      "Egalité";
+    return {
+      prenom: firstName(lead.name),
+      site_a: result.siteA.domain,
+      site_b: result.siteB.domain,
+      gagnant: winnerDomain,
     };
   },
 

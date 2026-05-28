@@ -7,6 +7,7 @@ import { renderToBuffer } from "@react-pdf/renderer";
 import React from "react";
 import { SeoAuditPdf } from "@/lib/seo/pdf-template";
 import { pushToPipedrive } from "@/lib/pipedrive";
+import { scheduleEmailSeries, firstName } from "@/lib/email-series";
 import type { SeoAuditResult } from "@/lib/seo/analyzer";
 
 export const maxDuration = 60;
@@ -142,6 +143,16 @@ export async function POST(request: NextRequest) {
       console.error("[SEO Check][pipedrive] ERREUR:", err instanceof Error ? err.message : err);
       warnings.push("pipedrive_failed");
     });
+
+    scheduleEmailSeries("SEO Check", email, {
+      prenom: firstName(name),
+      domaine: audit.domain,
+      score: String(audit.scores.global),
+      grade: audit.grade,
+      critiques: String(audit.issues.filter(i => i.priority === "critical").length),
+    }).catch((err) =>
+      console.error("[SEO Check][email_series] ERREUR:", err instanceof Error ? err.message : err)
+    );
 
     // 8. Return results to frontend
     return NextResponse.json({

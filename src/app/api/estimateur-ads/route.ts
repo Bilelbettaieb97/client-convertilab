@@ -6,6 +6,7 @@ import { calculateAdsProjection } from "@/lib/ads/calculator";
 import { AdsEstimatorPdf } from "@/lib/ads/pdf-template";
 import type { AdsProjectionResult } from "@/lib/ads/calculator";
 import type { LeadInfo } from "@/lib/tools/shared-types";
+import { firstName } from "@/lib/email-series";
 
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
@@ -105,6 +106,16 @@ export const POST = createToolHandler<AdsEstimatorInput, AdsProjectionResult>({
       budget_monthly: result.budgetMonthly,
       roas: result.monthlyRoas,
       leads_monthly: result.monthlyLeads,
+    };
+  },
+
+  buildSeriesContext(result: AdsProjectionResult, lead: LeadInfo) {
+    return {
+      prenom: firstName(lead.name),
+      secteur: result.sectorLabel || result.sector,
+      budget_ads: String(result.budgetMonthly),
+      roas: String(result.monthlyRoas),
+      leads_mois: String(result.monthlyLeads),
     };
   },
 

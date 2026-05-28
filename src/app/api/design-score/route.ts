@@ -6,6 +6,7 @@ import { analyzeDesign } from "@/lib/design/analyzer";
 import { DesignAuditPdf } from "@/lib/design/pdf-template";
 import type { DesignAuditResult } from "@/lib/design/analyzer";
 import type { LeadInfo } from "@/lib/tools/shared-types";
+import { firstName } from "@/lib/email-series";
 
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
@@ -86,6 +87,15 @@ export const POST = createToolHandler<DesignScoreInput, DesignAuditResult>({
       score_global: audit.scores.global,
       grade: audit.grade,
       critical_count: audit.issues.filter(i => i.priority === "critical").length,
+    };
+  },
+
+  buildSeriesContext(audit: DesignAuditResult, lead: LeadInfo) {
+    return {
+      prenom: firstName(lead.name),
+      domaine: audit.domain,
+      score: String(audit.scores.global),
+      grade: audit.grade,
     };
   },
 

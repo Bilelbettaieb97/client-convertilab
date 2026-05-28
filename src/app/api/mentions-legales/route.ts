@@ -6,6 +6,7 @@ import { generateMentionsLegales } from "@/lib/legal/generator";
 import { MentionsLegalesPdf } from "@/lib/legal/pdf-template";
 import type { MentionsLegalesInput, MentionsLegalesResult } from "@/lib/legal/generator";
 import type { LeadInfo } from "@/lib/tools/shared-types";
+import { firstName, COMPANY_TYPE_LABELS } from "@/lib/email-series";
 
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
@@ -102,6 +103,15 @@ export const POST = createToolHandler<MentionsLegalesApiInput, MentionsLegalesRe
     return {
       siret: result.siret,
       company_type: result.companyType,
+    };
+  },
+
+  buildSeriesContext(result: MentionsLegalesResult, lead: LeadInfo) {
+    return {
+      prenom: firstName(lead.name),
+      entreprise: result.companyName,
+      forme_jur: COMPANY_TYPE_LABELS[result.companyType] || result.companyType,
+      siret: result.siret,
     };
   },
 

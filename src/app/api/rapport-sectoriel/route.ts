@@ -6,6 +6,7 @@ import { generateSectorReport } from "@/lib/sectorial/report";
 import { SectorReportPdf } from "@/lib/sectorial/pdf-template";
 import type { SectorReportResult } from "@/lib/sectorial/report";
 import type { LeadInfo } from "@/lib/tools/shared-types";
+import { firstName } from "@/lib/email-series";
 
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
@@ -71,6 +72,13 @@ export const POST = createToolHandler<SectorReportInput, SectorReportResult>({
   buildPipedriveFields(report: SectorReportResult) {
     return {
       sector: report.sector.slug,
+    };
+  },
+
+  buildSeriesContext(report: SectorReportResult, lead: LeadInfo) {
+    return {
+      prenom: firstName(lead.name),
+      secteur: report.sector.name,
     };
   },
 

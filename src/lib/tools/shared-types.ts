@@ -27,6 +27,8 @@ export interface ToolConfig<TInput, TResult> {
   buildExtraAttachments?: (result: TResult) => { filename: string; content: Buffer }[];
   /** Extra fields to include in the Pipedrive lead note */
   buildPipedriveFields?: (result: TResult) => Record<string, unknown>;
+  /** Tokens for email series (prenom, domaine, score, grade, secteur…) */
+  buildSeriesContext?: (result: TResult, lead: LeadInfo) => Record<string, string>;
 }
 
 export function getGrade(score: number): { grade: string; gradeLabel: string } {

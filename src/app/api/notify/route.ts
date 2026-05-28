@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { pushToPipedrive } from "@/lib/pipedrive";
+import { scheduleEmailSeries, buildFormSeriesContext } from "@/lib/email-series";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -92,6 +93,14 @@ export async function POST(request: NextRequest) {
       }),
       pushToPipedrive(formType, name, email, phone, company, fields),
     ]);
+
+    // Séries email (fire-and-forget)
+    if (email) {
+      const ctx = buildFormSeriesContext(formType, name, company, fields as Record<string, unknown>);
+      scheduleEmailSeries(formType, email, ctx).catch((err) =>
+        console.error("[notify][email_series]", err instanceof Error ? err.message : err)
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

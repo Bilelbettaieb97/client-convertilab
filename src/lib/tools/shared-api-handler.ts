@@ -3,6 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 import type { ToolConfig, LeadInfo } from "./shared-types";
 import { pushToPipedrive } from "@/lib/pipedrive";
+import { scheduleEmailSeries } from "@/lib/email-series";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -92,7 +93,15 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         warnings.push("supabase_insert_failed");
       }
 
-      // 7. Agency notification (fire-and-forget mais erreurs loggées)
+      // 7. Schedule email series (fire-and-forget)
+      if (config.buildSeriesContext) {
+        const ctx = config.buildSeriesContext(result, lead);
+        scheduleEmailSeries(config.toolName, lead.email, ctx).catch((err) =>
+          log(config.toolName, "email_series", err)
+        );
+      }
+
+      // 8. Agency notification (fire-and-forget mais erreurs loggées)
       resend.emails.send({
         from: "ConvertiLab <bilel@convertilab.com>",
         to: ["contact@convertilab.com", "convertilab@gmail.com"],
@@ -110,7 +119,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         (err) => log(config.toolName, "email_agency", err)
       );
 
-      // 8. Pipedrive — awaité pour garantir la complétion, erreurs loggées
+      // 9. Pipedrive — awaité pour garantir la complétion, erreurs loggées
       await pushToPipedrive(
         config.toolName,
         lead.name,
@@ -123,7 +132,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         warnings.push("pipedrive_failed");
       });
 
-      // 9. Respond
+      // 10. Respond
       return NextResponse.json({
         success: true,
         emailSent,
