@@ -96,6 +96,7 @@ export async function pushToPipedrive(
   try {
     // Find existing person by email
     let personId: number | null = null;
+    let personAlreadyExisted = false;
     if (email) {
       const searchRes = await fetch(
         `${PIPEDRIVE_BASE}/persons/search?term=${encodeURIComponent(email)}&fields=email&api_token=${PIPEDRIVE_TOKEN}`
@@ -103,6 +104,7 @@ export async function pushToPipedrive(
       const searchData = await searchRes.json();
       if (searchData.data?.items?.length > 0) {
         personId = searchData.data.items[0].item.id;
+        personAlreadyExisted = true;
       }
     }
 
@@ -151,6 +153,28 @@ export async function pushToPipedrive(
     });
     const dealData = await dealRes.json();
     const dealId = dealData.data?.id;
+
+    // Si la personne existait déjà, ajouter une note sur ses deals ouverts précédents
+    if (dealId && personAlreadyExisted && personId) {
+      const existingDealsRes = await fetch(
+        `${PIPEDRIVE_BASE}/persons/${personId}/deals?status=open&api_token=${PIPEDRIVE_TOKEN}`
+      );
+      const existingDealsData = await existingDealsRes.json();
+      const existingDeals: Array<{ id: number }> = existingDealsData.data || [];
+
+      for (const deal of existingDeals) {
+        if (deal.id !== dealId) {
+          await fetch(`${PIPEDRIVE_BASE}/notes?api_token=${PIPEDRIVE_TOKEN}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              content: `🔔 Ce lead a utilisé l'outil ${formType} le ${new Date().toLocaleString("fr-FR")} — Deal #${dealId}`,
+              deal_id: deal.id,
+            }),
+          });
+        }
+      }
+    }
 
     // Note de synthèse avec tous les détails non mappés + date
     if (dealId) {
