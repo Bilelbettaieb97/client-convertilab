@@ -198,9 +198,9 @@ const Navigation = () => {
 
             {/* Outils Dropdown — lead magnet, capture les non-prêts */}
             <div className="relative group/tools">
-              <button className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer flex items-center gap-1 ${isToolActive ? 'text-purple-600' : ''}`}>
+              <Link href="/outils" className={`text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium cursor-pointer flex items-center gap-1 ${isToolActive || pathname === '/outils' ? 'text-purple-600' : ''}`}>
                 Outils <ChevronDown className="w-3 h-3 transition-transform group-hover/tools:rotate-180" />
-              </button>
+              </Link>
               <div className="absolute top-full right-0 pt-2 opacity-0 invisible group-hover/tools:opacity-100 group-hover/tools:visible transition-all duration-200 z-50">
                 <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-2 w-80">
                   <div className="px-3 py-2 mb-1">
