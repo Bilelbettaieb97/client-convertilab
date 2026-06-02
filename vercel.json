@@ -5,20 +5,7 @@
       "schedule": "0 * * * *"
     }
   ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "convertilab.com" }],
-      "destination": "https://www.convertilab.com/:path*",
-      "statusCode": 301
-    },
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "convertilab.fr" }],
-      "destination": "https://www.convertilab.fr/:path*",
-      "statusCode": 301
-    }
-  ],
+  "redirects": [],
   "functions": {
     "src/app/api/seo-check/route.ts": {
       "memory": 1024,
