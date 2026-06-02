@@ -3,16 +3,8 @@ import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const host = request.headers.get("host") || "";
 
-  // 1. Force www.convertilab.com (308 permanent)
-  if (host === "convertilab.com") {
-    const url = request.nextUrl.clone();
-    url.host = "www.convertilab.com";
-    return NextResponse.redirect(url, 308);
-  }
-
-  // 2. Redirect /case-study/:slug → /etude-de-cas/:slug (301 permanent)
+  // Redirect /case-study/:slug → /etude-de-cas/:slug (301 permanent)
   if (pathname.startsWith("/case-study/")) {
     const slug = pathname.replace("/case-study/", "");
     return NextResponse.redirect(
