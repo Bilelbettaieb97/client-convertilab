@@ -112,6 +112,20 @@ export default function DesignPageContent() {
         </div>
       </div>
 
+      <section className="py-12 bg-muted/30"><div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-xl font-bold text-foreground mb-6">Ressources design pour votre site</h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Link href="/blog/typographie-web-choisir-polices" className="bg-background border border-border rounded-xl p-5 hover:border-pink-400/60 hover:shadow-md transition-all group flex gap-4 items-start">
+            <div className="w-10 h-10 bg-pink-50 dark:bg-pink-900/20 rounded-lg flex items-center justify-center flex-shrink-0 text-lg">🔤</div>
+            <div><div className="font-semibold text-foreground group-hover:text-pink-600 transition-colors mb-1">Typographie web : choisir les bonnes polices →</div><p className="text-sm text-muted-foreground">Google Fonts, lisibilité, hiérarchie visuelle : le guide complet pour choisir vos polices comme un pro.</p></div>
+          </Link>
+          <Link href="/design-score" className="bg-background border border-border rounded-xl p-5 hover:border-pink-400/60 hover:shadow-md transition-all group flex gap-4 items-start">
+            <div className="w-10 h-10 bg-pink-50 dark:bg-pink-900/20 rounded-lg flex items-center justify-center flex-shrink-0 text-lg">🎨</div>
+            <div><div className="font-semibold text-foreground group-hover:text-pink-600 transition-colors mb-1">Tester le score design de votre site →</div><p className="text-sm text-muted-foreground">Outil gratuit : analysez votre design en 30 secondes et obtenez un score avec les points à améliorer.</p></div>
+          </Link>
+        </div>
+      </div></section>
+
       <section className="py-20 bg-gradient-to-r from-pink-500 to-rose-600"><div className="container mx-auto px-4 sm:px-6 text-center">
         <h2 className="text-3xl font-bold text-white mb-4">Pret a transformer votre image ?</h2>
         <p className="text-white/80 mb-8 max-w-xl mx-auto">Discutons de votre projet de design et creons ensemble une identite qui vous ressemble.</p>

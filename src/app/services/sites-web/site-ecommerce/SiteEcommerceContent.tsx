@@ -115,6 +115,20 @@ export default function SiteEcommerceContent() {
         <Accordion type="single" collapsible className="space-y-3">{faqs.map((faq, i) => (<AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-xl px-6 bg-card"><AccordionTrigger className="text-left text-foreground font-medium hover:no-underline">{faq.q}</AccordionTrigger><AccordionContent className="text-muted-foreground leading-relaxed">{faq.a}</AccordionContent></AccordionItem>))}</Accordion>
       </div></div></section>
 
+      <section className="py-12 bg-muted/30"><div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-xl font-bold text-foreground mb-6">Ressources pour votre e-commerce</h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Link href="/blog/livraison-ecommerce-strategie" className="bg-background border border-border rounded-xl p-5 hover:border-primary/40 hover:shadow-md transition-all group flex gap-4 items-start">
+            <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 text-primary text-lg">📦</div>
+            <div><div className="font-semibold text-foreground group-hover:text-primary transition-colors mb-1">Livraison e-commerce : stratégies pour réduire les coûts →</div><p className="text-sm text-muted-foreground">60% des abandons de panier sont causés par les frais de livraison. Découvrez comment structurer votre politique.</p></div>
+          </Link>
+          <Link href="/estimateur-ads" className="bg-background border border-border rounded-xl p-5 hover:border-primary/40 hover:shadow-md transition-all group flex gap-4 items-start">
+            <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 text-primary text-lg">📊</div>
+            <div><div className="font-semibold text-foreground group-hover:text-primary transition-colors mb-1">Calculer votre budget publicitaire e-commerce →</div><p className="text-sm text-muted-foreground">Estimez votre ROI Google Ads ou Meta Ads selon votre secteur et votre budget mensuel.</p></div>
+          </Link>
+        </div>
+      </div></section>
+
       <section className="py-20 bg-primary"><div className="container mx-auto px-4 sm:px-6 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">Pret a lancer votre boutique en ligne ?</h2>
         <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto text-lg">Recevez un devis personnalise sous 24h. Consultation gratuite, sans engagement.</p>
