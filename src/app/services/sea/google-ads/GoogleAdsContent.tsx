@@ -36,8 +36,62 @@ export default function GoogleAdsContent() {
         </div>
       </div></section>
 
+      {/* STATS */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { value: "x4.8", label: "ROAS moyen constaté" },
+              { value: "−38%", label: "Coût par lead vs moyenne" },
+              { value: "+150", label: "campagnes gérées" },
+              { value: "24h", label: "délai de lancement" },
+            ].map((s, i) => (
+              <div key={i} className="p-4">
+                <div className="text-3xl font-black text-blue-600 mb-1">{s.value}</div>
+                <div className="text-sm text-gray-500">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* POURQUOI GOOGLE ADS */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Pourquoi Google Ads est indispensable pour votre business en 2026</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>Google traite plus de <strong>8,5 milliards de recherches par jour</strong>. Quand un prospect cherche votre service ou votre produit, il est en intention d'achat active — c'est le moment idéal pour apparaître. Contrairement aux réseaux sociaux où vous interrompez l'utilisateur, Google Ads répond à une demande déjà formulée.</p>
+                <p>Le référencement SEO naturel prend 6 à 12 mois pour produire des résultats. Google Ads, lui, génère du trafic qualifié <strong>dès le premier jour</strong>. Pour les entreprises qui ont besoin de clients rapidement, c'est souvent le levier le plus efficace.</p>
+                <p>Notre équipe gère des campagnes Google Ads pour des PME parisiennes depuis 2019. Nos clients atteignent en moyenne un ROAS (retour sur investissement publicitaire) de <strong>x4.8</strong>, ce qui signifie que pour 1€ investi en publicité, ils génèrent 4,8€ de chiffre d'affaires.</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-foreground">Google Ads vs SEO : lequel choisir ?</h3>
+              <div className="space-y-3">
+                {[
+                  { label: "Délai de résultats", ads: "Immédiat (24h)", seo: "3 à 12 mois" },
+                  { label: "Contrôle du budget", ads: "Total, ajustable", seo: "Indirect" },
+                  { label: "Ciblage géographique", ads: "Au kilomètre près", seo: "Par page/contenu" },
+                  { label: "Mots-clés compétitifs", ads: "Accessible dès J+1", seo: "Difficile / long" },
+                  { label: "Arrêt des dépenses", ads: "Stop = arrêt du trafic", seo: "Trafic durable" },
+                ].map((row, i) => (
+                  <div key={i} className="grid grid-cols-3 gap-2 text-sm p-3 bg-gray-50 rounded-lg">
+                    <span className="font-medium text-gray-700">{row.label}</span>
+                    <span className="text-blue-600 font-semibold">{row.ads}</span>
+                    <span className="text-gray-500">{row.seo}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-gray-500 mt-2">Notre recommandation : combiner Google Ads (résultats immédiats) + SEO (croissance durable) pour un ROI maximal.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-muted/30"><div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Types de campagnes</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Types de campagnes Google Ads</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (<div key={index} className="bg-background p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-border"><div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600 mb-4">{feature.icon}</div><h3 className="font-semibold text-lg mb-2 text-foreground">{feature.title}</h3><p className="text-muted-foreground text-sm">{feature.description}</p></div>))}</div>
       </div></section>
 
@@ -47,6 +101,52 @@ export default function GoogleAdsContent() {
         <div className="bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/20 dark:to-cyan-900/20 p-8 rounded-2xl"><h3 className="text-xl font-semibold mb-4 text-foreground">Ideal pour</h3>
           <ul className="space-y-3">{idealFor.map((item, index) => (<li key={index} className="flex items-center gap-3"><ArrowRight className="w-4 h-4 text-blue-600" /><span className="text-foreground">{item}</span></li>))}</ul></div>
       </div></div></section>
+
+      {/* NOTRE MÉTHODE */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl font-bold mb-4 text-foreground text-center">Notre méthode Google Ads en 5 étapes</h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">Une approche structurée qui élimine les dépenses inutiles et maximise chaque euro investi.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              { num: "1", title: "Audit & objectifs", desc: "Analyse de votre marché, vos concurrents et vos objectifs de CA. Définition du budget optimal et du ROAS cible." },
+              { num: "2", title: "Recherche mots-clés", desc: "Identification des requêtes à fort potentiel commercial. Exclusion des mots-clés négatifs pour éviter le gaspillage." },
+              { num: "3", title: "Création campagnes", desc: "Structure de compte propre, groupes d'annonces thématiques, landing pages dédiées pour maximiser le Quality Score." },
+              { num: "4", title: "Tracking précis", desc: "Configuration Google Ads + GA4 + Consent Mode v2. Chaque conversion est tracée : appel, formulaire, achat." },
+              { num: "5", title: "Optimisation continue", desc: "Ajustement des enchères, A/B test des annonces, expansion des mots-clés performants, rapport hebdomadaire." },
+            ].map((step, i) => (
+              <div key={i} className="text-center">
+                <div className="w-12 h-12 rounded-full bg-blue-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-3">{step.num}</div>
+                <h3 className="font-bold text-foreground mb-2">{step.title}</h3>
+                <p className="text-sm text-muted-foreground">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTEURS */}
+      <section className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl font-bold mb-8 text-foreground text-center">Secteurs où Google Ads performe le mieux</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { sector: "E-commerce", detail: "Shopping Ads + Search. ROAS moyen x5.2 sur nos comptes e-commerce.", kw: "chaussures femme pas cher, achat canapé livraison rapide" },
+              { sector: "Services B2B", detail: "Lead generation via Search. CPL optimisé sur les requêtes à forte intention.", kw: "logiciel comptabilité PME, expert-comptable Paris" },
+              { sector: "Professions libérales", detail: "Ciblage géographique précis pour médecins, avocats, architectes.", kw: "dermatologue Paris 16, avocat droit des affaires" },
+              { sector: "Artisans & BTP", detail: "Campagnes locales hyper-ciblées. Les artisans génèrent 3-8 devis/mois.", kw: "plombier urgence Paris, peintre maison Île-de-France" },
+              { sector: "Immobilier", detail: "Campagnes Search + Display pour agences immobilières et promoteurs.", kw: "appartement à vendre Paris, agence immobilière Lyon" },
+              { sector: "Formation & coaching", detail: "Ciblage par intentions d'apprentissage. Conversions sur formulaire d'inscription.", kw: "formation Excel Paris, coaching carrière en ligne" },
+            ].map((s, i) => (
+              <div key={i} className="bg-white rounded-xl p-5 border border-blue-100">
+                <h3 className="font-bold text-foreground mb-2">{s.sector}</h3>
+                <p className="text-sm text-muted-foreground mb-3">{s.detail}</p>
+                <p className="text-xs text-blue-500 italic">ex : {s.kw}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ServiceFAQ faqs={[
         { q: "Quel budget minimum pour Google Ads ?", a: "Nous recommandons un budget minimum de 500 euros/mois en depense publicitaire pour obtenir des donnees suffisantes et optimiser vos campagnes. Le budget ideal depend de votre secteur et de vos objectifs." },

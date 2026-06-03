@@ -36,8 +36,60 @@ export default function MetaAdsContent() {
         </div>
       </div></section>
 
+      {/* STATS */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { value: "x3.2", label: "ROAS moyen constaté" },
+              { value: "3.2Md", label: "utilisateurs Meta" },
+              { value: "−42%", label: "CPM vs année précédente" },
+              { value: "72h", label: "délai de lancement" },
+            ].map((s, i) => (
+              <div key={i} className="p-4">
+                <div className="text-3xl font-black text-purple-600 mb-1">{s.value}</div>
+                <div className="text-sm text-gray-500">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* POURQUOI META ADS */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Pourquoi les publicités Meta Ads sont puissantes pour votre business</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>Facebook et Instagram réunissent plus de <strong>3,2 milliards d'utilisateurs actifs</strong> dans le monde, dont 45 millions en France. Ces plateformes collectent des données comportementales exceptionnellement précises : centres d'intérêt, comportements d'achat, événements de vie, interactions avec des pages similaires à la vôtre.</p>
+                <p>La différence avec Google Ads est fondamentale : <strong>Meta Ads crée la demande</strong> là où Google Ads répond à une demande existante. C'est pourquoi Meta excelle pour les produits découverts impulsivement — mode, décoration, cosmétiques, restaurants — et pour construire une notoriété de marque auprès d'audiences ciblées.</p>
+                <p>Notre agence Meta Ads à Paris gère des budgets de 500€ à 50 000€/mois. Nous créons des campagnes complètes incluant la stratégie créative, le ciblage d'audience, les tests A/B et l'optimisation quotidienne. Nos clients e-commerce atteignent en moyenne un <strong>ROAS de x3.2</strong>.</p>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold text-foreground">Les formats publicitaires Meta en 2026</h3>
+              <div className="space-y-3">
+                {[
+                  { format: "Reels sponsorisés", desc: "Format vidéo court le plus viral. Idéal pour la notoriété et l'engagement. +40% de reach vs posts classiques." },
+                  { format: "Carrousel produits", desc: "Showcase de 2 à 10 produits avec liens individuels. Parfait pour le e-commerce et les promotions." },
+                  { format: "Collection ads", desc: "Expérience immersive : image ou vidéo principale + catalogue produits. Taux de conversion x2." },
+                  { format: "Dynamic ads", desc: "Retargeting automatique avec les produits consultés sur votre site. ROI exceptionnel sur visiteurs chauds." },
+                  { format: "Lead ads", desc: "Formulaire natif dans Facebook. Collecte d'emails et numéros sans quitter l'application." },
+                ].map((f, i) => (
+                  <div key={i} className="p-4 bg-purple-50 rounded-lg border border-purple-100">
+                    <span className="font-bold text-purple-700 text-sm">{f.format}</span>
+                    <p className="text-xs text-gray-600 mt-1">{f.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-muted/30"><div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Notre expertise Meta</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Notre expertise Meta Ads</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (<div key={index} className="bg-background p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-border"><div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 mb-4">{feature.icon}</div><h3 className="font-semibold text-lg mb-2 text-foreground">{feature.title}</h3><p className="text-muted-foreground text-sm">{feature.description}</p></div>))}</div>
       </div></section>
 

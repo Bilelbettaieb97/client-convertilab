@@ -101,8 +101,65 @@ export default function SiteVitrineContent() {
         </div></div>
       </div></div></section>
 
+      {/* POURQUOI SITE VITRINE PRO */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <h2 className="text-3xl font-bold text-foreground mb-6 text-center">Qu&apos;est-ce qu&apos;un site vitrine professionnel en 2026 ?</h2>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>Un site vitrine est votre vitrine digitale permanente : disponible <strong>24h/24, 7j/7</strong>, il présente votre activité, vos services, vos réalisations et vos coordonnées aux prospects qui vous cherchent en ligne. Contrairement à un profil sur les réseaux sociaux, il vous appartient entièrement.</p>
+              <p>En 2026, <strong>87% des consommateurs</strong> consultent internet avant de contacter une entreprise locale. Si vous n&apos;avez pas de site web professionnel — ou si le vôtre est daté, lent ou non-responsive — vous perdez des clients chaque jour au profit de vos concurrents qui ont fait ce choix.</p>
+              <p>Chez ConvertiLab, nous créons des sites vitrines avec <strong>Next.js</strong>, la technologie utilisée par les plus grandes marques mondiales. Résultat : des sites ultra-rapides (score PageSpeed 90+), parfaitement optimisés pour Google, et dont vous êtes propriétaire à 100%.</p>
+              <p>Un site vitrine bien conçu génère en moyenne <strong>3 à 8 demandes de devis par mois</strong> pour nos clients artisans, commerçants et professions libérales. C&apos;est un commercial qui travaille pour vous sans jamais prendre de vacances.</p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-foreground">Site vitrine vs autres solutions</h3>
+              <div className="space-y-2">
+                {[
+                  { label: "Vous appartient à 100%", vitrine: "✅ Oui", rs: "❌ Non" },
+                  { label: "Visible sur Google", vitrine: "✅ SEO natif", rs: "⚠️ Limité" },
+                  { label: "Image professionnelle", vitrine: "✅ Premium", rs: "❌ Générique" },
+                  { label: "Indépendant des algorithmes", vitrine: "✅ Oui", rs: "❌ Non" },
+                  { label: "Performance & vitesse", vitrine: "✅ 90+ PageSpeed", rs: "⚠️ Variable" },
+                  { label: "Données visiteurs", vitrine: "✅ Analytics complet", rs: "⚠️ Partiel" },
+                ].map((row, i) => (
+                  <div key={i} className="grid grid-cols-3 text-sm p-3 bg-gray-50 rounded-lg">
+                    <span className="text-gray-700">{row.label}</span>
+                    <span className="text-green-600 font-medium">{row.vitrine}</span>
+                    <span className="text-gray-400">{row.rs}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-gray-400">Comparaison : site vitrine pro vs présence uniquement sur réseaux sociaux</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TECHNOLOGIES */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl text-center">
+          <h2 className="text-2xl font-bold text-foreground mb-4">Les technologies qui font la différence</h2>
+          <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">Tous nos sites vitrines sont développés avec les technologies les plus performantes du marché, utilisées par Vercel, Notion et les licornes de la tech.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { tech: "Next.js 15", role: "Framework React dernière génération", benefit: "Vitesse de chargement × 4 vs WordPress" },
+              { tech: "Tailwind CSS", role: "Design system moderne", benefit: "Cohérence visuelle parfaite sur tous les écrans" },
+              { tech: "Vercel CDN", role: "Hébergement mondial", benefit: "Latence < 100ms depuis n'importe où en France" },
+              { tech: "Framer Motion", role: "Animations fluides", benefit: "Expérience premium qui inspire confiance" },
+            ].map((t, i) => (
+              <div key={i} className="bg-white rounded-xl p-5 border border-gray-200 text-left">
+                <div className="font-black text-purple-600 text-lg mb-1">{t.tech}</div>
+                <div className="text-sm text-gray-500 mb-2">{t.role}</div>
+                <div className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded font-medium">{t.benefit}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20"><div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Votre site vitrine en 4 etapes</h2><p className="text-muted-foreground">Un processus clair et previsible, du premier echange a la mise en ligne.</p></div>
+        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Votre site vitrine en 4 étapes</h2><p className="text-muted-foreground">Un processus clair et prévisible, du premier échange à la mise en ligne.</p></div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">{processSteps.map((s, i) => (
           <div key={i} className="relative text-center"><div className="text-5xl font-black text-primary/15 mb-2">{s.num}</div><h3 className="text-lg font-bold text-foreground mb-2">{s.title}</h3><p className="text-sm text-muted-foreground">{s.desc}</p>{i < processSteps.length - 1 && <div className="hidden lg:block absolute top-8 -right-4 w-8 text-primary/30 text-2xl">&rarr;</div>}</div>
         ))}</div>
