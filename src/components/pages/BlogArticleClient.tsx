@@ -8,6 +8,7 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import BlogCard from "@/components/blog/BlogCard";
 import RelatedServices from "@/components/blog/RelatedServices";
+import { getArticleLinks } from "@/data/blog-internal-links";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -294,21 +295,49 @@ export default function BlogArticleClient({ article, relatedArticles }: Props) {
                 </div>
               </Card>
 
-              {/* CTA */}
-              <div className="mt-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center text-white">
-                <h3 className="text-2xl font-bold mb-3">
-                  Besoin d&apos;un site web professionnel ?
-                </h3>
-                <p className="text-lg opacity-90 mb-6">
-                  Discutons de votre projet et obtenez un devis gratuit sous 24h
-                </p>
-                <Button
-                  asChild
-                  className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3"
-                >
-                  <Link href="/contact">Demander un devis gratuit</Link>
-                </Button>
-              </div>
+              {/* CTA contextuel — lien vers service prioritaire de cet article */}
+              {(() => {
+                const links = getArticleLinks(article.slug);
+                if (!links) {
+                  return (
+                    <div className="mt-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center text-white">
+                      <h3 className="text-2xl font-bold mb-3">Besoin d&apos;un site web professionnel ?</h3>
+                      <p className="text-lg opacity-90 mb-6">Discutons de votre projet et obtenez un devis gratuit sous 24h</p>
+                      <Button asChild className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3">
+                        <Link href="/contact">Demander un devis gratuit</Link>
+                      </Button>
+                    </div>
+                  );
+                }
+                return (
+                  <div className="mt-12 space-y-4">
+                    {/* Primary CTA */}
+                    <Link href={links.primary.href} className="group flex items-start gap-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-6 text-white hover:from-purple-700 hover:to-pink-700 transition-all">
+                      <div className="flex-1">
+                        <p className="text-xs font-semibold text-white/70 uppercase tracking-wider mb-1">Service recommandé</p>
+                        <h3 className="text-xl font-bold mb-1">{links.primary.title}</h3>
+                        <p className="text-white/80 text-sm">{links.primary.description}</p>
+                      </div>
+                      <span className="flex-shrink-0 flex items-center gap-1.5 text-sm font-semibold bg-white/20 rounded-xl px-4 py-2 mt-2 group-hover:bg-white/30 transition-all whitespace-nowrap">
+                        {links.primary.cta} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </Link>
+                    {/* Secondary CTA */}
+                    {links.secondary && (
+                      <Link href={links.secondary.href} className="group flex items-start gap-5 bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:border-purple-300 hover:bg-purple-50/50 transition-all">
+                        <div className="flex-1">
+                          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">À découvrir aussi</p>
+                          <h3 className="text-lg font-bold text-gray-900 mb-1">{links.secondary.title}</h3>
+                          <p className="text-gray-600 text-sm">{links.secondary.description}</p>
+                        </div>
+                        <span className="flex-shrink-0 flex items-center gap-1.5 text-sm font-semibold text-purple-600 bg-purple-100 rounded-xl px-4 py-2 mt-2 group-hover:bg-purple-200 transition-all whitespace-nowrap">
+                          {links.secondary.cta} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </Link>
+                    )}
+                  </div>
+                );
+              })()}
             </div>
 
             {/* Sidebar */}

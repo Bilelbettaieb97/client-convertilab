@@ -14,20 +14,32 @@ interface ServiceLink {
 
 const servicesByCategory: Record<string, ServiceLink[]> = {
   Business: [
-    { icon: <FileText className="w-5 h-5" />, title: "Site Vitrine", description: "Presentez votre activite des 500 euros", href: "/services/sites-web/site-vitrine" },
-    { icon: <Rocket className="w-5 h-5" />, title: "Landing Page", description: "Convertissez vos visiteurs des 500 euros", href: "/services/sites-web/landing-page" },
+    { icon: <FileText className="w-5 h-5" />, title: "Site Vitrine", description: "Présentez votre activité dès 500€", href: "/services/sites-web/site-vitrine" },
+    { icon: <Rocket className="w-5 h-5" />, title: "Landing Page", description: "Convertissez vos visiteurs dès 300€", href: "/services/sites-web/landing-page" },
   ],
   "Web Design": [
-    { icon: <Palette className="w-5 h-5" />, title: "Design UI/UX", description: "Interfaces intuitives et esthetiques", href: "/services/design/design-ui-ux" },
-    { icon: <FileText className="w-5 h-5" />, title: "Identite Visuelle", description: "Logo et charte graphique sur-mesure", href: "/services/design/identite-visuelle" },
+    { icon: <Palette className="w-5 h-5" />, title: "Design UI/UX", description: "Interfaces intuitives et esthétiques", href: "/services/design/ui-ux" },
+    { icon: <FileText className="w-5 h-5" />, title: "Identité Visuelle", description: "Logo et charte graphique sur-mesure", href: "/services/design/identite-visuelle" },
   ],
   SEO: [
-    { icon: <Search className="w-5 h-5" />, title: "Referencement SEO", description: "Page 1 Google durablement", href: "/services/seo/referencement-seo" },
-    { icon: <Search className="w-5 h-5" />, title: "Audit SEO", description: "Diagnostic complet de visibilite", href: "/services/seo/audit-seo" },
+    { icon: <Search className="w-5 h-5" />, title: "Référencement SEO", description: "Page 1 Google durablement", href: "/services/seo/referencement" },
+    { icon: <Search className="w-5 h-5" />, title: "Audit SEO", description: "Diagnostic complet de visibilité", href: "/services/seo/audit" },
   ],
   Technique: [
-    { icon: <Store className="w-5 h-5" />, title: "Site E-commerce", description: "Boutique en ligne des 800 euros", href: "/services/sites-web/site-ecommerce" },
-    { icon: <Megaphone className="w-5 h-5" />, title: "Google Ads", description: "Campagnes publicitaires ciblees", href: "/services/sea/google-ads" },
+    { icon: <Store className="w-5 h-5" />, title: "Site E-commerce", description: "Boutique en ligne dès 800€", href: "/services/sites-web/site-ecommerce" },
+    { icon: <Megaphone className="w-5 h-5" />, title: "Google Ads", description: "Campagnes publicitaires ciblées", href: "/services/sea/google-ads" },
+  ],
+  "E-commerce": [
+    { icon: <Store className="w-5 h-5" />, title: "Site E-commerce", description: "Boutique en ligne performante dès 800€", href: "/services/sites-web/site-ecommerce" },
+    { icon: <Search className="w-5 h-5" />, title: "SEO E-commerce", description: "Référencez vos produits sur Google", href: "/services/seo/referencement" },
+  ],
+  Marketing: [
+    { icon: <Megaphone className="w-5 h-5" />, title: "Google Ads", description: "Campagnes Search et Shopping", href: "/services/sea/google-ads" },
+    { icon: <Megaphone className="w-5 h-5" />, title: "Meta Ads", description: "Facebook & Instagram Ads", href: "/services/sea/meta-ads" },
+  ],
+  Design: [
+    { icon: <Palette className="w-5 h-5" />, title: "Design UI/UX", description: "Interfaces modernes qui convertissent", href: "/services/design/ui-ux" },
+    { icon: <FileText className="w-5 h-5" />, title: "Identité Visuelle", description: "Logo et charte graphique sur-mesure", href: "/services/design/identite-visuelle" },
   ],
 };
 
