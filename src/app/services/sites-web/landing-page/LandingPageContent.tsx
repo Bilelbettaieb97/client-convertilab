@@ -126,12 +126,48 @@ export default function LandingPageContent() {
         </div>
       </section>
 
+      {/* POURQUOI LANDING */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Landing page vs site web : quelle différence et quand choisir ?</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>Un site web classique a plusieurs objectifs simultanés : présenter votre entreprise, détailler vos services, vous contacter, lire le blog... Cette richesse est un atout pour le SEO, mais un handicap pour la conversion publicitaire. Un visiteur qui arrive depuis une pub Google Ads avec un besoin précis se retrouve perdu dans un menu à 8 entrées.</p>
+                <p>Une <strong>landing page est une page à un seul objectif</strong> : faire en sorte que le visiteur réalise l&apos;action que vous souhaitez. Pas de menu de navigation. Pas de liens vers d&apos;autres pages. Pas de distraction. Juste votre proposition, vos preuves et votre formulaire. Résultat : nos clients voient leur taux de conversion multiplié par <strong>5 à 10 en moyenne</strong>.</p>
+                <p>La landing page est le meilleur outil pour <strong>Google Ads, Meta Ads, l&apos;emailing et les partenariats</strong>. Pour chaque campagne avec un objectif précis (inscription, devis, achat, téléchargement), une landing page dédiée surperforme systématiquement une page de site classique.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Site web vs Landing page : le comparatif</h3>
+              <div className="space-y-2">
+                {[
+                  { label: "Objectif", site: "Multiple (informer, convertir, SEO)", landing: "Unique (1 action cible)" },
+                  { label: "Taux de conversion", site: "1-3% en moyenne", landing: "5-15% avec landing dédiée" },
+                  { label: "Idéal pour", site: "SEO, référencement naturel", landing: "Campagnes publicitaires" },
+                  { label: "Menu de navigation", site: "Oui (8-12 liens)", landing: "Aucun (0 distraction)" },
+                  { label: "Délai de création", site: "10-30 jours", landing: "5-7 jours" },
+                  { label: "Mesure du ROI", site: "Complexe (multi-parcours)", landing: "Simple (1 action = 1 conversion)" },
+                ].map((row, i) => (
+                  <div key={i} className="grid grid-cols-3 text-xs p-2.5 bg-gray-50 rounded-lg">
+                    <span className="font-medium text-gray-700">{row.label}</span>
+                    <span className="text-gray-400">{row.site}</span>
+                    <span className="text-purple-600 font-semibold">{row.landing}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-gray-400 mt-2">Notre recommandation : site web pour le SEO + landing pages dédiées pour chaque campagne pub.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Pourquoi une Landing Page convertit mieux ?</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">Un seul objectif, un seul message, un seul appel a l&apos;action = un maximum de conversions.</p>
+            <p className="text-muted-foreground max-w-2xl mx-auto">Un seul objectif, un seul message, un seul appel à l&apos;action = un maximum de conversions.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((f, i) => (

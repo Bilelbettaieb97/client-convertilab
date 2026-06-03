@@ -117,6 +117,40 @@ export default function StrategieContent() {
         </div>
       </section>
 
+      {/* POURQUOI STRATÉGIE SOCIAL MEDIA */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Pourquoi votre entreprise a besoin d&apos;une stratégie social media structurée</h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>Publier sur les réseaux sociaux sans stratégie, c&apos;est comme envoyer des lettres sans adresse : de l&apos;énergie dépensée, peu de résultats. <strong>80% des entreprises présentes sur les réseaux sociaux publient sans ligne éditoriale cohérente</strong>, sans objectifs mesurables et sans comprendre pourquoi certains contenus performent et d&apos;autres pas.</p>
+                <p>Une stratégie social media professionnelle définit <strong>pour qui vous publiez</strong> (persona client), <strong>quoi publier</strong> (mix de contenus : éducatif, inspirationnel, commercial, communautaire), <strong>où publier</strong> (LinkedIn, Instagram, Facebook, TikTok — selon votre cible), et <strong>comment mesurer</strong> si votre présence génère réellement des leads et du chiffre d&apos;affaires.</p>
+                <p>Nos clients qui adoptent une stratégie structurée réduisent leur temps de publication de <strong>40%</strong> tout en multipliant leur engagement par <strong>3 en moyenne</strong>. La clé : moins mais mieux, avec un message cohérent et des appels à l&apos;action qui guident vers la conversion.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Quelle plateforme choisir pour votre secteur ?</h3>
+              <div className="space-y-3">
+                {[
+                  { platform: "Instagram", best: "Mode, beauté, restauration, voyage, artisanat", format: "Reels, Stories, Posts visuels" },
+                  { platform: "LinkedIn", best: "B2B, consulting, RH, formation, SaaS", format: "Articles, Posts texte, Vidéos courtes" },
+                  { platform: "Facebook", best: "Commerce local, services à la personne, événements", format: "Posts, Stories, Groupes, Événements" },
+                  { platform: "TikTok", best: "Cible 18-35 ans, produits de consommation, humour", format: "Vidéos courtes 15-60s, trends" },
+                  { platform: "YouTube", best: "Tutoriels, formations, B2B technique, expertise", format: "Vidéos longues, Shorts" },
+                ].map((p, i) => (
+                  <div key={i} className="p-3 bg-violet-50 rounded-lg border border-violet-100">
+                    <div className="font-bold text-violet-800 text-sm">{p.platform}</div>
+                    <div className="text-xs text-gray-600 mt-0.5">Idéal : {p.best}</div>
+                    <div className="text-xs text-violet-600 mt-0.5">Formats : {p.format}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Livrables */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6">

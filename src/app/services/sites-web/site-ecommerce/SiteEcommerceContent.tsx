@@ -75,8 +75,43 @@ export default function SiteEcommerceContent() {
         {[{ value: "21-30j", label: "Delai de livraison" }, { value: "50+", label: "Produits configures" }, { value: "Securise", label: "Paiement en ligne" }, { value: "6 mois", label: "Support inclus" }].map((m, i) => (<div key={i}><p className="text-3xl sm:text-4xl font-black text-primary-foreground">{m.value}</p><p className="text-sm text-primary-foreground/70 mt-1">{m.label}</p></div>))}
       </div></div></section>
 
+      {/* POURQUOI ECOMMERCE */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Pourquoi créer votre boutique en ligne maintenant ?</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>Le e-commerce français a dépassé <strong>160 milliards d&apos;euros</strong> en 2024, avec une croissance de +9,6% par an. Chaque jour sans boutique en ligne, vous laissez des revenus aux concurrents qui ont franchi le pas. La barrière à l&apos;entrée n&apos;a jamais été aussi basse : nous créons votre boutique en 21 à 30 jours à partir de 800€.</p>
+                <p>Une boutique en ligne bien construite n&apos;est pas qu&apos;un catalogue de produits — c&apos;est un <strong>commercial qui travaille 24h/24 sans prendre de congés</strong>. Un client peut découvrir votre produit à 2h du matin, comparer, lire les avis, ajouter au panier et payer — sans aucune intervention de votre part.</p>
+                <p>Nos boutiques sont développées avec <strong>Next.js + Stripe</strong>, les technologies utilisées par les plus grandes marques mondiales. Résultat : des sites ultra-rapides (score PageSpeed 90+), sécurisés SSL, conformes RGPD et parfaitement optimisés pour référencer vos produits sur Google Shopping.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground mb-4">E-commerce : ce que nos clients gagnent réellement</h3>
+              <div className="space-y-3">
+                {[
+                  { metric: "+40%", label: "CA moyen dès le 1er mois", detail: "Grâce à la visibilité 24/7 et aux ventes hors heures d'ouverture." },
+                  { metric: "−60%", label: "Temps de gestion commandes", detail: "Tableau de bord automatisé : stock, commandes, expéditions en 1 clic." },
+                  { metric: "×3", label: "Zone de chalandise", detail: "Vous vendez au-delà de votre ville — toute la France, voire l'Europe." },
+                  { metric: "0€", label: "Commission sur vos ventes", detail: "Contrairement aux marketplaces, gardez 100% de votre marge." },
+                ].map((s, i) => (
+                  <div key={i} className="flex gap-4 items-center p-4 bg-purple-50 rounded-xl border border-purple-100">
+                    <div className="text-2xl font-black text-purple-600 w-16 flex-shrink-0 text-center">{s.metric}</div>
+                    <div>
+                      <div className="font-bold text-foreground text-sm">{s.label}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{s.detail}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20"><div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-14"><h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Tout ce qu&apos;il faut pour vendre en ligne</h2><p className="text-muted-foreground max-w-2xl mx-auto">Une boutique en ligne complete avec les fonctionnalites essentielles pour developper votre activite e-commerce.</p></div>
+        <div className="text-center mb-14"><h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Tout ce qu&apos;il faut pour vendre en ligne</h2><p className="text-muted-foreground max-w-2xl mx-auto">Une boutique en ligne complète avec les fonctionnalités essentielles pour développer votre activité e-commerce.</p></div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((f, i) => (<div key={i} className="p-6 rounded-2xl border border-border bg-card hover:shadow-md transition-shadow text-center"><div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">{f.icon}</div><h3 className="font-bold text-foreground mb-2">{f.title}</h3><p className="text-sm text-muted-foreground">{f.description}</p></div>))}</div>
       </div></section>
 
