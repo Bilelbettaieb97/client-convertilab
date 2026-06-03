@@ -52,13 +52,19 @@ const staticRoutes = [
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteLastModified = new Date("2026-04-05");
+  const siteLastModified = new Date();
+
+  const highPriorityRoutes = new Set([
+    "", "/services", "/services/sites-web", "/services/sea", "/services/seo",
+    "/prix", "/contact", "/a-propos", "/portfolio", "/blog",
+    "/offre-mensuelle", "/demande-maquette", "/estimation-prix-site-web",
+  ]);
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${SITE.url}${route}`,
     lastModified: siteLastModified,
     changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1.0 : route.startsWith("/services") ? 0.8 : 0.7,
+    priority: route === "" ? 1.0 : highPriorityRoutes.has(route) ? 0.9 : route.startsWith("/services") ? 0.8 : 0.7,
   }));
 
   // Blog articles — static + Supabase (merged, no duplicates)
