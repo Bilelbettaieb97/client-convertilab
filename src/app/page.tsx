@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { SITE } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
@@ -7,7 +8,6 @@ import Navigation from "@/components/layout/Navigation";
 import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
 import Portfolio from "@/components/sections/Portfolio";
-import { CinematicHero } from "@/components/ui/cinematic-landing-hero";
 import ToolsOrbital from "@/components/sections/ToolsOrbital";
 import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
@@ -16,12 +16,19 @@ import ProcessTimeline from "@/components/sections/ProcessTimeline";
 import About from "@/components/sections/About";
 import Pricing from "@/components/sections/Pricing";
 import FAQ from "@/components/sections/FAQ";
-import { CinematicFooter } from "@/components/ui/motion-footer";
 import Footer from "@/components/layout/Footer";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import PromoBanner from "@/components/conversion/PromoBanner";
 import SocialProofToast from "@/components/conversion/SocialProofToast";
 import StickyMobileCTA from "@/components/conversion/StickyMobileCTA";
+
+// Dynamic imports for GSAP-heavy components — code-split GSAP out of initial bundle
+const CinematicHero = dynamic(() =>
+  import("@/components/ui/cinematic-landing-hero").then((m) => ({ default: m.CinematicHero }))
+);
+const CinematicFooter = dynamic(() =>
+  import("@/components/ui/motion-footer").then((m) => ({ default: m.CinematicFooter }))
+);
 
 export const metadata: Metadata = {
   title: `Agence Web Paris & Île-de-France | SEO & Ads | ${SITE.name}`,
