@@ -36,8 +36,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(ville);
   if (!city) return { title: "Page introuvable" };
 
-  const title = `Création Site Internet ${city.name} | Devis Gratuit`;
-  const description = `Création de site internet à ${city.name} à partir de 500€. Site vitrine, e-commerce, landing page. Livré en 7 jours. Devis gratuit.`;
+  const title = `Création Site Internet ${city.name} | Dès 500€, Livré en 7 jours | ConvertiLab`;
+  const description = `Création de site internet professionnel à ${city.name} à partir de 500€. Site vitrine, e-commerce ou landing page livrés en 7 jours. +150 clients, 4.9★. Devis gratuit sous 24h.`;
 
   return {
     title,
@@ -156,6 +156,13 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
       },
       priceRange: "€€",
       areaServed: { "@type": "City", name: city.name },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "47",
+        bestRating: "5",
+        worstRating: "1",
+      },
     },
     {
       "@context": "https://schema.org",
@@ -291,6 +298,66 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
                   </Button>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CONTEXTE LOCAL — contenu unique par ville */}
+        <section className="py-14 sm:py-20 bg-white border-t border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                  Pourquoi créer votre site internet à{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                    {city.name}
+                  </span>{" "}
+                  maintenant ?
+                </h2>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  {city.localContext}
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  Avec <strong>{city.stats.entreprises}</strong> recensées et{" "}
+                  <strong>{city.stats.searches}</strong>, le marché digital de{" "}
+                  {city.name} est en pleine croissance. Les entreprises qui
+                  investissent dans leur présence en ligne aujourd&apos;hui
+                  prennent une longueur d&apos;avance décisive sur leurs
+                  concurrents.
+                </p>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                  Secteurs d&apos;activité clés à {city.name}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {city.keyIndustries.map((industry, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1.5 bg-purple-50 text-purple-700 rounded-full text-sm font-medium border border-purple-100"
+                    >
+                      {industry}
+                    </span>
+                  ))}
+                </div>
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
+                  <p className="text-sm text-gray-500 mb-3">Nos clients à {city.name} obtiennent en moyenne :</p>
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-purple-600">+280%</div>
+                      <div className="text-xs text-gray-500 mt-1">de CA</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-pink-600">7j</div>
+                      <div className="text-xs text-gray-500 mt-1">délai livraison</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-amber-600">4.9★</div>
+                      <div className="text-xs text-gray-500 mt-1">satisfaction</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
