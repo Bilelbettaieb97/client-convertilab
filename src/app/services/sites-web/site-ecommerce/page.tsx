@@ -5,12 +5,12 @@ import Footer from "@/components/layout/Footer";
 import SiteEcommerceContent from "./SiteEcommerceContent";
 
 export const metadata: Metadata = {
-  title: `Site E-commerce ${PRICING.ecommerce.label} | Agence Paris`,
-  description: "Boutique en ligne professionnelle en 21-30 jours. Paiement securise, gestion des stocks, SEO integre. Devis gratuit sous 24h.",
+  title: `Création Boutique en Ligne Paris | E-commerce dès 800€ | ConvertiLab`,
+  description: "Création de boutique en ligne à Paris. Paiement Stripe, gestion des stocks, SEO intégré. Livraison en 21 jours. +150 clients, 4.9★. Devis gratuit en 24h.",
   alternates: { canonical: `${SITE.url}/services/sites-web/site-ecommerce` },
   openGraph: {
-    title: `Site E-commerce ${PRICING.ecommerce.label} | Agence Paris | ConvertiLab`,
-    description: "Boutique en ligne professionnelle en 21-30 jours. Paiement securise, gestion des stocks, SEO integre. Devis gratuit sous 24h.",
+    title: `Création Boutique en Ligne Paris | E-commerce dès 800€ | ConvertiLab`,
+    description: "Création de boutique en ligne à Paris. Paiement Stripe, gestion des stocks, SEO intégré. Livraison en 21 jours. +150 clients, 4.9★. Devis gratuit en 24h.",
     url: `${SITE.url}/services/sites-web/site-ecommerce`,
   },
 };

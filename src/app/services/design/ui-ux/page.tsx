@@ -5,10 +5,10 @@ import Footer from "@/components/layout/Footer";
 import DesignUiUxContent from "./DesignUiUxContent";
 
 export const metadata: Metadata = {
-  title: "Design UI/UX | Interfaces Web",
+  title: "Design UI/UX Paris | Interfaces Web Qui Convertissent | ConvertiLab",
   description: "Design UI/UX professionnel : wireframes, prototypes Figma, tests utilisateurs. Interfaces qui convertissent. Devis gratuit.",
   alternates: { canonical: `${SITE.url}/services/design/ui-ux` },
-  openGraph: { title: "Design UI/UX | Interfaces Web | ConvertiLab", description: "Design UI/UX professionnel : wireframes, prototypes Figma, tests utilisateurs. Interfaces qui convertissent. Devis gratuit.", url: `${SITE.url}/services/design/ui-ux` },
+  openGraph: { title: "Design UI/UX Paris | Interfaces Web Qui Convertissent | ConvertiLab", description: "Design UI/UX professionnel : wireframes, prototypes Figma, tests utilisateurs. Interfaces qui convertissent. Devis gratuit.", url: `${SITE.url}/services/design/ui-ux` },
 };
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [

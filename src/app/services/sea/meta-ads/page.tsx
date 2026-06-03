@@ -5,10 +5,10 @@ import Footer from "@/components/layout/Footer";
 import MetaAdsContent from "./MetaAdsContent";
 
 export const metadata: Metadata = {
-  title: "Meta Ads | Facebook & Instagram",
+  title: "Agence Meta Ads Paris | Facebook & Instagram Ads | ConvertiLab",
   description: "Publicites Facebook et Instagram : ciblage precis, creatifs optimises, ROI maximise. Audit de compte gratuit.",
   alternates: { canonical: `${SITE.url}/services/sea/meta-ads` },
-  openGraph: { title: "Meta Ads | Facebook & Instagram | ConvertiLab", description: "Publicites Facebook et Instagram : ciblage precis, creatifs optimises, ROI maximise. Audit de compte gratuit.", url: `${SITE.url}/services/sea/meta-ads` },
+  openGraph: { title: "Agence Meta Ads Paris | Facebook & Instagram Ads | ConvertiLab", description: "Publicites Facebook et Instagram : ciblage precis, creatifs optimises, ROI maximise. Audit de compte gratuit.", url: `${SITE.url}/services/sea/meta-ads` },
 };
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [

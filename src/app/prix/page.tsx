@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import { pricingPages } from "@/data/pricing-pages";
 
 export const metadata: Metadata = {
-  title: "Tarifs Création Site Web | Devis Gratuit",
+  title: "Tarifs Création Site Web 2026 | Dès 500€ | ConvertiLab Paris",
   description:
     "Sites web à partir de 500€, e-commerce dès 800€, SEO et Google Ads sur devis. Tarifs transparents, sans frais cachés. Devis gratuit sous 24h.",
   alternates: { canonical: `${SITE.url}/prix` },

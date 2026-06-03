@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "À Propos | Bilel Bettaieb, Fondateur | Agence Web Paris",
+  title: "À Propos | ConvertiLab Paris — Agence Web de Bilel Bettaieb",
   description:
     "Découvrez ConvertiLab et son fondateur Bilel Bettaieb. +150 sites créés, +50 clients accompagnés, expertise en création web, SEO et publicité digitale à Paris & Île-de-France.",
   keywords:

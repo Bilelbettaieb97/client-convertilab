@@ -5,10 +5,10 @@ import Footer from "@/components/layout/Footer";
 import AuditSeoContent from "./AuditSeoContent";
 
 export const metadata: Metadata = {
-  title: "Audit SEO Complet",
+  title: "Audit SEO Paris | Rapport Complet + Plan d'Action | ConvertiLab",
   description: "Audit SEO complet : technique, contenu, concurrence. Rapport detaille + plan d'action priorise. Premier audit gratuit.",
   alternates: { canonical: `${SITE.url}/services/seo/audit` },
-  openGraph: { title: "Audit SEO Complet | ConvertiLab", description: "Audit SEO complet : technique, contenu, concurrence. Rapport detaille + plan d'action priorise. Premier audit gratuit.", url: `${SITE.url}/services/seo/audit` },
+  openGraph: { title: "Audit SEO Paris | Rapport Complet + Plan d'Action | ConvertiLab", description: "Audit SEO complet : technique, contenu, concurrence. Rapport detaille + plan d'action priorise. Premier audit gratuit.", url: `${SITE.url}/services/seo/audit` },
 };
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [

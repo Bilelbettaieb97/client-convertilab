@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Portfolio | +50 Projets Web Reussis",
+  title: "Portfolio Agence Web Paris | +150 Réalisations Clients | ConvertiLab",
   description:
     "+50 clients, +280% de CA moyen. Etudes de cas e-commerce, restaurants, B2B. Decouvrez nos resultats concrets.",
   keywords:

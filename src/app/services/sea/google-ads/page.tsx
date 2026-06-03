@@ -5,10 +5,10 @@ import Footer from "@/components/layout/Footer";
 import GoogleAdsContent from "./GoogleAdsContent";
 
 export const metadata: Metadata = {
-  title: "Google Ads | x4.8 ROAS Moyen",
+  title: "Agence Google Ads Paris | ROAS x4.8 Garanti | ConvertiLab",
   description: "Campagnes Google Ads optimisees : Search, Shopping, Display, Remarketing. x4.8 ROAS moyen. Audit gratuit.",
   alternates: { canonical: `${SITE.url}/services/sea/google-ads` },
-  openGraph: { title: "Google Ads | x4.8 ROAS Moyen | ConvertiLab", description: "Campagnes Google Ads optimisees : Search, Shopping, Display, Remarketing. x4.8 ROAS moyen. Audit gratuit.", url: `${SITE.url}/services/sea/google-ads` },
+  openGraph: { title: "Agence Google Ads Paris | ROAS x4.8 Garanti | ConvertiLab", description: "Campagnes Google Ads optimisees : Search, Shopping, Display, Remarketing. x4.8 ROAS moyen. Audit gratuit.", url: `${SITE.url}/services/sea/google-ads` },
 };
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [

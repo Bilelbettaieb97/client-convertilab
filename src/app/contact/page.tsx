@@ -15,9 +15,9 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Contact | Devis Gratuit sous 24h",
+  title: "Contact Agence Web Paris | Devis Gratuit sous 24h | ConvertiLab",
   description:
-    "Agence web a Rueil-Malmaison & Paris. Devis gratuit sous 24h, consultation 30 min offerte. Tel : +33 6 16 47 72 45.",
+    "Contactez notre agence web à Paris & Rueil-Malmaison. Devis gratuit sous 24h, consultation 30 min offerte. 4.9★ sur Trustpilot. Tél : 06 16 47 72 45.",
   keywords:
     "contact agence web Paris, devis site internet Rueil-Malmaison, agence web Ile-de-France, creation site web Paris, consultation gratuite",
   alternates: { canonical: `${SITE.url}/contact` },

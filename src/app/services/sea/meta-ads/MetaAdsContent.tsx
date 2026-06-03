@@ -27,8 +27,8 @@ export default function MetaAdsContent() {
         </BreadcrumbList></Breadcrumb>
         <div className="max-w-4xl">
           <div className="flex items-center gap-3 mb-6"><div className="p-3 bg-white/20 rounded-xl"><Fingerprint className="w-8 h-8" /></div><span className="px-4 py-1 bg-white/20 rounded-full text-sm font-medium">SEA</span></div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Meta Ads</h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">Publicites Facebook et Instagram pour toucher votre audience ideale.</p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Agence Meta Ads Paris</h1>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">Publicités Facebook et Instagram ciblées pour toucher votre audience idéale en Île-de-France et partout en France.</p>
           <div className="flex flex-wrap gap-4">
             <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-100"><Link href="/contact">Demander un audit gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link></Button>
             <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg"><Clock className="w-5 h-5" /><span>Resultats : 1-2 semaines</span></div>

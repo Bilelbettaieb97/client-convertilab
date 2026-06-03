@@ -5,10 +5,10 @@ import Footer from "@/components/layout/Footer";
 import ReferencementContent from "./ReferencementContent";
 
 export const metadata: Metadata = {
-  title: "Referencement SEO | Page 1 Google",
+  title: "Référencement SEO Paris | Agence SEO Page 1 Google | ConvertiLab",
   description: "Strategie SEO complete : optimisation on-page, netlinking, contenu. Atteignez la page 1 de Google. Audit SEO gratuit.",
   alternates: { canonical: `${SITE.url}/services/seo/referencement` },
-  openGraph: { title: "Referencement SEO | Page 1 Google | ConvertiLab", description: "Strategie SEO complete : optimisation on-page, netlinking, contenu. Atteignez la page 1 de Google. Audit SEO gratuit.", url: `${SITE.url}/services/seo/referencement` },
+  openGraph: { title: "Référencement SEO Paris | Agence SEO Page 1 Google | ConvertiLab", description: "Strategie SEO complete : optimisation on-page, netlinking, contenu. Atteignez la page 1 de Google. Audit SEO gratuit.", url: `${SITE.url}/services/seo/referencement` },
 };
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
