@@ -346,7 +346,24 @@ export default async function CityPage({ params }: Props) {
             </span>{" "}
             a besoin d&apos;une agence web locale
           </h2>
+
+          {/* Secteurs clés */}
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            {city.keyIndustries.map((industry, i) => (
+              <span
+                key={i}
+                className="px-3 py-1.5 bg-purple-50 text-purple-700 rounded-full text-sm font-medium border border-purple-100"
+              >
+                {industry}
+              </span>
+            ))}
+          </div>
+
           <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-4">
+            {/* Contexte local unique */}
+            <p className="text-gray-700 leading-relaxed bg-gray-50 rounded-xl p-5 border-l-4 border-purple-400">
+              {city.localContext}
+            </p>
             <p>
               Avec <strong>{city.stats.entreprises}</strong> recensées,{" "}
               {city.name} est un bassin économique dynamique au sein du
