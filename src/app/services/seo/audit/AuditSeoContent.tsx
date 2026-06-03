@@ -36,6 +36,41 @@ export default function AuditSeoContent() {
         </div>
       </div></section>
 
+      {/* POURQUOI AUDIT */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Pourquoi un audit SEO est indispensable avant tout action</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>Lancer une stratégie SEO sans audit préalable, c&apos;est construire une maison sans fondations. Un <strong>audit SEO complet</strong> vous révèle exactement pourquoi votre site ne ranke pas, quelles pages perdent du trafic et quels concurrents vous dépassent — et surtout, quoi faire en priorité pour inverser la tendance.</p>
+                <p>Notre audit couvre plus de <strong>150 points de contrôle</strong> répartis en 6 axes : technique, on-page, contenu, backlinks, expérience utilisateur et référencement local. Chaque point est noté et priorisé selon son impact sur votre visibilité Google.</p>
+                <p>Le rapport livré inclut un <strong>plan d&apos;action concret et priorisé</strong> : vous savez exactement quoi corriger cette semaine, ce mois-ci et ce trimestre pour maximiser l&apos;impact de votre budget SEO.</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-foreground">Les 6 axes analysés dans notre audit</h3>
+              {[
+                { num: "01", title: "SEO Technique", items: ["Vitesse & Core Web Vitals", "Indexation & crawlabilité", "Structure des URLs", "Fichiers robots.txt & sitemap"] },
+                { num: "02", title: "SEO On-Page", items: ["Balises title & meta description", "Structure H1/H2/H3", "Densité de mots-clés", "Données structurées Schema.org"] },
+                { num: "03", title: "Contenu", items: ["Qualité & unicité du contenu", "Couverture des mots-clés", "Contenu dupliqué", "Opportunités de contenu"] },
+                { num: "04", title: "Backlinks", items: ["Profil de liens entrants", "Autorité de domaine (DA)", "Liens toxiques à désavouer", "Opportunités de netlinking"] },
+                { num: "05", title: "UX & Conversion", items: ["Taux de rebond par page", "Parcours utilisateur", "Formulaires & CTAs", "Mobile-friendliness"] },
+                { num: "06", title: "SEO Local", items: ["Google Business Profile", "Cohérence NAP", "Citations locales", "Avis et réputation"] },
+              ].map((axis, i) => (
+                <div key={i} className="flex gap-3 p-3 bg-gray-50 rounded-lg">
+                  <span className="text-blue-600 font-black text-lg w-8 flex-shrink-0">{axis.num}</span>
+                  <div>
+                    <div className="font-semibold text-foreground text-sm">{axis.title}</div>
+                    <div className="text-xs text-muted-foreground">{axis.items.slice(0,2).join(" · ")}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-muted/30"><div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Ce que nous analysons</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (<div key={index} className="bg-background p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-border"><div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600 mb-4">{feature.icon}</div><h3 className="font-semibold text-lg mb-2 text-foreground">{feature.title}</h3><p className="text-muted-foreground text-sm">{feature.description}</p></div>))}</div>

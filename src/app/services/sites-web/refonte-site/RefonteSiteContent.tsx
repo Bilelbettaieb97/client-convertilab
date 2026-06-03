@@ -36,6 +36,44 @@ export default function RefonteSiteContent() {
         </div>
       </div></section>
 
+      {/* POURQUOI REFONTE */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Quand faut-il refondre son site web ?</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>Un site web a une durée de vie de 3 à 5 ans. Au-delà, il devient un frein plutôt qu&apos;un accélérateur pour votre business : design daté qui crée de la méfiance, performances dégradées qui pénalisent votre référencement Google, et expérience mobile insuffisante qui fait fuir 60% de vos visiteurs.</p>
+                <p>La refonte de site web est souvent perçue comme un risque pour le SEO. C&apos;est vrai — mais uniquement si elle est mal exécutée. Chez ConvertiLab, nous appliquons un <strong>protocole SEO de migration rigoureux</strong> : cartographie des URLs existantes, redirections 301 systématiques, vérification post-lancement. Nos clients ne perdent aucune position lors de la transition.</p>
+                <p>Une refonte bien menée génère en moyenne <strong>+150% de trafic organique</strong> dans les 6 mois qui suivent, grâce à la combinaison d&apos;un design moderne (meilleur taux d&apos;engagement), d&apos;une architecture SEO optimisée et de performances améliorées (Core Web Vitals).</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Les 7 signaux qui indiquent qu&apos;une refonte s&apos;impose</h3>
+              <div className="space-y-3">
+                {[
+                  { signal: "Site non responsive", detail: "Plus de 60% du trafic web est mobile — un site non adapté perd ces visiteurs." },
+                  { signal: "Score PageSpeed < 50", detail: "Chaque seconde de chargement supplémentaire réduit vos conversions de 20%." },
+                  { signal: "Taux de rebond > 70%", detail: "Les visiteurs partent avant de voir ce que vous proposez — signe d'un UX défaillant." },
+                  { signal: "Site de plus de 4 ans", detail: "Les technologies et standards du web évoluent — votre site aussi doit évoluer." },
+                  { signal: "Image de marque évoluée", detail: "Si votre identité a changé mais pas votre site, il y a un décalage nuisible." },
+                  { signal: "Peu de conversions", detail: "Un site mal conçu pour la conversion perd des dizaines de clients par mois." },
+                  { signal: "Difficile à modifier", detail: "Si chaque mise à jour nécessite un développeur, le CMS est trop complexe." },
+                ].map((s, i) => (
+                  <div key={i} className="flex gap-3 items-start p-3 bg-orange-50 rounded-lg border border-orange-100">
+                    <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
+                    <div>
+                      <div className="font-semibold text-orange-800 text-sm">{s.signal}</div>
+                      <div className="text-xs text-orange-700/70">{s.detail}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-muted/30"><div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Pourquoi refondre votre site ?</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (<div key={index} className="bg-background p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-border"><div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center text-orange-600 mb-4">{feature.icon}</div><h3 className="font-semibold text-lg mb-2 text-foreground">{feature.title}</h3><p className="text-muted-foreground text-sm">{feature.description}</p></div>))}</div>

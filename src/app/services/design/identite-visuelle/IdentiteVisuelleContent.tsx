@@ -36,8 +36,44 @@ export default function IdentiteVisuelleContent() {
         </div>
       </div></section>
 
+      {/* POURQUOI IDENTITE */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Pourquoi votre identité visuelle est votre premier argument commercial</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>Il faut <strong>moins de 7 secondes</strong> pour qu&apos;un prospect se fasse une première impression de votre entreprise. Cette impression est formée à 93% par des signaux visuels : votre logo, vos couleurs, votre typographie. Si ces éléments ne transmettent pas immédiatement professionnalisme, confiance et cohérence, le prospect est perdu avant d&apos;avoir lu un mot de votre offre.</p>
+                <p>Une identité visuelle forte est un investissement à long terme. Contrairement à la publicité qui s&apos;arrête dès que le budget est coupé, <strong>votre logo et votre charte graphique travaillent pour vous en permanence</strong> : sur votre site web, vos cartes de visite, vos devis, vos réseaux sociaux, vos véhicules, vos uniformes...</p>
+                <p>Notre processus de création d&apos;identité visuelle commence toujours par une phase de <strong>stratégie de marque</strong> : qui êtes-vous, qui ciblez-vous, quelles valeurs voulez-vous transmettre ? Seulement ensuite viennent les choix graphiques — des choix fondés sur une réflexion stratégique, pas sur des tendances éphémères.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Ce qu&apos;une identité visuelle professionnelle vous apporte</h3>
+              <div className="space-y-3">
+                {[
+                  { icon: "🎯", title: "Cohérence multi-supports", detail: "Votre marque est reconnaissable instantanément partout : digital, print, signalétique, uniforme." },
+                  { icon: "💼", title: "Crédibilité renforcée", detail: "Un logo professionnel augmente la confiance perçue et vous permet de justifier des prix plus élevés." },
+                  { icon: "🧠", title: "Mémorisation accrue", detail: "Une identité cohérente est 3× plus mémorable qu'une communication visuelle disparate." },
+                  { icon: "📈", title: "Avantage concurrentiel", detail: "Dans des secteurs où les offres sont similaires, l'image de marque peut être le facteur décisif." },
+                  { icon: "🔄", title: "Gain de temps opérationnel", detail: "Une charte graphique complète accélère la création de tous vos futurs supports de communication." },
+                ].map((s, i) => (
+                  <div key={i} className="flex gap-4 items-start p-4 bg-purple-50 rounded-xl border border-purple-100">
+                    <span className="text-2xl">{s.icon}</span>
+                    <div>
+                      <div className="font-bold text-foreground text-sm">{s.title}</div>
+                      <div className="text-xs text-muted-foreground mt-1">{s.detail}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-muted/30"><div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Les piliers de votre identite</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Les piliers de votre identité</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (<div key={index} className="bg-background p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-border"><div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 mb-4">{feature.icon}</div><h3 className="font-semibold text-lg mb-2 text-foreground">{feature.title}</h3><p className="text-muted-foreground text-sm">{feature.description}</p></div>))}</div>
       </div></section>
 

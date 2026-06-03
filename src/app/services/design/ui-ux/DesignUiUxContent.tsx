@@ -36,6 +36,41 @@ export default function DesignUiUxContent() {
         </div>
       </div></section>
 
+      {/* POURQUOI UX */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Pourquoi le design UI/UX détermine vos conversions</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>Une interface mal conçue coûte cher : <strong>88% des utilisateurs</strong> ne reviennent pas sur un site après une mauvaise expérience. À l&apos;inverse, chaque euro investi dans le design UX génère en moyenne <strong>100€ de retour</strong> selon le Forrester Research — soit un ROI de 9 900%.</p>
+                <p>Le design UI (User Interface) concerne l&apos;aspect visuel — couleurs, typographies, mise en page, micro-animations. Le design UX (User Experience) concerne la logique de navigation — comment l&apos;utilisateur trouve ce qu&apos;il cherche, complète une action, se sent à l&apos;aise sur votre interface. Les deux sont indissociables.</p>
+                <p>Notre approche combine <strong>recherche utilisateur quantitative et qualitative</strong> : heatmaps, tests utilisateurs, analyse des parcours d&apos;achat, A/B testing. Chaque décision de design est fondée sur des données réelles, pas sur des suppositions.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground mb-4">L&apos;impact mesurable d&apos;un bon design UX</h3>
+              <div className="space-y-3">
+                {[
+                  { metric: "+200%", label: "Taux de conversion", detail: "Un redesign UX centré sur l'objectif de conversion peut doubler ou tripler le taux de clic sur les CTAs." },
+                  { metric: "−50%", label: "Taux de rebond", detail: "Une navigation claire et intuitive réduit le taux de rebond et améliore l'engagement." },
+                  { metric: "+40%", label: "Temps sur site", detail: "Un design qui guide naturellement l'utilisateur augmente le temps de session moyen." },
+                  { metric: "×3", label: "Mémorisation marque", detail: "Une identité visuelle cohérente multiplie la mémorisation de votre marque par les visiteurs." },
+                ].map((s, i) => (
+                  <div key={i} className="flex gap-4 items-start p-4 bg-pink-50 rounded-xl border border-pink-100">
+                    <div className="text-2xl font-black text-pink-600 w-16 flex-shrink-0">{s.metric}</div>
+                    <div>
+                      <div className="font-bold text-foreground text-sm">{s.label}</div>
+                      <div className="text-xs text-muted-foreground mt-1">{s.detail}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-muted/30"><div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Notre processus UX</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (<div key={index} className="bg-background p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-border"><div className="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center text-pink-600 mb-4">{feature.icon}</div><h3 className="font-semibold text-lg mb-2 text-foreground">{feature.title}</h3><p className="text-muted-foreground text-sm">{feature.description}</p></div>))}</div>
