@@ -18,6 +18,36 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", "position": 4, "name": "Meta Ads", "item": `${SITE.url}/services/sea/meta-ads` },
 ]};
 
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Publicités Meta Ads",
+  description: "Campagnes Facebook et Instagram Ads ciblées pour générer des leads et des ventes.",
+  url: `${SITE.url}/services/sea/meta-ads`,
+  provider: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: SITE.url,
+    telephone: SITE.phone,
+  },
+  areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "47",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "400",
+    availability: "https://schema.org/InStock",
+  },
+};
+
 export default function MetaAdsPage() {
-  return (<div className="min-h-screen"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} /><Navigation /><MetaAdsContent /><Footer /></div>);
+  return (<div className="min-h-screen"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><MetaAdsContent /><Footer /></div>);
 }

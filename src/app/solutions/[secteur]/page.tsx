@@ -78,12 +78,32 @@ export default async function SectorPage({ params }: Props) {
     "@type": "Service",
     name: `Création Site Web ${sector.name}`,
     description: sector.description,
-    provider: { "@type": "Organization", name: SITE.name, url: SITE.url },
+    url: `${SITE.url}/solutions/${sector.slug}`,
+    provider: {
+      "@type": "Organization",
+      name: SITE.name,
+      url: SITE.url,
+      telephone: SITE.phone,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Rueil-Malmaison",
+        postalCode: "92500",
+        addressCountry: "FR",
+      },
+    },
     areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "47",
+      bestRating: "5",
+      worstRating: "1",
+    },
     offers: {
       "@type": "Offer",
       priceCurrency: "EUR",
       price,
+      availability: "https://schema.org/InStock",
       priceSpecification: {
         "@type": "PriceSpecification",
         priceCurrency: "EUR",

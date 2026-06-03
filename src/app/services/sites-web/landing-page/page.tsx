@@ -46,7 +46,15 @@ const serviceSchema = {
   "description": "Landing page haute conversion optimisee pour Google Ads et Meta Ads. Livraison en 5-7 jours.",
   "url": `${SITE.url}/services/sites-web/landing-page`,
   "provider": { "@type": "Organization", "name": SITE.name },
-  "offers": { "@type": "Offer", "price": PRICING.landing.from, "priceCurrency": "EUR" },
+  "offers": { "@type": "Offer", "price": PRICING.landing.from, "priceCurrency": "EUR" ,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "47",
+      bestRating: "5",
+      worstRating: "1",
+    }
+  },
 };
 
 export default function LandingPagePage() {

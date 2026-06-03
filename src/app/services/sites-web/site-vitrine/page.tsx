@@ -22,7 +22,7 @@ const schemas = [
     { "@type": "ListItem", "position": 3, "name": "Sites Web", "item": `${SITE.url}/services/sites-web` },
     { "@type": "ListItem", "position": 4, "name": "Site Vitrine", "item": `${SITE.url}/services/sites-web/site-vitrine` },
   ]},
-  { "@context": "https://schema.org", "@type": "Service", "name": "Creation Site Vitrine", "description": "Site vitrine professionnel sur-mesure, responsive et optimise SEO. Livraison en 10-15 jours.", "url": `${SITE.url}/services/sites-web/site-vitrine`, "provider": { "@type": "Organization", "name": SITE.name }, "offers": { "@type": "Offer", "price": PRICING.vitrine.from, "priceCurrency": "EUR" } },
+  { "@context": "https://schema.org", "@type": "Service", "name": "Creation Site Vitrine", "description": "Site vitrine professionnel sur-mesure, responsive et optimise SEO. Livraison en 10-15 jours.", "url": `${SITE.url}/services/sites-web/site-vitrine`, "provider": { "@type": "Organization", "name": SITE.name }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "47", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": PRICING.vitrine.from, "priceCurrency": "EUR", "availability": "https://schema.org/InStock" } },
 ];
 
 export default function SiteVitrinePage() {

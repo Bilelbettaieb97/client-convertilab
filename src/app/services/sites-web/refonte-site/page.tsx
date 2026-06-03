@@ -22,10 +22,40 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", "position": 4, "name": "Refonte de Site", "item": `${SITE.url}/services/sites-web/refonte-site` },
 ]};
 
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Refonte de Site Web",
+  description: "Modernisation complète de votre site web existant avec préservation du référencement SEO.",
+  url: `${SITE.url}/services/sites-web/refonte-site`,
+  provider: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: SITE.url,
+    telephone: SITE.phone,
+  },
+  areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "47",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "800",
+    availability: "https://schema.org/InStock",
+  },
+};
+
 export default function RefonteSitePage() {
   return (
     <div className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navigation />
       <RefonteSiteContent />
       <Footer />

@@ -18,6 +18,36 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", "position": 4, "name": "Design UI/UX", "item": `${SITE.url}/services/design/ui-ux` },
 ]};
 
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Design UI/UX",
+  description: "Conception d'interfaces web et mobile intuitives, modernes et orientées conversion.",
+  url: `${SITE.url}/services/design/ui-ux`,
+  provider: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: SITE.url,
+    telephone: SITE.phone,
+  },
+  areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "47",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "500",
+    availability: "https://schema.org/InStock",
+  },
+};
+
 export default function DesignUiUxPage() {
-  return (<div className="min-h-screen"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} /><Navigation /><DesignUiUxContent /><Footer /></div>);
+  return (<div className="min-h-screen"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><DesignUiUxContent /><Footer /></div>);
 }

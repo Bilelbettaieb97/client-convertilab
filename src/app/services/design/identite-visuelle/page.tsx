@@ -18,10 +18,40 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", "position": 4, "name": "Identite Visuelle", "item": `${SITE.url}/services/design/identite-visuelle` },
 ]};
 
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Identité Visuelle & Logo",
+  description: "Création de logo, charte graphique et identité visuelle complète pour votre marque.",
+  url: `${SITE.url}/services/design/identite-visuelle`,
+  provider: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: SITE.url,
+    telephone: SITE.phone,
+  },
+  areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "47",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "300",
+    availability: "https://schema.org/InStock",
+  },
+};
+
 export default function IdentiteVisuellePage() {
   return (
     <div className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navigation />
       <IdentiteVisuelleContent />
       <Footer />

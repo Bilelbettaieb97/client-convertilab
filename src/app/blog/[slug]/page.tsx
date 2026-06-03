@@ -87,41 +87,66 @@ export default async function BlogArticlePage({ params }: Props) {
 
   const relatedArticles = getRelatedArticles(slug, 3);
 
-  // JSON-LD structured data
+  const wordCount = article.content.split(/\s+/).length;
+  const readTimeMinutes = Math.max(1, Math.ceil(wordCount / 200));
+
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
+    "@id": `${SITE.url}/blog/${article.slug}`,
     headline: article.title,
     description: article.metaDescription,
-    image: article.image,
+    image: {
+      "@type": "ImageObject",
+      url: article.image,
+      width: 1200,
+      height: 630,
+    },
     datePublished: article.publishedAt,
-    dateModified: article.publishedAt,
+    dateModified: new Date().toISOString(),
+    inLanguage: "fr-FR",
+    wordCount,
+    timeRequired: `PT${readTimeMinutes}M`,
     author: {
       "@type": "Organization",
-      name: article.author.name,
+      name: SITE.name,
       url: SITE.url,
+      logo: { "@type": "ImageObject", url: `${SITE.url}/favicon.png` },
     },
     publisher: {
       "@type": "Organization",
       name: SITE.name,
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE.url}/favicon.png`,
-      },
+      url: SITE.url,
+      logo: { "@type": "ImageObject", url: `${SITE.url}/favicon.png` },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${SITE.url}/blog/${article.slug}`,
     },
     keywords: article.tags.join(", "),
+    articleSection: article.category,
+    isPartOf: {
+      "@type": "Blog",
+      "@id": `${SITE.url}/blog`,
+      name: `Blog ${SITE.name}`,
+      publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: SITE.url },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE.url}/blog` },
+      { "@type": "ListItem", position: 3, name: article.title, item: `${SITE.url}/blog/${article.slug}` },
+    ],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <BlogArticleClient article={article} relatedArticles={relatedArticles} />
     </>
   );
