@@ -17,7 +17,7 @@ export const SITE = {
   analytics: {
     ga: "G-N9NTVTE0R6",
     gtm: "GTM-5TDHTDHP",
-    metaPixel: "1413733970752208",
+    metaPixel: "1342588771159528",
     adsense: "ca-pub-5844925774606937",
   },
 } as const;
