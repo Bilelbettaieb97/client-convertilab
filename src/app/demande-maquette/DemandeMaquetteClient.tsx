@@ -81,7 +81,7 @@ export default function DemandeMaquetteClient() {
     }
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.from("mockup_requests" as string).insert({ name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), current_site_url: form.current_site_url.trim() || null, sector: form.sector, site_type: form.site_type, design_style: form.design_style || null, description: form.description.trim() || null });
+      const { error } = await supabase.from("mockup_requests" as string).insert({ name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), current_site_url: form.current_site_url.trim() || null, sector: form.sector, site_type: form.site_type, style: form.design_style || null, message: form.description.trim() || null });
       if (error) throw error;
       // Non-bloquant : si la notification échoue, on continue quand même
       fetch("/api/notify", {
