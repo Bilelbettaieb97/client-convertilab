@@ -144,7 +144,7 @@ export async function POST(request: NextRequest) {
       warnings.push("pipedrive_failed");
     });
 
-    scheduleEmailSeries("SEO Check", email, {
+    await scheduleEmailSeries("SEO Check", email, {
       prenom: firstName(name),
       domaine: audit.domain,
       score: String(audit.scores.global),

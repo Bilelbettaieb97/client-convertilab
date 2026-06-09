@@ -93,10 +93,10 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         warnings.push("supabase_insert_failed");
       }
 
-      // 7. Schedule email series (fire-and-forget)
+      // 7. Schedule email series
       if (config.buildSeriesContext) {
         const ctx = config.buildSeriesContext(result, lead);
-        scheduleEmailSeries(config.toolName, lead.email, ctx).catch((err) =>
+        await scheduleEmailSeries(config.toolName, lead.email, ctx).catch((err) =>
           log(config.toolName, "email_series", err)
         );
       }
