@@ -1,9 +1,28 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+// IPs bloquées — séparées par virgule dans BLOCKED_IPS ou listées ici
+const BLOCKED_IPS: string[] = (process.env.BLOCKED_IPS || "").split(",").filter(Boolean);
+
+function getIp(request: NextRequest): string {
+  return (
+    request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+    request.headers.get("x-real-ip") ||
+    ""
+  );
+}
+
 export function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
   const host = request.headers.get("host") || "";
+
+  // Bloquer les IPs indésirables
+  if (BLOCKED_IPS.length > 0) {
+    const ip = getIp(request);
+    if (ip && BLOCKED_IPS.includes(ip)) {
+      return new Response(null, { status: 404 });
+    }
+  }
 
   // 301 propre sans header Refresh (Response brute, pas NextResponse.redirect)
   if (host === "convertilab.com") {

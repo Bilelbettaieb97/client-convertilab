@@ -54,6 +54,11 @@ export async function POST(request: NextRequest) {
     }
 
     // 4. Préparer l'objet à insérer (email_sent sera mis à jour après envoi)
+    const visitorIp =
+      request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+      request.headers.get("x-real-ip") ||
+      null;
+
     const supabaseRow = {
       website_url: audit.url,
       domain: audit.domain,
@@ -61,6 +66,7 @@ export async function POST(request: NextRequest) {
       email,
       phone: phone || null,
       company: company || null,
+      ip: visitorIp,
       score_global: audit.scores.global,
       score_technique: audit.scores.technique,
       score_onpage: audit.scores.onPage,
