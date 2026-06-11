@@ -12,6 +12,14 @@ const supabase = createClient(
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const BLOCKED_EMAILS = new Set(
+  (process.env.BLOCKED_EMAILS || "").split(",").map((e) => e.trim().toLowerCase()).filter(Boolean)
+);
+
+function isBlocked(email: string): boolean {
+  return BLOCKED_EMAILS.has(email.toLowerCase());
+}
+
 function log(tool: string, step: string, err: unknown) {
   const msg = err instanceof Error ? err.message : String(err);
   console.error(`[${tool}][${step}] ERREUR: ${msg}`);
@@ -26,6 +34,12 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
 
       // 1. Validate
       const input = config.validate(body);
+
+      // Blocage silencieux — retourne un succès factice sans rien traiter
+      if (isBlocked(input.email)) {
+        return NextResponse.json({ success: true, emailSent: true, pdfBase64: null });
+      }
+
       const lead: LeadInfo = {
         name: input.name,
         email: input.email,

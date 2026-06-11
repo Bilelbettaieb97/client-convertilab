@@ -13,6 +13,10 @@ import type { SeoAuditResult } from "@/lib/seo/analyzer";
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
 
+const BLOCKED_EMAILS = new Set(
+  (process.env.BLOCKED_EMAILS || "").split(",").map((e) => e.trim().toLowerCase()).filter(Boolean)
+);
+
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -37,6 +41,11 @@ export async function POST(request: NextRequest) {
         { error: "URL, nom et email sont requis." },
         { status: 400 }
       );
+    }
+
+    // Blocage silencieux — faux succès sans rien traiter
+    if (BLOCKED_EMAILS.has(email.toLowerCase())) {
+      return NextResponse.json({ success: true, emailSent: true });
     }
 
     // 1. Analyze the site
