@@ -41,6 +41,7 @@ const FORMULAIRES_SOURCES = new Set([
   "Offre Mensuelle",
   "Offre Speciale",
   "HeroMiniForm",
+  "promo_lead",
 ]);
 
 // Custom deal field keys (created via API)

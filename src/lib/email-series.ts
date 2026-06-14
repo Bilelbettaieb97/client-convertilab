@@ -527,6 +527,77 @@ Bilel Bettaieb · ConvertiLab`,
 
   // ── FORMULAIRES ─────────────────────────────────────────────
 
+  "promo_lead": [
+    {
+      delay: 0,
+      subject: "{{prenom}}, votre demande de site à 300€ est bien reçue ✅",
+      body: `Bonjour {{prenom}},
+
+Votre demande est bien enregistrée.
+
+Je l'ai reçue et je reviens vers vous sous 24h pour confirmer les détails et lancer la création de votre site.
+
+En attendant, si vous souhaitez échanger directement :
+
+→ [Réserver un appel de 15 min](${CALENDLY})
+
+À très vite,
+Bilel · ConvertiLab
+06 16 47 72 45`,
+    },
+    {
+      delay: 1,
+      subject: "{{prenom}}, votre site sera prêt en 7 jours — voici comment ça se passe",
+      body: `Bonjour {{prenom}},
+
+Voici comment se déroule la création de votre site :
+
+1. Appel de cadrage (15 min) — on aligne le style, les pages, le message
+2. Maquette envoyée sous 48h — vous validez avant qu'on code
+3. Site livré en 7 jours — hébergé, sécurisé, prêt à recevoir des clients
+
+Aucune surprise. Aucun abonnement caché. Juste votre site, livré vite.
+
+Si vous n'avez pas encore réservé votre créneau :
+
+→ [Choisir mon créneau ici](${CALENDLY})
+
+Bilel · ConvertiLab`,
+    },
+    {
+      delay: 4,
+      subject: "Ce que disent nos clients après leur site à 300€",
+      body: `Bonjour {{prenom}},
+
+En 3 ans, on a livré plus de 150 sites pour des entrepreneurs comme vous.
+
+Ce qu'ils retiennent : un site professionnel, livré rapidement, sans se ruiner.
+
+→ [Voir nos réalisations](https://www.convertilab.com/portfolio)
+
+Si votre projet est toujours d'actualité, je suis disponible cette semaine :
+
+→ [Réserver 15 min](${CALENDLY})
+
+Bilel Bettaieb · ConvertiLab
+06 16 47 72 45`,
+    },
+    {
+      delay: 10,
+      subject: "{{prenom}}, je ferme votre dossier cette semaine",
+      body: `Bonjour {{prenom}},
+
+Je ferme votre dossier sans nouvelles de votre part.
+
+Si votre projet est toujours d'actualité, répondez simplement à ce mail ou appelez-moi directement.
+
+→ [Réserver un appel](${CALENDLY}) · 06 16 47 72 45
+
+Bonne continuation,
+Bilel Bettaieb · ConvertiLab`,
+    },
+  ],
+
   "Contact": [
     {
       delay: 1,
@@ -1011,7 +1082,10 @@ export function buildFormSeriesContext(
   const entreprise = company || String(fields.company || "");
   const ctx: Record<string, string> = { prenom, entreprise };
 
-  if (formType === "Contact") {
+  if (formType === "promo_lead") {
+    ctx.situation = String(fields.situation || "");
+    ctx.objectif  = String(fields.objectif  || "");
+  } else if (formType === "Contact") {
     ctx.projet = String(fields.project || "votre projet");
   } else if (formType === "Devis" || formType.startsWith("Devis - ")) {
     ctx.offre = String(fields.service || fields.offerName || "votre projet");
