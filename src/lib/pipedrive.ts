@@ -2,8 +2,12 @@ const PIPEDRIVE_TOKEN = process.env.PIPEDRIVE_API_TOKEN;
 const PIPEDRIVE_BASE = "https://api.pipedrive.com/v1";
 
 // Premier stage de chaque pipeline
+const STAGE_META_ADS    = 1;  // Pipeline "Meta Ads" → Nouveau lead
 const STAGE_FORMULAIRES = 12; // Pipeline "Formulaires" → Nouveau
-const STAGE_OUTILS = 16;      // Pipeline "Outils" → Nouveau
+const STAGE_OUTILS      = 16; // Pipeline "Outils" → Nouveau
+
+// Sources qui vont dans le pipeline Meta Ads
+const META_ADS_SOURCES = new Set(["promo_lead"]);
 
 // Champ custom "Source" sur les deals
 const SOURCE_FIELD_KEY = "5e4c0a430208828f8b265769eb91b4af32c3a205";
@@ -41,7 +45,6 @@ const FORMULAIRES_SOURCES = new Set([
   "Offre Mensuelle",
   "Offre Speciale",
   "HeroMiniForm",
-  "promo_lead",
 ]);
 
 // Custom deal field keys (created via API)
@@ -126,7 +129,11 @@ export async function pushToPipedrive(
     }
 
     // Router vers le bon pipeline + champ Source
-    const stageId = FORMULAIRES_SOURCES.has(formType) ? STAGE_FORMULAIRES : STAGE_OUTILS;
+    const stageId = META_ADS_SOURCES.has(formType)
+      ? STAGE_META_ADS
+      : FORMULAIRES_SOURCES.has(formType)
+        ? STAGE_FORMULAIRES
+        : STAGE_OUTILS;
     const sourceOptionId = SOURCE_OPTIONS[formType] ?? null;
     const isFormulaires = FORMULAIRES_SOURCES.has(formType);
 
@@ -177,17 +184,36 @@ export async function pushToPipedrive(
       }
     }
 
-    // Note de synthèse avec tous les détails non mappés + date
+    // Note de synthèse avec tous les détails
     if (dealId) {
-      const noteLines = Object.entries(fields)
-        .filter(([, v]) => v !== null && v !== undefined && v !== "")
-        .map(([k, v]) => `• ${k.replace(/_/g, " ")}: ${formatValue(v)}`);
+      let noteContent: string;
 
-      const noteContent = [
-        `Source: ${formType}`,
-        `Date: ${new Date().toLocaleString("fr-FR")}`,
-        ...(noteLines.length ? ["", ...noteLines] : []),
-      ].join("\n");
+      if (formType === "promo_lead") {
+        const lines = [
+          `📋 LEAD PROMO SITE WEB — 300€`,
+          `📅 ${new Date().toLocaleString("fr-FR")}`,
+          ``,
+          `👤 ${name || "—"}`,
+          `📧 ${email || "—"}`,
+          `📞 ${phone || "—"}`,
+          ...(fields.entreprise ? [`🏢 ${fields.entreprise}`] : []),
+          ``,
+          `📍 Situation : ${fields.situation || "—"}`,
+          `🎯 Objectif  : ${fields.objectif  || "—"}`,
+          ...(fields.infos_supp ? [``, `💬 Infos supplémentaires :`, String(fields.infos_supp)] : []),
+          ...(fields.slot_at    ? [``, `📆 RDV réservé : ${new Date(String(fields.slot_at)).toLocaleString("fr-FR")}`] : []),
+        ];
+        noteContent = lines.join("\n");
+      } else {
+        const noteLines = Object.entries(fields)
+          .filter(([, v]) => v !== null && v !== undefined && v !== "")
+          .map(([k, v]) => `• ${k.replace(/_/g, " ")}: ${formatValue(v)}`);
+        noteContent = [
+          `Source: ${formType}`,
+          `Date: ${new Date().toLocaleString("fr-FR")}`,
+          ...(noteLines.length ? ["", ...noteLines] : []),
+        ].join("\n");
+      }
 
       await fetch(`${PIPEDRIVE_BASE}/notes?api_token=${PIPEDRIVE_TOKEN}`, {
         method: "POST",
