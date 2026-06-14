@@ -69,6 +69,9 @@ export default function HeroMiniForm() {
       }).catch((err) => console.error("[notify] erreur envoi:", err));
 
       setIsSuccess(true);
+      if (typeof window !== 'undefined' && (window as any).trackFormConversion) {
+        (window as any).trackFormConversion();
+      }
     } catch (err) {
       console.error(err);
       setError("Une erreur est survenue. Veuillez réessayer.");

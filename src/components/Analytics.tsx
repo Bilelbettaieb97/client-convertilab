@@ -26,6 +26,7 @@ export function GoogleAnalytics() {
           };
           window.trackFormConversion = function() {
             gtag('event', 'ads_conversion_Envoi_de_formulaire_pou_1', {});
+            if (typeof fbq === 'function') { fbq('track', 'Lead'); }
           };
         `}
       </Script>
