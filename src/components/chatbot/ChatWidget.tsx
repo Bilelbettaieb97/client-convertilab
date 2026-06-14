@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { supabase } from "@/lib/supabase/client";
@@ -51,6 +52,7 @@ interface AuditResponse {
 // ============ MAIN WIDGET ============
 
 export default function ChatWidget() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [step, setStep] = useState<ChatStep>(null);
@@ -442,6 +444,8 @@ export default function ChatWidget() {
       push(botMsg("Hmm, je n\u2019arrive pas \u00E0 analyser ces sites. V\u00E9rifiez les URLs et r\u00E9essayez."));
     }
   }
+
+  if (pathname === "/promo-site-web") return null;
 
   return (
     <>

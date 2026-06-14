@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Cookie, Settings, Shield, BarChart3, Target, Sparkles, X, Check } from "lucide-react";
 import { getStoredConsent, saveConsent, logConsentToSupabase } from "@/lib/cookies/consent";
 
 export default function CookieBanner() {
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [preferences, setPreferences] = useState({
@@ -63,6 +65,7 @@ export default function CookieBanner() {
     setShowPreferences(false);
   };
 
+  if (pathname === "/promo-site-web") return null;
   if (!isVisible) return null;
 
   return (
