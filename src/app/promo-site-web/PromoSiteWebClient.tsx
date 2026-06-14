@@ -76,6 +76,8 @@ const notify = (body: Record<string, unknown>) =>
 
 // ── Composant principal ───────────────────────────────────────────────────────
 
+const PIXEL_ID = "1342588771159528";
+
 const PromoSiteWeb = () => {
   const [step, setStep]           = useState<Step>(1);
   const [situation, setSituation] = useState("");
@@ -83,6 +85,8 @@ const PromoSiteWeb = () => {
   const [coords, setCoords]       = useState<Coords>({ prenom: "", email: "", telephone: "", entreprise: "" });
   const [infosSupp, setInfosSupp] = useState("");
   const [leadId, setLeadId]       = useState<string | null>(null);
+  const leadIdRef                 = useRef<string | null>(null);
+  const sessionIdRef              = useRef<string>("");
   const [errors, setErrors]       = useState<Record<string, string>>({});
   const [touched, setTouched]     = useState<Record<string, boolean>>({});
   const [liveMsg, setLiveMsg]     = useState("");
@@ -100,6 +104,32 @@ const PromoSiteWeb = () => {
   const fieldRefs  = useRef<Record<string, HTMLInputElement | null>>({});
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   const successRef = useRef<HTMLHeadingElement | null>(null);
+
+  const trackEvent = useCallback((stepName: string, meta: Record<string, unknown> = {}, lid?: string | null) => {
+    void supabase.from("promo_events").insert({
+      session_id: sessionIdRef.current,
+      step:       stepName,
+      lead_id:    lid !== undefined ? lid : leadIdRef.current,
+      metadata:   meta,
+    });
+  }, []);
+
+  // Init session + tracking visite + Meta Pixel
+  useEffect(() => {
+    const key = "promo_sid";
+    let sid = sessionStorage.getItem(key);
+    if (!sid) { sid = genId(); sessionStorage.setItem(key, sid); }
+    sessionIdRef.current = sid;
+    void supabase.from("promo_events").insert({ session_id: sid, step: "visit", lead_id: null, metadata: {} });
+
+    const w = window as any;
+    if (typeof w.fbq === "function" && !w._fbqInitialized) {
+      w._fbqInitialized = true;
+      w.fbq("init", PIXEL_ID);
+      w.fbq("track", "PageView");
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Focus management + annonce live region à chaque changement d'étape
   useEffect(() => {
@@ -174,15 +204,17 @@ const PromoSiteWeb = () => {
   const handleSituation = useCallback((id: string) => {
     haptic(8);
     setSituation(id);
+    trackEvent("situation_selected", { situation: id });
     setTimeout(() => setStep(2), 220);
-  }, []);
+  }, [trackEvent]);
 
   // Étape 2 → 3 : objectif choisi (180 ms, haptic 10 ms)
   const handleObjectif = useCallback((id: string) => {
     haptic(10);
     setObjectif(id);
+    trackEvent("objectif_selected", { objectif: id });
     setTimeout(() => setStep(3), 180);
-  }, []);
+  }, [trackEvent]);
 
   // Soumission du formulaire étape 3 — validation synchrone, capture fire-and-forget
   const handleSubmit = (e: React.FormEvent) => {
@@ -213,6 +245,7 @@ const PromoSiteWeb = () => {
     const id = leadId ?? genId();
     if (!leadId) {
       setLeadId(id);
+      leadIdRef.current = id;
       const payload = {
         id,
         situation:  SITUATIONS.find(s => s.id === situation)?.label ?? situation,
@@ -233,9 +266,14 @@ const PromoSiteWeb = () => {
         company:  payload.entreprise ?? undefined,
         fields:   { situation: payload.situation, objectif: payload.objectif },
       });
-      if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).dataLayer) {
-        ((window as unknown as Record<string, unknown>).dataLayer as unknown[]).push({ event: "promo_lead_submit" });
+      if (typeof window !== "undefined") {
+        const w = window as any;
+        if (w.dataLayer) w.dataLayer.push({ event: "promo_lead_submit" });
+        if (typeof w.fbq === "function" && w._fbqInitialized) {
+          w.fbq("track", "Lead", { content_name: "Promo Site Web 300€", currency: "EUR", value: 300 });
+        }
       }
+      trackEvent("form_submitted", { situation: payload.situation, objectif: payload.objectif }, id);
     }
 
     haptic(50);
@@ -246,14 +284,16 @@ const PromoSiteWeb = () => {
   // Capture 2 — infos supplémentaires, fire-and-forget
   const handleConfirm = () => {
     const infos = infosSupp.trim().slice(0, 2000);
-    if (infos && leadId) {
+    if (leadIdRef.current && infos) {
+      void supabase.from("promo_leads").update({ infos_supp: infos }).eq("id", leadIdRef.current);
       notify({
         formType: "promo_lead_update",
         name:     coords.prenom,
         email:    coords.email,
-        fields:   { id: leadId, infos_supp: infos },
+        fields:   { id: leadIdRef.current, infos_supp: infos },
       });
     }
+    trackEvent("infos_confirmed", { has_infos: !!infos });
     haptic(15);
     setStep("success");
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -268,12 +308,16 @@ const PromoSiteWeb = () => {
     setBookDone({ slotAt: slotAt.toISOString() });
     setLiveMsg("Rendez-vous confirmé.");
     haptic(20);
+    if (leadIdRef.current) {
+      void supabase.from("promo_leads").update({ slot_at: slotAt.toISOString() }).eq("id", leadIdRef.current);
+    }
+    trackEvent("rdv_booked", { slot_at: slotAt.toISOString() });
     notify({
       formType: "promo_appointment",
       name:     coords.prenom,
       email:    coords.email,
       phone:    coords.telephone,
-      fields:   { lead_id: leadId, slot_at: slotAt.toISOString(), duration_min: 15 },
+      fields:   { lead_id: leadIdRef.current, slot_at: slotAt.toISOString(), duration_min: 15 },
     });
   };
 
@@ -284,6 +328,7 @@ const PromoSiteWeb = () => {
     setNlDone(true);
     haptic(15);
     void supabase.from("newsletter_subscriptions").insert([{ email }]);
+    trackEvent("newsletter_subscribed");
     notify({ formType: "newsletter", email });
   };
 
