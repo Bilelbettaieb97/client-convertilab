@@ -256,7 +256,7 @@ const PromoSiteWeb = () => {
         telephone:  parsed.data.telephone,
         entreprise: parsed.data.entreprise || null,
       };
-      // Capture 1 — upsert sur email (retourne l'id résolu si lead existant)
+      // Capture 1 — upsert sur email ; notification uniquement si nouvel email
       void supabase.rpc("upsert_promo_lead", {
         p_id:         id,
         p_email:      payload.email,
@@ -267,18 +267,21 @@ const PromoSiteWeb = () => {
         p_objectif:   payload.objectif,
         p_urgence:    payload.urgence,
       }).then(({ data: resolvedId }) => {
+        const isNew = !resolvedId || resolvedId === id;
         if (resolvedId && resolvedId !== id) {
           setLeadId(resolvedId);
           leadIdRef.current = resolvedId;
         }
-      });
-      notify({
-        formType: "promo_lead",
-        name:     payload.prenom,
-        email:    payload.email,
-        phone:    payload.telephone,
-        company:  payload.entreprise ?? undefined,
-        fields:   { situation: payload.situation, objectif: payload.objectif },
+        if (isNew) {
+          notify({
+            formType: "promo_lead",
+            name:     payload.prenom,
+            email:    payload.email,
+            phone:    payload.telephone,
+            company:  payload.entreprise ?? undefined,
+            fields:   { situation: payload.situation, objectif: payload.objectif },
+          });
+        }
       });
       if (typeof window !== "undefined") {
         const w = window as any;
@@ -300,12 +303,6 @@ const PromoSiteWeb = () => {
     const infos = infosSupp.trim().slice(0, 2000);
     if (leadIdRef.current && infos) {
       void supabase.from("promo_leads").update({ infos_supp: infos }).eq("id", leadIdRef.current);
-      notify({
-        formType: "promo_lead_update",
-        name:     coords.prenom,
-        email:    coords.email,
-        fields:   { id: leadIdRef.current, infos_supp: infos },
-      });
     }
     trackEvent("infos_confirmed", { has_infos: !!infos });
     haptic(15);
@@ -326,13 +323,6 @@ const PromoSiteWeb = () => {
       void supabase.from("promo_leads").update({ slot_at: slotAt.toISOString() }).eq("id", leadIdRef.current);
     }
     trackEvent("rdv_booked", { slot_at: slotAt.toISOString() });
-    notify({
-      formType: "promo_appointment",
-      name:     coords.prenom,
-      email:    coords.email,
-      phone:    coords.telephone,
-      fields:   { lead_id: leadIdRef.current, slot_at: slotAt.toISOString(), duration_min: 15 },
-    });
   };
 
   // Capture 4 — newsletter, fire-and-forget
