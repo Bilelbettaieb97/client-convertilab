@@ -256,8 +256,22 @@ const PromoSiteWeb = () => {
         telephone:  parsed.data.telephone,
         entreprise: parsed.data.entreprise || null,
       };
-      // Capture 1 — fire-and-forget
-      void supabase.from("promo_leads").insert(payload);
+      // Capture 1 — upsert sur email (retourne l'id résolu si lead existant)
+      void supabase.rpc("upsert_promo_lead", {
+        p_id:         id,
+        p_email:      payload.email,
+        p_prenom:     payload.prenom,
+        p_telephone:  payload.telephone,
+        p_entreprise: payload.entreprise ?? null,
+        p_situation:  payload.situation,
+        p_objectif:   payload.objectif,
+        p_urgence:    payload.urgence,
+      }).then(({ data: resolvedId }) => {
+        if (resolvedId && resolvedId !== id) {
+          setLeadId(resolvedId);
+          leadIdRef.current = resolvedId;
+        }
+      });
       notify({
         formType: "promo_lead",
         name:     payload.prenom,
