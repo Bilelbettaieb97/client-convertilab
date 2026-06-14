@@ -74,6 +74,13 @@ const notify = (body: Record<string, unknown>) =>
     body: JSON.stringify(body),
   }).catch(() => {});
 
+const promoApi = (body: Record<string, unknown>) =>
+  fetch("/api/promo", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  }).catch(() => {});
+
 // ── Composant principal ───────────────────────────────────────────────────────
 
 const PIXEL_ID = "1342588771159528";
@@ -106,7 +113,8 @@ const PromoSiteWeb = () => {
   const successRef = useRef<HTMLHeadingElement | null>(null);
 
   const trackEvent = useCallback((stepName: string, meta: Record<string, unknown> = {}, lid?: string | null) => {
-    void supabase.from("promo_events").insert({
+    void promoApi({
+      action:     "track",
       session_id: sessionIdRef.current,
       step:       stepName,
       lead_id:    lid !== undefined ? lid : leadIdRef.current,
@@ -120,7 +128,7 @@ const PromoSiteWeb = () => {
     let sid = sessionStorage.getItem(key);
     if (!sid) { sid = genId(); sessionStorage.setItem(key, sid); }
     sessionIdRef.current = sid;
-    void supabase.from("promo_events").insert({ session_id: sid, step: "visit", lead_id: null, metadata: {} });
+    void promoApi({ action: "track", session_id: sid, step: "visit", lead_id: null, metadata: {} });
 
     const w = window as any;
     if (typeof w.fbq === "function" && !w._fbqInitialized) {
@@ -302,7 +310,7 @@ const PromoSiteWeb = () => {
   const handleConfirm = () => {
     const infos = infosSupp.trim().slice(0, 2000);
     if (leadIdRef.current && infos) {
-      void supabase.from("promo_leads").update({ infos_supp: infos }).eq("id", leadIdRef.current);
+      void promoApi({ action: "update_lead", id: leadIdRef.current, infos_supp: infos });
     }
     trackEvent("infos_confirmed", { has_infos: !!infos });
     haptic(15);
@@ -320,7 +328,7 @@ const PromoSiteWeb = () => {
     setLiveMsg("Rendez-vous confirmé.");
     haptic(20);
     if (leadIdRef.current) {
-      void supabase.from("promo_leads").update({ slot_at: slotAt.toISOString() }).eq("id", leadIdRef.current);
+      void promoApi({ action: "update_slot", id: leadIdRef.current, slot_at: slotAt.toISOString() });
     }
     trackEvent("rdv_booked", { slot_at: slotAt.toISOString() });
   };
@@ -331,7 +339,7 @@ const PromoSiteWeb = () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255) return;
     setNlDone(true);
     haptic(15);
-    void supabase.from("newsletter_subscriptions").insert([{ email }]);
+    void promoApi({ action: "newsletter", email });
     trackEvent("newsletter_subscribed");
     notify({ formType: "newsletter", email });
   };
