@@ -451,9 +451,9 @@ const PromoSiteWeb = () => {
 
                     <div
                       className="text-[48px] font-extrabold tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#ec4899] py-1 drop-shadow-[0_0_25px_rgba(167,139,250,0.35)]"
-                      aria-label="300 euros"
+                      aria-label="à partir de 300 euros"
                     >
-                      300€
+                      à partir de 300€
                     </div>
 
                     <p className="text-[12px] text-white/70 leading-snug max-w-[300px] mx-auto mt-1">
