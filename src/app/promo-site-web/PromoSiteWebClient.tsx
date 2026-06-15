@@ -47,8 +47,8 @@ const OBJECTIFS = [
 const coordsSchema = z.object({
   prenom:     z.string().trim().min(2, "Prénom requis (2 caractères min)").max(100, "Trop long"),
   email:      z.string().trim().email("Email invalide, vérifiez le format").max(255, "Trop long"),
-  telephone:  z.string().trim().min(5, "Numéro requis").max(30, "Trop long")
-                .regex(/^[0-9+\s().-]+$/, "Téléphone invalide (chiffres uniquement)"),
+  telephone:  z.string().trim()
+                .regex(/^\+33[0-9]{9,10}$/, "Entrez les chiffres de votre numéro après +33"),
   entreprise: z.string().trim().max(200, "Trop long").optional(),
 });
 
@@ -89,7 +89,7 @@ const PromoSiteWeb = () => {
   const [step, setStep]           = useState<Step>(1);
   const [situation, setSituation] = useState("");
   const [objectif, setObjectif]   = useState("");
-  const [coords, setCoords]       = useState<Coords>({ prenom: "", email: "", telephone: "", entreprise: "" });
+  const [coords, setCoords]       = useState<Coords>({ prenom: "", email: "", telephone: "+33", entreprise: "" });
   const [infosSupp, setInfosSupp] = useState("");
   const [leadId, setLeadId]       = useState<string | null>(null);
   const leadIdRef                 = useRef<string | null>(null);
@@ -674,19 +674,42 @@ const PromoSiteWeb = () => {
                           inputMode="email"
                           inputRef={el => { fieldRefs.current.email = el; }}
                         />
-                        <Field
-                          name="telephone"
-                          type="tel"
-                          placeholder="Téléphone"
-                          value={coords.telephone}
-                          onChange={v => handleChange("telephone", v)}
-                          onBlur={() => handleBlur("telephone", coords.telephone)}
-                          error={errors.telephone}
-                          touched={touched.telephone}
-                          autoComplete="tel"
-                          inputMode="tel"
-                          inputRef={el => { fieldRefs.current.telephone = el; }}
-                        />
+                        {/* Téléphone avec préfixe +33 fixe */}
+                        <div className={touched.telephone && errors.telephone ? "promo-shake" : undefined}>
+                          <label htmlFor="field-telephone" className="sr-only">Téléphone</label>
+                          <div className={`flex h-12 rounded-xl bg-white/[0.06] border overflow-hidden transition-colors ${
+                            touched.telephone && errors.telephone
+                              ? "border-[#ec4899] ring-2 ring-[#ec4899]/25"
+                              : "border-white/10 focus-within:border-[#ec4899] focus-within:ring-2 focus-within:ring-[#ec4899]/25"
+                          }`}>
+                            <span className="flex items-center px-3 text-white/60 text-[15px] border-r border-white/10 bg-white/[0.04] select-none shrink-0">
+                              +33
+                            </span>
+                            <input
+                              ref={el => { fieldRefs.current.telephone = el; }}
+                              id="field-telephone"
+                              name="telephone"
+                              type="tel"
+                              inputMode="numeric"
+                              autoComplete="tel-national"
+                              placeholder="6 12 34 56 78"
+                              maxLength={10}
+                              value={coords.telephone.replace(/^\+33/, "")}
+                              onChange={e => {
+                                const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
+                                handleChange("telephone", "+33" + digits);
+                              }}
+                              onBlur={() => handleBlur("telephone", coords.telephone)}
+                              className="flex-1 min-w-0 bg-transparent text-white placeholder:text-white/40 text-[15px] outline-none px-3"
+                            />
+                          </div>
+                          {touched.telephone && errors.telephone && (
+                            <p role="alert" className="flex items-start gap-1 text-[11px] text-[#ec4899] mt-1 px-1 promo-pop">
+                              <AlertCircle className="w-3 h-3 shrink-0 mt-[1px]" aria-hidden="true" />
+                              <span>{errors.telephone}</span>
+                            </p>
+                          )}
+                        </div>
                         <Field
                           name="entreprise"
                           placeholder="Activité (optionnel)"
