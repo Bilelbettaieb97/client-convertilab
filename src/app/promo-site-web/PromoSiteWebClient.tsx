@@ -250,10 +250,11 @@ const PromoSiteWeb = () => {
     }
 
     // Générer l'ID localement et avancer immédiatement
-    const id = leadId ?? genId();
-    if (!leadId) {
-      setLeadId(id);
+    // Guard sur la REF (synchrone) pour éviter le double-submit
+    const id = leadIdRef.current ?? genId();
+    if (!leadIdRef.current) {
       leadIdRef.current = id;
+      setLeadId(id);
       const payload = {
         id,
         situation:  SITUATIONS.find(s => s.id === situation)?.label ?? situation,

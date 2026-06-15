@@ -145,43 +145,38 @@ export async function pushToPipedrive(
       }
     }
 
-    const dealBody: Record<string, unknown> = {
-      title: `${formType}${name ? ` — ${name}` : email ? ` — ${email}` : ""}`,
-      stage_id: stageId,
-      channel: isFormulaires ? 3 : 6,
-      ...(personId ? { person_id: personId } : {}),
-      ...(sourceOptionId ? { [SOURCE_FIELD_KEY]: sourceOptionId } : {}),
-      ...customFields,
-    };
-
-    const dealRes = await fetch(`${PIPEDRIVE_BASE}/deals?api_token=${PIPEDRIVE_TOKEN}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(dealBody),
-    });
-    const dealData = await dealRes.json();
-    const dealId = dealData.data?.id;
-
-    // Si la personne existait déjà, ajouter une note sur ses deals ouverts précédents
-    if (dealId && personAlreadyExisted && personId) {
+    // Anti-doublon Meta Ads : si la personne a déjà un deal ouvert dans ce pipeline → on le réutilise
+    let dealId: number | null = null;
+    if (personAlreadyExisted && personId && META_ADS_SOURCES.has(formType)) {
       const existingDealsRes = await fetch(
         `${PIPEDRIVE_BASE}/persons/${personId}/deals?status=open&api_token=${PIPEDRIVE_TOKEN}`
       );
       const existingDealsData = await existingDealsRes.json();
-      const existingDeals: Array<{ id: number }> = existingDealsData.data || [];
-
-      for (const deal of existingDeals) {
-        if (deal.id !== dealId) {
-          await fetch(`${PIPEDRIVE_BASE}/notes?api_token=${PIPEDRIVE_TOKEN}`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              content: `🔔 Ce lead a utilisé l'outil ${formType} le ${new Date().toLocaleString("fr-FR")} — Deal #${dealId}`,
-              deal_id: deal.id,
-            }),
-          });
-        }
+      const existingDeals: Array<{ id: number; pipeline_id: number }> =
+        existingDealsData.data || [];
+      const metaDeal = existingDeals.find((d) => d.pipeline_id === 1);
+      if (metaDeal) {
+        dealId = metaDeal.id;
       }
+    }
+
+    if (!dealId) {
+      const dealBody: Record<string, unknown> = {
+        title: `${formType}${name ? ` — ${name}` : email ? ` — ${email}` : ""}`,
+        stage_id: stageId,
+        channel: isFormulaires ? 3 : 6,
+        ...(personId ? { person_id: personId } : {}),
+        ...(sourceOptionId ? { [SOURCE_FIELD_KEY]: sourceOptionId } : {}),
+        ...customFields,
+      };
+
+      const dealRes = await fetch(`${PIPEDRIVE_BASE}/deals?api_token=${PIPEDRIVE_TOKEN}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dealBody),
+      });
+      const dealData = await dealRes.json();
+      dealId = dealData.data?.id ?? null;
     }
 
     // Note de synthèse avec tous les détails
