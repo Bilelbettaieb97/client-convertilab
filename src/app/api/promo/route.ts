@@ -139,6 +139,57 @@ async function sendICSEmails(
   }).catch(() => {});
 }
 
+// ── Pipedrive helpers ─────────────────────────────────────────────────────────
+
+async function pipedriveGet(path: string) {
+  const token = process.env.PIPEDRIVE_API_TOKEN;
+  const sep = path.includes("?") ? "&" : "?";
+  const res = await fetch(`https://api.pipedrive.com/v1${path}${sep}api_token=${token}`);
+  return res.json();
+}
+
+async function pipedrivePost(path: string, body: Record<string, unknown>) {
+  const token = process.env.PIPEDRIVE_API_TOKEN;
+  const res = await fetch(`https://api.pipedrive.com/v1${path}?api_token=${token}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  return res.json();
+}
+
+async function createPipedriveRdv(email: string, slotAt: string, prenom: string) {
+  // 1. Chercher la personne par email
+  const searchRes = await pipedriveGet(
+    `/persons/search?term=${encodeURIComponent(email)}&fields=email&exact_match=true`
+  );
+  const person = searchRes.data?.items?.[0]?.item;
+  if (!person) return;
+
+  // 2. Récupérer ses deals ouverts
+  const dealsRes = await pipedriveGet(`/persons/${person.id}/deals?status=open`);
+  const deals = dealsRes.data || [];
+  if (deals.length === 0) return;
+
+  const deal = deals[0];
+  const slotDate = new Date(slotAt);
+  const dueDateStr = slotDate.toISOString().split("T")[0];
+  const dueTimeStr = slotDate.toISOString().split("T")[1].substring(0, 5);
+
+  // 3. Créer l'activité RDV sur le deal
+  await pipedrivePost("/activities", {
+    subject: `📅 RDV — ${prenom} (Funnel Promo 300€)`,
+    type: "meeting",
+    deal_id: deal.id,
+    person_id: person.id,
+    due_date: dueDateStr,
+    due_time: dueTimeStr,
+    duration: "00:30",
+    note: `RDV pris via le funnel promo-site-web.\nEmail : ${email}`,
+    done: 0,
+  });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -161,6 +212,15 @@ export async function POST(req: NextRequest) {
       if (id && slot_at) {
         await supabase.from("promo_leads").update({ slot_at }).eq("id", id);
         void sendICSEmails(id, slot_at, supabase);
+        // Créer l'activité RDV dans Pipedrive
+        const { data: lead } = await supabase
+          .from("promo_leads")
+          .select("email, prenom")
+          .eq("id", id)
+          .single();
+        if (lead?.email) {
+          void createPipedriveRdv(lead.email, slot_at, lead.prenom || "");
+        }
       }
 
     } else if (action === "newsletter") {

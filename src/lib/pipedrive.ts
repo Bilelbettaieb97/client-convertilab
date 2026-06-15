@@ -112,7 +112,7 @@ export async function pushToPipedrive(
       }
     }
 
-    // Create person if not found
+    // Create or update person
     if (!personId) {
       const personBody: Record<string, unknown> = { name: name || email || "Inconnu" };
       if (email) personBody.email = [{ value: email, primary: true }];
@@ -126,6 +126,13 @@ export async function pushToPipedrive(
       });
       const personData = await personRes.json();
       personId = personData.data?.id ?? null;
+    } else if (phone) {
+      // Mettre à jour le téléphone si la personne existe déjà
+      await fetch(`${PIPEDRIVE_BASE}/persons/${personId}?api_token=${PIPEDRIVE_TOKEN}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone: [{ value: phone, primary: true }] }),
+      });
     }
 
     // Router vers le bon pipeline + champ Source
