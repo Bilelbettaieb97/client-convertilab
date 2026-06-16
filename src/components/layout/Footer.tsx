@@ -159,9 +159,14 @@ const Footer = () => {
               <a href={`tel:${SITE.phone}`} className="flex items-center gap-2 text-sm text-gray-400 hover:text-purple-400 transition-colors">
                 <Phone className="w-4 h-4 flex-shrink-0" /> {SITE.phoneDisplay}
               </a>
-              <span className="flex items-center gap-2 text-sm text-gray-400">
+              <a href={SITE.googleMaps} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 hover:text-purple-400 transition-colors">
                 <MapPin className="w-4 h-4 flex-shrink-0" /> Rueil-Malmaison (92)
-              </span>
+              </a>
+              <a href={SITE.trustpilot} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-1 px-3 py-1.5 bg-[#00b67a]/10 border border-[#00b67a]/30 rounded-lg hover:bg-[#00b67a]/20 transition-colors">
+                <svg className="w-4 h-4 text-[#00b67a]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg>
+                <span className="text-xs font-semibold text-[#00b67a]">4.9★ Trustpilot</span>
+                <span className="text-xs text-gray-500">47 avis</span>
+              </a>
             </div>
           </div>
 

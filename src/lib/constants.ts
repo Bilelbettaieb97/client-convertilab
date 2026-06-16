@@ -10,10 +10,12 @@ export const SITE = {
   social: {
     youtube: "https://www.youtube.com/@Convertilab",
     tiktok: "https://www.tiktok.com/@convertilab",
-    instagram: "https://www.instagram.com/convertilab/",
-    linkedin: "https://linkedin.com/in/bettaieb-bilel/",
-    facebook: "https://www.facebook.com/Convertilab/",
+    instagram: "https://www.instagram.com/bilel_bettaieb.convertilab",
+    linkedin: "https://www.linkedin.com/company/convertilab",
+    facebook: "https://www.facebook.com/profile.php?id=61590285493991",
   },
+  trustpilot: "https://fr.trustpilot.com/review/convertilab.com",
+  googleMaps: "https://share.google/zUu6ZIAu3MyOCgPNa",
   analytics: {
     ga: "G-N9NTVTE0R6",
     gtm: "GTM-5TDHTDHP",
@@ -38,7 +40,7 @@ export const STRUCTURED_DATA = {
     name: SITE.name,
     url: SITE.url,
     logo: `${SITE.url}/logo.png`,
-    sameAs: Object.values(SITE.social),
+    sameAs: [...Object.values(SITE.social), SITE.trustpilot, SITE.googleMaps],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: SITE.phone,
