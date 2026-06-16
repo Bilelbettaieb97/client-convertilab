@@ -5,10 +5,10 @@ import Footer from "@/components/layout/Footer";
 import SeoPageContent from "./SeoPageContent";
 
 export const metadata: Metadata = {
-  title: "SEO & Referencement Naturel Paris",
-  description: "Referencement naturel et audit SEO. Atteignez la page 1 de Google avec une strategie sur-mesure. Devis gratuit.",
+  title: "SEO & Référencement Naturel Paris — Page 1 Google",
+  description: "Référencement naturel et audit SEO. Atteignez la page 1 de Google avec une stratégie sur-mesure. +150 clients, résultats dès 3 mois. Devis gratuit.",
   alternates: { canonical: `${SITE.url}/services/seo` },
-  openGraph: { title: "SEO & Referencement Naturel Paris | ConvertiLab", description: "Referencement naturel et audit SEO. Atteignez la page 1 de Google avec une strategie sur-mesure. Devis gratuit.", url: `${SITE.url}/services/seo` },
+  openGraph: { title: "SEO & Référencement Naturel Paris | ConvertiLab", description: "Référencement naturel et audit SEO. Atteignez la page 1 de Google avec une stratégie sur-mesure. Devis gratuit.", url: `${SITE.url}/services/seo` },
 };
 
 const schemas = [

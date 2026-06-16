@@ -5,13 +5,13 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Audit Design & UX Gratuit — Evaluez l'experience utilisateur de votre site | ConvertiLab",
+  title: "Audit Design & UX Gratuit — Score sur 100, Rapport PDF",
   description:
-    "Evaluez gratuitement le design et l'UX de votre site web. CTA, hierarchie visuelle, signaux de confiance, compatibilite mobile. Rapport PDF complet envoye par email.",
+    "Évaluez gratuitement le design et l'UX de votre site web. CTA, hiérarchie visuelle, signaux de confiance, compatibilité mobile. Rapport PDF complet envoyé par email.",
   openGraph: {
-    title: "Audit Design & UX Gratuit — Evaluez l'experience utilisateur de votre site",
+    title: "Audit Design & UX Gratuit — Score sur 100, Rapport PDF | ConvertiLab",
     description:
-      "6 categories UX analysees, rapport PDF complet et gratuit envoye par email.",
+      "6 catégories UX analysées, rapport PDF complet et gratuit envoyé par email.",
     url: `${SITE.url}/design-score`,
     siteName: SITE.name,
     locale: "fr_FR",

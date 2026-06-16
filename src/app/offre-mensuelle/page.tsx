@@ -5,9 +5,9 @@ import Footer from "@/components/layout/Footer";
 import OffreMensuelleClient from "./OffreMensuelleClient";
 
 export const metadata: Metadata = {
-  title: "Site Internet a 39eur/mois | Vous etes proprietaire, visible sur Google",
+  title: "Site Internet à 39€/mois — Propriétaire, Visible sur Google",
   description:
-    "Votre site internet professionnel pour 39eur/mois. Vous etes proprietaire, visible sur Google des le lancement. Design sur-mesure, SEO optimise, livre en 7 jours.",
+    "Votre site internet professionnel dès 39€/mois. Vous êtes propriétaire, visible sur Google dès le lancement. Design sur-mesure, SEO optimisé, livré en 7 jours.",
   keywords:
     "site internet pas cher, site web 39 euros, creation site internet mensuel, site professionnel abordable, proprietaire site web",
   alternates: { canonical: `${SITE.url}/offre-mensuelle` },

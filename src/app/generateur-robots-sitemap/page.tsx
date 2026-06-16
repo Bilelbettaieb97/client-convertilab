@@ -5,13 +5,13 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Generateur robots.txt & sitemap.xml Gratuit | ConvertiLab",
+  title: "Générateur robots.txt & sitemap.xml Gratuit",
   description:
-    "Generez un fichier robots.txt optimise et un sitemap.xml automatique pour votre site web. Regles AI bots incluses. 100% gratuit.",
+    "Générez un fichier robots.txt optimisé et un sitemap.xml automatique pour votre site web. Règles AI bots incluses. 100% gratuit.",
   openGraph: {
-    title: "Generateur robots.txt & sitemap.xml Gratuit",
+    title: "Générateur robots.txt & sitemap.xml Gratuit | ConvertiLab",
     description:
-      "Generez un fichier robots.txt optimise et un sitemap.xml automatique. Regles AI bots incluses. 100% gratuit.",
+      "Générez un fichier robots.txt optimisé et un sitemap.xml automatique. Règles AI bots incluses. 100% gratuit.",
     url: `${SITE.url}/generateur-robots-sitemap`,
     siteName: SITE.name,
     locale: "fr_FR",

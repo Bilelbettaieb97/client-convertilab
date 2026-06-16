@@ -5,12 +5,12 @@ import Footer from "@/components/layout/Footer";
 import LandingPageContent from "./LandingPageContent";
 
 export const metadata: Metadata = {
-  title: `Création Landing Page Paris | Haute Conversion en 5 jours | ConvertiLab`,
-  description: "Landing page haute conversion livree en 5-7 jours. Optimisee pour Google Ads & Meta Ads. +50 clients satisfaits, prix fixe. Devis gratuit.",
+  title: "Création Landing Page Paris | Haute Conversion en 5 jours",
+  description: "Landing page haute conversion livrée en 5-7 jours. Optimisée pour Google Ads & Meta Ads. +150 clients, prix fixe garanti. Devis gratuit.",
   alternates: { canonical: `${SITE.url}/services/sites-web/landing-page` },
   openGraph: {
-    title: `Création Landing Page Paris | Haute Conversion en 5 jours | ConvertiLab`,
-    description: "Landing page haute conversion livree en 5-7 jours. Optimisee pour Google Ads & Meta Ads. +50 clients satisfaits, prix fixe. Devis gratuit.",
+    title: "Création Landing Page Paris | Haute Conversion en 5 jours | ConvertiLab",
+    description: "Landing page haute conversion livrée en 5-7 jours. Optimisée pour Google Ads & Meta Ads. +150 clients, prix fixe garanti. Devis gratuit.",
     url: `${SITE.url}/services/sites-web/landing-page`,
   },
 };

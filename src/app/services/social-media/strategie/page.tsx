@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description: "Stratégie social media sur-mesure : audit, benchmark, ligne éditoriale, KPIs. Développez votre influence en ligne. Devis gratuit.",
   alternates: { canonical: `${SITE.url}/services/social-media/strategie` },
   openGraph: {
-    title: "Stratégie Social Media | ConvertiLab",
-    description: "Stratégie social media sur-mesure pour développer votre présence en ligne.",
+    title: "Stratégie Social Media Paris | Plan Marketing Réseaux | ConvertiLab",
+    description: "Stratégie social media sur-mesure : audit, benchmark, ligne éditoriale, KPIs. Développez votre influence. Devis gratuit.",
     url: `${SITE.url}/services/social-media/strategie`,
   },
 };

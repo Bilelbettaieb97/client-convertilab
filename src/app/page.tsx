@@ -31,7 +31,7 @@ const CinematicFooter = dynamic(() =>
 );
 
 export const metadata: Metadata = {
-  title: `Agence Web Paris & Île-de-France | SEO & Ads | ${SITE.name}`,
+  title: { absolute: `Agence Web Paris & Île-de-France | SEO & Ads | ${SITE.name}` },
   description: "Agence web à Paris & Rueil-Malmaison : création site internet, SEO, Google Ads, Meta Ads. +150 clients en Île-de-France, 4.9★ Trustpilot. Devis gratuit.",
   keywords: ["agence web Paris", "création site internet Paris", "SEO Île-de-France", "Google Ads Paris", "agence marketing digital Rueil-Malmaison", "agence digitale Hauts-de-Seine"],
   alternates: {

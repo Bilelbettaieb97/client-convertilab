@@ -5,13 +5,13 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Audit SEO Gratuit — Analysez votre site en 60 secondes | ConvertiLab",
+  title: "Audit SEO Gratuit — Analysez votre site en 60 secondes",
   description:
-    "Recevez un audit SEO complet et gratuit de votre site web en PDF. 60+ points de controle, analyse IA (GEO), score detaille et plan d'action. Resultats en 60 secondes.",
+    "Recevez un audit SEO complet et gratuit de votre site web en PDF. 60+ points de contrôle, analyse IA (GEO), score détaillé et plan d'action. Résultats en 60 secondes.",
   openGraph: {
-    title: "Audit SEO Gratuit — Analysez votre site en 60 secondes",
+    title: "Audit SEO Gratuit — Analysez votre site en 60 secondes | ConvertiLab",
     description:
-      "60+ points de controle SEO, analyse IA, rapport PDF complet envoye par email. 100% gratuit.",
+      "60+ points de contrôle SEO, analyse IA, rapport PDF complet envoyé par email. 100% gratuit.",
     url: `${SITE.url}/seo-check`,
     siteName: SITE.name,
     locale: "fr_FR",

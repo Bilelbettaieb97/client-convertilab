@@ -5,11 +5,11 @@ import Footer from "@/components/layout/Footer";
 import SiteEcommerceContent from "./SiteEcommerceContent";
 
 export const metadata: Metadata = {
-  title: `Création Boutique en Ligne Paris | E-commerce dès 800€ | ConvertiLab`,
+  title: "Création Boutique en Ligne Paris | E-commerce dès 800€",
   description: "Création de boutique en ligne à Paris. Paiement Stripe, gestion des stocks, SEO intégré. Livraison en 21 jours. +150 clients, 4.9★. Devis gratuit en 24h.",
   alternates: { canonical: `${SITE.url}/services/sites-web/site-ecommerce` },
   openGraph: {
-    title: `Création Boutique en Ligne Paris | E-commerce dès 800€ | ConvertiLab`,
+    title: "Création Boutique en Ligne Paris | E-commerce dès 800€ | ConvertiLab",
     description: "Création de boutique en ligne à Paris. Paiement Stripe, gestion des stocks, SEO intégré. Livraison en 21 jours. +150 clients, 4.9★. Devis gratuit en 24h.",
     url: `${SITE.url}/services/sites-web/site-ecommerce`,
   },

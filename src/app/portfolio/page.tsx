@@ -16,11 +16,11 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Portfolio Agence Web Paris | +150 Réalisations Clients | ConvertiLab",
+  title: "Portfolio Agence Web | +150 Sites Créés, 4.9★ Trustpilot",
   description:
-    "+50 clients, +280% de CA moyen. Etudes de cas e-commerce, restaurants, B2B. Decouvrez nos resultats concrets.",
+    "+150 clients accompagnés, +280% de CA moyen. Études de cas e-commerce, restaurants, B2B. Découvrez nos résultats concrets.",
   keywords:
-    "portfolio web, realisations sites web, etudes de cas, resultats clients, creation site web",
+    "portfolio agence web, réalisations sites web, études de cas, résultats clients, création site web Paris",
   alternates: { canonical: `${SITE.url}/portfolio` },
 };
 

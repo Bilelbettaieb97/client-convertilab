@@ -23,13 +23,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const term = getTermBySlug(terme);
   if (!term) return { title: "Terme introuvable" };
 
+  const desc = term.definition.length > 155
+    ? term.definition.slice(0, 152) + "..."
+    : term.definition;
+
   return {
-    title: `${term.term} — Définition & Explication | Glossaire ConvertiLab`,
-    description: term.definition,
+    title: `${term.term} — Définition & Guide Complet`,
+    description: desc,
     alternates: { canonical: `${SITE.url}/glossaire/${term.slug}` },
     openGraph: {
-      title: `${term.term} | Glossaire Marketing Digital ConvertiLab`,
-      description: term.definition,
+      title: `${term.term} | Glossaire Marketing Digital | ConvertiLab`,
+      description: desc,
       url: `${SITE.url}/glossaire/${term.slug}`,
     },
   };

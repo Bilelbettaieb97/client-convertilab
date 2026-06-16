@@ -5,13 +5,13 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Generateur de Mentions Legales Gratuit — Conforme RGPD | ConvertiLab",
+  title: "Générateur de Mentions Légales Gratuit — Conforme RGPD",
   description:
-    "Creez vos mentions legales conformes LCEN + RGPD en 2 minutes. Document PDF personnalise, pret a copier-coller sur votre site. 100% gratuit.",
+    "Créez vos mentions légales conformes LCEN + RGPD en 2 minutes. Document PDF personnalisé, prêt à copier-coller sur votre site. 100% gratuit.",
   openGraph: {
-    title: "Generateur de Mentions Legales Gratuit — Conforme RGPD",
+    title: "Générateur de Mentions Légales Gratuit — Conforme RGPD | ConvertiLab",
     description:
-      "Creez vos mentions legales conformes LCEN + RGPD en 2 minutes. Document PDF personnalise et gratuit.",
+      "Créez vos mentions légales conformes LCEN + RGPD en 2 minutes. Document PDF personnalisé et gratuit.",
     url: `${SITE.url}/generateur-mentions-legales`,
     siteName: SITE.name,
     locale: "fr_FR",

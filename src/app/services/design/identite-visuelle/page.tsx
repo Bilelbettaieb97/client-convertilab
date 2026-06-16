@@ -5,10 +5,10 @@ import Footer from "@/components/layout/Footer";
 import IdentiteVisuelleContent from "./IdentiteVisuelleContent";
 
 export const metadata: Metadata = {
-  title: "Identite Visuelle | Logo & Branding",
-  description: "Creation de logo et charte graphique sur-mesure. Demarquez-vous avec une identite visuelle forte et memorable. Devis gratuit.",
+  title: "Identité Visuelle Paris | Logo & Branding Sur-Mesure",
+  description: "Création de logo et charte graphique sur-mesure. Démarquez-vous avec une identité visuelle forte et mémorable. Devis gratuit.",
   alternates: { canonical: `${SITE.url}/services/design/identite-visuelle` },
-  openGraph: { title: "Identite Visuelle | Logo & Branding | ConvertiLab", description: "Creation de logo et charte graphique sur-mesure. Demarquez-vous avec une identite visuelle forte et memorable. Devis gratuit.", url: `${SITE.url}/services/design/identite-visuelle` },
+  openGraph: { title: "Identité Visuelle Paris | Logo & Branding | ConvertiLab", description: "Création de logo et charte graphique sur-mesure. Démarquez-vous avec une identité visuelle forte et mémorable. Devis gratuit.", url: `${SITE.url}/services/design/identite-visuelle` },
 };
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [

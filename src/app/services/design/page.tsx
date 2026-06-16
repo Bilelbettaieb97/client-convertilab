@@ -5,12 +5,12 @@ import Footer from "@/components/layout/Footer";
 import DesignPageContent from "./DesignPageContent";
 
 export const metadata: Metadata = {
-  title: "Design UI/UX & Identite Visuelle Paris",
-  description: "Design UI/UX et identite visuelle : logo, charte graphique, prototypes Figma. Interfaces qui convertissent. Devis gratuit.",
+  title: "Design UI/UX & Identité Visuelle Paris",
+  description: "Design UI/UX et identité visuelle : logo, charte graphique, prototypes Figma. Interfaces qui convertissent. Devis gratuit.",
   alternates: { canonical: `${SITE.url}/services/design` },
   openGraph: {
-    title: "Design UI/UX & Identite Visuelle Paris | ConvertiLab",
-    description: "Design UI/UX et identite visuelle : logo, charte graphique, prototypes Figma. Interfaces qui convertissent. Devis gratuit.",
+    title: "Design UI/UX & Identité Visuelle Paris | ConvertiLab",
+    description: "Design UI/UX et identité visuelle : logo, charte graphique, prototypes Figma. Interfaces qui convertissent. Devis gratuit.",
     url: `${SITE.url}/services/design`,
   },
 };

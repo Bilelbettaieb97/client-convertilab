@@ -5,13 +5,13 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Audit Vitesse Gratuit — Testez la rapidite de votre site | ConvertiLab",
+  title: "Audit Vitesse Gratuit — Testez la rapidité de votre site",
   description:
-    "Testez gratuitement la vitesse de votre site web. Temps de reponse, poids de page, compression, scripts bloquants, images. Rapport PDF complet envoye par email.",
+    "Testez gratuitement la vitesse de votre site web. Temps de réponse, poids de page, compression, scripts bloquants, images. Rapport PDF complet envoyé par email.",
   openGraph: {
-    title: "Audit Vitesse Gratuit — Testez la rapidite de votre site",
+    title: "Audit Vitesse Gratuit — Testez la rapidité de votre site | ConvertiLab",
     description:
-      "20+ points de controle vitesse, analyse complete, rapport PDF gratuit envoye par email.",
+      "20+ points de contrôle vitesse, analyse complète, rapport PDF gratuit envoyé par email.",
     url: `${SITE.url}/speed-check`,
     siteName: SITE.name,
     locale: "fr_FR",

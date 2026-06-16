@@ -5,9 +5,9 @@ import Footer from "@/components/layout/Footer";
 import DevisClient from "./DevisClient";
 
 export const metadata: Metadata = {
-  title: "Demander votre site vitrine | ConvertiLab",
+  title: "Demandez votre site vitrine — Réponse sous 24h",
   description:
-    "Obtenez votre site vitrine professionnel a partir de 39eur/mois. Formulaire rapide, reponse sous 24h.",
+    "Obtenez votre site vitrine professionnel à partir de 39€/mois. Formulaire rapide, réponse sous 24h, sans engagement.",
   keywords:
     "devis site vitrine, site internet 39 euros, creation site web devis",
   alternates: { canonical: `${SITE.url}/offre-mensuelle/devis` },

@@ -5,12 +5,12 @@ import Footer from "@/components/layout/Footer";
 import ApplicationWebContent from "./ApplicationWebContent";
 
 export const metadata: Metadata = {
-  title: "Application Web Sur-Mesure | Paris",
-  description: "Developpement d'applications web sur-mesure : SaaS, portails clients, outils metiers. Architecture scalable et securisee. Devis gratuit.",
+  title: "Application Web Sur-Mesure Paris | SaaS & Portails Clients",
+  description: "Développement d'applications web sur-mesure : SaaS, portails clients, outils métiers. Architecture scalable et sécurisée. Devis gratuit.",
   alternates: { canonical: `${SITE.url}/services/sites-web/application-web` },
   openGraph: {
-    title: "Application Web Sur-Mesure | Paris | ConvertiLab",
-    description: "Developpement d'applications web sur-mesure : SaaS, portails clients, outils metiers. Architecture scalable et securisee. Devis gratuit.",
+    title: "Application Web Sur-Mesure Paris | SaaS & Portails Clients | ConvertiLab",
+    description: "Développement d'applications web sur-mesure : SaaS, portails clients, outils métiers. Architecture scalable et sécurisée. Devis gratuit.",
     url: `${SITE.url}/services/sites-web/application-web`,
   },
 };

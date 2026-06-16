@@ -5,15 +5,15 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Simulateur ROI Google Ads & Meta Ads Gratuit | ConvertiLab",
+  title: "Simulateur ROI Google Ads & Meta Ads — Estimation Gratuite",
   description:
     "Estimez gratuitement le retour sur investissement de vos campagnes Google Ads et Meta Ads. Projection 12 mois, calcul ROAS et rapport PDF complet.",
   keywords:
-    "simulateur ROI ads, calculateur Google Ads, estimation Meta Ads, ROAS publicite, retour sur investissement ads",
+    "simulateur ROI ads, calculateur Google Ads, estimation Meta Ads, ROAS publicité, retour sur investissement ads",
   openGraph: {
-    title: "Simulateur ROI Google Ads & Meta Ads Gratuit",
+    title: "Simulateur ROI Google Ads & Meta Ads Gratuit | ConvertiLab",
     description:
-      "Combien de clients et de CA pouvez-vous generer avec la publicite en ligne ? Estimation gratuite avec rapport PDF.",
+      "Combien de clients et de CA pouvez-vous générer avec la publicité en ligne ? Estimation gratuite avec rapport PDF.",
     url: `${SITE.url}/estimateur-ads`,
     siteName: SITE.name,
     locale: "fr_FR",

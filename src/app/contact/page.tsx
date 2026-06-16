@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Contact Agence Web Paris | Devis Gratuit sous 24h | ConvertiLab",
+  title: "Contact Agence Web Paris | Devis Gratuit sous 24h",
   description:
     "Contactez notre agence web à Paris & Rueil-Malmaison. Devis gratuit sous 24h, consultation 30 min offerte. 4.9★ sur Trustpilot. Tél : 06 16 47 72 45.",
   keywords:

@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description: "Community management et stratégie social media pour PME. Instagram, Facebook, LinkedIn, TikTok. +150 clients. Devis gratuit.",
   alternates: { canonical: `${SITE.url}/services/social-media` },
   openGraph: {
-    title: "Social Media & Community Management | ConvertiLab",
-    description: "Développez votre communauté sur les réseaux sociaux avec ConvertiLab.",
+    title: "Social Media & Community Management Paris | ConvertiLab",
+    description: "Community management Instagram, Facebook, LinkedIn, TikTok. +150 clients PME. Devis gratuit.",
     url: `${SITE.url}/services/social-media`,
   },
 };
