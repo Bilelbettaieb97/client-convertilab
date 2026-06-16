@@ -8,15 +8,15 @@ import { ArrowRight, CheckCircle, Search, TrendingUp, ClipboardCheck, Clock, Tar
 import ServiceFAQ from "@/components/services/ServiceFAQ";
 
 const services = [
-  { id: "referencement-seo", icon: <TrendingUp className="w-8 h-8" />, title: "Referencement SEO", subtitle: "Positionnement durable sur Google",
-    description: "Le SEO est un investissement long terme qui genere du trafic qualifie sans cout publicitaire. Nous optimisons votre site pour qu'il apparaisse en tete des resultats de recherche sur vos mots-cles strategiques.",
-    features: ["Audit SEO initial complet", "Recherche de mots-cles", "Optimisation on-page", "Creation de contenu SEO", "Strategie de netlinking", "Suivi des positions", "Rapports mensuels detailles"],
-    benefits: [{ title: "Trafic qualifie", desc: "Visiteurs reellement interesses par vos services" }, { title: "ROI durable", desc: "Investissement rentable sur le long terme" }, { title: "Credibilite", desc: "Etre en premiere page renforce la confiance" }, { title: "Visibilite 24/7", desc: "Votre site travaille pour vous en permanence" }],
+  { id: "referencement-seo", icon: <TrendingUp className="w-8 h-8" />, title: "Référencement SEO", subtitle: "Positionnement durable sur Google",
+    description: "Le SEO est un investissement long terme qui généré du trafic qualifié sans coût publicitaire. Nous optimisons votre site pour qu'il apparaisse en tete des résultats de recherche sur vos mots-cles stratégiques.",
+    features: ["Audit SEO initial complet", "Recherche de mots-cles", "Optimisation on-page", "Création de contenu SEO", "Stratégie de netlinking", "Suivi des positions", "Rapports mensuels detailles"],
+    benefits: [{ title: "Trafic qualifié", desc: "Visiteurs reellement intéressés par vos services" }, { title: "ROI durable", desc: "Investissement rentable sur le long terme" }, { title: "Credibilite", desc: "Etre en premiere page renforce la confiance" }, { title: "Visibilité 24/7", desc: "Votre site travaille pour vous en permanence" }],
     deliveryTime: "Engagement 6 mois minimum" },
-  { id: "audit-seo", icon: <ClipboardCheck className="w-8 h-8" />, title: "Audit SEO", subtitle: "Diagnostic complet de votre visibilite",
-    description: "Avant d'optimiser, il faut comprendre. Notre audit SEO analyse en profondeur votre site pour identifier les freins a votre referencement et les opportunites de croissance.",
-    features: ["Analyse technique complete", "Audit de contenu", "Analyse des backlinks", "Etude de la concurrence", "Analyse des mots-cles actuels", "Rapport detaille (30+ pages)", "Plan d'action priorise"],
-    benefits: [{ title: "Vision claire", desc: "Comprendre votre situation actuelle" }, { title: "Priorites definies", desc: "Savoir par ou commencer" }, { title: "Budget optimise", desc: "Investir la ou ca compte" }, { title: "Roadmap", desc: "Plan d'action concret a suivre" }],
+  { id: "audit-seo", icon: <ClipboardCheck className="w-8 h-8" />, title: "Audit SEO", subtitle: "Diagnostic complet de votre visibilité",
+    description: "Avant d'optimiser, il faut comprendre. Notre audit SEO analyse en profondeur votre site pour identifier les freins a votre référencement et les opportunites de croissance.",
+    features: ["Analyse technique complète", "Audit de contenu", "Analyse des backlinks", "Etude de la concurrence", "Analyse des mots-cles actuels", "Rapport detaille (30+ pages)", "Plan d'action priorise"],
+    benefits: [{ title: "Vision claire", desc: "Comprendre votre situation actuelle" }, { title: "Priorités définies", desc: "Savoir par ou commencer" }, { title: "Budget optimisé", desc: "Investir la ou ca compte" }, { title: "Roadmap", desc: "Plan d'action concret a suivre" }],
     deliveryTime: "5-7 jours" },
 ];
 
@@ -37,9 +37,9 @@ export default function SeoPageContent() {
       </BreadcrumbList></Breadcrumb></div>
 
       <section className="py-16 sm:py-24 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20"><div className="container mx-auto px-4 sm:px-6"><div className="max-w-3xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 mb-6"><Search className="w-5 h-5 text-emerald-600" /><span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">Referencement naturel</span></div>
-        <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">SEO & Visibilite</h1>
-        <p className="text-xl text-muted-foreground mb-8">Dominez les resultats de recherche et attirez des clients qualifies grace a une strategie SEO sur-mesure.</p>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 mb-6"><Search className="w-5 h-5 text-emerald-600" /><span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">Référencement naturel</span></div>
+        <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">SEO & Visibilité</h1>
+        <p className="text-xl text-muted-foreground mb-8">Dominez les résultats de recherche et attirez des clients qualifiés grâce à une stratégie SEO sur-mesure.</p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button onClick={() => router.push("/contact")} size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-600">Demander un audit gratuit <ArrowRight className="ml-2 w-4 h-4" /></Button>
           <Button asChild variant="outline" size="lg"><Link href="/blog">Lire nos conseils SEO</Link></Button>
@@ -84,7 +84,7 @@ export default function SeoPageContent() {
                 </div>
               </div>
               <div className="p-8 rounded-2xl border border-border bg-card">
-                <div className="flex items-center gap-3 mb-6"><Zap className="w-6 h-6 text-emerald-600" /><h3 className="text-xl font-semibold">Les benefices</h3></div>
+                <div className="flex items-center gap-3 mb-6"><Zap className="w-6 h-6 text-emerald-600" /><h3 className="text-xl font-semibold">Les bénéfices</h3></div>
                 <div className="space-y-6">{service.benefits.map((benefit, i) => (
                   <div key={i} className="flex gap-4"><div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center flex-shrink-0"><Target className="w-5 h-5 text-emerald-600" /></div><div><p className="font-medium text-foreground">{benefit.title}</p><p className="text-sm text-muted-foreground">{benefit.desc}</p></div></div>
                 ))}</div>
@@ -95,10 +95,10 @@ export default function SeoPageContent() {
       </div></div></section>
 
       <section className="py-20 bg-card border-y border-border"><div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Ce que nos clients disent</h2><p className="text-muted-foreground">Des resultats SEO concrets et mesurables</p></div>
+        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Ce que nos clients disent</h2><p className="text-muted-foreground">Des résultats SEO concrets et mesurables</p></div>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {[{ quote: "Nous sommes passes de la page 5 a la 1ere position sur nos mots-cles principaux en 6 mois. Notre trafic organique a augmente de 340%.", name: "Antoine C.", role: "Directeur, Agence Immo", initial: "A" },
-            { quote: "L'audit SEO a revele des problemes techniques qu'on ignorait. Apres les corrections, notre taux de conversion a double.", name: "Laura P.", role: "E-commerce Manager", initial: "L" }].map((t, i) => (
+            { quote: "L'audit SEO a revele des problemes techniques qu'on ignorait. Après les corrections, notre taux de conversion a double.", name: "Laura P.", role: "E-commerce Manager", initial: "L" }].map((t, i) => (
             <div key={i} className="p-6 rounded-2xl bg-muted/50 border border-border">
               <div className="flex items-center gap-1 mb-4">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
               <p className="text-muted-foreground mb-4 italic">&quot;{t.quote}&quot;</p>
@@ -134,16 +134,16 @@ export default function SeoPageContent() {
       </section>
 
       <ServiceFAQ faqs={[
-        { q: "Combien de temps faut-il pour voir des resultats en SEO ?", a: "Les premiers resultats SEO apparaissent generalement entre 3 et 6 mois. Le SEO est un investissement long terme : une fois les positions acquises, elles generent du trafic qualifie de maniere durable sans cout publicitaire." },
-        { q: "Quelle est la difference entre SEO et SEA ?", a: "Le SEO (referencement naturel) vise des resultats organiques durables sans payer au clic. Le SEA (publicite payante) offre une visibilite immediate mais s'arrete des que vous stoppez les depenses. Idealement, les deux strategies se completent." },
-        { q: "Un audit SEO est-il vraiment utile ?", a: "Oui, l'audit SEO identifie les freins techniques, les opportunites de mots-cles et les axes d'amelioration prioritaires. C'est la base de toute strategie SEO efficace et permet d'eviter de travailler a l'aveugle." },
-        { q: "Pourquoi faire appel a une agence SEO plutot que de faire soi-meme ?", a: "Le SEO evolue constamment (algorithmes Google, bonnes pratiques). Une agence apporte l'expertise technique, les outils professionnels et l'experience de dizaines de projets pour maximiser vos resultats." },
-        { q: "Garantissez-vous la premiere position sur Google ?", a: "Aucune agence serieuse ne peut garantir la position 1, car Google seul decide du classement. En revanche, nous garantissons une methodologie eprouvee, un suivi rigoureux et une amelioration mesurable de votre visibilite." }
+        { q: "Combien de temps faut-il pour voir des résultats en SEO ?", a: "Les premiers résultats SEO apparaissent généralement entre 3 et 6 mois. Le SEO est un investissement long terme : une fois les positions acquises, elles génèrent du trafic qualifié de maniere durable sans coût publicitaire." },
+        { q: "Quelle est la différence entre SEO et SEA ?", a: "Le SEO (référencement naturel) vise des résultats organiques durables sans payer au clic. Le SEA (publicité payante) offre une visibilité immediate mais s'arrete des que vous stoppez les dépenses. Idealement, les deux stratégies se completent." },
+        { q: "Un audit SEO est-il vraiment utile ?", a: "Oui, l'audit SEO identifie les freins techniques, les opportunites de mots-cles et les axes d'amélioration prioritaires. C'est la base de toute stratégie SEO efficace et permet d'eviter de travailler a l'aveugle." },
+        { q: "Pourquoi faire appel a une agence SEO plutot que de faire soi-meme ?", a: "Le SEO evolue constamment (algorithmes Google, bonnes pratiques). Une agence apporte l'expertise technique, les outils professionnels et l'experience de dizaines de projets pour maximiser vos résultats." },
+        { q: "Garantissez-vous la premiere position sur Google ?", a: "Aucune agence serieuse ne peut garantir la position 1, car Google seul decide du classement. En revanche, nous garantissons une méthodologie eprouvee, un suivi rigoureux et une amélioration mesurable de votre visibilité." }
       ]} />
 
       <section className="py-20 bg-gradient-to-r from-emerald-500 to-teal-600"><div className="container mx-auto px-4 sm:px-6 text-center">
-        <h2 className="text-3xl font-bold text-white mb-4">Pret a dominer Google ?</h2>
-        <p className="text-white/80 mb-8 max-w-xl mx-auto">Commencez par un audit gratuit de votre visibilite actuelle.</p>
+        <h2 className="text-3xl font-bold text-white mb-4">Prêt à dominer Google ?</h2>
+        <p className="text-white/80 mb-8 max-w-xl mx-auto">Commencez par un audit gratuit de votre visibilité actuelle.</p>
         <Button onClick={() => router.push("/contact")} size="lg" className="bg-white text-emerald-600 hover:bg-white/90">Obtenir mon audit gratuit <ArrowRight className="ml-2 w-4 h-4" /></Button>
       </div></section>
     </main>

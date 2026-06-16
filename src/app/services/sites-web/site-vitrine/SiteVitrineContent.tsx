@@ -10,17 +10,17 @@ import { SITE, PRICING } from "@/lib/constants";
 
 const features = [
   { icon: <Palette className="w-6 h-6" />, title: "Design Sur-Mesure", description: "Un design unique qui reflete votre identite et vous differencie de la concurrence" },
-  { icon: <Search className="w-6 h-6" />, title: "SEO Optimise", description: "Referencement naturel pour apparaitre en premiere page Google sur vos mots-cles" },
-  { icon: <Globe className="w-6 h-6" />, title: "Jusqu'a 5 Pages", description: "Accueil, services, a propos, contact, blog -- tout pour presenter votre activite" },
+  { icon: <Search className="w-6 h-6" />, title: "SEO Optimisé", description: "Référencement naturel pour apparaitre en premiere page Google sur vos mots-cles" },
+  { icon: <Globe className="w-6 h-6" />, title: "Jusqu'a 5 Pages", description: "Accueil, services, a propos, contact, blog -- tout pour presenter votre activité" },
   { icon: <Users className="w-6 h-6" />, title: "UX Conversion", description: "Navigation pensee pour guider vos visiteurs vers la prise de contact" },
 ];
 
-const includes = ["Jusqu'a 5 pages personnalisees", "Design sur-mesure unique", "Optimisation SEO complete", "Responsive mobile, tablette, desktop", "Formulaire de contact + Google Maps", "Blog integre (optionnel)", "Hebergement 1 an inclus", "Support technique 3 mois"];
+const includes = ["Jusqu'a 5 pages personnalisées", "Design sur-mesure unique", "Optimisation SEO complète", "Responsive mobile, tablette, desktop", "Formulaire de contact + Google Maps", "Blog intégré (optionnel)", "Hebergement 1 an inclus", "Support technique 3 mois"];
 
 const processSteps = [
   { num: "01", title: "Consultation gratuite", desc: "On echange sur vos objectifs, votre cible et votre identite. Devis detaille sous 24h." },
-  { num: "02", title: "Maquette & validation", desc: "Vous validez le design page par page. Modifications illimitees a cette etape." },
-  { num: "03", title: "Developpement", desc: "Integration pixel-perfect, contenu, SEO technique et optimisation performances." },
+  { num: "02", title: "Maquette & validation", desc: "Vous validez le design page par page. Modifications illimitees a cette étape." },
+  { num: "03", title: "Développement", desc: "Integration pixel-perfect, contenu, SEO technique et optimisation performances." },
   { num: "04", title: "Livraison & formation", desc: "Mise en ligne, formation a l'administration, support technique inclus." },
 ];
 
@@ -31,18 +31,18 @@ const testimonials = [
 ];
 
 const guarantees = [
-  { icon: <RotateCcw className="w-5 h-5" />, title: "Satisfait ou retravaille", desc: "On retravaille gratuitement si le resultat ne correspond pas au brief valide." },
-  { icon: <Lock className="w-5 h-5" />, title: "Prix fixe garanti", desc: "Le devis signe est le prix final. Aucun cout cache, aucune surprise." },
-  { icon: <Shield className="w-5 h-5" />, title: "Livraison 10-15 jours", desc: "Delai garanti. 10% de remise en cas de retard de notre fait." },
+  { icon: <RotateCcw className="w-5 h-5" />, title: "Satisfait ou retravaille", desc: "On retravaille gratuitement si le résultat ne correspond pas au brief valide." },
+  { icon: <Lock className="w-5 h-5" />, title: "Prix fixe garanti", desc: "Le devis signe est le prix final. Aucun coût cache, aucune surprise." },
+  { icon: <Shield className="w-5 h-5" />, title: "Livraison 10-15 jours", desc: "Délai garanti. 10% de remise en cas de retard de notre fait." },
   { icon: <Headphones className="w-5 h-5" />, title: "Support 3 mois", desc: "Support technique inclus pendant 3 mois. Reponse sous 24h." },
 ];
 
 const faqs = [
-  { q: "Quelle est la difference entre un site vitrine et une landing page ?", a: "Un site vitrine comporte plusieurs pages (accueil, services, a propos, contact, blog) pour presenter votre activite complete. Une landing page est une page unique optimisee pour convertir sur un objectif precis (campagne pub, lancement). Le site vitrine renforce votre credibilite globale." },
-  { q: "Combien de temps faut-il pour creer mon site vitrine ?", a: "10 a 15 jours ouvres entre le brief valide et la mise en ligne. Ce delai inclut la maquette, le developpement et la mise en ligne. Nous nous engageons contractuellement sur ce delai." },
+  { q: "Quelle est la différence entre un site vitrine et une landing page ?", a: "Un site vitrine comporte plusieurs pages (accueil, services, a propos, contact, blog) pour presenter votre activité complète. Une landing page est une page unique optimisée pour convertir sur un objectif précis (campagne pub, lancement). Le site vitrine renforce votre credibilite globale." },
+  { q: "Combien de temps faut-il pour créer mon site vitrine ?", a: "10 a 15 jours ouvres entre le brief valide et la mise en ligne. Ce délai inclut la maquette, le développement et la mise en ligne. Nous nous engageons contractuellement sur ce délai." },
   { q: "Mon site sera-t-il bien positionne sur Google ?", a: "Oui. Nous optimisons chaque page pour le SEO : balises meta, structure semantique, vitesse, sitemap, robots.txt. Nos clients constatent en moyenne une apparition en premiere page Google sur leurs mots-cles locaux sous 2-3 mois." },
   { q: "Puis-je modifier le contenu moi-meme ?", a: "Absolument. Nous vous formons a l'administration de votre site et vous fournissons une documentation. Pour les modifications complexes, notre support technique est disponible pendant 3 mois." },
-  { q: "Y a-t-il des frais recurrents apres la livraison ?", a: "L'hebergement de la premiere annee est inclus. Ensuite, le renouvellement coute environ 10 euros/mois. Il n'y a aucun autre frais obligatoire." },
+  { q: "Y a-t-il des frais recurrents après la livraison ?", a: "L'hebergement de la premiere annee est inclus. Ensuite, le renouvellement coûte environ 10 euros/mois. Il n'y a aucun autre frais obligatoire." },
   { q: "Proposez-vous le paiement en plusieurs fois ?", a: "Oui, paiement en 2 ou 3 fois sans frais : un acompte au demarrage, le solde a la livraison (ou reparti sur 2 echeances)." },
 ];
 
@@ -62,7 +62,7 @@ export default function SiteVitrineContent() {
         <div className="container mx-auto px-4 sm:px-6"><div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6 animate-pulse"><span className="w-2 h-2 rounded-full bg-accent" /><span className="text-sm font-semibold text-accent">3 creneaux disponibles ce mois-ci</span></div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">Un Site Vitrine Qui <span className="text-primary">Attire Vos Clients Ideaux</span></h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Nos clients recoivent en moyenne <strong className="text-foreground">3x plus de demandes de contact</strong> apres la mise en ligne. Design sur-mesure, SEO inclus.</p>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Nos clients recoivent en moyenne <strong className="text-foreground">3x plus de demandes de contact</strong> après la mise en ligne. Design sur-mesure, SEO inclus.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-lg"><Link href="/contact">Obtenir mon devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link></Button>
             <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6"><Link href="/portfolio">Voir nos realisations</Link></Button>
@@ -76,7 +76,7 @@ export default function SiteVitrineContent() {
       </section>
 
       <section className="py-10 bg-primary"><div className="container mx-auto px-4 sm:px-6"><div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-        {[{ value: "10-15j", label: "Delai de livraison" }, { value: "5 pages", label: "Personnalisees" }, { value: "Top Google", label: "SEO optimise" }, { value: "3 mois", label: "Support inclus" }].map((m, i) => (
+        {[{ value: "10-15j", label: "Délai de livraison" }, { value: "5 pages", label: "Personnalisees" }, { value: "Top Google", label: "SEO optimisé" }, { value: "3 mois", label: "Support inclus" }].map((m, i) => (
           <div key={i}><p className="text-3xl sm:text-4xl font-black text-primary-foreground">{m.value}</p><p className="text-sm text-primary-foreground/70 mt-1">{m.label}</p></div>
         ))}
       </div></div></section>
@@ -89,7 +89,7 @@ export default function SiteVitrineContent() {
       </div></section>
 
       <section className="py-20 bg-muted/30"><div className="container mx-auto px-4 sm:px-6"><div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-        <div><h2 className="text-3xl font-bold text-foreground mb-6">Tout est inclus, sans surprise</h2><p className="text-muted-foreground mb-8">Design, developpement, SEO, hebergement et support : tout est compris dans le prix.</p>
+        <div><h2 className="text-3xl font-bold text-foreground mb-6">Tout est inclus, sans surprise</h2><p className="text-muted-foreground mb-8">Design, développement, SEO, hebergement et support : tout est compris dans le prix.</p>
           <div className="grid sm:grid-cols-2 gap-3">{includes.map((item, i) => (<div key={i} className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-1" /><span className="text-sm text-foreground">{item}</span></div>))}</div></div>
         <div className="w-full max-w-md mx-auto"><div className="p-8 rounded-2xl border-2 border-primary bg-card shadow-xl relative">
           <div className="absolute -top-3 left-1/2 -translate-x-1/2"><span className="px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wide">Le plus populaire</span></div>
@@ -172,10 +172,10 @@ export default function SiteVitrineContent() {
         ))}</div>
       </div></section>
 
-      <ServiceCaseStudies category="site-vitrine" title="Nos sites vitrines realises" subtitle="Decouvrez les sites vitrines que nous avons crees pour nos clients" max={6} />
+      <ServiceCaseStudies category="site-vitrine" title="Nos sites vitrines realises" subtitle="Decouvrez les sites vitrines que nous avons créés pour nos clients" max={6} />
 
       <section className="py-20"><div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Resultats concrets de nos clients</h2><p className="text-muted-foreground">Des sites vitrines qui ont transforme leur visibilite</p></div>
+        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Résultats concrets de nos clients</h2><p className="text-muted-foreground">Des sites vitrines qui ont transforme leur visibilité</p></div>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">{testimonials.map((t, i) => (
           <div key={i} className="p-6 rounded-2xl bg-card border border-border">
             <div className="inline-block px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-bold mb-4">{t.result}</div>
@@ -187,15 +187,15 @@ export default function SiteVitrineContent() {
       </div></section>
 
       <section className="py-20 bg-muted/30"><div className="container mx-auto px-4 sm:px-6"><div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Questions frequentes</h2><p className="text-muted-foreground">Tout ce que vous devez savoir avant de vous lancer</p></div>
+        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Questions fréquentes</h2><p className="text-muted-foreground">Tout ce que vous devez savoir avant de vous lancer</p></div>
         <Accordion type="single" collapsible className="space-y-3">{faqs.map((faq, i) => (
           <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-xl px-6 bg-card"><AccordionTrigger className="text-left text-foreground font-medium hover:no-underline">{faq.q}</AccordionTrigger><AccordionContent className="text-muted-foreground leading-relaxed">{faq.a}</AccordionContent></AccordionItem>
         ))}</Accordion>
       </div></div></section>
 
       <section className="py-20 bg-primary"><div className="container mx-auto px-4 sm:px-6 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">Pret a creer votre site vitrine professionnel ?</h2>
-        <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto text-lg">Recevez un devis personnalise sous 24h. Consultation gratuite, sans engagement.</p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">Prêt à créer votre site vitrine professionnel ?</h2>
+        <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto text-lg">Recevez un devis personnalisé sous 24h. Consultation gratuite, sans engagement.</p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-8 py-6"><Link href="/contact">Obtenir mon devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link></Button>
           <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6"><a href={`tel:${SITE.phone}`}><Phone className="mr-2 w-4 h-4" />Nous appeler</a></Button>

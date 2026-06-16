@@ -9,10 +9,10 @@ import ServiceCaseStudies from "@/components/services/ServiceCaseStudies";
 import { SITE, PRICING } from "@/lib/constants";
 
 const features = [
-  { icon: <Target className="w-6 h-6" />, title: "Optimisation Conversion", description: "Chaque element est pense pour maximiser votre taux de conversion" },
+  { icon: <Target className="w-6 h-6" />, title: "Optimisation Conversion", description: "Chaque élément est pense pour maximiser votre taux de conversion" },
   { icon: <Smartphone className="w-6 h-6" />, title: "100% Responsive", description: "Parfaitement adapte a tous les ecrans : mobile, tablette, desktop" },
   { icon: <Zap className="w-6 h-6" />, title: "Ultra-Rapide", description: "Score PageSpeed > 90 pour un chargement quasi instantane" },
-  { icon: <BarChart className="w-6 h-6" />, title: "Analytics Integres", description: "Tracking complet pour mesurer et optimiser vos resultats" },
+  { icon: <BarChart className="w-6 h-6" />, title: "Analytics Integres", description: "Tracking complet pour mesurer et optimiser vos résultats" },
 ];
 
 const includes = [
@@ -27,20 +27,20 @@ const includes = [
 ];
 
 const processSteps = [
-  { num: "01", title: "Brief & strategie", desc: "On definit ensemble vos objectifs, votre cible et votre proposition de valeur." },
-  { num: "02", title: "Maquette & validation", desc: "Vous validez le design avant developpement. Modifications illimitees a cette etape." },
-  { num: "03", title: "Developpement", desc: "Integration pixel-perfect, optimisation vitesse et SEO technique." },
-  { num: "04", title: "Livraison & lancement", desc: "Mise en ligne, tests cross-browser, tracking configure. Pret a convertir." },
+  { num: "01", title: "Brief & stratégie", desc: "On definit ensemble vos objectifs, votre cible et votre proposition de valeur." },
+  { num: "02", title: "Maquette & validation", desc: "Vous validez le design avant développement. Modifications illimitees a cette étape." },
+  { num: "03", title: "Développement", desc: "Integration pixel-perfect, optimisation vitesse et SEO technique." },
+  { num: "04", title: "Livraison & lancement", desc: "Mise en ligne, tests cross-browser, tracking configure. Prêt à convertir." },
 ];
 
 const testimonials = [
-  { quote: "Notre landing page a genere 150 leads qualifies en 2 semaines. Le ROI de nos campagnes Google Ads a ete multiplie par 4.", result: "+150 leads en 14 jours", name: "Marie L.", role: "Fondatrice, StartupTech", initial: "M" },
+  { quote: "Notre landing page a généré 150 leads qualifiés en 2 semaines. Le ROI de nos campagnes Google Ads a ete multiplie par 4.", result: "+150 leads en 14 jours", name: "Marie L.", role: "Fondatrice, StartupTech", initial: "M" },
   { quote: "Taux de conversion passe de 1,2% a 8,7% apres la refonte de notre landing page. Un investissement ultra rentable.", result: "Taux de conversion x7", name: "Thomas R.", role: "Responsable Marketing, SaaS B2B", initial: "T" },
-  { quote: "Page livree en 5 jours, pile dans les temps pour notre lancement produit. Resultat : 340 inscriptions le premier jour.", result: "340 inscriptions jour 1", name: "Julie K.", role: "Product Manager", initial: "J" },
+  { quote: "Page livrée en 5 jours, pile dans les temps pour notre lancement produit. Résultat : 340 inscriptions le premier jour.", result: "340 inscriptions jour 1", name: "Julie K.", role: "Product Manager", initial: "J" },
 ];
 
 const guarantees = [
-  { icon: <RotateCcw className="w-5 h-5" />, title: "Satisfait ou retravaille", desc: "On retravaille gratuitement si le resultat ne correspond pas au brief valide." },
+  { icon: <RotateCcw className="w-5 h-5" />, title: "Satisfait ou retravaille", desc: "On retravaille gratuitement si le résultat ne correspond pas au brief valide." },
   { icon: <Lock className="w-5 h-5" />, title: "Prix fixe garanti", desc: "Le devis signe est le prix final. Aucun cout cache." },
   { icon: <Shield className="w-5 h-5" />, title: "Livraison 5-7 jours", desc: "Delai garanti. 10% de remise en cas de retard de notre fait." },
   { icon: <Headphones className="w-5 h-5" />, title: "Support inclus", desc: "1 mois de support technique apres livraison. Reponse sous 24h." },
@@ -48,8 +48,8 @@ const guarantees = [
 
 const faqs = [
   { q: "Qu'est-ce qu'une landing page exactement ?", a: "C'est une page web autonome, concue specifiquement pour convertir les visiteurs en leads ou clients. Contrairement a un site classique, elle n'a qu'un seul objectif : inciter a l'action (formulaire, achat, inscription)." },
-  { q: "Combien de temps pour creer ma landing page ?", a: "5 a 7 jours ouvres entre le brief valide et la mise en ligne. Nous respectons ce delai avec un engagement de 10% de remise en cas de depassement." },
-  { q: "Ma landing page sera-t-elle compatible mobile ?", a: "Absolument. Le design est pense mobile-first : 70% du trafic publicitaire vient du mobile. Votre page sera parfaitement optimisee sur tous les ecrans." },
+  { q: "Combien de temps pour créer ma landing page ?", a: "5 a 7 jours ouvres entre le brief valide et la mise en ligne. Nous respectons ce delai avec un engagement de 10% de remise en cas de depassement." },
+  { q: "Ma landing page sera-t-elle compatible mobile ?", a: "Absolument. Le design est pense mobile-first : 70% du trafic publicitaire vient du mobile. Votre page sera parfaitement optimisée sur tous les ecrans." },
   { q: "Puis-je utiliser ma landing page pour Google Ads et Meta Ads ?", a: "Oui, c'est exactement pour ca qu'elle est concue. Nous integrons le tracking Google Analytics, Google Ads et Meta Pixel pour mesurer vos conversions." },
   { q: "Que se passe-t-il apres la livraison ?", a: "Vous beneficiez d'1 mois de support technique inclus. Nous restons disponibles pour les ajustements mineurs et le suivi des performances." },
   { q: "Proposez-vous le paiement en plusieurs fois ?", a: "Oui, paiement en 2 ou 3 fois sans frais : un acompte au demarrage, le solde a la livraison." },
@@ -100,7 +100,7 @@ export default function LandingPageContent() {
                 <div className="flex -space-x-1">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
                 <span className="font-medium text-foreground">4.9/5</span><span>sur 47 avis</span>
               </div>
-              <div className="flex items-center gap-2"><Users className="w-4 h-4 text-primary" /><span><strong className="text-foreground">+50</strong> landing pages livrees</span></div>
+              <div className="flex items-center gap-2"><Users className="w-4 h-4 text-primary" /><span><strong className="text-foreground">+50</strong> landing pages livrées</span></div>
               <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary" /><span>Livree en <strong className="text-foreground">5-7 jours</strong></span></div>
             </div>
           </div>
@@ -187,7 +187,7 @@ export default function LandingPageContent() {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Tout est inclus dans votre landing page</h2>
-              <p className="text-muted-foreground mb-8">Pas de surprise, pas d&apos;options cachees. Vous recevez une page complete, prete a convertir.</p>
+              <p className="text-muted-foreground mb-8">Pas de surprise, pas d&apos;options cachees. Vous recevez une page complète, prete a convertir.</p>
               <div className="grid sm:grid-cols-2 gap-3">
                 {includes.map((item, i) => (
                   <div key={i} className="flex items-start gap-2">
@@ -229,7 +229,7 @@ export default function LandingPageContent() {
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Votre landing page en 4 etapes</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Votre landing page en 4 étapes</h2>
             <p className="text-muted-foreground">Un processus simple et transparent, de la premiere idee a la mise en ligne.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -275,7 +275,7 @@ export default function LandingPageContent() {
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Resultats concrets de nos clients</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Résultats concrets de nos clients</h2>
             <p className="text-muted-foreground">Des landing pages qui ont transforme leurs campagnes</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -299,7 +299,7 @@ export default function LandingPageContent() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Questions frequentes</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Questions fréquentes</h2>
               <p className="text-muted-foreground">Tout ce que vous devez savoir avant de vous lancer</p>
             </div>
             <Accordion type="single" collapsible className="space-y-3">
@@ -317,8 +317,8 @@ export default function LandingPageContent() {
       {/* Final CTA */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">Pret a lancer votre landing page ?</h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto text-lg">Recevez un devis personnalise sous 24h. Consultation gratuite, sans engagement.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">Prêt à lancer votre landing page ?</h2>
+          <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto text-lg">Recevez un devis personnalisé sous 24h. Consultation gratuite, sans engagement.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-8 py-6">
               <Link href="/contact">Obtenir mon devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link>

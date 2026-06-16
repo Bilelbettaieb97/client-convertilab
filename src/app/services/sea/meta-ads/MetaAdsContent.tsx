@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle, Fingerprint, Clock, Users, Image, Target, Tren
 import ServiceFAQ from "@/components/services/ServiceFAQ";
 
 const features = [
-  { icon: <Users className="w-6 h-6" />, title: "Ciblage Precis", description: "Touchez votre audience ideale" },
+  { icon: <Users className="w-6 h-6" />, title: "Ciblage Précis", description: "Touchez votre audience ideale" },
   { icon: <Image className="w-6 h-6" />, title: "Creatifs Optimises", description: "Visuels et videos performants" },
   { icon: <Target className="w-6 h-6" />, title: "Retargeting", description: "Reconvertissez vos visiteurs" },
   { icon: <TrendingUp className="w-6 h-6" />, title: "Scaling", description: "Augmentez vos budgets sans perdre en ROI" },
@@ -103,8 +103,8 @@ export default function MetaAdsContent() {
       <ServiceFAQ faqs={[
         { q: "Facebook Ads ou Instagram Ads : lequel choisir ?", a: "Les deux plateformes sont gerees depuis le meme outil (Meta Business Suite). Nous diffusons sur les deux simultanement et optimisons la repartition selon les performances. Instagram est ideal pour le visuel, Facebook pour le ciblage detaille." },
         { q: "Quel type de contenu fonctionne le mieux en Meta Ads ?", a: "Les videos courtes (15-30s), les carrousels produits et les temoignages clients performent le mieux. Nous creons ou optimisons vos visuels pour maximiser l'engagement et les conversions." },
-        { q: "Comment fonctionne le ciblage sur Meta Ads ?", a: "Meta offre un ciblage ultra-precis : donnees demographiques, centres d'interet, comportements d'achat, audiences similaires (lookalike) et retargeting de vos visiteurs. Nous exploitons ces options pour toucher votre audience ideale." },
-        { q: "Puis-je voir les resultats en temps reel ?", a: "Oui, vous avez acces a un tableau de bord en temps reel et recevez des rapports hebdomadaires detailles avec les metriques cles : impressions, clics, conversions, cout par acquisition et ROAS." }
+        { q: "Comment fonctionne le ciblage sur Meta Ads ?", a: "Meta offre un ciblage ultra-précis : données demographiques, centres d'interet, comportements d'achat, audiences similaires (lookalike) et retargeting de vos visiteurs. Nous exploitons ces options pour toucher votre audience ideale." },
+        { q: "Puis-je voir les resultats en temps reel ?", a: "Oui, vous avez acces a un tableau de bord en temps reel et recevez des rapports hebdomadaires detailles avec les metriques cles : impressions, clics, conversions, coût par acquisition et ROAS." }
       ]} />
 
       {/* Outil gratuit */}

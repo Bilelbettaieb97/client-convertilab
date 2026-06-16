@@ -12,14 +12,14 @@ const services = [
     id: "design-ui-ux", icon: <PenTool className="w-8 h-8" />, title: "Design UI/UX", subtitle: "Interfaces intuitives et esthetiques",
     description: "Le design UI/UX place l'utilisateur au centre de la conception. Nous creons des interfaces qui non seulement seduisent visuellement, mais guident naturellement vos visiteurs vers la conversion.",
     features: ["Recherche utilisateur (UX Research)", "Wireframes et architecture", "Prototypes interactifs", "Design system complet", "Tests utilisateurs", "Iterations illimitees", "Fichiers sources (Figma)"],
-    process: [{ step: "Decouverte", desc: "Analyse de vos besoins et de votre audience" }, { step: "Architecture", desc: "Structure et parcours utilisateur" }, { step: "Wireframes", desc: "Maquettes fonctionnelles" }, { step: "Design", desc: "Creation visuelle complete" }, { step: "Prototype", desc: "Version interactive testable" }, { step: "Validation", desc: "Tests et ajustements" }],
+    process: [{ step: "Decouverte", desc: "Analyse de vos besoins et de votre audience" }, { step: "Architecture", desc: "Structure et parcours utilisateur" }, { step: "Wireframes", desc: "Maquettes fonctionnelles" }, { step: "Design", desc: "Création visuelle complète" }, { step: "Prototype", desc: "Version interactive testable" }, { step: "Validation", desc: "Tests et ajustements" }],
     deliveryTime: "10-20 jours"
   },
   {
-    id: "identite-visuelle", icon: <Fingerprint className="w-8 h-8" />, title: "Identite Visuelle", subtitle: "Logo et charte graphique complete",
+    id: "identite-visuelle", icon: <Fingerprint className="w-8 h-8" />, title: "Identite Visuelle", subtitle: "Logo et charte graphique complète",
     description: "Votre identite visuelle est le premier contact avec vos clients. Nous creons des logos memorables et des chartes graphiques coherentes qui refletent vos valeurs et vous differencient de la concurrence.",
-    features: ["Creation de logo (3 propositions)", "Charte graphique complete", "Palette de couleurs", "Typographies definies", "Declinaisons tous supports", "Guide d'utilisation", "Fichiers vectoriels (AI, SVG, PDF)"],
-    process: [{ step: "Brief", desc: "Comprehension de votre univers" }, { step: "Recherche", desc: "Benchmark et inspiration" }, { step: "Concepts", desc: "3 directions creatives" }, { step: "Selection", desc: "Choix et affinage" }, { step: "Finalisation", desc: "Declinaisons et charte" }, { step: "Livraison", desc: "Fichiers et documentation" }],
+    features: ["Création de logo (3 propositions)", "Charte graphique complète", "Palette de couleurs", "Typographies définies", "Declinaisons tous supports", "Guide d'utilisation", "Fichiers vectoriels (AI, SVG, PDF)"],
+    process: [{ step: "Brief", desc: "Comprehension de votre univers" }, { step: "Recherche", desc: "Benchmark et inspiration" }, { step: "Concepts", desc: "3 directions créatives" }, { step: "Selection", desc: "Choix et affinage" }, { step: "Finalisation", desc: "Declinaisons et charte" }, { step: "Livraison", desc: "Fichiers et documentation" }],
     deliveryTime: "10-15 jours"
   }
 ];
@@ -35,12 +35,12 @@ export default function DesignPageContent() {
       </BreadcrumbList></Breadcrumb></div>
 
       <section className="py-16 sm:py-24 bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/20 dark:to-rose-950/20"><div className="container mx-auto px-4 sm:px-6"><div className="max-w-3xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 dark:bg-pink-900/30 mb-6"><Palette className="w-5 h-5 text-pink-600" /><span className="text-sm font-medium text-pink-700 dark:text-pink-300">Design & Identite</span></div>
-        <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">Design & Identite Visuelle</h1>
-        <p className="text-xl text-muted-foreground mb-8">Des creations visuelles qui marquent les esprits et transforment votre image de marque en avantage concurrentiel.</p>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 dark:bg-pink-900/30 mb-6"><Palette className="w-5 h-5 text-pink-600" /><span className="text-sm font-medium text-pink-700 dark:text-pink-300">Design & Identité</span></div>
+        <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">Design & Identité Visuelle</h1>
+        <p className="text-xl text-muted-foreground mb-8">Des créations visuelles qui marquent les esprits et transforment votre image de marque en avantage concurrentiel.</p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button onClick={() => router.push("/contact")} size="lg" className="bg-gradient-to-r from-pink-500 to-rose-600">Demander un devis gratuit <ArrowRight className="ml-2 w-4 h-4" /></Button>
-          <Button asChild variant="outline" size="lg"><Link href="/portfolio">Voir nos creations</Link></Button>
+          <Button asChild variant="outline" size="lg"><Link href="/portfolio">Voir nos créations</Link></Button>
         </div>
       </div></div></section>
 
@@ -58,7 +58,7 @@ export default function DesignPageContent() {
                 <div className="flex items-center gap-3 mb-6"><Layers className="w-6 h-6 text-pink-600" /><h3 className="text-xl font-semibold">Ce qui est inclus</h3></div>
                 <div className="space-y-3">{service.features.map((feature, i) => (<div key={i} className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" /><span className="text-muted-foreground">{feature}</span></div>))}</div>
                 <div className="mt-8 pt-6 border-t border-border">
-                  <div className="flex items-center gap-2 mb-4"><Clock className="w-5 h-5 text-pink-600" /><span className="font-medium">Delai: {service.deliveryTime}</span></div>
+                  <div className="flex items-center gap-2 mb-4"><Clock className="w-5 h-5 text-pink-600" /><span className="font-medium">Délai: {service.deliveryTime}</span></div>
                   <Button onClick={() => router.push("/contact")} className="w-full bg-gradient-to-r from-pink-500 to-rose-600">Demander un devis <ArrowRight className="ml-2 w-4 h-4" /></Button>
                 </div>
               </div>
@@ -90,10 +90,10 @@ export default function DesignPageContent() {
       </div></section>
 
       <ServiceFAQ faqs={[
-        { q: "Quelle est la difference entre UI et UX design ?", a: "L'UX (User Experience) se concentre sur l'experience utilisateur : parcours, ergonomie, facilite d'utilisation. L'UI (User Interface) concerne l'aspect visuel : couleurs, typographies, boutons. Les deux sont indissociables pour un design efficace." },
+        { q: "Quelle est la différence entre UI et UX design ?", a: "L'UX (User Experience) se concentre sur l'experience utilisateur : parcours, ergonomie, facilite d'utilisation. L'UI (User Interface) concerne l'aspect visuel : couleurs, typographies, boutons. Les deux sont indissociables pour un design efficace." },
         { q: "Pourquoi investir dans une identite visuelle professionnelle ?", a: "Votre identite visuelle est le premier contact avec vos clients. Un logo et une charte graphique professionnels inspirent confiance, renforcent la memorisation de votre marque et vous differencient de la concurrence." },
-        { q: "Combien de propositions de logo recevrai-je ?", a: "Nous proposons 3 directions creatives distinctes pour votre logo. Apres votre choix, nous affinons la version retenue avec 2 tours de revisions inclus pour aboutir au resultat parfait." },
-        { q: "Quels fichiers me seront livres ?", a: "Vous recevez tous les fichiers sources (AI, PSD, PDF) ainsi que les declinaisons optimisees pour le web, le print et les reseaux sociaux. Un guide d'utilisation complet accompagne la livraison." },
+        { q: "Combien de propositions de logo recevrai-je ?", a: "Nous proposons 3 directions créatives distinctes pour votre logo. Après votre choix, nous affinons la version retenue avec 2 tours de revisions inclus pour aboutir au résultat parfait." },
+        { q: "Quels fichiers me seront livrés ?", a: "Vous recevez tous les fichiers sources (AI, PSD, PDF) ainsi que les déclinaisons optimisées pour le web, le print et les réseaux sociaux. Un guide d'utilisation complet accompagne la livraison." },
         { q: "Travaillez-vous avec Figma ?", a: "Oui, Figma est notre outil principal pour le design UI/UX. Vous accedez a vos maquettes en temps reel, pouvez commenter et suivre l'avancement. Les prototypes interactifs sont egalement realises sur Figma." }
       ]} />
 
@@ -127,7 +127,7 @@ export default function DesignPageContent() {
       </div></section>
 
       <section className="py-20 bg-gradient-to-r from-pink-500 to-rose-600"><div className="container mx-auto px-4 sm:px-6 text-center">
-        <h2 className="text-3xl font-bold text-white mb-4">Pret a transformer votre image ?</h2>
+        <h2 className="text-3xl font-bold text-white mb-4">Prêt à transformer votre image ?</h2>
         <p className="text-white/80 mb-8 max-w-xl mx-auto">Discutons de votre projet de design et creons ensemble une identite qui vous ressemble.</p>
         <Button onClick={() => router.push("/contact")} size="lg" className="bg-white text-pink-600 hover:bg-white/90">Contactez-nous <ArrowRight className="ml-2 w-4 h-4" /></Button>
       </div></section>

@@ -149,7 +149,7 @@ export default function GoogleAdsContent() {
       </section>
 
       <ServiceFAQ faqs={[
-        { q: "Quel budget minimum pour Google Ads ?", a: "Nous recommandons un budget minimum de 500 euros/mois en depense publicitaire pour obtenir des donnees suffisantes et optimiser vos campagnes. Le budget ideal depend de votre secteur et de vos objectifs." },
+        { q: "Quel budget minimum pour Google Ads ?", a: "Nous recommandons un budget minimum de 500 euros/mois en dépense publicitaire pour obtenir des données suffisantes et optimiser vos campagnes. Le budget ideal depend de votre secteur et de vos objectifs." },
         { q: "Combien de temps pour rentabiliser mes campagnes ?", a: "Les premiers resultats sont visibles des les premiers jours. L'optimisation complete prend 2 a 4 semaines pour atteindre un ROAS optimal. Nos clients atteignent en moyenne un ROAS de x4.8." },
         { q: "Google Ads est-il adapte a mon activite ?", a: "Google Ads est efficace pour presque tous les secteurs : e-commerce, services B2B, professions liberales, commerces locaux. Si vos clients recherchent vos produits/services sur Google, c'est pertinent." },
         { q: "Que comprend votre gestion de campagnes ?", a: "Notre gestion inclut la recherche de mots-cles, la creation d'annonces, la configuration du tracking, l'optimisation continue des encheres, les tests A/B et des rapports hebdomadaires detailles." }

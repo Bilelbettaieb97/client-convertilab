@@ -162,7 +162,7 @@ export default async function GuidePage({ params }: PageProps) {
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center">
-                Les etapes a suivre
+                Les étapes a suivre
               </h2>
               <div className="space-y-12">
                 {guide.steps.map((step, i) => (
@@ -228,7 +228,7 @@ export default async function GuidePage({ params }: PageProps) {
                   <HelpCircle className="w-5 h-5 text-purple-600 dark:text-purple-400" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
-                  Questions frequentes
+                  Questions fréquentes
                 </h2>
               </div>
               <div className="space-y-4">
@@ -294,8 +294,8 @@ export default async function GuidePage({ params }: PageProps) {
                 <div className="p-6 bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl border border-gray-200">
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
-                      <p className="font-bold text-slate-900">Generez vos mentions legales</p>
-                      <p className="text-sm text-slate-600">Conformes RGPD, prets a integrer sur votre site</p>
+                      <p className="font-bold text-slate-900">Générez vos mentions legales</p>
+                      <p className="text-sm text-slate-600">Conformes RGPD, prêts à intégrer sur votre site</p>
                     </div>
                     <Link href="/generateur-mentions-legales" className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg text-sm font-semibold hover:bg-gray-900 whitespace-nowrap">
                       Generer mes mentions <ArrowRight className="w-4 h-4" />
@@ -312,10 +312,10 @@ export default async function GuidePage({ params }: PageProps) {
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
-                Pret a passer a l&apos;action ?
+                Prêt à passer a l&apos;action ?
               </h2>
               <p className="text-lg text-purple-100 mb-8">
-                Obtenez un devis gratuit et personnalise sous 24h. Sans engagement.
+                Obtenez un devis gratuit et personnalisé sous 24h. Sans engagement.
               </p>
               <Link
                 href={`/devis/${guide.relatedDevis}`}

@@ -33,10 +33,10 @@ export default function ServicesPageContent() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight max-w-4xl mx-auto">
-            Des Solutions Digitales Qui <span className="text-primary">Generent des Resultats</span>
+            Des Solutions Digitales Qui <span className="text-primary">Generent des Résultats</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Sites web, SEO, publicite, social media : un accompagnement 360 pour accelerer votre croissance. <strong className="text-foreground">+280% de CA moyen</strong> pour nos clients.
+            Sites web, SEO, publicité, social media : un accompagnement 360 pour accelerer votre croissance. <strong className="text-foreground">+280% de CA moyen</strong> pour nos clients.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
@@ -47,7 +47,7 @@ export default function ServicesPageContent() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
-              <Link href="/portfolio">Voir nos resultats</Link>
+              <Link href="/portfolio">Voir nos résultats</Link>
             </Button>
           </div>
 
@@ -109,8 +109,8 @@ export default function ServicesPageContent() {
             {[
               { icon: <CheckCircle className="w-5 h-5" />, title: "Prix fixes garantis", desc: "Le devis signe est le prix final. Aucun cout cache." },
               { icon: <Clock className="w-5 h-5" />, title: "Delais respectes", desc: "Engagement contractuel sur les delais. 10% de remise si retard." },
-              { icon: <Shield className="w-5 h-5" />, title: "Satisfait ou retravaille", desc: "On retravaille gratuitement si le resultat ne correspond pas." },
-              { icon: <Award className="w-5 h-5" />, title: "Resultats mesurables", desc: "Reporting transparent. Chaque euro investi est tracke." },
+              { icon: <Shield className="w-5 h-5" />, title: "Satisfait ou retravaille", desc: "On retravaille gratuitement si le résultat ne correspond pas." },
+              { icon: <Award className="w-5 h-5" />, title: "Résultats mesurables", desc: "Reporting transparent. Chaque euro investi est tracke." },
             ].map((g, i) => (
               <div key={i} className="text-center p-6 rounded-2xl border border-border bg-card">
                 <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-4 text-green-600">
@@ -128,10 +128,10 @@ export default function ServicesPageContent() {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
-            Pret a accelerer votre croissance ?
+            Prêt à accelerer votre croissance ?
           </h2>
           <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto text-lg">
-            Audit gratuit + plan d&apos;action personnalise sous 24h. Sans engagement.
+            Audit gratuit + plan d&apos;action personnalisé sous 24h. Sans engagement.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-8 py-6">
@@ -141,7 +141,7 @@ export default function ServicesPageContent() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6">
-              <Link href="/portfolio">Voir nos resultats</Link>
+              <Link href="/portfolio">Voir nos résultats</Link>
             </Button>
           </div>
           <p className="text-primary-foreground/60 text-sm mt-6">

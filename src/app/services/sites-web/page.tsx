@@ -37,8 +37,8 @@ const breadcrumbSchema = {
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Comment creer un site internet professionnel avec ConvertiLab",
-  "description": "Un processus simple et transparent en 4 etapes pour obtenir votre site web sur-mesure.",
+  "name": "Comment créer un site internet professionnel avec ConvertiLab",
+  "description": "Un processus simple et transparent en 4 étapes pour obtenir votre site web sur-mesure.",
   "totalTime": "P14D",
   "step": [
     { "@type": "HowToStep", "name": "Consultation gratuite", "text": "Echange sur vos objectifs et besoins. Devis detaille sous 24h." },

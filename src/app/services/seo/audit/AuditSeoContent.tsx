@@ -86,7 +86,7 @@ export default function AuditSeoContent() {
       <ServiceFAQ faqs={[
         { q: "Que contient un audit SEO complet ?", a: "Notre audit couvre l'analyse technique (performance, indexation, structure), l'audit du contenu (qualite, pertinence, optimisation), l'etude de la concurrence et l'analyse du profil de backlinks. Un rapport detaille de +50 pages est livre avec un plan d'action priorise." },
         { q: "Combien de temps prend un audit SEO ?", a: "Un audit SEO complet necessite 5 a 10 jours ouvres selon la taille du site. Nous analysons en profondeur chaque aspect technique et editorial pour vous fournir des recommandations concretes et actionnables." },
-        { q: "Que faire apres avoir recu l'audit ?", a: "Nous organisons un call de restitution d'1h pour parcourir les resultats ensemble. Vous pouvez ensuite implementer les recommandations en interne ou nous confier l'execution du plan d'action." },
+        { q: "Que faire après avoir recu l'audit ?", a: "Nous organisons un call de restitution d'1h pour parcourir les resultats ensemble. Vous pouvez ensuite implementer les recommandations en interne ou nous confier l'execution du plan d'action." },
         { q: "L'audit est-il adapte a mon secteur d'activite ?", a: "Oui, chaque audit est personnalise. Nous analysons votre secteur, vos concurrents directs et les specificites de votre marche pour fournir des recommandations pertinentes et adaptees." }
       ]} />
 

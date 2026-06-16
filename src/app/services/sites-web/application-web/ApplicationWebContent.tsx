@@ -8,18 +8,18 @@ import ServiceFAQ from "@/components/services/ServiceFAQ";
 import { SITE } from "@/lib/constants";
 
 const features = [
-  { icon: <Code className="w-6 h-6" />, title: "Developpement Sur-Mesure", description: "Architecture pensee pour votre metier, pas un template generique" },
+  { icon: <Code className="w-6 h-6" />, title: "Développement Sur-Mesure", description: "Architecture pensee pour votre métier, pas un template generique" },
   { icon: <Database className="w-6 h-6" />, title: "Base de Donnees Scalable", description: "Supporte 10x votre croissance sans ralentissement" },
   { icon: <Lock className="w-6 h-6" />, title: "Securite Renforcee", description: "Authentification, chiffrement et conformite RGPD" },
   { icon: <Layers className="w-6 h-6" />, title: "API & Integrations", description: "Connectez vos outils existants en quelques clics" },
 ];
-const includes = ["Developpement sur-mesure complet", "Architecture scalable et performante", "API et integrations tierces", "Base de donnees optimisee", "Authentification securisee", "Documentation technique complete", "Tests et assurance qualite", "Maintenance evolutive incluse"];
-const idealFor = ["Startups tech en phase de scaling", "Entreprises B2B avec processus complexes", "Outils internes metiers sur-mesure", "Plateformes SaaS a forte valeur ajoutee", "Portails clients securises", "Tableaux de bord analytiques temps reel"];
+const includes = ["Développement sur-mesure complet", "Architecture scalable et performante", "API et intégrations tierces", "Base de donnees optimisée", "Authentification sécurisée", "Documentation technique complète", "Tests et assurance qualite", "Maintenance evolutive incluse"];
+const idealFor = ["Startups tech en phase de scaling", "Entreprises B2B avec processus complexes", "Outils internes métiers sur-mesure", "Plateformes SaaS a forte valeur ajoutee", "Portails clients sécurisés", "Tableaux de bord analytiques temps reel"];
 const results = [
   { metric: "+65%", label: "Productivite", detail: "gain moyen pour nos clients" },
   { metric: "99.9%", label: "Uptime", detail: "disponibilite garantie" },
   { metric: "< 200ms", label: "Temps de reponse", detail: "performance optimale" },
-  { metric: "15+", label: "Apps livrees", detail: "en production" },
+  { metric: "15+", label: "Apps livrées", detail: "en production" },
 ];
 
 export default function ApplicationWebContent() {
@@ -107,22 +107,22 @@ export default function ApplicationWebContent() {
 
       <section className="py-16 bg-muted/30"><div className="container mx-auto px-4"><h2 className="text-3xl font-bold text-center mb-10 text-foreground">Zero Risque, Garanti</h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="bg-background p-6 rounded-xl border border-border text-center hover:shadow-lg transition-all"><Shield className="w-10 h-10 text-green-500 mx-auto mb-4" /><h3 className="font-semibold text-foreground mb-2">Satisfait ou rembourse</h3><p className="text-sm text-muted-foreground">Si le resultat ne vous convient pas, on vous rembourse integralement</p></div>
+          <div className="bg-background p-6 rounded-xl border border-border text-center hover:shadow-lg transition-all"><Shield className="w-10 h-10 text-green-500 mx-auto mb-4" /><h3 className="font-semibold text-foreground mb-2">Satisfait ou rembourse</h3><p className="text-sm text-muted-foreground">Si le résultat ne vous convient pas, on vous rembourse integralement</p></div>
           <div className="bg-background p-6 rounded-xl border border-border text-center hover:shadow-lg transition-all"><Cog className="w-10 h-10 text-primary mx-auto mb-4" /><h3 className="font-semibold text-foreground mb-2">Paiement apres livraison</h3><p className="text-sm text-muted-foreground">Vous ne payez qu&apos;une fois votre application validee et fonctionnelle</p></div>
           <div className="bg-background p-6 rounded-xl border border-border text-center hover:shadow-lg transition-all"><BarChart3 className="w-10 h-10 text-accent mx-auto mb-4" /><h3 className="font-semibold text-foreground mb-2">Support 6 mois inclus</h3><p className="text-sm text-muted-foreground">Corrections, ajustements et accompagnement post-lancement</p></div>
         </div>
       </div></section>
 
       <ServiceFAQ faqs={[
-        { q: "Quelle est la difference entre un site web et une application web ?", a: "Un site web est principalement informatif (vitrine, blog). Une application web est interactive : gestion de donnees, tableaux de bord, workflows, authentification utilisateurs. C'est un veritable outil metier accessible depuis un navigateur." },
+        { q: "Quelle est la différence entre un site web et une application web ?", a: "Un site web est principalement informatif (vitrine, blog). Une application web est interactive : gestion de donnees, tableaux de bord, workflows, authentification utilisateurs. C'est un veritable outil métier accessible depuis un navigateur." },
         { q: "Quelles technologies utilisez-vous ?", a: "Nous utilisons des technologies modernes et eprouvees : React/TypeScript pour le frontend, Node.js ou Python pour le backend, PostgreSQL pour la base de donnees, et des services cloud pour l'hebergement scalable." },
         { q: "Comment garantissez-vous la securite de l'application ?", a: "Nous implementons les bonnes pratiques de securite : authentification robuste, chiffrement des donnees, protection CSRF/XSS, conformite RGPD, tests de securite et mises a jour regulieres." },
-        { q: "Proposez-vous de la maintenance apres livraison ?", a: "Oui, nous proposons des contrats de maintenance evolutive incluant les mises a jour de securite, le monitoring, le support utilisateur et le developpement de nouvelles fonctionnalites." }
+        { q: "Proposez-vous de la maintenance apres livraison ?", a: "Oui, nous proposons des contrats de maintenance evolutive incluant les mises a jour de securite, le monitoring, le support utilisateur et le développement de nouvelles fonctionnalites." }
       ]} />
 
       <section className="py-20 bg-gradient-to-r from-slate-800 to-slate-900 text-white"><div className="container mx-auto px-4 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6"><Clock className="w-4 h-4" /><span className="text-sm font-medium">Reponse garantie sous 24h</span></div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Pret a automatiser votre activite ?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à automatiser votre activité ?</h2>
         <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Discutons de vos besoins et definissons ensemble la meilleure solution technique. <strong>Consultation gratuite, sans engagement.</strong></p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
           <Button asChild size="lg" className="bg-white text-slate-800 hover:bg-gray-100 text-lg px-8 py-6 shadow-2xl"><Link href="/contact">Demander un devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link></Button>
