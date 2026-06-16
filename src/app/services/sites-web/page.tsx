@@ -14,12 +14,12 @@ import SitesWebFAQ from "@/components/sites-web/SitesWebFAQ";
 import SitesWebCTA from "@/components/sites-web/SitesWebCTA";
 
 export const metadata: Metadata = {
-  title: "Creation Site Internet Paris des 500 euros",
-  description: "Agence web Paris & Ile-de-France : landing page des 500 euros, site vitrine, e-commerce. Prix fixes, livraison rapide. Devis gratuit.",
+  title: "Création de Site Internet Paris — dès 500€",
+  description: "Agence web Paris & Île-de-France : landing page dès 500€, site vitrine, e-commerce. Prix fixes, livraison rapide. Devis gratuit sous 24h.",
   alternates: { canonical: `${SITE.url}/services/sites-web` },
   openGraph: {
-    title: "Creation Site Internet Paris des 500 euros | ConvertiLab",
-    description: "Agence web Paris & Ile-de-France : landing page des 500 euros, site vitrine, e-commerce. Prix fixes, livraison rapide. Devis gratuit.",
+    title: "Création de Site Internet Paris — dès 500€ | ConvertiLab",
+    description: "Agence web Paris & Île-de-France : landing page dès 500€, site vitrine, e-commerce. Prix fixes, livraison rapide. Devis gratuit sous 24h.",
     url: `${SITE.url}/services/sites-web`,
   },
 };
