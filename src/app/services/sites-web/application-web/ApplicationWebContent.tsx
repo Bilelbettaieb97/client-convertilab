@@ -56,8 +56,45 @@ export default function ApplicationWebContent() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">{results.map((item, index) => (<div key={index} className="text-center p-6 rounded-2xl bg-muted/50 hover:shadow-lg transition-all duration-300"><div className="text-3xl md:text-4xl font-bold text-primary mb-1">{item.metric}</div><div className="text-base font-semibold text-foreground mb-1">{item.label}</div><div className="text-xs text-muted-foreground">{item.detail}</div></div>))}</div>
       </div></section>
 
+      {/* POURQUOI APP WEB */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Quand votre business a besoin d&apos;une application web sur-mesure</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>Il y a un moment dans la vie de chaque entreprise où les outils génériques (Excel, Google Sheets, logiciels SaaS) ne suffisent plus. Vous vous retrouvez à jongler entre 5 outils différents, à copier-coller des données, à perdre des heures sur des tâches répétitives que votre équipe pourrait éviter. C&apos;est le signe qu&apos;une <strong>application web sur-mesure est devenue rentable</strong>.</p>
+                <p>Une application web n&apos;est pas un site web amélioré — c&apos;est un <strong>outil métier accessible depuis n&apos;importe quel navigateur</strong>, sans installation, utilisable par votre équipe et vos clients simultanément. Tableau de bord en temps réel, workflow automatisé, gestion des rôles et permissions, API connectée à vos outils existants (CRM, ERP, comptabilité).</p>
+                <p>Nos clients qui passent d&apos;Excel ou d&apos;outils SaaS génériques à une application sur-mesure gagnent en moyenne <strong>15 heures par semaine</strong> et réduisent leurs erreurs opérationnelles de <strong>80%</strong>. Le ROI est généralement atteint en moins de 6 mois.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Applications web que nous avons livrées</h3>
+              <div className="space-y-3">
+                {[
+                  { type: "CRM sur-mesure", detail: "Gestion clients, pipeline commercial, suivi des devis et relances automatiques." },
+                  { type: "Portail fournisseurs", detail: "Commandes, suivi livraisons, factures, réclamations — tout centralisé." },
+                  { type: "Outil de planification RH", detail: "Planning équipes, gestion des congés, exports paie automatiques." },
+                  { type: "Dashboard analytique", detail: "KPIs en temps réel, rapports automatisés, alertes sur seuils." },
+                  { type: "Plateforme e-learning", detail: "Cours, quiz, certifications, suivi progression des apprenants." },
+                  { type: "Outil de devis automatisé", detail: "Configurateur produit, calcul prix, génération PDF, envoi automatique." },
+                ].map((app, i) => (
+                  <div key={i} className="flex gap-3 p-3 bg-slate-50 rounded-lg border border-slate-200">
+                    <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
+                    <div>
+                      <div className="font-semibold text-foreground text-sm">{app.type}</div>
+                      <div className="text-xs text-muted-foreground">{app.detail}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-muted/30"><div className="container mx-auto px-4">
-        <div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Expertise Technique de Pointe</h2><p className="text-lg text-muted-foreground max-w-2xl mx-auto">Chaque fonctionnalite est pensee pour un impact business mesurable</p></div>
+        <div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Expertise Technique de Pointe</h2><p className="text-lg text-muted-foreground max-w-2xl mx-auto">Chaque fonctionnalité est pensée pour un impact business mesurable</p></div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (<div key={index} className="bg-background p-6 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border"><div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">{feature.icon}</div><h3 className="font-semibold text-lg mb-2 text-foreground">{feature.title}</h3><p className="text-muted-foreground text-sm">{feature.description}</p></div>))}</div>
       </div></section>
 

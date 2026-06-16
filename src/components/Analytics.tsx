@@ -1,6 +1,8 @@
 "use client";
 
 import Script from "next/script";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { SITE } from "@/lib/constants";
 
 export function GoogleAnalytics() {
@@ -26,7 +28,7 @@ export function GoogleAnalytics() {
           };
           window.trackFormConversion = function() {
             gtag('event', 'ads_conversion_Envoi_de_formulaire_pou_1', {});
-            if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+            if (typeof fbq === 'function' && window._fbqInitialized) { fbq('track', 'Lead'); }
           };
         `}
       </Script>
@@ -49,6 +51,31 @@ export function GoogleTagManager() {
 }
 
 export function MetaPixel() {
+  const pathname = usePathname();
+
+  // Fire PageView on each SPA navigation (App Router doesn't reload the page)
+  useEffect(() => {
+    const w = window as any;
+    if (w._fbqInitialized && typeof w.fbq === "function") {
+      w.fbq("track", "PageView");
+    }
+  }, [pathname]);
+
+  // Init pixel when user accepts marketing cookies during the current session
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      if (!detail?.marketing) return;
+      const w = window as any;
+      if (typeof w.fbq !== "function" || w._fbqInitialized) return;
+      w._fbqInitialized = true;
+      w.fbq("init", SITE.analytics.metaPixel);
+      w.fbq("track", "PageView");
+    };
+    window.addEventListener("consent-updated", handler);
+    return () => window.removeEventListener("consent-updated", handler);
+  }, []);
+
   return (
     <Script id="meta-pixel" strategy="lazyOnload">
       {`
@@ -60,8 +87,14 @@ export function MetaPixel() {
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '${SITE.analytics.metaPixel}');
-        fbq('track', 'PageView');
+        try {
+          var _c = JSON.parse(localStorage.getItem('convertilab_consent') || '{}');
+          if (_c.marketing) {
+            window._fbqInitialized = true;
+            fbq('init', '${SITE.analytics.metaPixel}');
+            fbq('track', 'PageView');
+          }
+        } catch(err) {}
       `}
     </Script>
   );

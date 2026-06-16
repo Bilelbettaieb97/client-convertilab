@@ -108,6 +108,31 @@ export default function SeoPageContent() {
         </div>
       </div></section>
 
+      {/* CONTENU SEO ENRICHI */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <h2 className="text-3xl font-bold mb-8 text-foreground text-center">Le SEO en 2026 : ce que vous devez absolument savoir</h2>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {[
+              { title: "L'IA change le SEO", content: "Google Gemini, SGE et les résultats génératifs transforment les SERPs. Les sites avec du contenu structuré, des données Schema.org et une autorité thématique forte sont prioritairement affichés. Notre approche intègre ces nouvelles règles dès aujourd'hui.", icon: "🤖" },
+              { title: "SEO local = croissance rapide", content: "46% des recherches Google ont une intention locale. Apparaître dans le Local Pack de Google Maps pour votre ville est souvent plus rentable que ranker sur des mots-clés nationaux. Nous optimisons simultanément votre présence locale et nationale.", icon: "📍" },
+              { title: "Core Web Vitals = classement", content: "Depuis 2021, Google utilise la vitesse et l'expérience utilisateur (LCP, INP, CLS) comme facteurs de classement directs. Un site lent perd des positions — et des clients. Nos optimisations techniques garantissent des scores PageSpeed 90+.", icon: "⚡" },
+            ].map((item, i) => (
+              <div key={i} className="p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
+                <div className="text-3xl mb-3">{item.icon}</div>
+                <h3 className="font-bold text-foreground mb-3">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.content}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 p-6 bg-gray-50 rounded-2xl border border-gray-200">
+            <p className="text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto">
+              Notre agence SEO à Paris gère des stratégies pour des secteurs variés : e-commerce, services B2B, professions libérales, artisans, restaurants. Chaque projet commence par un <strong>audit SEO complet de 150+ points</strong> pour identifier précisément vos opportunités de croissance organique.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <ServiceFAQ faqs={[
         { q: "Combien de temps faut-il pour voir des resultats en SEO ?", a: "Les premiers resultats SEO apparaissent generalement entre 3 et 6 mois. Le SEO est un investissement long terme : une fois les positions acquises, elles generent du trafic qualifie de maniere durable sans cout publicitaire." },
         { q: "Quelle est la difference entre SEO et SEA ?", a: "Le SEO (referencement naturel) vise des resultats organiques durables sans payer au clic. Le SEA (publicite payante) offre une visibilite immediate mais s'arrete des que vous stoppez les depenses. Idealement, les deux strategies se completent." },
