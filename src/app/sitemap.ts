@@ -4,6 +4,11 @@ import { cities } from "@/data/cities";
 import { sectors } from "@/data/sectors";
 import { glossaryTerms } from "@/data/glossary";
 import { blogArticles } from "@/data/blog-articles";
+import { guides } from "@/data/guides";
+import { comparisons } from "@/data/comparisons";
+import { pricingPages } from "@/data/pricing-pages";
+import { caseStudies } from "@/data/case-studies";
+import { devisServices } from "@/data/devis-pages";
 
 const staticRoutes = [
   "",
@@ -49,6 +54,7 @@ const staticRoutes = [
   "/comparateur-sites",
   "/prix",
   "/comparatifs",
+  "/outils",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -141,5 +147,52 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const blogEntries = [...staticBlogEntries, ...supabaseBlogEntries];
 
-  return [...staticEntries, ...blogEntries, ...cityEntries, ...sectorEntries, ...glossaryEntries, ...creationSiteEntries];
+  const guideEntries: MetadataRoute.Sitemap = guides.map((g) => ({
+    url: `${SITE.url}/guide/${g.slug}`,
+    lastModified: siteLastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  const comparatifEntries: MetadataRoute.Sitemap = comparisons.map((c) => ({
+    url: `${SITE.url}/comparatifs/${c.slug}`,
+    lastModified: siteLastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  const prixEntries: MetadataRoute.Sitemap = pricingPages.map((p) => ({
+    url: `${SITE.url}/prix/${p.slug}`,
+    lastModified: siteLastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const caseStudyEntries: MetadataRoute.Sitemap = caseStudies.map((cs) => ({
+    url: `${SITE.url}/etude-de-cas/${cs.slug}`,
+    lastModified: siteLastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  const devisEntries: MetadataRoute.Sitemap = devisServices.map((d) => ({
+    url: `${SITE.url}/devis/${d.slug}`,
+    lastModified: siteLastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticEntries,
+    ...blogEntries,
+    ...cityEntries,
+    ...sectorEntries,
+    ...glossaryEntries,
+    ...creationSiteEntries,
+    ...guideEntries,
+    ...comparatifEntries,
+    ...prixEntries,
+    ...caseStudyEntries,
+    ...devisEntries,
+  ];
 }
