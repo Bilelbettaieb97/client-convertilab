@@ -293,12 +293,12 @@ export function CinematicHero({
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.18),transparent_70%)] pointer-events-none" />
 
       <div className="hero-text-wrapper-cl absolute z-10 flex flex-col items-center justify-center text-center w-screen px-4 will-change-transform">
-        <h1 className="text-track-cl gsap-reveal text-3d-matte-cl text-5xl md:text-7xl lg:text-[6rem] font-bold tracking-tight mb-2">
+        <p className="text-track-cl gsap-reveal text-3d-matte-cl text-5xl md:text-7xl lg:text-[6rem] font-bold tracking-tight mb-2">
           {tagline1}
-        </h1>
-        <h1 className="text-days-cl gsap-reveal text-purple-matte-cl text-5xl md:text-7xl lg:text-[6rem] font-extrabold tracking-tighter">
+        </p>
+        <p className="text-days-cl gsap-reveal text-purple-matte-cl text-5xl md:text-7xl lg:text-[6rem] font-extrabold tracking-tighter">
           {tagline2}
-        </h1>
+        </p>
       </div>
 
       <div className="cta-wrapper-cl absolute z-10 flex flex-col items-center justify-center text-center w-screen px-4 gsap-reveal pointer-events-auto will-change-transform">
