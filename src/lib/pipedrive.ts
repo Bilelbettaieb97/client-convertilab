@@ -114,10 +114,30 @@ export async function pushToPipedrive(
 
     // Create or update person
     if (!personId) {
+      // Resolve org_id from company name (org_name is not a valid API field)
+      let orgId: number | null = null;
+      if (company) {
+        const orgSearchRes = await fetch(
+          `${PIPEDRIVE_BASE}/organizations/search?term=${encodeURIComponent(company)}&fields=name&api_token=${PIPEDRIVE_TOKEN}`
+        );
+        const orgSearchData = await orgSearchRes.json();
+        if (orgSearchData.data?.items?.length > 0) {
+          orgId = orgSearchData.data.items[0].item.id;
+        } else {
+          const orgRes = await fetch(`${PIPEDRIVE_BASE}/organizations?api_token=${PIPEDRIVE_TOKEN}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: company }),
+          });
+          const orgData = await orgRes.json();
+          orgId = orgData.data?.id ?? null;
+        }
+      }
+
       const personBody: Record<string, unknown> = { name: name || email || "Inconnu" };
       if (email) personBody.email = [{ value: email, primary: true }];
       if (phone) personBody.phone = [{ value: phone, primary: true }];
-      if (company) personBody.org_name = company;
+      if (orgId) personBody.org_id = orgId;
 
       const personRes = await fetch(`${PIPEDRIVE_BASE}/persons?api_token=${PIPEDRIVE_TOKEN}`, {
         method: "POST",
@@ -125,6 +145,9 @@ export async function pushToPipedrive(
         body: JSON.stringify(personBody),
       });
       const personData = await personRes.json();
+      if (!personData.success) {
+        console.error("[pipedrive] person creation failed:", personData.error, personData.error_info);
+      }
       personId = personData.data?.id ?? null;
     } else if (phone) {
       // Mettre à jour le téléphone si la personne existe déjà
