@@ -55,9 +55,11 @@ export const cities: City[] = [
       searches: "45 000 recherches/mois pour 'site web Paris'",
     },
     keywords: [
-      "agence web Paris",
-      "création site internet Paris",
-      "SEO Paris",
+      "agence web Paris création site internet PME startup 2026",
+      "site vitrine professionnel Paris dès 990€ livré en 7 jours",
+      "référencement local SEO Paris arrondissements Google Maps",
+      "création site internet Paris artisan commerçant professions libérales",
+      "meilleure agence web Paris devis gratuit sans engagement",
     ],
     faqItems: [
       {
@@ -125,9 +127,11 @@ export const cities: City[] = [
       searches: "1 200 recherches/mois pour 'site web Rueil-Malmaison'",
     },
     keywords: [
-      "agence web Rueil-Malmaison",
-      "création site internet Rueil-Malmaison",
-      "SEO Rueil-Malmaison",
+      "agence web Rueil-Malmaison création site internet Hauts-de-Seine",
+      "site vitrine PME Rueil-Malmaison dès 990€ livraison 7 jours",
+      "référencement local SEO Rueil-Malmaison Google Maps 92",
+      "création site internet Rueil-Malmaison artisan commerçant 92",
+      "agence digitale Rueil-Malmaison La Défense Nanterre devis gratuit",
     ],
     faqItems: [
       {
@@ -198,9 +202,11 @@ export const cities: City[] = [
       searches: "2 800 recherches/mois pour 'site web Boulogne-Billancourt'",
     },
     keywords: [
-      "agence web Boulogne-Billancourt",
-      "création site internet Boulogne-Billancourt",
-      "SEO Boulogne-Billancourt",
+      "agence web Boulogne-Billancourt création site internet 92",
+      "site vitrine médias tech startup Boulogne-Billancourt dès 990€",
+      "référencement local SEO Boulogne-Billancourt Google Maps Hauts-de-Seine",
+      "création site internet studio agence communication Boulogne-Billancourt",
+      "agence digitale Boulogne-Billancourt devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -271,9 +277,11 @@ export const cities: City[] = [
       searches: "1 800 recherches/mois pour 'site web Nanterre'",
     },
     keywords: [
-      "agence web Nanterre",
-      "création site internet Nanterre",
-      "SEO Nanterre",
+      "agence web Nanterre création site internet cabinet avocat PME 92",
+      "site vitrine professionnel Nanterre La Défense dès 990€",
+      "référencement local SEO Nanterre Hauts-de-Seine Google Maps",
+      "création site internet Nanterre services aux entreprises juridique",
+      "agence digitale Nanterre La Défense devis gratuit 24h",
     ],
     faqItems: [
       {
@@ -342,9 +350,11 @@ export const cities: City[] = [
       searches: "1 500 recherches/mois pour 'site web Neuilly-sur-Seine'",
     },
     keywords: [
-      "agence web Neuilly-sur-Seine",
-      "création site internet Neuilly-sur-Seine",
-      "SEO Neuilly-sur-Seine",
+      "agence web Neuilly-sur-Seine création site internet luxe médecin avocat",
+      "site vitrine premium Neuilly-sur-Seine professions libérales dès 990€",
+      "référencement local SEO Neuilly-sur-Seine Google Maps 92",
+      "création site internet cabinet médical avocat Neuilly-sur-Seine",
+      "agence digitale Neuilly-sur-Seine haut de gamme devis gratuit",
     ],
     faqItems: [
       {
@@ -415,9 +425,11 @@ export const cities: City[] = [
       searches: "12 000 recherches/mois pour 'site web Lyon'",
     },
     keywords: [
-      "agence web Lyon",
-      "création site internet Lyon",
-      "SEO Lyon",
+      "agence web Lyon création site internet PME restauration biotech 2026",
+      "site vitrine professionnel Lyon dès 990€ livré en 7 jours",
+      "référencement local SEO Lyon Google Maps Métropole de Lyon",
+      "création site internet Lyon restaurant artisan commerçant startup",
+      "meilleure agence web Lyon devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -484,9 +496,11 @@ export const cities: City[] = [
       searches: "9 500 recherches/mois pour 'site web Marseille'",
     },
     keywords: [
-      "agence web Marseille",
-      "création site internet Marseille",
-      "SEO Marseille",
+      "agence web Marseille création site internet tourisme restauration PME",
+      "site vitrine professionnel Marseille Bouches-du-Rhône dès 990€",
+      "référencement local SEO Marseille Google Maps arrondissements",
+      "création site internet Marseille artisan hôtel restaurant commerce",
+      "agence digitale Marseille devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -553,9 +567,11 @@ export const cities: City[] = [
       searches: "7 200 recherches/mois pour 'site web Bordeaux'",
     },
     keywords: [
-      "agence web Bordeaux",
-      "création site internet Bordeaux",
-      "SEO Bordeaux",
+      "agence web Bordeaux création site internet vin tourisme startup",
+      "site vitrine professionnel Bordeaux Gironde dès 990€ livraison 7 jours",
+      "référencement local SEO Bordeaux Google Maps Métropole",
+      "création site internet Bordeaux restaurant cave à vin artisan PME",
+      "agence web Bordeaux devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -622,9 +638,11 @@ export const cities: City[] = [
       searches: "8 000 recherches/mois pour 'site web Toulouse'",
     },
     keywords: [
-      "agence web Toulouse",
-      "création site internet Toulouse",
-      "SEO Toulouse",
+      "agence web Toulouse création site internet aéronautique tech PME",
+      "site vitrine professionnel Toulouse Haute-Garonne dès 990€",
+      "référencement local SEO Toulouse Google Maps Métropole",
+      "création site internet Toulouse ingénieur startup artisan commerçant",
+      "agence digitale Toulouse devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -691,9 +709,11 @@ export const cities: City[] = [
       searches: "6 500 recherches/mois pour 'site web Nice'",
     },
     keywords: [
-      "agence web Nice",
-      "création site internet Nice",
-      "SEO Nice",
+      "agence web Nice création site internet tourisme luxe tech Sophia Antipolis",
+      "site vitrine professionnel Nice Alpes-Maritimes dès 990€",
+      "référencement local SEO Nice Côte d'Azur Google Maps",
+      "création site internet Nice hôtel restaurant yacht immobilier prestige",
+      "agence web Nice Sophia Antipolis devis gratuit 24h",
     ],
     faqItems: [
       {
@@ -760,9 +780,11 @@ export const cities: City[] = [
       searches: "5 800 recherches/mois pour 'site web Nantes'",
     },
     keywords: [
-      "agence web Nantes",
-      "création site internet Nantes",
-      "SEO Nantes",
+      "agence web Nantes création site internet agroalimentaire numérique PME",
+      "site vitrine professionnel Nantes Loire-Atlantique dès 990€",
+      "référencement local SEO Nantes Métropole Google Maps",
+      "création site internet Nantes artisan commerçant ESN startup",
+      "agence digitale Nantes devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -829,9 +851,11 @@ export const cities: City[] = [
       searches: "4 800 recherches/mois pour 'site web Strasbourg'",
     },
     keywords: [
-      "agence web Strasbourg",
-      "création site internet Strasbourg",
-      "SEO Strasbourg",
+      "agence web Strasbourg création site internet tourisme gastronomie PME alsace",
+      "site vitrine professionnel Strasbourg Bas-Rhin dès 990€",
+      "référencement local SEO Strasbourg Alsace Google Maps",
+      "création site internet Strasbourg restaurant hôtel artisan transfrontalier",
+      "agence web Strasbourg devis gratuit 24h livraison 7 jours",
     ],
     faqItems: [
       {
@@ -898,9 +922,11 @@ export const cities: City[] = [
       searches: "5 500 recherches/mois pour 'site web Lille'",
     },
     keywords: [
-      "agence web Lille",
-      "création site internet Lille",
-      "SEO Lille",
+      "agence web Lille création site internet commerce tech logistique PME",
+      "site vitrine professionnel Lille Nord dès 990€ livraison 7 jours",
+      "référencement local SEO Lille Métropole Européenne Google Maps",
+      "création site internet Lille artisan commerçant ESN entreprise",
+      "agence digitale Lille devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -967,9 +993,11 @@ export const cities: City[] = [
       searches: "5 200 recherches/mois pour 'site web Montpellier'",
     },
     keywords: [
-      "agence web Montpellier",
-      "création site internet Montpellier",
-      "SEO Montpellier",
+      "agence web Montpellier création site internet santé biotech numérique",
+      "site vitrine professionnel Montpellier Hérault dès 990€",
+      "référencement local SEO Montpellier Métropole Google Maps",
+      "création site internet Montpellier médecin cabinet artisan startup",
+      "agence web Montpellier devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -1036,9 +1064,11 @@ export const cities: City[] = [
       searches: "4 500 recherches/mois pour 'site web Rennes'",
     },
     keywords: [
-      "agence web Rennes",
-      "création site internet Rennes",
-      "SEO Rennes",
+      "agence web Rennes création site internet numérique agroalimentaire PME",
+      "site vitrine professionnel Rennes Ille-et-Vilaine dès 990€",
+      "référencement local SEO Rennes Métropole Google Maps",
+      "création site internet Rennes artisan commerçant startup télécoms",
+      "agence digitale Rennes devis gratuit 24h livraison 7 jours",
     ],
     faqItems: [
       {
@@ -1105,9 +1135,11 @@ export const cities: City[] = [
       searches: "2 200 recherches/mois pour 'site web Versailles'",
     },
     keywords: [
-      "agence web Versailles",
-      "création site internet Versailles",
-      "SEO Versailles",
+      "agence web Versailles création site internet professions libérales PME",
+      "site vitrine premium Versailles Yvelines dès 990€ livraison 7 jours",
+      "référencement local SEO Versailles Google Maps 78",
+      "création site internet Versailles médecin avocat artisan commerce",
+      "agence web Versailles devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -1174,9 +1206,11 @@ export const cities: City[] = [
       searches: "1 400 recherches/mois pour 'site web Saint-Germain-en-Laye'",
     },
     keywords: [
-      "agence web Saint-Germain-en-Laye",
-      "création site internet Saint-Germain-en-Laye",
-      "SEO Saint-Germain-en-Laye",
+      "agence web Saint-Germain-en-Laye création site internet professions libérales",
+      "site vitrine premium Saint-Germain-en-Laye Yvelines 78 dès 990€",
+      "référencement local SEO Saint-Germain-en-Laye Google Maps 78",
+      "création site internet Saint-Germain-en-Laye architecte médecin avocat",
+      "agence digitale Saint-Germain-en-Laye devis gratuit 24h",
     ],
     faqItems: [
       {
@@ -1243,9 +1277,11 @@ export const cities: City[] = [
       searches: "1 800 recherches/mois pour 'site web Levallois-Perret'",
     },
     keywords: [
-      "agence web Levallois-Perret",
-      "création site internet Levallois-Perret",
-      "SEO Levallois-Perret",
+      "agence web Levallois-Perret création site internet agence pub médias SaaS",
+      "site vitrine professionnel Levallois-Perret 92 dès 990€",
+      "référencement local SEO Levallois-Perret Hauts-de-Seine Google Maps",
+      "création site internet Levallois-Perret startup marketing communication",
+      "agence web Levallois-Perret devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -1312,9 +1348,11 @@ export const cities: City[] = [
       searches: "1 600 recherches/mois pour 'site web Courbevoie'",
     },
     keywords: [
-      "agence web Courbevoie",
-      "création site internet Courbevoie",
-      "SEO Courbevoie",
+      "agence web Courbevoie La Défense création site internet consulting B2B",
+      "site vitrine professionnel Courbevoie 92 dès 990€ livraison 7 jours",
+      "référencement local SEO Courbevoie Hauts-de-Seine Google Maps",
+      "création site internet Courbevoie cabinet conseil finance immobilier",
+      "agence digitale Courbevoie La Défense devis gratuit 24h",
     ],
     faqItems: [
       {
@@ -1381,9 +1419,11 @@ export const cities: City[] = [
       searches: "3 200 recherches/mois pour 'site web La Défense'",
     },
     keywords: [
-      "agence web La Défense",
-      "création site internet Puteaux",
-      "SEO La Défense",
+      "agence web La Défense Puteaux création site internet finance banque conseil",
+      "site vitrine professionnel La Défense Puteaux 92 dès 990€",
+      "référencement local SEO La Défense Hauts-de-Seine Google Maps",
+      "création site internet Puteaux cabinet conseil IT grandes entreprises",
+      "agence digitale La Défense Puteaux devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -1450,9 +1490,11 @@ export const cities: City[] = [
       searches: "3 000 recherches/mois pour 'site web Cannes'",
     },
     keywords: [
-      "agence web Cannes",
-      "création site internet Cannes",
-      "SEO Cannes",
+      "agence web Cannes création site internet hôtel restaurant événementiel luxe",
+      "site vitrine premium Cannes Alpes-Maritimes dès 990€",
+      "référencement local SEO Cannes Côte d'Azur Google Maps",
+      "création site internet Cannes MICE cinéma yacht immobilier prestige",
+      "agence web Cannes devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -1519,9 +1561,11 @@ export const cities: City[] = [
       searches: "3 800 recherches/mois pour 'site web Aix-en-Provence'",
     },
     keywords: [
-      "agence web Aix-en-Provence",
-      "création site internet Aix-en-Provence",
-      "SEO Aix-en-Provence",
+      "agence web Aix-en-Provence création site internet avocat cabinet conseil",
+      "site vitrine professionnel Aix-en-Provence Bouches-du-Rhône dès 990€",
+      "référencement local SEO Aix-en-Provence Marseille Google Maps",
+      "création site internet Aix-en-Provence médecin artisan tourisme",
+      "agence digitale Aix-en-Provence devis gratuit 24h livraison 7 jours",
     ],
     faqItems: [
       {
@@ -1588,9 +1632,11 @@ export const cities: City[] = [
       searches: "4 200 recherches/mois pour 'site web Grenoble'",
     },
     keywords: [
-      "agence web Grenoble",
-      "création site internet Grenoble",
-      "SEO Grenoble",
+      "agence web Grenoble création site internet tech R&D sport outdoor",
+      "site vitrine professionnel Grenoble Isère dès 990€ livraison 7 jours",
+      "référencement local SEO Grenoble Métropole Google Maps",
+      "création site internet Grenoble startup industrie électronique outdoor",
+      "agence web Grenoble devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -1657,9 +1703,11 @@ export const cities: City[] = [
       searches: "3 500 recherches/mois pour 'site web Dijon'",
     },
     keywords: [
-      "agence web Dijon",
-      "création site internet Dijon",
-      "SEO Dijon",
+      "agence web Dijon création site internet vin gastronomie artisan PME",
+      "site vitrine professionnel Dijon Côte-d'Or Bourgogne dès 990€",
+      "référencement local SEO Dijon Métropole Google Maps",
+      "création site internet Dijon cave viticulteur restaurant artisan",
+      "agence digitale Dijon Bourgogne devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -1726,9 +1774,11 @@ export const cities: City[] = [
       searches: "3 200 recherches/mois pour 'site web Annecy'",
     },
     keywords: [
-      "agence web Annecy",
-      "création site internet Annecy",
-      "SEO Annecy",
+      "agence web Annecy création site internet tourisme sport outdoor hôtel",
+      "site vitrine professionnel Annecy Haute-Savoie dès 990€",
+      "référencement local SEO Annecy Haute-Savoie Google Maps",
+      "création site internet Annecy restaurant hôtel artisan outdoor",
+      "agence web Annecy devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -1795,9 +1845,11 @@ export const cities: City[] = [
       searches: "3 800 recherches/mois pour 'site web Toulon'",
     },
     keywords: [
-      "agence web Toulon",
-      "création site internet Toulon",
-      "SEO Toulon",
+      "agence web Toulon création site internet tourisme nautisme PME Var",
+      "site vitrine professionnel Toulon Var dès 990€ livraison 7 jours",
+      "référencement local SEO Toulon Métropole Google Maps 83",
+      "création site internet Toulon artisan commerçant nautisme service",
+      "agence digitale Toulon devis gratuit 24h",
     ],
     faqItems: [
       {
@@ -1864,9 +1916,11 @@ export const cities: City[] = [
       searches: "3 500 recherches/mois pour 'site web Reims'",
     },
     keywords: [
-      "agence web Reims",
-      "création site internet Reims",
-      "SEO Reims",
+      "agence web Reims création site internet champagne gastronomie PME Marne",
+      "site vitrine professionnel Reims Marne dès 990€ livraison 7 jours",
+      "référencement local SEO Reims Champagne-Ardenne Google Maps",
+      "création site internet Reims vigneron hôtel restaurant artisan",
+      "agence web Reims devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -1933,9 +1987,11 @@ export const cities: City[] = [
       searches: "2 900 recherches/mois pour 'site web Saint-Étienne'",
     },
     keywords: [
-      "agence web Saint-Étienne",
-      "création site internet Saint-Étienne",
-      "SEO Saint-Étienne",
+      "agence web Saint-Étienne création site internet design industrie PME",
+      "site vitrine professionnel Saint-Étienne Loire dès 990€",
+      "référencement local SEO Saint-Étienne Métropole Google Maps",
+      "création site internet Saint-Étienne artisan designer PME sport",
+      "agence digitale Saint-Étienne devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -2002,9 +2058,11 @@ export const cities: City[] = [
       searches: "2 600 recherches/mois pour 'site web Le Havre'",
     },
     keywords: [
-      "agence web Le Havre",
-      "création site internet Le Havre",
-      "SEO Le Havre",
+      "agence web Le Havre création site internet logistique maritime PME",
+      "site vitrine professionnel Le Havre Seine-Maritime dès 990€",
+      "référencement local SEO Le Havre Normandie Google Maps 76",
+      "création site internet Le Havre transitaire transport négoce artisan",
+      "agence web Le Havre devis gratuit 24h livraison 7 jours",
     ],
     faqItems: [
       {
@@ -2071,9 +2129,11 @@ export const cities: City[] = [
       searches: "2 400 recherches/mois pour 'site web Clermont-Ferrand'",
     },
     keywords: [
-      "agence web Clermont-Ferrand",
-      "création site internet Clermont-Ferrand",
-      "SEO Clermont-Ferrand",
+      "agence web Clermont-Ferrand création site internet industrie sport tourisme",
+      "site vitrine professionnel Clermont-Ferrand Puy-de-Dôme dès 990€",
+      "référencement local SEO Clermont-Ferrand Auvergne Google Maps",
+      "création site internet Clermont-Ferrand artisan startup PME automobile",
+      "agence digitale Clermont-Ferrand devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -2140,9 +2200,11 @@ export const cities: City[] = [
       searches: "2 200 recherches/mois pour 'site web Tours'",
     },
     keywords: [
-      "agence web Tours",
-      "création site internet Tours",
-      "SEO Tours",
+      "agence web Tours création site internet tourisme pharma vin PME",
+      "site vitrine professionnel Tours Indre-et-Loire dès 990€",
+      "référencement local SEO Tours Métropole Val de Loire Google Maps",
+      "création site internet Tours hôtel restaurant viticulteur artisan",
+      "agence web Tours devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -2209,9 +2271,11 @@ export const cities: City[] = [
       searches: "1 800 recherches/mois pour 'site web Limoges'",
     },
     keywords: [
-      "agence web Limoges",
-      "création site internet Limoges",
-      "SEO Limoges",
+      "agence web Limoges création site internet porcelaine artisanat PME",
+      "site vitrine professionnel Limoges Haute-Vienne dès 990€",
+      "référencement local SEO Limoges Creuse Corrèze Google Maps",
+      "création site internet Limoges artisan commerçant agroalimentaire",
+      "agence digitale Limoges devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -2278,9 +2342,11 @@ export const cities: City[] = [
       searches: "2 000 recherches/mois pour 'site web Amiens'",
     },
     keywords: [
-      "agence web Amiens",
-      "création site internet Amiens",
-      "SEO Amiens",
+      "agence web Amiens création site internet industrie logistique PME",
+      "site vitrine professionnel Amiens Somme dès 990€ livraison 7 jours",
+      "référencement local SEO Amiens Picardie Google Maps",
+      "création site internet Amiens artisan équipementier transport PME",
+      "agence web Amiens devis gratuit 24h sans engagement",
     ],
     faqItems: [
       {
@@ -2347,9 +2413,11 @@ export const cities: City[] = [
       searches: "1 900 recherches/mois pour 'site web Perpignan'",
     },
     keywords: [
-      "agence web Perpignan",
-      "création site internet Perpignan",
-      "SEO Perpignan",
+      "agence web Perpignan création site internet tourisme agricole PME",
+      "site vitrine professionnel Perpignan Pyrénées-Orientales dès 990€",
+      "référencement local SEO Perpignan Catalogne française Google Maps",
+      "création site internet Perpignan vigneron artisan commerce catalan",
+      "agence web Perpignan devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -2416,9 +2484,11 @@ export const cities: City[] = [
       searches: "2 100 recherches/mois pour 'site web Metz'",
     },
     keywords: [
-      "agence web Metz",
-      "création site internet Metz",
-      "SEO Metz",
+      "agence web Metz création site internet cybersécurité tech tourisme PME",
+      "site vitrine professionnel Metz Moselle dès 990€ livraison 7 jours",
+      "référencement local SEO Metz Lorraine Google Maps",
+      "création site internet Metz startup artisan commerce culture",
+      "agence digitale Metz devis gratuit 24h sans engagement",
     ],
     faqItems: [
       {
@@ -2485,9 +2555,11 @@ export const cities: City[] = [
       searches: "1 600 recherches/mois pour 'site web Besançon'",
     },
     keywords: [
-      "agence web Besançon",
-      "création site internet Besançon",
-      "SEO Besançon",
+      "agence web Besançon création site internet horlogerie médical artisan",
+      "site vitrine professionnel Besançon Doubs dès 990€ livraison 7 jours",
+      "référencement local SEO Besançon Franche-Comté Google Maps",
+      "création site internet Besançon artisan luxe microtechnique PME",
+      "agence web Besançon devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -2554,9 +2626,11 @@ export const cities: City[] = [
       searches: "1 800 recherches/mois pour 'site web Orléans'",
     },
     keywords: [
-      "agence web Orléans",
-      "création site internet Orléans",
-      "SEO Orléans",
+      "agence web Orléans création site internet pharma cosmétique logistique",
+      "site vitrine professionnel Orléans Loiret dès 990€ livraison 7 jours",
+      "référencement local SEO Orléans Métropole Val de Loire Google Maps",
+      "création site internet Orléans artisan PME e-commerce tourisme",
+      "agence digitale Orléans devis gratuit 24h",
     ],
     faqItems: [
       {
@@ -2623,9 +2697,11 @@ export const cities: City[] = [
       searches: "2 300 recherches/mois pour 'site web Rouen'",
     },
     keywords: [
-      "agence web Rouen",
-      "création site internet Rouen",
-      "SEO Rouen",
+      "agence web Rouen création site internet industrie logistique tourisme",
+      "site vitrine professionnel Rouen Seine-Maritime dès 990€",
+      "référencement local SEO Rouen Métropole Normandie Google Maps",
+      "création site internet Rouen artisan commerçant PME gastronomie",
+      "agence web Rouen devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -2692,9 +2768,11 @@ export const cities: City[] = [
       searches: "1 900 recherches/mois pour 'site web Caen'",
     },
     keywords: [
-      "agence web Caen",
-      "création site internet Caen",
-      "SEO Caen",
+      "agence web Caen création site internet industrie tourisme mémorial agroalimentaire",
+      "site vitrine professionnel Caen Calvados Normandie dès 990€",
+      "référencement local SEO Caen Métropole Normandie Google Maps",
+      "création site internet Caen artisan commerçant PME hôtel restaurant",
+      "agence digitale Caen devis gratuit 24h livraison 7 jours",
     ],
     faqItems: [
       {
@@ -2761,9 +2839,11 @@ export const cities: City[] = [
       searches: "1 800 recherches/mois pour 'site web Nancy'",
     },
     keywords: [
-      "agence web Nancy",
-      "création site internet Nancy",
-      "SEO Nancy",
+      "agence web Nancy création site internet tech santé tourisme Art Nouveau",
+      "site vitrine professionnel Nancy Meurthe-et-Moselle dès 990€",
+      "référencement local SEO Nancy Métropole Lorraine Google Maps",
+      "création site internet Nancy artisan PME médecin restauration",
+      "agence web Nancy devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -2830,9 +2910,11 @@ export const cities: City[] = [
       searches: "1 500 recherches/mois pour 'site web Argenteuil'",
     },
     keywords: [
-      "agence web Argenteuil",
-      "création site internet Argenteuil",
-      "SEO Argenteuil",
+      "agence web Argenteuil création site internet artisan BTP PME Val-d'Oise",
+      "site vitrine professionnel Argenteuil 95 dès 990€ livraison 7 jours",
+      "référencement local SEO Argenteuil Val-d'Oise Google Maps",
+      "création site internet Argenteuil commerçant artisan service personne",
+      "agence digitale Argenteuil devis gratuit 24h",
     ],
     faqItems: [
       {
@@ -2899,9 +2981,11 @@ export const cities: City[] = [
       searches: "1 600 recherches/mois pour 'site web Montreuil'",
     },
     keywords: [
-      "agence web Montreuil",
-      "création site internet Montreuil",
-      "SEO Montreuil",
+      "agence web Montreuil création site internet startup créative médias artisanat",
+      "site vitrine professionnel Montreuil Seine-Saint-Denis dès 990€",
+      "référencement local SEO Montreuil 93 Grand Paris Google Maps",
+      "création site internet Montreuil studio cinéma art numérique PME",
+      "agence web Montreuil devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -2968,9 +3052,11 @@ export const cities: City[] = [
       searches: "1 700 recherches/mois pour 'site web Saint-Denis'",
     },
     keywords: [
-      "agence web Saint-Denis",
-      "création site internet Saint-Denis",
-      "SEO Saint-Denis",
+      "agence web Saint-Denis création site internet sport événementiel PME",
+      "site vitrine professionnel Saint-Denis 93 Seine-Saint-Denis dès 990€",
+      "référencement local SEO Saint-Denis Grand Paris Google Maps",
+      "création site internet Saint-Denis commerce artisan construction BTP",
+      "agence digitale Saint-Denis devis gratuit 24h livraison 7 jours",
     ],
     faqItems: [
       {
@@ -3037,9 +3123,11 @@ export const cities: City[] = [
       searches: "1 300 recherches/mois pour 'site web Créteil'",
     },
     keywords: [
-      "agence web Créteil",
-      "création site internet Créteil",
-      "SEO Créteil",
+      "agence web Créteil création site internet médecin CHU cabinet libéral",
+      "site vitrine professionnel Créteil Val-de-Marne dès 990€",
+      "référencement local SEO Créteil 94 Grand Paris Google Maps",
+      "création site internet Créteil professions libérales santé commerce",
+      "agence web Créteil devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -3106,9 +3194,11 @@ export const cities: City[] = [
       searches: "1 100 recherches/mois pour 'site web Vitry-sur-Seine'",
     },
     keywords: [
-      "agence web Vitry-sur-Seine",
-      "création site internet Vitry-sur-Seine",
-      "SEO Vitry-sur-Seine",
+      "agence web Vitry-sur-Seine création site internet pharma industrie PME",
+      "site vitrine professionnel Vitry-sur-Seine Val-de-Marne 94 dès 990€",
+      "référencement local SEO Vitry-sur-Seine 94 Google Maps",
+      "création site internet Vitry-sur-Seine artisan commerçant PME",
+      "agence digitale Vitry-sur-Seine devis gratuit 24h",
     ],
     faqItems: [
       {
@@ -3175,9 +3265,11 @@ export const cities: City[] = [
       searches: "1 200 recherches/mois pour 'site web Asnières-sur-Seine'",
     },
     keywords: [
-      "agence web Asnières-sur-Seine",
-      "création site internet Asnières-sur-Seine",
-      "SEO Asnières-sur-Seine",
+      "agence web Asnières-sur-Seine création site internet professions libérales PME",
+      "site vitrine professionnel Asnières-sur-Seine 92 dès 990€",
+      "référencement local SEO Asnières-sur-Seine Hauts-de-Seine Google Maps",
+      "création site internet Asnières-sur-Seine médecin artisan restaurant",
+      "agence web Asnières devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
@@ -3244,9 +3336,11 @@ export const cities: City[] = [
       searches: "1 100 recherches/mois pour 'site web Colombes'",
     },
     keywords: [
-      "agence web Colombes",
-      "création site internet Colombes",
-      "SEO Colombes",
+      "agence web Colombes création site internet industrie logistique PME 92",
+      "site vitrine professionnel Colombes Hauts-de-Seine dès 990€",
+      "référencement local SEO Colombes 92 Grand Paris Google Maps",
+      "création site internet Colombes artisan commerçant BTP restaurant",
+      "agence digitale Colombes devis gratuit 24h livraison 7 jours",
     ],
     faqItems: [
       {
@@ -3313,9 +3407,11 @@ export const cities: City[] = [
       searches: "800 recherches/mois pour 'site web Saint-Cloud'",
     },
     keywords: [
-      "agence web Saint-Cloud",
-      "création site internet Saint-Cloud",
-      "SEO Saint-Cloud",
+      "agence web Saint-Cloud création site internet professions libérales premium",
+      "site vitrine haut de gamme Saint-Cloud 92 dès 990€ livraison 7 jours",
+      "référencement local SEO Saint-Cloud Hauts-de-Seine Google Maps",
+      "création site internet Saint-Cloud médecin architecte restaurant gastronomique",
+      "agence web Saint-Cloud devis gratuit sans engagement 24h",
     ],
     faqItems: [
       {
@@ -3382,9 +3478,11 @@ export const cities: City[] = [
       searches: "900 recherches/mois pour 'site web Suresnes'",
     },
     keywords: [
-      "agence web Suresnes",
-      "création site internet Suresnes",
-      "SEO Suresnes",
+      "agence web Suresnes création site internet pharma consulting PME 92",
+      "site vitrine professionnel Suresnes Hauts-de-Seine dès 990€",
+      "référencement local SEO Suresnes La Défense Google Maps 92",
+      "création site internet Suresnes Sanofi startup artisan commerçant",
+      "agence digitale Suresnes devis gratuit 24h livraison 7 jours",
     ],
     faqItems: [
       {
@@ -3451,9 +3549,11 @@ export const cities: City[] = [
       searches: "1 400 recherches/mois pour 'site web Issy-les-Moulineaux'",
     },
     keywords: [
-      "agence web Issy-les-Moulineaux",
-      "création site internet Issy-les-Moulineaux",
-      "SEO Issy-les-Moulineaux",
+      "agence web Issy-les-Moulineaux création site internet tech SaaS médias startup",
+      "site vitrine professionnel Issy-les-Moulineaux 92 dès 990€",
+      "référencement local SEO Issy-les-Moulineaux Hauts-de-Seine Google Maps",
+      "création site internet Issy-les-Moulineaux startup B2B digital télécoms",
+      "agence web Issy-les-Moulineaux devis gratuit livraison 7 jours",
     ],
     faqItems: [
       {
