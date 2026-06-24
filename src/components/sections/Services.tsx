@@ -195,7 +195,7 @@ const Services = () => {
                           <span className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground">+{service.features.length - 3}</span>
                         )}
                       </div>
-                      <Link href={service.link} className={`inline-flex items-center gap-1 text-sm font-medium ${category.accentColor} hover:opacity-80 transition-opacity group/btn`}>
+                      <Link href={service.link} aria-label={`En savoir plus sur ${service.name}`} className={`inline-flex items-center gap-1 text-sm font-medium ${category.accentColor} hover:opacity-80 transition-opacity group/btn`}>
                         En savoir plus
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Link>

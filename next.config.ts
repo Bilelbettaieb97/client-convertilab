@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   experimental: {
-    cssChunking: 'loose',
     optimizePackageImports: [
       "framer-motion",
       "lucide-react",
