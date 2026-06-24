@@ -144,6 +144,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
       email: SITE.email,
       address: {
         "@type": "PostalAddress",
+        streetAddress: "1 Rue du 4 Septembre",
         addressLocality: city.name,
         postalCode: city.postalCode,
         addressRegion: city.region,

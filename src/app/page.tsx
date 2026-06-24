@@ -63,6 +63,7 @@ const localBusinessSchema = {
   email: SITE.email,
   address: {
     "@type": "PostalAddress",
+    streetAddress: "1 Rue du 4 Septembre",
     addressLocality: "Rueil-Malmaison",
     postalCode: "92500",
     addressRegion: "Île-de-France",
@@ -179,6 +180,7 @@ const reviewsSchema = {
   telephone: SITE.phone,
   address: {
     "@type": "PostalAddress",
+    streetAddress: "1 Rue du 4 Septembre",
     addressLocality: "Rueil-Malmaison",
     postalCode: "92500",
     addressRegion: "Île-de-France",
