@@ -4,11 +4,15 @@ import "./globals.css";
 import { SITE, DEFAULT_OG_IMAGE } from "@/lib/constants";
 import { GoogleAnalytics, GoogleTagManager, MetaPixel, GTMNoscript, MetaPixelNoscript } from "@/components/Analytics";
 import { Toaster } from "@/components/ui/sonner";
-import { ChatWidget } from "@/components/chatbot";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import CookieBanner from "@/components/cookies/CookieBanner";
 import Script from "next/script";
+import dynamic from "next/dynamic";
+
+const ChatWidget = dynamic(
+  () => import("@/components/chatbot").then((m) => ({ default: m.ChatWidget }))
+);
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -77,7 +81,6 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#9333ea" />
         {/* Resource hints — uniquement les origines chargées au premier rendu */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://calendly.com" />
       </head>

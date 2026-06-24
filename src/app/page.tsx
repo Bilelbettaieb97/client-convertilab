@@ -7,22 +7,22 @@ import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/layout/Navigation";
 import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
-import Portfolio from "@/components/sections/Portfolio";
-import ToolsOrbital from "@/components/sections/ToolsOrbital";
-import Services from "@/components/sections/Services";
-import Testimonials from "@/components/sections/Testimonials";
-import TestimonialsColumnsSection from "@/components/sections/TestimonialsColumns";
-import ProcessTimeline from "@/components/sections/ProcessTimeline";
-import About from "@/components/sections/About";
-import Pricing from "@/components/sections/Pricing";
-import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/layout/Footer";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import PromoBanner from "@/components/conversion/PromoBanner";
-import SocialProofToast from "@/components/conversion/SocialProofToast";
-import StickyMobileCTA from "@/components/conversion/StickyMobileCTA";
 
-// Dynamic imports for GSAP-heavy components — code-split GSAP out of initial bundle
+// Dynamic imports — code-split heavy / below-fold sections out of the initial bundle
+const Portfolio = dynamic(() => import("@/components/sections/Portfolio"));
+const ToolsOrbital = dynamic(() => import("@/components/sections/ToolsOrbital"));
+const Services = dynamic(() => import("@/components/sections/Services"));
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
+const TestimonialsColumnsSection = dynamic(() => import("@/components/sections/TestimonialsColumns"));
+const ProcessTimeline = dynamic(() => import("@/components/sections/ProcessTimeline"));
+const About = dynamic(() => import("@/components/sections/About"));
+const Pricing = dynamic(() => import("@/components/sections/Pricing"));
+const FAQ = dynamic(() => import("@/components/sections/FAQ"));
+const SocialProofToast = dynamic(() => import("@/components/conversion/SocialProofToast"));
+const StickyMobileCTA = dynamic(() => import("@/components/conversion/StickyMobileCTA"));
 const CinematicHero = dynamic(() =>
   import("@/components/ui/cinematic-landing-hero").then((m) => ({ default: m.CinematicHero }))
 );
