@@ -73,6 +73,7 @@ const localBusinessSchema = {
     latitude: "48.8769",
     longitude: "2.1894",
   },
+  image: `${SITE.url}/og-image.png`,
   priceRange: "€€",
   aggregateRating: {
     "@type": "AggregateRating",
@@ -183,6 +184,7 @@ const reviewsSchema = {
     addressRegion: "Île-de-France",
     addressCountry: "FR",
   },
+  image: `${SITE.url}/og-image.png`,
   priceRange: "€€",
   aggregateRating: {
     "@type": "AggregateRating",

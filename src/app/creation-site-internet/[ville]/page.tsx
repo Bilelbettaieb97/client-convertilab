@@ -154,6 +154,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
         latitude: city.lat,
         longitude: city.lng,
       },
+      image: `${SITE.url}/og-image.png`,
       priceRange: "€€",
       areaServed: { "@type": "City", name: city.name },
       aggregateRating: {
