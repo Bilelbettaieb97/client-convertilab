@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SITE, PRICING } from "@/lib/constants";
 import { sectors, getSectorBySlug } from "@/data/sectors";
+import { getCityBySlug } from "@/data/cities";
 import { caseStudies } from "@/data/case-studies";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
@@ -58,6 +59,19 @@ export default async function SectorPage({ params }: Props) {
 
   const isEcommerce = sector.slug === "ecommerce";
   const price = isEcommerce ? "800" : "500";
+
+  const PRIORITY_SECTORS_SOLUTIONS = [
+    "restaurant", "coiffeur", "artisan", "coach",
+    "plombier", "electricien", "immobilier", "boulangerie",
+  ];
+  const PRIORITY_CITIES_SOLUTIONS = [
+    "paris", "rueil-malmaison", "boulogne-billancourt", "versailles",
+    "neuilly-sur-seine", "lyon", "marseille", "bordeaux", "nice", "nantes",
+  ];
+  const showCityMatrix = PRIORITY_SECTORS_SOLUTIONS.includes(sector.slug);
+  const citiesForSector = showCityMatrix
+    ? PRIORITY_CITIES_SOLUTIONS.map((c) => getCityBySlug(c)).filter(Boolean)
+    : [];
   const priceLabel = isEcommerce ? PRICING.ecommerce.label : PRICING.vitrine.label;
 
   const breadcrumbSchema = {
@@ -651,6 +665,33 @@ export default async function SectorPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Maillage secteur×ville */}
+      {showCityMatrix && citiesForSector.length > 0 && (
+        <section className="py-12 bg-white border-t border-gray-100">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-xl font-bold text-gray-900 mb-2 text-center">
+              Site web {sector.name.toLowerCase()} par ville
+            </h2>
+            <p className="text-gray-500 text-sm text-center mb-6">
+              Nous intervenons partout en France
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {citiesForSector.map((c) =>
+                c ? (
+                  <Link
+                    key={c.slug}
+                    href={`/agence-web/${sector.slug}/${c.slug}`}
+                    className="px-4 py-2 bg-gray-50 rounded-full text-sm text-gray-700 hover:text-purple-600 hover:shadow-md transition-all border border-gray-200 hover:border-purple-200"
+                  >
+                    {sector.emoji} Site {sector.name.toLowerCase()} {c.name}
+                  </Link>
+                ) : null
+              )}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ============================================================ */}
       {/* 10. AUTRES SECTEURS (Cross-linking) */}

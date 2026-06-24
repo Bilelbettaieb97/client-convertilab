@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { SITE } from "@/lib/constants";
 import { createServerClient } from "@/lib/supabase/server";
 import { getArticleBySlug, getRelatedArticles, blogArticles } from "@/data/blog-articles";
-import type { FullBlogArticle } from "@/data/blog-articles";
+import type { FullBlogArticle, BlogFaqItem } from "@/data/blog-articles";
 import BlogArticleClient from "@/components/pages/BlogArticleClient";
 
 type Props = {
@@ -149,10 +149,23 @@ export default async function BlogArticlePage({ params }: Props) {
     ],
   };
 
+  const faqSchema = article.faqItems && article.faqItems.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: article.faqItems.map((faq: BlogFaqItem) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <BlogArticleClient article={article} relatedArticles={relatedArticles} />
     </>
   );

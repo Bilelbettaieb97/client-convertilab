@@ -54,6 +54,7 @@ const staticRoutes = [
   "/prix",
   "/comparatifs",
   "/outils",
+  "/faq",
 ];
 
 // Date de la dernière mise à jour significative du site (pages clés)

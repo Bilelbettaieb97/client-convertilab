@@ -38,6 +38,7 @@ const Footer = () => {
     { name: "Agence Web par ville", href: "/agence-web" },
     { name: "Solutions par secteur", href: "/solutions" },
     { name: "Glossaire Marketing", href: "/glossaire" },
+    { name: "FAQ", href: "/faq" },
   ];
 
   const toolsLinks = [

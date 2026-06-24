@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SITE, PRICING } from "@/lib/constants";
 import { cities, getCityBySlug } from "@/data/cities";
+import { getSectorBySlug } from "@/data/sectors";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
@@ -216,6 +217,25 @@ export default async function CityPage({ params }: Props) {
   };
 
   const otherCities = cities.filter((c) => c.slug !== city.slug);
+
+  const PRIORITY_SECTORS_CITY = [
+    "restaurant",
+    "coiffeur",
+    "artisan",
+    "coach",
+    "plombier",
+    "electricien",
+    "immobilier",
+    "boulangerie",
+  ];
+  const PRIORITY_CITIES_FOR_MAILLAGE = [
+    "paris", "rueil-malmaison", "boulogne-billancourt", "versailles",
+    "neuilly-sur-seine", "lyon", "marseille", "bordeaux", "nice", "nantes",
+  ];
+  const showSectorLinks = PRIORITY_CITIES_FOR_MAILLAGE.includes(city.slug);
+  const sectorsForCity = showSectorLinks
+    ? PRIORITY_SECTORS_CITY.map((s) => getSectorBySlug(s)).filter(Boolean)
+    : [];
 
   return (
     <div className="min-h-screen">
@@ -688,6 +708,33 @@ export default async function CityPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Maillage secteur×ville */}
+      {showSectorLinks && sectorsForCity.length > 0 && (
+        <section className="py-12 bg-white border-t border-gray-100">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-xl font-bold text-gray-900 mb-2 text-center">
+              Nos sites web par secteur à {city.name}
+            </h2>
+            <p className="text-gray-500 text-sm text-center mb-6">
+              Un site spécialisé selon votre activité
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {sectorsForCity.map((s) =>
+                s ? (
+                  <Link
+                    key={s.slug}
+                    href={`/agence-web/${s.slug}/${city.slug}`}
+                    className="px-4 py-2 bg-gray-50 rounded-full text-sm text-gray-700 hover:text-purple-600 hover:shadow-md transition-all border border-gray-200 hover:border-purple-200"
+                  >
+                    {s.emoji} Site web {s.name.toLowerCase()} {city.name}
+                  </Link>
+                ) : null
+              )}
+            </div>
+          </div>
+        </section>
+      )}
 
       <SuggestedArticles title="Conseils pour développer votre business en ligne" max={3} />
       <RelatedServicesSection title="Nos services pour votre ville" max={4} />
