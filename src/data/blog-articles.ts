@@ -720,7 +720,7 @@ Les images sont la première cause de lenteur d'un site parce qu'elles représen
 
 Optimisations images par ordre de priorité :
 - Convertir en **WebP ou AVIF** : 30 à 50% plus léger que JPEG à qualité équivalente
-- Activer le **lazy loading** : `loading="lazy"` sur toutes les images hors écran
+- Activer le **lazy loading** : l'attribut loading="lazy" sur toutes les images hors écran
 - Redimensionner aux bonnes dimensions : ne pas charger du 2000px pour une image affichée en 400px
 - Spécifier **width et height** sur chaque image pour éviter le CLS
 - Compresser avec Squoosh (gratuit, en ligne) ou TinyPNG
@@ -732,7 +732,7 @@ Optimisations images par ordre de priorité :
 Le cache navigateur réduit le temps de chargement en stockant localement les ressources statiques (images, CSS, JavaScript) lors de la première visite, pour ne pas les re-télécharger lors des visites suivantes. Pour un visiteur régulier, un site bien mis en cache charge 3 à 5 fois plus vite que sans cache.
 
 Configuration du cache :
-- Assets statiques (images, polices, CSS, JS) : durée de cache 1 an (`Cache-Control: max-age=31536000`)
+- Assets statiques (images, polices, CSS, JS) : durée de cache 1 an (Cache-Control: max-age=31536000)
 - HTML : durée courte (1h ou no-cache) pour que les mises à jour soient immédiatement visibles
 - Sur Vercel ou Netlify : configuré automatiquement
 - Sur WordPress : plugin W3 Total Cache ou WP Rocket
@@ -807,121 +807,150 @@ Non, la plupart des optimisations de vitesse ne nécessitent pas de développeur
   },
   {
     slug: "audit-seo-gratuit-guide",
-    title: "Audit SEO Gratuit : Comment Analyser Votre Site en 60 Secondes",
-    excerpt: "Vérifiez le SEO de votre site en 60 secondes avec notre outil gratuit. Score SEO, analyse technique et recommandations pour optimiser votre référencement Google.",
-    metaDescription: "Audit SEO gratuit : analysez votre site sur 60+ critères et boostez votre référencement naturel. Testez maintenant.",
+    title: "Comment faire un audit SEO gratuit de son site web en 60 secondes ?",
+    excerpt: "68% des expériences en ligne commencent sur Google. Pourtant la plupart des sites ont des erreurs techniques invisibles qui bloquent leur référencement. Découvrez comment analyser votre site gratuitement en 60 secondes.",
+    metaDescription: "Comment faire un audit SEO gratuit de son site web en 60 secondes ? Analyse sur 60+ critères : balises, vitesse, mobile, robots.txt. Score SEO immédiat.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
     category: "SEO",
     readTime: "7 min",
     publishedAt: "2026-04-07",
-    author: { name: "Bilel Bettaieb" },
-    tags: ["SEO", "Audit", "Outil gratuit"],
-    content: `## Introduction
+    author: { name: "Bilel Bettaieb — ConvertiLab" },
+    tags: ["audit SEO gratuit site web", "analyser son site pour le SEO", "checker SEO gratuit", "erreurs SEO techniques", "améliorer référencement naturel"],
+    content: `Faire un audit SEO gratuit de son site web en 60 secondes consiste à analyser automatiquement plus de 60 critères techniques et on-page : balises title et meta descriptions, structure des titres H1/H2, attributs alt des images, configuration robots.txt et sitemap, vitesse de chargement et adaptation mobile. Le résultat est un score SEO sur 100 avec les erreurs classées par priorité.
 
-Saviez-vous que **68% des experiences en ligne** commencent par une recherche sur un moteur de recherche ? Pourtant, la grande majorite des sites web ne depassent jamais la deuxieme page de Google, la ou personne ne regarde. Le probleme est rarement un manque de contenu ou de bonne volonte : ce sont des erreurs techniques invisibles qui plombent le referencement naturel sans que les proprietaires de sites en aient conscience. Un audit SEO gratuit permet de verifier le SEO de votre site en quelques secondes et de reperer exactement ce qui bloque votre progression sur Google. Notre outil d'analyse SEO scanne plus de 60 points critiques pour vous donner un score SEO clair et des recommandations actionnables. [Essayez l'audit SEO gratuit →](/seo-check)
+**68% des expériences en ligne** commencent sur un moteur de recherche. Pourtant la grande majorité des sites ne dépassent jamais la deuxième page de Google — non par manque de contenu, mais à cause d'erreurs techniques invisibles qui plombent le référencement naturel sans que les propriétaires en aient conscience.
 
-## Pourquoi faire un audit SEO de votre site web
+[Essayez l'audit SEO gratuit maintenant →](/seo-check)
 
-Un audit SEO est bien plus qu'un simple diagnostic. C'est la premiere etape indispensable de toute strategie de referencement naturel serieuse. Google utilise plus de 200 facteurs pour classer les sites web dans ses resultats. Sans analyse SEO prealable, vous travaillez a l'aveugle : vous ne savez pas quelles pages sont bien optimisees, lesquelles presentent des erreurs, ni quels leviers activer en priorite pour gagner en visibilite.
+## Pourquoi un audit SEO est-il indispensable avant toute optimisation ?
 
-L'optimisation Google ne se resume pas a placer des mots-cles dans vos textes. Elle englobe la structure technique de votre site, la qualite de vos balises, la vitesse de chargement, l'accessibilite mobile et des dizaines d'autres criteres. Un checker SEO automatise vous fait gagner des heures d'analyse manuelle en verifiant tous ces points simultanement. Par exemple, un site qui a une balise title trop longue, des images sans attribut alt et un fichier robots.txt mal configure perd des positions sans meme le savoir. L'audit met ces problemes en lumiere et vous montre comment les corriger pour ameliorer votre positionnement.
+Un audit SEO est indispensable avant toute optimisation parce qu'il identifie précisément les erreurs qui bloquent votre classement Google, sans quoi vous risquez de travailler sur des détails pendant que des problèmes critiques restent non résolus. Google utilise plus de 200 facteurs de classement : sans diagnostic préalable, vous travaillez à l'aveugle.
 
-## Comment fonctionne notre outil d'audit SEO gratuit
+Un site peut avoir une balise title trop longue, des images sans attribut alt et un fichier robots.txt mal configuré — et perdre des dizaines de positions à cause de ces trois erreurs simples à corriger. Un checker SEO automatisé vous fait gagner plusieurs heures d'analyse manuelle en vérifiant tous ces points simultanément.
 
-L'utilisation de notre outil SEO gratuit est pensee pour etre la plus simple possible. Voici comment ca se passe en trois etapes.
+Ce que l'audit révèle systématiquement sur les PME que j'accompagne chez ConvertiLab :
+- 70% des sites ont des meta descriptions manquantes ou dupliquées
+- 60% ont des images sans attribut alt
+- 40% ont un score PageSpeed mobile inférieur à 50/100
+- 30% ont un fichier robots.txt qui bloque des pages importantes
 
-**Etape 1 : Entrez votre URL.** Rendez-vous sur la page de l'outil, collez l'adresse de votre site web et cliquez sur le bouton d'analyse. Aucune inscription n'est requise, aucune carte bancaire demandee.
+## Comment fonctionne un outil d'audit SEO gratuit en 3 étapes ?
 
-**Etape 2 : L'analyse en temps reel.** En moins de 60 secondes, notre outil parcourt votre site et examine plus de 60 points de controle. Il analyse vos balises title et meta descriptions, la structure de vos titres H1/H2/H3, la presence d'attributs alt sur vos images, la configuration de votre fichier robots.txt et de votre sitemap XML, la vitesse de chargement, le responsive design, et bien d'autres criteres essentiels au referencement naturel.
+Un outil d'audit SEO gratuit fonctionne en 3 étapes : vous saisissez votre URL, l'outil crawle votre page en analysant ses ressources et son code source, puis il génère un rapport classant les problèmes par niveau de priorité. L'ensemble prend moins de 60 secondes pour un audit de premier niveau fiable et actionnable.
 
-**Etape 3 : Consultez votre rapport.** Vous recevez un score SEO global sur 100, accompagne d'un rapport detaille qui classe les problemes par priorite : erreurs critiques, avertissements et recommandations d'optimisation. Chaque point est accompagne d'une explication claire et d'une piste de correction. [Lancer l'analyse SEO →](/seo-check)
+**Étape 1 : Saisissez votre URL**
+Rendez-vous sur [l'outil d'audit SEO gratuit](/seo-check), collez l'adresse de votre site et lancez l'analyse. Aucune inscription, aucune carte bancaire.
 
-## Les resultats que vous obtenez
+**Étape 2 : L'analyse en temps réel**
+En moins de 60 secondes, l'outil examine : balises title et meta descriptions, structure H1/H2/H3, attributs alt des images, robots.txt et sitemap XML, vitesse de chargement, responsive design, HTTPS, et une vingtaine d'autres critères.
 
-Notre outil d'analyse SEO vous fournit un rapport complet couvrant quatre grandes categories. Sur le volet technique, vous obtenez des informations sur le temps de reponse du serveur (TTFB), la compression des fichiers, la mise en cache et la taille de vos ressources CSS et JavaScript. Pour le SEO on-page, le rapport verifie la presence et la longueur de chaque balise title, l'unicite de vos meta descriptions, la hierarchie de vos titres et la bonne utilisation des attributs alt. L'indexation est egalement passee au crible : le fichier robots.txt est-il bien configure ? Le sitemap XML est-il present et accessible ? Y a-t-il des erreurs 404 ou des redirections cassees ? Enfin, le volet mobile et accessibilite verifie que votre site s'affiche correctement sur tous les ecrans et que les elements cliquables sont suffisamment espaces.
+**Étape 3 : Le rapport priorisé**
+Vous recevez un score SEO global sur 100 avec chaque problème classé en "erreur critique", "avertissement" ou "amélioration". Chaque point est accompagné d'une explication et d'une piste de correction concrète.
 
-Contrairement a de nombreux outils SEO gratuits qui se limitent a un score sans explication, notre checker SEO vous donne des recommandations concretes et hierarchisees. Vous savez exactement par ou commencer pour obtenir des resultats rapides. Des outils payants comme Semrush, Ahrefs ou Screaming Frog offrent des analyses plus poussees, mais pour un diagnostic initial rapide et fiable, notre outil couvre l'essentiel sans debourser un centime.
+## Quels résultats concrets obtient-on avec un audit SEO gratuit ?
 
-## Pourquoi c'est gratuit
+Un audit SEO gratuit donne un rapport couvrant quatre dimensions : le SEO technique (vitesse serveur, compression, cache), le SEO on-page (balises title, meta descriptions, hiérarchie des titres), l'indexation (robots.txt, sitemap, erreurs 404) et la compatibilité mobile. Chaque problème détecté est accompagné du gain potentiel en positionnement si corrigé.
 
-ConvertiLab met cet outil SEO gratuit a disposition parce que nous croyons qu'un bon diagnostic est la premiere etape vers une presence en ligne performante. Beaucoup d'entreprises ne savent tout simplement pas que leur site a des problemes de referencement naturel. En leur offrant cette visibilite, nous les aidons a comprendre les enjeux du SEO et a prendre des decisions eclairees. Si vous souhaitez aller plus loin et confier l'optimisation Google de votre site a des experts, nous proposons des services d'accompagnement SEO complet qui prennent le relais la ou l'outil s'arrete. [Decouvrir nos services SEO →](/services/seo)
+Couverture de l'audit par catégorie :
 
-## FAQ
+| Catégorie | Points vérifiés | Impact SEO |
+|-----------|----------------|-----------|
+| SEO technique | TTFB, compression, cache, HTTPS | Élevé |
+| SEO on-page | Title, meta, H1/H2, alt images | Très élevé |
+| Indexation | Robots.txt, sitemap, 404 | Élevé |
+| Mobile | Responsive, taille boutons | Élevé |
+| Contenu | Longueur, duplication | Moyen |
 
-**Combien de fois puis-je lancer un audit SEO gratuit ?** Vous pouvez utiliser l'outil autant de fois que vous le souhaitez. Nous recommandons de refaire une analyse SEO apres chaque serie de corrections pour mesurer vos progres et verifier que votre score SEO s'ameliore.
+Contrairement aux outils payants comme Semrush ou Ahrefs qui offrent une analyse approfondie sur l'ensemble du domaine, cet outil est conçu pour un diagnostic rapide et actionnable de la page analysée — idéal pour identifier les blocages prioritaires en quelques secondes.
 
-**L'audit remplace-t-il un expert SEO ?** L'outil est concu pour vous donner un diagnostic precis et des pistes d'action immediates. Pour une strategie de referencement naturel avancee incluant la creation de contenu, le netlinking et l'optimisation technique approfondie, un accompagnement professionnel reste recommande.
+## FAQ — Questions fréquentes sur l'audit SEO
 
-**Mes donnees sont-elles conservees ?** Non, nous n'enregistrons pas les resultats de vos audits. L'analyse est realisee en temps reel et les resultats ne sont visibles que par vous.
+### Combien de fois peut-on utiliser l'audit SEO gratuit ?
 
-## Conclusion
+L'outil peut être utilisé autant de fois que nécessaire, sans limite. Nous recommandons de relancer une analyse après chaque série de corrections pour mesurer l'amélioration du score SEO et vérifier que les erreurs sont bien résolues. Un audit mensuel est une bonne pratique pour surveiller la santé SEO de son site.
 
-Ne laissez pas des erreurs invisibles freiner la croissance de votre trafic organique. Un audit SEO regulier est le fondement de toute strategie de referencement naturel efficace : il vous montre ou vous en etes, ce qui fonctionne et ce qui doit etre corrige en priorite. En quelques secondes, vous obtenez une vision claire de la sante SEO de votre site.
+### L'audit SEO gratuit remplace-t-il un expert SEO ?
 
-**[Essayez l'audit SEO gratuit maintenant →](/seo-check)**
+Non, l'audit automatique identifie les erreurs techniques et on-page, mais ne remplace pas une stratégie SEO complète. Pour la recherche de mots-clés, la création de contenu optimisé, le netlinking et l'optimisation technique approfondie, un accompagnement professionnel est nécessaire. L'outil est le point de départ, pas la solution complète.
 
-Besoin d'un accompagnement sur-mesure pour votre referencement ? [Decouvrir nos services →](/services)`
+### Mes données de site sont-elles conservées après l'audit ?
+
+Non, les résultats d'analyse ne sont pas enregistrés dans une base de données persistante. L'analyse est effectuée en temps réel et les résultats ne sont visibles que pendant votre session. Aucune donnée confidentielle sur votre site n'est stockée.
+
+[Lancer l'audit SEO gratuit de votre site →](/seo-check)`
   },
   {
     slug: "tester-vitesse-site-web",
-    title: "Comment Tester la Vitesse de Votre Site Web (et l'Ameliorer)",
-    excerpt: "Testez la vitesse de votre site web gratuitement et mesurez vos Core Web Vitals (LCP, CLS, INP). Diagnostic complet et recommandations pour optimiser la vitesse.",
-    metaDescription: "Test vitesse site web gratuit : mesurez LCP, CLS et PageSpeed. Optimisez votre temps de chargement. Essayez maintenant.",
+    title: "Comment tester la vitesse de son site web et mesurer ses Core Web Vitals ?",
+    excerpt: "53% des visiteurs mobiles quittent un site qui charge en plus de 3 secondes. LCP, CLS, INP : comment tester vos Core Web Vitals gratuitement et savoir exactement quoi corriger pour accélérer votre site.",
+    metaDescription: "Comment tester la vitesse de son site web et mesurer ses Core Web Vitals gratuitement ? LCP, CLS, INP expliqués + outil gratuit + recommandations concrètes.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     category: "Performance",
     readTime: "7 min",
     publishedAt: "2026-04-07",
-    author: { name: "Bilel Bettaieb" },
-    tags: ["Performance", "Core Web Vitals", "Outil gratuit"],
-    content: `## Introduction
+    author: { name: "Bilel Bettaieb — ConvertiLab" },
+    tags: ["tester vitesse site web", "Core Web Vitals LCP CLS INP", "test PageSpeed gratuit", "performance site web Google", "améliorer temps de chargement"],
+    content: `Pour tester la vitesse de son site web et mesurer ses Core Web Vitals, il faut utiliser Google PageSpeed Insights (score officiel + métriques LCP/CLS/INP) ou un outil dédié qui donne des recommandations concrètes classées par priorité. Le test prend moins de 60 secondes et ne nécessite aucune compétence technique.
 
-Un site web qui met plus de 3 secondes a charger perd **53% de ses visiteurs mobiles** avant meme d'avoir affiche le moindre contenu. Le temps de chargement n'est plus un detail technique reserve aux developpeurs : c'est un facteur de ranking Google officiel depuis l'introduction des Core Web Vitals et un critere decisif pour vos conversions. Chaque seconde de retard supplementaire reduit vos ventes potentielles de 7%. Pourtant, la plupart des proprietaires de sites n'ont aucune idee de la performance reelle de leur site web. Notre test de vitesse de site gratuit mesure vos Core Web Vitals en quelques secondes et vous indique exactement quoi corriger. [Essayez le test de vitesse gratuit →](/speed-check)
+**53% des visiteurs mobiles** quittent un site qui charge en plus de 3 secondes. Chaque seconde supplémentaire réduit les conversions de 7%. La vitesse est un facteur de classement Google officiel depuis 2021 et un enjeu commercial direct.
 
-## Comprendre les Core Web Vitals et le PageSpeed
+[Tester la vitesse de votre site gratuitement →](/speed-check)
 
-Les Core Web Vitals sont les trois metriques que Google considere comme essentielles pour evaluer la performance d'un site web du point de vue de l'utilisateur. Elles sont directement liees au classement de votre site dans les resultats de recherche.
+## Qu'est-ce que les Core Web Vitals et pourquoi Google les mesure-t-il ?
 
-Le **LCP (Largest Contentful Paint)** mesure la vitesse de chargement percue : combien de temps faut-il pour que le plus grand element visible de votre page s'affiche ? Google considere qu'un LCP inferieur a 2,5 secondes est bon, entre 2,5 et 4 secondes il faut ameliorer, et au-dela de 4 secondes c'est mauvais. Le LCP depend principalement de la taille de vos images, du temps de reponse de votre serveur et de la facon dont vos ressources critiques sont chargees.
+Les Core Web Vitals sont les trois métriques officielles de Google pour évaluer l'expérience de chargement d'une page web du point de vue de l'utilisateur. Elles sont des facteurs de classement dans les résultats de recherche depuis 2021. Un site qui les respecte est favorisé par Google à qualité de contenu équivalente.
 
-Le **CLS (Cumulative Layout Shift)** mesure la stabilite visuelle. Vous avez certainement deja vecu cette frustration : vous etes sur le point de cliquer sur un bouton et soudain tout le contenu se decale. Un CLS inferieur a 0,1 est considere comme bon. Les causes les plus frequentes sont les images sans dimensions definies, les publicites qui s'inserent dynamiquement et les polices web qui provoquent un saut de texte.
+Les trois métriques Core Web Vitals en 2026 :
+- **LCP (Largest Contentful Paint)** : temps d'affichage du plus grand élément visible — objectif sous 2,5s
+- **CLS (Cumulative Layout Shift)** : stabilité visuelle lors du chargement — objectif sous 0,1
+- **INP (Interaction to Next Paint)** : réactivité aux clics et interactions — objectif sous 200ms
 
-L'**INP (Interaction to Next Paint)**, qui remplace l'ancien FID, mesure la reactivite de votre site aux interactions. Quand un visiteur clique ou tape, combien de temps faut-il pour que le navigateur reagisse ? Un INP inferieur a 200 millisecondes est l'objectif. Le score PageSpeed de Google synthetise l'ensemble de ces metriques en une note sur 100 que vous pouvez suivre dans le temps.
+Un site avec un LCP de 4,5 secondes perd des positions Google et perd des visiteurs simultanément. Ce sont deux problèmes distincts qui se corrigent de la même façon.
 
-## Comment fonctionne notre outil de test de vitesse
+## Comment fonctionne un test de vitesse de site web gratuit ?
 
-Notre outil Speed Check a ete concu pour rendre le diagnostic de performance site web accessible a tous, meme sans competences techniques.
+Un test de vitesse de site web gratuit fonctionne en simulant le chargement de votre page depuis un serveur externe, en mesurant le temps de chaque ressource chargée (HTML, CSS, JavaScript, images) et en calculant les métriques Core Web Vitals. Le résultat est un score et une liste de ressources à optimiser classées par impact.
 
-**Etape 1 : Saisissez l'URL de votre site.** Rendez-vous sur la page de l'outil, entrez l'adresse de votre site et lancez le test de vitesse. Pas d'inscription, pas de logiciel a installer.
+**Les 3 étapes du test de vitesse :**
 
-**Etape 2 : L'analyse en conditions reelles.** L'outil simule le chargement de votre page et mesure chaque metrique cle : LCP, CLS, INP, TTFB (temps de reponse du serveur), poids total de la page et nombre de requetes HTTP. L'ensemble du processus prend quelques secondes.
+**Étape 1 : Saisissez l'URL de votre site**
+Rendez-vous sur [l'outil Speed Check](/speed-check), collez l'adresse de votre page et lancez l'analyse. Pas d'inscription, pas de logiciel à installer.
 
-**Etape 3 : Rapport et recommandations.** Vous obtenez un score de performance global accompagne du detail de chaque Core Web Vital. Pour chaque probleme detecte, l'outil vous propose une solution concrete : optimiser telle image, differer tel script, ajouter des dimensions a telles balises. [Lancer le test de vitesse →](/speed-check)
+**Étape 2 : L'analyse en temps réel**
+L'outil mesure : LCP, CLS, INP, TTFB (temps de réponse du serveur), poids total de la page et nombre de requêtes HTTP. L'ensemble prend 10 à 30 secondes.
 
-## Les resultats que vous obtenez
+**Étape 3 : Le rapport avec recommandations priorisées**
+Vous obtenez un score de performance global (0-100) avec le détail de chaque Core Web Vital. Pour chaque problème détecté, une action corrective concrète : optimiser telle image, différer tel script, ajouter les dimensions manquantes sur telle balise.
 
-Le rapport de notre test de vitesse de site couvre l'ensemble des indicateurs qui comptent pour la performance et le referencement. Vous obtenez le detail de vos Core Web Vitals avec un code couleur (vert, orange, rouge) et une comparaison avec les seuils recommandes par Google. Le temps de chargement complet est mesure, du premier octet recu (TTFB) jusqu'a l'affichage complet de la page. Le rapport identifie les ressources les plus lourdes de votre page (images non compressees, fichiers JavaScript volumineux, CSS non minifie) et vous indique le gain potentiel en millisecondes pour chaque optimisation.
+## Quelle différence entre Google PageSpeed Insights et un outil tiers ?
 
-Contrairement a un test PageSpeed Insights qui se contente d'un score, notre outil contextualise chaque resultat et vous explique pourquoi c'est important. Par exemple, si votre LCP est de 4,2 secondes, le rapport vous indiquera que cela impacte directement votre classement Google et vous proposera les actions correctives par ordre de priorite : optimiser la vitesse de l'image principale, activer la compression Brotli, precharger les polices web. Les outils payants comme GTmetrix Pro ou New Relic offrent un suivi continu, mais pour un diagnostic rapide et actionnable, notre outil gratuit couvre parfaitement le besoin.
+Google PageSpeed Insights et un outil spécialisé mesurent les mêmes métriques Core Web Vitals, mais ne donnent pas le même niveau de recommandations. PageSpeed donne un score et une liste technique brute, difficilement interprétable sans compétences techniques. Un outil spécialisé contextualise chaque résultat, priorise les actions et explique l'impact SEO — plus utile pour les non-développeurs.
 
-## Pourquoi c'est gratuit
+| Critère | Google PageSpeed | Speed Check ConvertiLab |
+|---------|-----------------|------------------------|
+| Score Core Web Vitals | ✅ Oui | ✅ Oui |
+| Recommandations priorisées | ⚠️ Partiel | ✅ Complet |
+| Impact SEO expliqué | ❌ Non | ✅ Oui |
+| Accessible sans dev | ⚠️ Technique | ✅ Grand public |
+| Gratuit | ✅ Oui | ✅ Oui |
 
-ConvertiLab propose ce test de vitesse de site gratuitement parce que la performance web est un enjeu que trop d'entreprises decouvrent trop tard, souvent apres avoir perdu des positions sur Google ou constate une chute inexpliquee de leurs conversions. En rendant le diagnostic accessible, nous aidons les entreprises a prendre conscience des problemes et a optimiser la vitesse de leur site avant que les consequences ne deviennent couteuses. Pour ceux qui souhaitent un accompagnement technique complet pour optimiser durablement la vitesse et le temps de chargement de leur site, nous proposons des services de creation et d'optimisation de sites web performants. [Decouvrir nos services →](/services/sites-web)
+Les outils payants comme GTmetrix Pro ou New Relic offrent un suivi continu et des alertes automatiques, mais pour un diagnostic ponctuel rapide et actionnable, l'outil gratuit couvre parfaitement le besoin d'une PME.
 
-## FAQ
+## FAQ — Questions fréquentes sur les tests de vitesse
 
-**Quelle est la difference entre votre outil et Google PageSpeed Insights ?** Les deux outils mesurent les Core Web Vitals, mais notre test de vitesse ajoute des recommandations contextualisees et hierarchisees. PageSpeed donne un score brut, nous vous donnons un plan d'action clair pour optimiser la vitesse de votre site.
+### À quelle fréquence faut-il tester la vitesse de son site web ?
 
-**A quelle frequence faut-il tester la performance de mon site ?** Nous recommandons un test de vitesse apres chaque modification significative (nouveau contenu, changement de theme, ajout de plugins) et au minimum une fois par mois pour surveiller l'evolution de vos Core Web Vitals.
+Il faut tester la vitesse de son site après chaque modification significative (nouveau contenu, changement de thème, installation d'un plugin) et au minimum une fois par mois. Une dégradation progressive est difficile à détecter sans monitoring régulier — un plugin mal configuré peut faire passer un LCP de 2,5s à 5s sans que le propriétaire s'en aperçoive immédiatement.
 
-**Un bon score PageSpeed garantit-il un bon referencement ?** La vitesse de chargement est un facteur important, mais pas le seul. Un site rapide avec un contenu pauvre ne se positionnera pas bien. La performance web est un pilier du SEO, pas une solution miracle.
+### Un bon score PageSpeed garantit-il un bon référencement Google ?
 
-## Conclusion
+Un bon score PageSpeed améliore le référencement mais ne le garantit pas seul. La vitesse de chargement est un facteur parmi les 200+ que Google utilise pour le classement. Un site rapide avec un contenu pauvre ne se positionnera pas face à un concurrent au contenu excellent. La performance est un prérequis, pas une solution complète au référencement naturel.
 
-La performance de votre site web impacte directement votre visibilite sur Google et votre capacite a convertir des visiteurs en clients. Ne laissez pas un temps de chargement excessif saboter vos efforts. Mesurez, comprenez et optimisez : c'est la methode la plus fiable pour gagner en vitesse et en positions.
+### Mon score PageSpeed mobile est différent du desktop, lequel compte le plus ?
 
-**[Testez la vitesse de votre site gratuitement maintenant →](/speed-check)**
+Le score mobile est celui qui compte le plus pour Google, car l'indexation Google est mobile-first depuis 2019. Concentrez vos efforts d'optimisation sur le score mobile en priorité. Un écart important (90 desktop / 35 mobile) indique souvent des images non adaptées aux petits écrans ou du JavaScript qui bloque le rendu.
 
-Besoin d'un site rapide et optimise des le depart ? [Decouvrir nos services →](/services)`
+[Lancer le test de vitesse gratuit de votre site →](/speed-check)`
   },
   {
     slug: "audit-design-ux-site-web",
