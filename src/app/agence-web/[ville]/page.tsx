@@ -41,13 +41,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!city) return { title: "Page introuvable" };
 
   return {
-    title: `Agence Web ${city.name} | Création Site Internet ${city.name}`,
-    description: `Agence web à ${city.name} (${city.department}). Création de sites internet, SEO, Google Ads. +150 clients, livraison en 7 jours. Devis gratuit.`,
+    title: `Agence Web ${city.name} — Création Site Internet en 7 jours dès 990€`,
+    description: `Cherchez-vous une agence web à ${city.name} pour créer votre site internet ? ConvertiLab livre votre site vitrine en 7 jours dès 990€, satisfait ou remboursé. +150 clients, 15 avis 4.9★. Devis gratuit sous 24h.`,
     keywords: city.keywords.join(", "),
     alternates: { canonical: `${SITE.url}/agence-web/${city.slug}` },
     openGraph: {
-      title: `Agence Web ${city.name} | Création Site Internet | ConvertiLab`,
-      description: `Votre agence web à ${city.name}. Sites sur-mesure, SEO, Ads. Devis gratuit.`,
+      title: `Agence Web ${city.name} — Création Site Internet dès 990€ | ConvertiLab`,
+      description: `Votre agence web à ${city.name}. Site vitrine livré en 7 jours dès 990€. 15 avis 4.9★. Devis gratuit.`,
       url: `${SITE.url}/agence-web/${city.slug}`,
     },
     other: {
@@ -362,11 +362,11 @@ export default async function CityPage({ params }: Props) {
       <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
-            Pourquoi{" "}
+            Pourquoi les entreprises de{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               {city.name}
             </span>{" "}
-            a besoin d&apos;une agence web locale
+            ont-elles besoin d&apos;une agence web locale ?
           </h2>
 
           {/* Secteurs clés */}
@@ -424,14 +424,13 @@ export default async function CityPage({ params }: Props) {
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Nos services à{" "}
+            Quels services propose ConvertiLab pour les entreprises de{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               {city.name}
-            </span>
+            </span>{" "}?
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Des solutions digitales sur-mesure pour les entreprises de{" "}
-            {city.name} et ses environs en {city.department}
+            Création de site, SEO local et publicité digitale — tout ce qu&apos;il faut pour être visible à {city.name} et en {city.department}
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((s, i) => (
@@ -509,13 +508,14 @@ export default async function CityPage({ params }: Props) {
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Ils nous font confiance à{" "}
+            Que disent nos clients à{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               {city.name}
-            </span>
+            </span>{" "}
+            de leur site web ?
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Découvrez les retours de nos clients dans votre ville
+            Résultats concrets obtenus par nos clients dans votre ville
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             {city.testimonials.map((t, i) => (
@@ -569,14 +569,13 @@ export default async function CityPage({ params }: Props) {
       <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Nos garanties pour votre projet à{" "}
+            Quelles garanties pour votre site internet à{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               {city.name}
-            </span>
+            </span>{" "}?
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Nous nous engageons sur des résultats concrets. Zéro risque pour
-            vous.
+            Des engagements concrets et vérifiables. Zéro risque, zéro mauvaise surprise.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {garanties.map((g, i) => (
@@ -689,11 +688,10 @@ export default async function CityPage({ params }: Props) {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl font-bold text-gray-900 mb-3 text-center">
-            Nous intervenons aussi dans ces villes
+            ConvertiLab intervient aussi dans ces villes proches de {city.name}
           </h2>
           <p className="text-gray-600 text-center mb-8">
-            ConvertiLab accompagne les entreprises dans tout le département{" "}
-            {city.department} et en {city.region}
+            Agence web en {city.department} et dans toute la {city.region}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {otherCities.map((c) => (

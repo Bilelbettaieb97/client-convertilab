@@ -27,8 +27,16 @@ import { Button } from "@/components/ui/button";
 type Props = { params: Promise<{ ville: string }> };
 
 const TARGET_SLUGS = [
-  "paris", "lyon", "marseille", "bordeaux", "toulouse",
-  "nice", "nantes", "lille", "montpellier", "strasbourg",
+  "paris", "rueil-malmaison", "boulogne-billancourt", "nanterre", "neuilly-sur-seine",
+  "lyon", "marseille", "bordeaux", "toulouse", "nice",
+  "nantes", "strasbourg", "lille", "montpellier", "rennes",
+  "versailles", "saint-germain-en-laye", "levallois-perret", "courbevoie", "la-defense-puteaux",
+  "cannes", "aix-en-provence", "grenoble", "dijon", "annecy",
+  "toulon", "reims", "saint-etienne", "le-havre", "clermont-ferrand",
+  "tours", "limoges", "amiens", "perpignan", "metz",
+  "besancon", "orleans", "rouen", "caen", "nancy",
+  "argenteuil", "montreuil", "saint-denis", "creteil", "vitry-sur-seine",
+  "asnieres-sur-seine", "colombes", "saint-cloud", "suresnes", "issy-les-moulineaux",
 ];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -36,18 +44,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(ville);
   if (!city) return { title: "Page introuvable" };
 
-  const title = `Création Site Internet ${city.name} | Dès 500€, Livré en 7 jours | ConvertiLab`;
-  const description = `Création de site internet professionnel à ${city.name} à partir de 500€. Site vitrine, e-commerce ou landing page livrés en 7 jours. +150 clients, 4.9★. Devis gratuit sous 24h.`;
+  const title = `Création Site Internet ${city.name} — Dès 990€, livré en 7 jours | ConvertiLab`;
+  const description = `Combien coûte la création d'un site internet à ${city.name} ? ConvertiLab crée votre site vitrine professionnel dès 990€, livré en 7 jours, satisfait ou remboursé. +150 clients, 15 avis 4.9★. Devis gratuit sous 24h.`;
 
   return {
     title,
     description,
     keywords: [
-      `création site internet ${city.name}`,
-      `site web ${city.name}`,
-      `agence web ${city.name}`,
-      `site vitrine ${city.name}`,
-      `site e-commerce ${city.name}`,
+      `création site internet ${city.name} prix`,
+      `site vitrine professionnel ${city.name} pas cher`,
+      `agence web ${city.name} livraison rapide`,
+      `site internet artisan commerçant ${city.name}`,
+      `site e-commerce ${city.name} devis gratuit`,
     ].join(", "),
     alternates: { canonical: `${SITE.url}/creation-site-internet/${city.slug}` },
     openGraph: {

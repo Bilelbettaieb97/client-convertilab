@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Star, Users, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Agence Web Île-de-France | Création Site Internet",
-  description: "Agence web locale en Île-de-France : Paris, Rueil-Malmaison, Boulogne, Nanterre. +150 clients, livraison 7j. Devis gratuit.",
-  keywords: "agence web Île-de-France, création site internet Paris, agence web Hauts-de-Seine, agence digitale locale",
+  title: "Agence Web par Ville — Création Site Internet en France | ConvertiLab",
+  description: "Quelle agence web choisir en Île-de-France ? ConvertiLab intervient dans 51 villes : Paris, Lyon, Marseille, Bordeaux et toute la France. Site vitrine dès 990€, livré en 7 jours. +150 clients, 15 avis 4.9★.",
+  keywords: "agence web Île-de-France, création site internet Paris Lyon Marseille, agence web locale France, site vitrine entreprise 990€",
   alternates: { canonical: `${SITE.url}/agence-web` },
 };
 
@@ -24,9 +24,24 @@ export default function AgenceWebPage() {
     ],
   };
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Agences web ConvertiLab par ville",
+    description: "ConvertiLab intervient dans 51 villes en France pour la création de sites internet professionnels",
+    numberOfItems: cities.length,
+    itemListElement: cities.slice(0, 20).map((city, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: `Agence web ${city.name}`,
+      url: `${SITE.url}/agence-web/${city.slug}`,
+    })),
+  };
+
   return (
     <div className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <Navigation />
 
       {/* Hero */}
@@ -37,12 +52,15 @@ export default function AgenceWebPage() {
             <MapPin className="w-4 h-4" />
             Île-de-France
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Votre agence web{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">près de chez vous</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+            Agence web locale —{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">51 villes en France</span>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Basés à Rueil-Malmaison, nous accompagnons les entreprises de toute l&apos;Île-de-France dans leur transformation digitale. Proximité, réactivité et expertise locale.
+          <p className="text-base sm:text-lg text-gray-700 mb-6 max-w-3xl mx-auto leading-relaxed bg-purple-50 border-l-4 border-purple-400 px-5 py-4 rounded-r-xl text-left">
+            ConvertiLab crée des sites internet professionnels pour les entrepreneurs et PME dans 51 villes en France. Site vitrine livré en 7 jours dès 990€, avec référencement local et support 30 jours inclus. Basés à Rueil-Malmaison, nous intervenons en présentiel en Île-de-France et à distance partout en France.
+          </p>
+          <p className="text-base text-gray-500 mb-8 max-w-2xl mx-auto">
+            +150 clients accompagnés · 15 avis 4.9★ · Satisfait ou remboursé
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <div className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-sm border">
@@ -67,9 +85,9 @@ export default function AgenceWebPage() {
       {/* Grille des villes */}
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Nos implantations</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Dans quelle ville intervenons-nous ?</h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Trouvez votre agence web locale et bénéficiez d&apos;un accompagnement de proximité.
+            Sélectionnez votre ville pour découvrir nos offres locales et les témoignages clients de votre région.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -104,12 +122,12 @@ export default function AgenceWebPage() {
       {/* Carte / Zone d'intervention */}
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Zone d&apos;intervention</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Nous intervenons dans toute l&apos;Île-de-France : Paris (75), Hauts-de-Seine (92), Yvelines (78), Val-d&apos;Oise (95), Seine-Saint-Denis (93), Val-de-Marne (94), Essonne (91) et Seine-et-Marne (77).
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Peut-on travailler avec une agence web à distance ?</h2>
+          <p className="text-lg text-gray-600 mb-4 max-w-2xl mx-auto">
+            Oui. ConvertiLab intervient en présentiel dans toute l&apos;Île-de-France (Paris 75, Hauts-de-Seine 92, Yvelines 78, Val-d&apos;Oise 95, Seine-Saint-Denis 93, Val-de-Marne 94, Essonne 91, Seine-et-Marne 77) et à distance dans toute la France.
           </p>
-          <p className="text-base text-gray-500 mb-8">
-            Nos services sont aussi disponibles en 100% distanciel pour les entreprises hors Île-de-France.
+          <p className="text-base text-gray-500 mb-8 max-w-2xl mx-auto">
+            100% de nos projets sont gérés avec des outils collaboratifs (Figma, Notion, Zoom). Nous livrons des sites identiques que vous soyez à Paris ou à Bordeaux.
           </p>
           <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-6 text-lg">
             <Link href="/contact">

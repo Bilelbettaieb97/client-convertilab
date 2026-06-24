@@ -69,23 +69,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isEcommerce = sector.slug === "ecommerce";
   const priceLabel = isEcommerce ? PRICING.ecommerce.label : PRICING.vitrine.label;
 
-  const metaDesc = `Votre site web ${sector.name.toLowerCase()} à ${city.name} livré en 7 jours. ${priceLabel}, satisfait ou remboursé. +150 clients, 4.9★. Devis gratuit sous 24h.`;
+  const metaTitle = `Site Web ${sector.name} à ${city.name} — ${priceLabel}, livré en 7 jours`;
+  const metaDesc = `Combien coûte un site internet pour ${sector.name.toLowerCase()} à ${city.name} ? ConvertiLab crée votre site professionnel ${priceLabel}, livré en 7 jours, satisfait ou remboursé. +150 clients, 15 avis 4.9★.`;
 
   return {
-    title: `Création Site Web ${sector.name} à ${city.name} | ConvertiLab`,
+    title: metaTitle,
     description: metaDesc,
     keywords: [
       `création site internet ${sector.name.toLowerCase()} ${city.name}`,
       `site web ${sector.name.toLowerCase()} ${city.name}`,
       `agence web ${sector.name.toLowerCase()} ${city.name}`,
       `site vitrine ${sector.name.toLowerCase()} ${city.name}`,
+      `prix site internet ${sector.name.toLowerCase()} ${city.name}`,
     ].join(", "),
     alternates: {
       canonical: `${SITE.url}/agence-web/${sector.slug}/${city.slug}`,
     },
     openGraph: {
-      title: `Création Site Web ${sector.name} à ${city.name} | ConvertiLab`,
-      description: `Votre site internet ${sector.name.toLowerCase()} à ${city.name} livré en 7 jours. ${priceLabel}.`,
+      title: metaTitle,
+      description: `Site internet ${sector.name.toLowerCase()} à ${city.name} — ${priceLabel}, livraison 7 jours, 15 avis 4.9★.`,
       url: `${SITE.url}/agence-web/${sector.slug}/${city.slug}`,
     },
     other: {
@@ -343,17 +345,17 @@ export default async function SecteurVillePage({ params }: Props) {
       <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Les défis des{" "}
+            Pourquoi les{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-              {sector.name.toLowerCase()}s à {city.name}
-            </span>
+              {sector.name.toLowerCase()}s de {city.name}
+            </span>{" "}
+            peinent-ils à trouver des clients en ligne ?
           </h2>
           <p className="text-lg text-gray-600 text-center mb-6 max-w-2xl mx-auto">
             {city.localContext}
           </p>
           <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-            Dans ce contexte, les {sector.name.toLowerCase()}s de {city.name} font
-            face à des obstacles spécifiques pour attirer des clients en ligne.
+            Dans ce contexte concurrentiel, voici les obstacles les plus fréquents que rencontrent les {sector.name.toLowerCase()}s de {city.name} pour attirer des clients via le web.
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
             {sector.painPoints.map((pain, i) => (
@@ -380,14 +382,14 @@ export default async function SecteurVillePage({ params }: Props) {
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Notre solution pour les{" "}
+            Qu&apos;est-ce qui est inclus dans un site web{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-              {sector.name.toLowerCase()}s de {city.name}
-            </span>
+              {sector.name.toLowerCase()} à {city.name}
+            </span>{" "}
+            ?
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Un site web professionnel, conçu spécifiquement pour votre activité
-            et optimisé pour les recherches locales à {city.name}.
+            Tout est inclus dans un forfait fixe — design sur-mesure, SEO local {city.name}, fonctionnalités secteur et support 30 jours.
           </p>
           <div className="grid sm:grid-cols-2 gap-4 mb-10">
             {sector.solutions.map((sol, i) => (
