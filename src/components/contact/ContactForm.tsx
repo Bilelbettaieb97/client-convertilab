@@ -214,9 +214,9 @@ const ContactForm = () => {
     <div className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-800">
       {/* Header */}
       <div className={`px-4 sm:px-5 py-2.5 sm:py-3 ${step === 4 ? 'bg-gradient-to-r from-green-500 to-emerald-500' : 'bg-gradient-to-r from-purple-600 to-pink-600'}`}>
-        <h3 className="text-white font-bold text-base sm:text-lg text-center">
+        <p className="text-white font-bold text-base sm:text-lg text-center">
           {step === 4 ? 'Demande envoyee !' : 'Devis instantane'}
-        </h3>
+        </p>
         <p className="text-white/80 text-[10px] sm:text-xs text-center mt-0.5">
           {step === 4 ? 'Merci pour votre confiance' : 'On revient vers vous sous 24h'}
         </p>
@@ -263,7 +263,7 @@ const ContactForm = () => {
                     )}
                   </div>
                   <span className={`mt-1 text-[9px] sm:text-[10px] font-medium transition-all duration-300 ${
-                    s.num < step ? 'text-purple-500' : s.num === step ? 'text-purple-600 font-semibold' : 'text-slate-400'
+                    s.num < step ? 'text-purple-600' : s.num === step ? 'text-purple-700 font-semibold' : 'text-slate-600'
                   }`}>
                     {s.label}
                   </span>

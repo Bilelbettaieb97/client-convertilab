@@ -276,7 +276,7 @@ const Navigation = () => {
 
           {/* CTA Buttons - Desktop */}
           <div className="hidden lg:flex items-center space-x-3">
-            <Button asChild variant="outline" className="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-5 py-2 font-semibold transition-all duration-300 transform hover:scale-105">
+            <Button asChild variant="outline" className="border-2 border-green-600 text-green-700 hover:bg-green-600 hover:text-white px-5 py-2 font-semibold transition-all duration-300 transform hover:scale-105">
               <Link href="/seo-check">
                 <Search className="mr-2 w-4 h-4" />
                 Audit SEO Gratuit
@@ -375,7 +375,7 @@ const Navigation = () => {
 
               {/* CTA Mobile */}
               <div className="pt-3 space-y-2 border-t border-gray-100 mt-2">
-                <Button asChild variant="outline" className="w-full border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white font-semibold">
+                <Button asChild variant="outline" className="w-full border-2 border-green-600 text-green-700 hover:bg-green-600 hover:text-white font-semibold">
                   <Link href="/seo-check" onClick={() => setIsMenuOpen(false)}>
                     <Search className="mr-2 w-4 h-4" /> Audit SEO Gratuit
                   </Link>

@@ -59,7 +59,7 @@ export default function TrustBar() {
               {[...logos, ...logos].map((logo, i) => (
                 <div
                   key={`${logo}-${i}`}
-                  className="flex items-center justify-center whitespace-nowrap text-lg sm:text-xl font-bold text-gray-400 hover:text-purple-600 transition-colors"
+                  className="flex items-center justify-center whitespace-nowrap text-lg sm:text-xl font-bold text-gray-500 hover:text-purple-600 transition-colors"
                 >
                   {logo}
                 </div>
@@ -69,7 +69,7 @@ export default function TrustBar() {
               {[...logos, ...logos].map((logo, i) => (
                 <div
                   key={`${logo}-dup-${i}`}
-                  className="flex items-center justify-center whitespace-nowrap text-lg sm:text-xl font-bold text-gray-400 hover:text-purple-600 transition-colors"
+                  className="flex items-center justify-center whitespace-nowrap text-lg sm:text-xl font-bold text-gray-500 hover:text-purple-600 transition-colors"
                 >
                   {logo}
                 </div>
