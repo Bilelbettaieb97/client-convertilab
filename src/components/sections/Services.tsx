@@ -157,6 +157,7 @@ const Services = () => {
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
+                aria-label={tab.label}
                 className={`flex items-center justify-center gap-2 py-3 px-4 sm:px-3 text-sm rounded-xl transition-all duration-300 min-h-[48px] min-w-[56px] flex-shrink-0 sm:flex-shrink sm:min-w-0 data-[state=active]:bg-gradient-to-r ${tab.gradient} data-[state=active]:text-white data-[state=active]:shadow-lg`}
               >
                 {tab.icon}
