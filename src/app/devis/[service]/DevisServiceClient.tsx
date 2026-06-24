@@ -59,37 +59,7 @@ export default function DevisServicePage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
-  // Inject structured data
-  useEffect(() => {
-    if (!devisService) return;
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Accueil", item: SITE.url },
-        { "@type": "ListItem", position: 2, name: "Devis", item: `${SITE.url}/devis` },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: `Devis ${devisService.name}`,
-          item: `${SITE.url}/devis/${service}`,
-        },
-      ],
-    });
-    document.head.appendChild(script);
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, [devisService, service]);
-
-  // Set page title
-  useEffect(() => {
-    if (devisService) {
-      document.title = `Devis ${devisService.name} Gratuit | ${SITE.name}`;
-    }
-  }, [devisService]);
+  // Title is set server-side via generateMetadata — no client override needed
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));

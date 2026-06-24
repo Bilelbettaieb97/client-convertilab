@@ -19,8 +19,15 @@ export const metadata: Metadata = {
   description:
     "Contactez notre agence web à Paris & Rueil-Malmaison. Devis gratuit sous 24h, consultation 30 min offerte. 4.9★ sur Trustpilot. Tél : 06 16 47 72 45.",
   keywords:
-    "contact agence web Paris, devis site internet Rueil-Malmaison, agence web Ile-de-France, creation site web Paris, consultation gratuite",
+    "contact agence web Paris, devis site internet Rueil-Malmaison, agence web Île-de-France, création site web Paris, consultation gratuite",
   alternates: { canonical: `${SITE.url}/contact` },
+  openGraph: {
+    title: "Contactez ConvertiLab — Devis Gratuit sous 24h",
+    description:
+      "Agence web Paris & Rueil-Malmaison. Devis gratuit sous 24h, consultation 30 min offerte. 4.9★ Trustpilot. +150 clients accompagnés.",
+    url: `${SITE.url}/contact`,
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
@@ -43,6 +50,21 @@ export default function ContactPage() {
     ...STRUCTURED_DATA.localBusiness,
   };
 
+  const contactPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contactez ConvertiLab",
+    url: `${SITE.url}/contact`,
+    description: "Formulaire de contact et demande de devis pour la création de site web à Paris et en Île-de-France.",
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Contact", item: `${SITE.url}/contact` },
+      ],
+    },
+  };
+
   return (
     <div className="min-h-screen">
       <script
@@ -52,6 +74,10 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageJsonLd) }}
       />
       <Navigation />
 
@@ -79,11 +105,11 @@ export default function ContactPage() {
         <section className="py-12 bg-slate-50 dark:bg-slate-950">
           <div className="container mx-auto px-4 sm:px-6">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 text-slate-900 dark:text-white">
-              Notre agence en Ile-de-France
+              Notre agence en Île-de-France
             </h2>
             <p className="text-center text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
-              Bases a Rueil-Malmaison (92), nous accompagnons les entreprises a
-              Paris, en Ile-de-France et partout en France.
+              Basés à Rueil-Malmaison (92), nous accompagnons les entreprises à
+              Paris, en Île-de-France et partout en France.
             </p>
             <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-800 max-w-4xl mx-auto">
               <iframe
@@ -100,7 +126,7 @@ export default function ContactPage() {
             <div className="text-center mt-6 text-sm text-slate-500 dark:text-slate-400">
               <p>
                 1 Rue du 4 Septembre, 92500 Rueil-Malmaison | +33 6 16 47 72 45
-                | Contact@convertilab.com
+                | contact@convertilab.com
               </p>
             </div>
           </div>

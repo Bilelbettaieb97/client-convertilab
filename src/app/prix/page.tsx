@@ -11,10 +11,12 @@ export const metadata: Metadata = {
     "Sites web à partir de 500€, e-commerce dès 800€, SEO et Google Ads sur devis. Tarifs transparents, sans frais cachés. Devis gratuit sous 24h.",
   alternates: { canonical: `${SITE.url}/prix` },
   openGraph: {
-    title: "Tarifs Création Site Web | ConvertiLab",
+    title: "Tarifs Création Site Web 2026 | ConvertiLab",
     description:
       "Sites web à partir de 500€, e-commerce dès 800€, SEO et Google Ads sur devis. Tarifs transparents, sans frais cachés. Devis gratuit sous 24h.",
     url: `${SITE.url}/prix`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
   },
 };
 
@@ -27,12 +29,55 @@ const breadcrumbSchema = {
   ],
 };
 
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Tarifs création site web ConvertiLab",
+  description: "Tous nos forfaits de création de site web avec leurs prix et fonctionnalités incluses.",
+  url: `${SITE.url}/prix`,
+  itemListElement: pricingPages
+    .filter((p) => p.price !== "Sur devis")
+    .map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Offer",
+        name: p.name,
+        description: p.description,
+        price: p.price,
+        priceCurrency: "EUR",
+        url: `${SITE.url}/prix/${p.slug}`,
+        seller: { "@type": "Organization", name: SITE.name, url: SITE.url },
+        availability: "https://schema.org/InStock",
+      },
+    })),
+};
+
+const prixFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Quel est le prix d'un site vitrine professionnel ?", acceptedAnswer: { "@type": "Answer", text: `Un site vitrine professionnel chez ConvertiLab démarre à ${PRICING.vitrine.from}€. Ce forfait inclut le design sur-mesure, jusqu'à 5 pages, l'optimisation SEO, le formulaire de contact, l'hébergement première année et un certificat SSL.` } },
+    { "@type": "Question", name: "Peut-on payer son site web en plusieurs fois ?", acceptedAnswer: { "@type": "Answer", text: "Oui. ConvertiLab propose le paiement en 3 fois sans frais pour tous les forfaits, ainsi qu'une offre mensuelle à partir de 39€/mois. Aucun engagement minimum sur l'offre mensuelle." } },
+    { "@type": "Question", name: "Y a-t-il des frais cachés après la livraison ?", acceptedAnswer: { "@type": "Answer", text: "Non. Le devis est fixe et final. Les seuls coûts récurrents sont l'hébergement (5 à 15€/mois) et le nom de domaine (10€/an), gérés directement par vous ou via nos forfaits de maintenance." } },
+    { "@type": "Question", name: "Combien coûte un site e-commerce ?", acceptedAnswer: { "@type": "Answer", text: `Un site e-commerce chez ConvertiLab démarre à ${PRICING.ecommerce.from}€. Ce forfait inclut le catalogue produits, le panier, le paiement sécurisé Stripe, la gestion des commandes et un espace admin.` } },
+  ],
+};
+
 export default function PrixPage() {
   return (
     <div className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(prixFaqSchema) }}
       />
       <Navigation />
 
@@ -169,6 +214,12 @@ export default function PrixPage() {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
+              </Link>
+              <Link
+                href="/estimation-prix-site-web"
+                className="inline-flex items-center gap-2 bg-white/10 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition-colors border border-white/30"
+              >
+                Estimer mon budget en 2 min
               </Link>
             </div>
           </div>

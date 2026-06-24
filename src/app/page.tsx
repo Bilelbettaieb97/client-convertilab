@@ -130,42 +130,18 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Combien coûte la création d'un site web ?",
+      name: "ConvertiLab s'occupe-t-il aussi des textes et des visuels ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Nos tarifs démarrent à partir de 500€ pour une landing page et à partir de 500€ pour un site vitrine complet. Possibilité de paiement en mensualités.",
+        text: "Oui. Nous rédigeons tous les textes de votre site, optimisés pour le SEO et adaptés à votre secteur. Nous sélectionnons les visuels (photos Unsplash, illustrations). Vous n'avez qu'à valider — zéro rédaction de votre côté si vous le souhaitez.",
       },
     },
     {
       "@type": "Question",
-      name: "En combien de temps mon site sera-t-il livré ?",
+      name: "Travaillez-vous avec des entreprises hors Île-de-France ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Une landing page est livrée en 5-7 jours, un site vitrine en 2-3 semaines, un site e-commerce en 3-4 semaines.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Je n'ai pas de textes ni de contenu, vous pouvez vous en charger ?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Bien sûr ! Nous rédigeons tous les textes de votre site optimisés pour le SEO. Nous sélectionnons aussi les visuels. Vous n'avez qu'à valider.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Avec quelle technologie construisez-vous les sites ?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Nous utilisons Next.js (React), le framework utilisé par Netflix, Nike, Uber. Résultat : des sites ultra-rapides, sécurisés, optimisés SEO et 100% sur-mesure.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Je peux payer en plusieurs fois ?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Oui ! Nous proposons le paiement en 2 à 4 mensualités sans frais. Vous pouvez aussi opter pour notre offre mensuelle à partir de 39€/mois.",
+        text: "Oui. Nous accompagnons des clients dans toute la France — Paris, Lyon, Marseille, Bordeaux, Nantes et partout en province. Tout se passe en visio : découverte, validation du design, formation. La localisation n'est pas un obstacle.",
       },
     },
   ],
@@ -193,37 +169,8 @@ const reviewsSchema = {
     ratingValue: SITE.reviews.rating,
     reviewCount: SITE.reviews.count,
     bestRating: "5",
+    worstRating: "1",
   },
-  review: [
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Marie Dubois" },
-      datePublished: "2026-02-15",
-      reviewBody: "Notre chiffre d'affaires en ligne a augmenté de 250% grâce à leur stratégie digitale !",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Thomas Laurent" },
-      datePublished: "2026-02-22",
-      reviewBody: "50+ leads qualifiés par mois grâce aux Meta Ads et au social media.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Sophie Martin" },
-      datePublished: "2026-03-05",
-      reviewBody: "On est passé de 5 à 30 demandes de devis par semaine avec le SEO + Google Ads.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Alexandre Chen" },
-      datePublished: "2026-03-18",
-      reviewBody: "Notre coût par acquisition a baissé de 60% grâce à leur approche data-driven.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    },
-  ],
 };
 
 const webSiteSchema = {
@@ -312,7 +259,7 @@ export default function HomePage() {
             cardHeading="100% responsive, 100% rapide."
             cardDescription={
               <>
-                <span className="text-white font-semibold">ConvertiLab</span> cree des sites web optimises mobile-first : design premium, vitesse de chargement sous 2s, et conversions maximales sur smartphone.
+                <span className="text-white font-semibold">ConvertiLab</span> crée des sites web optimisés mobile-first : design premium, vitesse de chargement sous 2s, et conversions maximales sur smartphone.
               </>
             }
             metricValue={98}
