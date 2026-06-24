@@ -37,7 +37,6 @@ const staticRoutes = [
   "/blog",
   "/offre-speciale",
   "/offre-mensuelle",
-  "/offre-mensuelle/devis",
   "/demande-maquette",
   "/estimation-prix-site-web",
   "/politique-de-confidentialite",
@@ -57,9 +56,12 @@ const staticRoutes = [
   "/outils",
 ];
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteLastModified = new Date();
+// Date de la dernière mise à jour significative du site (pages clés)
+const SITE_LAST_UPDATED = new Date("2026-05-01");
+// Date de création des templates programmatiques (villes, glossaire, solutions…)
+const TEMPLATES_CREATED = new Date("2026-01-01");
 
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const highPriorityRoutes = new Set([
     "", "/services", "/services/sites-web", "/services/sea", "/services/seo",
     "/prix", "/contact", "/a-propos", "/portfolio", "/blog",
@@ -68,7 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${SITE.url}${route}`,
-    lastModified: siteLastModified,
+    lastModified: SITE_LAST_UPDATED,
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1.0 : highPriorityRoutes.has(route) ? 0.9 : route.startsWith("/services") ? 0.8 : 0.7,
   }));
@@ -76,56 +78,62 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Blog articles — static + Supabase (merged, no duplicates)
   const staticBlogEntries: MetadataRoute.Sitemap = blogArticles.map((a) => ({
     url: `${SITE.url}/blog/${a.slug}`,
-    lastModified: siteLastModified,
-    changeFrequency: "weekly" as const,
+    lastModified: new Date(a.publishedAt),
+    changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
   const staticBlogSlugs = new Set(blogArticles.map((a) => a.slug));
 
   let supabaseBlogEntries: MetadataRoute.Sitemap = [];
-  try {
-    const { createClient } = await import("@supabase/supabase-js");
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL || "",
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
-    );
-    const { data: articles } = await supabase
-      .from("blog_articles")
-      .select("slug, updated_at")
-      .eq("published", true);
-    if (articles) {
-      supabaseBlogEntries = articles
-        .filter((a) => !staticBlogSlugs.has(a.slug))
-        .map((a) => ({
-        url: `${SITE.url}/blog/${a.slug}`,
-        lastModified: new Date(a.updated_at),
-        changeFrequency: "weekly" as const,
-        priority: 0.6,
-      }));
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (supabaseUrl && supabaseKey) {
+    try {
+      const { createClient } = await import("@supabase/supabase-js");
+      const supabase = createClient(supabaseUrl, supabaseKey);
+      const { data: articles, error } = await supabase
+        .from("blog_articles")
+        .select("slug, updated_at")
+        .eq("published", true);
+      if (error) {
+        console.warn("[sitemap] Supabase blog fetch failed:", error.message);
+      } else if (articles) {
+        supabaseBlogEntries = articles
+          .filter((a) => !staticBlogSlugs.has(a.slug))
+          .map((a) => ({
+            url: `${SITE.url}/blog/${a.slug}`,
+            lastModified: new Date(a.updated_at),
+            changeFrequency: "monthly" as const,
+            priority: 0.6,
+          }));
+      }
+    } catch (err) {
+      console.warn("[sitemap] Unexpected Supabase error:", err);
     }
-  } catch {
-    // Fallback: no blog entries in sitemap
+  } else {
+    console.warn("[sitemap] Supabase env vars missing — skipping dynamic blog entries");
   }
 
   const cityEntries: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${SITE.url}/agence-web/${city.slug}`,
-    lastModified: siteLastModified,
+    lastModified: TEMPLATES_CREATED,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
   const sectorEntries: MetadataRoute.Sitemap = sectors.map((s) => ({
     url: `${SITE.url}/solutions/${s.slug}`,
-    lastModified: siteLastModified,
+    lastModified: TEMPLATES_CREATED,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
   const glossaryEntries: MetadataRoute.Sitemap = [
-    { url: `${SITE.url}/glossaire`, lastModified: siteLastModified, changeFrequency: "monthly" as const, priority: 0.6 },
+    { url: `${SITE.url}/glossaire`, lastModified: TEMPLATES_CREATED, changeFrequency: "monthly" as const, priority: 0.6 },
     ...glossaryTerms.map((t) => ({
       url: `${SITE.url}/glossaire/${t.slug}`,
-      lastModified: siteLastModified,
+      lastModified: TEMPLATES_CREATED,
       changeFrequency: "monthly" as const,
       priority: 0.5,
     })),
@@ -140,7 +148,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((city) => creationSiteTargetSlugs.includes(city.slug))
     .map((city) => ({
       url: `${SITE.url}/creation-site-internet/${city.slug}`,
-      lastModified: siteLastModified,
+      lastModified: TEMPLATES_CREATED,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     }));
@@ -149,35 +157,35 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const guideEntries: MetadataRoute.Sitemap = guides.map((g) => ({
     url: `${SITE.url}/guide/${g.slug}`,
-    lastModified: siteLastModified,
+    lastModified: TEMPLATES_CREATED,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
   const comparatifEntries: MetadataRoute.Sitemap = comparisons.map((c) => ({
     url: `${SITE.url}/comparatifs/${c.slug}`,
-    lastModified: siteLastModified,
+    lastModified: TEMPLATES_CREATED,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
   const prixEntries: MetadataRoute.Sitemap = pricingPages.map((p) => ({
     url: `${SITE.url}/prix/${p.slug}`,
-    lastModified: siteLastModified,
+    lastModified: TEMPLATES_CREATED,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
   const caseStudyEntries: MetadataRoute.Sitemap = caseStudies.map((cs) => ({
     url: `${SITE.url}/etude-de-cas/${cs.slug}`,
-    lastModified: siteLastModified,
+    lastModified: TEMPLATES_CREATED,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
   const devisEntries: MetadataRoute.Sitemap = devisServices.map((d) => ({
     url: `${SITE.url}/devis/${d.slug}`,
-    lastModified: siteLastModified,
+    lastModified: TEMPLATES_CREATED,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

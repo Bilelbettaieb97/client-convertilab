@@ -3,6 +3,7 @@ import { SITE, PRICING } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import SiteEcommerceContent from "./SiteEcommerceContent";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
   title: "Création Boutique en Ligne Paris | E-commerce dès 800€",
@@ -22,7 +23,7 @@ const schemas = [
     { "@type": "ListItem", "position": 3, "name": "Sites Web", "item": `${SITE.url}/services/sites-web` },
     { "@type": "ListItem", "position": 4, "name": "E-commerce", "item": `${SITE.url}/services/sites-web/site-ecommerce` },
   ]},
-  { "@context": "https://schema.org", "@type": "Service", "name": "Creation Site E-commerce", "description": "Boutique en ligne professionnelle avec paiement securise, gestion des stocks et SEO integre.", "url": `${SITE.url}/services/sites-web/site-ecommerce`, "provider": { "@type": "Organization", "name": SITE.name }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "47", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": PRICING.ecommerce.from, "priceCurrency": "EUR", "availability": "https://schema.org/InStock" } },
+  { "@context": "https://schema.org", "@type": "Service", "name": "Creation Site E-commerce", "description": "Boutique en ligne professionnelle avec paiement securise, gestion des stocks et SEO integre.", "url": `${SITE.url}/services/sites-web/site-ecommerce`, "provider": { "@type": "Organization", "name": SITE.name }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": SITE.reviews.rating, "reviewCount": SITE.reviews.count, "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": PRICING.ecommerce.from, "priceCurrency": "EUR", "availability": "https://schema.org/InStock" } },
 ];
 
 export default function SiteEcommercePage() {
@@ -31,6 +32,7 @@ export default function SiteEcommercePage() {
       {schemas.map((s, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />)}
       <Navigation />
       <SiteEcommerceContent />
+      <RelatedServicesSection exclude={["/services/sites-web/site-ecommerce"]} />
       <Footer />
     </div>
   );

@@ -98,7 +98,7 @@ export default function SpeedCheckPage() {
           <div className="relative max-w-4xl mx-auto text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              100% Gratuit — Sans engagement
+              100% Gratuit, sans engagement
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
@@ -175,7 +175,7 @@ export default function SpeedCheckPage() {
             <div className="flex flex-wrap items-center justify-center gap-8 text-white/30 text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-yellow-400">{"\u2605\u2605\u2605\u2605\u2605"}</span>
-                <span>4.9/5 — 47 avis</span>
+                <span>4.9/5 sur 15 avis</span>
               </div>
               <div>+150 sites crees</div>
               <div>+50 clients actifs</div>

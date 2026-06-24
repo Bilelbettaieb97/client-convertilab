@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   keywords:
     "devis site vitrine, site internet 39 euros, creation site web devis",
   alternates: { canonical: `${SITE.url}/offre-mensuelle/devis` },
+  robots: { index: false, follow: true },
 };
 
 export default function DevisPage() {

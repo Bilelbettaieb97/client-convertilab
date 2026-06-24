@@ -58,7 +58,7 @@ export const Header = () => {
       <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-purple-500/10 backdrop-blur-md border border-purple-500/30">
         <Sparkles className="w-3.5 h-3.5 text-purple-400" />
         <span className="text-xs font-semibold uppercase tracking-wider text-purple-300">
-          Notre portfolio — 150+ projets livrés
+          Notre portfolio, 150+ projets livrés
         </span>
       </div>
       <h1 className="text-4xl md:text-7xl font-black text-white leading-[0.95] tracking-tight">
@@ -69,7 +69,7 @@ export const Header = () => {
         </span>
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-white/60 leading-relaxed">
-        Découvrez nos dernières réalisations. Sites vitrines, e-commerce, landing pages — chaque projet est pensé pour convertir et générer du business.
+        Découvrez nos dernières réalisations. Sites vitrines, e-commerce, landing pages. Chaque projet est pensé pour convertir et générer du business.
       </p>
       <div className="mt-10 flex flex-wrap items-center gap-4">
         <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-7 py-3.5 rounded-full font-bold shadow-2xl shadow-purple-500/40 hover:shadow-purple-500/70 hover:scale-105 transition-all flex items-center gap-2">

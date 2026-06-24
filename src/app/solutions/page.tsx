@@ -43,7 +43,7 @@ export default function SolutionsPage() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">votre métier</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Chaque secteur a ses spécificités. Nous créons des sites sur-mesure qui répondent aux besoins précis de votre activité — design adapté, fonctionnalités métier, SEO sectoriel.
+            Chaque secteur a ses spécificités. Nous créons des sites sur-mesure qui répondent aux besoins précis de votre activité : design adapté, fonctionnalités métier, SEO sectoriel.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border"><Zap className="w-4 h-4 text-purple-500" /> Livré en 7 jours</span>

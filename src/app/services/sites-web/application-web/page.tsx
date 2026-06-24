@@ -3,6 +3,7 @@ import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import ApplicationWebContent from "./ApplicationWebContent";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
   title: "Application Web Sur-Mesure Paris | SaaS & Portails Clients",
@@ -30,6 +31,7 @@ export default function ApplicationWebPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navigation />
       <ApplicationWebContent />
+      <RelatedServicesSection exclude={["/services/sites-web/application-web"]} />
       <Footer />
     </div>
   );

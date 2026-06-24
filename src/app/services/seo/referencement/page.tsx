@@ -3,6 +3,7 @@ import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import ReferencementContent from "./ReferencementContent";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
   title: "Référencement SEO Paris | Agence SEO Page 1 Google",
@@ -34,8 +35,8 @@ const serviceSchema = {
   areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "47",
+    ratingValue: SITE.reviews.rating,
+    reviewCount: SITE.reviews.count,
     bestRating: "5",
     worstRating: "1",
   },
@@ -49,5 +50,6 @@ const serviceSchema = {
 
 export default function ReferencementPage() {
   return (<div className="min-h-screen"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><ReferencementContent /><Footer /></div>);
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><ReferencementContent /><RelatedServicesSection exclude={["/services/seo/referencement"]} />
+      <Footer /></div>);
 }

@@ -156,7 +156,7 @@ export default function SpeedCheckForm() {
 
             <div className="flex items-center gap-3 mt-4 text-xs text-white/30">
               <Shield className="w-4 h-4" />
-              <span>Analyse 100% gratuite et confidentielle — Aucune modification sur votre site</span>
+              <span>Analyse 100% gratuite et confidentielle. Aucune modification sur votre site.</span>
             </div>
 
             <Button
@@ -348,7 +348,7 @@ export default function SpeedCheckForm() {
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                     <div className="h-full bg-green-500 rounded-full w-full" />
                   </div>
-                  <p className="text-xs text-green-400 mt-2">100% — Analyse complete</p>
+                  <p className="text-xs text-green-400 mt-2">100% Analyse complète</p>
                 </div>
               </>
             )}
@@ -372,7 +372,7 @@ export default function SpeedCheckForm() {
                 <div className="text-white/50 text-sm">sur 100</div>
               </motion.div>
               <div className={`text-3xl font-bold mt-2 ${scoreColor(result.scores.global)}`}>
-                Grade {result.grade} — {result.gradeLabel}
+                Grade {result.grade} : {result.gradeLabel}
               </div>
               <p className="text-white/40 text-sm mt-2">{result.domain}</p>
             </div>
@@ -468,7 +468,7 @@ export default function SpeedCheckForm() {
                 Prendre rendez-vous gratuit <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-white/30 text-xs mt-3">
-                Consultation de 30 min offerte — Sans engagement
+                Consultation de 30 min offerte, sans engagement
               </p>
             </div>
           </motion.div>

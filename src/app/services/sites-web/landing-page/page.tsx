@@ -3,6 +3,7 @@ import { SITE, PRICING } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import LandingPageContent from "./LandingPageContent";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
   title: "Création Landing Page Paris | Haute Conversion en 5 jours",
@@ -49,8 +50,8 @@ const serviceSchema = {
   "offers": { "@type": "Offer", "price": PRICING.landing.from, "priceCurrency": "EUR" ,
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "47",
+      ratingValue: SITE.reviews.rating,
+      reviewCount: SITE.reviews.count,
       bestRating: "5",
       worstRating: "1",
     }
@@ -65,6 +66,7 @@ export default function LandingPagePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navigation />
       <LandingPageContent />
+      <RelatedServicesSection exclude={["/services/sites-web/landing-page"]} />
       <Footer />
     </div>
   );

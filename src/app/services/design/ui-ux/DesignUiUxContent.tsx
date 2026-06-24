@@ -43,8 +43,8 @@ export default function DesignUiUxContent() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-foreground">Pourquoi le design UI/UX détermine vos conversions</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>Une interface mal conçue coûte cher : <strong>88% des utilisateurs</strong> ne reviennent pas sur un site après une mauvaise expérience. À l&apos;inverse, chaque euro investi dans le design UX génère en moyenne <strong>100€ de retour</strong> selon le Forrester Research — soit un ROI de 9 900%.</p>
-                <p>Le design UI (User Interface) concerne l&apos;aspect visuel — couleurs, typographies, mise en page, micro-animations. Le design UX (User Experience) concerne la logique de navigation — comment l&apos;utilisateur trouve ce qu&apos;il cherche, complète une action, se sent à l&apos;aise sur votre interface. Les deux sont indissociables.</p>
+                <p>Une interface mal conçue coûte cher : <strong>88% des utilisateurs</strong> ne reviennent pas sur un site après une mauvaise expérience. À l&apos;inverse, chaque euro investi dans le design UX génère en moyenne <strong>100€ de retour</strong> selon le Forrester Research, soit un ROI de 9 900%.</p>
+                <p>Le design UI (User Interface) concerne l&apos;aspect visuel : couleurs, typographies, mise en page, micro-animations. Le design UX (User Experience) concerne la logique de navigation et la façon dont l&apos;utilisateur trouve ce qu&apos;il cherche, complète une action et se sent à l&apos;aise sur votre interface. Les deux sont indissociables.</p>
                 <p>Notre approche combine <strong>recherche utilisateur quantitative et qualitative</strong> : heatmaps, tests utilisateurs, analyse des parcours d&apos;achat, A/B testing. Chaque décision de design est fondée sur des données réelles, pas sur des suppositions.</p>
               </div>
             </div>

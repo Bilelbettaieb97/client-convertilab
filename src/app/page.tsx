@@ -76,8 +76,8 @@ const localBusinessSchema = {
   priceRange: "€€",
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "47",
+    ratingValue: SITE.reviews.rating,
+    reviewCount: SITE.reviews.count,
     bestRating: "5",
   },
 };
@@ -186,8 +186,8 @@ const reviewsSchema = {
   priceRange: "€€",
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "47",
+    ratingValue: SITE.reviews.rating,
+    reviewCount: SITE.reviews.count,
     bestRating: "5",
   },
   review: [

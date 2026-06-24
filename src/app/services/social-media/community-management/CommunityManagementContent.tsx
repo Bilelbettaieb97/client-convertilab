@@ -106,7 +106,7 @@ export default function CommunityManagementContent() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Pourquoi déléguer votre community management ?</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>Les réseaux sociaux exigent une présence quotidienne et cohérente. Publier 3 à 5 fois par semaine, répondre aux commentaires, interagir avec les abonnés, analyser les statistiques, adapter la stratégie aux tendances — tout cela représente <strong>15 à 20 heures par semaine</strong> qu&apos;un entrepreneur ne peut pas se permettre de sacrifier.</p>
+                <p>Les réseaux sociaux exigent une présence quotidienne et cohérente. Publier 3 à 5 fois par semaine, répondre aux commentaires, interagir avec les abonnés, analyser les statistiques, adapter la stratégie aux tendances : tout cela représente <strong>15 à 20 heures par semaine</strong> qu&apos;un entrepreneur ne peut pas se permettre de sacrifier.</p>
                 <p>Un community manager professionnel connaît les algorithmes de chaque plateforme, sait quels formats performent (Reels, Stories, Carrousels), à quelle heure publier pour maximiser la portée, et comment transformer des abonnés passifs en clients actifs. Cette expertise s&apos;acquiert en années, pas en quelques jours de formation YouTube.</p>
                 <p>Nos clients qui délèguent leur community management constatent en moyenne <strong>+340% d&apos;engagement</strong> et <strong>×2,5 de croissance d&apos;abonnés</strong> dans les 3 premiers mois. Parce que la régularité, la qualité de contenu et la réactivité font une différence radicale par rapport à une publication sporadique et improvisée.</p>
               </div>

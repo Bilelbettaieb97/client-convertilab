@@ -184,7 +184,7 @@ export default function ComparateurForm() {
 
             <div className="flex items-center gap-3 mt-4 text-xs text-white/30">
               <Shield className="w-4 h-4" />
-              <span>Analyse 100% gratuite et confidentielle — Aucune modification sur les sites</span>
+              <span>Analyse 100% gratuite et confidentielle. Aucune modification sur les sites.</span>
             </div>
 
             <Button
@@ -386,7 +386,7 @@ export default function ComparateurForm() {
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                     <div className="h-full bg-green-500 rounded-full w-full" />
                   </div>
-                  <p className="text-xs text-green-400 mt-2">100% — Comparaison complete</p>
+                  <p className="text-xs text-green-400 mt-2">100% Comparaison complète</p>
                 </div>
               </>
             )}
@@ -505,7 +505,7 @@ export default function ComparateurForm() {
               <TrendingUp className="w-8 h-8 text-purple-400 mx-auto mb-3" />
               <h3 className="text-white font-bold text-lg mb-1">
                 {result.winner === "B"
-                  ? "On vous met au niveau — ou au-dessus"
+                  ? "On vous met au niveau ou au-dessus"
                   : "Consolidez votre avantage"}
               </h3>
               <p className="text-white/50 text-sm mb-4">
@@ -518,7 +518,7 @@ export default function ComparateurForm() {
                 Prendre rendez-vous gratuit <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-white/30 text-xs mt-3">
-                Consultation de 30 min offerte — Sans engagement
+                Consultation de 30 min offerte, sans engagement
               </p>
             </div>
           </motion.div>

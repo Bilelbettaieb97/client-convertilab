@@ -27,7 +27,7 @@ export default function FinalCTA() {
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold">
             <Sparkles className="w-4 h-4 text-yellow-400" />
-            <span>Offre limitée — 3 créneaux disponibles ce mois-ci</span>
+            <span>Offre limitée, 3 créneaux disponibles ce mois-ci</span>
           </div>
         </div>
 

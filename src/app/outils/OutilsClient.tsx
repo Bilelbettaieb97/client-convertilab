@@ -48,7 +48,7 @@ const tools = [
     icon: Palette,
     badge: null,
     badgeColor: "",
-    desc: "Évaluez l'expérience utilisateur et le design de votre site. Lisibilité, confiance, conversion — score sur 100 avec conseils.",
+    desc: "Évaluez l'expérience utilisateur et le design de votre site. Lisibilité, confiance, conversion. Score sur 100 avec conseils.",
     highlights: ["Score UX / 100", "Analyse confiance", "Conseils conversion"],
     color: "from-pink-500 to-rose-500",
     bg: "bg-pink-50",
@@ -128,7 +128,7 @@ const tools = [
     icon: GitCompare,
     badge: null,
     badgeColor: "",
-    desc: "Comparez votre site avec celui de vos concurrents. Vitesse, SEO, design, mobile — qui gagne point par point ?",
+    desc: "Comparez votre site avec celui de vos concurrents. Vitesse, SEO, design, mobile. Qui gagne point par point ?",
     highlights: ["Comparaison point par point", "SEO vs concurrents", "Score mobile"],
     color: "from-orange-500 to-amber-500",
     bg: "bg-orange-50",
@@ -171,7 +171,7 @@ export default function OutilsClient() {
               className="inline-flex items-center gap-2 bg-green-100 text-green-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-6"
             >
               <Sparkles className="w-3.5 h-3.5" />
-              8 outils gratuits — sans inscription
+              8 outils gratuits, sans inscription
             </motion.div>
 
             <motion.h1

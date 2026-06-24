@@ -3,6 +3,7 @@ import { SITE, PRICING } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import SiteVitrineContent from "./SiteVitrineContent";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
   title: "Création Site Vitrine Paris | Livraison 7 jours dès 500€",
@@ -22,7 +23,7 @@ const schemas = [
     { "@type": "ListItem", "position": 3, "name": "Sites Web", "item": `${SITE.url}/services/sites-web` },
     { "@type": "ListItem", "position": 4, "name": "Site Vitrine", "item": `${SITE.url}/services/sites-web/site-vitrine` },
   ]},
-  { "@context": "https://schema.org", "@type": "Service", "name": "Creation Site Vitrine", "description": "Site vitrine professionnel sur-mesure, responsive et optimise SEO. Livraison en 10-15 jours.", "url": `${SITE.url}/services/sites-web/site-vitrine`, "provider": { "@type": "Organization", "name": SITE.name }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "47", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": PRICING.vitrine.from, "priceCurrency": "EUR", "availability": "https://schema.org/InStock" } },
+  { "@context": "https://schema.org", "@type": "Service", "name": "Creation Site Vitrine", "description": "Site vitrine professionnel sur-mesure, responsive et optimise SEO. Livraison en 10-15 jours.", "url": `${SITE.url}/services/sites-web/site-vitrine`, "provider": { "@type": "Organization", "name": SITE.name }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": SITE.reviews.rating, "reviewCount": SITE.reviews.count, "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": PRICING.vitrine.from, "priceCurrency": "EUR", "availability": "https://schema.org/InStock" } },
 ];
 
 export default function SiteVitrinePage() {
@@ -31,6 +32,7 @@ export default function SiteVitrinePage() {
       {schemas.map((s, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />)}
       <Navigation />
       <SiteVitrineContent />
+      <RelatedServicesSection exclude={["/services/sites-web/site-vitrine"]} />
       <Footer />
     </div>
   );

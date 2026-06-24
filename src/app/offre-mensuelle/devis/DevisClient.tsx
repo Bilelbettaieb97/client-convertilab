@@ -57,12 +57,12 @@ const offers = [
     value: "essentiel",
     name: "Essentiel",
     price: "39,50",
-    desc: "Ideal pour demarrer en ligne",
+    desc: "Idéal pour démarrer en ligne",
     features: [
-      { text: "Site vitrine jusqu'a 3 pages", highlight: false, bold: false },
+      { text: "Site vitrine jusqu'à 3 pages", highlight: false, bold: false },
       { text: "Design responsive sur-mesure", highlight: false, bold: false },
-      { text: "SEO de base — visible sur Google", highlight: false, bold: false },
-      { text: "Hebergement + nom de domaine inclus", highlight: false, bold: false },
+      { text: "SEO de base, visible sur Google", highlight: false, bold: false },
+      { text: "Hébergement + nom de domaine inclus", highlight: false, bold: false },
       { text: "Support par email", highlight: false, bold: false },
     ],
     popular: false,
@@ -75,10 +75,10 @@ const offers = [
     desc: "Le choix le plus populaire",
     features: [
       { text: "Tout de l'offre Essentiel", highlight: false, bold: false },
-      { text: "Jusqu'a 7 pages", highlight: true, bold: false },
-      { text: "SEO avance + Google My Business", highlight: true, bold: false },
-      { text: "Blog integre pour le SEO", highlight: true, bold: false },
-      { text: "Formulaire de contact avance", highlight: true, bold: false },
+      { text: "Jusqu'à 7 pages", highlight: true, bold: false },
+      { text: "SEO avancé + Google My Business", highlight: true, bold: false },
+      { text: "Blog intégré pour le SEO", highlight: true, bold: false },
+      { text: "Formulaire de contact avancé", highlight: true, bold: false },
       { text: "Support prioritaire", highlight: true, bold: false },
     ],
     popular: false,
@@ -91,10 +91,10 @@ const offers = [
     desc: "Tout inclus, sans compromis",
     features: [
       { text: "Tout de l'offre Pro", highlight: false, bold: false },
-      { text: "Pages illimitees", highlight: true, bold: false },
+      { text: "Pages illimitées", highlight: true, bold: false },
       { text: "Page admin pour modifier le contenu", highlight: true, bold: true },
-      { text: "Maintenance & mises a jour incluses", highlight: true, bold: false },
-      { text: "Support prioritaire dedie", highlight: true, bold: false },
+      { text: "Maintenance Maintenance & mises a jour incluses mises à jour incluses", highlight: true, bold: false },
+      { text: "Support prioritaire dédié", highlight: true, bold: false },
     ],
     popular: true,
     savings: "Meilleur ROI",
@@ -379,7 +379,7 @@ export default function DevisClient() {
                     <span className="text-lg">{sectors.find((s) => s.value === formData.sector)?.emoji}</span>
                     <span className="font-medium text-foreground">{sectors.find((s) => s.value === formData.sector)?.label}</span>
                     <span className="text-muted-foreground">-</span>
-                    <span className="font-semibold text-primary">{offers.find((o) => o.value === formData.offer)?.name} — {offers.find((o) => o.value === formData.offer)?.price}eur/mois</span>
+                    <span className="font-semibold text-primary">{offers.find((o) => o.value === formData.offer)?.name}, {offers.find((o) => o.value === formData.offer)?.price}eur/mois</span>
                   </div>
                   <div className="space-y-3">
                     <div className="grid grid-cols-2 gap-3">
@@ -414,8 +414,8 @@ export default function DevisClient() {
                   <h2 className="text-2xl font-bold text-foreground mb-2">Merci {formData.name.split(" ")[0]} !</h2>
                   <p className="text-sm text-muted-foreground mb-6 max-w-xs mx-auto">Votre demande a ete envoyee. Nous vous recontacterons sous <span className="font-semibold text-primary">24 heures</span>.</p>
                   <div className="bg-muted/40 rounded-xl p-4 mb-6 text-left space-y-2 text-sm">
-                    <div className="flex items-center gap-2"><Globe className="w-4 h-4 text-primary" /><span className="text-foreground">Site vitrine — {sectors.find((s) => s.value === formData.sector)?.label}</span></div>
-                    <div className="flex items-center gap-2"><Zap className="w-4 h-4 text-primary" /><span className="text-foreground">Offre {offers.find((o) => o.value === formData.offer)?.name} — {offers.find((o) => o.value === formData.offer)?.price}eur/mois</span></div>
+                    <div className="flex items-center gap-2"><Globe className="w-4 h-4 text-primary" /><span className="text-foreground">Site vitrine : {sectors.find((s) => s.value === formData.sector)?.label}</span></div>
+                    <div className="flex items-center gap-2"><Zap className="w-4 h-4 text-primary" /><span className="text-foreground">Offre {offers.find((o) => o.value === formData.offer)?.name}, {offers.find((o) => o.value === formData.offer)?.price}eur/mois</span></div>
                     <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /><span className="text-foreground">{formData.email}</span></div>
                   </div>
                   <div className="space-y-2.5">

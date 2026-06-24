@@ -78,22 +78,22 @@ const Hero = () => {
                 </span>
               </span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                en 7 Jours
+                en 7 jours
               </span>
             </h1>
 
             {/* Subheading - Benefit + Pain point */}
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed animate-fade-in">
-              Vous perdez des clients chaque jour sans site web professionnel. Nous créons des <strong className="text-purple-700">sites sur-mesure qui convertissent</strong> — design premium, SEO optimisé, livraison express.
+              Vous perdez des clients chaque jour sans site web professionnel. Nous créons des <strong className="text-purple-700">sites sur-mesure qui convertissent</strong>, design premium, SEO optimisé, livrés en express.
             </p>
 
             {/* Stats - Proof-focused */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8 animate-scale-in">
               <div className="group text-center p-3 sm:p-4 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1">
-                  +300%
+                  +280%
                 </div>
-                <div className="text-xs sm:text-sm text-gray-700 font-semibold">ROI Moyen</div>
+                <div className="text-xs sm:text-sm text-gray-700 font-semibold">CA moyen</div>
                 <div className="text-[11px] sm:text-xs text-gray-500 mt-0.5">Moyenne clients 2025</div>
               </div>
               <div className="group text-center p-3 sm:p-4 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -108,7 +108,7 @@ const Hero = () => {
                   4.9&#9733;
                 </div>
                 <div className="text-xs sm:text-sm text-gray-700 font-semibold">Avis Clients</div>
-                <div className="text-[11px] sm:text-xs text-gray-500 mt-0.5">47 avis vérifiés</div>
+                <div className="text-[11px] sm:text-xs text-gray-500 mt-0.5">15 avis vérifiés</div>
               </div>
             </div>
 
@@ -149,7 +149,7 @@ const Hero = () => {
               </div>
               <div className="glass px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-blue-200 flex items-center gap-2 shadow-lg">
                 <Users className="w-4 h-4 text-blue-600" />
-                <span className="font-semibold text-blue-700">Paris - Île-de-France</span>
+                <span className="font-semibold text-blue-700">Paris et Île-de-France</span>
               </div>
             </div>
           </div>

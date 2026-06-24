@@ -14,7 +14,7 @@ const FAQ = () => {
     },
     {
       question: "En combien de temps mon site sera-t-il livré ?",
-      answer: "Une landing page est livrée en 5-7 jours, un site vitrine en 2-3 semaines, un site e-commerce en 3-4 semaines. Nous respectons toujours les délais annoncés — c'est notre garantie."
+      answer: "Une landing page est livrée en 5 à 7 jours, un site vitrine en 2 à 3 semaines, un site e-commerce en 3 à 4 semaines. Nous respectons toujours les délais annoncés. C'est notre garantie."
     },
     {
       question: "Mon site sera-t-il optimisé pour Google (SEO) ?",
@@ -34,7 +34,7 @@ const FAQ = () => {
     },
     {
       question: "Je n'ai pas de textes ni de contenu, vous pouvez vous en charger ?",
-      answer: "Bien sûr ! Nous rédigeons tous les textes de votre site (accueil, services, à propos, etc.) optimisés pour le SEO. Nous sélectionnons aussi les visuels. Vous n'avez qu'à valider — on s'occupe de tout."
+      answer: "Bien sûr ! Nous rédigeons tous les textes de votre site (accueil, services, à propos, etc.) optimisés pour le SEO. Nous sélectionnons aussi les visuels. Vous n'avez qu'à valider. On s'occupe de tout."
     },
     {
       question: "Avec quelle technologie construisez-vous les sites ?",
@@ -98,7 +98,7 @@ const FAQ = () => {
             <div className="relative z-10">
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-bold mb-4">
                 <Zap className="w-4 h-4" />
-                Consultation gratuite — 0€
+                Consultation gratuite (0€)
               </div>
 
               <h3 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-4">

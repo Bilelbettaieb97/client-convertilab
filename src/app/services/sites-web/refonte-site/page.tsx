@@ -3,6 +3,7 @@ import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import RefonteSiteContent from "./RefonteSiteContent";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
   title: "Refonte Site Web Paris | SEO Préservé, Design Moderne | ConvertiLab",
@@ -38,8 +39,8 @@ const serviceSchema = {
   areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "47",
+    ratingValue: SITE.reviews.rating,
+    reviewCount: SITE.reviews.count,
     bestRating: "5",
     worstRating: "1",
   },
@@ -58,6 +59,7 @@ export default function RefonteSitePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navigation />
       <RefonteSiteContent />
+      <RelatedServicesSection exclude={["/services/sites-web/refonte-site"]} />
       <Footer />
     </div>
   );

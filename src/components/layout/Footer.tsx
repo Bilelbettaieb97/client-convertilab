@@ -165,7 +165,7 @@ const Footer = () => {
               <a href={SITE.trustpilot} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-1 px-3 py-1.5 bg-[#00b67a]/10 border border-[#00b67a]/30 rounded-lg hover:bg-[#00b67a]/20 transition-colors">
                 <svg className="w-4 h-4 text-[#00b67a]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg>
                 <span className="text-xs font-semibold text-[#00b67a]">4.9★ Trustpilot</span>
-                <span className="text-xs text-gray-500">47 avis</span>
+                <span className="text-xs text-gray-500">15 avis</span>
               </a>
             </div>
           </div>
@@ -228,7 +228,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-xs text-center sm:text-left">
-              &copy; {new Date().getFullYear()} ConvertiLab — Agence marketing digital Paris & Île-de-France
+              &copy; {new Date().getFullYear()} ConvertiLab, agence marketing digital Paris et Île-de-France
             </p>
             <div className="flex items-center gap-4 text-xs text-gray-500">
               <Link href="/politique-de-confidentialite" className="hover:text-purple-400 transition-colors">

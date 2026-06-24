@@ -24,6 +24,8 @@ import {
   Users,
   BarChart3,
 } from "lucide-react";
+import SuggestedArticles from "@/components/internal-links/SuggestedArticles";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 type Props = { params: Promise<{ secteur: string }> };
 
@@ -94,8 +96,8 @@ export default async function SectorPage({ params }: Props) {
     areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "47",
+      ratingValue: SITE.reviews.rating,
+      reviewCount: SITE.reviews.count,
       bestRating: "5",
       worstRating: "1",
     },
@@ -674,6 +676,8 @@ export default async function SectorPage({ params }: Props) {
         </div>
       </section>
 
+      <SuggestedArticles title="Ressources pour votre secteur" max={3} />
+      <RelatedServicesSection title="Nos services pour votre secteur" max={4} />
       <Footer />
     </div>
   );

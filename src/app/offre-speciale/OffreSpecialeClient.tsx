@@ -148,7 +148,7 @@ export default function OffreSpecialeClient() {
 
   const whyUs = [
     { icon: Globe, title: "Vous êtes propriétaire", desc: "Le site et le code source vous appartiennent. Pas d'abonnement caché, pas de dépendance." },
-    { icon: Search, title: "SEO optimisé", desc: "Meta tags, sitemap, vitesse, responsive — votre site est prêt à être trouvé sur Google dès le jour 1." },
+    { icon: Search, title: "SEO optimisé", desc: "Meta tags, sitemap, vitesse, responsive. Votre site est prêt à être trouvé sur Google dès le jour 1." },
     { icon: Zap, title: "Livré en 7 jours", desc: "Validation de la maquette sous 48h, site en ligne en 7 jours ouvrés. Garanti." },
     { icon: Smartphone, title: "100% responsive", desc: "Votre site s'adapte parfaitement à tous les écrans : mobile, tablette et ordinateur." },
     { icon: Lock, title: "Sécurisé (SSL)", desc: "Certificat HTTPS inclus, hébergement sécurisé, code propre et performant." },
@@ -179,7 +179,7 @@ export default function OffreSpecialeClient() {
       priceCurrency: "EUR",
       availability: "https://schema.org/LimitedAvailability",
     },
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "47", bestRating: "5" },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: SITE.reviews.rating, reviewCount: SITE.reviews.count, bestRating: "5" },
   };
 
   return (
@@ -204,13 +204,13 @@ export default function OffreSpecialeClient() {
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-purple-500/20 text-purple-300 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-purple-500/30">
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span className="hidden sm:inline">OFFRE LIMITÉE — </span>{spotsRemaining} PLACES
+                <span className="hidden sm:inline">OFFRE LIMITÉE </span>{spotsRemaining} PLACES
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                 Votre site web pro pour{" "}<span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">300€</span>
               </h1>
               <p className="text-base sm:text-xl text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                Un <strong className="text-white">site vitrine 5 pages</strong> ou une <strong className="text-white">landing page haute conversion</strong> — livrés en 7 jours, optimisés SEO, et <strong className="text-white">vous êtes propriétaire</strong>.
+                Un <strong className="text-white">site vitrine 5 pages</strong> ou une <strong className="text-white">landing page haute conversion</strong>, livrés en 7 jours, optimisés SEO, et <strong className="text-white">vous êtes propriétaire</strong>.
               </p>
               <p className="text-sm sm:text-lg text-green-400 font-semibold mb-6 sm:mb-8 flex items-center justify-center lg:justify-start gap-2">
                 <Shield className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" /><span>Paiement uniquement après validation.</span>
@@ -287,7 +287,7 @@ export default function OffreSpecialeClient() {
                       Votre place est réservée
                     </p>
                     <p className="text-gray-300 mb-2">
-                      {selectedType === "vitrine" ? "Site Vitrine 5 pages" : "Landing Page"} — 300€
+                      {selectedType === "vitrine" ? "Site Vitrine 5 pages" : "Landing Page"} à 300€
                     </p>
                     <div className="bg-white/5 rounded-xl p-4 border border-white/10 mb-6 text-left space-y-2">
                       <p className="text-sm text-gray-300 flex items-center gap-2">

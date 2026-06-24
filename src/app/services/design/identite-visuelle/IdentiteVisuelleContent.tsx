@@ -45,7 +45,7 @@ export default function IdentiteVisuelleContent() {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>Il faut <strong>moins de 7 secondes</strong> pour qu&apos;un prospect se fasse une première impression de votre entreprise. Cette impression est formée à 93% par des signaux visuels : votre logo, vos couleurs, votre typographie. Si ces éléments ne transmettent pas immédiatement professionnalisme, confiance et cohérence, le prospect est perdu avant d&apos;avoir lu un mot de votre offre.</p>
                 <p>Une identité visuelle forte est un investissement à long terme. Contrairement à la publicité qui s&apos;arrête dès que le budget est coupé, <strong>votre logo et votre charte graphique travaillent pour vous en permanence</strong> : sur votre site web, vos cartes de visite, vos devis, vos réseaux sociaux, vos véhicules, vos uniformes...</p>
-                <p>Notre processus de création d&apos;identité visuelle commence toujours par une phase de <strong>stratégie de marque</strong> : qui êtes-vous, qui ciblez-vous, quelles valeurs voulez-vous transmettre ? Seulement ensuite viennent les choix graphiques — des choix fondés sur une réflexion stratégique, pas sur des tendances éphémères.</p>
+                <p>Notre processus de création d&apos;identité visuelle commence toujours par une phase de <strong>stratégie de marque</strong> : qui êtes-vous, qui ciblez-vous, quelles valeurs voulez-vous transmettre ? Seulement ensuite viennent les choix graphiques, fondés sur une réflexion stratégique et non sur des tendances éphémères.</p>
               </div>
             </div>
             <div>

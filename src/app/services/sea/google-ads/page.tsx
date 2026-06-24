@@ -3,6 +3,7 @@ import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import GoogleAdsContent from "./GoogleAdsContent";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
   title: "Agence Google Ads Paris | ROAS x4.8 Garanti",
@@ -34,8 +35,8 @@ const serviceSchema = {
   areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "47",
+    ratingValue: SITE.reviews.rating,
+    reviewCount: SITE.reviews.count,
     bestRating: "5",
     worstRating: "1",
   },
@@ -49,5 +50,6 @@ const serviceSchema = {
 
 export default function GoogleAdsPage() {
   return (<div className="min-h-screen"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><GoogleAdsContent /><Footer /></div>);
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><GoogleAdsContent /><RelatedServicesSection exclude={["/services/sea/google-ads"]} />
+      <Footer /></div>);
 }

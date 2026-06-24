@@ -19,14 +19,14 @@ const About = () => {
     {
       icon: Target,
       title: "Stratégie Sur-Mesure",
-      description: "Pas de solutions toutes faites — nous construisons une stratégie marketing adaptée à votre marché et vos objectifs",
+      description: "Pas de solutions toutes faites. Nous construisons une stratégie marketing adaptée à votre marché et vos objectifs.",
       gradient: "from-blue-600 via-cyan-600 to-sky-600",
       glowColor: "shadow-blue-500/20"
     },
     {
       icon: Shield,
       title: "Accompagnement 360°",
-      description: "SEO, publicité, social media, email, branding — un seul interlocuteur pour toute votre stratégie digitale",
+      description: "SEO, publicité, social media, email, branding : un seul interlocuteur pour toute votre stratégie digitale.",
       gradient: "from-emerald-600 via-green-600 to-teal-600",
       glowColor: "shadow-emerald-500/20"
     }

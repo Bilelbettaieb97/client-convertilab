@@ -328,7 +328,7 @@ function RobotHero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-white/5 backdrop-blur-md border border-purple-500/30">
             <Sparkles className="w-3.5 h-3.5 text-purple-400" />
             <span className="text-xs font-semibold uppercase tracking-wider text-white/80">
-              Agence n°1 — Île-de-France
+              Agence n°1 en Île-de-France
             </span>
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tight mb-6">
@@ -393,7 +393,7 @@ export default function HeroLabClient() {
               <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-purple-500/10 border border-purple-500/30">
                 <Sparkles className="w-3.5 h-3.5 text-purple-400" />
                 <span className="text-xs font-semibold uppercase tracking-wider text-purple-300">
-                  Notre boîte à outils — 100% gratuit
+                  Notre boîte à outils, 100% gratuit
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.05] mb-6">

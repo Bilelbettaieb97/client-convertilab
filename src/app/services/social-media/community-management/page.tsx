@@ -3,6 +3,7 @@ import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import CommunityManagementContent from "./CommunityManagementContent";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
   title: "Community Management | Gestion Réseaux Sociaux",
@@ -42,6 +43,7 @@ export default function CommunityManagementPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navigation />
       <CommunityManagementContent />
+      <RelatedServicesSection exclude={["/services/social-media/community-management"]} />
       <Footer />
     </div>
   );

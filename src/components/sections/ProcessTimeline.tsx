@@ -60,7 +60,7 @@ const ProcessTimeline = () => {
       title: "Plan d'Action",
       description:
         "On construit votre stratégie marketing digitale personnalisée avec des objectifs clairs",
-      duration: "3-5 jours",
+      duration: "3 à 5 jours",
       gradient: "from-purple-600 via-pink-600 to-rose-600",
       glowColor: "shadow-pink-500/20",
       delay: "delay-100",
@@ -85,7 +85,7 @@ const ProcessTimeline = () => {
       title: "Mise en Place",
       description:
         "On déploie les campagnes, crée les contenus et configure les outils",
-      duration: "1-2 semaines",
+      duration: "1 à 2 semaines",
       gradient: "from-orange-600 via-amber-600 to-yellow-600",
       glowColor: "shadow-orange-500/20",
       delay: "delay-200",
@@ -296,7 +296,7 @@ const ProcessTimeline = () => {
               <span className="font-bold text-white">
                 Premiers résultats dès le 1er mois
               </span>{" "}
-              — optimisation continue pour une croissance durable
+              puis optimisation continue pour une croissance durable
             </p>
           </div>
         </div>

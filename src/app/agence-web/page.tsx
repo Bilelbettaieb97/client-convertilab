@@ -85,7 +85,7 @@ export default function AgenceWebPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">{city.name}</h3>
-                    <p className="text-xs text-gray-500">{city.department} — {city.postalCode}</p>
+                    <p className="text-xs text-gray-500">{city.department} ({city.postalCode})</p>
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 mb-3 leading-relaxed line-clamp-2">{city.description}</p>

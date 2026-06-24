@@ -3,6 +3,7 @@ import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import StrategieContent from "./StrategieContent";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
   title: "Stratégie Social Media | Plan Marketing Réseaux",
@@ -42,6 +43,7 @@ export default function StrategiePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navigation />
       <StrategieContent />
+      <RelatedServicesSection exclude={["/services/social-media/strategie"]} />
       <Footer />
     </div>
   );

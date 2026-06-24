@@ -33,21 +33,21 @@ const approachSteps = [
   },
   {
     icon: <Paintbrush className="w-5 h-5 text-primary-foreground" />,
-    title: "Design sur-mesure, 100% a vous",
+    title: "Design sur-mesure, 100% à vous",
     description:
-      "Design unique adapte a votre image. Vous etes proprietaire de votre site.",
+      "Design unique adapté à votre image. Vous êtes propriétaire de votre site.",
   },
   {
     icon: <Search className="w-5 h-5 text-primary-foreground" />,
     title: "Visible sur Google",
     description:
-      "SEO optimise des le lancement. Vos clients vous trouvent quand ils cherchent.",
+      "SEO optimisé dès le lancement. Vos clients vous trouvent quand ils cherchent.",
   },
   {
     icon: <Rocket className="w-5 h-5 text-primary-foreground" />,
     title: "En ligne en 7 jours",
     description:
-      "Hebergement, domaine et SSL inclus. On gere tout le technique.",
+      "Hébergement, domaine et SSL inclus. On gère tout le technique.",
   },
   {
     icon: <Headphones className="w-5 h-5 text-primary-foreground" />,
@@ -61,16 +61,16 @@ const withoutUs = [
   "Site sur Wix/WordPress que vous ne maitrisez pas",
   "Invisible sur Google, zero trafic",
   "Design generique deja vu 1 000 fois",
-  "Pas de support, vous etes seul",
-  "Vous n'etes pas proprietaire de votre site",
+  "Pas de support, vous êtes seul",
+  "Vous n'êtes pas propriétaire de votre site",
 ];
 
 const withUs = [
-  "Vous etes 100% proprietaire de votre site",
+  "Vous êtes 100% propriétaire de votre site",
   "Reference sur Google des la mise en ligne",
   "Design sur-mesure a votre image",
   "Support technique & modifications illimites",
-  "Hebergement premium ultra-rapide inclus",
+  "Hébergement premium ultra-rapide inclus",
 ];
 
 const testimonials = [
@@ -82,7 +82,7 @@ const testimonials = [
   },
   {
     quote:
-      "Enfin un vrai site pro dont je suis proprietaire, sans me ruiner. L'equipe est reactive et a l'ecoute.",
+      "Enfin un vrai site pro dont je suis propriétaire, sans me ruiner. L'équipe est réactive et à l'écoute.",
     name: "Marc D.",
     company: "Plombier",
   },
@@ -95,17 +95,17 @@ const testimonials = [
 ];
 
 const allFeatures = [
-  { label: "Vous etes proprietaire du site", essentiel: true, pro: true, premium: true },
+  { label: "Vous êtes propriétaire du site", essentiel: true, pro: true, premium: true },
   { label: "Design responsive sur-mesure", essentiel: true, pro: true, premium: true },
-  { label: "SEO — visible sur Google", essentiel: "Base" as string | boolean, pro: "Avance + GMB" as string | boolean, premium: "Avance + GMB" as string | boolean },
-  { label: "Hebergement & SSL inclus", essentiel: true, pro: true, premium: true },
+  { label: "SEO, visible sur Google", essentiel: "Base" as string | boolean, pro: "Avancé + GMB" as string | boolean, premium: "Avancé + GMB" as string | boolean },
+  { label: "Hébergement & SSL inclus", essentiel: true, pro: true, premium: true },
   { label: "Livraison en 7 jours", essentiel: true, pro: true, premium: true },
-  { label: "Nombre de pages", essentiel: "3 pages" as string | boolean, pro: "7 pages" as string | boolean, premium: "Illimite" as string | boolean },
-  { label: "Blog integre", essentiel: false, pro: true, premium: true },
-  { label: "Formulaire avance", essentiel: false, pro: true, premium: true },
-  { label: "Support", essentiel: "Email" as string | boolean, pro: "Prioritaire" as string | boolean, premium: "Dedie" as string | boolean },
+  { label: "Nombre de pages", essentiel: "3 pages" as string | boolean, pro: "7 pages" as string | boolean, premium: "Illimité" as string | boolean },
+  { label: "Blog intégré", essentiel: false, pro: true, premium: true },
+  { label: "Formulaire avancé", essentiel: false, pro: true, premium: true },
+  { label: "Support", essentiel: "Email" as string | boolean, pro: "Prioritaire" as string | boolean, premium: "Dédié" as string | boolean },
   { label: "Page admin modifiable", essentiel: false, pro: false, premium: true },
-  { label: "Maintenance & mises a jour", essentiel: false, pro: false, premium: true },
+  { label: "Maintenance & mises à jour", essentiel: false, pro: false, premium: true },
 ];
 
 const pricingOffers = [
@@ -114,7 +114,7 @@ const pricingOffers = [
     value: "essentiel",
     monthlyPrice: "39,50",
     oneshotPrice: "474",
-    desc: "Ideal pour demarrer en ligne",
+    desc: "Idéal pour démarrer en ligne",
     key: "essentiel" as const,
     highlight: false,
     badge: null as string | null,
@@ -160,7 +160,7 @@ export default function OffreMensuelleClient() {
       <section className="pt-28 pb-10 sm:pt-32 sm:pb-16 bg-background">
         <div className="container mx-auto px-5 sm:px-6 text-center max-w-4xl">
           <span className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-5 animate-fade-in">
-            Vous etes proprietaire de votre site
+            Vous êtes propriétaire de votre site
           </span>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.15] mb-4 animate-fade-in">
@@ -174,7 +174,7 @@ export default function OffreMensuelleClient() {
           </h1>
 
           <p className="text-muted-foreground text-sm sm:text-xl max-w-2xl mx-auto mb-2.5 animate-fade-in">
-            <strong className="text-foreground">Vous etes proprietaire</strong>{" "}
+            <strong className="text-foreground">Vous êtes propriétaire</strong>{" "}
             de votre site. Design sur-mesure, SEO optimise pour Google,
             hebergement et support inclus.
           </p>
@@ -331,7 +331,7 @@ export default function OffreMensuelleClient() {
             </span>
 
             <h2 className="text-2xl sm:text-4xl font-bold text-foreground text-center mb-8 leading-tight">
-              Arretez de louer votre site. Devenez proprietaire.
+              Arrêtez de louer votre site. Devenez propriétaire.
             </h2>
 
             <Card className="p-5 sm:p-8 bg-muted/40 border-0 shadow-none mb-4">
@@ -374,7 +374,7 @@ export default function OffreMensuelleClient() {
         <section className="py-10 sm:py-16 bg-background">
           <div className="container mx-auto px-5 sm:px-6 max-w-3xl">
             <h2 className="text-2xl sm:text-4xl font-bold text-foreground text-center mb-2 leading-tight">
-              Ils sont proprietaires de leur site
+              Ils sont propriétaires de leur site
             </h2>
             <p className="text-xs sm:text-base text-muted-foreground text-center mb-8">
               Des entrepreneurs choisissent ConvertiLab pour un site pro, visible
@@ -448,7 +448,7 @@ export default function OffreMensuelleClient() {
               Des offres simples et transparentes
             </h2>
             <p className="text-xs sm:text-sm text-muted-foreground text-center mb-7 max-w-md mx-auto">
-              Vous etes proprietaire de votre site dans tous les cas. Sans frais
+              Vous êtes propriétaire de votre site dans tous les cas. Sans frais
               caches.
             </p>
 
@@ -579,7 +579,7 @@ export default function OffreMensuelleClient() {
             Pret a avoir votre propre site internet ?
           </h2>
           <p className="text-primary-foreground/80 mb-5 text-xs sm:text-base">
-            Devenez proprietaire d&apos;un site professionnel, visible sur
+            Devenez propriétaire d&apos;un site professionnel, visible sur
             Google. Sans engagement.
           </p>
           <Button
@@ -593,7 +593,7 @@ export default function OffreMensuelleClient() {
             </Link>
           </Button>
           <p className="text-primary-foreground/60 text-[10px] sm:text-xs mt-4">
-            Livre en 7 jours - Vous etes proprietaire - Visible sur Google
+            Livré en 7 jours, vous êtes propriétaire, visible sur Google
           </p>
         </div>
       </section>

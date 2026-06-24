@@ -38,41 +38,41 @@ const SECTORS = [
   { slug: "artisan", label: "Artisan", emoji: "\uD83D\uDD28" },
   { slug: "startup", label: "Startup / SaaS", emoji: "\uD83D\uDE80" },
   { slug: "fitness", label: "Fitness", emoji: "\uD83D\uDCAA" },
-  { slug: "beaute", label: "Institut de beaute", emoji: "\uD83D\uDC85" },
+  { slug: "beaute", label: "Institut de beauté", emoji: "\uD83D\uDC85" },
   { slug: "boulangerie", label: "Boulangerie", emoji: "\uD83E\uDD50" },
   { slug: "plombier", label: "Plombier", emoji: "\uD83D\uDD27" },
-  { slug: "electricien", label: "Electricien", emoji: "\u26A1" },
+  { slug: "electricien", label: "Électricien", emoji: "\u26A1" },
   { slug: "architecte", label: "Architecte", emoji: "\uD83C\uDFD7\uFE0F" },
   { slug: "comptable", label: "Comptable", emoji: "\uD83D\uDCCA" },
   { slug: "formation", label: "Formation", emoji: "\uD83C\uDF93" },
-  { slug: "veterinaire", label: "Veterinaire", emoji: "\uD83D\uDC3E" },
+  { slug: "veterinaire", label: "Vétérinaire", emoji: "\uD83D\uDC3E" },
   { slug: "fleuriste", label: "Fleuriste", emoji: "\uD83C\uDF38" },
   { slug: "coiffeur", label: "Coiffeur", emoji: "\u2702\uFE0F" },
   { slug: "garage", label: "Garage auto", emoji: "\uD83D\uDE97" },
-  { slug: "hotel", label: "Hotel", emoji: "\uD83C\uDFE8" },
-  { slug: "demenagement", label: "Demenagement", emoji: "\uD83D\uDE9A" },
+  { slug: "hotel", label: "Hôtel", emoji: "\uD83C\uDFE8" },
+  { slug: "demenagement", label: "Déménagement", emoji: "\uD83D\uDE9A" },
   { slug: "traiteur", label: "Traiteur", emoji: "\uD83C\uDF72" },
   { slug: "psychologue", label: "Psychologue", emoji: "\uD83E\uDDE0" },
   { slug: "menuisier", label: "Menuisier", emoji: "\uD83E\uDE9A" },
   { slug: "serrurier", label: "Serrurier", emoji: "\uD83D\uDD10" },
   { slug: "paysagiste", label: "Paysagiste", emoji: "\uD83C\uDF3F" },
-  { slug: "osteopathe", label: "Osteopathe", emoji: "\uD83E\uDDBD" },
+  { slug: "osteopathe", label: "Ostéopathe", emoji: "\uD83E\uDDBD" },
   { slug: "opticien", label: "Opticien", emoji: "\uD83D\uDC53" },
   { slug: "pharmacie", label: "Pharmacie", emoji: "\uD83D\uDC8A" },
-  { slug: "agence-immobiliere", label: "Agence immobiliere", emoji: "\uD83C\uDFE2" },
+  { slug: "agence-immobiliere", label: "Agence immobilière", emoji: "\uD83C\uDFE2" },
   { slug: "agence-voyage", label: "Agence de voyage", emoji: "\u2708\uFE0F" },
-  { slug: "auto-ecole", label: "Auto-ecole", emoji: "\uD83D\uDE97" },
-  { slug: "creche", label: "Creche", emoji: "\uD83D\uDC76" },
-  { slug: "demenageur", label: "Demenageur", emoji: "\uD83D\uDCE6" },
+  { slug: "auto-ecole", label: "Auto-école", emoji: "\uD83D\uDE97" },
+  { slug: "creche", label: "Crèche", emoji: "\uD83D\uDC76" },
+  { slug: "demenageur", label: "Déménageur", emoji: "\uD83D\uDCE6" },
   { slug: "notaire", label: "Notaire", emoji: "\uD83D\uDCDC" },
   { slug: "expert-comptable", label: "Expert-comptable", emoji: "\uD83D\uDCC8" },
   { slug: "wedding-planner", label: "Wedding Planner", emoji: "\uD83D\uDC8D" },
-  { slug: "decorateur", label: "Decorateur d'interieur", emoji: "\uD83C\uDFA8" },
+  { slug: "decorateur", label: "Décorateur d'intérieur", emoji: "\uD83C\uDFA8" },
   { slug: "graphiste", label: "Graphiste / Designer", emoji: "\uD83D\uDD8C\uFE0F" },
   { slug: "consultant", label: "Consultant", emoji: "\uD83D\uDCBC" },
   { slug: "formateur", label: "Formateur", emoji: "\uD83C\uDF93" },
   { slug: "nutritionniste", label: "Nutritionniste", emoji: "\uD83E\uDD57" },
-  { slug: "kine", label: "Kinesitherapeute", emoji: "\uD83E\uDDD8" },
+  { slug: "kine", label: "Kinésithérapeute", emoji: "\uD83E\uDDD8" },
   { slug: "podologue", label: "Podologue", emoji: "\uD83E\uDDB6" },
   { slug: "dermatologue", label: "Dermatologue", emoji: "\uD83E\uDE7A" },
   { slug: "chirurgien-dentiste", label: "Chirurgien-dentiste", emoji: "\uD83E\uDDB7" },
@@ -86,9 +86,9 @@ const SECTORS = [
   { slug: "fromagerie", label: "Fromagerie", emoji: "\uD83E\uDDC0" },
   { slug: "chocolatier", label: "Chocolatier", emoji: "\uD83C\uDF6B" },
   { slug: "primeur", label: "Primeur", emoji: "\uD83C\uDF4E" },
-  { slug: "epicerie", label: "Epicerie fine", emoji: "\uD83D\uDED2" },
+  { slug: "epicerie", label: "Épicerie fine", emoji: "\uD83D\uDED2" },
   { slug: "librairie", label: "Librairie", emoji: "\uD83D\uDCDA" },
-  { slug: "spa", label: "Spa / Bien-etre", emoji: "\uD83E\uDDD6" },
+  { slug: "spa", label: "Spa / Bien-être", emoji: "\uD83E\uDDD6" },
   { slug: "yoga", label: "Yoga", emoji: "\uD83E\uDDD8" },
   { slug: "pilates", label: "Pilates", emoji: "\uD83E\uDDD8" },
   { slug: "crossfit", label: "CrossFit", emoji: "\uD83C\uDFCB\uFE0F" },
@@ -109,7 +109,7 @@ const ANALYSIS_STEPS = [
   "Estimation des clics...",
   "Projection des leads...",
   "Calcul du ROI...",
-  "Generation du rapport PDF...",
+  "Génération du rapport PDF...",
   "Envoi par email...",
 ];
 
@@ -540,7 +540,7 @@ export default function AdsEstimatorForm() {
                   <p className="text-xs text-white/40">Secteur</p>
                   <p className="text-white font-medium">
                     {selectedSector?.label}
-                    {city ? ` — ${city}` : ""}
+                    {city ? `, ${city}` : ""}
                   </p>
                 </div>
               </div>
@@ -653,7 +653,7 @@ export default function AdsEstimatorForm() {
 
               <h2 className="text-2xl font-bold text-white mt-4 mb-2">Vos projections {result.platform}</h2>
               <p className="text-white/50 text-sm">
-                {result.sectorLabel}{result.city ? ` a ${result.city}` : ""} — Budget {result.budgetMonthly.toLocaleString("fr-FR")}{"\u00a0"}{"\u20ac"}/mois
+                {result.sectorLabel}{result.city ? ` à ${result.city}` : ""}, budget {result.budgetMonthly.toLocaleString("fr-FR")}{"\u00a0"}{"\u20ac"}/mois
               </p>
             </div>
 

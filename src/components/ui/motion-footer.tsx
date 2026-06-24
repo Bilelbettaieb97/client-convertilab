@@ -402,7 +402,7 @@ export function CinematicFooter() {
           {/* Bottom bar */}
           <div className="relative z-20 w-full pb-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-white/50 text-[10px] md:text-xs font-semibold tracking-widest uppercase order-2 md:order-1">
-              © {new Date().getFullYear()} ConvertiLab — Agence web à Rueil-Malmaison
+              © {new Date().getFullYear()} ConvertiLab, agence web à Rueil-Malmaison
             </div>
 
             <a

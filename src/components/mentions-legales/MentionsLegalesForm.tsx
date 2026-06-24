@@ -573,7 +573,7 @@ export default function MentionsLegalesForm() {
                 Prendre rendez-vous gratuit <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-white/30 text-xs mt-3">
-                Consultation de 30 min offerte — Sans engagement
+                Consultation de 30 min offerte, sans engagement
               </p>
             </div>
           </motion.div>

@@ -110,7 +110,7 @@ export function HeroShowcase({ className = "" }: { className?: string }) {
               ))}
             </div>
             <div className="text-[10px] font-bold text-gray-900 mt-0.5">
-              4.9/5 • 47 avis vérifiés
+              4.9/5 • 15 avis vérifiés
             </div>
           </div>
         </div>

@@ -158,8 +158,8 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
       areaServed: { "@type": "City", name: city.name },
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "47",
+        ratingValue: SITE.reviews.rating,
+        reviewCount: SITE.reviews.count,
         bestRating: "5",
         worstRating: "1",
       },

@@ -44,7 +44,7 @@ const SitesWebHero = () => {
                 ))}
               </div>
               <span className="font-medium text-foreground">4.9/5</span>
-              <span>sur 47 avis</span>
+              <span>sur 15 avis</span>
             </div>
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-primary" />

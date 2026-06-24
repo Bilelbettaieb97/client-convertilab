@@ -98,7 +98,7 @@ export default function LandingPageContent() {
             <div className="flex flex-wrap justify-center gap-6 sm:gap-10 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-1">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
-                <span className="font-medium text-foreground">4.9/5</span><span>sur 47 avis</span>
+                <span className="font-medium text-foreground">4.9/5</span><span>sur 15 avis</span>
               </div>
               <div className="flex items-center gap-2"><Users className="w-4 h-4 text-primary" /><span><strong className="text-foreground">+50</strong> landing pages livrées</span></div>
               <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary" /><span>Livree en <strong className="text-foreground">5-7 jours</strong></span></div>

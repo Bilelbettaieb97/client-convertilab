@@ -4,15 +4,24 @@
 
 ### Fonctionnement
 
-Le sitemap est genere **dynamiquement** par Next.js via le fichier `src/app/sitemap.ts`. Il est accessible a l'URL :
+Le sitemap est généré **dynamiquement** par Next.js via `src/app/sitemap.ts`. URL :
 
 ```
-https://convertilab.com/sitemap.xml
+https://www.convertilab.com/sitemap.xml
 ```
 
-### Routes statiques incluses
+### Dates `lastModified`
 
-Le sitemap inclut actuellement **31 routes statiques** :
+| Type de page | Date utilisée |
+|---|---|
+| Pages clés (home, services, portfolio…) | `SITE_LAST_UPDATED` = `2026-05-01` (à mettre à jour à chaque refonte majeure) |
+| Templates programmatiques (villes, glossaire, solutions…) | `TEMPLATES_CREATED` = `2026-01-01` |
+| Articles blog statiques | `new Date(a.publishedAt)` — date réelle de l'article |
+| Articles blog Supabase | `new Date(a.updated_at)` — date réelle depuis Supabase |
+
+**Ne jamais utiliser `new Date()` seul** — Google verrait toutes les pages comme modifiées à chaque deploy.
+
+### Routes statiques (42 routes)
 
 ```
 /
@@ -41,86 +50,75 @@ Le sitemap inclut actuellement **31 routes statiques** :
 /blog
 /offre-speciale
 /offre-mensuelle
-/offre-mensuelle/devis
 /demande-maquette
 /estimation-prix-site-web
 /politique-de-confidentialite
+/politique-de-cookies
+/agence-web
+/solutions
+/seo-check
+/speed-check
+/design-score
+/estimateur-ads
+/generateur-mentions-legales
+/generateur-robots-sitemap
+/rapport-sectoriel
+/comparateur-sites
+/prix
+/comparatifs
+/outils
 ```
 
-### Priorites
+### Pages programmatiques dynamiques
+
+| Type | Fichier data | URL pattern | ~Nb pages |
+|---|---|---|---|
+| Agence web par ville | `src/data/cities.ts` | `/agence-web/[ville]` | ~53 |
+| Solutions par secteur | `src/data/sectors.ts` | `/solutions/[secteur]` | ~20 |
+| Création site par ville (top 10) | `src/data/cities.ts` | `/creation-site-internet/[ville]` | 10 |
+| Glossaire SEO | `src/data/glossary.ts` | `/glossaire/[terme]` | ~31 |
+| Guides pratiques | `src/data/guides.ts` | `/guide/[slug]` | variable |
+| Comparatifs | `src/data/comparisons.ts` | `/comparatifs/[slug]` | variable |
+| Pages prix | `src/data/pricing-pages.ts` | `/prix/[service]` | variable |
+| Études de cas | `src/data/case-studies.ts` | `/etude-de-cas/[slug]` | ~10 |
+| Pages devis | `src/data/devis-pages.ts` | `/devis/[service]` | variable |
+| Articles blog statiques | `src/data/blog-articles.ts` | `/blog/[slug]` | ~66 |
+| Articles blog Supabase | table `blog_articles` | `/blog/[slug]` | variable |
+
+**Total sitemap estimé : 400+ URLs**
+
+### Priorités
 
 | Condition | Priority | changeFrequency |
-|-----------|----------|-----------------|
+|---|---|---|
 | Homepage (`/`) | `1.0` | `weekly` |
+| Pages high-priority (services, portfolio, prix…) | `0.9` | `monthly` |
 | Pages `/services/*` | `0.8` | `monthly` |
-| Toutes les autres pages | `0.7` | `monthly` |
+| Pages villes (`/agence-web/*`, `/creation-site-internet/*`) | `0.8` | `monthly` |
+| Pages prix et devis | `0.7` | `monthly` |
+| Pages secteurs, autres statiques | `0.7` | `monthly` |
+| Blog, guides, comparatifs | `0.6` | `monthly` |
+| Glossaire | `0.5` | `monthly` |
 
-### Derniere modification
-
-Toutes les entrees utilisent `new Date()` comme `lastModified`, ce qui signifie la date du build/deploiement.
-
-### Articles de blog (TODO)
-
-Un commentaire dans le code indique l'intention d'ajouter les articles de blog dynamiques via Supabase :
-
-```typescript
-// TODO: Fetch blog articles from Supabase when blog is dynamic
-// const { data: articles } = await supabase
-//   .from('blog_articles')
-//   .select('slug, updated_at')
-//   .eq('published', true)
-// const blogEntries = articles?.map(a => ({
-//   url: `${SITE.url}/blog/${a.slug}`,
-//   lastModified: a.updated_at
-// })) ?? []
-```
-
-### Comment ajouter une nouvelle route au sitemap
+### Comment ajouter une nouvelle route statique
 
 1. Ouvrir `src/app/sitemap.ts`
-2. Ajouter la route dans le tableau `staticRoutes` :
-   ```typescript
-   const staticRoutes = [
-     // ... routes existantes
-     "/ma-nouvelle-page",
-   ];
-   ```
-3. La priorite sera automatiquement calculee :
-   - `0.8` si la route commence par `/services`
-   - `0.7` pour toutes les autres
-4. Pour une priorite personnalisee, modifier la logique dans `staticEntries.map()`
-5. Deployer : le sitemap sera regenere automatiquement
+2. Ajouter la route dans `staticRoutes`
+3. Si c'est une page haute priorité, l'ajouter aussi dans `highPriorityRoutes`
+4. Déployer
 
-### Routes exclues du sitemap
+### Routes exclues du sitemap (volontairement)
 
-Ces routes ne sont **pas** dans le sitemap (volontairement) :
-- `/admin` et sous-pages (back-office)
-- `/newsletter-confirmation` (page de confirmation, noindex)
-- `/api/*` (endpoints API)
-- `/etude-de-cas/[slug]` (a ajouter quand les etudes de cas seront listees dynamiquement)
+- `/admin` et sous-pages — back-office
+- `/newsletter-confirmation` — page confirmation (noindex)
+- `/offre-mensuelle/devis` — formulaire intermédiaire (noindex)
+- `/api/*` — endpoints API
 
 ---
 
 ## Robots (`src/app/robots.ts`)
 
-### Configuration
-
-```typescript
-{
-  rules: [
-    {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/admin", "/newsletter-confirmation", "/api"],
-    },
-  ],
-  sitemap: "https://convertilab.com/sitemap.xml",
-}
-```
-
-### Resultat genere
-
-Le fichier `robots.txt` accessible a `https://convertilab.com/robots.txt` contient :
+### Configuration actuelle
 
 ```
 User-agent: *
@@ -128,26 +126,34 @@ Allow: /
 Disallow: /admin
 Disallow: /newsletter-confirmation
 Disallow: /api
+Disallow: /*.webmanifest
 
-Sitemap: https://convertilab.com/sitemap.xml
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.convertilab.com/sitemap.xml
 ```
 
-### Routes bloquees
+Les bots IA (GPT, Claude, Perplexity, Google SGE) sont **autorisés** intentionnellement pour maximiser la visibilité dans les résultats IA.
 
-| Route | Raison |
-|-------|--------|
-| `/admin` | Back-office de gestion des articles. Pas de contenu indexable. |
-| `/newsletter-confirmation` | Page de confirmation post-inscription. Aussi marquee `noindex` dans les metadata. |
-| `/api` | Endpoints API (formulaires, webhooks). Pas de contenu HTML. |
+### Ajouter une règle de blocage
 
-### Comment modifier les regles robots
-
-1. Ouvrir `src/app/robots.ts`
-2. Ajouter/retirer des chemins dans le tableau `disallow`
-3. Pour bloquer un bot specifique, ajouter un nouveau bloc `rules` :
-   ```typescript
-   {
-     userAgent: "GPTBot",
-     disallow: ["/"],
-   }
-   ```
+```typescript
+// src/app/robots.ts
+{
+  userAgent: "MonBot",
+  disallow: ["/"],
+}
+```

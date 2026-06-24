@@ -3,6 +3,7 @@ import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import IdentiteVisuelleContent from "./IdentiteVisuelleContent";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
   title: "Identité Visuelle Paris | Logo & Branding Sur-Mesure",
@@ -34,8 +35,8 @@ const serviceSchema = {
   areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "47",
+    ratingValue: SITE.reviews.rating,
+    reviewCount: SITE.reviews.count,
     bestRating: "5",
     worstRating: "1",
   },
@@ -54,6 +55,7 @@ export default function IdentiteVisuellePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navigation />
       <IdentiteVisuelleContent />
+      <RelatedServicesSection exclude={["/services/design/identite-visuelle"]} />
       <Footer />
     </div>
   );

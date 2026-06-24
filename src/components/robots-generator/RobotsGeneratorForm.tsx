@@ -132,7 +132,7 @@ export default function RobotsGeneratorForm() {
 
             <div className="flex items-center gap-3 mt-4 text-xs text-white/30">
               <Shield className="w-4 h-4" />
-              <span>Analyse 100% gratuite et confidentielle — Aucune modification sur votre site</span>
+              <span>Analyse 100% gratuite et confidentielle. Aucune modification sur votre site.</span>
             </div>
 
             <Button
@@ -374,7 +374,7 @@ export default function RobotsGeneratorForm() {
                 Prendre rendez-vous gratuit <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-white/30 text-xs mt-3">
-                Consultation de 30 min offerte — Sans engagement
+                Consultation de 30 min offerte, sans engagement
               </p>
             </div>
           </motion.div>

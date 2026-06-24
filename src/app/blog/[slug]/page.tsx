@@ -10,6 +10,12 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  return blogArticles.map((article) => ({ slug: article.slug }));
+}
+
 async function getArticle(slug: string): Promise<FullBlogArticle | null> {
   try {
     const supabase = createServerClient();
@@ -30,7 +36,7 @@ async function getArticle(slug: string): Promise<FullBlogArticle | null> {
         image: data.image || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
         category: data.category || "Business",
         readTime: data.read_time || "5 min",
-        publishedAt: data.published_at || new Date().toISOString(),
+        publishedAt: data.published_at || "2024-01-01T00:00:00.000Z",
         author: { name: data.author_name || "ConvertiLab" },
         tags: data.tags || [],
         content: data.content || "",
@@ -103,7 +109,7 @@ export default async function BlogArticlePage({ params }: Props) {
       height: 630,
     },
     datePublished: article.publishedAt,
-    dateModified: new Date().toISOString(),
+    dateModified: article.publishedAt,
     inLanguage: "fr-FR",
     wordCount,
     timeRequired: `PT${readTimeMinutes}M`,

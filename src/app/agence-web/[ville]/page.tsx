@@ -29,6 +29,8 @@ import {
   CalendarCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SuggestedArticles from "@/components/internal-links/SuggestedArticles";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 type Props = { params: Promise<{ ville: string }> };
 
@@ -163,8 +165,8 @@ export default async function CityPage({ params }: Props) {
     priceRange: "€€",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "47",
+      ratingValue: SITE.reviews.rating,
+      reviewCount: SITE.reviews.count,
       bestRating: "5",
     },
   };
@@ -286,7 +288,7 @@ export default async function CityPage({ params }: Props) {
             </div>
             <div className="flex items-center gap-2 text-gray-700">
               <Star className="w-5 h-5 text-yellow-500" />
-              <span className="font-semibold">4.9/5</span> (47 avis clients)
+              <span className="font-semibold">4.9/5</span> (15 avis clients)
             </div>
           </div>
 
@@ -687,6 +689,8 @@ export default async function CityPage({ params }: Props) {
         </div>
       </section>
 
+      <SuggestedArticles title="Conseils pour développer votre business en ligne" max={3} />
+      <RelatedServicesSection title="Nos services pour votre ville" max={4} />
       <Footer />
     </div>
   );

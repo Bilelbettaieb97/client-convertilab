@@ -9,7 +9,7 @@ const tools: OrbitalItem[] = [
     id: 1,
     title: "Audit SEO",
     date: "2 min",
-    content: "60+ points de controle analyses automatiquement. Score sur 100, plan d'action priorise et rapport PDF envoye par email.",
+    content: "60+ points de contrôle analysés automatiquement. Score sur 100, plan d'action priorisé et rapport PDF envoyé par email.",
     category: "SEO",
     icon: Search,
     href: "/seo-check",
@@ -21,7 +21,7 @@ const tools: OrbitalItem[] = [
     id: 2,
     title: "Audit Vitesse",
     date: "1 min",
-    content: "Testez la rapidite de votre site. Core Web Vitals, compression, images, scripts bloquants — tout est analyse.",
+    content: "Testez la rapidité de votre site. Core Web Vitals, compression, images, scripts bloquants. Tout est analysé.",
     category: "Performance",
     icon: Zap,
     href: "/speed-check",
@@ -33,7 +33,7 @@ const tools: OrbitalItem[] = [
     id: 3,
     title: "Audit Design",
     date: "1 min",
-    content: "Evaluez l'experience utilisateur de votre site. 6 categories UX analysees avec plan d'action detaille.",
+    content: "Évaluez l'expérience utilisateur de votre site. 6 catégories UX analysées avec plan d'action détaillé.",
     category: "Design",
     icon: Palette,
     href: "/design-score",
@@ -45,8 +45,8 @@ const tools: OrbitalItem[] = [
     id: 4,
     title: "Estimateur Ads",
     date: "3 min",
-    content: "Combien de clients et de CA pouvez-vous generer avec la publicite en ligne ? Projection ROI sur 3/6/12 mois.",
-    category: "Publicite",
+    content: "Combien de clients et de CA pouvez-vous générer avec la publicité en ligne ? Projection ROI sur 3/6/12 mois.",
+    category: "Publicité",
     icon: TrendingUp,
     href: "/estimateur-ads",
     relatedIds: [3, 5],
@@ -55,10 +55,10 @@ const tools: OrbitalItem[] = [
   },
   {
     id: 5,
-    title: "Mentions Legales",
+    title: "Mentions légales",
     date: "2 min",
-    content: "Generez vos mentions legales conformes LCEN + RGPD en 2 minutes. Document PDF personnalise.",
-    category: "Legal",
+    content: "Générez vos mentions légales conformes LCEN + RGPD en 2 minutes. Document PDF personnalisé.",
+    category: "Légal",
     icon: FileText,
     href: "/generateur-mentions-legales",
     relatedIds: [4, 6],
@@ -69,7 +69,7 @@ const tools: OrbitalItem[] = [
     id: 6,
     title: "Robots & Sitemap",
     date: "1 min",
-    content: "Generez automatiquement vos fichiers robots.txt et sitemap.xml optimises avec regles pour les bots IA.",
+    content: "Générez automatiquement vos fichiers robots.txt et sitemap.xml optimisés avec règles pour les bots IA.",
     category: "SEO Technique",
     icon: Bot,
     href: "/generateur-robots-sitemap",
@@ -81,8 +81,8 @@ const tools: OrbitalItem[] = [
     id: 7,
     title: "Rapport Sectoriel",
     date: "2 min",
-    content: "Decouvrez les opportunites digitales de votre secteur. 50+ secteurs analyses avec etudes de cas.",
-    category: "Strategie",
+    content: "Découvrez les opportunités digitales de votre secteur. 50+ secteurs analysés avec études de cas.",
+    category: "Stratégie",
     icon: BarChart3,
     href: "/rapport-sectoriel",
     relatedIds: [6, 8],
@@ -93,7 +93,7 @@ const tools: OrbitalItem[] = [
     id: 8,
     title: "Comparateur Sites",
     date: "2 min",
-    content: "Votre site vs la concurrence. Comparaison cote a cote sur 8 categories avec recommandations.",
+    content: "Votre site face à la concurrence. Comparaison côte à côte sur 8 catégories avec recommandations.",
     category: "Benchmark",
     icon: GitCompare,
     href: "/comparateur-sites",
@@ -128,7 +128,7 @@ export default function ToolsOrbital() {
             </h2>
 
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-              Decouvrez en 60 secondes ce qui freine votre site web. <strong className="text-white">Audit SEO, vitesse, design, ROI Ads</strong> — recevez un rapport detaille avec les points a corriger et un plan d&apos;action concret, directement dans votre boite mail.
+              Découvrez en 60 secondes ce qui freine votre site web. <strong className="text-white">Audit SEO, vitesse, design, ROI Ads</strong>. Recevez un rapport détaillé avec les points à corriger et un plan d&apos;action concret, directement dans votre boîte mail.
             </p>
 
             {/* Quick stats */}

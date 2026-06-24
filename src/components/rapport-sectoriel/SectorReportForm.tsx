@@ -330,7 +330,7 @@ export default function SectorReportForm() {
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                     <div className="h-full bg-green-500 rounded-full w-full" />
                   </div>
-                  <p className="text-xs text-green-400 mt-2">100% — Rapport genere</p>
+                  <p className="text-xs text-green-400 mt-2">100% Rapport généré</p>
                 </div>
               </>
             )}
@@ -429,7 +429,7 @@ export default function SectorReportForm() {
                 Consultation gratuite <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-white/30 text-xs mt-3">
-                30 minutes offertes — Sans engagement
+                30 minutes offertes, sans engagement
               </p>
             </div>
           </motion.div>

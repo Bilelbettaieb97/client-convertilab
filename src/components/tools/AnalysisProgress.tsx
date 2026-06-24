@@ -58,7 +58,7 @@ export default function AnalysisProgress({ steps, currentStep, isComplete, url, 
           <div className="h-2 bg-white/10 rounded-full overflow-hidden">
             <div className="h-full bg-green-500 rounded-full w-full" />
           </div>
-          <p className="text-xs text-green-400 mt-2">100% — Analyse complete</p>
+          <p className="text-xs text-green-400 mt-2">100% Analyse complète</p>
         </div>
       </div>
     );

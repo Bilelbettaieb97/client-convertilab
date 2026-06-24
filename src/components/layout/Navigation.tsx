@@ -225,7 +225,7 @@ const Navigation = () => {
                     ))}
                   </div>
                   <div className="border-t border-gray-100 mt-1 pt-1 px-3 py-2">
-                    <span className="text-[10px] text-gray-400">100% gratuit — sans inscription</span>
+                    <span className="text-[10px] text-gray-400">100% gratuit, sans inscription</span>
                   </div>
                 </div>
               </div>

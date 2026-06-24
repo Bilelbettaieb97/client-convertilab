@@ -44,7 +44,7 @@ export default function ApplicationWebContent() {
               <Button asChild variant="outline" size="lg" className="border-white/30 text-white text-lg px-8 py-6"><a href={SITE.calendly} target="_blank" rel="noopener noreferrer"><Calendar className="mr-2 w-5 h-5" />Appel decouverte 15 min</a></Button>
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-white/80">
-              <div className="flex items-center gap-2"><div className="flex -space-x-1">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div><span className="font-medium text-white">4.9/5</span><span>sur 47 avis</span></div>
+              <div className="flex items-center gap-2"><div className="flex -space-x-1">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div><span className="font-medium text-white">4.9/5</span><span>sur 15 avis</span></div>
               <div className="flex items-center gap-2"><Users className="w-4 h-4 text-blue-400" /><span><strong className="text-white">+50</strong> entreprises accompagnees</span></div>
               <div className="flex items-center gap-2"><Shield className="w-4 h-4 text-green-400" /><span><strong className="text-white">Satisfait ou rembourse</strong></span></div>
             </div>

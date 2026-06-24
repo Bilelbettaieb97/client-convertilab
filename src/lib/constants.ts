@@ -16,6 +16,10 @@ export const SITE = {
   },
   trustpilot: "https://fr.trustpilot.com/review/convertilab.com",
   googleMaps: "https://share.google/zUu6ZIAu3MyOCgPNa",
+  reviews: {
+    count: "15",
+    rating: "4.9",
+  },
   analytics: {
     ga: "G-N9NTVTE0R6",
     gtm: "GTM-5TDHTDHP",
@@ -69,8 +73,8 @@ export const STRUCTURED_DATA = {
     priceRange: "€€",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "47",
+      ratingValue: SITE.reviews.rating,
+      reviewCount: SITE.reviews.count,
       bestRating: "5",
     },
     areaServed: [
