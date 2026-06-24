@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description:
       "50+ secteurs. Diagnostic marche, checklist digitale, etudes de cas et solutions concretes. Rapport PDF gratuit.",
     url: `${SITE.url}/rapport-sectoriel`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
     type: "website",

@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description:
       "20+ points de contrôle vitesse, analyse complète, rapport PDF gratuit envoyé par email.",
     url: `${SITE.url}/speed-check`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
     type: "website",

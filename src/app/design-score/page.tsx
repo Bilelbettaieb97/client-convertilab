@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description:
       "6 catégories UX analysées, rapport PDF complet et gratuit envoyé par email.",
     url: `${SITE.url}/design-score`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
     type: "website",

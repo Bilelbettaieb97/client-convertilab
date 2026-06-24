@@ -47,6 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `${SITE.url}/guide/${slug}`,
       siteName: SITE.name,
       type: "article",
+      images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     },
   };
 }

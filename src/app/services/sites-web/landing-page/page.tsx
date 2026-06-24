@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     title: "Création Landing Page Paris | Haute Conversion en 5 jours | ConvertiLab",
     description: "Landing page haute conversion livrée en 5-7 jours. Optimisée pour Google Ads & Meta Ads. +150 clients, prix fixe garanti. Devis gratuit.",
     url: `${SITE.url}/services/sites-web/landing-page`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
   },
 };
 

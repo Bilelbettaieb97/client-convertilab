@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     title: "Création Site Vitrine Paris | Livraison 7 jours dès 500€ | ConvertiLab",
     description: "Création de site vitrine professionnel à Paris en 7 jours. Design sur-mesure, SEO optimisé, prix fixe garanti. +150 clients, 4.9★. Devis gratuit sous 24h.",
     url: `${SITE.url}/services/sites-web/site-vitrine`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
   },
 };
 

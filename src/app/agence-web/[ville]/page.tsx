@@ -49,6 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `Agence Web ${city.name} — Création Site Internet dès 990€ | ConvertiLab`,
       description: `Votre agence web à ${city.name}. Site vitrine livré en 7 jours dès 990€. 15 avis 4.9★. Devis gratuit.`,
       url: `${SITE.url}/agence-web/${city.slug}`,
+      type: "website",
+      images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     },
     other: {
       "geo.region": "FR-IDF",

@@ -8,7 +8,9 @@ export const metadata: Metadata = {
   title: "Google Ads & Meta Ads | Agence SEA Paris",
   description: "Campagnes publicitaires Google Ads et Meta Ads optimisees. x4.8 ROAS moyen. Audit gratuit et devis sous 24h.",
   alternates: { canonical: `${SITE.url}/services/sea` },
-  openGraph: { title: "Google Ads & Meta Ads | Agence SEA Paris | ConvertiLab", description: "Campagnes publicitaires Google Ads et Meta Ads optimisees. x4.8 ROAS moyen. Audit gratuit et devis sous 24h.", url: `${SITE.url}/services/sea` },
+  openGraph: { title: "Google Ads & Meta Ads | Agence SEA Paris | ConvertiLab", description: "Campagnes publicitaires Google Ads et Meta Ads optimisees. x4.8 ROAS moyen. Audit gratuit et devis sous 24h.", url: `${SITE.url}/services/sea`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }] },
 };
 
 const schemas = [

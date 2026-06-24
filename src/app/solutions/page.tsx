@@ -9,10 +9,17 @@ import { ArrowRight, Star, Zap, Shield } from "lucide-react";
 import SolutionsGrid from "./SolutionsGrid";
 
 export const metadata: Metadata = {
-  title: "Création Site Web par Secteur d'Activité",
-  description: "Site web sur-mesure par métier : restaurant, avocat, artisan, immobilier, coach, e-commerce. SEO optimisé, livré en 7j. Devis gratuit.",
-  keywords: "site web restaurant, site internet avocat, site web artisan, création site par secteur, site web métier",
+  title: "Création Site Web par Secteur d'Activité | ConvertiLab",
+  description: "Site web sur-mesure par métier : restaurant, avocat, artisan, immobilier, coach, e-commerce. SEO optimisé, livré en 7j, dès 990€. +150 clients. Devis gratuit.",
+  keywords: "site web restaurant, site internet avocat, site web artisan, création site par secteur, site web métier, site internet professionnel Paris",
   alternates: { canonical: `${SITE.url}/solutions` },
+  openGraph: {
+    title: "Création Site Web par Métier — Restaurant, Artisan, Coach | ConvertiLab",
+    description: "Site web sur-mesure adapté à votre secteur : restaurant, avocat, artisan, immobilier, coach. Livré en 7 jours dès 990€. +150 clients, 15 avis 4.9★.",
+    url: `${SITE.url}/solutions`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
+  },
 };
 
 export default function SolutionsPage() {
@@ -28,6 +35,18 @@ export default function SolutionsPage() {
   return (
     <div className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Solutions ConvertiLab par secteur d'activité",
+        description: "Sites web professionnels sur-mesure pour chaque secteur d'activité",
+        itemListElement: sectors.slice(0, 15).map((s, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: `Site web ${s.name}`,
+          url: `${SITE.url}/solutions/${s.slug}`,
+        })),
+      }) }} />
       <Navigation />
 
       {/* Hero */}

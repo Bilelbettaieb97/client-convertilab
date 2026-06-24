@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description:
       "Comparez 8 catégories SEO, découvrez qui gagne et recevez un rapport PDF comparatif gratuit.",
     url: `${SITE.url}/comparateur-sites`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
     type: "website",

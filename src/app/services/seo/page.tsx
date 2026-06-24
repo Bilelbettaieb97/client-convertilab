@@ -8,7 +8,9 @@ export const metadata: Metadata = {
   title: "SEO & Référencement Naturel Paris — Page 1 Google",
   description: "Référencement naturel et audit SEO. Atteignez la page 1 de Google avec une stratégie sur-mesure. +150 clients, résultats dès 3 mois. Devis gratuit.",
   alternates: { canonical: `${SITE.url}/services/seo` },
-  openGraph: { title: "SEO & Référencement Naturel Paris | ConvertiLab", description: "Référencement naturel et audit SEO. Atteignez la page 1 de Google avec une stratégie sur-mesure. Devis gratuit.", url: `${SITE.url}/services/seo` },
+  openGraph: { title: "SEO & Référencement Naturel Paris | ConvertiLab", description: "Référencement naturel et audit SEO. Atteignez la page 1 de Google avec une stratégie sur-mesure. Devis gratuit.", url: `${SITE.url}/services/seo`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }] },
 };
 
 const schemas = [

@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description:
       "Générez un fichier robots.txt optimisé et un sitemap.xml automatique. Règles AI bots incluses. 100% gratuit.",
     url: `${SITE.url}/generateur-robots-sitemap`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
     type: "website",

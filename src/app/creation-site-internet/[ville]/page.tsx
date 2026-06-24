@@ -62,6 +62,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: `${SITE.url}/creation-site-internet/${city.slug}`,
+      type: "website",
+      images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     },
     other: {
       "geo.region": "FR",

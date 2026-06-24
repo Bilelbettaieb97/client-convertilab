@@ -7,9 +7,17 @@ import Footer from "@/components/layout/Footer";
 import { BookOpen, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Glossaire Marketing Digital & Web",
-  description: "Tous les termes du marketing digital et de la création web expliqués simplement : SEO, SEA, landing page, backlink, CTA, responsive design et plus.",
+  title: "Glossaire Marketing Digital & Web — 100+ Termes | ConvertiLab",
+  description: "Tous les termes du marketing digital et de la création web expliqués simplement : SEO, SEA, landing page, backlink, CTA, conversion, responsive design et plus. 100+ définitions.",
+  keywords: "glossaire SEO, définition marketing digital, SEA signification, landing page définition, backlink c'est quoi, CTA marketing",
   alternates: { canonical: `${SITE.url}/glossaire` },
+  openGraph: {
+    title: "Glossaire Marketing Digital & Web — 100+ Termes | ConvertiLab",
+    description: "100+ termes du marketing digital expliqués simplement : SEO, SEA, landing page, backlink, CTA. Référence complète.",
+    url: `${SITE.url}/glossaire`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
+  },
 };
 
 export default function GlossairePage() {

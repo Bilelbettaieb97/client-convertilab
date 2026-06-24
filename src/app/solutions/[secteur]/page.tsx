@@ -44,6 +44,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `Création Site Web ${sector.name} | ConvertiLab`,
       description: sector.description,
       url: `${SITE.url}/solutions/${sector.slug}`,
+      type: "website",
+      images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     },
   };
 }

@@ -35,6 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${term.term} | Glossaire Marketing Digital | ConvertiLab`,
       description: desc,
       url: `${SITE.url}/glossaire/${term.slug}`,
+      type: "article",
+      images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     },
   };
 }

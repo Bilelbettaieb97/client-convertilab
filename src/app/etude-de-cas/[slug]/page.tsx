@@ -17,9 +17,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: cs.subtitle,
     alternates: { canonical: `${SITE.url}/etude-de-cas/${slug}` },
     openGraph: {
-      title: `${cs.client} - ${cs.title}`,
+      title: `${cs.client} - ${cs.title} | ConvertiLab`,
       description: cs.subtitle,
       type: "article",
+      url: `${SITE.url}/etude-de-cas/${slug}`,
+      images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     },
   };
 }

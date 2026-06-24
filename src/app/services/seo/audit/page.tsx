@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   title: "Audit SEO Paris | Rapport Complet + Plan d'Action",
   description: "Audit SEO complet : technique, contenu, concurrence. Rapport détaillé + plan d'action priorisé. Premier audit gratuit.",
   alternates: { canonical: `${SITE.url}/services/seo/audit` },
-  openGraph: { title: "Audit SEO Paris | Rapport Complet + Plan d'Action | ConvertiLab", description: "Audit SEO complet : technique, contenu, concurrence. Rapport détaillé + plan d'action priorisé. Premier audit gratuit.", url: `${SITE.url}/services/seo/audit` },
+  openGraph: { title: "Audit SEO Paris | Rapport Complet + Plan d'Action | ConvertiLab", description: "Audit SEO complet : technique, contenu, concurrence. Rapport détaillé + plan d'action priorisé. Premier audit gratuit.", url: `${SITE.url}/services/seo/audit`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }] },
 };
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [

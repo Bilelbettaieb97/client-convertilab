@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     description:
       "Combien de clients et de CA pouvez-vous générer avec la publicité en ligne ? Estimation gratuite avec rapport PDF.",
     url: `${SITE.url}/estimateur-ads`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
     type: "website",

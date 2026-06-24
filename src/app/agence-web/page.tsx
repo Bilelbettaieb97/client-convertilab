@@ -12,6 +12,13 @@ export const metadata: Metadata = {
   description: "Quelle agence web choisir en Île-de-France ? ConvertiLab intervient dans 51 villes : Paris, Lyon, Marseille, Bordeaux et toute la France. Site vitrine dès 990€, livré en 7 jours. +150 clients, 15 avis 4.9★.",
   keywords: "agence web Île-de-France, création site internet Paris Lyon Marseille, agence web locale France, site vitrine entreprise 990€",
   alternates: { canonical: `${SITE.url}/agence-web` },
+  openGraph: {
+    title: "Agence Web par Ville — 51 villes en France | ConvertiLab",
+    description: "ConvertiLab intervient dans 51 villes en France. Site vitrine dès 990€, livré en 7 jours. +150 clients, 15 avis 4.9★. Devis gratuit.",
+    url: `${SITE.url}/agence-web`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
+  },
 };
 
 export default function AgenceWebPage() {
@@ -38,10 +45,22 @@ export default function AgenceWebPage() {
     })),
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Comment choisir une agence web locale ?", acceptedAnswer: { "@type": "Answer", text: "Vérifiez le portfolio (réalisations concrètes), les avis clients (Trustpilot, Google), les délais de livraison et la transparence des prix. ConvertiLab affiche des prix fixes, livre en 7 jours et publie 15 avis 4.9★ vérifiés." } },
+      { "@type": "Question", name: "Faut-il une agence web proche de chez moi ?", acceptedAnswer: { "@type": "Answer", text: "Non, ce n'est pas indispensable. ConvertiLab gère 100% des projets à distance (visio, Figma, Notion) avec les mêmes résultats que si vous étiez à Paris. Nous intervenons aussi en présentiel dans toute l'Île-de-France." } },
+      { "@type": "Question", name: "Quel est le prix d'un site web pour une PME ?", acceptedAnswer: { "@type": "Answer", text: "Le prix d'un site vitrine professionnel chez ConvertiLab démarre à 990€ pour une PME. Il inclut le design sur-mesure, 5 pages, le SEO, l'hébergement première année et le support 30 jours. Les grandes entreprises et e-commerces ont des forfaits sur devis." } },
+      { "@type": "Question", name: "Combien de temps pour créer un site internet ?", acceptedAnswer: { "@type": "Answer", text: "ConvertiLab livre votre site en 7 jours ouvrés à partir de la validation de la maquette. La maquette est présentée sous 48h après l'appel découverte. Au total, comptez 2 semaines de la prise de contact à la mise en ligne." } },
+    ],
+  };
+
   return (
     <div className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navigation />
 
       {/* Hero */}

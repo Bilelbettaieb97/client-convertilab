@@ -30,6 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${title} | ConvertiLab`,
       description: description.slice(0, 160),
       url: `${SITE.url}/comparatifs/${slug}`,
+      type: "article",
+      images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     },
   };
 }

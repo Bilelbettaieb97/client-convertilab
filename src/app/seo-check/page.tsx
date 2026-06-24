@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description:
       "60+ points de contrôle SEO, analyse IA, rapport PDF complet envoyé par email. 100% gratuit.",
     url: `${SITE.url}/seo-check`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
     type: "website",

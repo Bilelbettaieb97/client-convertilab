@@ -5,13 +5,15 @@ import Footer from "@/components/layout/Footer";
 import ServicesPageContent from "./ServicesPageContent";
 
 export const metadata: Metadata = {
-  title: "Services Marketing Digital Paris",
-  description: "Sites web des 500 euros, SEO, Google Ads, Meta Ads. +50 clients, +280% de CA moyen. Devis gratuit sous 24h, sans engagement.",
+  title: "Services Marketing Digital Paris — Sites Web, SEO, Google Ads | ConvertiLab",
+  description: "Agence marketing digital à Paris : création de sites web dès 500€, SEO, Google Ads, Meta Ads. +150 clients accompagnés, +280% de CA moyen. Devis gratuit sous 24h.",
   alternates: { canonical: `${SITE.url}/services` },
   openGraph: {
     title: "Services Marketing Digital Paris | ConvertiLab",
-    description: "Sites web des 500 euros, SEO, Google Ads, Meta Ads. +50 clients, +280% de CA moyen. Devis gratuit sous 24h, sans engagement.",
+    description: "Sites web dès 500€, SEO, Google Ads, Meta Ads. +150 clients, +280% de CA moyen. Devis gratuit sous 24h.",
     url: `${SITE.url}/services`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
   },
 };
 
@@ -31,10 +33,10 @@ const servicesSchema = {
     "@type": "OfferCatalog",
     "name": "Services Marketing Digital",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Creation de sites web" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Referencement SEO" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meta Ads" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création de sites web", "url": `${SITE.url}/services/sites-web` } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Référencement SEO", "url": `${SITE.url}/services/seo` } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads", "url": `${SITE.url}/services/sea/google-ads` } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meta Ads Facebook Instagram", "url": `${SITE.url}/services/sea/meta-ads` } },
     ]
   }
 };

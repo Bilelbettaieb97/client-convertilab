@@ -19,6 +19,7 @@ export const metadata: Metadata = {
       "Articles et guides pratiques sur la création de sites web, le SEO et le marketing digital.",
     url: `${SITE.url}/blog`,
     type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
   },
   alternates: {
     canonical: `${SITE.url}/blog`,

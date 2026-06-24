@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   title: "Agence Meta Ads Paris | Facebook & Instagram Ads",
   description: "Publicités Facebook et Instagram : ciblage précis, créatifs optimisés, ROI maximisé. +150 clients, 4.9★. Audit de compte gratuit.",
   alternates: { canonical: `${SITE.url}/services/sea/meta-ads` },
-  openGraph: { title: "Agence Meta Ads Paris | Facebook & Instagram Ads | ConvertiLab", description: "Publicités Facebook et Instagram : ciblage précis, créatifs optimisés, ROI maximisé. Audit de compte gratuit.", url: `${SITE.url}/services/sea/meta-ads` },
+  openGraph: { title: "Agence Meta Ads Paris | Facebook & Instagram Ads | ConvertiLab", description: "Publicités Facebook et Instagram : ciblage précis, créatifs optimisés, ROI maximisé. Audit de compte gratuit.", url: `${SITE.url}/services/sea/meta-ads`,
+    type: "website",
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }] },
 };
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
