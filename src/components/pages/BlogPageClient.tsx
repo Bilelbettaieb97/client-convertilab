@@ -54,10 +54,11 @@ export default function BlogPageClient() {
             publishedAt: a.published_at || new Date().toISOString(),
             author: { name: a.author_name || "ConvertiLab" },
           }));
-          // Fusionner : Supabase d'abord, puis statiques qui ne sont pas dans Supabase
-          const supabaseSlugs = new Set(mapped.map((a) => a.slug));
-          const uniqueStatic = staticArticles.filter((a) => !supabaseSlugs.has(a.slug));
-          setArticles([...mapped, ...uniqueStatic]);
+          // Fusionner : statiques d'abord (source de vérité pour les titres/contenu à jour),
+          // Supabase uniquement pour les articles qui n'ont pas de version statique
+          const staticSlugs = new Set(staticArticles.map((a) => a.slug));
+          const onlyInSupabase = mapped.filter((a) => !staticSlugs.has(a.slug));
+          setArticles([...staticArticles, ...onlyInSupabase]);
         }
       } catch {
         // Fallback to static articles — already set
