@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import BlogHeader from "@/components/blog/BlogHeader";
@@ -9,10 +10,20 @@ import BlogCard from "@/components/blog/BlogCard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search, ArrowRight, Rocket, CheckCircle } from "lucide-react";
+import { Search, ArrowRight, Rocket, CheckCircle, Clock, Flame } from "lucide-react";
 import { supabase } from "@/lib/supabase/client";
 import { blogArticles as staticArticles } from "@/data/blog-articles";
 import type { BlogArticle } from "@/data/blog-articles";
+
+// Articles mis en avant manuellement — les plus stratégiques pour la conversion et le SEO
+const FEATURED_SLUGS = [
+  "combien-coute-site-web",
+  "pourquoi-site-web-indispensable-2024",
+  "seo-local-guide-complet",
+  "comment-choisir-agence-web-2026",
+  "erreurs-site-web-eviter",
+  "landing-page-convertir-visiteurs",
+];
 
 const categories = ["Tous", "Business", "Web Design", "SEO", "Technique", "Performance", "Design", "Publicité", "Juridique", "Stratégie", "Analyse"];
 
@@ -64,6 +75,11 @@ export default function BlogPageClient() {
     return matchesCategory && matchesSearch;
   });
 
+  // Articles en vedette (toujours affichés, indépendants du filtre)
+  const featuredArticles = FEATURED_SLUGS
+    .map((slug) => articles.find((a) => a.slug === slug))
+    .filter((a): a is BlogArticle => Boolean(a));
+
   const featuredArticle = filteredArticles[0];
   const otherArticles = filteredArticles.slice(1);
 
@@ -101,6 +117,123 @@ export default function BlogPageClient() {
           </nav>
 
           <BlogHeader />
+
+          {/* ── Articles en vedette ───────────────────────────────────── */}
+          {featuredArticles.length > 0 && selectedCategory === "Tous" && !searchQuery && (
+            <section className="mb-16">
+              <div className="flex items-center gap-2 mb-6">
+                <Flame className="w-5 h-5 text-orange-500" />
+                <h2 className="text-xl font-bold text-foreground">Articles les plus lus</h2>
+                <Badge className="ml-1 bg-orange-100 text-orange-700 border-0 text-xs">Sélection</Badge>
+              </div>
+
+              <div className="grid lg:grid-cols-5 gap-6">
+                {/* Hero article — colonne gauche 3/5 */}
+                {featuredArticles[0] && (
+                  <Link
+                    href={`/blog/${featuredArticles[0].slug}`}
+                    className="lg:col-span-3 group relative rounded-2xl overflow-hidden shadow-lg border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col min-h-[360px]"
+                  >
+                    <Image
+                      src={featuredArticles[0].image}
+                      alt={featuredArticles[0].title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                    <div className="relative mt-auto p-6 text-white">
+                      <Badge className="mb-3 bg-purple-600 text-white border-0 text-xs">
+                        {featuredArticles[0].category}
+                      </Badge>
+                      <h3 className="text-xl sm:text-2xl font-bold leading-tight mb-2 group-hover:text-purple-300 transition-colors">
+                        {featuredArticles[0].title}
+                      </h3>
+                      <p className="text-sm text-white/70 line-clamp-2 mb-3">
+                        {featuredArticles[0].excerpt}
+                      </p>
+                      <div className="flex items-center gap-3 text-xs text-white/60">
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3 h-3" /> {featuredArticles[0].readTime}
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-purple-300 font-semibold">
+                          Lire l&apos;article <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                )}
+
+                {/* Colonne droite 2/5 — 2 articles empilés */}
+                <div className="lg:col-span-2 flex flex-col gap-6">
+                  {featuredArticles.slice(1, 3).map((article) => (
+                    <Link
+                      key={article.slug}
+                      href={`/blog/${article.slug}`}
+                      className="group relative rounded-2xl overflow-hidden shadow-md border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col flex-1 min-h-[160px]"
+                    >
+                      <Image
+                        src={article.image}
+                        alt={article.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 1024px) 100vw, 40vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                      <div className="relative mt-auto p-4 text-white">
+                        <Badge className="mb-2 bg-white/20 text-white border-0 text-xs backdrop-blur-sm">
+                          {article.category}
+                        </Badge>
+                        <h3 className="text-sm sm:text-base font-bold leading-tight group-hover:text-purple-300 transition-colors line-clamp-2">
+                          {article.title}
+                        </h3>
+                        <div className="flex items-center gap-2 mt-2 text-xs text-white/60">
+                          <Clock className="w-3 h-3" /> {article.readTime}
+                          <span className="ml-auto text-purple-300 font-semibold flex items-center gap-1">
+                            Lire <ArrowRight className="w-3 h-3" />
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* 3 articles secondaires en ligne */}
+              {featuredArticles.length > 3 && (
+                <div className="grid sm:grid-cols-3 gap-4 mt-6">
+                  {featuredArticles.slice(3).map((article) => (
+                    <Link
+                      key={article.slug}
+                      href={`/blog/${article.slug}`}
+                      className="group flex gap-3 p-4 rounded-xl border border-border hover:border-purple-300 hover:bg-purple-50/50 transition-all duration-200"
+                    >
+                      <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 relative">
+                        <Image
+                          src={article.image}
+                          alt={article.title}
+                          fill
+                          className="object-cover group-hover:scale-110 transition-transform duration-300"
+                          sizes="64px"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <Badge className="mb-1 text-xs bg-gray-100 text-gray-600 border-0">
+                          {article.category}
+                        </Badge>
+                        <p className="text-sm font-semibold text-foreground leading-tight line-clamp-2 group-hover:text-purple-600 transition-colors">
+                          {article.title}
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
+                          <Clock className="w-3 h-3" /> {article.readTime}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </section>
+          )}
 
           {/* Search & Filters */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12 max-w-4xl mx-auto">
@@ -172,7 +305,7 @@ export default function BlogPageClient() {
                       Besoin d&apos;un site web qui convertit ?
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      Landing page des 300 euros, site vitrine des 300 euros. Prix fixe, livraison garantie, satisfaction assuree.
+                      Site vitrine dès 990€, livré en 7 jours. Prix fixe, satisfait ou remboursé, +150 clients accompagnés.
                     </p>
                   </div>
                   <Button
