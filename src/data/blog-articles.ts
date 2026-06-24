@@ -5147,105 +5147,59 @@ Non. Les cookies strictement nécessaires au fonctionnement du site (session, pa
   },
   {
     slug: "ssl-https-securite-site-web",
-    title: "SSL et HTTPS : Pourquoi et Comment Securiser Votre Site Web en 2026",
+    title: "Pourquoi passer son site web en HTTPS et comment installer un certificat SSL gratuitement en 2026 ?",
     excerpt: "Certificat SSL, protocole HTTPS, protection des données : tout comprendre sur la sécurité de votre site web et comment la mettre en place facilement.",
     metaDescription: "Guide complet SSL et HTTPS : pourquoi sécuriser votre site web, comment installer un certificat SSL, et l'impact sur le SEO et la confiance des visiteurs.",
     image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
     category: "Business",
     readTime: "7 min",
     publishedAt: "2026-04-08",
-    author: { name: "Bilel Bettaieb" },
-    tags: ["SSL", "HTTPS", "securite site web", "certificat SSL", "protection donnees", "chiffrement", "cadenas vert", "securite web", "cybersecurite", "certificat numerique"],
-    content: `## Introduction
+    author: { name: "Bilel Bettaieb — ConvertiLab" },
+    tags: ["passer site HTTP HTTPS certificat SSL 2026", "Lets Encrypt certificat SSL gratuit site web", "HTTPS SEO Google signal classement site", "impact HTTPS performance HTTP2 core web vitals", "RGPD chiffrement données formulaire site web"],
+    content: `Depuis 2018, Google utilise le protocole HTTPS comme facteur de classement et affiche "Non sécurisé" dans Chrome sur tous les sites qui ne l'utilisent pas. 85% des internautes quittent un site qui affiche cet avertissement — ce taux monte à 95% pour les sites e-commerce et les formulaires de contact. Si votre site est encore en HTTP, vous perdez des positions dans Google et des clients.
 
-Depuis 2018, Google utilise le protocole **HTTPS comme facteur de classement** et affiche "Non sécurisé" dans Chrome sur tous les sites qui ne l'utilisent pas. Si votre site est encore en HTTP, vous perdez des positions dans Google et des clients qui fuient au premier avertissement du navigateur.
+## Pourquoi le HTTPS est-il indispensable pour le SEO, la sécurité et les performances d'un site web en 2026 ?
 
-Mais le SSL/HTTPS, c'est bien plus qu'un simple badge de sécurité. C'est un élément technique fondamental qui protège vos données, celles de vos clients, et renforce votre crédibilité en ligne.
+4 raisons pour lesquelles le HTTPS est un prérequis en 2026 : 1) Impact SEO direct — Google a confirmé le HTTPS comme signal de classement depuis 2014. Dans un marché compétitif, ne pas avoir de certificat SSL vous place en désavantage face à vos concurrents. 2) Confiance des visiteurs — 85% des internautes quittent un site affichant "Non sécurisé", 95% pour les e-commerces et formulaires. 3) Conformité RGPD — transmettre des données via HTTP (formulaires, mots de passe, paiements) sans chiffrement est une violation du RGPD passible d'amendes. 4) Performance HTTP/2 et HTTP/3 — les protocoles modernes qui accélèrent le chargement nécessitent le HTTPS. Sans SSL, votre site reste sur HTTP/1.1, la version la plus lente.
 
-## Qu'est-ce que le SSL et le HTTPS ?
-
-SSL (Secure Sockets Layer) et son successeur TLS (Transport Layer Security) sont des protocoles de chiffrement qui sécurisent les communications entre un navigateur et un serveur web.
-
-Quand un utilisateur visite votre site en HTTPS, son navigateur demande le certificat SSL du serveur, vérifie ce certificat, établit une connexion chiffrée, et toutes les données échangées sont illisibles pour les tiers.
+Comparatif HTTP vs HTTPS :
 
 | Critère | HTTP | HTTPS |
 |---------|------|-------|
-| Chiffrement | ❌ Aucun | ✅ TLS 1.3 |
-| SEO Google | ❌ Pénalisé | ✅ Signal positif |
-| Chrome | ⚠️ "Non sécurisé" | 🔒 Cadenas |
-| Confiance utilisateur | ❌ Faible | ✅ Élevée |
-| Formulaires / paiements | ❌ Dangereux | ✅ Sécurisé |
+| Chiffrement | Non | TLS 1.3 |
+| SEO Google | Pénalisé | Signal positif |
+| Chrome | "Non sécurisé" | Cadenas sécurisé |
+| Confiance utilisateur | Faible | Élevée |
+| Formulaires / paiements | Dangereux | Sécurisé |
+| Protocole HTTP | HTTP/1.1 uniquement | HTTP/2 et HTTP/3 |
 
-## Pourquoi le HTTPS est indispensable en 2026
+## Quels types de certificats SSL choisir et où obtenir un certificat gratuit ?
 
-### 1. Impact direct sur votre SEO
+3 types de certificats SSL selon le niveau de validation : DV (Domain Validation) — validation du domaine uniquement, gratuit via Let's Encrypt, idéal pour les sites vitrine, blogs et PME. OV (Organization Validation) — validation domaine + entreprise, 50 à 200€/an, pour les PME et e-commerces. EV (Extended Validation) — validation complète avec le nom de l'entreprise dans la barre d'adresse, 200 à 500€/an, pour les banques et assurances. Pour 95% des sites web de PME, un certificat DV gratuit (Let's Encrypt) est suffisant.
 
-Google l'a confirmé dès 2014 : le HTTPS est un signal de classement. Dans un marché compétitif où chaque signal compte, ne pas avoir le HTTPS vous place en désavantage face à vos concurrents. De plus, Google Search Console affiche des avertissements pour les sites HTTP.
+Let's Encrypt est une autorité de certification gratuite, automatisée et open source, soutenue par Mozilla, Google et Microsoft. Renouvelé automatiquement toutes les 90 jours, reconnu par tous les navigateurs. Disponible chez Vercel, Netlify, OVH, PlanetHoster, Infomaniak — souvent inclus dans l'hébergement.
 
-### 2. La confiance des visiteurs
+## Comment passer son site web en HTTPS étape par étape sans perdre son SEO ?
 
-**85% des internautes** quittent un site web qui affiche l'avertissement "Non sécurisé" de Chrome. Pour les sites e-commerce ou les formulaires de contact, ce taux monte à 95%.
+Migration HTTP vers HTTPS en 5 étapes : Étape 1 — installer le certificat SSL (Vercel/Netlify : HTTPS automatique inclus. OVH/PlanetHoster : activer Let's Encrypt dans le panneau de contrôle. WordPress : plugin Really Simple SSL). Étape 2 — configurer les redirections 301 (toutes les URLs HTTP doivent rediriger vers leur équivalent HTTPS — se configure au niveau du serveur ou de l'hébergeur). Étape 3 — mettre à jour les liens internes (remplacer http:// par https:// dans la base de données, les fichiers CSS/JS, les images et le sitemap.xml). Étape 4 — corriger le "Mixed Content" (quand une page HTTPS charge des ressources HTTP — Chrome les bloque. Outil : Why No Padlock, gratuit). Étape 5 — mettre à jour Google Search Console (ajouter la nouvelle propriété HTTPS, soumettre le sitemap mis à jour, vérifier les erreurs d'exploration).
 
-### 3. Protection des données RGPD
+Avantage performances : le passage au HTTPS permet d'activer HTTP/2 multiplexing (chargement parallèle des ressources, jusqu'à 2× plus rapide) et HSTS (élimination des redirections HTTP→HTTPS après la première visite).
 
-Le RGPD impose de protéger les données personnelles de vos utilisateurs. Transmettre des données via HTTP (formulaires, mots de passe, données de paiement) sans chiffrement est une violation du RGPD passible d'amendes.
+[Analysez la performance de votre site](/speed-check) avec notre outil Speed Check gratuit.
 
-### 4. Performance avec HTTP/2 et HTTP/3
+## FAQ — Questions sur le SSL et le HTTPS
 
-Les protocoles modernes HTTP/2 et HTTP/3 qui accélèrent significativement le chargement des sites nécessitent le HTTPS. Sans certificat SSL, votre site reste bloqué sur HTTP/1.1, la version la plus lente.
+### Mon site WordPress est-il automatiquement en HTTPS ?
 
-## Les différents types de certificats SSL
+Non. Le certificat SSL dépend de votre hébergeur, pas de WordPress. Si votre hébergeur propose Let's Encrypt (OVH, PlanetHoster, Infomaniak), activez-le depuis votre panneau de contrôle, puis installez le plugin Really Simple SSL pour migrer automatiquement les URLs. Si votre hébergeur ne propose pas de SSL gratuit, changez d'hébergeur — en 2026, c'est un standard inclus.
 
-### Certificats gratuits (Let's Encrypt)
+### Le passage en HTTPS fait-il perdre du référencement ?
 
-Let's Encrypt est une autorité de certification gratuite, automatisée et open source, soutenue par Mozilla, Google et Microsoft. Renouvelé automatiquement toutes les 90 jours, reconnu par tous les navigateurs, idéal pour les sites vitrine, blogs et PME. Disponible chez Vercel, Netlify, OVH, PlanetHoster, Infomaniak (inclus dans l'hébergement).
+Correctement exécuté avec des redirections 301 permanentes, le passage en HTTPS préserve intégralement votre SEO. Google transfère le PageRank via les redirections 301. Une migration mal faite (sans redirections, sans mise à jour Search Console) peut provoquer une baisse temporaire de 2 à 4 semaines — d'où l'importance de suivre les 5 étapes à la lettre.
 
-### Certificats payants DV, OV, EV
+### Existe-t-il des sites qui ne peuvent pas avoir de certificat SSL gratuit ?
 
-| Type | Validation | Prix/an | Pour qui |
-|------|-----------|---------|----------|
-| **DV** (Domain Validation) | Domaine uniquement | 0-50€ | Sites vitrine, blogs |
-| **OV** (Organization Validation) | Domaine + entreprise | 50-200€ | PME, e-commerce |
-| **EV** (Extended Validation) | Validation complète | 200-500€ | Banques, assurances |
-
-Pour 95% des sites web de PME, un certificat DV gratuit (Let's Encrypt) est suffisant.
-
-## Comment passer son site en HTTPS
-
-### Étape 1 : Installer le certificat SSL
-
-Selon votre hébergeur :
-- Vercel / Netlify : HTTPS automatique, rien à faire
-- OVH / PlanetHoster : Activez Let's Encrypt dans le panneau de contrôle
-- WordPress sur hébergement mutualisé : Plugin "Really Simple SSL" (automatique)
-
-### Étape 2 : Configurer les redirections 301
-
-Toutes les URLs HTTP doivent rediriger en 301 vers leur équivalent HTTPS. Cette configuration se fait au niveau du serveur (Nginx, Apache) ou de votre hébergeur.
-
-### Étape 3 : Mettre à jour les liens internes
-
-Remplacez toutes les URLs http:// par https:// dans votre base de données, vos fichiers CSS/JS, vos images et médias, et votre sitemap.xml.
-
-### Étape 4 : Vérifier l'absence de "Mixed Content"
-
-Le mixed content, c'est quand votre page HTTPS charge des ressources HTTP. Chrome bloque ces ressources et affiche un avertissement.
-
-Outil de détection : "Why No Padlock" (whynopadlock.com) — gratuit et simple d'utilisation.
-
-### Étape 5 : Mettre à jour Google Search Console
-
-Ajoutez la nouvelle propriété HTTPS dans Google Search Console, soumettez votre sitemap mis à jour, et vérifiez les éventuelles erreurs d'exploration.
-
-## HTTPS et performances
-
-Le passage au HTTPS n'affecte pas négativement vos performances si c'est bien fait. Au contraire, vous bénéficiez de HTTP/2 multiplexing (chargement parallèle des ressources, jusqu'à 2× plus rapide) et de HSTS (élimination des redirections HTTP→HTTPS après la première visite).
-
-## Conclusion
-
-Passer votre site en HTTPS n'est plus optionnel en 2026. C'est un prérequis pour être bien classé dans Google, rassurer vos visiteurs, respecter le RGPD et profiter des meilleures performances web.
-
-La bonne nouvelle : avec des hébergeurs modernes comme Vercel, Netlify ou OVH, l'installation du certificat SSL est entièrement automatique et gratuite. Il n'y a aucune excuse pour rester en HTTP.`
+Let's Encrypt couvre tous les noms de domaine standards. Les cas sans Let's Encrypt gratuit sont rares : domaines IP uniquement, hébergeurs très anciens qui n'ont pas mis à jour leur infrastructure. Dans ces cas, un certificat DV payant (moins de 50€/an) résout le problème. La solution la plus simple reste de changer pour un hébergeur moderne.`
   },
   {
     slug: "site-introuvable-google-que-faire",
@@ -5257,14 +5211,7 @@ La bonne nouvelle : avec des hébergeurs modernes comme Vercel, Netlify ou OVH, 
     readTime: "8 min",
     publishedAt: "2026-06-24",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: [
-      "site introuvable google",
-      "site pas indexé google",
-      "site invisible google",
-      "indexation google",
-      "problème seo",
-      "référencement site web",
-    ],
+    tags: ["site introuvable invisible Google indexation", "site pas indexé Google Search Console solutions", "pourquoi mon site n'apparaît pas sur Google 2026", "indexation Google robots.txt noindex problème", "audit SEO gratuit site non positionné Google"],
     faqItems: [
       {
         question: "Mon site n’apparaît pas sur Google, que faire en premier ?",
@@ -5384,13 +5331,7 @@ Avant de passer à un professionnel, commencez par notre audit SEO gratuit : il 
     readTime: "7 min",
     publishedAt: "2026-06-24",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: [
-      "prix site web restaurant",
-      "tarif site internet restaurant",
-      "combien coûte site restaurant",
-      "création site restaurant",
-      "site vitrine restaurant",
-    ],
+    tags: ["prix site internet restaurant 2026 vitrine", "créer site web restaurant menu réservation en ligne", "combien coûte site vitrine restaurant France", "SEO local restaurant Google Maps avis", "ConvertiLab site web restaurant livré 7 jours"],
     faqItems: [
       {
         question: "Combien coûte un site web pour un restaurant ?",
@@ -5500,13 +5441,7 @@ Pour choisir une agence web pour votre restaurant, vérifiez ces 5 points :
     readTime: "9 min",
     publishedAt: "2026-06-24",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: [
-      "trouver clients artisan",
-      "comment trouver des clients artisan",
-      "prospection artisan",
-      "marketing artisan",
-      "visibilité artisan internet",
-    ],
+    tags: ["trouver clients artisan sans publicité payante", "comment artisan trouver clients Google Maps SEO local", "site web artisan indépendant devis en ligne 2026", "fiche Google Business Profile artisan optimisation", "marketing digital artisan plombier electricien 2026"],
     faqItems: [
       {
         question: "Comment trouver des clients quand on est artisan sans publicité payante ?",
@@ -5626,13 +5561,7 @@ Avant de lancer de la pub, assurez-vous que votre site convertit bien. Une page 
     readTime: "8 min",
     publishedAt: "2026-06-24",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: [
-      "concurrents avant moi google",
-      "pourquoi mes concurrents sont mieux classés google",
-      "dépasser concurrents google",
-      "améliorer positionnement google",
-      "seo local concurrence",
-    ],
+    tags: ["pourquoi concurrents avant moi Google Search 2026", "dépasser concurrents SEO local en 3 mois stratégie", "analyse concurrentielle SEO site web PME 2026", "backlinks autorité domaine concurrence Google", "améliorer positionnement Google sans agence SEO"],
     faqItems: [
       {
         question: "Pourquoi mes concurrents apparaissent-ils avant moi sur Google ?",
@@ -5743,13 +5672,7 @@ Chez ConvertiLab, notre outil de comparaison de sites analyse les deux URLs en 6
     readTime: "8 min",
     publishedAt: "2026-06-25",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: [
-      "créer site web sans coder",
-      "site web professionnel sans code",
-      "comment créer site internet",
-      "wix wordpress webflow comparatif",
-      "créer site web soi-même",
-    ],
+    tags: ["créer site web professionnel sans coder débutant 2026", "Wix WordPress Webflow comparatif site internet PME", "outil création site web gratuit payant 2026", "site web no-code freelance agence quel choix", "comment faire son site web soi-même artisan"],
     faqItems: [
       {
         question: "Peut-on créer un site web professionnel soi-même sans savoir coder ?",
@@ -5894,13 +5817,7 @@ Dans tous ces cas, le coût d'une agence est inférieur au manque à gagner.
     readTime: "7 min",
     publishedAt: "2026-06-25",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: [
-      "site web lent clients",
-      "vitesse chargement site web",
-      "site internet lent impact ventes",
-      "optimiser vitesse site web",
-      "temps chargement site",
-    ],
+    tags: ["site web lent perd clients conversions 2026", "vitesse chargement site impact ventes taux rebond", "optimiser temps chargement site WordPress PME", "Core Web Vitals LCP INP CLS site internet 2026", "speed check audit vitesse site web gratuit"],
     faqItems: [
       {
         question: "Quel impact a un site web lent sur les ventes ?",
@@ -6035,13 +5952,7 @@ Chez ConvertiLab, nos sites Next.js obtiennent systématiquement des scores de *
     readTime: "6 min",
     publishedAt: "2026-06-25",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: [
-      "prix site web coiffeur",
-      "combien coûte site internet coiffeur",
-      "création site salon coiffure",
-      "tarif site coiffeur",
-      "site vitrine coiffeur",
-    ],
+    tags: ["prix site internet coiffeur salon coiffure 2026", "créer site web coiffeur indépendant réservation ligne", "combien coûte site vitrine coiffeur France", "SEO local coiffeur Google Maps avis clients", "site web salon coiffure prise rendez-vous en ligne"],
     faqItems: [
       {
         question: "Combien coûte un site web pour un coiffeur ?",
@@ -6149,13 +6060,7 @@ La complémentarité idéale : Instagram pour le before/after et la fidélisatio
     readTime: "7 min",
     publishedAt: "2026-06-25",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: [
-      "obtenir avis google",
-      "plus d avis google entreprise",
-      "collecter avis clients google",
-      "améliorer note google",
-      "stratégie avis google",
-    ],
+    tags: ["obtenir plus avis Google entreprise locale 2026", "comment collecter avis clients Google Maps rapidement", "améliorer note Google Business Profile PME stratégie", "demander avis Google email SMS clients satisfaits", "répondre avis négatifs Google professionnel"],
     faqItems: [
       {
         question: "Comment obtenir plus d'avis Google rapidement ?",
@@ -6287,13 +6192,7 @@ Chez ConvertiLab, tous nos sites incluent une section témoignages visuellement 
     readTime: "6 min",
     publishedAt: "2026-06-25",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: [
-      "site vitrine définition",
-      "qu est ce qu un site vitrine",
-      "site vitrine utilité",
-      "site vitrine entreprise",
-      "différence site vitrine e-commerce",
-    ],
+    tags: ["site vitrine définition utilité entreprise PME", "différence site vitrine e-commerce landing page", "pourquoi créer site vitrine professionnel 2026", "prix site vitrine PME artisan France ConvertiLab", "site vitrine générer leads clients en ligne"],
     faqItems: [
       {
         question: "Qu'est-ce qu'un site vitrine ?",
@@ -6429,13 +6328,7 @@ Ce que ne fera pas un site vitrine : du e-commerce, de la vente de produits, de 
     readTime: "10 min",
     publishedAt: "2026-06-26",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: [
-      "améliorer référencement google",
-      "seo soi-même",
-      "référencement naturel débutant",
-      "comment améliorer seo site",
-      "optimisation seo gratuit",
-    ],
+    tags: ["améliorer référencement Google soi-même débutant 2026", "SEO naturel site web gratuit sans agence PME", "comment optimiser balises title meta site web", "Google Search Console audit SEO gratuit 2026", "référencement local Google Maps petite entreprise"],
     faqItems: [
       {
         question: "Peut-on améliorer son référencement Google soi-même sans agence ?",
