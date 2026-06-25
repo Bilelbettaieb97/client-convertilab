@@ -4912,7 +4912,7 @@ Connectez GA4 à Google Search Console (Admin > Liens > Propriété Search Conso
 
 ## Quelle plateforme choisir pour créer sa boutique en ligne selon son budget et ses objectifs ?
 
-Le choix de la plateforme e-commerce est la décision la plus importante. Pour débuter rapidement avec un petit budget, Shopify est la solution la plus intuitive (abonnement 29 à 79€/mois, commissions sur les ventes). WooCommerce (WordPress) est gratuit et flexible mais nécessite un hébergement et des compétences techniques. Pour un positionnement premium avec des fonctionnalités sur mesure, zéro commission et une performance optimale, un site e-commerce développé sur mesure est recommandé.
+Le choix de la plateforme e-commerce est la décision la plus importante. Pour débuter rapidement avec un petit budget, Shopify est la solution la plus intuitive (abonnement 29 à 79€/mois, commissions sur les ventes). WooCommerce (WordPress) est gratuit et flexible mais nécessite un hébergement et des compétences techniques. Pour un positionnement premium avec des fonctionnalités sur mesure, zéro commission et une performance optimale, un site e-commerce développé sur mesure est recommandé. Un point souvent sous-estimé : les commissions Shopify (0,5 à 2% selon le plan) s'accumulent vite — sur 100 000€ de CA annuel, c'est 500 à 2 000€ qui partent en commissions. Pour les boutiques avec un CA > 50 000€/an, un site sur mesure ou WooCommerce devient plus économique dès la première année.
 
 Comparatif des plateformes e-commerce pour une PME :
 
