@@ -4551,6 +4551,14 @@ Pour configurer le Pixel Meta, créez un pixel dans Meta Business Manager > Év�
 
 Les stratégies de retargeting les plus performantes sont la segmentation temporelle (message différent selon le temps écoulé depuis la visite), le retargeting séquentiel (raconter une histoire en 3 à 4 étapes sur 30 jours), et le ciblage par valeur (message spécifique selon la page visitée — accueil vs page tarifs vs abandon formulaire). L'exclusion stratégique est aussi cruciale : excluez les clients récents, les convertis, et limitez la fréquence à 3 à 5 impressions par semaine pour éviter d'irriter les prospects.
 
+Le retargeting cross-canal est la technique la plus avancée et la plus efficace : une personne qui voit votre publicité à la fois sur Facebook, dans sa boîte email ET sur Google Display a 3 à 4 fois plus de chances de convertir que si elle ne la voit que sur un seul canal. Ce phénomène d'exposition multiple crée une familiarité et une crédibilité qui accélèrent la décision d'achat.
+
+**Les 4 audiences de retargeting à créer en priorité :**
+1. Tous les visiteurs du site des 30 derniers jours (sauf convertis)
+2. Visiteurs de la page tarifs/devis des 14 derniers jours (intention haute)
+3. Personnes ayant regardé plus de 50% d'une de vos vidéos (engagement fort)
+4. Liste email de prospects non-convertis (remarketing CRM)
+
 Stratégie de segmentation temporelle :
 - **0 à 3 jours** : rappel simple, urgence douce — "Vous avez consulté [service]"
 - **4 à 14 jours** : ajoutez des témoignages et de la preuve sociale
