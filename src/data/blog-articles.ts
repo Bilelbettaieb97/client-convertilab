@@ -2816,6 +2816,8 @@ Le taux de complétion est la métrique clé : combien de visiteurs qui voient l
 
 Chez ConvertiLab, le SEO technique de base est inclus dans tous nos sites : balises title/meta uniques, structure H1-H2-H3, vitesse optimisée, plan de site XML et données structurées. Nos clients voient leurs premières positions Google apparaître en moyenne 6 à 12 semaines après la mise en ligne.
 
+![Guide SEO débutant 2026 - mots-clés balises contenu backlinks résultats Google](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80)
+
 [Analyser le SEO de mon site gratuitement →](/seo-check)
 
 ## Qu'est-ce que le SEO et quels sont ses 3 piliers fondamentaux ?
@@ -2880,6 +2882,8 @@ Pour avoir des résultats significatifs en SEO, il faut compter 3 à 6 mois pour
 
 Découvrez nos [services SEO](/services/seo) pour être accompagné par des experts.
 
+![SEO résultats Google - Search Console positions clics impressions mots-clés](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
 ## FAQ — Questions sur le SEO pour débutants
 
 ### Combien de temps faut-il pour voir des résultats en SEO pour un site nouveau ?
@@ -2892,7 +2896,13 @@ Le trafic généré par le SEO est gratuit (vous ne payez pas au clic), mais le 
 
 ### Faut-il faire le SEO soi-même ou engager une agence ?
 
-Pour les bases (structure du site, balises title/meta, quelques articles par mois), vous pouvez appliquer ce guide vous-même. Pour des stratégies avancées (netlinking, audit technique, contenu à grande échelle, positions compétitives), une agence spécialisée comme ConvertiLab fait gagner du temps et évite des erreurs coûteuses (pénalités Google, contenu dupliqué, sur-optimisation). Notre [audit SEO gratuit](/seo-check) vous dit exactement où vous en êtes et ce qui est prioritaire.`
+Pour les bases (structure du site, balises title/meta, quelques articles par mois), vous pouvez appliquer ce guide vous-même. Pour des stratégies avancées (netlinking, audit technique, contenu à grande échelle, positions compétitives), une agence spécialisée comme ConvertiLab fait gagner du temps et évite des erreurs coûteuses (pénalités Google, contenu dupliqué, sur-optimisation). Notre [audit SEO gratuit](/seo-check) vous dit exactement où vous en êtes et ce qui est prioritaire.
+
+### Le SEO fonctionne-t-il dans tous les secteurs ?
+
+Oui, mais avec des délais et des stratégies différents selon la compétitivité du secteur. Dans des niches peu concurrentielles (artisanat local, professions spécialisées en province), des résultats sont visibles en 2 à 3 mois avec peu de contenu. Dans des secteurs très compétitifs (immobilier, assurance, e-commerce mode), plusieurs années et un budget de netlinking important peuvent être nécessaires pour atteindre la première page. Commencez par un audit qui évalue la difficulté réelle de votre secteur avant de vous fixer des objectifs.
+
+![SEO local vs national - compétitivité secteur délais résultats artisan PME](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`
   },
   {
     slug: "seo-local-google-business-profile",
