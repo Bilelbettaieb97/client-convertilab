@@ -7456,6 +7456,8 @@ Le budget complet pour une présence digitale efficace d'artisan :
 
 Le point le plus important : **la régularité bat l'intensité**. 30 minutes par semaine pendant 6 mois valent mieux qu'une semaine d'efforts suivie de 5 mois d'inaction.
 
+**Calculez le ROI de votre présence digitale en tant qu'artisan :** Si vous réalisez en moyenne 2 chantiers par mois grâce au digital (soit 1 chantier tous les 2 semaines sur un carnet déjà bien rempli) à 800€ de facture moyenne, c'est 1 600€ de CA additionnel par mois ou 19 200€ sur l'année. Un site vitrine à 990€ est amorti en moins de 3 semaines. Cette estimation est conservatrice — nos clients artisans rapportent généralement entre 3 et 8 nouveaux chantiers dès les 3 premiers mois, portés par le référencement local et les avis Google.
+
 [Voir nos offres de création de site web pour artisans](/solutions/artisan)
 
 [Demander un devis pour votre site artisan](/contact)`,
