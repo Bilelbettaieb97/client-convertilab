@@ -1726,6 +1726,8 @@ Oui, le rapport est conçu pour être lu par des dirigeants et entrepreneurs, pa
 
 En 2026, le marché regorge d'agences digitales aux offres très variées : freelances, studios créatifs, agences full-service, usines à sites à bas prix. Le prix le plus bas n'est jamais le bon critère. Un site à 300€ livré par un revendeur offshore ne génère pas de clients — un site à 990€ bien conçu peut rentabiliser l'investissement en 6 semaines.
 
+![Choisir agence web 2026 - portfolio, stack technique, avis clients](https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80)
+
 [Demander un devis ConvertiLab →](/demande-maquette)
 
 ## Quelles questions poser avant de contacter une agence web ?
@@ -1795,6 +1797,8 @@ Pour comparer des devis d'agences web sans se faire piéger, il faut comparer le
 
 Un devis flou est toujours un signal d'alarme. Une agence sérieuse peut justifier chaque ligne de son devis.
 
+![Comparer devis agences web - propriété code, maintenance, révisions incluses](https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80)
+
 ## FAQ — Questions fréquentes sur le choix d'une agence web
 
 ### Combien coûte une agence web sérieuse en 2026 ?
@@ -1807,7 +1811,11 @@ Les deux fonctionnent très bien en 2026. L'essentiel est la réactivité et la 
 
 ### Quel est le délai réaliste pour créer un site web avec une agence ?
 
-Comptez 2 à 4 semaines pour un site vitrine, 1 à 3 mois pour un e-commerce et 1 à 2 semaines pour une landing page simple. Ces délais incluent le brief, les maquettes, le développement et les tests. Méfiez-vous des agences qui promettent un site complet en 48h — soit c'est un template, soit les tests seront expédiés.`,
+Comptez 2 à 4 semaines pour un site vitrine, 1 à 3 mois pour un e-commerce et 1 à 2 semaines pour une landing page simple. Ces délais incluent le brief, les maquettes, le développement et les tests. Méfiez-vous des agences qui promettent un site complet en 48h — soit c'est un template, soit les tests seront expédiés.
+
+Notez que votre disponibilité influence aussi les délais : les agences les plus rapides bloquent leur agenda sur votre projet mais ont besoin que vous répondiez rapidement aux demandes de validation. Un projet qui traîne est souvent un projet où le client met 2 semaines à valider chaque maquette. Anticipez votre propre disponibilité quand vous planifiez le projet.
+
+![Délais livraison site web - processus agence, maquettes, tests, mise en ligne](https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80)`,
   },
   {
     slug: "site-vitrine-vs-site-ecommerce",
