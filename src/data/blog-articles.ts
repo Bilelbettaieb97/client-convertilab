@@ -4625,6 +4625,8 @@ La fenêtre standard est de 30 jours pour la majorité des business. Pour les pr
 
 Ce guide vous donne des chiffres concrets, des méthodes de calcul et des benchmarks par secteur pour définir le budget publicitaire qui correspond à vos objectifs. Chez ConvertiLab, nous gérons des campagnes pour des budgets allant de 300€ à 10 000€/mois pour 150+ entrepreneurs.
 
+![Budget publicité digitale 2026 - Google Ads Meta Ads CPC secteur PME artisan](https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80)
+
 [Calculer mon budget publicitaire →](/estimateur-ads)
 
 ## De quoi dépend le budget publicitaire en ligne pour une PME ou un artisan ?
@@ -4677,6 +4679,10 @@ Gérer soi-même ses campagnes publicitaires est pertinent si le budget est inf�
 - **Investissez en retargeting** : le retargeting coûte 2 à 5× moins cher et convertit 3 à 5× mieux que l'acquisition froide
 - **Améliorez votre Quality Score** (Google Ads) : de 5 à 8/10 = -30 à -40% sur votre CPC
 
+![ROI publicité en ligne - Quality Score Google Ads landing page retargeting ROAS calcul](https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&q=80)
+
+**Cas concret ConvertiLab :** un kiné à Strasbourg investissait 400€/mois en Google Ads avec 8 nouveaux patients/mois (CAC 50€). Après audit : landing page lente (4,2s de chargement), aucun témoignage visible, formulaire de 7 champs. Après optimisation de la landing page (1,8s, témoignages, 3 champs), à budget identique il obtient maintenant 19 patients/mois — CAC divisé par 2,4 à 21€, sans augmenter le budget publicitaire d'un seul euro.
+
 ## FAQ — Questions sur le budget publicité en ligne
 
 ### Quel est le budget minimum pour commencer la publicité en ligne ?
@@ -4689,7 +4695,13 @@ Avec un bon ciblage, vous pouvez être rentable dès le premier mois sur Google 
 
 ### Google Ads ou Meta Ads : lequel choisir pour mon activité ?
 
-Google Ads cible l'intention (les gens cherchent activement votre solution). Meta Ads cible l'intérêt (les gens découvrent votre offre). Pour les services B2B et locaux, Google Ads est souvent plus efficace. Pour le B2C et les produits visuels, Meta Ads excelle. L'idéal à terme est de combiner les deux : Google Ads pour capturer la demande existante, Meta Ads pour créer de la demande et recibler.`
+Google Ads cible l'intention (les gens cherchent activement votre solution). Meta Ads cible l'intérêt (les gens découvrent votre offre). Pour les services B2B et locaux, Google Ads est souvent plus efficace. Pour le B2C et les produits visuels, Meta Ads excelle. L'idéal à terme est de combiner les deux : Google Ads pour capturer la demande existante, Meta Ads pour créer de la demande et recibler.
+
+### Comment savoir si je dépense trop peu ou trop en publicité digitale ?
+
+Vous dépensez trop peu si votre CPC est élevé mais que vous avez peu de conversions car l'algorithme n'a pas assez de données pour optimiser (il faut 50 conversions/semaine minimum pour Google Ads Performance Max). Vous dépensez trop si votre ROAS est inférieur à 1,5× — chaque euro investi vous rapporte moins de 1,5€, ce qui signifie que la marge nette est négative. La zone de rentabilité cible est un ROAS entre 3× et 7× selon votre marge produit.
+
+![Budget publicité optimal - ROAS seuil rentabilité 3x-7x conversions algorithme données](https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80)`
   },
   {
     slug: "instagram-entreprise-guide-complet",
