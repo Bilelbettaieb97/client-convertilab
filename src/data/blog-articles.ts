@@ -2458,6 +2458,8 @@ Le paiement en une fois revient moins cher au total (vous évitez les intérêts
 
 Un point souvent négligé : la déductibilité fiscale. Les frais de création de site web sont déductibles en tant que charges d'exploitation (ou amortissables en immobilisation) pour les auto-entrepreneurs et les sociétés. Concrètement, un site à 990€ peut ne vous coûter que 700 à 800€ nets d'impôt. Consultez votre expert-comptable pour optimiser ce poste.
 
+Sur le plan pratique : si vous êtes en début d'activité et cherchez à minimiser le risque, commencez par l'offre mensuelle ConvertiLab (39€/mois) — vous obtenez un site professionnel sans investissement initial important, et vous pouvez évoluer vers la formule complète une fois les premières rentrées d'argent confirmées.
+
 ### Quand un devis à bas prix doit-il alerter ?
 
 Un devis anormalement bas (moins de 500€ pour un "site complet sur mesure") est systématiquement un signal d'alarme. Cela indique soit un template revendu sans personnalisation réelle, soit une externalisation offshore sans contrôle qualité, soit un prestataire qui sous-estime le travail et livrera quelque chose d'incomplet. Le test simple : demandez à voir 5 sites récents qu'ils ont livrés, et testez-les sur mobile et PageSpeed. La réponse arrive vite.
