@@ -1651,6 +1651,8 @@ Les critères où vous êtes à égalité avec vos concurrents représentent des
 
 La règle d'or : traitez un seul écart important à la fois. Attaquer 5 fronts simultanément dilue les ressources et ralentit les résultats sur chacun d'eux.
 
+Timing pratique : lancez la comparaison, lisez le rapport (15 minutes), choisissez votre priorité numéro 1, définissez une action concrète cette semaine, et relancez une analyse dans 30 jours pour mesurer si l'écart s'est réduit. C'est un cycle d'amélioration continue, pas une action ponctuelle.
+
 ## Comment fonctionne un comparateur de sites web gratuit en 3 étapes ?
 
 Un comparateur de sites web gratuit fonctionne en analysant simultanément votre site et ceux de vos concurrents sur les mêmes critères, puis en affichant les résultats côte à côte avec un code couleur : vert si vous êtes devant, orange si vous êtes à égalité, rouge si un concurrent vous devance. L'ensemble prend moins d'une minute.
