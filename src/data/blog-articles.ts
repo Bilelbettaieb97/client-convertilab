@@ -6674,7 +6674,7 @@ Absolument, dans les deux cas. Un devis signé n'est pas un contrat — il doit 
 
 ### Peut-on démarrer avec un freelance et passer à une agence ensuite ?
 
-Oui, et c'est souvent le parcours naturel des entreprises en croissance. Beaucoup de nos clients chez ConvertiLab avaient un premier site fait par un freelance — quand leur activité a grandi et que le site ne suffisait plus, ils sont passés à une solution professionnelle. L'essentiel est que le code vous appartienne dès le départ pour faciliter la transition.`
+Oui, et c'est souvent le parcours naturel des entreprises en croissance. Beaucoup de nos clients chez ConvertiLab avaient un premier site fait par un freelance — quand leur activité a grandi et que le site ne suffisait plus, ils sont passés à une solution professionnelle. L'essentiel est que le code vous appartienne dès le départ pour faciliter la transition. Prévoyez dès le départ un export complet des fichiers sources, de la base de données et des identifiants d'hébergement — un prestataire de qualité n'aura aucune objection à vous les fournir à la livraison finale.`
   },
   {
     slug: "presence-en-ligne-entreprise-2026",
