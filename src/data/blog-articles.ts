@@ -3864,6 +3864,8 @@ Indirectement, oui. Le trafic généré par le SEA augmente la notoriété de vo
 
 Chez ConvertiLab, nous gérons des campagnes Google Ads pour nos clients et avons identifié les 6 erreurs qui gaspillent 80% des budgets. Ce guide vous accompagne pas à pas pour lancer votre première campagne rentable en 2026.
 
+![Google Ads débutant 2026 - campagne Search CPC mots-clés budget annonces conversion](https://images.unsplash.com/photo-1553484771-047a44eee27a?w=800&q=80)
+
 [Estimer mon budget Google Ads →](/estimateur-ads)
 
 ## Comment fonctionne Google Ads et quels types de campagnes choisir pour son activité ?
@@ -3925,6 +3927,10 @@ Optimisations hebdomadaires à faire systématiquement :
 4. Analysez les "termes de recherche" déclencheurs dans les rapports
 5. Optimisez les pages de destination pour améliorer le taux de conversion
 
+![Google Ads optimisation - mots-clés négatifs Quality Score A/B test page de destination](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
+**Cas ConvertiLab :** un serrurier à Lyon dépensait 800€/mois en Google Ads avec un ciblage en correspondance Large. 60% des clics venaient de requêtes non pertinentes ("serrurier jeux de rôle", "devenir serrurier formation"). Après basculement en correspondance Exacte et ajout de 40 mots-clés négatifs, le coût par lead est passé de 45€ à 12€ pour le même budget. Le volume de leads qualifiés a triplé sans augmenter le budget.
+
 ## FAQ — Questions sur Google Ads pour les PME
 
 ### Combien coûte Google Ads par mois pour une PME ?
@@ -3937,7 +3943,13 @@ Oui, à condition de bien cibler vos mots-clés et d'optimiser régulièrement. 
 
 ### Combien de temps avant de voir des résultats avec Google Ads ?
 
-Les premières impressions et clics arrivent en quelques heures. Pour des résultats fiables et optimisés, comptez 2 à 4 semaines de collecte de données. Avant cette période, ne modifiez pas radicalement votre campagne — laissez l'algorithme de Google apprendre et optimiser l'attribution.`
+Les premières impressions et clics arrivent en quelques heures. Pour des résultats fiables et optimisés, comptez 2 à 4 semaines de collecte de données. Avant cette période, ne modifiez pas radicalement votre campagne — laissez l'algorithme de Google apprendre et optimiser l'attribution.
+
+### Faut-il confier ses Google Ads à une agence ou les gérer soi-même ?
+
+Pour des budgets inférieurs à 500€/mois, gérer soi-même avec ce guide est souvent plus rentable qu'une agence (dont les frais de gestion représentent 20 à 30% du budget). Pour des budgets de 1 000€/mois et plus, une agence compétente récupère largement ses frais en optimisant les CPA. L'essentiel est de maîtriser les mécanismes de base pour pouvoir évaluer le travail de votre prestataire — ce guide vous y aide.
+
+![Google Ads agence vs autonomie - budget seuil frais gestion 20% CPA optimisation](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`
   },
   {
     slug: "meta-ads-facebook-instagram-guide",
