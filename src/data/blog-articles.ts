@@ -690,7 +690,11 @@ Oui, le design impacte indirectement le référencement Google via les signaux c
 
 ### Combien coûte une modernisation du design d'un site existant ?
 
-Une modernisation partielle du design (couleurs, typographie, CTA, photos) coûte entre 300€ et 1 000€ chez un prestataire qualifié. Une refonte complète de l'interface avec recodage complet coûte entre 1 500€ et 4 000€ pour un site vitrine. Chez ConvertiLab, nous proposons des audits design gratuits avant tout devis.`
+Une modernisation partielle du design (couleurs, typographie, CTA, photos) coûte entre 300€ et 1 000€ chez un prestataire qualifié. Une refonte complète de l'interface avec recodage complet coûte entre 1 500€ et 4 000€ pour un site vitrine. Chez ConvertiLab, nous proposons des audits design gratuits avant tout devis.
+
+### Un beau design compense-t-il un mauvais contenu ou un mauvais SEO ?
+
+Non. Le design attire et retient l'attention, mais c'est le contenu qui convainc et le SEO qui amène les visiteurs. Un site magnifique sans trafic et sans contenu utile ne génère aucun client. L'ordre de priorité : SEO local d'abord, contenu de qualité ensuite, design soigné pour convertir. Les trois ensemble font un site performant.`
   },
   {
     slug: "optimiser-vitesse-site-web",
