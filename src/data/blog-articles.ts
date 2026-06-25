@@ -1027,6 +1027,8 @@ Sans cache, chaque visiteur fait recalculer la page entièrement par le serveur.
 
 Il faut tester la vitesse de son site après chaque modification significative (nouveau contenu, changement de thème, installation d'un plugin) et au minimum une fois par mois. Une dégradation progressive est difficile à détecter sans monitoring régulier — un plugin mal configuré peut faire passer un LCP de 2,5s à 5s sans que le propriétaire s'en aperçoive immédiatement.
 
+Le réflexe à adopter : après chaque mise à jour WordPress ou installation de plugin, relancez un test de vitesse. 30 secondes qui peuvent éviter des semaines de perte de trafic.
+
 ### Un bon score PageSpeed garantit-il un bon référencement Google ?
 
 Un bon score PageSpeed améliore le référencement mais ne le garantit pas seul. La vitesse de chargement est un facteur parmi les 200+ que Google utilise pour le classement. Un site rapide avec un contenu pauvre ne se positionnera pas face à un concurrent au contenu excellent. La performance est un prérequis, pas une solution complète au référencement naturel.
