@@ -4512,6 +4512,8 @@ La métrique ultime est le retour sur investissement global (ROI) : combien de c
     tags: ["retargeting visiteurs site web 2026", "Pixel Meta remarketing configurer", "audience personnalisée retargeting PME", "ROAS retargeting Google Ads Meta", "abandon panier email remarketing"],
     content: `97% des visiteurs de votre site web partent sans acheter ni vous contacter. C'est un fait universel du marketing digital. Mais ce n'est pas une fatalité. Le retargeting vous permet de recibler ces visiteurs avec des publicités personnalisées pour les ramener sur votre site et les convertir. Les campagnes de retargeting affichent un taux de conversion 70% supérieur aux campagnes classiques — parce que vous ciblez des personnes qui vous connaissent déjà.
 
+![Retargeting remarketing 2026 - pixel Meta Google audiences personnalisées ROAS conversion](https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&q=80)
+
 [Estimer mon budget retargeting →](/estimateur-ads)
 
 ## Comment fonctionne le retargeting et quelle est la différence avec le remarketing ?
@@ -4562,6 +4564,8 @@ Pour le remarketing email (abandon de formulaire/panier) :
 
 Un bon système de remarketing email récupère 5 à 15% des paniers abandonnés.
 
+![Segmentation temporelle retargeting - 0-3 jours rappel 4-14 témoignages 15-30 offre spéciale](https://images.unsplash.com/photo-1416339134316-0e91dc9ded92?w=800&q=80)
+
 ## Quelles métriques surveiller pour mesurer le ROI de ses campagnes de retargeting ?
 
 Les métriques clés d'une campagne de retargeting sont : ROAS (objectif > 5x — le retargeting doit être très rentable car l'audience est chaude), CTR (objectif > 2% — le public est déjà familier avec votre marque), fréquence (< 5 impressions/semaine pour éviter la lassitude), et taux de conversion (objectif > 5%, soit 2 à 3× une campagne d'acquisition classique). Attention à l'attribution : le retargeting "réclame" souvent des conversions qui auraient eu lieu naturellement — utilisez les rapports multi-touch.
@@ -4588,7 +4592,15 @@ Le CPC en retargeting est généralement 2 à 5× moins cher qu'en acquisition f
 
 ### Le retargeting fonctionne-t-il avec peu de trafic ?
 
-Vous avez besoin d'un minimum de trafic pour que les audiences soient suffisamment larges. Meta demande au minimum 100 personnes dans une audience pour la diffuser. Idéalement, visez 1 000+ visiteurs/mois pour des résultats significatifs. En dessous de ce seuil, concentrez-vous d'abord sur l'acquisition de trafic qualifié avant d'investir en retargeting.`
+Vous avez besoin d'un minimum de trafic pour que les audiences soient suffisamment larges. Meta demande au minimum 100 personnes dans une audience pour la diffuser. Idéalement, visez 1 000+ visiteurs/mois pour des résultats significatifs. En dessous de ce seuil, concentrez-vous d'abord sur l'acquisition de trafic qualifié avant d'investir en retargeting.
+
+### Quelle est la durée optimale d'une fenêtre de retargeting ?
+
+La fenêtre standard est de 30 jours pour la majorité des business. Pour les produits à cycle d'achat long (immobilier, B2B, formations coûteuses), étendez à 90 à 180 jours. Pour les achats impulsifs (mode, food), réduisez à 7 à 14 jours — au-delà, la personne n'est plus dans la même intention d'achat. Segmentez toujours par fenêtre temporelle et adaptez le message : urgence dans les premiers jours, valeur et preuve sociale dans les semaines suivantes.
+
+**Cas concret ConvertiLab :** une agence immobilière à Montpellier recevait 2 200 visiteurs/mois mais seulement 6 demandes de contact. Après installation du Pixel Meta et lancement d'une séquence de retargeting en 3 temps (rappel J1, témoignages J7, estimation gratuite J20), les demandes sont passées de 6 à 24/mois avec un budget retargeting de 300€ — soit un coût par lead de 12,5€, contre 87€ en acquisition froide.
+
+![Retargeting cas concret agence immobilière - 6→24 demandes 300€ coût par lead 12,5€](https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80)`
   },
   {
     slug: "budget-publicite-en-ligne-combien",
