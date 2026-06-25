@@ -5151,7 +5151,7 @@ Le taux moyen se situe entre 69 et 72% selon les secteurs. Le mobile affiche un 
 
 ### La livraison gratuite est-elle indispensable pour un e-commerce ?
 
-Pas nécessairement sur toutes les commandes, mais un seuil de livraison gratuite est quasi indispensable car les frais cachés représentent 48% des abandons. Placez ce seuil 20 à 30% au-dessus de votre panier moyen pour encourager l'upselling (si votre panier moyen est 40€, seuil de gratuité à 50€).
+Pas nécessairement sur toutes les commandes, mais un seuil de livraison gratuite est quasi indispensable car les frais cachés représentent 48% des abandons. Placez ce seuil 20 à 30% au-dessus de votre panier moyen pour encourager l'upselling (si votre panier moyen est 40€, seuil de gratuité à 50€). Une technique alternative si vous ne pouvez pas offrir la livraison gratuite : affichez le coût réel de la livraison très tôt dans le parcours (dès la fiche produit via une calculette de frais) et proposez la livraison en point relais à tarif réduit comme option principale. La transparence totale élimine l'effet de surprise désagréable au checkout qui est la première cause d'abandon.
 
 ### Faut-il une technologie complexe pour mettre en place la relance email panier abandonné ?
 
