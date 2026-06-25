@@ -6598,6 +6598,10 @@ Témoignage typique chez ConvertiLab : Emilie, coach bien-être à Lyon, avait c
     ],
     content: `53% des visiteurs mobiles quittent un site qui prend plus de 3 secondes à charger. Chaque seconde supplémentaire réduit le taux de conversion de 7%. Un site lent ne fait pas seulement mauvaise impression — il fait perdre des clients à votre concurrence, directement, silencieusement, chaque jour.
 
+La plupart des petits entrepreneurs ignorent que leur site est lent. Ils voient des clics dans Google Analytics mais ne comprennent pas pourquoi les demandes de contact ne suivent pas. Dans la majorité des cas, la vitesse est en cause.
+
+![Audit vitesse site web - PageSpeed Insights score mobile](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80)
+
 ## Quels sont les chiffres réels de l'impact d'un site lent ?
 
 Les chiffres sont sans appel :
@@ -6630,6 +6634,8 @@ Pour vérifier vos Core Web Vitals : Google Search Console (onglet "Expérience"
 [Tester la vitesse de votre site gratuitement en 30 secondes](/speed-check)
 
 ## Quelles sont les principales causes d'un site web lent ?
+
+![Images non optimisées - cause principale de lenteur site web](https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80)
 
 ### Cause 1 : Des images trop lourdes (responsable dans 60% des cas)
 
@@ -6697,6 +6703,16 @@ Si une refonte n'est pas dans le budget immédiat, voici les actions qui donnent
 Sur WordPress avec Elementor ou Divi, les gains sont limités par l'architecture du thème. Une refonte sur un framework moderne (Next.js) est souvent la seule façon de dépasser le score de 70 sur mobile.
 
 Chez ConvertiLab, nos sites Next.js obtiennent systématiquement des scores de **90 à 98 sur mobile** sur PageSpeed Insights, grâce à l'optimisation des images (WebP automatique), le rendu côté serveur, et le déploiement sur Vercel avec CDN mondial.
+
+Cas concret : Sébastien, électricien à Nanterre, avait un site WordPress avec Elementor et un score mobile de 34. Après refonte sur Next.js par ConvertiLab, son score est passé à 94 sur mobile. Résultat : taux de rebond passé de 78% à 41%, et 4 à 6 demandes de devis supplémentaires par mois.
+
+![Résultats Core Web Vitals après optimisation site web](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
+
+## Ce qu'il faut retenir sur la vitesse de chargement
+
+La vitesse d'un site n'est pas un luxe technique réservé aux grandes entreprises — c'est un facteur de conversion direct pour tout entrepreneur. Chaque seconde gagnée se traduit par plus de visiteurs qui restent, plus de formulaires remplis, et plus de clients.
+
+Le minimum à viser : **score PageSpeed > 70 sur mobile**. L'objectif : > 90. Si vous êtes sous 50, considérez que votre site perd activement des clients chaque jour.
 
 [Voir nos réalisations et scores PageSpeed](/portfolio)
 
