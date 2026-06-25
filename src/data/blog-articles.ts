@@ -3046,6 +3046,7 @@ Les backlinks influencent 4 métriques clés :
 - **Classement dans les SERP** : les pages avec plus de backlinks de qualité se positionnent mieux sur les mots-clés compétitifs
 - **Découverte par Google** : les robots Google suivent les liens pour indexer de nouvelles pages plus rapidement
 - **Autorité de domaine (DA/DR)** : score de 0 à 100 qui mesure la puissance globale de votre site
+- **Trafic referral durable** : contrairement aux publicités, un backlink continue d'envoyer des visiteurs indéfiniment
 - **Trafic referral** : visiteurs qui arrivent sur votre site en cliquant directement sur le lien
 
 Ce qui définit un backlink de qualité :
