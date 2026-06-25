@@ -7056,7 +7056,7 @@ Si vous n'êtes pas e-commerçant, vous n'avez probablement pas besoin de plus q
 
 L'analogie est simple : une vitrine de boutique permet aux passants de voir ce que vous proposez, d'apprécier votre style et de décider d'entrer. Un site vitrine fait la même chose sur internet : il présente votre activité, montre vos réalisations et incite à vous contacter.
 
-Contrairement à une boutique en ligne, un site vitrine ne vend pas directement. La transaction se fait toujours par un appel, un email ou une rencontre physique. C'est pourquoi on l'appelle aussi « site de présentation » ou « site institutionnel ».
+Contrairement à une boutique en ligne, un site vitrine ne vend pas directement. La transaction se fait toujours par un appel, un email ou une rencontre physique. C'est pourquoi on l'appelle aussi « site de présentation » ou « site institutionnel ». Pour un plombier, un avocat ou un restaurant, 100% des transactions passent par une interaction humaine — le site n'a pas besoin de vendre, juste de convaincre.
 
 ## Quelle est la différence entre un site vitrine et un site e-commerce ?
 
