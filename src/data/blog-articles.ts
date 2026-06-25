@@ -2366,6 +2366,8 @@ Oui, pour deux raisons. D'abord, Google indexe votre site en version mobile pour
 
 Pour 95% des PME et indépendants, non. Une application mobile native (iOS/Android) coûte entre 15 000 et 80 000€ et nécessite une maintenance permanente. Un site web responsive avec Progressive Web App (PWA) offre 90% des fonctionnalités d'une app native pour une fraction du coût. Réservez l'application native aux cas où l'utilisation hors ligne, les notifications push ou l'accès aux capteurs du téléphone sont indispensables à votre service.
 
+La vraie question n'est pas "app ou pas app" mais "mes clients ont-ils un comportement suffisamment récurrent pour justifier une installation sur leur téléphone ?" Si vos clients vous contactent une fois par an pour un devis, une app ne créera pas de valeur. Si vous avez un service utilisé plusieurs fois par semaine (commande de repas, prise de RDV récurrente, suivi de commande), alors une PWA — voire une app native — peut se justifier.
+
 ![Mobile first indexing Google - comparaison trafic mobile desktop classement SEO](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`,
   },
   {
