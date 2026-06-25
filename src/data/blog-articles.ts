@@ -2939,7 +2939,7 @@ Les 4 composantes du SEO local :
 
 ## Comment créer et optimiser sa fiche Google Business Profile étape par étape ?
 
-Pour créer et optimiser sa fiche Google Business Profile, il faut suivre 5 étapes : créer et vérifier la fiche (5 à 14 jours par courrier), remplir les informations NAP complètes, choisir la bonne catégorie principale, ajouter des photos de qualité, et rédiger une description avec les mots-clés géographiques. La vérification par courrier est l'étape la plus longue, mais indispensable pour gérer la fiche.
+Pour créer et optimiser sa fiche Google Business Profile, il faut suivre 5 étapes : créer et vérifier la fiche (5 à 14 jours par courrier), remplir les informations NAP complètes, choisir la bonne catégorie principale, ajouter des photos de qualité, et rédiger une description avec les mots-clés géographiques. La vérification par courrier est l'étape la plus longue, mais indispensable pour gérer la fiche. En 2026, Google propose aussi une vérification par vidéo qui réduit ce délai à 24-48h pour certains types d'entreprises.
 
 Les 8 optimisations essentielles de votre fiche Google Business Profile :
 
