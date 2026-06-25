@@ -3833,7 +3833,7 @@ Le SEO a un meilleur ROI à long terme, mais le SEA permet de générer des reve
 
 ### Peut-on faire du SEO sans budget ?
 
-Oui, mais c'est lent. Vous pouvez optimiser votre site vous-même (balises, contenu, vitesse) sans frais directs. L'investissement sera en temps plutôt qu'en argent — comptez 5 à 10 heures par semaine pour voir des résultats en 6 à 12 mois. Si vous valorisez votre temps, un accompagnement professionnel accélérera considérablement le processus. Notre [audit SEO gratuit](/seo-check) identifie les optimisations prioritaires pour partir sur de bonnes bases.
+Oui, mais c'est lent. Vous pouvez optimiser votre site vous-même (balises, contenu, vitesse) sans frais directs. L'investissement sera en temps plutôt qu'en argent — comptez 5 à 10 heures par semaine pour voir des résultats en 6 à 12 mois. Si vous valorisez votre temps, un accompagnement professionnel accélérera considérablement le processus. Notre [audit SEO gratuit](/seo-check) identifie les optimisations prioritaires pour partir sur de bonnes bases. En tenant compte du coût horaire de votre temps, le SEO "gratuit" en autonomie coûte souvent plus cher que déléguer à un professionnel.
 
 ### Google Ads cannibalise-t-il le trafic SEO ?
 
