@@ -4272,7 +4272,7 @@ Métriques clés à suivre pour son email marketing :
 
 ### Quelle est la meilleure fréquence d'envoi pour une newsletter ?
 
-Pour une newsletter, 1 à 2 fois par semaine est optimal. Au-delà, le taux de désabonnement monte. Pour les séquences automation, l'espacement dépend du contexte : 1 email par jour pour une séquence de bienvenue courte (5 jours), 2 à 3 par semaine pour du lead nurturing. La régularité et la qualité priment sur la fréquence brute.
+Pour une newsletter, 1 à 2 fois par semaine est optimal. Au-delà, le taux de désabonnement monte. Pour les séquences automation, l'espacement dépend du contexte : 1 email par jour pour une séquence de bienvenue courte (5 jours), 2 à 3 par semaine pour du lead nurturing. La régularité et la qualité priment sur la fréquence brute. Un test facile : envoyez pendant 4 semaines le mardi matin et 4 semaines le jeudi soir, puis comparez les taux d'ouverture — la différence peut atteindre 20%.
 
 ### Comment améliorer son taux d'ouverture d'email ?
 
