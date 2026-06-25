@@ -4596,7 +4596,7 @@ Oui, à condition d'avoir le consentement de l'utilisateur via un bandeau de coo
 
 ### Combien coûte une campagne de retargeting ?
 
-Le CPC en retargeting est généralement 2 à 5× moins cher qu'en acquisition froide. Avec un budget de 200 à 500€/mois dédié au retargeting, vous pouvez obtenir d'excellents résultats. Le ROAS typique est de 5 à 10×. Pour lancer des campagnes retargeting performantes, utilisez notre [estimateur de budget publicitaire](/estimateur-ads).
+Le CPC en retargeting est généralement 2 à 5× moins cher qu'en acquisition froide. Avec un budget de 200 à 500€/mois dédié au retargeting, vous pouvez obtenir d'excellents résultats. Le ROAS typique est de 5 à 10×. Règle budgétaire recommandée : allouez 20 à 30% de votre budget publicitaire total au retargeting — c'est le canal le plus rentable par euro investi. Pour lancer des campagnes retargeting performantes, utilisez notre [estimateur de budget publicitaire](/estimateur-ads).
 
 ### Le retargeting fonctionne-t-il avec peu de trafic ?
 
