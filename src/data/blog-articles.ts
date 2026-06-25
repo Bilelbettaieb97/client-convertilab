@@ -5596,6 +5596,8 @@ Pour réduire ses coûts de livraison, 3 leviers sont actionnables. 1) Négocier
 
 Une politique de retour généreuse n'est pas un coût — c'est un argument commercial. 92% des clients rachèteront si le processus de retour est simple, et une politique de retour généreuse augmente les ventes de 25%. Les meilleures pratiques : minimum 30 jours de délai (le minimum légal est 14 jours), étiquette de retour prépayée incluse dans le colis, processus en 3 étapes maximum, remboursement sous 5 jours ouvrables. Affichez votre politique de retour sur chaque fiche produit, dans le footer, au checkout et dans l'email de confirmation. Pour les retours, 30% des produits achetés en ligne sont retournés — considérez ce coût dans votre marge dès le départ.
 
+**Différenciez votre retour selon la catégorie produit :** Pour les produits d'hygiène ou personnalisés, indiquez clairement "non retournable" dès la fiche produit — la loi le permet pour certaines catégories. Pour les vêtements et chaussures (taux de retour 40 à 50%), proposez un échange de taille gratuit pour décourager le retour pur et simple. Ces nuances réduisent votre taux de retour de 10 à 15% sans pénaliser la confiance client.
+
 Pour un site e-commerce intégrant une logistique optimisée, [contactez notre équipe](/contact).
 
 ## FAQ — Questions sur la livraison e-commerce
