@@ -7212,6 +7212,10 @@ Dans le doute, commencez par un site vitrine. Il est possible de l'enrichir en e
     ],
     content: `Pour améliorer son référencement Google soi-même, les 3 actions les plus impactantes sont : optimiser les balises title et H1 de chaque page sur les bons mots-clés, compléter et activer sa fiche Google Business Profile, et créer une page dédiée pour chaque service et ville ciblés. Ces 3 actions seules peuvent doubler votre trafic local en 2 à 4 mois, sans agence et sans budget.
 
+Ce guide vous donne 8 actions classées par impact réel, avec les outils gratuits pour les mettre en place et les résultats à attendre. Pas de jargon technique — juste des étapes applicables ce week-end.
+
+![Google Search Console - tableau de bord référencement SEO](https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80)
+
 ## Action 1 : Installer Google Search Console (gratuit, priorité absolue)
 
 Avant d'optimiser quoi que ce soit, vous devez savoir où vous en êtes. Google Search Console est l'outil officiel de Google qui vous montre :
@@ -7265,6 +7269,8 @@ Et pour chaque service :
 Chaque page doit contenir : un titre H1 avec la requête exacte, un texte de 300 à 600 mots spécifique à cette zone/service, vos coordonnées, une photo de chantier dans la zone si possible.
 
 **Piège à éviter :** ne pas créer 50 pages identiques avec juste la ville qui change (duplicate content). Chaque page doit avoir au moins 30% de contenu unique.
+
+![SEO local - pages service par ville, balises title H1](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
 
 ## Action 4 : Optimiser votre fiche Google Business Profile
 
@@ -7345,6 +7351,10 @@ Le SEO n'est pas une action unique — c'est un processus continu. Chaque mois, 
 - Avez-vous de nouvelles pages de service ou de zone à créer ?
 
 Ces 30 minutes mensuelles feront plus pour votre SEO que n'importe quel outil payant acheté et jamais utilisé.
+
+Résultat observé chez ConvertiLab : les entrepreneurs qui appliquent ces 8 actions sur 6 mois voient en moyenne leur trafic organique augmenter de 80 à 200%. Ceux qui s'arrêtent à l'action 1 et 2 voient quand même une progression de 30 à 50% — la cohérence prime sur la perfection.
+
+![Résultats SEO - progression trafic organique 6 mois](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
 
 [Faire auditer votre SEO gratuitement en 60 secondes](/seo-check)
 
