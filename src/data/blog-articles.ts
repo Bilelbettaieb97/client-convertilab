@@ -2836,6 +2836,8 @@ Le SEO (Search Engine Optimization) regroupe l'ensemble des techniques qui perme
 
 Si votre site est mal structuré, Google ne peut pas l'explorer correctement — et ne peut pas le référencer.
 
+**Cas ConvertiLab :** un consultant en management parisien avait un site WordPress de 5 ans, bien conçu visuellement, mais sans aucune optimisation SEO. Aucune balise title unique, images sans attribut alt, pas de plan de site XML. En 3 mois d'intervention sur le SEO technique seul, sans créer de nouveau contenu, ses impressions Google ont progressé de 340% et il a décroché 3 premières positions sur ses requêtes cibles. Le socle technique est la condition de tout le reste.
+
 ## Comment trouver les mots-clés sur lesquels se positionner en priorité ?
 
 Pour trouver les mots-clés sur lesquels se positionner en priorité, il faut croiser 3 critères : volume de recherche mensuel (nombre de personnes qui cherchent ce terme), intention de recherche (informationnelle, commerciale ou transactionnelle), et niveau de concurrence (combien d'autres sites cherchent à se positionner sur ce terme). Pour un débutant, cibler des mots-clés de longue traîne (4+ mots, concurrence faible) est la stratégie la plus rapide pour obtenir des résultats.
