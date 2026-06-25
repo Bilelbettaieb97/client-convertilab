@@ -3454,6 +3454,8 @@ Un audit SEO gratuit (comme notre outil sur convertilab.com) analyse automatique
 
 Sur les sites que nous auditons chez ConvertiLab, 78% avaient au moins une page importante non indexée sans le savoir. Utilisez notre [outil d'audit SEO gratuit](/seo-check) pour identifier vos pages non indexées.
 
+![Indexation Google 2026 - Search Console inspection URL sitemap robots.txt not indexed](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80)
+
 ## Comment fonctionne l'indexation Google et pourquoi certaines pages ne sont pas indexées ?
 
 L'indexation Google se déroule en 3 étapes : la découverte (Googlebot explore votre site via les liens et le sitemap), l'analyse (Google exécute le JavaScript et analyse le contenu), et l'indexation (si la page est jugée qualitative et unique, elle est ajoutée à l'index). Les raisons les plus fréquentes de non-indexation sont : contenu dupliqué ou trop similaire à une autre page, contenu trop court ou sans valeur ajoutée, balise noindex ajoutée par erreur, erreur de crawl (page inaccessible), ou page orpheline sans lien interne.
@@ -3496,6 +3498,8 @@ Erreurs courantes à éviter dans robots.txt :
 
 Utilisez notre [générateur de robots.txt et sitemap](/generateur-robots-sitemap) pour créer ces fichiers sans risque d'erreur.
 
+![Robots.txt sitemap XML configuration - autorisation crawl Googlebot erreurs courantes](https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&q=80)
+
 ## Comment le maillage interne accélère-t-il l'indexation des nouvelles pages ?
 
 Chaque lien interne est une porte d'entrée pour Googlebot : plus une page reçoit de liens internes depuis des pages déjà indexées et populaires, plus elle sera crawlée et indexée rapidement. Pour accélérer l'indexation d'une nouvelle page, ajoutez immédiatement 2 à 3 liens internes vers elle depuis vos articles les plus visités. Cette technique est souvent plus rapide que la soumission manuelle dans Search Console.
@@ -3520,7 +3524,13 @@ Non. Google est devenu sélectif et n'indexe que les pages qu'il juge suffisamme
 
 ### Faut-il soumettre chaque nouvelle page manuellement dans Search Console ?
 
-Non, ce n'est pas nécessaire si votre sitemap est bien configuré et automatiquement mis à jour. Cependant, pour les pages prioritaires (article important, page de service), une soumission manuelle via l'outil d'inspection d'URL peut accélérer l'indexation. Pour les publications régulières, un bon sitemap et un maillage interne solide suffisent.`
+Non, ce n'est pas nécessaire si votre sitemap est bien configuré et automatiquement mis à jour. Cependant, pour les pages prioritaires (article important, page de service), une soumission manuelle via l'outil d'inspection d'URL peut accélérer l'indexation. Pour les publications régulières, un bon sitemap et un maillage interne solide suffisent.
+
+### Qu'est-ce que le budget de crawl et comment l'optimiser ?
+
+Le budget de crawl est le nombre de pages que Googlebot explore sur votre site dans un laps de temps donné. Pour la plupart des PME (sites de moins de 500 pages), ce n'est pas un enjeu majeur. Il devient critique pour les sites e-commerce avec des milliers de références ou des sites qui génèrent de nombreuses URLs dynamiques (filtres, pagination). Pour l'optimiser : bloquez via robots.txt les URLs sans valeur SEO (pages de résultats de recherche interne, paramètres UTM, doublons), et améliorez la vitesse de votre site pour que Googlebot puisse crawler plus de pages en moins de temps.
+
+![Budget de crawl Googlebot - pages dynamiques pagination filtres URLs canoniques](https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80)`
   },
   {
     slug: "contenu-seo-redaction-optimisee",
