@@ -834,6 +834,10 @@ Le seuil minimum est 70/100 sur mobile selon les recommandations Google. En dess
 
 **68% des expériences en ligne** commencent sur un moteur de recherche. Pourtant la grande majorité des sites ne dépassent jamais la deuxième page de Google — non par manque de contenu, mais à cause d'erreurs techniques invisibles qui plombent le référencement naturel sans que les propriétaires en aient conscience.
 
+La bonne nouvelle : la plupart de ces erreurs sont corrigibles en quelques heures, sans développeur. Encore faut-il les connaître.
+
+![Audit SEO - analyse technique site web score et erreurs](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
 [Essayez l'audit SEO gratuit maintenant →](/seo-check)
 
 ## Pourquoi un audit SEO est-il indispensable avant toute optimisation ?
@@ -847,6 +851,10 @@ Ce que l'audit révèle systématiquement sur les PME que j'accompagne chez Conv
 - 60% ont des images sans attribut alt
 - 40% ont un score PageSpeed mobile inférieur à 50/100
 - 30% ont un fichier robots.txt qui bloque des pages importantes
+
+Ces erreurs semblent techniques mais elles ont un impact business direct. Une page sans meta description attire moins de clics dans Google (le CTR baisse de 20 à 30%). Une image sans alt ne contribue pas aux recherches Google Images. Un robots.txt mal configuré peut bloquer l'indexation de votre meilleure page de service.
+
+![Rapport audit SEO - erreurs critiques et priorités de correction](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
 
 ## Comment fonctionne un outil d'audit SEO gratuit en 3 étapes ?
 
@@ -876,6 +884,27 @@ Couverture de l'audit par catégorie :
 | Contenu | Longueur, duplication | Moyen |
 
 Contrairement aux outils payants comme Semrush ou Ahrefs qui offrent une analyse approfondie sur l'ensemble du domaine, cet outil est conçu pour un diagnostic rapide et actionnable de la page analysée — idéal pour identifier les blocages prioritaires en quelques secondes.
+
+## Que faire après avoir reçu les résultats de son audit SEO ?
+
+Un audit sans action ne sert à rien. Voici comment prioriser les corrections :
+
+**Priorité 1 — Erreurs critiques (à corriger en 48h)**
+- Balises title manquantes ou identiques sur plusieurs pages : modifiez chaque title pour qu'il soit unique et contienne le mot-clé principal
+- Robots.txt bloquant des pages importantes : vérifiez que vos pages de service ne sont pas accidentellement bloquées
+- Site non sécurisé (HTTP au lieu de HTTPS) : activez le certificat SSL sur votre hébergeur
+
+**Priorité 2 — Avertissements (à corriger dans la semaine)**
+- Meta descriptions manquantes : rédigez une description unique de 150-160 caractères par page
+- Images sans attribut alt : ajoutez une description à chaque image (décrit ce qu'elle montre + mot-clé si pertinent)
+- H1 manquant ou dupliqué : assurez-vous que chaque page a un seul H1 qui contient votre requête cible
+
+**Priorité 3 — Améliorations (à planifier sur le mois)**
+- Score PageSpeed < 70 : compressez les images, activez Cloudflare, supprimez les scripts inutiles
+- Pas de sitemap XML : générez-le et soumettez-le dans Google Search Console
+- Structure de maillage interne faible : ajoutez des liens entre vos pages de service et vos articles de blog
+
+![Correction erreurs SEO - action après audit technique](https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80)
 
 ## FAQ — Questions fréquentes sur l'audit SEO
 
