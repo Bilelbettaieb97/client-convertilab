@@ -6150,11 +6150,15 @@ Méfiez-vous des devis à 99€ ou 199€ — ces offres livrent généralement 
     ],
     content: `Pour trouver des clients quand on est artisan en 2026, les méthodes qui fonctionnent sont le référencement Google local, une fiche Google Business Profile optimisée, un site web avec photos de réalisations, et le bouche-à-oreille digital via les avis en ligne. La publicité payante peut accélérer les résultats mais n'est pas nécessaire pour démarrer.
 
+Ce guide s'appuie sur les résultats concrets de plus de 150 artisans (plombiers, électriciens, peintres, menuisiers, paysagistes) accompagnés par ConvertiLab. Pas de théorie — que des méthodes testées avec des chiffres réels.
+
+![Artisan au travail - trouver des clients en ligne](https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80)
+
 ## Pourquoi trouver des clients est-il plus difficile pour un artisan aujourd'hui ?
 
 Trouver des clients est plus difficile pour un artisan aujourd'hui parce que **87% des particuliers cherchent un artisan sur Google** avant de demander une recommandation à leur entourage. Si vous n'êtes pas visible en ligne, vous n'existez tout simplement pas pour eux, même si vous êtes le meilleur artisan de votre secteur.
 
-La bonne nouvelle : vos concurrents artisans n'ont souvent pas encore fait le nécessaire en ligne. Moins de 40% des artisans français avaient un site web optimisé en 2025. Se positionner maintenant revient à occuper un terrain presque vide.
+La bonne nouvelle : vos concurrents artisans n'ont souvent pas encore fait le nécessaire en ligne. Moins de 40% des artisans français avaient un site web optimisé en 2025. Se positionner maintenant revient à occuper un terrain presque vide. C'est une fenêtre d'opportunité rare — dans 3 à 5 ans, la concurrence digitale sera bien plus forte dans les métiers du bâtiment et de la rénovation.
 
 ## Méthode 1 : Le référencement Google local (la plus rentable)
 
@@ -6172,6 +6176,8 @@ Balise title, H1, premiers 100 mots, URL. 3 à 5 occurrences naturelles suffisen
 Vos photos de chantier, votre zone d'intervention, votre spécialité, vos tarifs approximatifs. Plus votre page est informative, plus Google la juge utile.
 
 Résultat typique pour un artisan chez ConvertiLab : **4 à 8 demandes de devis supplémentaires par mois** en 3 à 6 mois, sans budget publicité.
+
+Cas concret : Karim, plombier à Rueil-Malmaison, avait zéro présence en ligne et dépendait uniquement du bouche-à-oreille. Après création d'une page « plombier Rueil-Malmaison » optimisée, il a atteint la position 3 sur cette requête (500 recherches/mois) en 5 semaines. Résultat : 6 à 9 devis supplémentaires par mois pour un investissement de 500€.
 
 [Vérifier gratuitement votre visibilité sur Google](/seo-check)
 
@@ -6199,6 +6205,8 @@ Un site web pour artisan n'a pas besoin d'être complexe. Ce qui convertit le mi
 
 Sur 150+ clients ConvertiLab, les artisans avec photos de réalisations et témoignages reçoivent **3× plus de demandes de devis** que ceux avec un site vitrine sans preuve sociale.
 
+![Site vitrine artisan avec galerie de réalisations et formulaire de devis](https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80)
+
 ## Méthode 4 : Le bouche-à-oreille digital
 
 **Les avis Google** : après chaque chantier réussi, envoyez un message WhatsApp au client avec le lien direct vers votre fiche Google. Taux de conversion : 20 à 40%.
@@ -6217,23 +6225,43 @@ Des plateformes comme **Houzz**, **Habitissimo** ou **MesArtisans** mettent en r
 
 **Mon conseil** : utilisez ces plateformes pour démarrer ou remplir un agenda creux, mais construisez en parallèle votre SEO pour ne plus en dépendre dans 6 à 12 mois.
 
+![Artisan et client - satisfaction et avis Google](https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=800&q=80)
+
 ## Méthode 6 : La publicité locale (Google Ads ou Meta Ads)
 
 **Google Ads local** : votre annonce apparaît en tête sur « électricien [ville] ». Coût : 2€ à 15€ par clic. Budget recommandé : 300€ à 800€/mois.
 
 **Meta Ads** : ciblage géographique précis autour de votre zone. Efficace pour les travaux de rénovation. Budget minimum : 10€/jour.
 
-Avant de lancer de la pub, assurez-vous que votre site convertit bien. Une page sans témoignages ni photos gaspillera votre budget.
+Avant de lancer de la pub, assurez-vous que votre site convertit bien. Une page sans témoignages ni photos gaspillera votre budget. La règle chez ConvertiLab : le SEO local d'abord, les Ads ensuite quand l'agenda est plein à 70% et que vous voulez accélérer.
 
 [Estimer votre budget publicitaire selon votre secteur](/estimateur-ads)
 
+## Combien coûte la mise en ligne d'un artisan en 2026 ?
+
+Le budget complet pour une présence digitale efficace d'artisan :
+
+| Action | Coût | Délai résultats |
+|--------|------|-----------------|
+| Fiche Google Business Profile | Gratuit | 2 à 4 semaines |
+| Site vitrine avec SEO local | 500€ à 1 500€ | 2 à 6 mois |
+| Campagne Google Ads locale | 300€ à 800€/mois | Immédiat |
+| Gestion réseaux sociaux | 0€ si en autonomie | 3 à 6 mois |
+
+**Le minimum viable pour un artisan débutant en ligne :** fiche Google Business optimisée + site vitrine 5 pages à 500€ = présence complète pour moins de 700€ tout compris.
+
 ## Par où commencer quand on est artisan sans présence en ligne ?
 
-- **Semaine 1** : créez ou optimisez votre fiche Google Business Profile (gratuit, résultats en 2 semaines)
-- **Semaines 2 à 4** : faites créer votre site vitrine avec photos de réalisations et formulaire de devis
-- **Mois 2 à 3** : collectez vos 10 premiers avis Google, publiez des photos de chantier sur Instagram
-- **Mois 4 à 6** : analysez vos positions Google, affinez vos pages selon les requêtes qui ramènent du trafic
-- **Mois 6+** : ajoutez optionnellement de la pub pour les périodes creuses
+**Plan d'action concret sur 6 mois :**
+
+- **Semaine 1** : créez ou réclamez votre fiche Google Business Profile (gratuit). Ajoutez photos, horaires, catégorie principale, description avec vos villes d'intervention.
+- **Semaines 2 à 4** : faites créer votre site vitrine avec photos de réalisations, formulaire de devis et pages optimisées pour vos requêtes locales.
+- **Mois 2** : contactez vos 10 meilleurs clients par SMS pour leur demander un avis Google. Objectif : atteindre 10 avis minimum.
+- **Mois 3** : analysez dans Google Search Console quelles requêtes amènent du trafic. Créez des pages pour les requêtes manquantes.
+- **Mois 4 à 6** : publiez 1 à 2 photos de chantier par semaine sur Instagram et votre fiche Google Business. Le contenu frais envoie un signal positif à Google.
+- **Mois 6+** : si votre agenda est encore trop vide, testez Google Ads local sur 1 mois avec 300€ pour remplir les trous.
+
+Le point le plus important : **la régularité bat l'intensité**. 30 minutes par semaine pendant 6 mois valent mieux qu'une semaine d'efforts suivie de 5 mois d'inaction.
 
 [Voir nos offres de création de site web pour artisans](/solutions/artisan)
 
