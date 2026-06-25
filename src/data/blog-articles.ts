@@ -4846,7 +4846,7 @@ Canaux d'acquisition à surveiller dans GA4 :
 
 ## Comment configurer le suivi des conversions dans Google Analytics 4 ?
 
-Pour configurer les conversions dans GA4, allez dans Admin > Événements, trouvez l'événement que vous voulez suivre (form_submit pour un formulaire de contact, purchase pour un achat, phone_call pour un clic téléphone), et cliquez sur "Marquer comme conversion". GA4 collecte automatiquement certains événements standards (scroll, clic, vidéo). Pour des conversions personnalisées (formulaire spécifique, bouton CTA), créez un événement personnalisé via Google Tag Manager. Sans conversions configurées, GA4 ne vous dit pas si votre site atteint ses objectifs business.
+Pour configurer les conversions dans GA4, allez dans Admin > Événements, trouvez l'événement que vous voulez suivre (form_submit pour un formulaire de contact, purchase pour un achat, phone_call pour un clic téléphone), et cliquez sur "Marquer comme conversion". GA4 collecte automatiquement certains événements standards (scroll, clic, vidéo). Pour des conversions personnalisées (formulaire spécifique, bouton CTA), créez un événement personnalisé via Google Tag Manager. Sans conversions configurées, GA4 ne vous dit pas si votre site atteint ses objectifs business. Conseil pratique : configurez toujours une page de confirmation post-formulaire (ex : /merci-contact) et créez un événement GA4 déclenché par la visite de cette page — c'est la méthode de tracking la plus fiable et la moins sujette aux faux positifs.
 
 4 erreurs de configuration GA4 qui faussent vos données :
 - **Ne pas exclure votre propre trafic** : filtrez votre IP dans Admin > Flux de données > Adresses IP internes
