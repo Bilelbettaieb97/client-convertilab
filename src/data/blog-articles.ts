@@ -1274,7 +1274,7 @@ Trois métriques suffisent pour piloter une campagne PME : le CPC réel (coût p
 
 ### Comment un artisan peut-il rentabiliser Google Ads avec un petit budget ?
 
-Un artisan peut rentabiliser Google Ads avec 300 à 500€/mois en ciblant exclusivement des mots-clés avec forte intention d'achat ("plombier urgence [ville]", "électricien devis [ville]"), en limitant la diffusion à un rayon de 20 km et en créant une page dédiée avec son numéro en click-to-call. Chez ConvertiLab, un électricien de la région parisienne a généré 8 devis en 2 semaines avec 400€ investis, soit un coût par lead de 50€ pour des chantiers à 800€ minimum.
+Un artisan peut rentabiliser Google Ads avec 300 à 500€/mois en ciblant exclusivement des mots-clés avec forte intention d'achat ("plombier urgence [ville]", "électricien devis [ville]"), en limitant la diffusion à un rayon de 20 km et en créant une page dédiée avec son numéro en click-to-call. Chez ConvertiLab, un électricien de la région parisienne a généré 8 devis en 2 semaines avec 400€ investis, soit un coût par lead de 50€ pour des chantiers à 800€ minimum. Le ROI était positif dès la première semaine.
 
 [Simuler la rentabilité de vos campagnes gratuitement →](/estimateur-ads)`
   },
