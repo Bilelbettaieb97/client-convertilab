@@ -5224,6 +5224,8 @@ Pour une intégration Stripe sur mesure, [contactez notre équipe](/contact).
 
 La sécurité est gérée automatiquement par Stripe : certification PCI DSS niveau 1 (le plus haut), chiffrement bout en bout, et Stripe Radar qui utilise le machine learning pour bloquer les fraudes (analyse de 1 000+ signaux par transaction, taux de fraude réduit à 0,1% contre 1,5% sans protection). Pour les remboursements, effectuez-les directement depuis le dashboard (total ou partiel) — le client est crédité sous 5 à 10 jours ouvrables mais les frais Stripe de 0,25€ ne sont pas remboursés. Pour les litiges (chargebacks), vous avez 21 jours pour fournir des preuves. Un taux de litige supérieur à 1% peut entraîner la suspension du compte.
 
+**Prévenir les chargebacks :** les 3 meilleures pratiques sont : décrire précisément le produit (les chargebacks "non conforme à la description" sont les plus faciles à éviter), envoyer un email de confirmation de commande et un email de confirmation d'expédition avec numéro de suivi, et afficher clairement votre politique de retour. En cas de chargeback injustifié, soumettez votre preuve de livraison, la confirmation de commande et les échanges email — Stripe vous donne gain de cause dans 60 à 70% des litiges bien documentés.
+
 ## FAQ — Questions sur Stripe et le paiement en ligne
 
 ### Combien coûte Stripe pour un e-commerce français ?
