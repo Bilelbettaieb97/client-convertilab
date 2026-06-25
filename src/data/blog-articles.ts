@@ -4684,7 +4684,7 @@ Budget total réaliste à prévoir (incluant tout) :
 
 ## Vaut-il mieux gérer soi-même ses campagnes ou confier à une agence ?
 
-Gérer soi-même ses campagnes publicitaires est pertinent si le budget est inférieur à 1 000€/mois, si vous avez 5 à 10h/semaine à y consacrer, et si vos campagnes sont simples (1 service, 1 zone géographique). Au-delà de 1 000€/mois ou pour des campagnes multi-plateformes, une agence devient rentable : les gains d'optimisation compensent largement les frais. Un expert Google Ads qui améliore votre Quality Score de 5/10 à 8/10 réduit votre CPC de 30 à 40%.
+Gérer soi-même ses campagnes publicitaires est pertinent si le budget est inférieur à 1 000€/mois, si vous avez 5 à 10h/semaine à y consacrer, et si vos campagnes sont simples (1 service, 1 zone géographique). Au-delà de 1 000€/mois ou pour des campagnes multi-plateformes, une agence devient rentable : les gains d'optimisation compensent largement les frais. Un expert Google Ads qui améliore votre Quality Score de 5/10 à 8/10 réduit votre CPC de 30 à 40%. Règle empirique : une agence spécialisée doit générer un gain net (économies sur CPC + conversions supplémentaires) au moins 2× supérieur à ses frais de gestion pour être rentable. Demandez toujours un accès en lecture à vos comptes Ads — une agence sérieuse n'a aucune raison de refuser.
 
 3 leviers pour optimiser votre ROI publicitaire :
 - **Optimisez votre landing page** : doubler le taux de conversion de 2% à 4% = diviser votre budget par deux pour le même résultat
