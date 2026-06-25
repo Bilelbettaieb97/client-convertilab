@@ -867,7 +867,7 @@ Rendez-vous sur [l'outil d'audit SEO gratuit](/seo-check), collez l'adresse de v
 En moins de 60 secondes, l'outil examine : balises title et meta descriptions, structure H1/H2/H3, attributs alt des images, robots.txt et sitemap XML, vitesse de chargement, responsive design, HTTPS, et une vingtaine d'autres critères.
 
 **Étape 3 : Le rapport priorisé**
-Vous recevez un score SEO global sur 100 avec chaque problème classé en "erreur critique", "avertissement" ou "amélioration". Chaque point est accompagné d'une explication et d'une piste de correction concrète.
+Vous recevez un score SEO global sur 100 avec chaque problème classé en "erreur critique", "avertissement" ou "amélioration". Chaque point est accompagné d'une explication et d'une piste de correction concrète. Vous recevez également le rapport par email pour le retrouver facilement et le partager avec votre prestataire si nécessaire.
 
 ## Quels résultats concrets obtient-on avec un audit SEO gratuit ?
 
