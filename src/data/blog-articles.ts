@@ -5502,6 +5502,16 @@ L'éclairage fait 90% de la qualité d'une photo produit :
 
 Les retouches essentielles pour une photo produit e-commerce sont : détourage (fond blanc parfait code #FFFFFF), balance des couleurs (fidélité au produit réel — crucial pour éviter les retours), netteté légère pour le web, recadrage (format carré ou 4:3 selon votre site), et compression (format WebP, 30% plus léger que JPEG à qualité égale). Outils recommandés : Adobe Lightroom pour la retouche en série avec presets, Remove.bg pour le détourage automatique par IA (gratuit pour les premières images), TinyPNG pour la compression sans perte de qualité visible.
 
+**Workflow de retouche en lot pour un catalogue de 50 produits :**
+1. Importez toutes les photos dans Lightroom et créez un preset unifié (exposition, contraste, balance des blancs)
+2. Appliquez le preset en un clic sur toute la sélection
+3. Exportez en JPEG 85% dans un dossier "À détourage"
+4. Traitez par lot sur Remove.bg (upload ZIP → download ZIP détoré)
+5. Compressez avec TinyPNG (drag & drop 20 images simultanément)
+6. Nommez avec la convention : [nom-produit]-[couleur]-[vue].webp
+
+Ce workflow ramène le temps de retouche de 15 à 20 minutes par photo à moins de 3 minutes pour les productions en série, sans sacrifier la cohérence du catalogue.
+
 ![Équipement photo produit budget - lightbox smartphone trépied softbox réflecteur éclairage](https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80)
 
 ## Comment optimiser ses photos produits pour le SEO et la performance de son site ?
