@@ -1381,7 +1381,7 @@ Il faut mettre à jour ses mentions légales et sa politique de confidentialité
 
 L'absence de mentions légales est passible d'une amende de 75 000€ pour les personnes physiques et 375 000€ pour les personnes morales en vertu de la loi LCEN. Les manquements au RGPD exposent à des sanctions de la CNIL pouvant atteindre 4% du chiffre d'affaires annuel mondial. En pratique, la CNIL sanctionne en priorité les grandes entreprises, mais les PME et auto-entrepreneurs ne sont pas à l'abri de plaintes de visiteurs ou de contrôles sectoriels.
 
-Au-delà des sanctions financières, l'absence de mentions légales nuit aussi à la crédibilité : 67% des acheteurs en ligne regardent les mentions légales avant de passer commande sur un site inconnu. Une page de mentions légales absente ou incomplète peut suffire à perdre un client prêt à acheter.
+Au-delà des sanctions financières, l'absence de mentions légales nuit aussi à la crédibilité : 67% des acheteurs en ligne regardent les mentions légales avant de passer commande sur un site inconnu. Une page de mentions légales absente ou incomplète peut suffire à perdre un client prêt à acheter. Chez ConvertiLab, nous avons systématiquement ajouté les documents juridiques lors de nos refontes de sites clients — et observé jusqu'à 15% d'augmentation du taux de conversion sur les sites e-commerce en quelques semaines.
 
 ### Un auto-entrepreneur doit-il afficher son adresse personnelle dans les mentions légales ?
 
