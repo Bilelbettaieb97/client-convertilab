@@ -4672,7 +4672,7 @@ Règle de répartition Meta Ads : 60% acquisition (audiences froides) + 30% reta
 
 ## Quelles erreurs budgétaires coûtent le plus cher aux PME ?
 
-Les 5 erreurs budgétaires les plus coûteuses : investir un budget insuffisant (200€/mois sur Google Ads dans un secteur concurrentiel ne génère pas assez de données), ne pas faire de phase de test (toujours réserver 20% pour tester), couper les campagnes trop tôt (une campagne a besoin de 50 conversions minimum pour que l'algorithme optimise), ignorer la saisonnalité (adaptez le budget aux pics de votre secteur), et oublier les frais de gestion (la gestion représente 15 à 25% du budget media).
+Les 5 erreurs budgétaires les plus coûteuses : investir un budget insuffisant (200€/mois sur Google Ads dans un secteur concurrentiel ne génère pas assez de données), ne pas faire de phase de test (toujours réserver 20% pour tester), couper les campagnes trop tôt (une campagne a besoin de 50 conversions minimum pour que l'algorithme optimise), ignorer la saisonnalité (adaptez le budget aux pics de votre secteur), et oublier les frais de gestion (la gestion représente 15 à 25% du budget media). Une 6e erreur majeure souvent négligée : ne pas augmenter le budget progressivement. Doubler un budget publicitaire d'un seul coup réinitialise la phase d'apprentissage — augmentez de 20% maximum par semaine pour préserver l'optimisation algorithmique déjà réalisée.
 
 Budget total réaliste à prévoir (incluant tout) :
 
