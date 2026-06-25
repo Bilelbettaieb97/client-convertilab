@@ -4936,7 +4936,7 @@ Comparatif des plateformes e-commerce pour une PME :
 
 ## Comment configurer le paiement et la livraison pour maximiser les conversions d'une boutique en ligne ?
 
-Pour maximiser les conversions, proposez plusieurs moyens de paiement : carte bancaire via Stripe ou PayPal (obligatoire), Apple Pay / Google Pay pour les achats mobiles (réduit les frictions de 30%), paiement en plusieurs fois via Alma ou Klarna (augmente le panier moyen de 20 à 40%), et virement pour les commandes importantes. Pour la livraison, le deuxième critère d'achat après le prix : proposez la livraison gratuite à partir d'un seuil (ex : dès 50€), plusieurs options (standard, express, point relais), et communiquez des délais réalistes.
+Pour maximiser les conversions, proposez plusieurs moyens de paiement : carte bancaire via Stripe ou PayPal (obligatoire), Apple Pay / Google Pay pour les achats mobiles (réduit les frictions de 30%), paiement en plusieurs fois via Alma ou Klarna (augmente le panier moyen de 20 à 40%), et virement pour les commandes importantes. Pour la livraison, le deuxième critère d'achat après le prix : proposez la livraison gratuite à partir d'un seuil (ex : dès 50€), plusieurs options (standard, express, point relais), et communiquez des délais réalistes. Une astuce pour déterminer le bon seuil de livraison gratuite : calculez votre panier moyen actuel et fixez le seuil 15 à 20% au-dessus. Cela incite les clients à ajouter un produit supplémentaire pour atteindre la livraison gratuite, ce qui augmente votre panier moyen sans réduire votre marge nette.
 
 3 choses à tester impérativement avant le lancement :
 1. Parcours d'achat complet (ajout panier > paiement > confirmation > email de confirmation)
