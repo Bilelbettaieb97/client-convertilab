@@ -5106,6 +5106,10 @@ Causes d'abandon par type de problème :
 
 Un checkout optimisé suit 5 règles fondamentales. Règle 1 : maximum 3 étapes (Informations > Livraison > Paiement). Chaque étape supplémentaire réduit les conversions de 10%. Règle 2 : jamais d'inscription obligatoire — le guest checkout est indispensable (26% des abandons sont causés par l'obligation de créer un compte). Règle 3 : afficher les frais de livraison dès la fiche produit, pas uniquement au checkout. Règle 4 : proposer Apple Pay et Google Pay (réduit les frictions de 30% sur mobile). Règle 5 : optimiser le mobile car 67% des abandons se produisent sur smartphone.
 
+**L'optimisation checkout souvent négligée : la barre de progression.** Affichez clairement à quelle étape le client se trouve et combien il en reste ("Étape 2 sur 3 — Livraison"). Cette simple modification réduit l'anxiété de l'utilisateur qui ne sait pas combien de temps le processus va durer, et diminue les abandons mid-checkout de 15 à 25%.
+
+**Technique des micro-engagements :** demandez d'abord l'email uniquement (étape 1 ultra-simple), puis les informations de livraison, puis le paiement. Une fois que le client a saisi son email, il est psychologiquement engagé et 40% moins susceptible d'abandonner — et vous avez son email pour la relance même s'il n'achète pas.
+
 Moyens de paiement indispensables pour maximiser les conversions :
 - Carte bancaire via Stripe ou PayPal (obligatoire)
 - Apple Pay / Google Pay (paiement en 1 clic sur mobile)
