@@ -5300,7 +5300,7 @@ Les 3 types d'intention d'achat à cibler :
 
 ## Comment optimiser ses fiches produits pour être bien positionné sur Google ?
 
-Une fiche produit bien référencée doit avoir : un titre structuré ([Marque] + [Nom produit] + [Caractéristique] + [Format/Couleur]), un minimum de 300 mots de contenu unique (jamais le copier-coller fournisseur), des images nommées avec des mots-clés (ex : canape-3-places-velours-gris.jpg) et un alt text descriptif, et les données structurées Schema.org Product (nom, prix, disponibilité, note agrégée) qui font apparaître les étoiles dans Google et augmentent le CTR de 30%.
+Une fiche produit bien référencée doit avoir : un titre structuré ([Marque] + [Nom produit] + [Caractéristique] + [Format/Couleur]), un minimum de 300 mots de contenu unique (jamais le copier-coller fournisseur), des images nommées avec des mots-clés (ex : canape-3-places-velours-gris.jpg) et un alt text descriptif, et les données structurées Schema.org Product (nom, prix, disponibilité, note agrégée) qui font apparaître les étoiles dans Google et augmentent le CTR de 30%. Ajoutez également le schema "BreadcrumbList" pour afficher le fil d'Ariane dans les résultats Google — cette donnée aide les utilisateurs à comprendre la structure de votre boutique et améliore le taux de clic de 10 à 15%.
 
 Structure optimale d'une fiche produit pour le SEO :
 1. Introduction (50 à 100 mots) : bénéfice principal, à qui s'adresse ce produit
