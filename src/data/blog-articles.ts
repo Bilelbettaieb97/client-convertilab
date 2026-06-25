@@ -6538,11 +6538,11 @@ Si vous avez décidé de vous lancer seul sur Wix, voici les 7 étapes pour un r
 
 **4. Ajoutez des photos professionnelles** — Unsplash (gratuit), Pexels (gratuit) ou vos propres photos. Bannissez les photos stock génériques de poignées de main.
 
-**5. Configurez le SEO basique** : title, meta description, URL courtes, un H1 par page avec votre mot-clé principal
+**5. Configurez le SEO basique** : title, meta description, URL courtes, un H1 par page avec votre mot-clé principal. Sur Wix, utilisez l'onglet SEO de chaque page — beaucoup l'ignorent et gardent les titres auto-générés par Wix.
 
-**6. Testez le mobile** — passez chaque page en vue mobile dans Wix et ajustez les textes et images qui débordent
+**6. Testez le mobile** — passez chaque page en vue mobile dans Wix et ajustez les textes et images qui débordent. 70% des visiteurs d'un artisan ou commerce local visitent le site sur téléphone.
 
-**7. Installez Google Analytics et Google Search Console** — indispensable pour savoir si quelqu'un visite votre site
+**7. Installez Google Analytics et Google Search Console** — indispensable pour savoir si quelqu'un visite votre site. Sans ces outils, vous créez dans l'obscurité totale et ne saurez jamais si votre site génère du trafic ou non.
 
 [Analyser gratuitement le SEO de votre site une fois en ligne](/seo-check)
 
