@@ -3603,6 +3603,8 @@ Optimisation des images pour le SEO :
 - Format WebP, taille inférieure à 100 Ko si possible
 - Lazy loading pour les images sous la ligne de flottaison
 
+**Cas ConvertiLab :** un coach en nutrition à Toulouse avait un blog de 12 articles mal structurés (titres génériques, pas de FAQ, mots-clés en fin de title). Après une révision complète de la structure — H2 sous forme de questions, FAQ Schema, title avec mot-clé en premier — les 12 articles sont passés en moyenne de la position 22 à la position 7 en 10 semaines. La refonte de structure a généré 4x plus de trafic sans écrire une seule ligne de nouveau contenu. La structure SEO compte autant que le fond.
+
 ## Comment mesurer la performance de son contenu SEO et l'optimiser en continu ?
 
 Pour mesurer la performance du contenu SEO, les 6 KPIs à suivre dans Google Search Console sont : position moyenne sur le mot-clé cible, trafic organique (nombre de visiteurs depuis Google), CTR (taux de clic dans les résultats), impressions (nombre de fois que la page apparaît dans Google), et temps moyen sur la page (engagement). Le cycle optimal est de publier, attendre 30 jours, analyser les mots-clés pour lesquels vous apparaissez sans les cibler, puis enrichir le contenu.
