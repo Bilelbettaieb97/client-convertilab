@@ -813,7 +813,11 @@ Un site WordPress lent malgré un hébergement payant est presque toujours caus�
 
 ### Faut-il un développeur pour optimiser la vitesse d'un site ?
 
-Non, la plupart des optimisations de vitesse ne nécessitent pas de développeur. Sur WordPress, les plugins (WP Rocket, Imagify, Cloudflare) font 80% du travail automatiquement. La seule optimisation qui demande un développeur est la refonte de l'architecture (passage à un framework moderne comme Next.js) — mais c'est seulement nécessaire pour les sites vraiment complexes.`
+Non, la plupart des optimisations de vitesse ne nécessitent pas de développeur. Sur WordPress, les plugins (WP Rocket, Imagify, Cloudflare) font 80% du travail automatiquement. La seule optimisation qui demande un développeur est la refonte de l'architecture (passage à un framework moderne comme Next.js) — mais c'est seulement nécessaire pour les sites vraiment complexes.
+
+### Quel est le score PageSpeed minimum acceptable pour un site professionnel ?
+
+Le seuil minimum est 70/100 sur mobile selon les recommandations Google. En dessous de 50, vous êtes pénalisé en SEO et vous perdez des visiteurs à cause de la lenteur. Les sites ConvertiLab (Next.js + Vercel) atteignent systématiquement 90 à 98 sur mobile, ce qui place nos clients dans le top des performances de leur secteur. Si votre score est inférieur à 70, c'est votre priorité n°1 avant même d'investir en SEO ou en publicité.`
   },
   {
     slug: "audit-seo-gratuit-guide",
