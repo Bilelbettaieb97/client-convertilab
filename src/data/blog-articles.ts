@@ -2763,6 +2763,24 @@ Les éléments de réassurance qui doivent entourer un formulaire de contact son
 
 **Page de confirmation :** après la soumission, ne redirigez pas vers une page vide. Confirmez la réception, rappelez le délai de réponse, proposez une action suivante (voir le portfolio, télécharger un guide) et installez votre pixel de conversion pour mesurer le ROI de vos campagnes publicitaires.
 
+## Formulaire multi-étapes : quand est-ce pertinent ?
+
+Un formulaire multi-étapes divise le formulaire en 2 à 4 écrans successifs au lieu d'afficher tous les champs d'un coup. C'est pertinent si vous avez besoin de plus de 5 champs pour qualifier un lead — comme pour un devis de site web, une demande de prestation complexe ou une inscription à un programme.
+
+**Avantages du formulaire multi-étapes :**
+- Réduit l'impression de longueur (chaque étape est courte)
+- L'indicateur de progression crée un effet d'engagement : l'utilisateur qui a fait "étape 1/3" est plus enclin à finir
+- Permet de qualifier progressivement (poser les questions sensibles à la fin)
+- Les données des étapes complétées peuvent être sauvegardées même si le visiteur abandonne
+
+**Règle d'or :** commencez par les questions les moins engageantes (prénom, email) et finissez par celles qui demandent plus d'effort ou de réflexion (budget, détails du projet). Ne commencez jamais par le budget — vous perdrez 40% des leads dès la première question.
+
+Chez ConvertiLab, notre formulaire de devis utilise une approche en 3 étapes : type de projet → budget → coordonnées. Résultat : taux de complétion de 42% vs 18% pour l'ancien formulaire en une seule page.
+
+### Doit-on demander le numéro de téléphone dans le formulaire ?
+
+Oui, si vous rappelez systématiquement les leads — et uniquement dans ce cas. Un champ téléphone non suivi d'un appel crée de la frustration chez le prospect. Rendez-le optionnel avec la mention "facultatif, pour vous rappeler rapidement" : ceux qui veulent être rappelés le renseignent, les autres peuvent soumettre sans. Cette approche génère 25% de téléphones renseignés en plus que le champ obligatoire.
+
 ## FAQ — Questions sur l'optimisation du formulaire de contact
 
 ### Combien de champs un formulaire de contact doit-il avoir ?
