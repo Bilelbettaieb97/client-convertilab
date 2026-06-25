@@ -4926,7 +4926,7 @@ Comparatif des plateformes e-commerce pour une PME :
 
 ## Comment concevoir le design et l'expérience utilisateur d'une boutique en ligne qui convertit ?
 
-94% des premières impressions d'un site e-commerce sont liées au design. Les 5 règles d'or du design e-commerce : navigation intuitive avec catégories claires et filtres pertinents, mobile first obligatoire car 65%+ des achats se font sur smartphone, photos produits de qualité professionnelle avec zoom et vues multiples, temps de chargement optimisé (chaque seconde supplémentaire réduit les conversions de 7%), et éléments de confiance visibles (badges de sécurité SSL, avis clients, politique de retour claire). Un design médiocre peut faire fuir jusqu'à 90% des visiteurs.
+94% des premières impressions d'un site e-commerce sont liées au design. Les 5 règles d'or du design e-commerce : navigation intuitive avec catégories claires et filtres pertinents, mobile first obligatoire car 65%+ des achats se font sur smartphone, photos produits de qualité professionnelle avec zoom et vues multiples, temps de chargement optimisé (chaque seconde supplémentaire réduit les conversions de 7%), et éléments de confiance visibles (badges de sécurité SSL, avis clients, politique de retour claire). Un design médiocre peut faire fuir jusqu'à 90% des visiteurs. La preuve sociale est le facteur de confiance numéro 1 en e-commerce : affichez au minimum 5 avis vérifiés sur chaque fiche produit et un compteur de commandes sur votre page d'accueil.
 
 Étapes de définition de votre projet avant de coder quoi que ce soit :
 - **Niche précise** : plus votre positionnement est spécifique, plus vous vous démarquez
