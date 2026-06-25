@@ -6033,6 +6033,8 @@ Chez ConvertiLab, nos sites restaurant démarrent à **500€** avec un paiement
 
 ## Que comprend un site internet pour restaurant à ce prix ?
 
+Beaucoup de restaurateurs découvrent trop tard que leur "site à 500€" ne comprenait ni SEO, ni hébergement, ni optimisation mobile. Voici exactement ce que comprend une offre sérieuse à ce tarif.
+
 Un site vitrine restaurant à 500€ chez ConvertiLab comprend :
 
 - Design sur-mesure aux couleurs de votre restaurant (validé avant développement)
@@ -6044,7 +6046,7 @@ Un site vitrine restaurant à 500€ chez ConvertiLab comprend :
 - Optimisation SEO locale : apparaître sur « restaurant [votre ville] » sur Google
 - Hébergement 1 an inclus, certificat SSL, support 30 jours
 
-Ce qui n'est **pas inclus** dans l'offre à 500€ : système de commande en ligne, module de réservation avec gestion des tables, traduction multilingue.
+Ce qui n'est **pas inclus** dans l'offre à 500€ : système de commande en ligne, module de réservation avec gestion des tables automatisée, traduction multilingue, shooting photo professionnel.
 
 ## Site restaurant à 500€ vs 2 000€ : quelle différence réelle ?
 
@@ -6071,6 +6073,8 @@ Un site à 500€ s'amortit en **moins de 2 semaines** si le SEO local est bien 
 
 Exemple réel : Monsieur Arancini, traiteur parisien, n'avait aucune présence en ligne. Après la création de son site avec ConvertiLab, il a rempli ses soirées du vendredi et du samedi dès le premier mois, sans publicité payante — uniquement grâce au référencement Google.
 
+Autre exemple : La Table d'Emma, restaurant de 35 couverts en province, recevait moins de 5 réservations en ligne par mois via TheFork (commission 2€ par couvert). Après création d'un site avec formulaire de réservation direct, elle reçoit 20 à 30 réservations mensuelles sans commission — économie de 40 à 60€ par mois, soit 500 à 700€ par an récupérés.
+
 [Voir nos réalisations restaurant](/portfolio)
 
 ## Faut-il choisir un abonnement ou un paiement unique pour son site restaurant ?
@@ -6083,15 +6087,33 @@ Les deux modèles existent, avec des avantages différents :
 
 Le paiement unique est presque toujours plus avantageux. La seule exception : si votre restaurant vient d'ouvrir et que vous n'avez pas le budget initial, un abonnement à 39€/mois avec ConvertiLab permet de démarrer immédiatement.
 
+## Les 4 erreurs à éviter quand on crée son site restaurant
+
+**1. Choisir un abonnement à vie sans en être propriétaire**
+Wix, Squarespace, certaines agences proposent des "sites à louer" de 30€ à 150€/mois. Vous n'êtes jamais propriétaire : si vous arrêtez de payer, le site disparaît. Sur 3 ans, vous avez payé jusqu'à 5 400€ pour rien.
+
+**2. Ne pas intégrer le menu mobile-first**
+67% des recherches "restaurant" se font sur mobile. Un menu en PDF ou en image non zoomable est un frein direct à la réservation. Le menu doit être lisible sur smartphone sans zoom ni scroll horizontal.
+
+**3. Oublier les photos professionnelles**
+Un site avec de mauvaises photos est pire qu'un site sans photos. Soit vous investissez dans un shooting (150 à 400€ pour un photographe local), soit vous utilisez les photos que vous avez déjà prises avec un bon smartphone en lumière naturelle. Ne mettez jamais de photos floues ou mal éclairées.
+
+**4. Ignorer Google Business Profile**
+Votre fiche GBP (l'encadré qui apparaît sur Google Maps) génère souvent plus de réservations que votre site lui-même. Elle doit être complète : photos, horaires, menu, catégories, réponses aux avis. C'est gratuit et souvent négligé.
+
+![Google Business Profile restaurant - optimisation fiche locale](https://images.unsplash.com/photo-1569761316261-9a8696fa2ca3?w=800&q=80)
+
 ## Quelle agence web choisir pour créer son site restaurant ?
 
 Pour choisir une agence web pour votre restaurant, vérifiez ces 5 points :
 
-- **Elle a déjà fait des sites restaurant** : demandez des exemples concrets dans votre secteur.
-- **Le délai est garanti** : un restaurant ne peut pas attendre 3 mois. Exigez une date de livraison contractuelle.
-- **Vous êtes propriétaire du site** : le nom de domaine et le code source doivent vous appartenir.
-- **Le SEO local est inclus** : un beau site invisible sur Google n'attire aucun client.
-- **Le prix est transparent** : demandez un devis fixe, sans coûts cachés.
+- **Elle a déjà fait des sites restaurant** : demandez des exemples concrets dans votre secteur et vérifiez que les sites sont encore en ligne.
+- **Le délai est garanti** : un restaurant ne peut pas attendre 3 mois. Exigez une date de livraison contractuelle — chez ConvertiLab, nos sites restaurant sont livrés en 7 jours ouvrés.
+- **Vous êtes propriétaire du site** : le nom de domaine et le code source doivent vous appartenir dès le premier paiement.
+- **Le SEO local est inclus** : un beau site invisible sur Google n'attire aucun client. Vérifiez que l'optimisation pour "restaurant [votre ville]" est dans la prestation.
+- **Le prix est transparent** : demandez un devis fixe tout inclus, sans coûts cachés ni upsells sur la maintenance.
+
+Méfiez-vous des devis à 99€ ou 199€ — ces offres livrent généralement un template non personnalisé sans SEO local et sans accompagnement. Pour un restaurant, la visibilité locale est 80% de la valeur d'un site.
 
 [Voir notre offre création site web restaurant](/solutions/restaurant)
 
