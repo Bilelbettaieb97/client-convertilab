@@ -6308,6 +6308,8 @@ L'autorité de domaine (ou Domain Authority) est un score qui reflète la confia
 
 Si votre concurrent est en ligne depuis 5 ans et vous depuis 6 mois, il part avec un avantage structurel. Vous ne pouvez pas rattraper son ancienneté, mais vous pouvez compenser par la qualité et la spécificité de votre contenu sur des requêtes où il n'est pas encore bien positionné.
 
+Exemple : Sofia, coach en reconversion professionnelle, avait un site de 8 mois face à un concurrent présent depuis 4 ans. En ciblant des requêtes spécifiques ("bilan de compétences cadres Île-de-France", "coaching reconversion 40 ans") au lieu de "coach reconversion Paris", elle s'est positionnée en page 1 sur 5 requêtes en 3 mois malgré son domaine plus récent.
+
 **Action** : ciblez d'abord les requêtes longue traîne (4 mots et plus) où la concurrence est faible. « plombier urgence Paris 15 » est plus accessible que « plombier Paris ».
 
 ## Raison 2 : Ils ont plus de backlinks que vous
@@ -6372,7 +6374,7 @@ Le maillage interne, c'est la façon dont vos pages se lient entre elles. Un sit
 
 Si votre concurrent a une page principale « plombier Paris » qui reçoit des liens de toutes ses pages de blog et de services, cette page accumulera plus d'autorité et remontera plus vite que votre page isolée.
 
-**Action** : dans chaque article de blog, faites systématiquement un lien vers votre page de service la plus importante. Dans chaque page de service, faites un lien vers vos autres services.
+**Action** : dans chaque article de blog, faites systématiquement un lien vers votre page de service la plus importante. Dans chaque page de service, faites un lien vers vos autres services. Vérifiez avec Google Search Console que vos pages principales reçoivent bien des liens internes depuis le reste du site.
 
 ## Comment savoir précisément pourquoi vous êtes derrière ?
 
