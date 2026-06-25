@@ -5339,7 +5339,7 @@ Google mesure les Core Web Vitals avec une attention particulière pour l'e-comm
 
 ### Combien de temps faut-il pour référencer ses produits sur Google ?
 
-Les premiers résultats apparaissent généralement en 3 à 6 mois pour un site e-commerce existant. Pour un site neuf, comptez 6 à 12 mois. La progression n'est pas linéaire : les premières semaines semblent lentes, puis les résultats s'accélèrent à mesure que Google gagne confiance dans le site. Les actions les plus rapides à porter des résultats sont l'optimisation des fiches produits existantes (1 à 2 mois) et l'ajout de données structurées (quelques semaines).
+Les premiers résultats apparaissent généralement en 3 à 6 mois pour un site e-commerce existant. Pour un site neuf, comptez 6 à 12 mois. La progression n'est pas linéaire : les premières semaines semblent lentes, puis les résultats s'accélèrent à mesure que Google gagne confiance dans le site. Les actions les plus rapides à porter des résultats sont l'optimisation des fiches produits existantes (1 à 2 mois) et l'ajout de données structurées (quelques semaines). Un point souvent surprenant pour les débutants : Google peut mettre 2 à 6 semaines à recrawler une page modifiée. Pour accélérer, soumettez l'URL directement dans Google Search Console via "Inspection d'URL > Demander l'indexation" après chaque optimisation importante.
 
 ### Faut-il un blog sur son site e-commerce pour faire du SEO ?
 
