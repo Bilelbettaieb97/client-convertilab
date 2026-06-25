@@ -3984,7 +3984,7 @@ Chez ConvertiLab, nous gérons des campagnes Meta Ads pour nos clients entrepren
 
 ## Comment est structurée une campagne Meta Ads et quel objectif choisir ?
 
-Une campagne Meta Ads fonctionne sur 3 niveaux : la Campagne (objectif marketing global), l'Ensemble de publicités (ciblage, budget, calendrier), et la Publicité (visuel, texte, CTA). L'objectif de campagne est crucial car il détermine comment l'algorithme de Meta optimise la diffusion : choisissez "Leads" si vous voulez générer des formulaires de contact, "Ventes" pour l'e-commerce, "Trafic" pour amener des visiteurs sur votre site, et "Notoriété" pour maximiser la portée.
+Une campagne Meta Ads fonctionne sur 3 niveaux : la Campagne (objectif marketing global), l'Ensemble de publicités (ciblage, budget, calendrier), et la Publicité (visuel, texte, CTA). L'objectif de campagne est crucial car il détermine comment l'algorithme de Meta optimise la diffusion : choisissez "Leads" si vous voulez générer des formulaires de contact, "Ventes" pour l'e-commerce, "Trafic" pour amener des visiteurs sur votre site, et "Notoriété" pour maximiser la portée. Un point souvent ignoré : changer d'objectif en cours de campagne réinitialise l'apprentissage — décidez avant de lancer et conservez l'objectif pendant au moins 2 semaines.
 
 Les 6 objectifs de campagne Meta Ads et leurs usages :
 - **Notoriété** : maximiser le nombre de personnes qui voient votre publicité
