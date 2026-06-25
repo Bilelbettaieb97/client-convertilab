@@ -5518,6 +5518,8 @@ Ce workflow ramène le temps de retouche de 15 à 20 minutes par photo à moins 
 
 Pour le SEO des images : nommez vos fichiers avec des mots-clés (sac-cuir-marron-vintage.webp plutôt que IMG_4521.jpg), renseignez une balise alt descriptive ("Sac en cuir marron vintage fait main - Vue face"), et soumettez un sitemap images pour faciliter l'indexation par Google. Pour la performance : utilisez le format WebP (30% plus léger que JPEG), activez le lazy loading (les images se chargent uniquement quand elles entrent dans le viewport), et servez des tailles différentes selon l'écran avec srcset responsive. Ces optimisations améliorent simultanément votre SEO et vos Core Web Vitals.
 
+**Google Images et Google Shopping — deux canaux de trafic sous-exploités :** Les boutiques avec des images optimisées (alt text + nom de fichier keyword) reçoivent 20 à 30% de leur trafic depuis Google Images, un canal gratuit souvent ignoré. Pour Google Shopping, les packshots fond blanc (exigence de Google Merchant Center) avec un rapport qualité/résolution élevé améliorent le Quality Score de l'annonce et réduisent le CPC de 10 à 20%.
+
 Évaluez la qualité visuelle de votre site avec notre [outil Design Score](/design-score).
 
 ## FAQ — Questions sur la photographie produit e-commerce
