@@ -7314,7 +7314,7 @@ Les backlinks (liens d'autres sites vers le vôtre) restent l'un des signaux SEO
 - Inscription sur Houzz, Habitissimo, ou toute plateforme sectorielle
 - Article ou annonce dans un journal local ou une association de commerçants
 
-Chaque lien obtenu est un vote de confiance aux yeux de Google. 10 backlinks de qualité valent mieux que 100 liens de sites douteux achetés.
+Chaque lien obtenu est un vote de confiance aux yeux de Google. 10 backlinks de qualité valent mieux que 100 liens de sites douteux achetés — les liens de mauvaise qualité peuvent même pénaliser votre site.
 
 ## Action 7 : Créer du contenu qui répond aux questions de vos clients
 
