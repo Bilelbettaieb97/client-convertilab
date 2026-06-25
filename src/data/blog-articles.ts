@@ -7123,7 +7123,7 @@ Un site vitrine efficace comprend en général **5 à 10 pages** :
 - Contact
 - Mentions légales + Politique de confidentialité
 
-Plus de pages n'est pas toujours mieux. 5 pages bien travaillées, avec des textes ciblés sur des requêtes Google précises, sont plus efficaces que 20 pages pauvres en contenu.
+Plus de pages n'est pas toujours mieux. 5 pages bien travaillées, avec des textes ciblés sur des requêtes Google précises, sont plus efficaces que 20 pages pauvres en contenu. Chaque page supplémentaire doit répondre à une requête distincte — si vous n'avez rien à dire de plus, n'ajoutez pas de page.
 
 [Voir des exemples de sites vitrines réalisés par ConvertiLab](/portfolio)
 
@@ -7143,7 +7143,7 @@ Le prix d'un site vitrine dépend de 3 facteurs :
 | Freelance | 600€ à 2 000€ | 4 à 12 semaines | Variable |
 | Agence web | 500€ à 3 000€ | 1 à 4 semaines | Bon à excellent |
 
-Chez ConvertiLab, un site vitrine professionnel est disponible à partir de **500€**, livré en **7 jours**, avec optimisation SEO locale incluse.
+Chez ConvertiLab, un site vitrine professionnel est disponible à partir de **500€**, livré en **7 jours**, avec optimisation SEO locale incluse. Le paiement est possible en 3 fois sans frais, ce qui rend l'investissement accessible dès 167€/mois — pour rappel, un seul nouveau client par mois dans la plupart des secteurs couvre largement ce budget.
 
 [Estimer le budget de votre site vitrine](/estimation-prix-site-web)
 
