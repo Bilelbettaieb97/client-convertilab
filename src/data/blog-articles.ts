@@ -2253,6 +2253,12 @@ Chez ConvertiLab, une refonte complète d'un site vitrine coûte entre 990€ et
 
 Comptez 3 à 5 semaines pour un site vitrine de 5 à 10 pages, 6 à 10 semaines pour un site avec plus de contenu ou des fonctionnalités spécifiques. La phase de test avant mise en ligne représente 20% du délai total — c'est l'étape que les clients pressés veulent supprimer, à tort.
 
+Le bon tempo : brief (1 semaine) → maquettes (1 à 2 semaines) → développement (2 à 4 semaines) → tests et corrections (1 semaine) → mise en ligne et suivi des indexations (1 semaine). Au total : 6 à 10 semaines pour un projet bien mené. Compressez ces étapes et vous risquez des erreurs coûteuses.
+
+### Peut-on conserver son design actuel en changeant seulement la technologie ?
+
+Oui, une migration technologique "design-preserving" est possible — c'est une option que nous proposons chez ConvertiLab. Vous gardez l'apparence et l'identité de votre site actuel, mais on le reconstruit sur Next.js pour améliorer drastiquement les performances. Cette approche est idéale pour un entrepreneur attaché à son design mais insatisfait des performances. Délai : 2 à 3 semaines. Coût : inférieur à une refonte totale car pas de travail de design.
+
 ### Va-t-on perdre notre référencement pendant la refonte ?
 
 Non, si la refonte est bien planifiée. Avec un plan de redirections 301 rigoureux, la conservation des URLs performantes et un SEO technique soigné (balises title/meta, vitesse, structure des H1-H2), votre référencement sera non seulement préservé mais amélioré. Sur les 40+ refontes réalisées par ConvertiLab, aucun client n'a perdu de trafic organique à 3 mois, et 80% ont constaté une hausse de trafic dans les 6 mois.
