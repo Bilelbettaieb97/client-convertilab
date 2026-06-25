@@ -6967,7 +6967,9 @@ Un avis négatif n'est pas une catastrophe si vous répondez bien. 45% des conso
 
 **4. Invitez à continuer en privé** : "N'hésitez pas à nous contacter directement au [numéro] pour qu'on puisse arranger ça."
 
-**Ce qu'il ne faut jamais faire :** vous énerver, nier les faits, attaquer le client, ou copier-coller la même réponse à tous les avis négatifs.
+**Ce qu'il ne faut jamais faire :** vous énerver, nier les faits, attaquer le client, ou copier-coller la même réponse à tous les avis négatifs. Chaque réponse publique à un avis est lue par vos futurs clients — c'est du marketing autant qu'une réponse à une plainte.
+
+Exemple de réponse efficace à un avis 2 étoiles : "Bonjour Marie, merci pour votre retour. Je suis sincèrement désolé que le délai d'intervention ne vous ait pas convenu. Depuis ce retour, nous avons ajouté une option de créneau d'urgence dans les 4h. N'hésitez pas à me contacter directement au 06 XX XX XX XX pour votre prochaine intervention — je ferai de mon mieux pour compenser cette mauvaise expérience."
 
 ## Combien d'avis faut-il viser selon votre secteur ?
 
@@ -6982,6 +6984,8 @@ Les seuils varient selon la concurrence locale :
 | Immobilier | 15 avis, 4.3+ | 40 avis, 4.6+ |
 
 La **fréquence** est aussi importante que le nombre total. Google favorise les fiches qui reçoivent régulièrement de nouveaux avis plutôt que celles qui ont un pic puis plus rien pendant 6 mois.
+
+Chez ConvertiLab, nous avons atteint 4.9/5 en envoyant systématiquement un message WhatsApp personnel à chaque client 24h après la livraison du site, avec le lien direct vers notre fiche. Sur 15 messages envoyés en moyenne, 5 à 7 donnent lieu à un avis. Aucune incentive, aucune automatisation — juste un message sincère au bon moment.
 
 ## Comment intégrer les avis Google sur son site web ?
 
