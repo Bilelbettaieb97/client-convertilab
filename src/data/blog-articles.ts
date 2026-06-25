@@ -2462,7 +2462,7 @@ Sur le plan pratique : si vous êtes en début d'activité et cherchez à minimi
 
 ### Quand un devis à bas prix doit-il alerter ?
 
-Un devis anormalement bas (moins de 500€ pour un "site complet sur mesure") est systématiquement un signal d'alarme. Cela indique soit un template revendu sans personnalisation réelle, soit une externalisation offshore sans contrôle qualité, soit un prestataire qui sous-estime le travail et livrera quelque chose d'incomplet. Le test simple : demandez à voir 5 sites récents qu'ils ont livrés, et testez-les sur mobile et PageSpeed. La réponse arrive vite.
+Un devis anormalement bas (moins de 500€ pour un "site complet sur mesure") est systématiquement un signal d'alarme. Cela indique soit un template revendu sans personnalisation réelle, soit une externalisation offshore sans contrôle qualité, soit un prestataire qui sous-estime le travail et livrera quelque chose d'incomplet. Le test simple : demandez à voir 5 sites récents qu'ils ont livrés, et testez-les sur mobile et PageSpeed. La réponse arrive vite. En 2026, la transparence est la marque des agences sérieuses — les tarifs flous sont un signal d'alerte autant que les prix cassés.
 
 ### Le prix d'un site web inclut-il le SEO ?
 
