@@ -28,6 +28,8 @@ import {
 import SuggestedArticles from "@/components/internal-links/SuggestedArticles";
 import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
+export const dynamicParams = false;
+
 type Props = { params: Promise<{ secteur: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

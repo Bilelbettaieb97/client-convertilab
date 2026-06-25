@@ -48,6 +48,8 @@ const PRIORITY_CITIES = [
   "nantes",
 ];
 
+export const dynamicParams = false;
+
 type Props = { params: Promise<{ secteur: string; ville: string }> };
 
 export async function generateStaticParams() {
