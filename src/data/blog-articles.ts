@@ -1159,6 +1159,8 @@ Un audit design évalue l'interface (ergonomie, accessibilité, responsive), tan
 
 Les corrections design impactent les conversions quasi immédiatement. Rendre le numéro de téléphone cliquable ou agrandir un bouton CTA sur mobile peut augmenter les contacts dans les 24 à 48 heures suivant la correction. Les changements de fond (refonte de la structure de navigation, réécriture des textes de conversion) prennent 2 à 6 semaines pour être visibles dans les statistiques.
 
+Priorité pratique : si vous ne pouvez faire qu'une seule chose cette semaine, vérifiez que votre numéro de téléphone est cliquable sur mobile et que votre bouton "Prendre contact" est visible sans scroller. Ces deux corrections à elles seules ont parfois doublé le nombre d'appels reçus chez nos clients dans la semaine suivante.
+
 ![Résultats audit design - score conversions avant après corrections](https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80)
 
 [Lancer l'audit design UX de votre site →](/design-score)`
