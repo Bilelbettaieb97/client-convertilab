@@ -4065,7 +4065,7 @@ Comptez minimum 300€/mois pour obtenir des données significatives. Avec 500 �
 
 ### Meta Ads fonctionne-t-il pour les entreprises B2B ?
 
-Oui, surtout via les audiences personnalisées et le retargeting. Le ciblage par poste, secteur d'activité et taille d'entreprise permet de toucher des décideurs. Pour le B2B pur, LinkedIn Ads est souvent plus efficace, mais Meta Ads permet d'atteindre les mêmes décideurs à un coût bien inférieur via les audiences similaires depuis une liste de clients.
+Oui, surtout via les audiences personnalisées et le retargeting. Le ciblage par poste, secteur d'activité et taille d'entreprise permet de toucher des décideurs. Pour le B2B pur, LinkedIn Ads est souvent plus efficace, mais Meta Ads permet d'atteindre les mêmes décideurs à un coût bien inférieur via les audiences similaires depuis une liste de clients. Une stratégie B2B courante : utiliser Meta Ads pour la notoriété et le trafic à bas coût, puis qualifier et closer via LinkedIn ou email.
 
 ### Comment tester ses créatifs Meta Ads efficacement ?
 
