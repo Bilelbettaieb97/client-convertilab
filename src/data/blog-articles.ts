@@ -2385,6 +2385,8 @@ La vraie question n'est pas "app ou pas app" mais "mes clients ont-ils un compor
 
 Chez ConvertiLab, nos tarifs commencent à 990€ tout inclus pour un site vitrine complet (hébergement 1 an, SEO de base, formulaire de contact). Ces prix sont transparents et disponibles sur notre [page tarifs](/prix).
 
+![Prix création site internet 2026 - tarifs agence web PME artisan vitrine e-commerce](https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80)
+
 [Estimer le prix de mon site →](/estimation-prix-site-web)
 
 ## Quels sont les tarifs réels pour créer un site internet en 2026 ?
@@ -2413,6 +2415,8 @@ Les 5 facteurs qui font varier le prix d'un site web à la hausse sont : le nive
 - **Niveau de service** : le devis inclut-il hébergement, SSL, maintenance, formation ? Comparez sur une base identique
 
 Utilisez notre [estimateur de prix gratuit](/estimation-prix-site-web) pour obtenir une fourchette en 2 minutes.
+
+![Facteurs prix site web - design sur mesure contenu fonctionnalités maintenance](https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80)
 
 ## Quels sont les coûts cachés à anticiper pour son site web ?
 
@@ -2452,7 +2456,9 @@ Le paiement en une fois revient moins cher au total (vous évitez les intérêts
 
 ### Le prix d'un site web inclut-il le SEO ?
 
-Chez ConvertiLab, le SEO technique (structure, balises title/meta, vitesse, plan de site, données structurées) est inclus dans tous nos forfaits. Le SEO off-page (création de liens, stratégie de contenu long terme) est un service séparé car il représente un travail mensuel continu. Vérifiez toujours ce que le terme "SEO inclus" couvre exactement dans les devis que vous comparez.`,
+Chez ConvertiLab, le SEO technique (structure, balises title/meta, vitesse, plan de site, données structurées) est inclus dans tous nos forfaits. Le SEO off-page (création de liens, stratégie de contenu long terme) est un service séparé car il représente un travail mensuel continu. Vérifiez toujours ce que le terme "SEO inclus" couvre exactement dans les devis que vous comparez.
+
+![Coûts cachés site web - hébergement domaine maintenance email SSL sur 3 ans](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)`,
   },
   {
     slug: "site-web-rapide-importance-performance",
