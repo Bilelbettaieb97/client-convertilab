@@ -2665,7 +2665,7 @@ Non. Les hébergements gratuits (Wix, WordPress.com gratuit) imposent des public
 
 ### Peut-on changer d'hébergeur sans perdre son référencement ?
 
-Oui, à condition de suivre quelques précautions : ne pas changer le nom de domaine, conserver exactement les mêmes URLs, mettre à jour les DNS correctement et vérifier dans Google Search Console que le nouveau site est bien indexé. La migration d'un site Next.js vers Vercel est particulièrement simple (quelques clics depuis GitHub). La migration WordPress est plus complexe mais documentée.
+Oui, à condition de suivre quelques précautions : ne pas changer le nom de domaine, conserver exactement les mêmes URLs, mettre à jour les DNS correctement et vérifier dans Google Search Console que le nouveau site est bien indexé. La migration d'un site Next.js vers Vercel est particulièrement simple (quelques clics depuis GitHub). La migration WordPress est plus complexe mais documentée. Le délai de propagation DNS est de 24 à 72 heures — pendant ce temps, certains visiteurs voient encore l'ancien site. Planifiez la migration un soir ou un weekend pour minimiser l'impact sur votre trafic.
 
 ### Quelle est la différence entre hébergement web et nom de domaine ?
 
