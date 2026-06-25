@@ -4249,6 +4249,15 @@ Structure d'un email qui convertit :
 
 L'automation email est ce qui transforme votre marketing d'artisanal à industriel. Les 3 séquences indispensables sont : la séquence de bienvenue (5 emails sur 5 jours qui présentent votre expertise et font une première offre), la séquence d'abandon de panier (3 emails sur 48h avec rappel + preuve sociale + offre spéciale), et la séquence de réengagement (pour les inactifs depuis 90 jours). La segmentation multiplie les résultats : les emails segmentés génèrent 760% de revenus supplémentaires par rapport aux emails non segmentés.
 
+La méthode de segmentation la plus efficace pour une petite entreprise repose sur 3 critères : le comportement (a cliqué sur tel lien, a ouvert les 5 derniers emails), le profil (secteur d'activité, localisation, type de projet), et l'étape dans le parcours client (prospect froid, prospect chaud, client actif, client inactif). Commencez simple avec 2 ou 3 segments, puis affinez avec les données comportementales collectées au fil des campagnes.
+
+**La séquence de bienvenue — le template en 5 emails :**
+- Email 1 (J0) : remerciement + livraison du lead magnet + présentation courte
+- Email 2 (J1) : votre histoire, pourquoi vous faites ce métier (crée le lien humain)
+- Email 3 (J3) : votre méthode ou processus de travail (construit la crédibilité)
+- Email 4 (J5) : 2 à 3 témoignages clients avec résultats concrets (preuve sociale)
+- Email 5 (J7) : première offre avec CTA clair (RDV, devis, achat)
+
 Métriques clés à suivre pour son email marketing :
 
 | Métrique | Bon | Excellent | Action si bas |
