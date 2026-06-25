@@ -5134,6 +5134,15 @@ Taux de récupération par email d'une séquence bien optimisée :
 
 Le retargeting publicitaire complète la séquence email pour atteindre les visiteurs non identifiés (sans email). Sur Meta Ads (Facebook/Instagram), créez une audience personnalisée des visiteurs de votre page de paiement qui ne sont pas arrivés sur la page de confirmation, puis affichez-leur exactement le produit qu'ils avaient dans leur panier. Sur Google Display, des bannières de rappel apparaissent sur les sites partenaires. Budget recommandé : 5 à 10€/jour pour commencer. ROI moyen du retargeting panier : 4 à 10×. Combinez aussi l'exit-intent popup (détecte quand le visiteur s'apprête à quitter et affiche une offre de dernière chance — conversion 3 à 5%).
 
+**Le combo optimal anti-abandon :**
+- Étape 1 : exit-intent popup avec code promo -5% au moment de la tentative de fermeture
+- Étape 2 : email relance 1h après (si email capturé en micro-engagement)
+- Étape 3 : retargeting Meta/Google pendant 7 jours avec le produit exact
+- Étape 4 : email avec offre spéciale -10% à 72h
+- Étape 5 : SMS de rappel si numéro disponible (taux d'ouverture 95%)
+
+Ce combo récupère en moyenne 15 à 22% des paniers abandonnés selon les secteurs — soit un retour sur investissement de 10 à 20× sur le budget Ads dépensé pour le retargeting.
+
 ## FAQ — Questions sur la récupération des paniers abandonnés
 
 ### Quel est le taux d'abandon de panier moyen en France ?
