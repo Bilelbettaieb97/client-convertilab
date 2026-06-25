@@ -6754,6 +6754,10 @@ Le minimum à viser : **score PageSpeed > 70 sur mobile**. L'objectif : > 90. Si
     ],
     content: `Un site web pour un coiffeur coûte entre 400€ et 2 000€ selon les fonctionnalités. Un site vitrine avec galerie, tarifs et formulaire de contact démarre à 400€. L'intégration d'un système de réservation en ligne (choix du coiffeur, créneau horaire, service) fait monter le budget à 800€-2 000€ selon la complexité. Dans les deux cas, un seul nouveau client par semaine rembourse l'investissement en moins d'un mois.
 
+**Chiffres secteur :** 70% des réservations de services beauté se font désormais en dehors des heures d'ouverture — la nuit, le dimanche, pendant la pause déjeuner. Un salon sans réservation en ligne rate toutes ces opportunités. Même un formulaire de contact simple sur un site vitrine permet de capter ces demandes.
+
+![Site web salon de coiffure - galerie colorations et réservation](https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80)
+
 ## Quel est le prix d'un site web pour un salon de coiffure en 2026 ?
 
 Trois niveaux d'offre selon les besoins du salon :
@@ -6784,6 +6788,8 @@ Un site vitrine coiffeur à 500€ chez ConvertiLab inclut :
 - Hébergement et domaine inclus la première année
 
 Ce qui n'est **pas inclus** dans l'offre à 500€ : système de réservation en ligne avec agenda synchronisé, vente de produits en ligne, gestion multi-coiffeurs avec planning.
+
+![Menu prestations coiffure - tarifs et galerie photos salon](https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80)
 
 ## Fresha vs site web sur-mesure : quelle différence pour un coiffeur ?
 
@@ -6816,6 +6822,18 @@ Beaucoup de coiffeurs ont un compte Instagram mais pas de site web. C'est une er
 **Site web + SEO local :** vous captez les gens qui cherchent ACTIVEMENT un coiffeur dans votre ville sur Google. Ce sont des clients prêts à réserver, maintenant.
 
 La complémentarité idéale : Instagram pour le before/after et la fidélisation, le site web pour l'acquisition de nouveaux clients via Google. Les deux ne font pas le même travail.
+
+## Les erreurs les plus fréquentes sur les sites de coiffeurs
+
+**1. Pas de tarifs affichés** : beaucoup de coiffeurs hésitent à afficher leurs prix. Erreur — les clients qui cherchent un coiffeur sur Google veulent savoir si c'est dans leur budget avant d'appeler. Pas de tarifs = ils passent au concurrent suivant.
+
+**2. Galerie sans avant/après** : des photos de coupes finies sont bien, des photos avant/après sont 3× plus convaincantes. Elles prouvent la transformation, pas juste le résultat.
+
+**3. Numéro de téléphone non cliquable** : sur mobile, le numéro de téléphone doit être un lien tel: cliquable. Sinon, le client doit noter le numéro sur papier puis composer — une grande majorité abandonne.
+
+**4. Horaires absents ou incorrects** : Google va chercher les horaires sur votre site pour les afficher dans le pack local. Si vos horaires Google et votre site ne concordent pas, Google pénalise votre fiche.
+
+![Réservation en ligne coiffeur - module calendrier mobile](https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80)
 
 ## Comment choisir la bonne agence web pour son salon de coiffure ?
 
