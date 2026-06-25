@@ -4157,7 +4157,7 @@ Formats qui engagent le plus en 2026 :
 
 ## Comment mesurer et améliorer les performances de ses réseaux sociaux ?
 
-Les KPIs essentiels à suivre mensuellement sont : taux d'engagement (likes + commentaires + partages / portée × 100), croissance des abonnés, portée mensuelle, clics vers le site, et conversions attribuées aux réseaux sociaux. Les benchmarks moyens par plateforme : Instagram 1,5-3%, LinkedIn 2-5%, TikTok 4-8%, Facebook 0,5-1,5%. En dessous de ces seuils, l'audience ne correspond pas à votre contenu — ajustez le ciblage ou le format.
+Les KPIs essentiels à suivre mensuellement sont : taux d'engagement (likes + commentaires + partages / portée × 100), croissance des abonnés, portée mensuelle, clics vers le site, et conversions attribuées aux réseaux sociaux. Les benchmarks moyens par plateforme : Instagram 1,5-3%, LinkedIn 2-5%, TikTok 4-8%, Facebook 0,5-1,5%. En dessous de ces seuils, l'audience ne correspond pas à votre contenu — ajustez le ciblage ou le format. Le KPI le plus sous-estimé est le "lien en bio" : si votre contenu génère de l'engagement mais aucun clic vers votre site, c'est votre offre ou votre appel à l'action qui pose problème, pas votre contenu.
 
 Coût du community management en 2026 :
 - **En interne** : 25 à 35K€/an pour un CM junior + 15 à 20h/semaine minimum + outils (50-200€/mois)
