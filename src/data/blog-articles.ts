@@ -3756,6 +3756,8 @@ La meilleure approche est préventive : configurez des alertes Google Search Con
 
 Chez ConvertiLab, nous avons géré des stratégies SEO et SEA pour 150+ clients depuis 2021. Voici les règles concrètes pour choisir, et quand combiner les deux.
 
+![SEO vs SEA 2026 - référencement naturel ou Google Ads comparatif ROI stratégie](https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80)
+
 [Analyser le potentiel SEO de mon site →](/seo-check)
 
 ## Quelles sont les différences concrètes entre le SEO et le SEA en termes de coût et de résultats ?
@@ -3803,6 +3805,8 @@ Exemple de ROI comparatif (client ConvertiLab type) :
 
 Le SEO a un meilleur ROI à long terme, mais le SEA permet de générer des revenus dès le premier mois.
 
+![Combinaison SEO SEA - phases budget réduction SEA positions organiques ROI](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
 ## FAQ — Questions sur le choix entre SEO et SEA
 
 ### Peut-on faire du SEO sans budget ?
@@ -3815,7 +3819,13 @@ Non. Les études montrent que les sites présents à la fois en organique et en 
 
 ### Quel budget minimum pour commencer en Google Ads ?
 
-Il est possible de commencer avec 300 à 500€ par mois pour tester un marché, mais les résultats significatifs arrivent généralement à partir de 1 000€/mois. Le budget idéal dépend du CPC moyen dans votre secteur : divisez votre budget par le CPC pour estimer le nombre de clics. Visez au minimum 30 à 50 clics par jour pour obtenir des données exploitables et prendre des décisions d'optimisation fiables.`
+Il est possible de commencer avec 300 à 500€ par mois pour tester un marché, mais les résultats significatifs arrivent généralement à partir de 1 000€/mois. Le budget idéal dépend du CPC moyen dans votre secteur : divisez votre budget par le CPC pour estimer le nombre de clics. Visez au minimum 30 à 50 clics par jour pour obtenir des données exploitables et prendre des décisions d'optimisation fiables.
+
+### Le SEA aide-t-il indirectement le SEO ?
+
+Indirectement, oui. Le trafic généré par le SEA augmente la notoriété de votre marque — certains visiteurs reviendront en tapant directement votre nom dans Google (ce qui améliore vos signaux de marque). De plus, les données de conversion des campagnes Ads vous révèlent quels mots-clés ont une intention commerciale forte, ce qui guide votre stratégie de contenu SEO. Mais il n'existe pas de lien direct entre les dépenses Google Ads et les positions organiques — ce sont deux algorithmes complètement séparés.
+
+![SEA notoriété marque signaux brand requêtes directes impact indirect SEO](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`
   },
   {
     slug: "google-ads-guide-debutant-2026",
