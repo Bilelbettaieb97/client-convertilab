@@ -2081,6 +2081,8 @@ Ces résultats ne sont pas des cas exceptionnels — ils sont la norme quand on 
 
 La plupart des landing pages échouent non pas à cause du trafic, mais parce que chaque élément de la page n'est pas orienté vers une seule action. Un visiteur qui hésiterait "partir ou convertir" partira toujours si la page ne lève pas ses objections.
 
+![Landing page conversion - CTA copywriting preuve sociale mobile first](https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80)
+
 [Voir nos landing pages sur mesure →](/services/sites-web/landing-page)
 
 ## Quels sont les éléments indispensables d'une landing page qui convertit ?
@@ -2132,6 +2134,8 @@ Le copywriting persuasif booste le taux de conversion d'une landing page en stru
 
 Pour évaluer le potentiel de conversion de votre page actuelle, testez l'[outil Design Score](/design-score) gratuit.
 
+![Copywriting formule PAS - problème agitation solution taux conversion landing page](https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80)
+
 ## Quelles optimisations techniques améliorent directement les conversions ?
 
 Les optimisations techniques qui améliorent directement les conversions sont : la vitesse de chargement sous 2 secondes (chaque seconde supplémentaire coûte 7% de conversion), la conception mobile-first (65%+ du trafic), et la suppression de tout élément de navigation qui permettrait au visiteur de quitter la page sans convertir.
@@ -2157,7 +2161,17 @@ Un site web classique a plusieurs pages et plusieurs objectifs : informer, prés
 
 ### Combien coûte une landing page professionnelle en 2026 ?
 
-Une landing page professionnelle coûte entre 600 et 2 500€ chez ConvertiLab selon la complexité (nombre de sections, intégrations, formulaire multi-étapes). Cet investissement est généralement rentabilisé en 4 à 8 semaines si la page est correctement sourcée en trafic. Une landing page à 1 000€ qui génère 3 leads par semaine à 300€ de valeur chacun se rentabilise en moins d'un mois.`,
+Une landing page professionnelle coûte entre 600 et 2 500€ chez ConvertiLab selon la complexité (nombre de sections, intégrations, formulaire multi-étapes). Cet investissement est généralement rentabilisé en 4 à 8 semaines si la page est correctement sourcée en trafic. Une landing page à 1 000€ qui génère 3 leads par semaine à 300€ de valeur chacun se rentabilise en moins d'un mois.
+
+### Quelle longueur doit avoir une landing page pour bien convertir ?
+
+La longueur idéale dépend de la complexité de l'offre et du niveau de confiance préalable du visiteur. Pour une offre simple connue (ex. : nettoyage de vitres), 500 à 800 mots suffisent. Pour une offre premium ou une décision d'achat engageante (formation à 1 500€, refonte de site), 1 500 à 2 500 mots permettent de lever toutes les objections. La règle : la page doit être assez longue pour convaincre, mais chaque section doit mériter sa place. Si vous pouvez couper un paragraphe sans perdre de conversion, coupez-le.
+
+### Faut-il une landing page différente pour chaque campagne publicitaire ?
+
+Idéalement oui. Une landing page dédiée à chaque campagne (avec le même message que l'annonce, la même promesse, les mêmes mots-clés) augmente le "message match" et améliore le taux de conversion de 20 à 40%. En pratique pour une PME : commencez par une landing page générique, puis créez des variantes pour vos 2 ou 3 campagnes principales une fois le budget publicitaire validé.
+
+![Optimisation landing page - A/B test, longueur, message match campagnes](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`,
   },
   {
     slug: "refonte-site-web-quand-comment",
