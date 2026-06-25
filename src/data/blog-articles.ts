@@ -2191,6 +2191,8 @@ Idéalement oui. Une landing page dédiée à chaque campagne (avec le même mes
 
 Chez ConvertiLab, nous avons refait plus de 40 sites en 2025-2026. Dans 85% des cas, les clients avaient attendu 1 à 2 ans de trop avant de prendre la décision — et leur trafic organique avait chuté en moyenne de 35% pendant cette période.
 
+![Refonte site web - signaux d'alerte vitesse taux rebond design daté](https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80)
+
 [Tester la vitesse de mon site gratuitement →](/speed-check)
 
 ## Quels sont les signes concrets qui indiquent qu'il faut refaire son site web ?
@@ -2237,6 +2239,8 @@ Oui, la refonte progressive est une alternative intelligente à la refonte total
 3. **Technologie** : migration CMS vers Next.js si le budget le permet
 4. **Conversion** : A/B test CTA, formulaires optimisés, tunnel de devis
 
+![Redirections 301 refonte SEO - préserver trafic organique URLs existantes](https://images.unsplash.com/photo-1581472723648-909f4851d4ae?w=800&q=80)
+
 ## FAQ — Questions sur la refonte de site web
 
 ### Combien coûte une refonte de site web en 2026 ?
@@ -2249,7 +2253,13 @@ Comptez 3 à 5 semaines pour un site vitrine de 5 à 10 pages, 6 à 10 semaines 
 
 ### Va-t-on perdre notre référencement pendant la refonte ?
 
-Non, si la refonte est bien planifiée. Avec un plan de redirections 301 rigoureux, la conservation des URLs performantes et un SEO technique soigné (balises title/meta, vitesse, structure des H1-H2), votre référencement sera non seulement préservé mais amélioré. Sur les 40+ refontes réalisées par ConvertiLab, aucun client n'a perdu de trafic organique à 3 mois, et 80% ont constaté une hausse de trafic dans les 6 mois.`,
+Non, si la refonte est bien planifiée. Avec un plan de redirections 301 rigoureux, la conservation des URLs performantes et un SEO technique soigné (balises title/meta, vitesse, structure des H1-H2), votre référencement sera non seulement préservé mais amélioré. Sur les 40+ refontes réalisées par ConvertiLab, aucun client n'a perdu de trafic organique à 3 mois, et 80% ont constaté une hausse de trafic dans les 6 mois.
+
+### Doit-on changer de nom de domaine lors d'une refonte ?
+
+Non — sauf si votre domaine actuel est pénalisé par Google ou associé à une mauvaise réputation. Changer de domaine est l'une des actions les plus risquées en SEO : vous perdez toute l'autorité accumulée par vos backlinks existants et devez repartir de zéro dans les yeux de Google. Si vous devez absolument changer de domaine, configurez des redirections 301 permanentes de chaque URL de l'ancien domaine vers le nouveau et soumettez le changement d'adresse dans Google Search Console.
+
+![Changement domaine refonte SEO - risques redirections autorité backlinks](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`,
   },
   {
     slug: "site-web-responsive-mobile-first",
