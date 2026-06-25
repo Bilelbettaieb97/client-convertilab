@@ -5534,7 +5534,7 @@ Pour un catalogue de moins de 50 produits et un positionnement entrée/milieu de
 
 ### Comment éviter les retours dus à des couleurs inexactes sur les photos ?
 
-Calibrez votre écran avec une sonde colorimétrique (Datacolor Spyder ou X-Rite — environ 100 à 200€). Photographiez une charte de couleurs avec chaque série pour référence. Mentionnez dans vos fiches produits que les couleurs peuvent légèrement varier selon l'écran et le modèle de moniteur.
+Calibrez votre écran avec une sonde colorimétrique (Datacolor Spyder ou X-Rite — environ 100 à 200€). Photographiez une charte de couleurs avec chaque série pour référence. Mentionnez dans vos fiches produits que les couleurs peuvent légèrement varier selon l'écran et le modèle de moniteur. Indiquez également les matières de manière très précise dans les descriptions (ex : "velours côtelé à grosses côtes — texture bien visible en photo 3") pour aligner les attentes du client avec la réalité du produit.
 
 ### La vidéo produit est-elle réellement plus efficace que les photos ?
 
