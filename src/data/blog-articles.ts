@@ -3799,6 +3799,28 @@ Les synergies concrètes entre SEO et SEA :
 - La double présence (organique + payant) augmente la confiance et le CTR total
 - Le remarketing SEA ré-engage les visiteurs venus du SEO
 
+**Cas ConvertiLab :** un expert-comptable indépendant à Rennes avait un budget marketing de 1 500€/mois. Répartition initiale : 100% en SEA. Il obtenait 15 leads/mois à 100€ le lead. Après 6 mois de réorientation progressive (900€ SEA + 600€ SEO), ses positions organiques ont généré 8 leads/mois supplémentaires à coût marginal proche de 0. Au total : 23 leads/mois pour le même budget, soit 53% de plus. 12 mois après : positions SEO consolidées, budget SEA réduit à 600€ pour 28 leads/mois — coût par lead divisé par 2,5.
+
+## Les secteurs où le SEO l'emporte clairement sur le SEA
+
+Dans certains secteurs, les CPC Google Ads sont si élevés (10 à 50€) que le SEO devient le seul canal viable pour les PME avec un budget limité.
+
+**Secteurs à CPC très élevés où le SEO est prioritaire :**
+- Juridique / avocats : CPC moyens de 15 à 40€
+- Assurance : 20 à 50€ par clic
+- Immobilier : 5 à 20€ par clic
+- Finance / crédit : 10 à 30€ par clic
+- Chirurgie et médecine esthétique : 8 à 25€ par clic
+- BTP / travaux : 5 à 15€ par clic
+
+Dans ces secteurs, un budget SEA de 1 000€/mois génère seulement 20 à 200 clics. En comparaison, une position SEO en premier résultat peut générer 500 à 2 000 visites/mois sans coût marginal. Le calcul est simple : investissez le même budget en SEO, et l'effet est cumulatif.
+
+**Secteurs où le SEA reste pertinent :**
+- E-commerce (retargeting, shopping campaigns)
+- Services avec saisonnalité forte (déménagement, garde-robe d'hiver)
+- Nouvelles offres sans historique de trafic organique
+- Événements et promotions limitées dans le temps
+
 Exemple de ROI comparatif (client ConvertiLab type) :
 - Budget SEO mensuel : 1 500€ → génère 10 000€ de CA → ROI = 567%
 - Budget SEA mensuel : 3 000€ → génère 9 000€ de CA → ROI = 200%
