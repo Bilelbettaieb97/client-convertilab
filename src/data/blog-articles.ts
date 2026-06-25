@@ -5751,7 +5751,11 @@ La règle de contenu 70-20-10 pour ne pas passer pour un catalogue :
 
 Le tunnel Instagram en 5 étapes : Découverte (Reels, Explore, Hashtags) → Engagement (likes, commentaires, sauvegardes) → Considération (Stories, Highlights, témoignages) → Achat (tags produits, lien en bio, DM) → Fidélisation (UGC, communauté). Optimisez votre profil : photo de profil reconnaissable (logo), bio avec proposition de valeur + CTA + lien, nom incluant un mot-clé (ex: "NomMarque | Bijoux Artisanaux"), Highlights organisés par catégories (Produits, Avis, FAQ, Livraison). Pour les collaborations, les micro-influenceurs (5 000 à 50 000 abonnés) offrent le meilleur ROI (100 à 500€ par micro-influenceur avec codes promo traçables).
 
+**Stratégie DM pour la conversion directe :** Configurez une réponse automatique aux commentaires "Je veux ça" ou "Prix ?" avec un lien direct vers la fiche produit. Cette tactique augmente le taux de conversion des commentaires de 400 à 600% et déplace les conversations vers un espace privé où la probabilité d'achat est plus élevée. Des outils comme ManyChat permettent d'automatiser ces réponses DM en respectant les CGU Instagram.
+
 Pour les Instagram Ads : Collection Ads (vitrine immersive), Shopping Ads (tags produits cliquables), Dynamic Ads (retargeting des visiteurs), Reels Ads (format natif). Budget pour débuter : 10 à 20€/jour pendant 2 semaines de test, puis 50 à 100€/jour en scaling. ROI moyen : 3 à 8× pour les campagnes e-commerce bien optimisées.
+
+**Les hashtags en 2026 — moins c'est plus :** L'algorithme Instagram ne favorise plus les posts surchargés de hashtags (20 à 30). La recommandation actuelle est 3 à 5 hashtags très ciblés : 1 hashtag de niche exacte, 1 hashtag de communauté, 1 hashtag de ville ou région si pertinent. Placez-les en commentaire plutôt qu'en légende pour un profil plus propre — l'impact est identique.
 
 Estimez votre budget publicitaire avec notre [estimateur Ads](/estimateur-ads).
 
