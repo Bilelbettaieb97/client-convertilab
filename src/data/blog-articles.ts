@@ -1492,6 +1492,14 @@ Pas toujours. Certains CMS génèrent des sitemaps incluant des pages en noindex
 
 Le fichier robots.txt doit obligatoirement être placé à la racine du domaine (domain.com/robots.txt) — il ne fonctionne pas depuis un sous-dossier. Le sitemap XML peut être placé n'importe où, mais par convention on le met aussi à la racine (domain.com/sitemap.xml). Ce qui compte, c'est que l'URL du sitemap soit correctement renseignée dans le robots.txt et dans Google Search Console.
 
+### Quelle est la fréquence de mise à jour idéale pour un sitemap ?
+
+La fréquence de mise à jour dépend du rythme de publication de votre site. Pour un blog qui publie 2 à 4 articles par semaine, une mise à jour hebdomadaire du sitemap est recommandée. Pour un site vitrine qui ne change quasiment pas, une mise à jour trimestrielle suffit. L'indicateur changefreq dans le sitemap (daily, weekly, monthly) donne une indication à Google, mais celui-ci ne la suit pas à la lettre — il décide seul de sa fréquence de crawl selon la fraîcheur réelle du contenu.
+
+### Comment savoir si Google a bien indexé mes pages après la soumission du sitemap ?
+
+Pour vérifier l'indexation, tapez "site:domain.com" dans Google et comptez les résultats retournés. Une méthode plus précise est Google Search Console : dans le rapport "Pages", comparez le nombre d'URLs "soumises via sitemap" vs "indexées". Un écart important indique des problèmes à investiguer — pages en noindex, contenu dupliqué, erreurs de crawl, ou contenu jugé insuffisant pour mériter l'indexation. Chez ConvertiLab, lors de refontes SEO, nous avons systématiquement augmenté le taux d'indexation de 70% à 95%+ en nettoyant les sitemaps et en corrigeant les robots.txt.
+
 [Générer mon robots.txt et sitemap XML gratuitement →](/generateur-robots-sitemap)`
   },
   {
