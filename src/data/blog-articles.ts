@@ -6675,13 +6675,15 @@ Un CDN duplique votre site sur des dizaines de serveurs dans le monde et sert ch
 
 ## Comment diagnostiquer la vitesse de son site ?
 
-Trois outils gratuits :
+Trois outils gratuits, du plus simple au plus technique :
 
-**1. Google PageSpeed Insights** : entrez votre URL et obtenez un score de 0 à 100 sur mobile et desktop, avec les points à corriger en priorité.
+**1. Google PageSpeed Insights** : entrez votre URL sur pagespeed.web.dev et obtenez un score de 0 à 100 sur mobile et desktop. Le rapport indique les points à corriger en priorité avec l'impact estimé en secondes gagnées.
 
-**2. GTmetrix** : rapport détaillé avec waterfall chart (vous voyez quel fichier ralentit le chargement).
+**2. GTmetrix** : rapport détaillé avec waterfall chart. Vous voyez quel fichier ralentit le chargement (souvent une image de 2 Mo ou un script tiers qui met 1,5s à se charger).
 
-**3. Notre outil Speed Check** : analyse en 30 secondes et envoie un rapport PDF par email avec les recommandations priorisées par impact.
+**3. Notre outil Speed Check** : analyse en 30 secondes et envoie un rapport PDF par email avec les recommandations priorisées par impact — adapté pour les entrepreneurs non techniques qui veulent savoir quoi déléguer en priorité.
+
+Conseil : testez votre site en 3G simulé (DevTools Chrome → Performance → Network : Slow 3G). C'est l'expérience de nombreux visiteurs mobiles en zone de couverture limitée.
 
 [Analyser la vitesse de votre site maintenant](/speed-check)
 
