@@ -4443,7 +4443,7 @@ Les 5 canaux principaux avec leur ROI pour une PME :
 
 ## Comment définir son budget marketing digital et mesurer le ROI de chaque canal ?
 
-Pour définir son budget marketing, la règle générale pour une PME en croissance est de 5 à 10% du chiffre d'affaires pour maintenir la croissance, 10 à 20% pour l'accélérer. Le minimum absolu pour avoir un impact mesurable est de 1 000€/mois. La métrique clé est le CAC (Coût d'Acquisition Client) : budget total / nombre de nouveaux clients. Si votre CAC est inférieur à la valeur vie du client (LTV), votre stratégie est rentable.
+Pour définir son budget marketing, la règle générale pour une PME en croissance est de 5 à 10% du chiffre d'affaires pour maintenir la croissance, 10 à 20% pour l'accélérer. Le minimum absolu pour avoir un impact mesurable est de 1 000€/mois. La métrique clé est le CAC (Coût d'Acquisition Client) : budget total / nombre de nouveaux clients. Si votre CAC est inférieur à la valeur vie du client (LTV), votre stratégie est rentable. Un ratio LTV/CAC de 3:1 est l'objectif cible pour une PME saine : chaque euro investi en acquisition doit rapporter 3 euros sur la durée de vie du client.
 
 Répartition type du budget marketing pour une PME (2 000€/mois) :
 
