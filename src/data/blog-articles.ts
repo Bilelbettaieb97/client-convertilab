@@ -3134,6 +3134,8 @@ La méthode la plus simple : recherchez dans Google "votre-secteur + articles in
 
 Chez ConvertiLab, l'optimisation des balises meta fait partie de chaque site que nous livrons. Sur les 150+ sites audités, les pages sans meta title optimisée perdent en moyenne 35% de clics par rapport à leur positionnement réel.
 
+![Balises meta title description SEO - CTR Google résultats recherche optimisation](https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80)
+
 [Auditer les balises meta de mon site →](/seo-check)
 
 ## Qu'est-ce que les balises meta et lesquelles influencent vraiment le référencement ?
@@ -3180,6 +3182,8 @@ Pour vérifier vos balises meta rapidement :
 - **Screaming Frog** (gratuit jusqu'à 500 pages) : export complet de toutes les balises
 - **Extension SEO Meta in 1 Click** : visualisez les balises de n'importe quelle page en 1 clic
 
+![Audit balises meta - Google Search Console Screaming Frog erreurs titles dupliqués](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
 ## FAQ — Questions sur l'optimisation des balises meta
 
 ### La meta description influence-t-elle directement le classement Google ?
@@ -3192,7 +3196,13 @@ Oui, pour deux raisons. Premièrement, Google affiche en gras les mots de la req
 
 ### Que se passe-t-il si on ne renseigne pas la meta description ?
 
-Si aucune meta description n'est renseignée, Google génère automatiquement un extrait depuis le contenu de la page. Ces extraits automatiques sont souvent mal formulés, coupés au mauvais endroit, ou sans appel à l'action — ce qui réduit le taux de clic. Il est toujours préférable de contrôler soi-même le message affiché dans les résultats Google.`
+Si aucune meta description n'est renseignée, Google génère automatiquement un extrait depuis le contenu de la page. Ces extraits automatiques sont souvent mal formulés, coupés au mauvais endroit, ou sans appel à l'action — ce qui réduit le taux de clic. Il est toujours préférable de contrôler soi-même le message affiché dans les résultats Google.
+
+### Google peut-il réécrire ma meta description même si elle est optimisée ?
+
+Oui. Google réécrit la meta description dans environ 62% des cas, selon les données SEMrush. Cela arrive principalement quand Google estime que votre meta description ne répond pas précisément à la requête de l'internaute. Pour limiter les réécritures, assurez-vous que votre meta description correspond exactement à l'intention de recherche principale de la page et qu'elle reprend les termes clés que vos visiteurs utilisent. Un contenu de page riche et bien structuré augmente vos chances que Google conserve votre meta description.
+
+![Meta description réécriture Google - intention recherche correspondance contenu requête](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80)`
   },
   {
     slug: "comment-apparaitre-premier-google",
