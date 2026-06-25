@@ -1498,7 +1498,7 @@ La fréquence de mise à jour dépend du rythme de publication de votre site. Po
 
 ### Comment savoir si Google a bien indexé mes pages après la soumission du sitemap ?
 
-Pour vérifier l'indexation, tapez "site:domain.com" dans Google et comptez les résultats retournés. Une méthode plus précise est Google Search Console : dans le rapport "Pages", comparez le nombre d'URLs "soumises via sitemap" vs "indexées". Un écart important indique des problèmes à investiguer — pages en noindex, contenu dupliqué, erreurs de crawl, ou contenu jugé insuffisant pour mériter l'indexation. Chez ConvertiLab, lors de refontes SEO, nous avons systématiquement augmenté le taux d'indexation de 70% à 95%+ en nettoyant les sitemaps et en corrigeant les robots.txt.
+Pour vérifier l'indexation, tapez "site:domain.com" dans Google et comptez les résultats retournés. Une méthode plus précise est Google Search Console : dans le rapport "Pages", comparez le nombre d'URLs "soumises via sitemap" vs "indexées". Un écart important indique des problèmes à investiguer — pages en noindex, contenu dupliqué, erreurs de crawl, ou contenu jugé insuffisant pour mériter l'indexation. Chez ConvertiLab, lors de refontes SEO, nous avons systématiquement augmenté le taux d'indexation de 70% à 95%+ en nettoyant les sitemaps et en corrigeant les robots.txt. Le délai moyen pour qu'une nouvelle page apparaisse dans Google après soumission du sitemap est de 3 à 7 jours pour les sites avec un bon historique de crawl.
 
 [Générer mon robots.txt et sitemap XML gratuitement →](/generateur-robots-sitemap)`
   },
