@@ -2171,7 +2171,7 @@ La longueur idéale dépend de la complexité de l'offre et du niveau de confian
 
 ### Faut-il une landing page différente pour chaque campagne publicitaire ?
 
-Idéalement oui. Une landing page dédiée à chaque campagne (avec le même message que l'annonce, la même promesse, les mêmes mots-clés) augmente le "message match" et améliore le taux de conversion de 20 à 40%. En pratique pour une PME : commencez par une landing page générique, puis créez des variantes pour vos 2 ou 3 campagnes principales une fois le budget publicitaire validé.
+Idéalement oui. Une landing page dédiée à chaque campagne (avec le même message que l'annonce, la même promesse, les mêmes mots-clés) augmente le "message match" et améliore le taux de conversion de 20 à 40%. En pratique pour une PME : commencez par une landing page générique, puis créez des variantes pour vos 2 ou 3 campagnes principales une fois le budget publicitaire validé. Cette approche progressive évite d'investir dans des dizaines de pages avant de savoir lesquelles fonctionnent.
 
 ![Optimisation landing page - A/B test, longueur, message match campagnes](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`,
   },
