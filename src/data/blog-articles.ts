@@ -5372,6 +5372,8 @@ Pour les fondamentaux (titres uniques, descriptions de 300 mots, données struct
 
 Chez ConvertiLab, nous appliquons ces techniques sur les sites de nos 150+ clients depuis 2021. [Analysez votre site gratuitement](/design-score).
 
+![CRO taux conversion site web 2026 - A/B testing UX psychologie preuve sociale technique](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
+
 ## Qu'est-ce qu'un bon taux de conversion et comment le calculer ?
 
 Le taux de conversion se calcule ainsi : nombre de conversions / nombre de visiteurs × 100. Une "conversion" peut être un achat, une inscription newsletter, une demande de devis, un téléchargement ou un appel téléphonique. Les benchmarks varient selon le secteur : e-commerce général 2,5 à 3%, SaaS / logiciel 3 à 5%, services B2B 2 à 4%, landing page optimisée 5 à 15%. L'objectif n'est pas d'atteindre un chiffre absolu mais d'améliorer continuellement votre propre taux.
@@ -5418,6 +5420,8 @@ Le trio des quick wins de conversion :
 - **CTA visible** : un seul CTA principal par page, couleur contrastée, texte bénéfice
 - **Preuve sociale** : placez un témoignage ou une note directement sous votre CTA principal
 
+![Psychologie conversion - preuve sociale urgence objections personnalisation CTA](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
 Analysez votre site avec notre [outil Design Score](/design-score) pour identifier les axes prioritaires.
 
 ## FAQ — Questions sur l'amélioration du taux de conversion
@@ -5432,7 +5436,15 @@ L'investissement CRO va de quelques centaines d'euros par mois (outils + temps i
 
 ### Quels outils utiliser pour mesurer son taux de conversion ?
 
-Google Analytics 4 (gratuit) est la base indispensable pour configurer et suivre vos conversions par canal. Complétez avec Hotjar ou Microsoft Clarity (gratuit) pour les heatmaps et enregistrements de sessions — ces outils révèlent exactement où les visiteurs bloquent ou abandonnent sur vos pages.`
+Google Analytics 4 (gratuit) est la base indispensable pour configurer et suivre vos conversions par canal. Complétez avec Hotjar ou Microsoft Clarity (gratuit) pour les heatmaps et enregistrements de sessions — ces outils révèlent exactement où les visiteurs bloquent ou abandonnent sur vos pages.
+
+### Comment prioriser les pages à optimiser en premier sur son site ?
+
+Identifiez vos pages à fort trafic avec un faible taux de conversion : ce sont vos plus grandes opportunités de gain rapide. Dans Google Analytics 4, allez dans Rapports > Pages et écrans, triez par Sessions décroissantes, et cherchez les pages avec moins de 2% de conversions malgré un trafic important. Concentrez 80% de vos efforts CRO sur ces 3 à 5 pages — elles génèrent la majorité de votre trafic perdu.
+
+**Cas concret ConvertiLab :** un coach reconversion professionnelle à Paris avait un taux de conversion de 1,2% sur sa page services (400 visiteurs/mois = 5 leads). Après audit (proposition de valeur floue, témoignages absents, CTA générique "Contactez-nous"), nous avons reécrit le titre, ajouté 3 témoignages avec photos, et changé le CTA en "Réserver mon bilan offert de 30 min". En 45 jours : taux de conversion à 5,8%, soit 23 leads/mois avec le même trafic — chiffre d'affaires mensuel multiplié par 4.
+
+![CRO résultats coach Paris 1.2→5.8% - titre témoignages CTA bilan offert x4 CA](https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&q=80)`
   },
   {
     slug: "photos-produits-ecommerce-conseils",
