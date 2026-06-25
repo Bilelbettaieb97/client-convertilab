@@ -885,6 +885,10 @@ Couverture de l'audit par catégorie :
 
 Contrairement aux outils payants comme Semrush ou Ahrefs qui offrent une analyse approfondie sur l'ensemble du domaine, cet outil est conçu pour un diagnostic rapide et actionnable de la page analysée — idéal pour identifier les blocages prioritaires en quelques secondes.
 
+**Exemple de score type :** un site WordPress d'artisan non optimisé obtient généralement un score entre 35 et 55 sur 100 au premier audit. Les erreurs les plus fréquentes : pas de H1 sur la page d'accueil, images 2-3 Mo non compressées, meta description vide. Après corrections, le même site atteint 70 à 85 en une journée de travail.
+
+Un client ConvertiLab (consultant RH à Paris) avait un score de 41/100. Après audit et corrections sur 2 jours (title + meta + images + vitesse), son score est passé à 79/100. Sa position moyenne sur ses requêtes cibles est passée de 18 à 6 en 3 mois.
+
 ## Que faire après avoir reçu les résultats de son audit SEO ?
 
 Un audit sans action ne sert à rien. Voici comment prioriser les corrections :
@@ -919,6 +923,17 @@ Non, l'audit automatique identifie les erreurs techniques et on-page, mais ne re
 ### Mes données de site sont-elles conservées après l'audit ?
 
 Non, les résultats d'analyse ne sont pas enregistrés dans une base de données persistante. L'analyse est effectuée en temps réel et les résultats ne sont visibles que pendant votre session. Aucune donnée confidentielle sur votre site n'est stockée.
+
+### Comment interpréter le score SEO sur 100 ?
+
+Le score SEO sur 100 est un indicateur global de la santé de votre page. Voici comment l'interpréter :
+
+- **80 à 100** : excellent — votre page est bien optimisée, concentrez-vous sur le contenu et les backlinks
+- **60 à 79** : passable — des améliorations sont possibles, surtout sur les aspects techniques et les balises
+- **40 à 59** : insuffisant — des erreurs bloquantes ralentissent votre classement
+- **0 à 39** : critique — votre page a des problèmes sérieux qui empêchent Google de l'indexer correctement
+
+Un score élevé ne garantit pas la position 1, mais un score faible garantit que vous n'y serez jamais. Le score est le plancher, pas le plafond.
 
 [Lancer l'audit SEO gratuit de votre site →](/seo-check)`
   },
