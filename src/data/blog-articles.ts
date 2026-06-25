@@ -4743,7 +4743,7 @@ Les 3 erreurs de profil qui font fuir les prospects :
 
 ## Quelle stratégie de contenu Instagram adopter pour une entreprise ou un artisan ?
 
-La stratégie de contenu Instagram repose sur des "piliers" thématiques récurrents. Pour une entreprise, 5 piliers fonctionnent : éducation (40% des posts — conseils, tutoriels, astuces), inspiration (20% — résultats clients, avant/après, études de cas), connexion (20% — coulisses, équipe, storytelling), promotion (10% — offres, services, CTA directs), tendances (10% — actualités du secteur adaptées à votre niche). En 2026, les Reels (vidéos courtes) génèrent 3 à 5× plus de portée organique que les posts classiques et bénéficient d'une distribution algorithmique prioritaire.
+La stratégie de contenu Instagram repose sur des "piliers" thématiques récurrents. Pour une entreprise, 5 piliers fonctionnent : éducation (40% des posts — conseils, tutoriels, astuces), inspiration (20% — résultats clients, avant/après, études de cas), connexion (20% — coulisses, équipe, storytelling), promotion (10% — offres, services, CTA directs), tendances (10% — actualités du secteur adaptées à votre niche). En 2026, les Reels (vidéos courtes) génèrent 3 à 5× plus de portée organique que les posts classiques et bénéficient d'une distribution algorithmique prioritaire. Le ratio idéal pour une PME qui démarre : 2 Reels + 1 carrousel + 1 post image par semaine, avec des Stories quotidiennes pour maintenir la relation avec vos abonnés existants.
 
 Calendrier éditorial type pour une entreprise (4 à 5 posts/semaine) :
 
