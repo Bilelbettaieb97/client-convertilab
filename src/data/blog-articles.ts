@@ -1961,6 +1961,8 @@ Oui, c'est même souvent la meilleure approche. On appelle cela une architecture
 
 Cet article vous présente un comparatif objectif entre ces deux approches, basé sur des critères mesurables : **performance du site web**, sécurité, SEO et maintenabilité.
 
+![Next.js vs WordPress - performance SEO sécurité comparatif technique](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80)
+
 ## 1. Performance : Next.js écrase WordPress
 
 La **performance d'un site web** est devenue un critère business majeur. Google l'utilise comme facteur de classement, et les utilisateurs quittent un site qui met plus de 3 secondes à charger.
@@ -2023,6 +2025,8 @@ Soyons honnêtes : WordPress conserve des avantages dans certains contextes :
 
 Cependant, pour les entreprises qui visent la **performance web**, le SEO technique et la scalabilité, Next.js est devenu le standard en 2026. Découvrez nos [services de création de sites web](/services/sites-web) basés sur cette technologie.
 
+![Core Web Vitals Next.js vs WordPress - benchmark PageSpeed LCP TTFB](https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80)
+
 ## FAQ
 
 **Next.js est-il plus cher que WordPress ?**
@@ -2038,7 +2042,21 @@ Absolument. Next.js s'adapte à tous les projets, du site vitrine simple à la p
 
 En 2026, **Next.js** s'impose comme la solution technique supérieure à WordPress pour la majorité des projets web professionnels. Performance native, SEO technique optimisé, sécurité renforcée et expérience développeur moderne : les avantages sont indéniables.
 
-Envie de voir la différence par vous-même ? [Testez la vitesse de votre site actuel](/speed-check) et découvrez le potentiel d'amélioration avec un framework moderne.`,
+Envie de voir la différence par vous-même ? [Testez la vitesse de votre site actuel](/speed-check) et découvrez le potentiel d'amélioration avec un framework moderne.
+
+## Ce que nos clients ont gagné en passant de WordPress à Next.js
+
+Chez ConvertiLab, tous nos sites sont construits sur Next.js depuis 2023. Voici trois exemples concrets de migration ou de création :
+
+**Consultant en stratégie (Paris)** : migré depuis WordPress vers Next.js. Score PageSpeed : de 42 à 97. Temps de chargement : de 4,8s à 0,9s. Positionnement Google : de la 3e page à la 1re page sur sa requête principale en 3 mois.
+
+**Fleuriste artisanale (Lille)** : premier site créé directement en Next.js. Résultat immédiat : score 94/100 PageSpeed, site entier indexé en 6 jours. 8 nouveaux clients en ligne le premier mois.
+
+**Cabinet de recrutement (Lyon)** : avait un WordPress avec 34 plugins installés, temps de chargement de 6,2 secondes. Refonte Next.js en 3 semaines : chargement < 1s, 0 plugin, sécurité maximale.
+
+Ces résultats ne sont pas des cas exceptionnels — ils sont la norme quand on passe d'une architecture PHP/MySQL surchargée à un framework moderne optimisé pour la performance.
+
+![Migration WordPress Next.js - résultats clients ConvertiLab score performance](https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80)`,
   },
   {
     slug: "landing-page-convertir-visiteurs",
