@@ -3951,7 +3951,7 @@ Il n'y a pas de minimum obligatoire. Un budget de 300 à 500€/mois est un bon 
 
 ### Google Ads est-il rentable pour les petites entreprises ?
 
-Oui, à condition de bien cibler vos mots-clés et d'optimiser régulièrement. Les PME locales obtiennent souvent les meilleurs résultats car la concurrence géographique est moins forte qu'au niveau national. Un plombier à Rueil-Malmaison aura un CPC bien inférieur à "plombier Paris", avec un taux de conversion souvent supérieur.
+Oui, à condition de bien cibler vos mots-clés et d'optimiser régulièrement. Les PME locales obtiennent souvent les meilleurs résultats car la concurrence géographique est moins forte qu'au niveau national. Un plombier à Rueil-Malmaison aura un CPC bien inférieur à "plombier Paris", avec un taux de conversion souvent supérieur. La clé : cibler la ville + la prestation précise + l'urgence quand pertinent ("dépannage urgence 24h").
 
 ### Combien de temps avant de voir des résultats avec Google Ads ?
 
