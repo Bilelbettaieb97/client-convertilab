@@ -6298,6 +6298,10 @@ Le point le plus important : **la régularité bat l'intensité**. 30 minutes pa
     ],
     content: `Vos concurrents apparaissent avant vous sur Google parce que leurs pages répondent mieux aux critères que Google utilise pour classer les sites : autorité du domaine, qualité du contenu, optimisation technique et signaux locaux. La bonne nouvelle : ces critères sont tous améliorables, et sur des requêtes locales, 3 à 6 mois suffisent pour inverser la tendance.
 
+Avant de chercher à dépasser vos concurrents, vous devez comprendre **pourquoi** ils sont devant vous. Ce guide identifie les 7 raisons les plus fréquentes, avec une action concrète pour chacune. Pas de théorie — des leviers actionnables cette semaine.
+
+![Analyse SEO concurrentielle - Google Search Console](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
 ## Raison 1 : Leur domaine est plus ancien et a plus d'autorité
 
 L'autorité de domaine (ou Domain Authority) est un score qui reflète la confiance que Google a envers un site. Plus un domaine est ancien et a reçu de liens d'autres sites, plus son autorité est élevée — et plus ses pages remontent facilement dans les résultats.
@@ -6336,6 +6340,8 @@ Si votre concurrent a une page « électricien Versailles » qui couvre les inte
 
 **Action** : regardez les « Autres questions posées » (PAA) de Google sur votre requête. Chaque question est un H2 potentiel pour enrichir votre page.
 
+![Optimisation SEO on-page - balises title, H1, contenu](https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80)
+
 ## Raison 5 : Leur Google Business Profile est mieux optimisé
 
 Pour les requêtes locales, la fiche Google Business Profile est souvent plus importante que le site web lui-même. Elle détermine si vous apparaissez dans le pack local (les 3 fiches qui s'affichent sur Google Maps avant les résultats organiques).
@@ -6373,6 +6379,26 @@ Si votre concurrent a une page principale « plombier Paris » qui reçoit des l
 La méthode la plus rapide : faites un audit SEO de votre site et comparez avec le site de votre concurrent n°1. Vous verrez immédiatement les écarts sur les balises, la vitesse, les backlinks et le contenu.
 
 Chez ConvertiLab, notre outil de comparaison de sites analyse les deux URLs en 60 secondes et génère un rapport avec les priorités d'action.
+
+![Rapport comparatif SEO - analyse concurrentielle](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
+
+## Plan d'action pour dépasser un concurrent sur Google en 90 jours
+
+Voici le plan que nous appliquons pour nos clients ConvertiLab qui partent de derrière :
+
+**Semaine 1 — Diagnostiquer**
+Comparer votre site et celui du concurrent n°1 sur vitesse, contenu, backlinks et Google Business Profile. Identifier les 3 écarts les plus faciles à combler.
+
+**Semaines 2 à 4 — Corriger l'on-page**
+Réécrire les pages cibles avec le mot-clé dans le title, H1 et les 100 premiers mots. Ajouter 400 à 600 mots de contenu utile (FAQ, témoignages, zone d'intervention, tarifs).
+
+**Mois 2 — Renforcer les signaux locaux**
+Optimiser ou créer la fiche Google Business Profile. Collecter 5 à 10 nouveaux avis clients. S'inscrire sur les annuaires locaux principaux pour les premiers backlinks.
+
+**Mois 3 — Créer du contenu complémentaire**
+Publier 2 à 4 articles de blog ciblant des requêtes longue traîne liées à votre activité. Chaque article génère du trafic supplémentaire et renforce l'autorité de vos pages de service.
+
+Résultat observé chez ConvertiLab : 60 à 70% de nos clients rattrapent leur concurrent principal sur au moins 3 de leurs requêtes cibles en moins de 4 mois.
 
 [Comparer votre site avec votre concurrent principal](/comparateur-sites)
 
