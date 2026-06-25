@@ -1535,6 +1535,8 @@ Ce que le benchmark concurrence révèle systématiquement :
 
 Par exemple : si votre score SEO est de 40/100 et que vos trois concurrents principaux sont à 65-75/100, vous perdez des leads à chaque recherche Google. Si votre site charge en 4 secondes et eux en 2 secondes, vous perdez des visiteurs avant même qu'ils lisent votre offre. Ce sont des constats que l'analyse concurrentielle met en chiffres.
 
+Cas client ConvertiLab : un coach professionnel basé à Lyon avait l'intuition que son site était "bien" comparé à ses concurrents. L'analyse concurrentielle a révélé l'inverse : ses 3 concurrents principaux avaient tous des blogs actifs avec 30 à 80 articles optimisés SEO, quand lui n'avait aucun contenu. Résultat : il recevait 3 fois moins de trafic organique. Plan d'action établi en 30 minutes : 12 articles sur les 6 premiers mois, ciblant ses mots-clés de conversion. Un an plus tard, son trafic organique avait triplé.
+
 ## Comment un rapport sectoriel identifie-t-il les KPIs de référence de votre marché ?
 
 Un rapport sectoriel identifie les KPIs de référence de votre marché en agrégeant des données issues de benchmarks industrie par secteur d'activité : taux de conversion moyen, coût d'acquisition client, panier moyen, taux de rétention, CPC moyen, et performances web typiques. Ces chiffres permettent de savoir si vos performances sont dans la norme, au-dessus ou en retard sur votre secteur.
@@ -1570,6 +1572,10 @@ Les cabinets de conseil facturent ce type d'analyse plusieurs milliers d'euros. 
 ### Le rapport sectoriel est-il adapté à mon secteur très spécifique ?
 
 L'outil couvre des dizaines de secteurs d'activité avec des KPIs et des benchmarks actualisés. Pour les secteurs très niches, le rapport utilise les données du secteur parent le plus proche — les recommandations stratégiques restent pertinentes même si certains benchmarks sont des approximations. Dans ce cas, le rapport l'indique clairement et précise le secteur de référence utilisé.
+
+### Comment utiliser les résultats du rapport pour construire sa stratégie ?
+
+Le rapport donne une vue macro — à vous de le transformer en actions concrètes. Voici la méthode recommandée : identifiez les 2 ou 3 écarts les plus importants avec la moyenne sectorielle, choisissez l'écart avec le meilleur ratio impact/effort, et concentrez 80% de vos ressources dessus pendant 90 jours avant de passer au suivant. La dispersion est l'ennemie des résultats en marketing — un seul axe bien exécuté pendant 3 mois surpasse souvent 12 mois de demi-mesures sur 10 fronts simultanés.
 
 ### À quelle fréquence faut-il refaire une analyse concurrentielle de son marché ?
 
