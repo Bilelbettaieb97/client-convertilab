@@ -1204,6 +1204,8 @@ Le CPC moyen et le taux de conversion sont les deux variables qui déterminent l
 
 La formule : **ROI = ((Revenu généré - Budget) / Budget) × 100**. Avec 1 000€ investis, 2€ CPC, 4% de conversion et 150€ par client : 500 clics → 20 clients → 3 000€ de revenu → ROI de 200%.
 
+Cette formule simple transforme la publicité d'un pari en calcul mathématique. Avant de lancer quoi que ce soit, posez-vous la question : si ma campagne fonctionne dans la moyenne de mon secteur, est-ce que je gagne de l'argent ? Si la réponse est non même dans le scénario moyen, revoyez votre offre ou votre page avant d'investir.
+
 ## Comment fonctionne un simulateur de ROI publicitaire gratuit ?
 
 Un simulateur de ROI publicitaire gratuit fonctionne en combinant votre budget, le CPC moyen de votre secteur et votre taux de conversion pour projeter le nombre de clics, de leads et le ROAS attendu. Le résultat est une estimation réaliste basée sur des données de marché actualisées, pas sur des moyennes génériques.
