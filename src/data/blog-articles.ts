@@ -4153,6 +4153,7 @@ Formats qui engagent le plus en 2026 :
 - **Carrousels éducatifs** : taux de sauvegarde élevé (signal fort pour l'algorithme)
 - **Stories interactives** : sondages, quiz, questions — humanisent la marque
 - **Lives** : génèrent 6x plus d'interactions que les vidéos classiques
+- **Collaborations / Duos** : deux créateurs se taguent mutuellement et doublent leur portée en touchant une audience nouvelle de qualité
 
 ## Comment mesurer et améliorer les performances de ses réseaux sociaux ?
 
