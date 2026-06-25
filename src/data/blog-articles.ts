@@ -6502,6 +6502,8 @@ Le coût est aussi élevé : 23€ à 39€ par mois pour un site professionnel.
 
 **Pour qui Webflow est adapté :** designers freelance, agences web, entrepreneurs avec une forte culture visuelle qui veulent se passer de développeur.
 
+**Option bonus — Squarespace :** similaire à Wix mais avec des templates plus soignés esthétiquement. Prix : 16€ à 49€/mois. Limites SEO semblables à Wix. Adapté pour les créatifs (photographes, artistes, architectes) mais pas recommandé pour un SEO local compétitif.
+
 ## Une agence web vaut-elle le coût par rapport au DIY ?
 
 La question n'est pas "l'agence est-elle chère ?" mais "quel est le coût total réel de chaque option ?"
