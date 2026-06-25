@@ -1616,6 +1616,10 @@ Oui, le rapport inclut des benchmarks tarifaires sectoriels — fourchettes de p
 
 **80% des entreprises** n'ont aucune visibilité objective sur leur positionnement web face à la concurrence. Elles supposent que leur site est "correct" sans jamais vérifier si leurs compétiteurs font mieux en SEO, en vitesse ou en UX — et perdent des clients à chaque recherche Google sans le savoir.
 
+Ce guide vous montre comment réaliser ce benchmark en moins de 2 minutes et comment lire les résultats pour prioriser vos actions.
+
+![Comparateur sites web concurrents - benchmark SEO vitesse design](https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80)
+
 [Comparer votre site avec vos concurrents gratuitement →](/comparateur-sites)
 
 ## Pourquoi un benchmark site est-il essentiel pour sa stratégie digitale ?
@@ -1658,6 +1662,8 @@ Le comparateur de sites web analyse 4 dimensions essentielles d'un benchmark sit
 
 Les outils payants (SimilarWeb, SEMrush, Ahrefs) permettent des analyses plus approfondies avec des données de trafic et des profils de backlinks. Pour un audit concurrent rapide couvrant les fondamentaux, le comparateur gratuit identifie les écarts les plus impactants.
 
+![Benchmark concurrent - rapport côte à côte SEO performance contenu](https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80)
+
 ## FAQ — Questions fréquentes sur la comparaison de sites web
 
 ### Combien de concurrents peut-on comparer simultanément ?
@@ -1671,6 +1677,16 @@ Non, absolument pas. L'analyse est réalisée de manière non intrusive en consu
 ### Comment identifier ses vrais concurrents en ligne (pas seulement commerciaux) ?
 
 Pour identifier ses concurrents en ligne, il faut rechercher ses principales requêtes clients sur Google (ex. "plombier Paris 15" ou "coaching business") et noter les 3 à 5 premiers résultats organiques. Ce sont vos concurrents SEO directs — même s'ils ne sont pas vos concurrents commerciaux traditionnels. Ce sont eux qui captent les clics de vos clients potentiels.
+
+### Que faire si je suis devant mes concurrents sur tous les critères ?
+
+Félicitations — mais méfiez-vous. Le paysage concurrentiel évolue rapidement : un concurrent peut lancer une refonte, un nouveau blog ou une campagne SEO en quelques mois et vous dépasser. Si vous êtes en tête aujourd'hui, profitez-en pour accentuer l'écart sur vos points forts plutôt que de vous reposer sur vos lauriers. Lancez une analyse trimestrielle pour détecter les rattrapages avant qu'ils deviennent des pertes de positions.
+
+### Le rapport comparatif est-il exploitable sans compétences techniques ?
+
+Oui, le rapport est conçu pour être lu par des dirigeants et entrepreneurs, pas par des développeurs. Chaque critère est accompagné d'une explication simple et d'une action corrective en langage clair. Si un point technique nécessite une intervention (optimisation du serveur, compression d'images), le rapport l'indique et vous suggère à qui vous adresser ou quelle solution utiliser.
+
+![Rapport comparatif sites - lecture résultats, actions correctives, priorités](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
 
 [Lancer la comparaison de votre site avec vos concurrents →](/comparateur-sites)`
   },
