@@ -4412,6 +4412,8 @@ Mesurez toujours en comparant la même période : la semaine avant vs la semaine
 
 Chez ConvertiLab, nous construisons des stratégies marketing pour 150+ entrepreneurs depuis 2021. Ce guide vous donne le plan d'action concret pour une PME qui part de zéro ou qui veut structurer son approche.
 
+![Stratégie marketing digital PME 2026 - canaux acquisition SEO Ads Social Email budget](https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80)
+
 ## Pourquoi les PME ont-elles besoin d'une stratégie marketing digital en 2026 ?
 
 Les PME ont besoin d'une stratégie marketing digital parce que 81% des consommateurs recherchent en ligne avant d'acheter localement, les PME avec une présence digitale forte croissent 2,8 fois plus vite, et le coût d'acquisition client digital est 62% moins cher que le marketing traditionnel. Sans stratégie, les erreurs classiques sont de poster sur les réseaux "quand on a le temps", d'investir dans des publicités sans tracking de conversion, ou d'avoir un site web qui ne génère aucun lead.
@@ -4460,6 +4462,10 @@ KPIs essentiels à suivre mensuellement :
 - **Conversion** : taux de conversion global et par page, taux de rebond
 - **Rétention** : LTV (Lifetime Value), taux de rétention, NPS
 
+![Plan marketing digital 12 mois - phases fondations accélération optimisation PME](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80)
+
+**Cas concret ConvertiLab :** un cabinet de conseil RH à Nantes sans présence digitale (zéro site web, zéro réseaux sociaux) a lancé une stratégie en 3 phases sur 12 mois. Phase 1 : site web + tracking + 3 personas définis. Phase 2 : Google Ads sur "cabinet RH Nantes" (CAC initial 180€) + articles SEO hebdomadaires. Phase 3 : retargeting + newsletter mensuelle. Résultat à 12 mois : 43 nouveaux clients, CAC réduit à 67€, 38% du chiffre d'affaires généré par des clients inbound sans démarchage actif.
+
 Découvrez notre [audit SEO gratuit](/seo-check) pour poser les fondations de votre stratégie.
 
 ## FAQ — Questions sur la stratégie marketing digital des PME
@@ -4474,7 +4480,13 @@ Pour une PME, le modèle hybride fonctionne le mieux : internalisez la connaissa
 
 ### Quel est le canal marketing digital le plus rentable pour une PME locale ?
 
-Pour une PME locale (artisan, prestataire de services, commerce), le combo Google Ads + SEO local est généralement le plus rentable. Google Ads génère des leads immédiats sur des requêtes à fort intent commercial ("plombier Rueil-Malmaison"), pendant que le SEO local construit une visibilité organique durable. Pour du e-commerce, Meta Ads + email marketing donnent les meilleurs résultats.`
+Pour une PME locale (artisan, prestataire de services, commerce), le combo Google Ads + SEO local est généralement le plus rentable. Google Ads génère des leads immédiats sur des requêtes à fort intent commercial ("plombier Rueil-Malmaison"), pendant que le SEO local construit une visibilité organique durable. Pour du e-commerce, Meta Ads + email marketing donnent les meilleurs résultats.
+
+### Comment savoir si ma stratégie marketing digital fonctionne vraiment ?
+
+La métrique ultime est le retour sur investissement global (ROI) : combien de chiffre d'affaires génère chaque euro investi en marketing. Une stratégie qui fonctionne doit produire un CAC inférieur à la marge nette générée par un client sur sa durée de vie. Pour avoir une vision claire, tracez chaque source de lead dans votre CRM (Pipedrive, HubSpot) et comparez trimestriellement le coût par lead, le taux de closing et la valeur moyenne du contrat par canal.
+
+![KPIs marketing digital PME - CAC LTV ROI taux conversion par canal tableau de bord](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)`
   },
   {
     slug: "retargeting-remarketing-guide",
