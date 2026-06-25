@@ -4860,6 +4860,19 @@ Pour configurer les conversions dans GA4, allez dans Admin > Événements, trouv
 
 Les 3 métriques GA4 à surveiller chaque semaine : utilisateurs actifs sur 7 jours (évolution de votre audience), taux d'engagement supérieur à 60% (qualité du trafic — si < 40%, le contenu ou l'expérience utilisateur pose problème), et conversions par source (quels canaux génèrent le plus de leads). Interprétation pratique : si 80% de votre trafic vient de "Direct" et presque rien d'"Organic Search", votre SEO a besoin d'attention. Si votre page Services a 1 000 vues mais seulement 5 clics vers Contact, la page n'est pas convaincante. Planifiez une revue hebdomadaire de 15 minutes de ces 3 métriques.
 
+**Le tableau de bord GA4 idéal pour une PME — 6 cartes à afficher :**
+1. Utilisateurs actifs 7 jours (vs semaine précédente)
+2. Taux d'engagement (objectif > 60%)
+3. Conversions total du mois (vs mois précédent)
+4. Canal source n°1 de leads (SEO, Ads ou Social)
+5. Page la plus visitée du mois (contenu à amplifier)
+6. Page avec le taux d'engagement le plus bas (contenu à améliorer)
+
+Ce tableau de bord se configure en moins de 10 minutes dans GA4 via "Rapports > Bibliothèque > Créer un rapport" et vous donne une vision complète en 15 minutes/semaine sans vous noyer dans la data.
+
+**Utiliser les Explorations GA4 pour les analyses avancées :**
+Les Explorations sont la fonctionnalité la plus puissante de GA4 pour les PME ambitieuses. Le rapport "Chemin de navigation" vous montre exactement les pages que vos visiteurs consultent avant de convertir — indispensable pour identifier les pages "tremplins" vers votre formulaire de contact. Le rapport "Entonnoir" vous révèle à quelle étape exacte vous perdez des prospects dans votre processus de commande ou de contact.
+
 ## FAQ — Questions sur Google Analytics 4
 
 ### GA4 est-il gratuit ?
