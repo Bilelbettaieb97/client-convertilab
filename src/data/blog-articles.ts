@@ -3762,7 +3762,7 @@ Chez ConvertiLab, nous avons géré des stratégies SEO et SEA pour 150+ clients
 
 ## Quelles sont les différences concrètes entre le SEO et le SEA en termes de coût et de résultats ?
 
-Le SEO génère du trafic organique (gratuit au clic) mais nécessite 3 à 12 mois avant de voir des résultats significatifs. Le SEA génère du trafic immédiat mais chaque clic a un prix (0,30€ à 50€ selon le secteur) et le trafic s'arrête dès que vous coupez le budget. En termes de ROI à long terme, le SEO l'emporte systématiquement — mais le SEA est irremplaçable pour un lancement ou une promotion limitée dans le temps.
+Le SEO génère du trafic organique (gratuit au clic) mais nécessite 3 à 12 mois avant de voir des résultats significatifs. Le SEA génère du trafic immédiat mais chaque clic a un prix (0,30€ à 50€ selon le secteur) et le trafic s'arrête dès que vous coupez le budget. En termes de ROI à long terme, le SEO l'emporte systématiquement — mais le SEA est irremplaçable pour un lancement ou une promotion limitée dans le temps. Une règle souvent citée : si votre objectif est à 6 mois, choisissez le SEA ; si votre objectif est à 18 mois, choisissez le SEO ; si votre objectif est les deux, commencez par le SEA et construisez le SEO en parallèle.
 
 | Critère | SEO | SEA |
 |---------|-----|-----|
