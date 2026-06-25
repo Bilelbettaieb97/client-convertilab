@@ -6484,7 +6484,9 @@ WordPress (WordPress.org, pas .com) est le CMS qui fait tourner 43% des sites we
 - Courbe d'apprentissage significative pour un débutant (30 à 60 heures pour un premier site correct)
 - Maintenance permanente : mises à jour plugins, sauvegardes, sécurité
 - Risques de piratage si non maintenu (WordPress est la cible n°1 des hackers)
-- Thèmes "gratuits" souvent lourds et mal optimisés
+- Thèmes "gratuits" souvent lourds et mal optimisés pour les Core Web Vitals
+
+**Ce que beaucoup ignorent** : un site WordPress avec 20 plugins activés peut avoir un score PageSpeed de 40/100 sur mobile, ce qui plombe le référencement. La solution : utiliser un thème léger (GeneratePress, Kadence) et limiter les plugins à l'essentiel.
 
 **Pour qui WordPress est adapté :** entrepreneurs qui veulent tout contrôler, ont du temps et une appétence tech, ou qui veulent un blog à fort contenu.
 
@@ -6519,6 +6521,8 @@ La question n'est pas "l'agence est-elle chère ?" mais "quel est le coût total
 - Propriété du site : 100% (code + domaine à vous)
 
 Sur 3 ans, la différence de prix est souvent nulle. La différence de résultat est réelle : un site d'agence est mieux optimisé SEO, plus rapide sur mobile, et vous laisse du temps pour votre vrai métier.
+
+Un calcul souvent oublié : si vous valez 50€/heure dans votre métier, 40 heures passées à créer votre site Wix représentent 2 000€ de valeur non produite — 4× le prix d'un site vitrine ConvertiLab.
 
 [Obtenir une estimation du coût de votre site web](/estimation-prix-site-web)
 
