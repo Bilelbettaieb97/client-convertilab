@@ -4759,6 +4759,15 @@ Calendrier éditorial type pour une entreprise (4 à 5 posts/semaine) :
 
 Les Reels qui performent respectent 5 règles. Règle 1 : un hook en 1 à 3 secondes qui capte l'attention immédiatement (texte à l'écran + parole + action). Règle 2 : sous-titres obligatoires car 85% des vidéos sont regardées sans le son. Règle 3 : durée de 15 à 30 secondes pour la viralité, 60 à 90 secondes pour l'éducation approfondie. Règle 4 : contenu sauvegardable et partageable (l'algorithme privilégie ces actions). Règle 5 : CTA final qui dit au spectateur quoi faire ensuite. Les types de Reels qui fonctionnent le mieux : "Comment faire X en 30 secondes", avant/après transformation, mythes vs réalité, et journée type dans votre métier.
 
+La formule du hook Instagram en 3 variantes qui marchent à coup sûr :
+- **La question intrigante** : "Tu fais encore cette erreur en [domaine] ?" — crée une tension immédiate
+- **Le chiffre surprise** : "J'ai perdu 3 000€ à cause de cette décision — voici pourquoi"
+- **La promesse de transformation** : "Comment passer de [situation A] à [situation B] en [temps]"
+
+Ce n'est pas le contenu qui fait performer un Reel, c'est les 3 premières secondes. Si votre hook n'accroche pas, personne ne verra votre contenu pourtant excellent. Testez plusieurs hooks sur le même sujet pour identifier lequel génère le plus de vues complètes (signal clé pour l'algorithme).
+
+**Les hashtags en 2026 :** utilisez 5 à 10 hashtags ciblés (3 niche ultra-spécifique + 3 secteur moyen + 2 grands + 2 géographiques si vous êtes local). Les hashtags génèrent moins de reach qu'avant mais restent utiles pour la découvrabilité. Plus important : les mots-clés dans votre légende et dans votre texte à l'écran sont maintenant indexés par Instagram pour la recherche.
+
 Les métriques à suivre pour mesurer la performance Instagram :
 
 | Métrique | Benchmark | Comment l'améliorer |
