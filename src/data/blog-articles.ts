@@ -4943,6 +4943,20 @@ Pour maximiser les conversions, proposez plusieurs moyens de paiement : carte ba
 2. Compatibilité mobile sur iPhone et Android
 3. Google Analytics 4 avec suivi des conversions configuré
 
+**La checklist des 10 points avant d'ouvrir votre boutique au public :**
+- Toutes les photos produits sont de haute qualité (min. 1000 × 1000 px)
+- Chaque produit a une description unique et des mots-clés intégrés
+- Le certificat SSL est actif (HTTPS visible dans l'URL)
+- La politique de retour est claire et accessible depuis le footer
+- Les CGV sont conformes au droit français (obligatoires pour le B2C)
+- L'email de confirmation de commande est configuré et testé
+- La page "À propos" humanise votre marque avec votre histoire
+- Les mentions légales sont complètes et à jour
+- La page 404 redirige intelligemment vers vos meilleures catégories
+- Google Analytics 4 + Meta Pixel sont installés et vérifiés
+
+Cette checklist vous évite les 90% des raisons pour lesquelles les boutiques e-commerce ratent leurs premiers jours. Une boutique incomplete au lancement perd irrémédiablement les visiteurs qui n'y trouvent pas ce qu'ils cherchent — et ils ne reviennent généralement pas.
+
 ## Comment référencer et promouvoir sa boutique en ligne pour attirer ses premiers clients ?
 
 Un site e-commerce sans SEO est une boutique dans une ruelle déserte. Les fondamentaux SEO e-commerce : mots-clés stratégiques dans les titres de pages et fiches produits, URLs lisibles (exemple : /chaussures-running-homme plutôt que /product?id=123), descriptions uniques pour chaque produit (jamais le copier-coller fournisseur), balises meta optimisées, et maillage interne entre catégories et produits. Pour les 3 premiers mois, combinez Google Ads (trafic immédiat sur requêtes à fort intent commercial), réseaux sociaux (Instagram, TikTok selon votre cible), et email marketing (newsletter + relance panier abandonné). Budget acquisition minimum : 500€/mois.
