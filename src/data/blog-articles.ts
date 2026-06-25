@@ -5604,11 +5604,11 @@ Pour un site e-commerce intégrant une logistique optimisée, [contactez notre �
 
 ### Quel transporteur choisir pour débuter son e-commerce ?
 
-Colissimo (La Poste) pour les envois standards en France et Mondial Relay pour le point relais sont un excellent duo de départ. Ajoutez Chronopost pour l'express quand le volume le justifie (50+ colis/mois). Utilisez une plateforme comme Sendcloud pour comparer automatiquement les tarifs et gérer les étiquettes depuis une interface unique.
+Colissimo (La Poste) pour les envois standards en France et Mondial Relay pour le point relais sont un excellent duo de départ. Ajoutez Chronopost pour l'express quand le volume le justifie (50+ colis/mois). Utilisez une plateforme comme Sendcloud pour comparer automatiquement les tarifs et gérer les étiquettes depuis une interface unique. Dès 200 colis/mois, demandez un compte négocié directement chez le transporteur — les économies peuvent atteindre 20 à 35% sur le tarif public, avec des numéros de suivi premium et une remise en litige simplifiée.
 
 ### Comment gérer les colis perdus ou endommagés ?
 
-Assurez tous vos envois au-delà de 50€ de valeur. En cas de problème, remplacez le produit ou remboursez immédiatement sans questionner le client. Le coût d'un remplacement est toujours inférieur au coût d'un client perdu et d'un avis négatif. Gardez les numéros de suivi de chaque expédition pour les réclamations transporteur.
+Assurez tous vos envois au-delà de 50€ de valeur. En cas de problème, remplacez le produit ou remboursez immédiatement sans questionner le client. Le coût d'un remplacement est toujours inférieur au coût d'un client perdu et d'un avis négatif. Gardez les numéros de suivi de chaque expédition pour les réclamations transporteur. Créez un processus standardisé pour les incidents : email automatique d'excuse dans les 2h, remplacement expédié sous 24h, offre d'un bon de 10% sur la prochaine commande — ce protocole transforme une expérience négative en fidélisation durable.
 
 ### La livraison le jour même est-elle nécessaire pour un petit e-commerce ?
 
