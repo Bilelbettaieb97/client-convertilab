@@ -1581,6 +1581,8 @@ Le rapport donne une vue macro — à vous de le transformer en actions concrèt
 
 Il faut refaire une analyse concurrentielle au minimum tous les trimestres, et après chaque événement majeur dans votre secteur : arrivée d'un nouveau concurrent, changement de réglementation, évolution technologique significative, ou après une action marketing majeure. Les marchés évoluent rapidement — une veille concurrentielle ponctuelle annuelle ne suffit pas pour prendre des décisions stratégiques éclairées.
 
+Un système de veille simple pour une PME : consultez vos concurrents principaux sur Google chaque mois (tapez leurs noms, regardez leurs nouvelles pages et offres), abonnez-vous à leurs newsletters, et suivez les hashtags sectoriels sur LinkedIn. 30 minutes par mois suffisent pour détecter les mouvements significatifs. Le rapport sectoriel automatise la partie quantitative (benchmarks, performances) tandis que votre veille manuelle capte les signaux qualitatifs (nouveaux positionnements, offres, messages).
+
 ### Peut-on utiliser ce rapport pour convaincre des investisseurs ou partenaires ?
 
 Oui, le rapport sectoriel fournit des données structurées et des benchmarks concurrentiels qui enrichissent un business plan ou une présentation stratégique. Il démontre que vos décisions sont fondées sur une connaissance du marché, pas sur des suppositions — ce que les investisseurs et partenaires apprécient particulièrement lors d'une levée de fonds ou d'un appel d'offres.
