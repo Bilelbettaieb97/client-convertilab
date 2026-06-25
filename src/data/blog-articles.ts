@@ -1389,7 +1389,7 @@ Oui, la loi LCEN exige l'adresse du responsable du site. Pour les auto-entrepren
 
 ### Les CGU sont-elles obligatoires pour un site vitrine sans espace membre ?
 
-Non, les CGU (conditions générales d'utilisation) ne sont pas légalement obligatoires pour un site vitrine sans espace membre ni zone de téléchargement. Elles sont en revanche fortement recommandées pour encadrer l'usage du site et vous protéger en cas de litige. En revanche, si votre site propose des fonctionnalités interactives (forum, commentaires, espace client), les CGU deviennent indispensables.
+Non, les CGU (conditions générales d'utilisation) ne sont pas légalement obligatoires pour un site vitrine sans espace membre ni zone de téléchargement. Elles sont en revanche fortement recommandées pour encadrer l'usage du site et vous protéger en cas de litige. En revanche, si votre site propose des fonctionnalités interactives (forum, commentaires, espace client), les CGU deviennent indispensables. Comptez 15 à 30 minutes pour les lire et valider le document généré, surtout si votre activité est réglementée.
 
 [Générer mes mentions légales RGPD gratuitement →](/generateur-mentions-legales)`
   },
