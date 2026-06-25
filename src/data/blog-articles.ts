@@ -3374,7 +3374,7 @@ Dans Google Search Console, vérifiez :
 
 ## Comment auditer les performances et l'expérience utilisateur de son site ?
 
-Pour auditer les performances, testez vos pages clés avec Google PageSpeed Insights (gratuit) qui mesure les 3 Core Web Vitals : LCP (chargement du contenu principal, seuil < 2,5s), INP (réactivité aux interactions, seuil < 200ms), et CLS (stabilité visuelle, seuil < 0,1). Ces 3 métriques sont des facteurs de classement officiels depuis 2021. Un site avec des Core Web Vitals dans le rouge perd des positions face à des concurrents techniquement équivalents mais plus rapides.
+Pour auditer les performances, testez vos pages clés avec Google PageSpeed Insights (gratuit) qui mesure les 3 Core Web Vitals : LCP (chargement du contenu principal, seuil < 2,5s), INP (réactivité aux interactions, seuil < 200ms), et CLS (stabilité visuelle, seuil < 0,1). Ces 3 métriques sont des facteurs de classement officiels depuis 2021. Un site avec des Core Web Vitals dans le rouge perd des positions face à des concurrents techniquement équivalents mais plus rapides. Testez toujours sur la version mobile : depuis 2023, Google utilise exclusivement l'index mobile-first, ce qui signifie que votre score mobile est celui qui compte pour votre classement, quelle que soit la performance desktop.
 
 Facteurs de vitesse à vérifier dans l'ordre de priorité :
 - Taille et format des images (WebP recommandé, max 100ko/image)
