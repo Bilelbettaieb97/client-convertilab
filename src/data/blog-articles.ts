@@ -2233,6 +2233,8 @@ Les erreurs fatales qui ruinent une refonte de site web sont au nombre de 5 : ou
 
 Oui, la refonte progressive est une alternative intelligente à la refonte totale, surtout pour les PME avec un budget limité. Elle consiste à moderniser le site par phases : d'abord les performances (vitesse, images), puis le design (mobile first, UX), puis la technologie (migration vers un framework moderne), puis la conversion (CTA, formulaires). Cette approche réduit les risques et permet de mesurer l'impact de chaque amélioration.
 
+Cas client ConvertiLab : un cabinet de kinésithérapie à Toulouse avait un site WordPress de 2018 avec un score PageSpeed de 28/100. Plutôt qu'une refonte totale immédiate, nous avons d'abord optimisé les images en WebP, activé la mise en cache et supprimé 12 plugins inutiles. Score PageSpeed en 2 jours : 72/100. Un mois plus tard, le trafic organique avait augmenté de 22%. La refonte visuelle est venue ensuite, consolidant les gains.
+
 **Les 4 phases d'une refonte progressive :**
 1. **Performances** : compression images, CDN, mise en cache — gain immédiat sur PageSpeed
 2. **Design** : mobile first, typographie, couleurs, hiérarchie visuelle
