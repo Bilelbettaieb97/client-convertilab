@@ -3504,6 +3504,8 @@ Utilisez notre [générateur de robots.txt et sitemap](/generateur-robots-sitema
 
 Chaque lien interne est une porte d'entrée pour Googlebot : plus une page reçoit de liens internes depuis des pages déjà indexées et populaires, plus elle sera crawlée et indexée rapidement. Pour accélérer l'indexation d'une nouvelle page, ajoutez immédiatement 2 à 3 liens internes vers elle depuis vos articles les plus visités. Cette technique est souvent plus rapide que la soumission manuelle dans Search Console.
 
+**Cas réel ConvertiLab :** un cabinet de kinésithérapie à Strasbourg avait publié 8 articles de blog en 3 mois, aucun n'avait été indexé. Diagnostic : les articles n'étaient reliés qu'entre eux et n'avaient aucun lien depuis la homepage ou les pages de services. Après ajout de 2 liens internes par article depuis des pages à fort trafic, les 8 articles ont été indexés en 4 jours. La leçon : l'autorité s'hérite — une page sans lien depuis des pages fortes n'est pas prioritaire pour Googlebot.
+
 Checklist pour chaque nouveau contenu publié :
 1. Vérifiez que la page est accessible (pas de noindex, pas bloquée par robots.txt)
 2. Ajoutez 2 à 3 liens internes depuis vos pages existantes les plus visitées
@@ -3516,7 +3518,7 @@ Checklist pour chaque nouveau contenu publié :
 
 ### Combien de temps faut-il pour qu'une page soit indexée ?
 
-Le délai varie selon l'autorité de votre site. Un site bien établi peut voir ses nouvelles pages indexées en quelques heures à 2 jours. Un site nouveau ou peu populaire peut attendre 1 à 4 semaines. La soumission via Google Search Console accélère généralement le processus à 24 à 72 heures. Sur les sites ConvertiLab (hébergés sur Vercel, bien structurés), l'indexation se fait généralement en 24 à 48h après soumission.
+Le délai varie selon l'autorité de votre site. Un site bien établi peut voir ses nouvelles pages indexées en quelques heures à 2 jours. Un site nouveau ou peu populaire peut attendre 1 à 4 semaines. La soumission via Google Search Console accélère généralement le processus à 24 à 72 heures. Sur les sites ConvertiLab (hébergés sur Vercel, bien structurés, avec sitemap automatique), l'indexation se fait généralement en 24 à 48h après soumission — ce qui permet de commencer à suivre les premières données de position très rapidement après la mise en ligne.
 
 ### Google indexe-t-il automatiquement toutes les pages d'un site ?
 
