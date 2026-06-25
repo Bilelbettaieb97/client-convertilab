@@ -7011,7 +7011,7 @@ Résumé des actions les plus efficaces :
 4. **Visez la régularité** : 2 à 4 nouveaux avis par mois valent mieux qu'une campagne de 30 avis en une semaine
 5. **Affichez vos avis sur votre site** avec un widget ou une section témoignages avec schema markup
 
-Avec ce rythme, vous atteindrez les 30 avis à 4.5+ en moins de 6 mois — seuil à partir duquel les bénéfices SEO locaux et de conversion deviennent très significatifs.
+Avec ce rythme, vous atteindrez les 30 avis à 4.5+ en moins de 6 mois — seuil à partir duquel les bénéfices SEO locaux et de conversion deviennent très significatifs. Et contrairement aux publicités payantes, une note Google élevée ne disparaît pas quand vous arrêtez de payer.
 
 [Voir comment nous intégrons les avis sur vos pages](/portfolio)
 
