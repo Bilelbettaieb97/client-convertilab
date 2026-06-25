@@ -2525,6 +2525,8 @@ Un site lent impacte directement les conversions et le chiffre d'affaires via 3 
 
 Un site lent envoie aussi un signal de manque de professionnalisme : si votre site met 5 secondes à charger, un concurrent qui charge en 1,5s captera vos visiteurs avant qu'ils aient vu votre offre.
 
+Autre angle souvent ignoré : sur mobile avec une connexion 4G moyenne (pas la fibre), les différences de vitesse sont amplifiées. Un site qui charge en 2s sur fibre peut prendre 6s sur 4G en déplacement — là où précisément vos clients vous cherchent sur leur téléphone.
+
 ## Quelles sont les causes les plus fréquentes d'un site web lent ?
 
 Les 5 causes les plus fréquentes d'un site web lent sont : les images non optimisées (JPEG lourd vs WebP léger), l'excès de JavaScript (plugins, trackers, widgets), un hébergement sous-dimensionné (mutualisé à 3€/mois), l'absence de cache, et un code non optimisé (CSS inutilisés, requêtes base de données lentes). Ces 5 causes représentent 80% des cas de lenteur identifiés dans les 150+ audits ConvertiLab.
