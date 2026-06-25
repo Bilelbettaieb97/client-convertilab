@@ -2865,7 +2865,7 @@ Pour optimiser les balises HTML d'une page pour le SEO, il faut soigner 4 élém
 | H2 | Structure le contenu | Illimité | Mots-clés secondaires, PAA |
 | Alt image | Attribut de l'image | 125 | Description pour Google Images |
 
-**Règle d'or :** chaque page doit avoir un title unique. Si deux pages ont le même title, Google ne sait pas laquelle mettre en avant — elles se cannibalisent mutuellement.
+**Règle d'or :** chaque page doit avoir un title unique. Si deux pages ont le même title, Google ne sait pas laquelle mettre en avant — elles se cannibalisent mutuellement. Un audit de balises sur 50 pages révèle souvent 10 à 20 titles identiques ou vides sur les sites WordPress non optimisés, notamment les pages de catégories, les archives et les pages de tags.
 
 ## Combien de temps faut-il pour avoir des résultats en SEO et comment les mesurer ?
 
