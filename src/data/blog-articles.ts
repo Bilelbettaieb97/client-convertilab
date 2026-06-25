@@ -5184,7 +5184,7 @@ Le meilleur indicateur est le "taux de récupération" : nombre de commandes pro
 
 ## Pourquoi choisir Stripe plutôt que PayPal ou Mollie pour son e-commerce ?
 
-Stripe est recommandé pour un e-commerce en 2026 pour 6 raisons : intégration rapide (quelques heures pour un checkout fonctionnel), support de 25+ moyens de paiement (CB, Apple Pay, Google Pay, SEPA, Klarna, iDEAL), dashboard complet avec suivi des ventes et remboursements en temps réel, API très puissante pour une personnalisation totale, conformité PCI DSS niveau 1 automatique (les données de carte ne transitent jamais par vos serveurs), et les meilleurs tarifs du marché sur les transactions européennes.
+Stripe est recommandé pour un e-commerce en 2026 pour 6 raisons : intégration rapide (quelques heures pour un checkout fonctionnel), support de 25+ moyens de paiement (CB, Apple Pay, Google Pay, SEPA, Klarna, iDEAL), dashboard complet avec suivi des ventes et remboursements en temps réel, API très puissante pour une personnalisation totale, conformité PCI DSS niveau 1 automatique (les données de carte ne transitent jamais par vos serveurs), et les meilleurs tarifs du marché sur les transactions européennes. Pour les petits volumes (moins de 10 000€/mois de CA), la différence de coût entre Stripe et PayPal est négligeable — ce sont les fonctionnalités et l'expérience de paiement qui font la différence sur la conversion.
 
 Comparatif Stripe vs alternatives (tarifs 2026) :
 
