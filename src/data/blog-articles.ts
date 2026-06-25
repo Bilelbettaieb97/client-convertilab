@@ -852,7 +852,7 @@ Ce que l'audit révèle systématiquement sur les PME que j'accompagne chez Conv
 - 40% ont un score PageSpeed mobile inférieur à 50/100
 - 30% ont un fichier robots.txt qui bloque des pages importantes
 
-Ces erreurs semblent techniques mais elles ont un impact business direct. Une page sans meta description attire moins de clics dans Google (le CTR baisse de 20 à 30%). Une image sans alt ne contribue pas aux recherches Google Images. Un robots.txt mal configuré peut bloquer l'indexation de votre meilleure page de service.
+Ces erreurs semblent techniques mais elles ont un impact business direct. Une page sans meta description attire moins de clics dans Google (le CTR baisse de 20 à 30%). Une image sans alt ne contribue pas aux recherches Google Images. Un robots.txt mal configuré peut bloquer l'indexation de votre meilleure page de service. Et un score PageSpeed de 35 sur mobile signifie que la moitié de vos visiteurs partent avant même de voir votre contenu.
 
 ![Rapport audit SEO - erreurs critiques et priorités de correction](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
 
