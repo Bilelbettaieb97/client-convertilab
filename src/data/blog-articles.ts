@@ -1180,6 +1180,10 @@ Priorité pratique : si vous ne pouvez faire qu'une seule chose cette semaine, v
 
 **63% des entreprises** qui investissent en publicité en ligne ne mesurent pas correctement leur retour sur investissement. Elles lancent des campagnes avec un budget défini à l'intuition — et découvrent trop tard que chaque euro dépensé ne rapportait pas assez de clients pour être rentable.
 
+Ce guide vous donne les chiffres de référence par secteur et la méthode pour calculer votre rentabilité en 5 minutes — avant de dépenser le premier euro.
+
+![Simulateur ROI Google Ads Meta Ads - calcul rentabilité campagne](https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=800&q=80)
+
 [Simuler le ROI de vos campagnes gratuitement →](/estimateur-ads)
 
 ## Comment le CPC moyen et le taux de conversion déterminent-ils la rentabilité d'une campagne ?
@@ -1229,6 +1233,24 @@ Pour une PME, Google Ads offre généralement un meilleur ROI sur les services �
 | Délai avant résultats | 2-4 semaines | 4-8 semaines |
 
 L'idéal pour une PME est souvent de combiner les deux : Google Ads pour capter la demande immédiate, Meta Ads pour créer de la notoriété et recibler les visiteurs non convertis.
+
+![Tableau de bord Google Ads - métriques CPC conversions ROAS](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
+
+## Les 4 erreurs qui détruisent le ROI d'une campagne publicitaire
+
+**1. Envoyer les clics vers la page d'accueil**
+La page d'accueil n'est pas une landing page. Elle présente tout et convertit peu. Chaque campagne doit avoir une page dédiée avec une seule offre, un seul CTA, et aucune distraction (menu simplifié, pas de liens sortants).
+
+**2. Ne pas avoir de tracking de conversion**
+Si vous ne savez pas combien d'appels ou de formulaires viennent de vos publicités, vous pilotez à l'aveugle. Configurez Google Ads Conversion Tracking ou installez le Meta Pixel avec l'événement "Contact" avant de dépenser quoi que ce soit.
+
+**3. Lancer avec un budget trop faible**
+Sous 300€/mois sur Google Ads, les algorithmes d'apprentissage automatique n'ont pas assez de données pour optimiser. Résultat : CPC plus élevé, moins de conversions. Mieux vaut 600€/mois pendant 2 mois que 100€/mois pendant un an.
+
+**4. Ciblage trop large**
+"France entière" pour un artisan local. "18-65 ans" sans critères d'intérêt. Ces ciblages diluent le budget sur des audiences non pertinentes. Commencez toujours avec un ciblage géographique resserré (votre ville + 20 km) et des mots-clés exacts.
+
+![Erreurs publicitaires PME - landing page, tracking, ciblage](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
 
 ## FAQ — Questions fréquentes sur le ROI publicitaire
 
