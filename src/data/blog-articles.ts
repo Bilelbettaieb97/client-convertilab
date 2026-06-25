@@ -4789,7 +4789,7 @@ Pour aller plus loin, découvrez nos [services de community management](/service
 
 ### Combien de followers faut-il pour commencer à vendre sur Instagram ?
 
-Vous pouvez vendre dès le premier jour avec 0 abonné via les Instagram Ads. Pour la vente organique, 500 à 1 000 abonnés engagés suffisent si votre contenu est stratégique et si vous utilisez les DMs activement. Un compte de 500 vrais fans engagés vaut mieux que 10 000 abonnés fantômes achetés.
+Vous pouvez vendre dès le premier jour avec 0 abonné via les Instagram Ads. Pour la vente organique, 500 à 1 000 abonnés engagés suffisent si votre contenu est stratégique et si vous utilisez les DMs activement. Un compte de 500 vrais fans engagés vaut mieux que 10 000 abonnés fantômes achetés. Le critère décisif n'est pas le nombre de followers mais le taux d'engagement : un compte avec 5% d'engagement est nettement plus précieux qu'un compte avec 1%, même si ce dernier a 10 fois plus d'abonnés.
 
 ### À quelle fréquence publier sur Instagram pour une entreprise ?
 
