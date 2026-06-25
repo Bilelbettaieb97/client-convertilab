@@ -47,7 +47,6 @@ const Hero = () => {
 
   return (
     <main className="relative bg-gradient-to-br from-purple-50 via-white to-pink-50 flex items-center overflow-hidden min-h-[600px] lg:min-h-[700px]">
-      {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute top-20 right-10 w-32 h-32 bg-purple-200 rounded-full blur-3xl opacity-30 animate-float"></div>
       <div className="absolute bottom-20 left-10 w-40 h-40 bg-pink-200 rounded-full blur-3xl opacity-30 animate-float" style={{ animationDelay: "1s" }}></div>
@@ -55,9 +54,10 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-4 sm:pt-8 pb-4 sm:pb-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left - Information */}
+
           <div className="text-center lg:text-left">
-            {/* Urgency Badge — Places limitées réelles */}
+
+            {/* Badge urgence */}
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-xs sm:text-sm bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 text-red-800 rounded-full animate-fade-in shadow-lg">
               <Flame className="w-4 h-4 text-red-600 animate-pulse" />
               <span className="font-bold">3 places restantes</span>
@@ -66,71 +66,59 @@ const Hero = () => {
               <span className="sm:hidden font-semibold">ce mois</span>
             </div>
 
-            {/* Main Heading */}
-            <h1 className="mb-4 sm:mb-6 animate-slide-up flex flex-col gap-1">
-              {/* Line 1 + 2 — "Votre agence web crée votre" */}
-              <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-tight tracking-tight">
-                Votre agence web crée votre
+            {/* Titre — 2 lignes fixes */}
+            <h1 className="mb-4 sm:mb-6 animate-slide-up font-black text-gray-900 leading-snug tracking-tight">
+
+              {/* Ligne 1 */}
+              <span className="block text-2xl sm:text-3xl lg:text-4xl">
+                Votre agence web crée
               </span>
 
-              {/* Line 3 — mot rotatif MASSIVE avec marker highlight */}
-              <span className="relative inline-block w-fit">
-                {/* Marker highlight derrière */}
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 -bottom-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg -skew-x-2 scale-105"
-                />
-                <span className="relative text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 leading-none tracking-tight will-change-transform">
-                  {displayedText || " "}
-                  <span className="animate-pulse not-italic font-light text-purple-600">|</span>
-                </span>
-              </span>
-
-              {/* Line 4 — "en 7 jours" */}
-              <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-tight tracking-tight mt-1">
-                en{" "}
+              {/* Ligne 2 — "votre [Mot] en 7 jours" */}
+              <span className="block text-2xl sm:text-3xl lg:text-4xl">
+                votre{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10">7 jours</span>
                   <span
                     aria-hidden="true"
-                    className="absolute bottom-0 left-0 w-full h-[10px] sm:h-[12px] bg-gradient-to-r from-purple-400 to-pink-400 opacity-40 rounded-sm -z-0"
+                    className="absolute inset-x-0 bottom-0 h-[35%] bg-gradient-to-r from-purple-400/25 to-pink-400/25 rounded"
                   />
+                  <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                    {displayedText}
+                    <span className="animate-pulse font-thin text-purple-600">|</span>
+                  </span>
                 </span>
-                <span className="ml-2 text-2xl sm:text-3xl">✦</span>
+                {" "}en 7 jours
               </span>
+
             </h1>
 
-            {/* Subheading - Benefit + Pain point */}
+            {/* Subheading */}
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed animate-fade-in">
-              Vous perdez des clients chaque jour sans site web professionnel. Nous créons des <strong className="text-purple-700">sites sur-mesure qui convertissent</strong>, design premium, SEO optimisé, livrés en express.
+              Vous perdez des clients chaque jour sans site web professionnel. Nous créons des{" "}
+              <strong className="text-purple-700">sites sur-mesure qui convertissent</strong>,
+              design premium, SEO optimisé, livrés en express.
             </p>
 
-            {/* Stats - Proof-focused */}
+            {/* Stats */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8 animate-scale-in">
               <div className="group text-center p-3 sm:p-4 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1">
-                  +280%
-                </div>
+                <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1">+280%</div>
                 <div className="text-xs sm:text-sm text-gray-700 font-semibold">CA moyen</div>
                 <div className="text-[11px] sm:text-xs text-gray-500 mt-0.5">Moyenne clients 2025</div>
               </div>
               <div className="group text-center p-3 sm:p-4 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-1">
-                  150+
-                </div>
+                <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-1">150+</div>
                 <div className="text-xs sm:text-sm text-gray-700 font-semibold">Sites Livrés</div>
                 <div className="text-[11px] sm:text-xs text-gray-500 mt-0.5">Depuis 2024</div>
               </div>
               <div className="group text-center p-3 sm:p-4 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent mb-1">
-                  4.9&#9733;
-                </div>
+                <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent mb-1">4.9&#9733;</div>
                 <div className="text-xs sm:text-sm text-gray-700 font-semibold">Avis Clients</div>
                 <div className="text-[11px] sm:text-xs text-gray-500 mt-0.5">15 avis vérifiés</div>
               </div>
             </div>
 
-            {/* CTAs - Action-oriented with value */}
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 sm:gap-4 mb-6 animate-slide-up">
               <Button
                 asChild
@@ -143,7 +131,6 @@ const Hero = () => {
                   <ArrowRight className="ml-2 w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </Link>
               </Button>
-
               <Button
                 onClick={openCalendly}
                 variant="outline"
@@ -155,7 +142,7 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Trust Indicators - Objection killers */}
+            {/* Trust pills */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 text-sm text-gray-600 animate-fade-in">
               <div className="glass px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-green-200 flex items-center gap-2 shadow-lg">
                 <Shield className="w-4 h-4 text-green-600" />
@@ -172,7 +159,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right - Contact Form (lazy loaded) */}
+          {/* Formulaire */}
           <div className="animate-fade-in">
             <Suspense fallback={
               <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-100 p-6 min-h-[440px] sm:min-h-[480px] flex items-center justify-center">
@@ -185,7 +172,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block">
         <ArrowRight className="w-6 h-6 text-purple-400 rotate-90" />
       </div>
