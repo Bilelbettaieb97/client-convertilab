@@ -2283,6 +2283,8 @@ Non — sauf si votre domaine actuel est pénalisé par Google ou associé à un
     tags: ["site web responsive 2026", "mobile first design SEO", "test adaptabilité site mobile", "Google indexation mobile first", "erreurs responsive design PME"],
     content: `En 2026, 65% du trafic web mondial provient des appareils mobiles et Google indexe votre site en version mobile en priorité (mobile first indexing). Un site non responsive perd en moyenne 35% de son trafic potentiel et est pénalisé dans les résultats de recherche. Sur les 150+ sites créés par ConvertiLab, aucun n'a été livré sans être 100% mobile first — c'est la base, pas une option.
 
+![Site web responsive mobile first - design adaptatif smartphones tablettes desktop](https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80)
+
 [Tester l'adaptabilité mobile de mon site →](/design-score)
 
 ## Qu'est-ce que le responsive design et pourquoi est-il indispensable en 2026 ?
@@ -2321,6 +2323,8 @@ Les 5 erreurs de responsive design les plus courantes sur les sites PME sont : t
 
 Testez votre site avec l'[outil Design Score](/design-score) pour détecter ces erreurs automatiquement.
 
+![Erreurs responsive design PME - texte illisible boutons tactiles pop-up intrusif](https://images.unsplash.com/photo-1581472723648-909f4851d4ae?w=800&q=80)
+
 ## Comment tester si son site web est vraiment adapté au mobile ?
 
 Pour tester si son site est vraiment adapté au mobile, utilisez 4 outils complémentaires : Google Search Console (rapport Ergonomie mobile), Chrome DevTools (simulation de 20+ appareils), l'outil Design Score ConvertiLab (score UX/responsive avec recommandations), et le test sur un vrai iPhone ou Android. Ces outils révèlent les erreurs invisibles sur desktop mais bloquantes sur mobile.
@@ -2350,7 +2354,17 @@ La plupart des thèmes WordPress récents sont techniquement responsive, mais "r
 
 ### L'approche mobile first change-t-elle le design desktop ?
 
-Oui, positivement. La contrainte du mobile force à simplifier la navigation, à hiérarchiser le contenu et à éliminer les éléments superflus. Le résultat sur desktop est souvent plus clair et plus efficace qu'un design "desktop first" qui accumule les blocs sans priorité. C'est pour cette raison que les équipes Google, Airbnb et Amazon travaillent en mobile first depuis plus de 10 ans.`,
+Oui, positivement. La contrainte du mobile force à simplifier la navigation, à hiérarchiser le contenu et à éliminer les éléments superflus. Le résultat sur desktop est souvent plus clair et plus efficace qu'un design "desktop first" qui accumule les blocs sans priorité. C'est pour cette raison que les équipes Google, Airbnb et Amazon travaillent en mobile first depuis plus de 10 ans.
+
+### Mon site ne reçoit que 20% de trafic mobile. Est-ce quand même nécessaire d'optimiser pour le mobile ?
+
+Oui, pour deux raisons. D'abord, Google indexe votre site en version mobile pour décider de votre classement — même si vos visiteurs desktop sont majoritaires, ce que Google voit sur mobile détermine où vous apparaissez pour tout le monde. Ensuite, un trafic mobile de 20% est souvent sous-estimé par les analytics : les visiteurs sur mobile rebondissent plus vite sur les sites non optimisés, donc ils n'apparaissent pas dans les données — ils sont perdus avant d'être comptés.
+
+### Faut-il une application mobile native en plus du site responsive ?
+
+Pour 95% des PME et indépendants, non. Une application mobile native (iOS/Android) coûte entre 15 000 et 80 000€ et nécessite une maintenance permanente. Un site web responsive avec Progressive Web App (PWA) offre 90% des fonctionnalités d'une app native pour une fraction du coût. Réservez l'application native aux cas où l'utilisation hors ligne, les notifications push ou l'accès aux capteurs du téléphone sont indispensables à votre service.
+
+![Mobile first indexing Google - comparaison trafic mobile desktop classement SEO](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`,
   },
   {
     slug: "cout-creation-site-internet-2026",
