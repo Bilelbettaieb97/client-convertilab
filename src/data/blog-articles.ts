@@ -4381,7 +4381,7 @@ Taux de conversion de référence par secteur :
 
 ### Qu'est-ce qu'un bon taux de conversion ?
 
-Cela dépend de votre secteur et de votre objectif. En e-commerce, 2 à 3% est la moyenne. Pour une landing page de génération de leads, 10 à 15% est un bon objectif. L'essentiel est de l'améliorer constamment plutôt que de chercher un chiffre absolu. Benchmark de référence : votre propre historique de données sur 3 à 6 mois.
+Cela dépend de votre secteur et de votre objectif. En e-commerce, 2 à 3% est la moyenne. Pour une landing page de génération de leads, 10 à 15% est un bon objectif. L'essentiel est de l'améliorer constamment plutôt que de chercher un chiffre absolu. Benchmark de référence : votre propre historique de données sur 3 à 6 mois. Un bon indicateur de progression : si votre taux de conversion augmente de 10 à 20% d'un trimestre à l'autre, votre stratégie CRO est sur la bonne voie.
 
 ### Combien de temps faut-il pour optimiser un tunnel de conversion ?
 
