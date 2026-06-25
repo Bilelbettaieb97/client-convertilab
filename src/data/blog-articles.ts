@@ -4305,6 +4305,8 @@ Pour les débutants avec une liste < 1 000 contacts, Brevo (ex-Sendinblue) et Ma
 
 Chez ConvertiLab, nous optimisons les tunnels de conversion de nos 150+ clients. Les meilleurs résultats ont été obtenus en travaillant la landing page, l'A/B testing des CTA, et en éliminant les frictions dans le parcours d'achat.
 
+![Tunnel de conversion optimisation CRO - funnel TOFU MOFU BOFU taux conversion 2026](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
+
 [Analyser le taux de conversion de mon site →](/seo-check)
 
 ## Qu'est-ce qu'un tunnel de conversion et quelles sont ses étapes clés ?
@@ -4348,6 +4350,10 @@ Techniques de conversion au bas du tunnel (BOFU) :
 - Frais cachés → affichez tout dès le départ
 - Page lente → optimisez la performance (Core Web Vitals)
 
+![Landing page CRO - A/B testing CTA formulaire preuve sociale taux de conversion](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
+**Cas concret ConvertiLab :** un électricien en région Île-de-France recevait 1 200 visiteurs/mois sur son site avec seulement 4 demandes de devis. Après analyse Hotjar, nous avons identifié que 78% des visiteurs mobile quittaient la page avant d'atteindre le formulaire — celui-ci était placé tout en bas. Après repositionnement du formulaire en haut de page, réduction à 3 champs (nom, téléphone, code postal) et ajout d'un badge "Réponse en 2h", les demandes sont passées de 4 à 19/mois — sans augmenter le budget publicitaire.
+
 Découvrez nos [services de création de landing pages](/services/sites-web/landing-page) optimisées pour la conversion.
 
 ## Comment mettre en place l'A/B testing pour améliorer son taux de conversion ?
@@ -4376,7 +4382,13 @@ L'optimisation est un processus continu. Vous pouvez voir des résultats signifi
 
 ### Le CRO est-il utile avec peu de trafic ?
 
-Oui, car doubler votre taux de conversion équivaut à doubler votre trafic sans coût supplémentaire. Avec 500 visiteurs/mois à 2% de conversion = 10 clients. À 4% = 20 clients. Même impact qu'obtenir 500 visiteurs supplémentaires en publicité. Avec peu de trafic, concentrez-vous sur les optimisations les plus impactantes : formulaire simplifié, CTA clair, preuve sociale visible.`
+Oui, car doubler votre taux de conversion équivaut à doubler votre trafic sans coût supplémentaire. Avec 500 visiteurs/mois à 2% de conversion = 10 clients. À 4% = 20 clients. Même impact qu'obtenir 500 visiteurs supplémentaires en publicité. Avec peu de trafic, concentrez-vous sur les optimisations les plus impactantes : formulaire simplifié, CTA clair, preuve sociale visible.
+
+### Comment mesurer si une optimisation a vraiment fonctionné ?
+
+Mesurez toujours en comparant la même période : la semaine avant vs la semaine après. Pour que les résultats soient fiables, attendez d'avoir au moins 100 conversions sur chaque variante, seuil en dessous duquel les variations statistiques peuvent masquer le vrai impact. Utilisez Google Optimize (gratuit) ou VWO pour vos tests A/B — ces outils gèrent la signification statistique automatiquement et vous alertent quand les résultats sont fiables.
+
+![CRO A/B testing statistiques signification significance test résultats fiables](https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&q=80)`
   },
   {
     slug: "strategie-marketing-digital-pme",
