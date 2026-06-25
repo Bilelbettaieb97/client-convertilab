@@ -4429,7 +4429,7 @@ Les 5 erreurs stratégiques les plus coûteuses pour une PME :
 
 ## Comment définir ses objectifs et choisir les bons canaux d'acquisition pour sa PME ?
 
-Pour définir ses objectifs marketing, utilisez la méthode SMART : Spécifiques (50 leads qualifiés/mois), Mesurables (suivi dans Google Analytics), Atteignables (réaliste pour votre budget), Réalistes (compte tenu de la concurrence), et Temporels (d'ici 6 mois). Pour les canaux, la règle des 80/20 s'applique : concentrez 80% de votre budget sur les 2 à 3 canaux les plus performants pour votre secteur.
+Pour définir ses objectifs marketing, utilisez la méthode SMART : Spécifiques (50 leads qualifiés/mois), Mesurables (suivi dans Google Analytics), Atteignables (réaliste pour votre budget), Réalistes (compte tenu de la concurrence), et Temporels (d'ici 6 mois). Pour les canaux, la règle des 80/20 s'applique : concentrez 80% de votre budget sur les 2 à 3 canaux les plus performants pour votre secteur. Un bon exercice de validation : demandez à vos 5 derniers clients "comment vous avez trouvé" — souvent la réponse révèle que 80% de vos clients viennent d'un seul canal que vous sous-investissez.
 
 Les 5 canaux principaux avec leur ROI pour une PME :
 
