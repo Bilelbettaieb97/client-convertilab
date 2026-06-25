@@ -3493,7 +3493,7 @@ Structure de base d'un robots.txt correct :
 - "Sitemap: https://votresite.com/sitemap.xml" indique l'emplacement du sitemap
 
 Erreurs courantes à éviter dans robots.txt :
-- Bloquer accidentellement des pages importantes (Disallow: / sur tout le site)
+- Bloquer accidentellement des pages importantes (avec "Disallow: /" sur tout le site)
 - Bloquer les fichiers CSS/JS dont Google a besoin pour rendre les pages
 - Oublier la ligne Sitemap
 - Laisser un robots.txt de staging bloquant en production
@@ -3515,6 +3515,8 @@ Checklist pour chaque nouveau contenu publié :
 4. Vérifiez que la page est dans votre sitemap XML
 5. Partagez sur vos réseaux sociaux (les liens sociaux accélèrent la découverte)
 6. Vérifiez l'indexation dans Search Console après 48 à 72 heures
+
+Un point souvent oublié à l'étape 2 : les liens doivent être suivis (dofollow) et le texte d'ancre doit être descriptif — "en savoir plus sur notre service de plomberie à Lyon" plutôt que "cliquez ici". Google utilise le texte d'ancre interne pour comprendre le sujet de la page cible, ce qui accélère non seulement l'indexation mais aussi le positionnement sur le bon mot-clé.
 
 ## FAQ — Questions sur l'indexation Google
 
