@@ -5734,6 +5734,8 @@ Votre catalogue doit être irréprochable pour être approuvé :
 - **Liens** vers les fiches produits de votre site e-commerce
 - **Mise à jour automatique** possible via Shopify ou WooCommerce
 
+**Les erreurs qui font refuser votre compte Instagram Shopping :** images avec texte superposé (bannies par Meta), prix non cohérents entre le catalogue et le site, domaine de site web non vérifié dans Facebook Business Manager, produits dans des catégories interdites (alcool, médicaments, armes). Vérifiez chacun de ces points avant de soumettre pour éviter un délai de validation supplémentaire de 2 à 4 semaines.
+
 Assurez-vous que votre [site e-commerce](/services/sites-web/site-ecommerce) est prêt à recevoir le trafic Instagram avec des pages produits optimisées.
 
 ## Quels formats de contenu Instagram convertissent le mieux en ventes en 2026 ?
