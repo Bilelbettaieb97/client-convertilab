@@ -861,7 +861,7 @@ Ces erreurs semblent techniques mais elles ont un impact business direct. Une pa
 Un outil d'audit SEO gratuit fonctionne en 3 étapes : vous saisissez votre URL, l'outil crawle votre page en analysant ses ressources et son code source, puis il génère un rapport classant les problèmes par niveau de priorité. L'ensemble prend moins de 60 secondes pour un audit de premier niveau fiable et actionnable.
 
 **Étape 1 : Saisissez votre URL**
-Rendez-vous sur [l'outil d'audit SEO gratuit](/seo-check), collez l'adresse de votre site et lancez l'analyse. Aucune inscription, aucune carte bancaire.
+Rendez-vous sur [l'outil d'audit SEO gratuit](/seo-check), collez l'adresse complète de votre site (avec https://) et lancez l'analyse. Aucune inscription, aucune carte bancaire requise.
 
 **Étape 2 : L'analyse en temps réel**
 En moins de 60 secondes, l'outil examine : balises title et meta descriptions, structure H1/H2/H3, attributs alt des images, robots.txt et sitemap XML, vitesse de chargement, responsive design, HTTPS, et une vingtaine d'autres critères.
