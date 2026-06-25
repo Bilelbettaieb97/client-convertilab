@@ -1080,7 +1080,7 @@ Ce que l'ergonomie impacte directement :
 - Des boutons de CTA invisibles sur mobile → conversions perdues
 - Un contraste insuffisant → visiteurs qui ne lisent pas le texte
 
-Sur les 150+ sites que j'ai créés chez ConvertiLab, les sites avec un score design supérieur à 75/100 convertissent en moyenne 2,3 fois mieux que ceux sous 50/100 — à trafic identique.
+Sur les 150+ sites que j'ai créés chez ConvertiLab, les sites avec un score design supérieur à 75/100 convertissent en moyenne 2,3 fois mieux que ceux sous 50/100 — à trafic identique. Autrement dit : doubler son trafic ou doubler son taux de conversion donne le même résultat en leads — mais l'un coûte souvent zéro euro.
 
 ## Comment fonctionne un audit design UX gratuit en 3 étapes ?
 
