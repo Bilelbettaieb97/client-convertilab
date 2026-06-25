@@ -5530,7 +5530,7 @@ Minimum 4 photos par produit : un packshot sur fond blanc, deux vues d'angles di
 
 ### Faut-il un photographe professionnel pour son e-commerce ?
 
-Pour un catalogue de moins de 50 produits et un positionnement entrée/milieu de gamme, un smartphone récent + lightbox donne d'excellents résultats. Au-delà, ou pour un positionnement premium, un photographe professionnel est rentable : comptez 10 à 30€ par photo packshot. L'investissement se récupère rapidement grâce à l'augmentation du taux de conversion et à la réduction des retours.
+Pour un catalogue de moins de 50 produits et un positionnement entrée/milieu de gamme, un smartphone récent + lightbox donne d'excellents résultats. Au-delà, ou pour un positionnement premium, un photographe professionnel est rentable : comptez 10 à 30€ par photo packshot. L'investissement se récupère rapidement grâce à l'augmentation du taux de conversion et à la réduction des retours. Un calcul rapide : si votre panier moyen est de 80€ et que votre taux de conversion passe de 2% à 3,5% grâce aux photos professionnelles, l'investissement en photographie est amorti en moins d'un mois sur 1 000 visiteurs/mois.
 
 ### Comment éviter les retours dus à des couleurs inexactes sur les photos ?
 
