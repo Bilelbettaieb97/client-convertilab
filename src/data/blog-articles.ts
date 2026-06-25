@@ -2038,6 +2038,12 @@ Oui, la migration est tout à fait possible. On peut même utiliser WordPress co
 **Next.js est-il adapté aux sites de petites entreprises ?**
 Absolument. Next.js s'adapte à tous les projets, du site vitrine simple à la plateforme e-commerce complexe. Pour une petite entreprise, un site React bien conçu offre un avantage concurrentiel significatif en termes de vitesse et de référencement.
 
+**Un non-développeur peut-il modifier un site Next.js ?**
+C'est la vraie limite de Next.js par rapport à WordPress : vous ne pouvez pas modifier le contenu via une interface d'administration graphique sans configuration préalable. Deux solutions existent : soit un CMS headless (Sanity, Contentful) connecté à Next.js pour une gestion de contenu visuelle, soit la mise en place d'un espace admin personnalisé. Chez ConvertiLab, nous proposons les deux selon le niveau d'autonomie souhaité par le client. Pour les petits entrepreneurs qui ne veulent pas gérer de CMS, nous mettons à jour le site pour eux sur simple demande — inclus dans la maintenance mensuelle.
+
+**L'hébergement Next.js est-il plus complexe que WordPress ?**
+Non — c'est même l'inverse. Vercel (la plateforme créée par les inventeurs de Next.js) déploie automatiquement le site à chaque mise à jour du code en quelques secondes. Pas de configuration serveur, pas de PHP, pas de mise à jour de base de données. L'hébergement d'un site Next.js sur Vercel coûte 0€ pour la majorité des sites PME (plan gratuit généreux) et monte à 20-40€/mois pour les sites à fort trafic.
+
 ## Conclusion
 
 En 2026, **Next.js** s'impose comme la solution technique supérieure à WordPress pour la majorité des projets web professionnels. Performance native, SEO technique optimisé, sécurité renforcée et expérience développeur moderne : les avantages sont indéniables.
