@@ -3703,6 +3703,22 @@ Ce trimestre :
 - Auditez et nettoyez le profil de backlinks
 - Mettez à jour les contenus obsolètes
 
+## Les erreurs de migration qui détruisent le référencement
+
+Une refonte ou migration de site est l'une des situations les plus risquées pour le SEO. Des décisions apparemment anodines peuvent effacer des années de positionnement en quelques jours. Les erreurs de migration représentent 30% des cas d'urgence que nous traitons chez ConvertiLab.
+
+**11. Changement d'URLs sans redirections 301.** Passer de /services-plomberie à /plomberie sans redirection fait disparaître toute l'autorité accumulée. Chaque ancienne URL doit pointer en 301 vers la nouvelle.
+
+**12. Migration HTTP vers HTTPS sans mise à jour des liens internes.** Les liens internes en HTTP après passage en HTTPS créent des mixed content warnings et des redirections en chaîne qui ralentissent le site.
+
+**13. Passer d'un sous-domaine (blog.site.com) au domaine principal (/blog) sans rediriger.** Toute l'autorité SEO du sous-domaine disparaît si les redirections ne sont pas en place.
+
+**14. Suppression des pages de catégorie ou de service sans contenu de remplacement.** Si une page en position 3 sur un mot-clé important est supprimée sans redirection, cette position disparaît définitivement (jusqu'à plusieurs mois pour la récupérer).
+
+**15. Changer de CMS sans conserver la structure des URLs.** WordPress vers Next.js, par exemple : si les URLs changent, chaque page perd son positionnement. Planifiez la migration avec un fichier de mapping URL-par-URL.
+
+**Cas ConvertiLab :** une coach d'entreprise a refait son site en juin 2025 avec une nouvelle agence. Sans plan de migration SEO, toutes les URLs ont changé, sans redirections. En 3 semaines, 100% du trafic organique a disparu (80 visites/jour → 0). Nous avons reconstitué les redirections et soumis le sitemap en urgence : retour à 60 visites/jour en 7 semaines — mais 30% du trafic perdu définitivement sur certains mots-clés moins prioritaires.
+
 ![Plan d'action correctif SEO - quick wins contenu dupliqué canonicals netlinking](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
 
 ## FAQ — Questions sur les erreurs SEO et les pénalités Google
