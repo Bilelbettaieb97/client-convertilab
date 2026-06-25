@@ -4101,6 +4101,28 @@ Le community management englobe 5 activités clés :
 - **Analyser** les performances mensuellement et ajuster la stratégie
 - **Gérer** la réputation en ligne (avis négatifs, bad buzz)
 
+## Comment créer du contenu régulier sans s'épuiser ?
+
+La problématique numéro 1 des entrepreneurs sur les réseaux sociaux n'est pas le manque d'idées, mais le manque de temps et d'organisation. Voici un système de batch content qui permet de produire 2 semaines de contenu en 3 heures.
+
+**La méthode du batch content en 4 étapes :**
+
+**Étape 1 — Brainstorming (30 min) :** listez 20 sujets autour de vos piliers de contenu. Sources d'inspiration : questions fréquentes de vos clients, commentaires positifs sur vos publications, tendances dans votre secteur, coulisses de votre travail, avant/après.
+
+**Étape 2 — Création en bloc (2h) :** créez tout le contenu en une session. Tournez 5-6 Reels le même jour (même tenue, même fond si possible), rédigez 7 posts texte d'affilée, préparez 3-4 carrousels. La productivité est 3x supérieure quand on crée le même type de contenu en série.
+
+**Étape 3 — Programmation (30 min) :** utilisez Buffer, Later ou Meta Business Suite pour programmer toutes vos publications. Vous avez 2 semaines de contenu prêt — libérez votre semaine pour votre coeur de métier.
+
+**Étape 4 — Interaction quotidienne (15 min) :** les publications sont automatiques, mais l'interaction doit rester humaine. Réservez 15 min/jour pour répondre aux commentaires et messages. Cet engagement quotidien minimal vaut 10x plus qu'une présence sporadique intensive.
+
+**Outils indispensables pour un community manager solo :**
+- **Buffer ou Later** : programmation multi-plateformes (15-20€/mois)
+- **Canva Pro** : création de visuels professionnels (13€/mois)
+- **CapCut** : montage vidéo Reels/TikTok rapide (gratuit)
+- **Notion** : calendrier éditorial et banque d'idées (gratuit)
+
+**Cas concret ConvertiLab :** une naturopathe à Paris consacrait 15h/semaine à ses réseaux sans résultats. Après adoption de la méthode batch (3h tous les 15 jours + 15 min/jour d'interaction), elle a réduit son temps à 4h/semaine tout en augmentant son taux d'engagement de 280% et générant ses 2 premiers clients Instagram en 6 semaines.
+
 ## Quelles plateformes de réseaux sociaux choisir pour son entreprise en 2026 ?
 
 Le choix des plateformes dépend de votre secteur et de votre cible. La règle d'or : mieux vaut exceller sur 2 plateformes que d'être médiocre sur 5. Instagram performe pour les produits visuels (mode, food, décoration, artisanat). LinkedIn est indispensable pour le B2B et les services professionnels. TikTok domine pour l'audience 18-35 ans et les produits tendance. Facebook reste fort pour les communautés locales, les groupes et les audiences 35+.
