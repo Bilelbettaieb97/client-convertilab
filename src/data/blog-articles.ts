@@ -5282,6 +5282,8 @@ Stripe Billing est le module dédié à la gestion des abonnements et paiements 
     tags: ["SEO e-commerce référencer produits Google 2026", "fiche produit SEO mots-clés transactionnels", "catégorie site e-commerce optimiser", "contenu dupliqué boutique en ligne", "Core Web Vitals e-commerce performance"],
     content: `Avoir une boutique en ligne sans référencement SEO, c'est ouvrir un magasin dans une rue sans passants. 93% des expériences d'achat en ligne commencent par une recherche Google, et si vos produits n'apparaissent pas dans les premiers résultats, vous perdez des ventes chaque jour. Le SEO e-commerce est une discipline à part entière, différente du SEO classique, qui demande de comprendre l'intention d'achat des utilisateurs et de structurer son site pour que Google puisse tout explorer efficacement.
 
+![SEO e-commerce 2026 - référencer produits Google catégories fiches mots-clés transactionnels](https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80)
+
 [Auditer gratuitement mon site e-commerce →](/seo-check)
 
 ## Comment trouver les mots-clés transactionnels qui font vendre pour son e-commerce ?
@@ -5318,6 +5320,8 @@ Actions prioritaires pour référencer ses produits sur Google :
 4. Implémenter les données structurées Product et breadcrumbs
 5. Surveiller dans Google Search Console le trafic organique 4 semaines plus tard
 
+![SEO catégories e-commerce - données structurées breadcrumbs canonical contenu unique Google](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
 ## Quels Core Web Vitals améliorer en priorité pour un site e-commerce ?
 
 Google mesure les Core Web Vitals avec une attention particulière pour l'e-commerce car la performance impacte directement le taux de conversion (chaque seconde de délai réduit les conversions de 7%). Les 3 métriques clés : LCP (Largest Contentful Paint) — chargez l'image principale du produit en priorité, objectif sous 2,5 secondes ; CLS (Cumulative Layout Shift) — réservez l'espace pour les images avant leur chargement, objectif sous 0,1 ; INP — optimisez les scripts tiers (analytics, chat, publicité), objectif sous 200ms. Le SEO e-commerce prend 3 à 6 mois pour porter ses fruits, mais contrairement à la publicité payante, le trafic organique ne s'arrête pas quand vous coupez le budget.
@@ -5334,7 +5338,15 @@ Un blog augmente considérablement le trafic organique car il cible les requête
 
 ### Comment éviter que Google indexe les pages filtrées de ma boutique ?
 
-Ajoutez une balise "robots: noindex" sur les URLs générées par les filtres (couleur, taille, prix), utilisez des canonical tags qui pointent vers la catégorie principale, et bloquez l'exploration de ces URLs dans le fichier robots.txt. Ces pages filtrées créent du contenu quasi-dupliqué qui dilue votre autorité SEO.`
+Ajoutez une balise "robots: noindex" sur les URLs générées par les filtres (couleur, taille, prix), utilisez des canonical tags qui pointent vers la catégorie principale, et bloquez l'exploration de ces URLs dans le fichier robots.txt. Ces pages filtrées créent du contenu quasi-dupliqué qui dilue votre autorité SEO.
+
+### Peut-on faire du SEO e-commerce soi-même ou faut-il une agence ?
+
+Pour les fondamentaux (titres uniques, descriptions de 300 mots, données structurées), vous pouvez progresser seul avec des outils gratuits (Google Search Console, Screaming Frog version limitée). Pour des améliorations techniques (Core Web Vitals, crawl budget, architecture de site), une intervention d'expert permet d'aller beaucoup plus vite. La règle pratique : gérez le contenu en interne (personne ne connaît vos produits mieux que vous), confiez le technique à un expert.
+
+**Cas concret ConvertiLab :** une boutique de literie artisanale avait 1 400 visiteurs organiques/mois avec 0 contenu de catégorie et descriptions copiées du fournisseur. Après 3 mois d'optimisation (descriptions 400 mots, textes de catégorie, données structurées, correction erreurs d'indexation), le trafic organique est passé à 4 200 visiteurs/mois — multiplié par 3 — et le chiffre d'affaires SEO représente maintenant 42% du CA total vs 8% initialement.
+
+![SEO e-commerce résultats - trafic organique x3 literie 1400 à 4200 visiteurs 42% CA](https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80)`
   },
   {
     slug: "taux-conversion-ameliorer-site",
