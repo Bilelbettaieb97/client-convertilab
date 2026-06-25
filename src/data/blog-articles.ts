@@ -3405,6 +3405,18 @@ Plan d'action après audit — 3 priorités :
 - Développer la stratégie de netlinking
 - Optimiser continuellement selon les résultats Google Search Console
 
+**Cas concret ConvertiLab :** une agence immobilière de Montpellier avait vu son trafic organique chuter de 40% en 3 mois sans comprendre pourquoi. L'audit a révélé deux causes : un robots.txt généré lors d'une refonte qui bloquait 60% des pages, et une redirection en boucle sur les pages de ville. Correction en 2 jours. Résultat : le trafic a retrouvé son niveau initial en 5 semaines — sans créer une seule ligne de contenu. C'est la puissance d'un audit technique : identifier les problèmes invisibles qui coûtent des milliers de visites par mois.
+
+## Les 5 erreurs de maillage interne qui sabotent votre SEO
+
+Le maillage interne (liens entre vos propres pages) est souvent ignoré dans les audits, alors qu'il influence directement l'autorité des pages et la profondeur d'exploration par Google. Voici les 5 erreurs les plus fréquentes :
+
+1. Pages profondes sans liens vers elles depuis les pages populaires — Google les explore peu et les positionne mal
+2. Liens internes avec des textes d'ancre génériques ("cliquer ici", "en savoir plus") — perdez l'opportunité de renforcer vos mots-clés
+3. Navigation principale qui ne contient pas les pages de services importantes — Google y attribue moins de poids
+4. Articles de blog non reliés aux pages de services correspondantes — trafic informatif qui ne convertit pas
+5. Pages orphelines indexées sans aucun lien interne — Google peut les désindexer faute d'importance perçue
+
 ![Plan d'action audit SEO - quick wins Core Web Vitals cluster contenu netlinking](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
 
 ## FAQ — Questions sur l'audit SEO
