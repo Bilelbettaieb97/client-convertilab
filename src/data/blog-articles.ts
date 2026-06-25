@@ -5422,6 +5422,14 @@ Cycle d'amélioration continue pour le CRO :
 
 La psychologie de la conversion repose sur 4 leviers : la preuve sociale (témoignages clients avec photo et nom réel, nombre de clients "Rejoint par 15 000+ entrepreneurs", logos clients reconnaissables, études de cas chiffrées), l'urgence éthique (stock limité si c'est vrai, offre temporaire avec deadline réelle — jamais de fausses urgences qui détruisent la confiance), la levée des objections (répondre aux freins classiques : "C'est trop cher → montrez la valeur", "Je ne suis pas sûr → garantie satisfait ou remboursé"), et la personnalisation (les expériences personnalisées convertissent 80% mieux).
 
+**Le principe AIDA appliqué à vos pages de service :**
+- **Attention** : titre accrocheur qui mentionne le problème ou le résultat désiré
+- **Intérêt** : sous-titre qui développe comment vous résolvez le problème
+- **Désir** : témoignages et résultats concrets qui font rêver et rassure
+- **Action** : CTA unique, clair, sans friction, au-dessus du pli
+
+Structurez chaque page de service ou de vente selon ce modèle — la majorité des PME françaises font l'erreur inverse : elles commencent par parler d'elles (l'entreprise, l'histoire, les valeurs) au lieu de parler du problème du visiteur. Les 5 premières secondes sont décisives.
+
 Le trio des quick wins de conversion :
 - **Vitesse mobile** : 67% du trafic vient du mobile, les taux de conversion mobile sont 2× plus bas que sur desktop
 - **CTA visible** : un seul CTA principal par page, couleur contrastée, texte bénéfice
