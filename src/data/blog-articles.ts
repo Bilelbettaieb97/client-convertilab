@@ -7048,6 +7048,10 @@ Avec ce rythme, vous atteindrez les 30 avis à 4.5+ en moins de 6 mois — seuil
     ],
     content: `Un site vitrine est un site web qui présente une entreprise, ses services et ses coordonnées, sans fonctionnalité de vente en ligne. Son rôle est de convaincre le visiteur de contacter l'entreprise — par téléphone, email ou formulaire. C'est la solution la plus utilisée par les artisans, professionnels libéraux, commerces de proximité et petites entreprises de services, et elle suffit dans 80% des cas.
 
+Si vous n'êtes pas e-commerçant, vous n'avez probablement pas besoin de plus qu'un site vitrine. Un artisan, un coach, un restaurateur, un consultant — tous génèrent leurs clients via un contact direct, jamais via un panier en ligne. Ce guide vous explique exactement ce qu'est un site vitrine, ce qu'il doit contenir, et pourquoi c'est souvent la meilleure décision.
+
+![Site vitrine professionnel - présentation entreprise et services](https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80)
+
 ## Pourquoi appelle-t-on ça un site "vitrine" ?
 
 L'analogie est simple : une vitrine de boutique permet aux passants de voir ce que vous proposez, d'apprécier votre style et de décider d'entrer. Un site vitrine fait la même chose sur internet : il présente votre activité, montre vos réalisations et incite à vous contacter.
@@ -7102,6 +7106,8 @@ Numéro de téléphone cliquable (crucial sur mobile), email, adresse si vous ac
 **5. Les informations légales**
 Mentions légales (obligatoires), politique de confidentialité (RGPD), conditions générales si vous faites signer des devis. Ces pages rassurent les visiteurs sur votre sérieux et sont exigées par la loi.
 
+![Éléments d'un site vitrine - page d'accueil, services, témoignages](https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80)
+
 ## Combien de pages doit avoir un site vitrine ?
 
 Un site vitrine efficace comprend en général **5 à 10 pages** :
@@ -7148,6 +7154,25 @@ Oui, un site vitrine suffit pour trouver des clients sur Google — à condition
 - Le site contient du contenu original (pas de copier-coller des concurrents)
 
 Ce que ne fera pas un site vitrine : du e-commerce, de la vente de produits, de la gestion de stocks, des abonnements en ligne. Pour tout cela, il faut un site e-commerce.
+
+Exemple concret : Thomas, menuisier à Bordeaux, avait uniquement un profil Facebook et du bouche-à-oreille. Après création d'un site vitrine 5 pages chez ConvertiLab, optimisé sur "menuisier Bordeaux" et "fabrication meuble sur-mesure Bordeaux", il a reçu 3 à 5 demandes de devis supplémentaires par mois dès le 3ème mois, sans aucune publicité payante.
+
+![Performance SEO site vitrine artisan - résultats Google Search Console](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
+
+## En résumé : le site vitrine est-il fait pour vous ?
+
+Oui si :
+- Vous travaillez sur devis, rendez-vous ou contact direct
+- Votre activité est locale ou régionale
+- Vous avez besoin d'être visible sur Google Maps et dans les résultats locaux
+- Votre budget est de 500€ à 2 000€ (pas de fonctionnalités e-commerce complexes)
+
+Non si :
+- Vous vendez des produits en ligne à la commande
+- Vous gérez des abonnements, des livraisons ou des stocks
+- Vous avez besoin d'un espace client ou d'un back-office de gestion
+
+Dans le doute, commencez par un site vitrine. Il est possible de l'enrichir en e-commerce ensuite si le besoin se confirme — l'inverse (simplifier un site e-commerce en vitrine) est beaucoup plus compliqué.
 
 [Voir nos offres de création de site vitrine](/services/sites-web)
 
