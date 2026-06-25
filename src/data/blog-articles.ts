@@ -4996,6 +4996,8 @@ Les principes fondamentaux sont universels, mais leur application varie. Un rest
     tags: ["accessibilité web WCAG 2.2 site internet France 2026", "conformité RGAA obligation légale site PME", "site accessible handicap inclusion numérique", "contraste couleur ratio accessibilité WCAG", "tester accessibilité site web audit outils"],
     content: `L'accessibilité web est la pratique qui consiste à rendre les sites internet utilisables par toutes les personnes, y compris celles en situation de handicap. En 2026, avec plus de **1,3 milliard de personnes** vivant avec un handicap dans le monde (16% de la population mondiale), ignorer l'accessibilité revient à exclure une personne sur six de votre clientèle potentielle. En Europe, l'European Accessibility Act entré en vigueur en juin 2025 étend désormais les obligations légales aux sites privés.
 
+Ce chiffre cache une réalité encore plus large : au-delà du handicap permanent (cécité, surdité, mobilité réduite), **1 personne sur 3** est à un moment donné dans une situation de handicap temporaire ou situationnel — bras cassé, éblouissement par le soleil, volume coupé dans les transports. Un site accessible ne répond pas seulement aux besoins d'une minorité : il améliore l'expérience de la majorité de vos visiteurs.
+
 ![Personne en situation de handicap utilisant un ordinateur avec des technologies d'assistance](https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80)
 
 ## Qu'est-ce que le WCAG 2.2 et quelles sont les obligations légales en France et en Europe ?
@@ -5079,7 +5081,24 @@ Plan d'action pour rendre son site accessible en 4 phases :
 3. **Améliorations avancées** (4 à 8 semaines) : sous-titres vidéos, attributs ARIA, test avec lecteurs d'écran réels
 4. **Maintenance continue** : intégrer les tests d'accessibilité dans le processus de développement à chaque nouvelle page
 
+![Audit accessibilité web avec les outils axe DevTools et Lighthouse](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80)
+
 [Évaluez l'accessibilité et le design de votre site gratuitement →](/design-score)
+
+## 3 actions immédiates pour améliorer l'accessibilité de votre site dès aujourd'hui
+
+Pas besoin d'un audit complet pour commencer. Ces 3 actions prennent moins d'une heure et couvrent les erreurs les plus fréquentes :
+
+**Action 1 — Vérifier les contrastes (15 minutes)**
+Installez l'extension Colour Contrast Analyser (gratuit). Vérifiez votre couleur de texte principal sur fond blanc : le ratio doit être ≥ 4,5:1. Si votre site utilise du texte gris clair (#999 sur blanc = ratio 2,85:1, non conforme), remontez-le vers un gris plus sombre (#767676 = ratio 4,48:1, limite acceptable).
+
+**Action 2 — Ajouter les textes alternatifs manquants (20 minutes)**
+Dans votre CMS, parcourez les 10 images les plus importantes de votre site. Chaque image porteuse d'information doit avoir un attribut alt descriptif. Exemple : alt="Chantier de rénovation salle de bain avant/après — client à Rueil-Malmaison" plutôt que alt="photo1" ou alt="" pour une image informative.
+
+**Action 3 — Tester la navigation clavier (10 minutes)**
+Ouvrez votre site, débranchez la souris et naviguez uniquement avec la touche Tab. Pouvez-vous atteindre tous les liens, boutons et champs de formulaire ? L'indicateur de focus (le contour bleu ou coloré qui indique l'élément actif) est-il toujours visible ? Si vous perdez le fil à un moment, vous avez identifié un problème bloquant.
+
+Ces 3 vérifications ne rendent pas votre site pleinement conforme WCAG 2.2, mais elles éliminent les erreurs les plus pénalisantes — celles qui empêchent des utilisateurs d'accéder à votre contenu.
 
 ## FAQ — Questions sur l'accessibilité web WCAG
 
