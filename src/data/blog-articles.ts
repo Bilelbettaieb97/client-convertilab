@@ -1033,6 +1033,8 @@ Le réflexe à adopter : après chaque mise à jour WordPress ou installation de
 
 Un bon score PageSpeed améliore le référencement mais ne le garantit pas seul. La vitesse de chargement est un facteur parmi les 200+ que Google utilise pour le classement. Un site rapide avec un contenu pauvre ne se positionnera pas face à un concurrent au contenu excellent. La performance est un prérequis, pas une solution complète au référencement naturel.
 
+Analogie utile : un bon score PageSpeed, c'est comme avoir une bonne condition physique. C'est nécessaire pour participer à la course, mais ça ne garantit pas la victoire. Le contenu et les backlinks sont le moteur ; la vitesse est le carburant qui permet au moteur de tourner correctement.
+
 ### Mon score PageSpeed mobile est différent du desktop, lequel compte le plus ?
 
 Le score mobile est celui qui compte le plus pour Google, car l'indexation Google est mobile-first depuis 2019. Concentrez vos efforts d'optimisation sur le score mobile en priorité. Un écart important (90 desktop / 35 mobile) indique souvent des images non adaptées aux petits écrans ou du JavaScript qui bloque le rendu.
