@@ -3553,6 +3553,8 @@ Le budget de crawl est le nombre de pages que Googlebot explore sur votre site d
 
 Chez ConvertiLab, nous créons des stratégies de contenu pour 150+ clients. Les articles qui performent le mieux ont tous un point commun : ils répondent mieux à l'intention de recherche que les pages actuellement en position 1.
 
+![Rédaction SEO 2026 - EEAT qualité contenu mots-clés structure article blog Google](https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80)
+
 [Analyser le SEO de mon site →](/seo-check)
 
 ## Quels sont les critères EEAT de Google et comment les satisfaire dans son contenu ?
@@ -3605,6 +3607,8 @@ Optimisation des images pour le SEO :
 
 Pour mesurer la performance du contenu SEO, les 6 KPIs à suivre dans Google Search Console sont : position moyenne sur le mot-clé cible, trafic organique (nombre de visiteurs depuis Google), CTR (taux de clic dans les résultats), impressions (nombre de fois que la page apparaît dans Google), et temps moyen sur la page (engagement). Le cycle optimal est de publier, attendre 30 jours, analyser les mots-clés pour lesquels vous apparaissez sans les cibler, puis enrichir le contenu.
 
+![Performance contenu SEO - KPIs Search Console position CTR trafic organique](https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80)
+
 ## FAQ — Questions sur la rédaction de contenu SEO
 
 ### Quelle est la longueur idéale d'un article SEO ?
@@ -3617,7 +3621,13 @@ La régularité est plus importante que la fréquence. Publier 1 article de qual
 
 ### Le contenu généré par IA est-il pénalisé par Google ?
 
-Google ne pénalise pas le contenu généré par IA en tant que tel, mais il pénalise le contenu de faible qualité, qu'il soit écrit par un humain ou une IA. Si vous utilisez l'IA comme assistant de rédaction, assurez-vous d'ajouter votre expertise, vos exemples personnels et une relecture approfondie. Le contenu doit apporter une réelle valeur ajoutée au lecteur — c'est le seul critère qui compte vraiment.`
+Google ne pénalise pas le contenu généré par IA en tant que tel, mais il pénalise le contenu de faible qualité, qu'il soit écrit par un humain ou une IA. Si vous utilisez l'IA comme assistant de rédaction, assurez-vous d'ajouter votre expertise, vos exemples personnels et une relecture approfondie. Le contenu doit apporter une réelle valeur ajoutée au lecteur — c'est le seul critère qui compte vraiment.
+
+### Comment mettre à jour un article SEO pour améliorer ses positions ?
+
+La mise à jour de contenu existant est l'une des actions SEO les plus sous-estimées. Un article qui stagne en position 5 à 8 peut remonter en position 1 à 3 après une mise à jour substantielle. Méthode : identifiez dans Search Console les requêtes sur lesquelles la page apparaît sans les avoir ciblées, enrichissez l'article pour couvrir ces sous-sujets, ajoutez des données récentes et de nouveaux exemples, et mettez à jour la date de publication. Chez ConvertiLab, nous mettons à jour 2 à 3 articles existants par mois — souvent plus rentable que d'en publier de nouveaux.
+
+![Mise à jour contenu SEO - requêtes non ciblées Search Console enrichissement article](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`
   },
   {
     slug: "erreurs-seo-courantes-eviter",
