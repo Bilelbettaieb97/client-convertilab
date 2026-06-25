@@ -4176,7 +4176,7 @@ Non. Concentrez-vous sur les 2 à 3 plateformes où se trouve votre audience cib
 
 ### Comment augmenter l'engagement rapidement sur ses réseaux ?
 
-Posez des questions dans vos publications, utilisez les sondages et quiz en Stories, répondez à chaque commentaire dans l'heure (signal fort pour l'algorithme), créez du contenu sauvegardable (tutoriels, infographies), et collaborez avec d'autres comptes de votre niche. L'engagement appelle l'engagement : plus vous interagissez, plus l'algorithme vous favorise.
+Posez des questions dans vos publications, utilisez les sondages et quiz en Stories, répondez à chaque commentaire dans l'heure (signal fort pour l'algorithme), créez du contenu sauvegardable (tutoriels, infographies), et collaborez avec d'autres comptes de votre niche. L'engagement appelle l'engagement : plus vous interagissez, plus l'algorithme vous favorise. Une réponse rapide aux commentaires dans la première heure peut multiplier par 2 à 3 la portée d'une publication sur Instagram et Facebook.
 
 ### Comment transformer ses abonnés en clients sans paraître insistant ?
 
