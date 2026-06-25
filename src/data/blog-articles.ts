@@ -6468,7 +6468,7 @@ Wix est suffisant pour une présence de base sur internet. Il vous permet de cr�
 - La personnalisation avancée atteint ses limites rapidement
 - Le SEO est correct mais difficile à optimiser finement pour des requêtes locales compétitives
 
-**Pour qui Wix est adapté :** associations, profils qui veulent juste une carte de visite en ligne, projets temporaires.
+**Pour qui Wix est adapté :** associations, profils qui veulent juste une carte de visite en ligne, projets temporaires ou entrepreneurs qui n'ont pas besoin de trafic SEO (car ils ont une clientèle 100% via recommandation).
 
 ## WordPress : la solution des blogueurs et TPE qui veulent tout contrôler
 
