@@ -2352,7 +2352,7 @@ Non. En 2026, le responsive design est la norme incluse dans tout projet web pro
 
 ### Un site WordPress est-il automatiquement responsive ?
 
-La plupart des thèmes WordPress récents sont techniquement responsive, mais "responsive" ne signifie pas "bien optimisé pour le mobile". Beaucoup de thèmes WordPress affichent simplement la version desktop compressée, avec des images trop lourdes, des boutons trop petits et des menus difficiles à utiliser. Testez votre thème avec l'[outil Design Score](/design-score) pour évaluer la qualité réelle de l'adaptation mobile.
+La plupart des thèmes WordPress récents sont techniquement responsive, mais "responsive" ne signifie pas "bien optimisé pour le mobile". Beaucoup de thèmes WordPress affichent simplement la version desktop compressée, avec des images trop lourdes, des boutons trop petits et des menus difficiles à utiliser. Testez votre thème avec l'[outil Design Score](/design-score) pour évaluer la qualité réelle de l'adaptation mobile. Sur les 50+ audits de sites WordPress que nous avons réalisés, 72% avaient des erreurs d'ergonomie mobile détectées par l'outil malgré un thème "responsive".
 
 ### L'approche mobile first change-t-elle le design desktop ?
 
