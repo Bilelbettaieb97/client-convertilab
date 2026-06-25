@@ -1293,6 +1293,10 @@ Un artisan peut rentabiliser Google Ads avec 300 à 500€/mois en ciblant exclu
 
 En France, **tout site web accessible au public** est légalement tenu d'afficher des mentions légales. Pourtant, près de **40% des sites web français** ne sont pas en conformité — s'exposant à des amendes allant jusqu'à 75 000€ pour les personnes physiques et 375 000€ pour les personnes morales.
 
+Ce guide explique ce que vous devez afficher obligatoirement, comment le générer gratuitement, et les erreurs les plus courantes que les PME font avec leurs documents juridiques.
+
+![Mentions légales RGPD générateur gratuit - conformité site web France](https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80)
+
 [Générer mes mentions légales gratuitement →](/generateur-mentions-legales)
 
 ## Quelles sont les obligations légales d'un site web en France en 2026 ?
@@ -1341,6 +1345,27 @@ Les documents juridiques obligatoires pour un site web varient selon son type d'
 | CGV | Sites e-commerce | DGCCRF (amendes) |
 
 Faire rédiger ces documents par un avocat coûte entre 500 et 2 000€. Les plateformes juridiques en ligne facturent 50 à 200€. Le générateur gratuit produit une base solide et conforme — suffisante pour la grande majorité des sites vitrine et e-commerce standards.
+
+![CNIL conformité RGPD politique de confidentialité - protection données](https://images.unsplash.com/photo-1555421689-d68471e189f2?w=800&q=80)
+
+## Les 5 erreurs juridiques les plus fréquentes sur les sites PME
+
+**1. Afficher uniquement les mentions légales sans politique de confidentialité**
+Depuis 2018, si votre site utilise un formulaire de contact, Google Analytics ou un pixel publicitaire (Meta, Google Ads), une politique de confidentialité est obligatoire — même si vous ne vendez rien.
+
+**2. Oublier les informations de l'hébergeur**
+La loi LCEN exige que le nom et les coordonnées de l'hébergeur apparaissent dans les mentions légales. Beaucoup d'entrepreneurs l'omettent. Si vous hébergez sur OVH, Ionos, LWS ou Vercel, ajoutez leurs coordonnées.
+
+**3. Ne pas mentionner les cookies tiers**
+Si votre site utilise Google Analytics, Facebook Pixel, Hotjar ou un chatbot, vous devez informer les visiteurs de ces cookies dans votre politique de confidentialité et recueillir leur consentement avec une bannière conforme.
+
+**4. Copier les mentions légales d'un concurrent**
+C'est la tentation la plus courante. Résultat : des mentions légales avec le nom d'une autre société, un SIRET erroné, ou des clauses inapplicables à votre activité. Le générateur personnalise chaque document à votre situation.
+
+**5. Ne jamais mettre à jour ses documents**
+Un changement d'hébergeur, l'ajout d'un nouvel outil de tracking, ou un changement de statut juridique rendent vos anciens documents non conformes. Régénérez vos documents à chaque évolution significative.
+
+![Erreurs conformité RGPD PME - cookies, hébergeur, politique confidentialité](https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80)
 
 ## FAQ — Questions fréquentes sur les mentions légales
 
