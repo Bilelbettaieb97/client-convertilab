@@ -2921,6 +2921,8 @@ Oui, mais avec des délais et des stratégies différents selon la compétitivit
 
 Chez ConvertiLab, nous aidons les entrepreneurs locaux à optimiser leur présence Google depuis 2021. Sur nos 150+ clients, ceux qui ont suivi les 8 optimisations de ce guide ont vu leur trafic Google Maps augmenter de 40 à 120% en 3 mois.
 
+![Google Business Profile optimisé - pack local Google 3 premiers résultats carte](https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?w=800&q=80)
+
 [Auditer le SEO de mon site gratuitement →](/seo-check)
 
 ## Qu'est-ce que le SEO local et pourquoi est-il indispensable pour les entreprises de proximité ?
@@ -2991,6 +2993,8 @@ Sur votre site web :
 
 Analysez votre SEO local actuel avec l'[audit SEO gratuit](/seo-check).
 
+![SEO local signaux - citations NAP schema LocalBusiness Google Maps ancrage géographique](https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&q=80)
+
 ## FAQ — Questions sur le SEO local et Google Business Profile
 
 ### Combien de temps faut-il pour apparaître dans le pack local Google ?
@@ -3003,7 +3007,13 @@ Oui, Google Business Profile est entièrement gratuit. Vous pouvez créer votre 
 
 ### Faut-il avoir un local physique pour faire du SEO local ?
 
-Non. Les entreprises de services qui se déplacent chez le client (plombier, électricien, consultant, coach) peuvent utiliser Google Business Profile en définissant une "zone de service" sans afficher leur adresse personnelle. Cependant, avoir un local physique enregistré facilite le classement dans le pack local, car Google donne plus de poids aux entreprises avec une adresse vérifiable. Pour les prestataires sans local, la cohérence NAP et le volume d'avis sont les leviers les plus importants.`
+Non. Les entreprises de services qui se déplacent chez le client (plombier, électricien, consultant, coach) peuvent utiliser Google Business Profile en définissant une "zone de service" sans afficher leur adresse personnelle. Cependant, avoir un local physique enregistré facilite le classement dans le pack local, car Google donne plus de poids aux entreprises avec une adresse vérifiable. Pour les prestataires sans local, la cohérence NAP et le volume d'avis sont les leviers les plus importants.
+
+### Combien de photos faut-il mettre sur Google Business Profile ?
+
+Il n'y a pas de maximum — plus il y en a, mieux c'est. Les fiches avec plus de 10 photos reçoivent en moyenne 35% de clics supplémentaires. L'idéal est de publier au minimum : 1 photo de couverture (1920x1080), 1 logo, 3 à 5 photos de vos réalisations ou prestations, et 1 à 2 photos de votre équipe ou de votre local. Ajoutez régulièrement de nouvelles photos — c'est un signal d'activité que Google valorise dans son algorithme de classement local.
+
+![Google Business Profile photos - couverture logo réalisations équipe signal activité](https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80)`
   },
   {
     slug: "backlinks-strategie-netlinking-2026",
