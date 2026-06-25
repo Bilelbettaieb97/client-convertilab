@@ -1381,6 +1381,16 @@ Il faut mettre à jour ses mentions légales et sa politique de confidentialité
 
 L'absence de mentions légales est passible d'une amende de 75 000€ pour les personnes physiques et 375 000€ pour les personnes morales en vertu de la loi LCEN. Les manquements au RGPD exposent à des sanctions de la CNIL pouvant atteindre 4% du chiffre d'affaires annuel mondial. En pratique, la CNIL sanctionne en priorité les grandes entreprises, mais les PME et auto-entrepreneurs ne sont pas à l'abri de plaintes de visiteurs ou de contrôles sectoriels.
 
+Au-delà des sanctions financières, l'absence de mentions légales nuit aussi à la crédibilité : 67% des acheteurs en ligne regardent les mentions légales avant de passer commande sur un site inconnu. Une page de mentions légales absente ou incomplète peut suffire à perdre un client prêt à acheter.
+
+### Un auto-entrepreneur doit-il afficher son adresse personnelle dans les mentions légales ?
+
+Oui, la loi LCEN exige l'adresse du responsable du site. Pour les auto-entrepreneurs travaillant depuis leur domicile, cela peut poser un problème de vie privée. Deux solutions légales existent : utiliser l'adresse de domiciliation d'une entreprise (services de domiciliation à partir de 10€/mois), ou utiliser l'adresse de votre centre de gestion agréé ou expert-comptable si celui-ci l'autorise. Il est possible de ne pas afficher son adresse personnelle, mais une adresse de contact valide doit rester accessible.
+
+### Les CGU sont-elles obligatoires pour un site vitrine sans espace membre ?
+
+Non, les CGU (conditions générales d'utilisation) ne sont pas légalement obligatoires pour un site vitrine sans espace membre ni zone de téléchargement. Elles sont en revanche fortement recommandées pour encadrer l'usage du site et vous protéger en cas de litige. En revanche, si votre site propose des fonctionnalités interactives (forum, commentaires, espace client), les CGU deviennent indispensables.
+
 [Générer mes mentions légales RGPD gratuitement →](/generateur-mentions-legales)`
   },
   {
