@@ -5096,6 +5096,8 @@ Si votre fiche reçoit des visites mais peu d'achats, analysez dans Google Analy
 
 Les 8 raisons principales d'abandon de panier, classées par fréquence : frais de livraison inattendus (48% des cas), obligation de créer un compte (26%), processus de commande trop long (22%), problème de confiance pour le paiement (18%), délai de livraison trop long (16%), site trop lent ou bug technique (14%), politique de retour insatisfaisante (12%), manque de moyens de paiement (9%). Ces freins sont tous corrigeables. Comprendre pourquoi vos clients abandonnent est le premier pas : installez Hotjar ou Microsoft Clarity (heatmaps + enregistrements de sessions) pour voir exactement où ils bloquent dans votre tunnel.
 
+Un sondage rapide peut aussi révéler les raisons d'abandon : une pop-up post-visite demandant "Pourquoi n'avez-vous pas finalisé votre achat ?" avec 3 à 4 choix prédéfinis vous donne des données qualitatives directement depuis vos clients potentiels. Cette approche combinée analytics + sondage permet de prioriser les corrections les plus impactantes sans hypothèses.
+
 Causes d'abandon par type de problème :
 - **Problèmes tarifaires** : frais cachés, seuil de livraison gratuite non affiché (48% des cas)
 - **Problèmes UX** : checkout trop long, inscription obligatoire, formulaire trop complexe (26 à 22%)
