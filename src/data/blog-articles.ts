@@ -4216,7 +4216,7 @@ Les avantages uniques de l'email marketing par rapport aux autres canaux :
 
 ## Comment construire une liste email qualifiée et quels lead magnets fonctionnent en 2026 ?
 
-Pour construire une liste email qualifiée, la règle d'or est : offrir quelque chose de valeur en échange de l'adresse email. Les lead magnets les plus efficaces en 2026 sont les guides PDF pratiques (liste des 10 meilleures astuces pour votre secteur), les checklists actionnables, les mini-cours email (5 emails en 5 jours), et les audits gratuits. Utilisez toujours le double opt-in (confirmation par email) : cela garantit des emails valides, améliore la délivrabilité et respecte le RGPD.
+Pour construire une liste email qualifiée, la règle d'or est : offrir quelque chose de valeur en échange de l'adresse email. Les lead magnets les plus efficaces en 2026 sont les guides PDF pratiques (liste des 10 meilleures astuces pour votre secteur), les checklists actionnables, les mini-cours email (5 emails en 5 jours), et les audits gratuits. Utilisez toujours le double opt-in (confirmation par email) : cela garantit des emails valides, améliore la délivrabilité et respecte le RGPD. Un test A/B sur le titre de votre lead magnet peut multiplier vos conversions par 2 à 3 — "Guide complet SEO" convertit bien moins bien que "Checklist : 12 points SEO que votre concurrent a vérifiés et pas vous".
 
 Meilleurs points de capture d'email sur un site web :
 - **Pop-up de sortie** : s'affiche quand le visiteur quitte le site (taux de conversion 3-5%)
