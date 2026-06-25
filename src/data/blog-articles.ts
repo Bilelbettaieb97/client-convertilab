@@ -4005,6 +4005,24 @@ Stratégie d'audiences recommandée pour une PME :
 
 Les audiences similaires à 1% génèrent souvent le meilleur ROAS. Élargissez progressivement à 2-5% si vous avez besoin de volume.
 
+**La puissance du retargeting :** une personne qui a visité votre site mais n'a pas converti est 8 fois plus susceptible de convertir qu'un prospect froid. Avec le Pixel Meta installé, vous pouvez cibler spécifiquement les visiteurs de votre page de tarif des 30 derniers jours — ce segment très chaud convertit à un coût souvent 5 à 10 fois inférieur aux audiences froides. C'est la stratégie de retargeting la plus rentable disponible pour les PME.
+
+## Comment structurer une campagne Meta Ads rentable de A à Z ?
+
+Pour une PME qui démarre avec 500€/mois, voici la structure de campagne recommandée par ConvertiLab :
+
+**Campagne 1 — Prospection (70% du budget) :**
+- Objectif : Leads ou Trafic
+- Audience : Lookalike 1% depuis vos meilleurs clients
+- Créatifs : 3 variantes (vidéo 15s + image avec texte + carrousel)
+
+**Campagne 2 — Retargeting (30% du budget) :**
+- Objectif : Conversions
+- Audience : Visiteurs du site 30 derniers jours SAUF clients existants
+- Créatif : preuve sociale (témoignages, avis) + offre de réassurance
+
+Cette structure simple mais efficace couvre toutes les étapes du funnel sans disperser le budget sur des objectifs trop nombreux.
+
 ## Quels formats publicitaires Meta Ads choisissent en 2026 pour le meilleur coût par résultat ?
 
 En 2026, les Reels Ads (format vertical plein écran) offrent le meilleur coût par résultat sur Meta grâce à leur diffusion prioritaire sur Instagram et Facebook. Les vidéos de 15 à 30 secondes obtiennent les meilleurs résultats — les 3 premières secondes sont décisives pour retenir l'attention. Les carrousels (jusqu'à 10 images) sont idéaux pour présenter plusieurs services ou produits. Les images uniques avec visuels authentiques (pas de photos de stock) surperforment systématiquement les visuels trop "publicitaires".
