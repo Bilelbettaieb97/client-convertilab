@@ -952,6 +952,10 @@ Un score élevé ne garantit pas la position 1, mais un score faible garantit qu
 
 **53% des visiteurs mobiles** quittent un site qui charge en plus de 3 secondes. Chaque seconde supplémentaire réduit les conversions de 7%. La vitesse est un facteur de classement Google officiel depuis 2021 et un enjeu commercial direct.
 
+Ce guide explique exactement ce que mesurent les Core Web Vitals, comment les tester gratuitement et — surtout — quoi faire concrètement quand les résultats sont mauvais.
+
+![Test vitesse site web - Core Web Vitals LCP CLS INP](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
+
 [Tester la vitesse de votre site gratuitement →](/speed-check)
 
 ## Qu'est-ce que les Core Web Vitals et pourquoi Google les mesure-t-il ?
@@ -994,6 +998,27 @@ Google PageSpeed Insights et un outil spécialisé mesurent les mêmes métrique
 
 Les outils payants comme GTmetrix Pro ou New Relic offrent un suivi continu et des alertes automatiques, mais pour un diagnostic ponctuel rapide et actionnable, l'outil gratuit couvre parfaitement le besoin d'une PME.
 
+## Les causes les plus fréquentes d'un mauvais score de vitesse
+
+Avant de corriger, il faut comprendre pourquoi votre site est lent. Les 5 causes les plus fréquentes sur les sites PME :
+
+**1. Images non compressées (responsable dans 65% des cas)**
+Une photo de 3 Mo prise avec un iPhone uploadée directement sur WordPress ralentit votre page entière. Solution : compressez avec Squoosh ou TinyPNG avant upload. Objectif : moins de 150 Ko par image.
+
+**2. JavaScript bloquant le rendu**
+Chaque outil externe (Google Analytics, Meta Pixel, Hotjar, Tidio, widget Trustpilot) ajoute du JavaScript qui doit se charger avant que la page soit visible. Sur un site avec 8 outils actifs, c'est souvent 2 à 3 secondes gaspillées. Solution : auditez vos scripts et supprimez ceux dont vous ne consultez jamais les données.
+
+**3. Hébergement mutualisé sous-dimensionné**
+Un hébergement à 2€/mois partage des ressources entre des centaines de sites. Le TTFB (temps de réponse du serveur) peut atteindre 1,5 à 2 secondes avant même que le navigateur commence à charger quoi que ce soit. Solution : passez à O2Switch, Infomaniak ou Vercel.
+
+**4. Thème WordPress lourd**
+Divi, Avada, Elementor Pro chargent des centaines de fichiers CSS et JS même si vous utilisez 10% de leurs fonctionnalités. Solution : passez à un thème léger (GeneratePress) ou envisagez une refonte sur Next.js.
+
+**5. Pas de mise en cache**
+Sans cache, chaque visiteur fait recalculer la page entièrement par le serveur. Solution : installez WP Rocket sur WordPress ou activez le cache Cloudflare.
+
+![Causes lenteur site web - JavaScript images hébergement](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80)
+
 ## FAQ — Questions fréquentes sur les tests de vitesse
 
 ### À quelle fréquence faut-il tester la vitesse de son site web ?
@@ -1007,6 +1032,14 @@ Un bon score PageSpeed améliore le référencement mais ne le garantit pas seul
 ### Mon score PageSpeed mobile est différent du desktop, lequel compte le plus ?
 
 Le score mobile est celui qui compte le plus pour Google, car l'indexation Google est mobile-first depuis 2019. Concentrez vos efforts d'optimisation sur le score mobile en priorité. Un écart important (90 desktop / 35 mobile) indique souvent des images non adaptées aux petits écrans ou du JavaScript qui bloque le rendu.
+
+### Quel est l'impact concret d'un mauvais LCP sur les ventes ?
+
+Le LCP (Largest Contentful Paint) est la métrique qui représente le mieux l'expérience utilisateur perçue. Un LCP > 4 secondes signifie que le visiteur attend 4 secondes avant de voir le contenu principal de votre page. Sur mobile en 4G, c'est souvent la limite au-delà de laquelle les gens ferment l'onglet.
+
+Exemple concret : un salon d'esthétique à Nantes avait un LCP de 5,8 secondes (image hero de 4 Mo). Après compression de l'image (120 Ko) et activation du lazy loading, le LCP est passé à 1,9 secondes. Résultat observé en 30 jours : taux de rebond divisé par 2, demandes de réservation +40%.
+
+![Impact LCP sur conversions - avant après optimisation vitesse](https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80)
 
 [Lancer le test de vitesse gratuit de votre site →](/speed-check)`
   },
