@@ -5763,11 +5763,11 @@ Estimez votre budget publicitaire avec notre [estimateur Ads](/estimateur-ads).
 
 ### Faut-il un site web pour vendre sur Instagram ?
 
-Oui, indispensable. Instagram Shopping redirige vers votre site pour finaliser l'achat. Un site e-commerce professionnel est nécessaire pour gérer les paiements, la livraison et le SAV. Instagram est l'outil de découverte et d'envie — votre site est l'outil de conversion et de confiance.
+Oui, indispensable. Instagram Shopping redirige vers votre site pour finaliser l'achat. Un site e-commerce professionnel est nécessaire pour gérer les paiements, la livraison et le SAV. Instagram est l'outil de découverte et d'envie — votre site est l'outil de conversion et de confiance. Sans site, vous dépendez entièrement d'une plateforme tierce qui peut changer ses règles ou ses algorithmes du jour au lendemain — la double présence Instagram + site e-commerce propre est la seule stratégie résiliente.
 
 ### Combien d'abonnés faut-il pour commencer à vendre sur Instagram ?
 
-Vous pouvez commencer à vendre avec quelques centaines d'abonnés si votre audience est qualifiée. Un compte de 1 000 abonnés engagés dans une niche précise peut générer plus de ventes qu'un compte de 100 000 abonnés non ciblés. La qualité de l'audience prime largement sur la quantité.
+Vous pouvez commencer à vendre avec quelques centaines d'abonnés si votre audience est qualifiée. Un compte de 1 000 abonnés engagés dans une niche précise peut générer plus de ventes qu'un compte de 100 000 abonnés non ciblés. La qualité de l'audience prime largement sur la quantité. Le taux d'engagement est l'indicateur clé : un taux supérieur à 3 à 5% indique une audience active. Calculez-le : (Likes + Commentaires) / Abonnés × 100. En dessous de 1%, même 50 000 abonnés génèrent peu de ventes.
 
 ### Instagram Shopping est-il gratuit pour les commerçants ?
 
