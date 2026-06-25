@@ -2929,6 +2929,8 @@ Chez ConvertiLab, nous aidons les entrepreneurs locaux à optimiser leur présen
 
 Le SEO local désigne l'ensemble des techniques qui permettent à une entreprise d'apparaître dans les résultats de recherche géolocalisés — notamment le pack local (3 résultats avec carte) et Google Maps. Il repose sur 4 piliers : la fiche Google Business Profile, les avis clients, les citations locales (mentions NAP sur des sites tiers) et le contenu localisé sur votre site web. Pour une activité locale, le SEO local est plus rentable que le SEO national car la concurrence est beaucoup plus faible.
 
+L'algorithme Google Local prend en compte 3 grands facteurs pour classer les fiches : la pertinence (votre fiche correspond-elle à la requête ?), la distance (êtes-vous proche du chercheur ?) et la notoriété (avez-vous des avis, des backlinks, des citations ?). Vous pouvez optimiser la pertinence et la notoriété — la distance dépend de votre localisation physique.
+
 Les 4 composantes du SEO local :
 - **Google Business Profile** : votre fiche d'entreprise sur Google — le pilier central
 - **Avis clients** : facteur numéro 1 de classement local après la proximité géographique
