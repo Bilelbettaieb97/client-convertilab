@@ -4730,6 +4730,8 @@ Vous dépensez trop peu si votre CPC est élevé mais que vous avez peu de conve
 
 Que vous vendiez des produits ou des services, Instagram peut devenir votre canal d'acquisition le plus puissant — à condition d'avoir la bonne stratégie. Chez ConvertiLab, nous accompagnons 150+ entrepreneurs sur leur présence sociale.
 
+![Instagram entreprise 2026 - stratégie contenu Reels profil professionnel abonnés clients](https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&q=80)
+
 ## Comment optimiser son profil Instagram professionnel pour attirer des clients ?
 
 Un profil Instagram professionnel doit convaincre en 3 secondes. Les éléments clés : une photo de profil reconnaissable (logo sur fond uni ou visage si vous êtes la marque), un nom d'utilisateur mémorable, et un nom de profil incluant vos mots-clés car il est indexé dans la recherche Instagram. La bio de 150 caractères doit suivre la formule : ligne 1 — ce que vous faites (proposition de valeur) ; ligne 2 — pour qui (votre cible) ; ligne 3 — preuve sociale (résultats, nombre de clients) ; ligne 4 — CTA (ce que le visiteur doit faire). Configurez vos Highlights Stories comme un mini-site : Services, Témoignages, FAQ, Coulisses, Portfolio.
@@ -4766,6 +4768,8 @@ Les métriques à suivre pour mesurer la performance Instagram :
 | Clics lien bio | > 0,5% de la portée | Stories avec lien + CTA clair |
 | Abonnés | Croissance de 5 à 10% / mois | Régularité + collaborations |
 
+![Reels Instagram algorithme portée organique hook sous-titres sauvegarde partage](https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80)
+
 ## Quelles erreurs Instagram freinent la croissance des entreprises en 2026 ?
 
 Les 5 erreurs les plus coûteuses pour une entreprise sur Instagram : acheter des followers (détruit le taux d'engagement et la crédibilité), poster sans stratégie de piliers thématiques, ignorer les DMs (les messages privés sont vos meilleurs prospects), faire plus de 20% de contenu promotionnel (suivez la règle 80/20 : 80% valeur, 20% promo), et négliger les Stories qui créent la relation de proximité indispensable à la vente. La règle des 15 minutes : passez 15 minutes avant et après chaque publication à répondre aux commentaires, commenter des posts dans votre niche, et interagir avec les Stories de vos followers.
@@ -4784,7 +4788,15 @@ La régularité prime sur la fréquence. 4 à 5 posts de qualité par semaine + 
 
 ### Instagram fonctionne-t-il pour les activités B2B ou les artisans ?
 
-Oui. Pour les artisans, Instagram est idéal car votre travail est visuel (avant/après, photos de chantier, créations). Pour le B2B, le personal branding du dirigeant, les études de cas visuelles et les coulisses d'entreprise performent très bien. Les décideurs B2B utilisent aussi Instagram à titre personnel.`
+Oui. Pour les artisans, Instagram est idéal car votre travail est visuel (avant/après, photos de chantier, créations). Pour le B2B, le personal branding du dirigeant, les études de cas visuelles et les coulisses d'entreprise performent très bien. Les décideurs B2B utilisent aussi Instagram à titre personnel.
+
+### Comment convertir ses abonnés Instagram en clients sans paraître commercial ?
+
+La technique des DMs proactifs : repérez les personnes qui regardent vos Stories sans répondre ou qui sauvegardent vos posts (visible dans les insights). Envoyez un DM personnalisé qui apporte de la valeur — pas un pitch commercial. Par exemple : "J'ai vu que tu regardes régulièrement mes posts sur [sujet]. Voici un conseil supplémentaire que je n'ai pas mis dans le post : [conseil exclusif]". Cette approche crée une relation individuelle et facilite une conversation naturelle vers votre offre.
+
+**Cas concret ConvertiLab :** une coach nutrition à Toulouse avec 1 200 abonnés Instagram généralisait 0 à 2 clients/mois. Après refonte de sa stratégie (3 piliers de contenu + Reels éducatifs + DMs proactifs), elle signe désormais 6 à 8 clients/mois sans publicité payante — avec une audience réduite mais engagée à 7,2% de taux d'engagement, soit 3× la moyenne de son secteur.
+
+![Instagram DMs proactifs - converter abonnés clients coach nutrition 1200 followers 6 clients/mois](https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&q=80)`
   },
   {
     slug: "google-analytics-4-guide-debutant",
