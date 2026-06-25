@@ -6833,6 +6833,8 @@ Beaucoup de coiffeurs ont un compte Instagram mais pas de site web. C'est une er
 
 La complémentarité idéale : Instagram pour le before/after et la fidélisation, le site web pour l'acquisition de nouveaux clients via Google. Les deux ne font pas le même travail.
 
+Ordre de priorité recommandé : site web + SEO local d'abord (acquisition), Instagram ensuite (fidélisation + preuve sociale). Les coiffeurs qui font l'inverse passent des heures sur du contenu Instagram qui n'attire que des gens qui cherchent de l'inspiration — pas des clients locaux cherchant activement à réserver.
+
 ## Les erreurs les plus fréquentes sur les sites de coiffeurs
 
 **1. Pas de tarifs affichés** : beaucoup de coiffeurs hésitent à afficher leurs prix. Erreur — les clients qui cherchent un coiffeur sur Google veulent savoir si c'est dans leur budget avant d'appeler. Pas de tarifs = ils passent au concurrent suivant.
