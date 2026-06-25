@@ -4360,6 +4360,13 @@ Découvrez nos [services de création de landing pages](/services/sites-web/land
 
 L'A/B testing consiste à comparer deux versions d'une page pour identifier laquelle convertit le mieux. Les 5 éléments à tester en priorité sont : les titres de page (levier n°1 de conversion), les CTA (texte, couleur, position, taille), les images (humain vs produit, photo vs illustration), les formulaires (nombre de champs, disposition), et la preuve sociale (emplacement et format des témoignages). Règle fondamentale : testez une seule variable à la fois, avec au moins 1 000 visiteurs par variante sur 2 à 4 semaines.
 
+Le texte des CTA est l'une des modifications les plus faciles et les plus impactantes : "Envoyer" convertit 3 fois moins que "Recevoir mon devis gratuit". L'usage du pronom possessif à la première personne ("mon", "ma", "mes") et la précision de la valeur reçue augmentent systématiquement le taux de clic. Exemples performants : "Obtenir mon analyse gratuite", "Réserver ma place", "Télécharger ma checklist".
+
+Les 3 erreurs les plus courantes en CRO qui sabotent les tests A/B :
+- **Arrêter le test trop tôt** : un pic d'un côté le jour 3 ne signifie rien sans 2 à 4 semaines de données
+- **Tester plusieurs variables simultanément** : si le titre ET la couleur changent, vous ne savez pas ce qui a eu de l'impact
+- **Ignorer la segmentation** : un CTA peut performer différemment sur mobile vs desktop, ou sur les nouveaux visiteurs vs les retours
+
 Taux de conversion de référence par secteur :
 
 | Secteur | Taux moyen | Objectif |
