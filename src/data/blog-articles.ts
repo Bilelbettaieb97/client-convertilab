@@ -5020,6 +5020,8 @@ Les 6 erreurs qui tuent les fiches produits :
 
 Pour rédiger une description produit qui convertit, utilisez la méthode FAB : Feature (caractéristique technique), Advantage (avantage par rapport à la concurrence), Benefit (bénéfice concret pour le client). Exemple : "Semelle en mousse EVA haute densité" → "Absorbe 40% de chocs en plus" → "Courez plus longtemps sans douleurs articulaires". La structure recommandée : accroche émotionnelle (1-2 phrases qui parlent au désir du client), bénéfices principaux en liste à puces (3 à 5 points), description détaillée (2-3 paragraphes), tableau de spécifications techniques. Minimum 300 mots pour les produits standard, 500 à 1 000 mots pour les produits techniques à forte valeur.
 
+**Le piège du "nous" dans les descriptions produits :** la majorité des e-commerçants débutants écrivent "Nous proposons une semelle...", "Notre produit est conçu pour...". Cette approche est une erreur de copywriting fondamentale. Remplacez chaque "nous" par "vous" : "Vous profitez d'une semelle...", "Ce produit est conçu pour que vous...". La description doit parler au client de lui-même et de ses bénéfices, pas de votre entreprise. Ce changement simple peut augmenter le taux de conversion de 10 à 20%.
+
 Éléments de réassurance indispensables sur chaque fiche produit :
 - **Avis clients** : notes et commentaires directement visibles sur la fiche
 - **Badges de sécurité** : paiement sécurisé SSL, garantie satisfait ou remboursé
