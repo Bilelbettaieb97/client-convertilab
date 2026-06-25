@@ -1925,7 +1925,15 @@ Pour les services (artisans, consultants, coachs), oui — et souvent plus. Un s
 
 ### Combien de produits faut-il pour justifier un site e-commerce ?
 
-Il n'y a pas de nombre minimum — même 5 produits peuvent justifier un e-commerce si vos clients préfèrent acheter en ligne. La vraie question est le volume de ventes prévu : si vous anticipez moins de 50 commandes par mois la première année, un site vitrine avec un lien vers une boutique Etsy ou Stripe Payment Link est plus rentable qu'un e-commerce complet.`,
+Il n'y a pas de nombre minimum — même 5 produits peuvent justifier un e-commerce si vos clients préfèrent acheter en ligne. La vraie question est le volume de ventes prévu : si vous anticipez moins de 50 commandes par mois la première année, un site vitrine avec un lien vers une boutique Etsy ou Stripe Payment Link est plus rentable qu'un e-commerce complet.
+
+### Site vitrine ou e-commerce : quel impact sur le référencement Google ?
+
+Les deux types de sites peuvent être bien référencés sur Google, mais avec des stratégies différentes. Un site vitrine mise sur des pages locales ("plombier Paris 15") et des articles de blog pour attirer du trafic organique qualifié. Un e-commerce optimise les fiches produits, les catégories et les pages de marque. Dans les deux cas, le SEO est un investissement à long terme — la différence est que l'e-commerce a plus de pages à optimiser et donc un potentiel de trafic plus large, mais aussi plus de travail de contenu à produire. Pour un entrepreneur solo ou une petite équipe, le site vitrine avec blog est souvent plus gérable et génère un ROI SEO plus rapide.
+
+### Peut-on avoir les deux : un site vitrine ET une boutique ?
+
+Oui, c'est même souvent la meilleure approche. On appelle cela une architecture hybride : le site principal est un site vitrine avec toutes les pages de présentation, et une section boutique est intégrée pour les produits ou services à prix fixe. Cette architecture est moins coûteuse qu'un e-commerce complet et permet de tester la demande en ligne avant d'investir dans une infrastructure logistique complète.`,
   },
   {
     slug: "pourquoi-nextjs-meilleur-wordpress",
