@@ -3468,6 +3468,8 @@ Les 6 causes de non-indexation les plus courantes :
 - **Erreur de crawl** : Google ne peut pas accéder à la page (404, timeout, redirect en boucle)
 - **Page orpheline** : aucun lien interne ne mène à cette page
 
+Parmi ces 6 causes, le contenu insuffisant est la plus sous-estimée : depuis la mise à jour Helpful Content de 2022 (renforcée en 2023 et 2024), Google pénalise activement les sites qui publient trop de contenu à faible valeur. Mieux vaut 10 articles de 1 000 mots bien travaillés que 50 articles de 200 mots copier-coller.
+
 ## Comment soumettre ses pages à Google et accélérer l'indexation via Search Console ?
 
 Pour accélérer l'indexation via Google Search Console, la méthode la plus rapide est l'outil "Inspection d'URL" : saisissez l'URL de votre page, puis cliquez "Demander l'indexation". Google traite la demande en général sous 24 à 72 heures. Vous pouvez soumettre jusqu'à 10 URLs par jour avec cette méthode — idéal pour les pages prioritaires (pages de vente, articles importants).
