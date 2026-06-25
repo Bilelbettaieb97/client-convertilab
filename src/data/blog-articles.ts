@@ -5692,7 +5692,7 @@ Minimum 5 avis par produit pour commencer à influencer la décision d'achat. L'
 
 ### Peut-on acheter de faux avis pour améliorer sa note ?
 
-Non, jamais. Les plateformes (Google, Trustpilot, Amazon) détectent les faux avis avec des algorithmes sophistiqués. Si vous êtes pris, les conséquences sont désastreuses : perte de crédibilité, délistage, sanctions légales. Investissez plutôt dans la satisfaction client réelle et la collecte systématique d'avis authentiques via email post-achat.
+Non, jamais. Les plateformes (Google, Trustpilot, Amazon) détectent les faux avis avec des algorithmes sophistiqués. Si vous êtes pris, les conséquences sont désastreuses : perte de crédibilité, délistage, sanctions légales. Investissez plutôt dans la satisfaction client réelle et la collecte systématique d'avis authentiques via email post-achat. En France, la DGCCRF peut sanctionner les faux avis jusqu'à 300 000€ d'amende pour les entreprises — le jeu n'en vaut absolument pas la chandelle face à un email post-achat bien conçu qui génère des avis réels à moindre coût.
 
 ### Google Reviews ou Trustpilot : lequel choisir pour son e-commerce ?
 
