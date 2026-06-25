@@ -6754,7 +6754,7 @@ Le minimum à viser : **score PageSpeed > 70 sur mobile**. L'objectif : > 90. Si
     ],
     content: `Un site web pour un coiffeur coûte entre 400€ et 2 000€ selon les fonctionnalités. Un site vitrine avec galerie, tarifs et formulaire de contact démarre à 400€. L'intégration d'un système de réservation en ligne (choix du coiffeur, créneau horaire, service) fait monter le budget à 800€-2 000€ selon la complexité. Dans les deux cas, un seul nouveau client par semaine rembourse l'investissement en moins d'un mois.
 
-**Chiffres secteur :** 70% des réservations de services beauté se font désormais en dehors des heures d'ouverture — la nuit, le dimanche, pendant la pause déjeuner. Un salon sans réservation en ligne rate toutes ces opportunités. Même un formulaire de contact simple sur un site vitrine permet de capter ces demandes.
+**Chiffres secteur :** 70% des réservations de services beauté se font désormais en dehors des heures d'ouverture — la nuit, le dimanche, pendant la pause déjeuner. Un salon sans réservation en ligne rate toutes ces opportunités. Et 80% des clients choisissent leur coiffeur via une recherche Google Maps avant d'appeler. Même un formulaire de contact simple sur un site vitrine permet de capter ces demandes qui partent sinon chez le concurrent visible en ligne.
 
 ![Site web salon de coiffure - galerie colorations et réservation](https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80)
 
