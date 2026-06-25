@@ -5326,6 +5326,15 @@ Actions prioritaires pour référencer ses produits sur Google :
 
 Google mesure les Core Web Vitals avec une attention particulière pour l'e-commerce car la performance impacte directement le taux de conversion (chaque seconde de délai réduit les conversions de 7%). Les 3 métriques clés : LCP (Largest Contentful Paint) — chargez l'image principale du produit en priorité, objectif sous 2,5 secondes ; CLS (Cumulative Layout Shift) — réservez l'espace pour les images avant leur chargement, objectif sous 0,1 ; INP — optimisez les scripts tiers (analytics, chat, publicité), objectif sous 200ms. Le SEO e-commerce prend 3 à 6 mois pour porter ses fruits, mais contrairement à la publicité payante, le trafic organique ne s'arrête pas quand vous coupez le budget.
 
+**Les 5 erreurs SEO e-commerce les plus fréquentes en 2026 :**
+1. Contenu dupliqué des fournisseurs (pénalise l'indexation de tout le site)
+2. Pages de catégorie sans texte (manque de signal de pertinence pour Google)
+3. Images non optimisées (fichiers de 2-3 Mo qui ralentissent le LCP)
+4. Balises title identiques entre variantes produit (dilue l'autorité de chaque page)
+5. Absence de maillage interne entre produits complémentaires (Google explore moins efficacement)
+
+**Google Shopping :** intégrez votre catalogue dans Google Merchant Center (gratuit) pour apparaître dans les annonces Shopping même sans payer de publicité (onglet Shopping des résultats Google). La clé : un flux de données produit complet et régulièrement mis à jour avec prix, disponibilité, images de qualité. Les boutiques présentes dans Shopping génèrent en moyenne 21% de trafic organique supplémentaire sans aucun budget publicitaire.
+
 ## FAQ — Questions sur le SEO e-commerce
 
 ### Combien de temps faut-il pour référencer ses produits sur Google ?
