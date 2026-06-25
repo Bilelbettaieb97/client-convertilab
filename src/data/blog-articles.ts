@@ -4047,6 +4047,7 @@ Les 5 erreurs Meta Ads les plus fréquentes chez les débutants :
 - **Modifier le budget de plus de 20% par jour** : réinitialise l'algorithme
 - **Couper trop tôt** : l'algorithme a besoin de 50 conversions/semaine pour optimiser
 - **Pas de landing page dédiée** : la page de destination doit correspondre exactement à l'annonce
+- **Budget inférieur à 5€/jour** : trop peu pour sortir de la phase d'apprentissage en moins de 60 jours
 
 ![Pixel Meta configuration - Google Tag Manager événements conversions retargeting audiences](https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&q=80)
 
