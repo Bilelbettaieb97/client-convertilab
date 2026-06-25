@@ -7306,6 +7306,8 @@ Pour choisir une agence web pour votre restaurant, vérifiez ces 5 points :
 
 Méfiez-vous des devis à 99€ ou 199€ — ces offres livrent généralement un template non personnalisé sans SEO local et sans accompagnement. Pour un restaurant, la visibilité locale est 80% de la valeur d'un site.
 
+**Comment calculer le ROI de votre site restaurant :** Si votre panier moyen par couvert est de 35€ et que votre site génère 3 nouvelles réservations par semaine (12 par mois soit 36 couverts), c'est 1 260€ de CA mensuel supplémentaire. Sur 12 mois : 15 120€. Un site à 990€ est amorti en moins de 3 semaines. Cet exemple est conservateur — la plupart de nos clients restaurant voient des résultats bien supérieurs grâce au SEO local qui continue à travailler en continu.
+
 [Voir notre offre création site web restaurant](/solutions/restaurant)
 
 [Demander votre devis gratuit en 24h](/contact)`,
