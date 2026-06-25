@@ -5039,6 +5039,17 @@ Pour vérifier l'optimisation SEO de vos fiches, utilisez notre [audit SEO gratu
 
 Les techniques avancées de conversion pour une fiche produit sont : le cross-selling ("Les clients ont aussi acheté...") et l'up-selling ("Version premium disponible à +20€") qui augmentent le panier moyen de 10 à 30%. La vidéo produit convertit 80% de plus qu'une fiche sans vidéo — particulièrement pour les produits techniques ou vestimentaires. L'urgence et la rareté honnêtes ("Plus que 3 en stock", "Offre expire dans 24h") créent un sentiment d'urgence sans tromper. Les configurateurs produit (couleur, taille, options) réduisent le taux de retour en engageant le client dans la personnalisation.
 
+**Le guide de la photo produit parfaite :**
+
+Les photos sont responsables de 75% de la décision d'achat. Voici ce dont vous avez besoin en priorité absolue :
+- **Photo principale** : fond blanc ou neutre, éclairage uniforme, produit centré, résolution min. 1000 × 1000 px
+- **Photo d'ambiance** : le produit utilisé dans son contexte naturel (cuisine, bureau, chambre selon le produit)
+- **Photo de détail** : gros plan sur la matière, la couture, la finition, le logo
+- **Photo comparative** : à côté d'un objet de référence pour donner l'échelle
+- **Photo dos/côté** : tous les angles pour éliminer les doutes
+
+Pour les vêtements et accessoires, ajoutez des photos sur un vrai modèle dans 2 à 3 tenues différentes. 67% des consommateurs déclarent que la qualité des photos produit est plus importante que les avis clients pour leur décision d'achat. Un studio photo DIY avec une boîte à lumière de 60€ et un smartphone récent produit des résultats professionnels en moins d'une heure de setup.
+
 Évaluez la qualité de vos fiches produits avec notre [outil Design Score](/design-score).
 
 ## FAQ — Questions sur l'optimisation des fiches produits
