@@ -3559,7 +3559,7 @@ Chez ConvertiLab, nous créons des stratégies de contenu pour 150+ clients. Les
 
 ## Quels sont les critères EEAT de Google et comment les satisfaire dans son contenu ?
 
-EEAT est le cadre d'évaluation de la qualité du contenu utilisé par Google depuis 2022 : Expérience (l'auteur a-t-il une expérience directe du sujet ?), Expertise (est-il qualifié ?), Autorité (le site est-il reconnu dans son domaine ?), et Fiabilité (le contenu est-il précis et sourcé ?). Pour les PME et artisans, satisfaire l'EEAT passe par : mentionner l'auteur avec son expertise, citer des données réelles de votre activité, et démontrer une expérience concrète avec des exemples clients.
+EEAT est le cadre d'évaluation de la qualité du contenu utilisé par Google depuis 2022 : Expérience (l'auteur a-t-il une expérience directe du sujet ?), Expertise (est-il qualifié ?), Autorité (le site est-il reconnu dans son domaine ?), et Fiabilité (le contenu est-il précis et sourcé ?). Pour les PME et artisans, satisfaire l'EEAT passe par : mentionner l'auteur avec son expertise, citer des données réelles de votre activité, et démontrer une expérience concrète avec des exemples clients. Le double E ajouté en 2022 (Experience) est particulièrement important pour les petits entrepreneurs : votre expérience terrain est votre avantage sur les grands sites généralistes.
 
 Comment renforcer l'EEAT dans votre contenu :
 - **Auteur identifié** : prénom, nom, titre ou expertise (ex : "Bilel Bettaieb, fondateur ConvertiLab")
