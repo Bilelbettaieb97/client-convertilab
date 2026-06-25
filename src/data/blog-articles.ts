@@ -5480,6 +5480,8 @@ Identifiez vos pages à fort trafic avec un faible taux de conversion : ce sont 
 
 5 types de photos produits sont indispensables pour maximiser les conversions : 1) Le packshot (fond blanc pur, produit centré à 80-90% du cadre, éclairage uniforme, haute résolution 2000×2000px minimum) — obligatoire pour Google Shopping et Amazon. 2) Les photos d'angles multiples (minimum 4 à 6 vues : face, dos, profil, détails). 3) Les photos lifestyle (produit en contexte d'utilisation — aide le client à se projeter et augmente l'engagement émotionnel). 4) Les photos d'échelle (produit côte à côte d'un objet de référence — crucial pour les bijoux, la décoration, les accessoires). 5) Les photos infographiques (photo + texte qui met en avant les caractéristiques clés — très efficaces pour les produits techniques).
 
+**Résolution, format et poids idéaux pour vos photos produits :** La résolution minimale pour une boutique en ligne est 1200×1200px — en dessous, le zoom produit devient flou et les conversions chutent. Le format idéal est le WebP (ou JPEG en fallback) avec une compression à 80-85% : au-delà, la perte de qualité est visible ; en dessous, les temps de chargement pénalisent vos Core Web Vitals. Ciblez moins de 200 Ko par image affichée. Conservez toujours les fichiers sources en 4000×4000px pour les futurs exports (print, marketplace, catalogue).
+
 Impact chiffré des visuels sur les performances e-commerce :
 - Fiches produits avec photos de qualité : +40% de conversion
 - Images zoomables : +28% de ventes
