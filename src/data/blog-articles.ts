@@ -963,9 +963,11 @@ Ce guide explique exactement ce que mesurent les Core Web Vitals, comment les te
 Les Core Web Vitals sont les trois métriques officielles de Google pour évaluer l'expérience de chargement d'une page web du point de vue de l'utilisateur. Elles sont des facteurs de classement dans les résultats de recherche depuis 2021. Un site qui les respecte est favorisé par Google à qualité de contenu équivalente.
 
 Les trois métriques Core Web Vitals en 2026 :
-- **LCP (Largest Contentful Paint)** : temps d'affichage du plus grand élément visible — objectif sous 2,5s
-- **CLS (Cumulative Layout Shift)** : stabilité visuelle lors du chargement — objectif sous 0,1
-- **INP (Interaction to Next Paint)** : réactivité aux clics et interactions — objectif sous 200ms
+- **LCP (Largest Contentful Paint)** : temps d'affichage du plus grand élément visible — objectif sous 2,5s. Causé le plus souvent par une image hero trop lourde ou un serveur lent.
+- **CLS (Cumulative Layout Shift)** : stabilité visuelle lors du chargement — objectif sous 0,1. Causé par des images sans dimensions déclarées ou des polices qui se chargent après le texte.
+- **INP (Interaction to Next Paint)** : réactivité aux clics et interactions — objectif sous 200ms. Causé par trop de JavaScript synchrone qui bloque le thread principal.
+
+Ces trois métriques sont mesurées sur des données réelles d'utilisateurs Chrome (CrUX dataset) et sur des tests en lab. Google vous donne les deux dans PageSpeed Insights — "Données de terrain" et "Données de lab". Focalisez-vous sur les données de terrain si elles sont disponibles.
 
 Un site avec un LCP de 4,5 secondes perd des positions Google et perd des visiteurs simultanément. Ce sont deux problèmes distincts qui se corrigent de la même façon.
 
