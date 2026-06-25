@@ -4734,7 +4734,7 @@ Que vous vendiez des produits ou des services, Instagram peut devenir votre cana
 
 ## Comment optimiser son profil Instagram professionnel pour attirer des clients ?
 
-Un profil Instagram professionnel doit convaincre en 3 secondes. Les éléments clés : une photo de profil reconnaissable (logo sur fond uni ou visage si vous êtes la marque), un nom d'utilisateur mémorable, et un nom de profil incluant vos mots-clés car il est indexé dans la recherche Instagram. La bio de 150 caractères doit suivre la formule : ligne 1 — ce que vous faites (proposition de valeur) ; ligne 2 — pour qui (votre cible) ; ligne 3 — preuve sociale (résultats, nombre de clients) ; ligne 4 — CTA (ce que le visiteur doit faire). Configurez vos Highlights Stories comme un mini-site : Services, Témoignages, FAQ, Coulisses, Portfolio.
+Un profil Instagram professionnel doit convaincre en 3 secondes. Les éléments clés : une photo de profil reconnaissable (logo sur fond uni ou visage si vous êtes la marque), un nom d'utilisateur mémorable, et un nom de profil incluant vos mots-clés car il est indexé dans la recherche Instagram. La bio de 150 caractères doit suivre la formule : ligne 1 — ce que vous faites (proposition de valeur) ; ligne 2 — pour qui (votre cible) ; ligne 3 — preuve sociale (résultats, nombre de clients) ; ligne 4 — CTA (ce que le visiteur doit faire). Configurez vos Highlights Stories comme un mini-site : Services, Témoignages, FAQ, Coulisses, Portfolio. Ajoutez un lien en bio vers une page de conversion dédiée — pas votre site d'accueil général, mais une landing page avec votre offre principale et un formulaire de contact ou un lien Calendly.
 
 Les 3 erreurs de profil qui font fuir les prospects :
 - Photo de profil floue ou difficile à lire en petit format
