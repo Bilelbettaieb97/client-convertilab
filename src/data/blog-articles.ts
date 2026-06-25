@@ -7002,7 +7002,7 @@ Ajoutez la propriété HTTPS dans Search Console (c'est une propriété distinct
 
 ### Mon site WordPress est-il automatiquement en HTTPS ?
 
-Non. Le certificat SSL dépend de votre hébergeur, pas de WordPress. Si votre hébergeur propose Let's Encrypt (OVH, PlanetHoster, Infomaniak), activez-le depuis votre panneau de contrôle, puis installez le plugin Really Simple SSL pour migrer automatiquement toutes les URLs internes. Si votre hébergeur ne propose pas de SSL gratuit en 2026, changez d'hébergeur — c'est un standard absolu qui ne devrait pas être payant.
+Non. Le certificat SSL dépend de votre hébergeur, pas de WordPress. Si votre hébergeur propose Let's Encrypt (OVH, PlanetHoster, Infomaniak), activez-le depuis votre panneau de contrôle, puis installez le plugin Really Simple SSL pour migrer automatiquement toutes les URLs internes. Si votre hébergeur ne propose pas de SSL gratuit en 2026, changez d'hébergeur — c'est un standard absolu qui ne devrait pas être payant. Après activation, videz le cache WordPress (via WP Rocket, LiteSpeed Cache ou W3 Total Cache) et vérifiez que le plugin Yoast ou Rank Math a bien mis à jour le sitemap avec les URLs https:// — un sitemap encore en http:// retarderait la ré-indexation Google de plusieurs semaines.
 
 ### Le passage en HTTPS fait-il perdre du référencement ?
 
