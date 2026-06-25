@@ -5742,6 +5742,8 @@ Assurez-vous que votre [site e-commerce](/services/sites-web/site-ecommerce) est
 
 4 formats de contenu classés par efficacité commerciale : 1) Les Reels — format le plus poussé par l'algorithme, durée idéale 15 à 30 secondes, accroche dans les 3 premières secondes, musique trending. Types qui convertissent : unboxing, tutoriels d'utilisation, avant/après, coulisses de fabrication, témoignages vidéo. 2) Les Carrousels — meilleur taux d'engagement après les Reels, première slide accrocheuse, slides 2 à 9 avec contenu de valeur, dernière slide CTA + tag produit. 3) Les Stories — idéales pour la conversion directe via sticker lien ou sticker produit, sondages, comptes à rebours pour les promotions. 4) Les Lives Shopping — présentez vos produits en direct, répondez aux questions en temps réel, produits taguables pendant le live.
 
+**Calendrier éditorial Instagram recommandé pour une boutique :** Lundi : Reel produit phare (avant/après ou tutoriel) — Mercredi : Carrousel éducatif (guide d'entretien, conseils d'utilisation) — Vendredi : Story interactive (sondage, quiz, compte à rebours promo weekend) — Dimanche : Post coulisses (fabrication, emballage, équipe). Ce rythme de 4 contenus par semaine est soutenable sur la durée et génère un taux d'engagement constant sans épuisement créatif.
+
 La règle de contenu 70-20-10 pour ne pas passer pour un catalogue :
 - **70%** de contenu de valeur (éducation, inspiration, divertissement)
 - **20%** de contenu de marque (coulisses, équipe, valeurs)
