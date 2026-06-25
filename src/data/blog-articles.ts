@@ -3267,6 +3267,19 @@ Méthode de sélection en 4 étapes :
 3. Analysez les 10 premiers résultats pour chaque terme — pouvez-vous faire mieux ?
 4. Sélectionnez 3 à 5 mots-clés prioritaires à fort potentiel commercial
 
+**Exemple concret :** un électricien à Nantes souhaitait se positionner sur "électricien Nantes". Trop compétitif pour commencer. Analyse des variantes : "électricien Nantes urgence", "dépannage électrique Nantes nuit", "pose prise électrique Nantes tarif" — chacun avec 50 à 200 recherches/mois et 0 à 3 concurrents bien optimisés. En 3 mois de travail, il a atteint la position 1 sur 4 variantes longue traîne qui lui génèrent 6 à 8 appels qualifiés par semaine.
+
+## Comment construire un planning de contenu pour progresser sur Google ?
+
+La régularité est l'une des variables les plus sous-estimées du SEO. Google favorise les sites qui publient du contenu de qualité de façon régulière — c'est un signal d'activité et de fraîcheur. Un planning réaliste pour un solopreneur ou une PME : 2 articles par mois de 1 000 à 1 500 mots, chacun ciblant un mot-clé spécifique.
+
+**Structure d'un planning SEO sur 6 mois :**
+- Mois 1-2 : pages de services et homepage optimisées (fondations)
+- Mois 3-4 : 4 à 6 articles de blog ciblant des mots-clés longue traîne clients
+- Mois 5-6 : pages locales (si plusieurs villes desservies), études de cas, FAQ
+
+**Priorisez le contenu qui génère des clients :** les articles "comment choisir un X", "combien coûte X", "meilleur X pour Y" ont une intention commerciale forte et convertissent mieux que les articles purement informationnels. Un article bien placé sur "combien coûte une installation électrique" génère des demandes de devis directes.
+
 ## Comment créer le contenu qui obtient la position 1 sur Google ?
 
 Pour créer du contenu qui obtient la position 1, votre page doit être objectivement meilleure que tout ce qui existe déjà sur le sujet selon 5 critères : plus complète (couvrir tous les angles), plus à jour (données et exemples récents), plus actionnable (conseils concrets et applicables), plus visuelle (images, schémas, tableaux), et mieux structurée (H2/H3 clairs, sommaire). Les pages en position 1 contiennent en moyenne 1 890 mots — mais la longueur n'est pas un objectif en soi : écrivez autant que nécessaire pour couvrir complètement le sujet.
