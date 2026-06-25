@@ -4648,6 +4648,18 @@ CPC moyens par secteur en France (référence 2026) :
 
 La méthode de calcul inverse part de vos objectifs pour remonter au budget nécessaire. Formule : budget mensuel = nombre de clients souhaités × coût d'acquisition client (CAC). Exemple concret pour une PME locale : objectif 20 clients/mois, taux de conversion du site 3%, CPC moyen 2€ → 20 / 0,03 = 667 clics nécessaires × 2€ = 1 334€/mois. Vérification de rentabilité : 20 clients × panier moyen 500€ = 10 000€ de CA / 1 334€ de budget = ROAS 7,5× (excellent).
 
+Les 3 métriques à calculer avant de lancer toute campagne publicitaire :
+
+**1. Votre CAC maximal acceptable :**
+(panier moyen × taux de marge) - coûts fixes = valeur nette par client
+Si cette valeur est 200€, votre CAC ne doit pas dépasser 200€ pour rester rentable.
+
+**2. Votre budget minimum viable :**
+Pour sortir de la phase d'apprentissage Google Ads, il faut 50 conversions/semaine = 200 conversions/mois. Si votre taux de conversion est 3% et votre CPC est 3€, il vous faut 6 667 clics × 3€ = 20 000€. Impossible pour une PME ? Réduisez l'objectif à 10 conversions/semaine et acceptez une optimisation plus lente sur 3 mois.
+
+**3. Le seuil de rentabilité :**
+Budget investi / (taux de conversion × panier moyen) = nombre de clics pour couvrir le budget. En dessous de ce seuil, chaque campagne est déficitaire.
+
 Budgets recommandés par plateforme et niveau d'ambition :
 
 | Plateforme | Budget test | Fonctionnel | Compétitif |
