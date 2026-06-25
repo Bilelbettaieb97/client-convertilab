@@ -2485,6 +2485,8 @@ Chez ConvertiLab, le SEO technique (structure, balises title/meta, vitesse, plan
 
 En 2026, Google intègre les **Core Web Vitals** dans son algorithme de classement. Un site lent perd des positions et du trafic en même temps qu'il perd des conversions. Sur les 150+ sites ConvertiLab, le score PageSpeed mobile moyen à la livraison est de 88/100.
 
+![Vitesse site web impact conversions - Core Web Vitals LCP CLS INP Google](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
+
 [Tester la vitesse de mon site gratuitement →](/speed-check)
 
 ## Que sont les Core Web Vitals et pourquoi Google s'en sert pour classer les sites ?
@@ -2546,6 +2548,8 @@ Pour rendre son site web plus rapide concrètement, les 4 actions les plus effic
 
 Découvrez nos [services de création de sites web](/services/sites-web) livrés avec un score PageSpeed 85+/100 sur mobile.
 
+![Optimisation vitesse web - images WebP lazy loading CDN cache JavaScript](https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80)
+
 ## FAQ — Questions sur la vitesse de site web
 
 ### Comment mesurer la vitesse de son site web gratuitement ?
@@ -2558,7 +2562,15 @@ Non, la vitesse est un facteur parmi d'autres (contenu, backlinks, autorité du 
 
 ### Combien de temps prend l'optimisation vitesse d'un site existant ?
 
-Les optimisations à impact rapide (images WebP, suppression scripts inutiles, activation cache) prennent 1 à 2 jours sur un site existant et peuvent gagner 20 à 40 points de PageSpeed. Une refonte technique plus profonde (migration WordPress vers Next.js) prend 3 à 6 semaines mais amène généralement le score de 40-55/100 à 85-95/100.`,
+Les optimisations à impact rapide (images WebP, suppression scripts inutiles, activation cache) prennent 1 à 2 jours sur un site existant et peuvent gagner 20 à 40 points de PageSpeed. Une refonte technique plus profonde (migration WordPress vers Next.js) prend 3 à 6 semaines mais amène généralement le score de 40-55/100 à 85-95/100.
+
+Cas pratique : un cabinet d'architectes à Bordeaux avait un site avec 35 photos JPEG de 4-8 Mo chacune. Score PageSpeed : 18/100, temps de chargement : 11 secondes. Après conversion des images en WebP et activation du lazy loading, le score est monté à 74/100 en 4 heures de travail — sans toucher au code ni au design. Le taux de rebond a baissé de 76% à 52% en 2 semaines.
+
+### Un bon score PageSpeed garantit-il un site qui génère des clients ?
+
+Non — PageSpeed mesure les performances techniques, pas la qualité du contenu, du copywriting ou de l'offre. Un site ultra-rapide avec un message flou et sans CTA visible ne convertira pas. La vitesse est une condition nécessaire mais non suffisante. Pensez-y comme un prérequis : sans vitesse, vous avez un problème technique bloquant. Avec vitesse, vous pouvez travailler sur ce qui génère vraiment des clients : la proposition de valeur, la preuve sociale et l'expérience utilisateur.
+
+![Score PageSpeed audit technique - recommandations priorisées gains conversions](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`,
   },
   {
     slug: "hebergement-web-guide-debutant",
