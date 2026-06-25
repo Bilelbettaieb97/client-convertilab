@@ -5759,6 +5759,8 @@ Pour les Instagram Ads : Collection Ads (vitrine immersive), Shopping Ads (tags 
 
 **Les hashtags en 2026 — moins c'est plus :** L'algorithme Instagram ne favorise plus les posts surchargés de hashtags (20 à 30). La recommandation actuelle est 3 à 5 hashtags très ciblés : 1 hashtag de niche exacte, 1 hashtag de communauté, 1 hashtag de ville ou région si pertinent. Placez-les en commentaire plutôt qu'en légende pour un profil plus propre — l'impact est identique.
 
+**Comment scaler ses Ads Instagram sans bruler son budget :** Commencez avec 3 Reels organiques qui performent bien (taux d'engagement > 5%), puis boostez uniquement ceux qui atteignent naturellement une audience engagée. Utilisez les Lookalike Audiences basées sur vos acheteurs existants (1% lookalike = profil très similaire à vos meilleurs clients) plutôt que de cibler par intérêts génériques. Retargetez systématiquement les visiteurs de fiches produits qui n'ont pas acheté — c'est le segment avec le meilleur ROAS (souvent 5 à 15×) pour un coût par clic minimal.
+
 Estimez votre budget publicitaire avec notre [estimateur Ads](/estimateur-ads).
 
 ## FAQ — Questions sur la vente sur Instagram
