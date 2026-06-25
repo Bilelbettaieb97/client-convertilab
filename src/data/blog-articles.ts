@@ -4835,7 +4835,7 @@ Les 3 méthodes d'installation GA4 selon votre situation :
 
 ## Quels rapports Google Analytics 4 surveiller chaque semaine pour piloter son activité ?
 
-Les 5 rapports GA4 indispensables à maîtriser sont : 1) Rapport d'acquisition (Rapports > Cycle de vie > Acquisition) qui indique d'où viennent vos visiteurs — Organic Search (SEO), Social, Email, Paid Search. 2) Rapport d'engagement (Pages et écrans) qui montre ce que font vos visiteurs sur chaque page. 3) Rapport Temps Réel pour tester une installation ou observer le comportement en direct. 4) Explorations > Funnel pour mesurer où vous perdez des prospects dans votre tunnel. 5) Rapport de conversion pour suivre les soumissions de formulaires, achats et clics téléphone.
+Les 5 rapports GA4 indispensables à maîtriser sont : 1) Rapport d'acquisition (Rapports > Cycle de vie > Acquisition) qui indique d'où viennent vos visiteurs — Organic Search (SEO), Social, Email, Paid Search. 2) Rapport d'engagement (Pages et écrans) qui montre ce que font vos visiteurs sur chaque page. 3) Rapport Temps Réel pour tester une installation ou observer le comportement en direct. 4) Explorations > Funnel pour mesurer où vous perdez des prospects dans votre tunnel. 5) Rapport de conversion pour suivre les soumissions de formulaires, achats et clics téléphone. Pour les PME qui débutent avec GA4, commencez uniquement par les rapports 1 et 5 — acquisition et conversions. Maîtrisez ces deux avant de vous aventurer dans les explorations avancées.
 
 Canaux d'acquisition à surveiller dans GA4 :
 - **Organic Search** : trafic Google naturel — mesure l'efficacité de votre SEO
