@@ -5343,7 +5343,7 @@ Les premiers résultats apparaissent généralement en 3 à 6 mois pour un site 
 
 ### Faut-il un blog sur son site e-commerce pour faire du SEO ?
 
-Un blog augmente considérablement le trafic organique car il cible les requêtes informationnelles (guides d'achat, comparatifs, tutoriels) qui amènent des visiteurs en phase de considération. C'est particulièrement efficace pour les produits avec un long cycle d'achat (ameublement, électroménager, mode premium). Mais le contenu des fiches et catégories produits est prioritaire : optimisez ces pages avant d'investir dans un blog.
+Un blog augmente considérablement le trafic organique car il cible les requêtes informationnelles (guides d'achat, comparatifs, tutoriels) qui amènent des visiteurs en phase de considération. C'est particulièrement efficace pour les produits avec un long cycle d'achat (ameublement, électroménager, mode premium). Mais le contenu des fiches et catégories produits est prioritaire : optimisez ces pages avant d'investir dans un blog. La stratégie de maillage interne blog→produit est puissante : un article "Comment choisir son canapé" qui pointe vers vos catégories de canapés transfère de l'autorité SEO vers les pages commerciales et génère un trafic qualifié en phase d'achat.
 
 ### Comment éviter que Google indexe les pages filtrées de ma boutique ?
 
