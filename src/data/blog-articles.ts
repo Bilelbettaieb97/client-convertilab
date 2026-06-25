@@ -4325,7 +4325,7 @@ Le tunnel digital moderne avec ses métriques clés :
 
 ## Comment analyser son tunnel de conversion actuel et identifier les points de fuite ?
 
-Pour analyser son tunnel de conversion, les 3 outils indispensables sont : Google Analytics 4 (parcours utilisateurs, taux de rebond, pages de sortie — gratuit), Hotjar ou Microsoft Clarity (heatmaps, enregistrements de sessions — freemium), et Google Search Console (performances des pages d'entrée). La question centrale est : où les visiteurs quittent-ils le site ? La page avec le plus fort taux de rebond est votre priorité n°1.
+Pour analyser son tunnel de conversion, les 3 outils indispensables sont : Google Analytics 4 (parcours utilisateurs, taux de rebond, pages de sortie — gratuit), Hotjar ou Microsoft Clarity (heatmaps, enregistrements de sessions — freemium), et Google Search Console (performances des pages d'entrée). La question centrale est : où les visiteurs quittent-ils le site ? La page avec le plus fort taux de rebond est votre priorité n°1. Microsoft Clarity est particulièrement recommandé aux débutants car il est entièrement gratuit et offre des enregistrements de session illimités — vous pouvez regarder précisément ce que font vos visiteurs en temps réel.
 
 Questions à se poser pour diagnostiquer son tunnel :
 - Quelle est la page avec le taux de rebond le plus élevé ?
