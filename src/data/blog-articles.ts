@@ -3775,7 +3775,7 @@ Le SEO génère du trafic organique (gratuit au clic) mais nécessite 3 à 12 mo
 
 ## Quand choisir le SEO et quand choisir le SEA pour son entreprise ?
 
-Le SEO est idéal quand votre budget marketing est limité sur le long terme, quand les CPC de votre secteur sont élevés (artisanat, juridique, médical), quand vous pouvez attendre 3 à 6 mois pour les résultats, et quand vous souhaitez construire une autorité de marque durable. Le SEA est idéal quand vous lancez une activité et avez besoin de trafic immédiatement, quand vous avez un événement ou une promotion limitée dans le temps, ou quand vous voulez tester un marché avant d'investir en SEO.
+Le SEO est idéal quand votre budget marketing est limité sur le long terme, quand les CPC de votre secteur sont élevés (artisanat, juridique, médical), quand vous pouvez attendre 3 à 6 mois pour les résultats, et quand vous souhaitez construire une autorité de marque durable. Le SEA est idéal quand vous lancez une activité et avez besoin de trafic immédiatement, quand vous avez un événement ou une promotion limitée dans le temps, ou quand vous voulez tester un marché avant d'investir en SEO. En pratique, 90% des entrepreneurs ConvertiLab terminent avec les deux canaux actifs — la question n'est pas "l'un ou l'autre" mais "dans quel ordre et dans quelles proportions".
 
 Quand privilegier le SEO :
 - Budget marketing limité sur la durée
