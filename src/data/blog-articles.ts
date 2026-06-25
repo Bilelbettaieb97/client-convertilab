@@ -1809,6 +1809,8 @@ Une agence web sérieuse facture entre 600€ et 2 500€ pour un site vitrine p
 
 Les deux fonctionnent très bien en 2026. L'essentiel est la réactivité et la qualité de communication. Une agence en remote peut être plus réactive qu'une agence locale si elle a de bonnes pratiques de gestion de projet. L'avantage d'une agence locale est la possibilité de se rencontrer physiquement — utile pour les projets complexes ou si vous préférez travailler en face à face.
 
+En 2026, la grande majorité des projets web se déroulent entièrement à distance avec succès : maquettes partagées via Figma, suivi de projet via Notion ou ClickUp, et appels vidéo pour les points importants. Le critère géographique est beaucoup moins important que la compétence technique et la qualité de la relation client.
+
 ### Quel est le délai réaliste pour créer un site web avec une agence ?
 
 Comptez 2 à 4 semaines pour un site vitrine, 1 à 3 mois pour un e-commerce et 1 à 2 semaines pour une landing page simple. Ces délais incluent le brief, les maquettes, le développement et les tests. Méfiez-vous des agences qui promettent un site complet en 48h — soit c'est un template, soit les tests seront expédiés.
