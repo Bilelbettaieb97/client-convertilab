@@ -4457,6 +4457,15 @@ Répartition type du budget marketing pour une PME (2 000€/mois) :
 
 Un plan marketing digital sur 12 mois se décompose en 3 phases. Phase 1 (mois 1-3) : les fondations — audit du site, installation Analytics + Search Console, définition des personas, stratégie de contenu, tracking des conversions. Phase 2 (mois 4-6) : l'accélération — lancement des campagnes publicitaires, publication SEO régulière, email automation, premiers A/B tests. Phase 3 (mois 7-12) : l'optimisation — scale des canaux performants, retargeting, programme de fidélisation.
 
+La grande erreur des PME est de sauter les phases 1 et 2 pour aller directement à l'optimisation. Sans fondations (tracking, personas, site performant), vous optimisez à l'aveugle. Les 3 premiers mois de "mise en place" peuvent sembler peu spectaculaires, mais ils garantissent que les investissements des phases suivantes seront mesurables et scalables.
+
+**Les 5 indicateurs à valider avant de scaler son budget :**
+1. Le tracking de conversion fonctionne (chaque lead est attribué à une source)
+2. Le site web convertit à > 3% (sinon tout budget Ads est perdu)
+3. Le CAC est connu pour au moins un canal
+4. La valeur vie client (LTV) est calculée et supérieure au CAC
+5. Il existe un processus de closing qui transforme les leads en clients
+
 KPIs essentiels à suivre mensuellement :
 - **Acquisition** : trafic organique, leads générés par canal, CAC, ROAS
 - **Conversion** : taux de conversion global et par page, taux de rebond
