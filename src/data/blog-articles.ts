@@ -5598,6 +5598,8 @@ Une politique de retour généreuse n'est pas un coût — c'est un argument com
 
 **Différenciez votre retour selon la catégorie produit :** Pour les produits d'hygiène ou personnalisés, indiquez clairement "non retournable" dès la fiche produit — la loi le permet pour certaines catégories. Pour les vêtements et chaussures (taux de retour 40 à 50%), proposez un échange de taille gratuit pour décourager le retour pur et simple. Ces nuances réduisent votre taux de retour de 10 à 15% sans pénaliser la confiance client.
 
+**Les e-commerçants avancés utilisent la livraison comme outil de fidélisation :** offrez la livraison express gratuite aux clients ayant commandé 3 fois ou plus, proposez une garantie "livré en 48h ou offert" pour les membres de votre programme fidélité, et envoyez un SMS de tracking personnalisé 1h avant la livraison. Ces micro-attentions coûtent peu et génèrent des témoignages spontanés et des recommandations.
+
 Pour un site e-commerce intégrant une logistique optimisée, [contactez notre équipe](/contact).
 
 ## FAQ — Questions sur la livraison e-commerce
