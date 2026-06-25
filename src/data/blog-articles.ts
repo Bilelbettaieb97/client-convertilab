@@ -2894,7 +2894,7 @@ Pour un site neuf, comptez 6 à 12 mois avant de voir des positions stables sur 
 
 ### Le SEO est-il vraiment gratuit par rapport à la publicité ?
 
-Le trafic généré par le SEO est gratuit (vous ne payez pas au clic), mais le travail d'optimisation représente un investissement en temps ou en budget si vous faites appel à un professionnel. Sur 12 mois, un article SEO bien optimisé continue d'attirer des visiteurs sans coût supplémentaire, alors qu'une campagne Google Ads s'arrête dès que vous coupez le budget. Le SEO est le canal avec le meilleur ROI à 18-24 mois.
+Le trafic généré par le SEO est gratuit (vous ne payez pas au clic), mais le travail d'optimisation représente un investissement en temps ou en budget si vous faites appel à un professionnel. Sur 12 mois, un article SEO bien optimisé continue d'attirer des visiteurs sans coût supplémentaire, alors qu'une campagne Google Ads s'arrête dès que vous coupez le budget. Le SEO est le canal avec le meilleur ROI à 18-24 mois. Pour un artisan ou un prestataire de services local, un investissement de 500€ dans un audit et une optimisation SEO peut générer des leads pendant 3 à 5 ans sans coût additionnel.
 
 ### Faut-il faire le SEO soi-même ou engager une agence ?
 
