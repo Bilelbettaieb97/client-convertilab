@@ -1408,6 +1408,10 @@ Non, les CGU (conditions générales d'utilisation) ne sont pas légalement obli
 
 **25% des sites web** ont un fichier robots.txt mal configuré ou un sitemap absent — selon Screaming Frog. Ces deux fichiers sont invisibles pour les visiteurs, mais un robots.txt avec une erreur de syntaxe peut bloquer l'indexation de tout votre site en quelques minutes.
 
+Ce guide explique le rôle de ces deux fichiers, les erreurs à éviter absolument, et comment les générer et soumettre correctement en moins de 10 minutes.
+
+![SEO technique robots.txt sitemap XML - indexation Google Search Console](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80)
+
 [Générer votre robots.txt et sitemap XML gratuitement →](/generateur-robots-sitemap)
 
 ## À quoi servent le robots.txt et le sitemap XML pour le référencement Google ?
@@ -1450,6 +1454,29 @@ Les erreurs fréquentes à éviter :
 | Sitemap absent du robots.txt | Google met plus de temps à le trouver | Ajouter Sitemap: https://domain.com/sitemap.xml |
 | URLs relatives dans le sitemap | Sitemap invalide (rejeté par Search Console) | Utiliser des URLs absolues (https://...) |
 | Sitemap avec pages noindex | Incohérence nuisant au crawl budget | Exclure les pages noindex du sitemap |
+
+![Erreurs robots.txt - Disallow incorrect, sitemap invalide, indexation bloquée](https://images.unsplash.com/photo-1581472723648-909f4851d4ae?w=800&q=80)
+
+## Ce qu'il faut faire après avoir généré ses fichiers
+
+Générer les fichiers n'est que la première étape. Voici le processus complet pour que Google les prenne en compte :
+
+**1. Uploadez robots.txt à la racine de votre serveur**
+Connectez-vous via FTP ou cPanel et déposez le fichier à la racine de votre domaine. Vérifiez qu'il est accessible en tapant domain.com/robots.txt dans votre navigateur.
+
+**2. Placez le sitemap.xml et vérifiez son accessibilité**
+Même démarche : placez le sitemap.xml à la racine et confirmez son accès via domain.com/sitemap.xml. Le fichier doit retourner du XML structuré, pas une page d'erreur 404.
+
+**3. Soumettez le sitemap dans Google Search Console**
+Dans Search Console, allez dans "Sitemaps" (menu gauche), entrez l'URL de votre sitemap et cliquez "Envoyer". Google commence à crawler dans les heures suivantes.
+
+**4. Surveillez le rapport d'indexation**
+Dans Search Console, consultez "Pages" pour voir combien de vos URLs sont indexées vs soumises. Si des pages sont "exclues", le rapport indique pourquoi (noindex, erreur 404, URL canonique différente, etc.).
+
+**5. Mettez à jour le sitemap à chaque nouvelle page**
+Si vous ajoutez une page à votre site et ne mettez pas à jour le sitemap, Google peut mettre des semaines à la découvrir naturellement. Régénérez et re-soumettez le sitemap à chaque publication majeure.
+
+![Google Search Console - soumission sitemap, rapport indexation, pages crawlées](https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80)
 
 ## FAQ — Questions fréquentes sur robots.txt et sitemap XML
 
