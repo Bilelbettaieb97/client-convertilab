@@ -5526,7 +5526,7 @@ Pour le SEO des images : nommez vos fichiers avec des mots-clés (sac-cuir-marro
 
 ### Combien de photos par produit faut-il sur une boutique en ligne ?
 
-Minimum 4 photos par produit : un packshot sur fond blanc, deux vues d'angles différents, et une photo lifestyle en situation. Pour les produits à forte valeur (supérieure à 100€), 8 à 12 photos sont recommandées, incluant des zooms sur les détails et idéalement une vidéo courte de 5 à 10 secondes.
+Minimum 4 photos par produit : un packshot sur fond blanc, deux vues d'angles différents, et une photo lifestyle en situation. Pour les produits à forte valeur (supérieure à 100€), 8 à 12 photos sont recommandées, incluant des zooms sur les détails et idéalement une vidéo courte de 5 à 10 secondes. Les études montrent que passer de 1 à 3 photos par produit augmente le taux de conversion de 24% en moyenne ; passer de 3 à 8 photos l'augmente encore de 18% supplémentaires sur les produits à fort panier moyen.
 
 ### Faut-il un photographe professionnel pour son e-commerce ?
 
