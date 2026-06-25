@@ -6803,6 +6803,14 @@ Ce que Fresha ne dit pas :
 
 **Un site web sur-mesure + intégration Fresha ou Planity** donne le meilleur des deux mondes : vous êtes propriétaire de votre site et de votre SEO, et vous utilisez un outil de réservation professionnel pour gérer l'agenda. C'est la configuration que recommande ConvertiLab pour les salons de coiffure.
 
+**Comparatif rapide :**
+
+| Solution | Propriété | SEO | Commission | Coût annuel |
+|----------|-----------|-----|------------|-------------|
+| Fresha seul | Non | Mauvais (fresha.com) | Sur nvx clients | 0€ |
+| Site vitrine + Fresha | Oui | Excellent | Sur nvx clients via Fresha | 500€ + 120€ hébergement |
+| Site vitrine seul | Oui | Excellent | Aucune | 500€ + 120€ hébergement |
+
 ## Un site coiffeur peut-il se rentabiliser rapidement ?
 
 Le calcul est simple. En France, « coiffeur [ville] » génère entre 200 et 3 000 recherches par mois selon la ville. Si votre site attire 100 visiteurs/mois et que 5% réservent (objectif réaliste avec un bon site), c'est 5 nouveaux clients par mois.
@@ -6812,6 +6820,8 @@ Un client coiffeur dépense en moyenne 45€ à 80€ par visite et revient 4 à
 5 nouveaux clients × 300€ de valeur annuelle moyenne = **1 500€ de CA supplémentaire par mois**. Un site à 500€ amorti en moins d'une semaine une fois positionné.
 
 Exemple réel : un salon de coiffure en banlieue parisienne accompagné par ConvertiLab a doublé ses réservations en ligne dans les 90 jours suivant la mise en ligne de son site, grâce au SEO local sur « coiffeur [ville] » et à l'intégration d'un module de réservation.
+
+Autre calcul : les coiffeurs qui travaillent avec Fresha paient en moyenne 2€ à 5€ de commission par nouveau client apporté par la marketplace. Si vous recevez 20 nouveaux clients par mois via Fresha, c'est 40€ à 100€ par mois, soit 480€ à 1 200€ par an en commissions. Un site avec SEO local vous affranchit totalement de ces commissions après amortissement.
 
 ## Faut-il avoir Instagram avant d'avoir un site web ?
 
