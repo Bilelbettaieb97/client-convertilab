@@ -5858,7 +5858,11 @@ Trois vérifications rapides : (1) ouvrez votre site dans Chrome et regardez la 
         answer: "Oui, un audit SEO identifie précisément pourquoi votre site n’apparaît pas : problème d’indexation, balises manquantes, contenu insuffisant, vitesse de chargement, liens cassés. Chez ConvertiLab, notre outil d’audit SEO gratuit analyse votre site en 60 secondes et génère un rapport complet avec les priorités d’action.",
       },
     ],
-    content: `Un site qui n’apparaît pas sur Google a trois causes possibles : il n’est pas indexé, il est indexé mais trop mal positionné pour être visible, ou il a été pénalisé. La commande site:votredomaine.fr dans Google vous dira en 5 secondes dans quelle situation vous êtes. Le traitement dépend entièrement du diagnostic.
+    content: `Un site qui n’apparaît pas sur Google a trois causes possibles : il n’est pas indexé, il est indexé mais trop mal positionné pour être visible, ou il a été pénalisé. La commande **site:votredomaine.fr** dans Google vous dira en 5 secondes dans quelle situation vous êtes. Le traitement dépend entièrement du diagnostic — inutile de tout refaire si le problème est une balise noindex laissée par erreur.
+
+Ce guide suit la même logique qu’un médecin : on diagnostique avant de prescrire. Suivez les étapes dans l’ordre et vous saurez exactement quoi corriger.
+
+![Site web introuvable sur Google - diagnostic SEO](https://images.unsplash.com/photo-1572435555646-7ad9a149ad91?w=800&q=80)
 
 ## Comment savoir si votre site est indexé par Google ?
 
@@ -5879,6 +5883,22 @@ Google n’indexe pas un site pour cinq raisons principales, par ordre de fréqu
 - **Contenu vide ou dupliqué** : des pages sans contenu réel ou identiques à d’autres ne sont pas indexées.
 
 [Analyser votre site avec notre outil d’audit SEO gratuit](/seo-check)
+
+## Votre site a-t-il reçu une pénalité Google ?
+
+C’est le cas le moins fréquent mais le plus grave. Google pénalise les sites qui ont enfreint ses consignes aux webmasters — techniques de manipulation, contenu dupliqué à grande échelle, liens artificiels achetés.
+
+Il existe deux types de pénalités :
+
+**Pénalité manuelle** : un membre de l’équipe Google a examiné votre site et appliqué une sanction. Visible dans Google Search Console → Actions manuelles. Si vous voyez un message ici, c’est la cause de votre invisibilité.
+
+**Pénalité algorithmique** : une mise à jour de l’algorithme Google (Penguin, Panda, Helpful Content) a dégradé votre positionnement automatiquement. Pas de message dans Search Console — vous le détectez par une chute brutale de trafic corrélée à la date d’une mise à jour Google.
+
+Comment vérifier : consultez les dates des mises à jour Google Core Updates (disponibles sur le blog officiel Google Search Central) et comparez avec votre trafic dans Search Console. Une corrélation nette indique une pénalité algorithmique.
+
+La correction nécessite d’identifier et supprimer les pratiques sanctionnées (liens toxiques, contenu généré automatiquement, sur-optimisation) et parfois de soumettre une demande de réexamen.
+
+![Google Search Console - rapport de couverture et erreurs d’indexation](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
 
 ## Votre site est indexé mais n’apparaît pas en page 1 : pourquoi ?
 
@@ -5913,7 +5933,19 @@ Accédez à votredomaine.fr/robots.txt. Si vous voyez Disallow: / sans restricti
 **Étape 5 — Ajoutez du contenu réel**
 Google indexe les pages qui répondent à des questions. Même 500 mots bien structurés valent mieux qu’une page vitrine de 50 mots.
 
+![Soumettre un sitemap dans Google Search Console pour accélérer l'indexation](https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80)
+
 [Générer un robots.txt et sitemap optimisés gratuitement](/generateur-robots-sitemap)
+
+## Tableau de diagnostic : pourquoi votre site n'apparaît pas sur Google
+
+| Symptôme | Cause probable | Solution |
+|----------|---------------|---------|
+| site:domaine.fr = 0 résultat | Non indexé | Soumettre sitemap + demande indexation Search Console |
+| Indexé mais position 50+ | Contenu faible, pas de mots-clés ciblés | Optimisation on-page, contenu 800+ mots |
+| Chute soudaine de trafic | Pénalité algorithmique ou manuelle | Vérifier Search Console, corriger les causes |
+| Visible sur votre nom, invisible sur l'activité | Pas de page optimisée par service/ville | Créer pages dédiées avec mots-clés locaux |
+| Pages indexées mais aucun visiteur | Mots-clés sans volume de recherche | Recherche de mots-clés, cibler la longue traîne |
 
 ## En combien de temps Google indexe-t-il un nouveau site ?
 
