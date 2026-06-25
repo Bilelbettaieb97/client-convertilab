@@ -5403,6 +5403,13 @@ Les 5 techniques CRO avec le plus fort impact sont : 1) Clarifier la proposition
 
 L'A/B testing consiste à comparer deux versions d'une page pour identifier laquelle convertit le mieux. Règle fondamentale : testez un seul élément à la fois pour mesurer son impact isolément. Outils recommandés : Google Optimize (gratuit), VWO ou Optimizely pour les tests avancés, Hotjar pour les heatmaps et enregistrements de sessions. Un test valide nécessite au minimum 1 000 visiteurs par variante et 2 semaines de durée — en dessous, les résultats ne sont pas statistiquement fiables.
 
+**Comment interpréter un test A/B :** la variante B gagne si elle obtient un taux de conversion statistiquement supérieur avec un niveau de confiance de 95% minimum. La plupart des outils calculent cette signification statistique automatiquement. Méfiez-vous des "faux gagnants" : un pic sur les 3 premiers jours peut s'inverser sur 2 semaines complètes. Ne coupez jamais un test avant 7 jours complets de données, même si les résultats semblent évidents.
+
+**Les 3 erreurs A/B les plus coûteuses pour une PME :**
+- Tester avec un trafic trop faible (< 500 visiteurs/semaine = résultats non fiables)
+- S'arrêter dès que B dépasse A d'un seul jour (régression vers la moyenne)
+- Changer la page testée en cours de test (invalide toutes les données)
+
 Cycle d'amélioration continue pour le CRO :
 1. Collecter les données (Analytics, heatmaps, sondages utilisateurs)
 2. Analyser les points de friction (où abandonnent les visiteurs ?)
