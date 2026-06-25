@@ -5200,6 +5200,16 @@ Comparatif Stripe vs alternatives (tarifs 2026) :
 
 Pour configurer Stripe, créez un compte sur stripe.com, complétez la vérification d'identité (KYC), ajoutez vos coordonnées bancaires pour recevoir les virements, puis récupérez vos clés API. Deux types de clés : la clé publique (pk_...) utilisée côté client, et la clé secrète (sk_...) utilisée côté serveur uniquement — stockez-la toujours dans des variables d'environnement, jamais dans le code source. Configurez ensuite vos webhooks pour les événements clés (payment_intent.succeeded pour déclencher l'envoi de commande, payment_intent.payment_failed pour notifier le client).
 
+**La checklist de mise en ligne d'un checkout Stripe :**
+- Mode test activé pendant le développement (utilisez les cartes de test Stripe : 4242 4242 4242 4242)
+- Webhook configuré et testé avec Stripe CLI en local
+- Page de succès et page d'erreur personnalisées
+- Email de confirmation automatique configuré
+- Monitoring d'alerte sur les échecs de paiement > 5%
+- Conformité RGPD : mention des informations collectées dans les CGV
+
+Un checkout Stripe configuré proprement avec ces 6 points est plus sécurisé et plus performant que 90% des checkout e-commerce en France.
+
 Les 3 méthodes d'intégration selon votre niveau technique :
 - **Stripe Checkout** : page de paiement hébergée par Stripe, opérationnelle en moins d'une heure — idéale pour débuter
 - **Stripe Elements** : composants UI pré-construits intégrés dans votre formulaire — contrôle total du design
