@@ -4881,7 +4881,7 @@ Oui, Google Analytics 4 est entièrement gratuit pour les sites web standard. Il
 
 ### La différence entre GA4 et Universal Analytics ?
 
-Universal Analytics (l'ancienne version) a été définitivement désactivé en juillet 2023. GA4 est basé sur un modèle d'événements (et non plus de sessions), inclut le tracking cross-device (mobile + tablette + desktop), intègre l'IA pour des insights prédictifs, et est conçu pour le monde post-cookies. Si vous avez encore une propriété Universal Analytics active, il n'existe plus.
+Universal Analytics (l'ancienne version) a été définitivement désactivé en juillet 2023. GA4 est basé sur un modèle d'événements (et non plus de sessions), inclut le tracking cross-device (mobile + tablette + desktop), intègre l'IA pour des insights prédictifs, et est conçu pour le monde post-cookies. Si vous avez encore une propriété Universal Analytics active, il n'existe plus. La principale différence opérationnelle : GA4 mesure l'"engagement" (sessions actives > 10s ou avec conversion) plutôt que les "sessions" brutes, ce qui donne une image plus fidèle de la qualité réelle de votre trafic. Un taux d'engagement GA4 > 60% est généralement un bon indicateur d'audience qualifiée.
 
 ### Comment mesurer si mon site génère des leads avec GA4 ?
 
