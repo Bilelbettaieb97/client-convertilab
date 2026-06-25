@@ -1144,6 +1144,21 @@ Un audit design évalue l'interface utilisateur et l'expérience de navigation (
 
 Pour améliorer rapidement son score design, il faut commencer par les erreurs d'accessibilité (contraste insuffisant, taille de police trop petite) et les problèmes de responsive design sur mobile. Ces corrections sont généralement rapides à mettre en place dans un CMS et ont un impact immédiat sur les conversions. Ensuite, vérifiez que chaque page possède un seul bouton CTA principal clairement visible.
 
+Plan d'action rapide pour un site WordPress ou Wix :
+1. **Augmentez la taille de police** à 16px minimum si elle est en dessous
+2. **Vérifiez le contraste** du texte principal sur son fond (ratio min. 4.5:1 avec WebAIM Contrast Checker, gratuit)
+3. **Ajoutez le téléphone cliquable** en haut de chaque page : remplacez le texte par un lien href="tel:+33XXXXXXXXX" en HTML
+4. **Simplifiez le formulaire de contact** à 3 champs maximum
+5. **Remplacez les photos stock** par vos vraies photos ou des photos Unsplash de votre secteur
+
+### Quelle est la différence entre un audit design et un audit de conversion ?
+
+Un audit design évalue l'interface (ergonomie, accessibilité, responsive), tandis qu'un audit de conversion analyse le parcours client et les points de friction qui empêchent les visiteurs de devenir des leads ou des clients. Les deux sont liés : un mauvais design crée des frictions, et des frictions réduisent les conversions. Pour un entrepreneur, commencez par l'audit design gratuit — il identifie souvent 80% des problèmes de conversion les plus évidents.
+
+### En combien de temps les corrections design améliorent-elles les conversions ?
+
+Les corrections design impactent les conversions quasi immédiatement. Rendre le numéro de téléphone cliquable ou agrandir un bouton CTA sur mobile peut augmenter les contacts dans les 24 à 48 heures suivant la correction. Les changements de fond (refonte de la structure de navigation, réécriture des textes de conversion) prennent 2 à 6 semaines pour être visibles dans les statistiques.
+
 ![Résultats audit design - score conversions avant après corrections](https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80)
 
 [Lancer l'audit design UX de votre site →](/design-score)`
