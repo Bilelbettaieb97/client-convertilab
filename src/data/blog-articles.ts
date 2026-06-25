@@ -2117,6 +2117,8 @@ Pour rédiger un CTA qui pousse vraiment au clic, il faut utiliser un verbe d'ac
 
 Un A/B test sur le seul texte du CTA peut augmenter le taux de conversion de 20 à 35%. La règle : répétez votre CTA au minimum 3 fois sur une page de 1 000 à 1 500 mots — le visiteur doit pouvoir convertir à tout moment sans avoir à remonter.
 
+Dernière astuce CTA : évitez les formulations qui parlent de vous ("Nous contacter", "Demandez-nous un devis"). Préférez les formulations qui parlent du bénéfice obtenu par le visiteur : "Obtenir mon devis gratuit", "Démarrer mon projet". Ce simple changement de perspective peut booster le CTR de votre bouton de 15 à 25%.
+
 ## Comment le copywriting persuasif booste-t-il le taux de conversion d'une page ?
 
 Le copywriting persuasif booste le taux de conversion d'une landing page en structurant le texte pour déclencher une décision d'achat : identifier la douleur du visiteur, amplifier les conséquences de l'inaction, puis présenter votre offre comme la seule solution logique. Un design magnifique avec un texte médiocre ne convertira jamais autant qu'un design simple avec un texte percutant.
