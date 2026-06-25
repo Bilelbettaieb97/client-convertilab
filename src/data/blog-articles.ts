@@ -1805,7 +1805,7 @@ Un devis flou est toujours un signal d'alarme. Une agence sérieuse peut justifi
 
 Une agence web sérieuse facture entre 600€ et 2 500€ pour un site vitrine professionnel pour une PME ou un artisan, et entre 3 000€ et 15 000€ pour un e-commerce complet. Chez ConvertiLab, nos sites vitrines commencent à 990€ tout inclus — hébergement 1 an, SEO de base et formulaire de contact. En dessous de 300-400€, vous achetez un template revendu, pas un site sur-mesure.
 
-Pour contextualiser : si votre site génère un seul client supplémentaire par mois à 500€ de valeur vie, votre investissement de 1 000€ est rentabilisé en 2 mois. Posez-vous cette question avant de négocier : est-ce que je veux un site pas cher ou un site rentable ?
+Pour contextualiser : si votre site génère un seul client supplémentaire par mois à 500€ de valeur vie, votre investissement de 1 000€ est rentabilisé en 2 mois. Posez-vous cette question avant de négocier : est-ce que je veux un site pas cher ou un site rentable ? Les deux objectifs ne sont pas contradictoires, mais ils ne s'achètent pas au même endroit.
 
 ### Faut-il choisir une agence locale ou une agence en remote ?
 
