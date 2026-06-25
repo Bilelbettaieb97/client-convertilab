@@ -4820,6 +4820,8 @@ La technique des DMs proactifs : repérez les personnes qui regardent vos Storie
     tags: ["Google Analytics 4 débutant installation 2026", "comprendre données trafic site web", "configurer conversions GA4 PME", "rapports Google Analytics acquisition SEO", "suivi performances site web artisan"],
     content: `Google Analytics 4 (GA4) est l'outil de mesure d'audience le plus utilisé au monde. Gratuit, puissant et intégré à tout l'écosystème Google, il vous permet de comprendre précisément qui visite votre site, d'où ils viennent, ce qu'ils font et si vous atteignez vos objectifs commerciaux. Chez ConvertiLab, nous installons et configurons GA4 pour tous nos 150+ clients — c'est la première chose que nous faisons après la mise en ligne.
 
+![Google Analytics 4 - tableau de bord trafic acquisition conversions site web 2026](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
+
 [Analyser les performances de mon site →](/seo-check)
 
 ## Comment installer Google Analytics 4 sur son site web en 2026 ?
@@ -4852,6 +4854,8 @@ Pour configurer les conversions dans GA4, allez dans Admin > Événements, trouv
 - **Ne pas connecter Search Console** : la connexion GA4 + Search Console révèle les mots-clés qui génèrent du trafic
 - **Analyser des données trop récentes** : GA4 a un délai de traitement de 24 à 48h — ne prenez pas de décisions sur les données du jour
 
+![GA4 rapports conversions - form_submit events source trafic ROI canaux](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
 ## Comment lire ses données GA4 et prendre des décisions marketing basées sur les chiffres ?
 
 Les 3 métriques GA4 à surveiller chaque semaine : utilisateurs actifs sur 7 jours (évolution de votre audience), taux d'engagement supérieur à 60% (qualité du trafic — si < 40%, le contenu ou l'expérience utilisateur pose problème), et conversions par source (quels canaux génèrent le plus de leads). Interprétation pratique : si 80% de votre trafic vient de "Direct" et presque rien d'"Organic Search", votre SEO a besoin d'attention. Si votre page Services a 1 000 vues mais seulement 5 clics vers Contact, la page n'est pas convaincante. Planifiez une revue hebdomadaire de 15 minutes de ces 3 métriques.
@@ -4868,7 +4872,15 @@ Universal Analytics (l'ancienne version) a été définitivement désactivé en 
 
 ### Comment mesurer si mon site génère des leads avec GA4 ?
 
-Configurez un événement de conversion pour chaque formulaire de contact de votre site (événement form_submit ou une page de confirmation). Dans GA4, allez dans Rapports > Cycle de vie > Conversion et filtrez par "form_submit". Vous verrez combien de leads viennent du SEO, des réseaux sociaux, de vos emails. C'est la seule façon de connaître votre taux de conversion réel par canal.`
+Configurez un événement de conversion pour chaque formulaire de contact de votre site (événement form_submit ou une page de confirmation). Dans GA4, allez dans Rapports > Cycle de vie > Conversion et filtrez par "form_submit". Vous verrez combien de leads viennent du SEO, des réseaux sociaux, de vos emails. C'est la seule façon de connaître votre taux de conversion réel par canal.
+
+### Comment utiliser les données GA4 pour améliorer son SEO ?
+
+Connectez GA4 à Google Search Console (Admin > Liens > Propriété Search Console), puis accédez au rapport "Google Organic Search" dans GA4. Ce rapport hybride révèle quels mots-clés génèrent du trafic qualifié (clics sur vos pages de service), quelles pages ont un CTR faible malgré un bon positionnement (opportunité d'améliorer le meta title et description), et quelles requêtes déclenchent des impressions mais pas de clics (potentiel inexploité à adresser avec du contenu ciblé).
+
+**Cas concret ConvertiLab :** un serrurier à Lyon investissait 600€/mois en Google Ads sans savoir si les leads venaient des pubs ou du SEO. Après installation de GA4 avec conversion tracking, il a découvert que 74% de ses leads venaient du SEO (coût zéro) et seulement 26% des Ads (600€/mois). Il a réalloué 400€ de son budget Ads vers du contenu SEO additionnel — et son CA trimestriel a augmenté de 23%.
+
+![Google Analytics 4 Search Console - mots-clés CTR impressions SEO opportunités](https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80)`
   },
   {
     slug: "creer-boutique-en-ligne-guide-2026",
