@@ -5015,6 +5015,7 @@ Les 6 erreurs qui tuent les fiches produits :
 - Informations manquantes (taille, poids, matériaux, compatibilité)
 - CTA invisible ou peu visible
 - Pas de produits complémentaires (perd 10 à 30% de panier moyen)
+- FAQ absente sur la fiche : les questions non répondues créent des frictions qui font fuir les acheteurs indécis — intégrez une FAQ minimale de 3 à 5 questions directement sur chaque fiche produit
 
 ## Comment rédiger une description produit qui donne envie d'acheter ?
 
