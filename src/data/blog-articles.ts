@@ -5688,7 +5688,7 @@ Découvrez notre [portfolio](/portfolio) pour voir comment nous intégrons les a
 
 ### Combien d'avis faut-il pour être crédible en e-commerce ?
 
-Minimum 5 avis par produit pour commencer à influencer la décision d'achat. L'idéal est 20 à 30 avis par produit pour une crédibilité optimale. Pour votre site global, visez au moins 50 avis sur une plateforme comme Trustpilot ou Google. Commencez par collecter des avis sur vos produits et services les plus vendus.
+Minimum 5 avis par produit pour commencer à influencer la décision d'achat. L'idéal est 20 à 30 avis par produit pour une crédibilité optimale. Pour votre site global, visez au moins 50 avis sur une plateforme comme Trustpilot ou Google. Commencez par collecter des avis sur vos produits et services les plus vendus. Priorisez la régularité sur la quantité : 3 nouveaux avis par semaine sur 6 mois valent mieux que 100 avis collectés en une semaine — les algorithmes des plateformes favorisent les sources régulières et pénalisent les pics soudains.
 
 ### Peut-on acheter de faux avis pour améliorer sa note ?
 
