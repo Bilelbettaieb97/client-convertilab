@@ -3900,6 +3900,18 @@ Budget = (10 / 0,05) × 2 = 400€/jour
 
 Utilisez notre [estimateur de budget publicitaire](/estimateur-ads) pour une projection automatique.
 
+**La règle des mots-clés négatifs :** avant même de lancer, créez une liste de 30 à 50 mots-clés négatifs. Exemples pour un plombier : "formation", "emploi", "apprentissage", "gratuit", "DIY", "soi-même". Ces termes génèrent des clics de personnes qui ne sont pas des clients potentiels. Un débutant qui ignore les mots-clés négatifs peut perdre 40 à 60% de son budget sur des clics inutiles dès les premières semaines.
+
+## Comment configurer le suivi des conversions Google Ads ?
+
+Le suivi des conversions est la pierre angulaire d'une campagne rentable. Sans lui, vous pilotez à l'aveugle — vous ne savez pas quels mots-clés, annonces ou pages de destination génèrent des leads ou des ventes. Configuration en 3 étapes : (1) créez une action de conversion dans Google Ads (page de remerciement, appel téléphonique, formulaire soumis), (2) installez le tag sur votre site ou connectez Google Analytics 4, (3) attendez 30 conversions avant d'activer les stratégies d'enchères automatiques (Smart Bidding).
+
+Les principales conversions à suivre pour un site PME :
+- Soumission de formulaire (page /merci)
+- Appel téléphonique depuis le site
+- Clics sur le numéro de téléphone sur mobile
+- Ajout au panier et achat (e-commerce)
+
 ## Comment rédiger des annonces Google Ads qui génèrent des clics et des conversions ?
 
 Une annonce Google Ads efficace se compose de 3 titres (jusqu'à 30 caractères chacun) et 2 descriptions (jusqu'à 90 caractères). Le premier titre doit contenir le mot-clé principal, le deuxième une preuve sociale ou une offre unique, et le troisième un appel à l'action urgent. La cohérence entre l'annonce et la page de destination est le facteur numéro 1 du Quality Score — et un Quality Score élevé réduit votre CPC.
