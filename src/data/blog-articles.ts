@@ -2604,6 +2604,8 @@ Concrètement :
 
 Le type d'hébergement détermine directement la vitesse, la fiabilité et le coût de votre site.
 
+Un exemple concret : deux sites identiques, l'un hébergé sur un mutualisé à 3€/mois (TTFB : 1,8s, score PageSpeed : 42/100), l'autre sur Vercel (TTFB : 60ms, score PageSpeed : 94/100). Même code, même contenu, même design — mais la différence de conversion peut atteindre 30% uniquement grâce à l'hébergement. C'est pourquoi nous ne proposons plus de sites sur hébergement mutualisé chez ConvertiLab depuis 2023.
+
 ## Quelles sont les différences entre hébergement mutualisé, VPS et Vercel ?
 
 Les différences entre hébergement mutualisé, VPS et Vercel se résument à 3 variables : performances, prix et compétences techniques requises. Le mutualisé est accessible et bon marché mais limité ; le VPS est puissant mais demande de l'expertise ; Vercel et les plateformes cloud modernes offrent les meilleures performances automatiquement, souvent gratuitement pour les projets standards.
