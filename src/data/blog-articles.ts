@@ -5209,6 +5209,17 @@ Les 3 méthodes d'intégration selon votre niveau technique :
 
 Les fonctionnalités Stripe qui impactent le plus le taux de conversion sont : Link by Stripe (paiement en 1 clic via email + code SMS, augmente les conversions de 10 à 15% pour les clients récurrents), Klarna ou Afterpay pour le paiement fractionné (augmente le panier moyen de 20 à 40% sur les commandes supérieures à 100€), et la gestion automatique du 3D Secure qui réduit les abandons liés à l'authentification. Pour le mobile (67% des achats), Apple Pay et Google Pay sont indispensables — le paiement en 1 clic élimine la friction de la saisie des coordonnées bancaires.
 
+**Stripe Tax et la conformité TVA :** si vous vendez dans plusieurs pays européens, Stripe Tax calcule et collecte automatiquement la TVA applicable selon les règles de chaque pays. Cette fonctionnalité était jusqu'à récemment réservée aux grandes entreprises — elle est maintenant accessible à toute boutique Stripe pour 0,5% des transactions taxées. Indispensable pour les e-commerces qui veulent vendre en Europe sans recruter un expert-comptable spécialisé TVA internationale.
+
+**Les rapports Stripe pour piloter votre business :**
+- Volume de ventes par jour/semaine/mois avec comparatif période précédente
+- Top produits et paniers moyens
+- Taux de conversion du checkout (clics sur "Payer" vs paiements réussis)
+- Analyse des échecs de paiement par type d'erreur (carte refusée, 3DS échoué, fonds insuffisants)
+- Prévisions de trésorerie basées sur les virements à venir
+
+Ces rapports disponibles nativement dans le dashboard Stripe éliminent le besoin d'un outil analytics supplémentaire pour la partie financière de votre boutique.
+
 Bonnes pratiques de checkout pour maximiser les conversions :
 1. Afficher les logos des moyens de paiement acceptés (confiance visuelle)
 2. Montrer le total clairement avant la validation finale
