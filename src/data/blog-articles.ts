@@ -7218,7 +7218,7 @@ Ce guide vous donne 8 actions classées par impact réel, avec les outils gratui
 
 ## Action 1 : Installer Google Search Console (gratuit, priorité absolue)
 
-Avant d'optimiser quoi que ce soit, vous devez savoir où vous en êtes. Google Search Console est l'outil officiel de Google qui vous montre :
+Avant d'optimiser quoi que ce soit, vous devez savoir exactement où vous en êtes. Google Search Console est l'outil officiel de Google qui vous montre :
 - Sur quelles requêtes votre site apparaît déjà
 - Quelles pages reçoivent des clics et lesquelles sont ignorées
 - Les erreurs techniques que Google a détectées sur votre site
