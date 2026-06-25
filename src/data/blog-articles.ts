@@ -4961,6 +4961,8 @@ Cette checklist vous évite les 90% des raisons pour lesquelles les boutiques e-
 
 Un site e-commerce sans SEO est une boutique dans une ruelle déserte. Les fondamentaux SEO e-commerce : mots-clés stratégiques dans les titres de pages et fiches produits, URLs lisibles (exemple : /chaussures-running-homme plutôt que /product?id=123), descriptions uniques pour chaque produit (jamais le copier-coller fournisseur), balises meta optimisées, et maillage interne entre catégories et produits. Pour les 3 premiers mois, combinez Google Ads (trafic immédiat sur requêtes à fort intent commercial), réseaux sociaux (Instagram, TikTok selon votre cible), et email marketing (newsletter + relance panier abandonné). Budget acquisition minimum : 500€/mois.
 
+**La stratégie de contenu pour une boutique e-commerce :** créez un blog avec des articles sur les sujets autour de vos produits. Une boutique de cosmétiques naturels qui publie 2 articles/semaine ("comment hydrater sa peau sèche en hiver", "5 ingrédients naturels pour un teint éclatant") génère un trafic SEO qualifié dont 3 à 5% se convertissent en acheteurs — souvent avec un panier moyen supérieur aux visiteurs publicitaires, car ils sont venus chercher une solution précise. Le contenu SEO est l'investissement le plus durable pour une boutique en ligne.
+
 ![SEO boutique en ligne - mots-clés fiches produits URLs lisibles balises meta maillage interne](https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&q=80)
 
 Pour auditer votre boutique existante, utilisez notre [audit SEO gratuit](/seo-check).
