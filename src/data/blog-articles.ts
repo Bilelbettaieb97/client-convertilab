@@ -1836,6 +1836,8 @@ Notez que votre disponibilité influence aussi les délais : les agences les plu
 
 Chez ConvertiLab, nous avons créé plus de 150 sites pour des artisans, commerçants et prestataires de services. La majorité ont commencé par un site vitrine — et pour 80% d'entre eux, c'était le bon choix.
 
+![Site vitrine vs e-commerce - comparatif budget délais ROI PME](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
 [Demander une maquette gratuite →](/demande-maquette)
 
 ## Qu'est-ce qu'un site vitrine et à quoi sert-il concrètement ?
@@ -1893,6 +1895,23 @@ Questions décisives :
 - **Quel est votre budget initial ?** → Moins de 2 000€ : vitrine. Plus de 5 000€ : e-commerce envisageable.
 
 La bonne nouvelle : ces deux approches ne s'excluent pas. Beaucoup d'entreprises démarrent par un site vitrine puis ajoutent une section boutique 12 à 24 mois plus tard quand leur chiffre d'affaires le justifie.
+
+![E-commerce vs vitrine - tunnel commande, catalogue produits, paiement Stripe](https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80)
+
+## Cas pratiques — Ce que nos clients ont choisi et pourquoi
+
+**Cas 1 : Électricien indépendant à Lyon**
+Hésitait entre un site vitrine pour générer des devis et une boutique pour vendre des kits électriques. Choix final : site vitrine. Raison : ses clients ont besoin d'un diagnostic avant devis — impossible à automatiser. Résultat : 12 demandes de devis par mois via le formulaire dès la deuxième semaine.
+
+**Cas 2 : Créatrice de bijoux artisanaux à Bordeaux**
+Vendait exclusivement sur les marchés. Voulait élargir sa distribution. Choix : e-commerce sur Shopify intégré à son site vitrine ConvertiLab. Résultat : 40% de son chiffre d'affaires réalisé en ligne 6 mois après le lancement, sans marché supplémentaire.
+
+**Cas 3 : Coach en développement personnel à Paris**
+Proposait des coachings individuels (sur-mesure, donc vitrine) et des formations en ligne à prix fixe (e-commerce). Choix : site vitrine avec page de vente dédiée pour les formations, intégrée à Stripe Payment Link. Résultat : solution hybride à 2 500€ total au lieu de 8 000€ pour un e-commerce complet.
+
+Ces trois exemples illustrent que le bon choix dépend toujours du modèle commercial, jamais du secteur.
+
+![Cas pratiques site web artisan commerçant coach - choix vitrine e-commerce](https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80)
 
 ## FAQ — Questions fréquentes sur le choix entre vitrine et e-commerce
 
