@@ -4592,7 +4592,7 @@ KPIs spécifiques au retargeting :
 
 ### Le retargeting est-il compatible avec le RGPD ?
 
-Oui, à condition d'avoir le consentement de l'utilisateur via un bandeau de cookies conforme (ex : CookieYes, Axeptio). Le pixel ne doit se déclencher qu'après acceptation des cookies publicitaires. En pratique, 40 à 60% des visiteurs refusent les cookies en Europe — ce qui réduit mécaniquement la taille de vos audiences de retargeting, mais les personnes qui acceptent sont plus engagées.
+Oui, à condition d'avoir le consentement de l'utilisateur via un bandeau de cookies conforme (ex : CookieYes, Axeptio). Le pixel ne doit se déclencher qu'après acceptation des cookies publicitaires. En pratique, 40 à 60% des visiteurs refusent les cookies en Europe — ce qui réduit mécaniquement la taille de vos audiences de retargeting, mais les personnes qui acceptent sont plus engagées. Pour compenser cette réduction d'audience, Meta propose le "Advanced Matching" (envoi sécurisé de données cryptées côté serveur) qui permet de récupérer une partie des signaux perdus avec les refus de cookies, sans violer le RGPD.
 
 ### Combien coûte une campagne de retargeting ?
 
