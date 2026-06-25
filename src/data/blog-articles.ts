@@ -6851,11 +6851,11 @@ Ordre de priorité recommandé : site web + SEO local d'abord (acquisition), Ins
 
 5 critères à vérifier avant de signer :
 
-- **Elle a des réalisations dans le secteur beauté/coiffure** — demandez des URLs
-- **Le SEO local est inclus et détaillé** — pas juste « on fait du SEO », mais quels mots-clés, quelles pages
-- **Vous restez propriétaire du domaine et du code** — vérifiez le contrat
-- **La livraison est garantie avec une date** — un salon ne peut pas attendre 3 mois
-- **Le tarif est fixe, sans surprises** — obtenez un devis détaillé
+- **Elle a des réalisations dans le secteur beauté/coiffure** — demandez des URLs et visitez les sites sur mobile, pas seulement sur ordinateur
+- **Le SEO local est inclus et détaillé** — pas juste « on fait du SEO », mais quels mots-clés, quelles pages, avec quelles pages cibles dans votre ville
+- **Vous restez propriétaire du domaine et du code** — vérifiez le contrat : le code source et le nom de domaine doivent vous appartenir dès le premier paiement
+- **La livraison est garantie avec une date écrite dans le contrat** — un salon ne peut pas attendre 3 mois
+- **Le tarif est fixe, sans surprises** — obtenez un devis détaillé ligne par ligne, sans mention vague de "maintenance mensuelle obligatoire"
 
 [Voir nos réalisations de sites pour salons de coiffure](/portfolio)
 
