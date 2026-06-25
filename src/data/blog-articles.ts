@@ -4162,6 +4162,7 @@ Les KPIs essentiels à suivre mensuellement sont : taux d'engagement (likes + co
 Coût du community management en 2026 :
 - **En interne** : 25 à 35K€/an pour un CM junior + 15 à 20h/semaine minimum + outils (50-200€/mois)
 - **En agence** : à partir de 500€/mois pour une gestion basique, 1 000 à 3 000€/mois pour gestion complète avec création de contenu
+- **En solopreneur avec méthode batch** : 4 à 6h/semaine + 50€/mois d'outils pour une présence professionnelle sur 2 plateformes — le meilleur rapport temps/résultats pour les petits budgets
 
 ![KPIs réseaux sociaux - taux engagement portée organique croissance abonnés clics site](https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80)
 
