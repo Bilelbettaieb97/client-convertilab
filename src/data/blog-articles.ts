@@ -2572,6 +2572,8 @@ Cas pratique : un cabinet d'architectes à Bordeaux avait un site avec 35 photos
 
 Non — PageSpeed mesure les performances techniques, pas la qualité du contenu, du copywriting ou de l'offre. Un site ultra-rapide avec un message flou et sans CTA visible ne convertira pas. La vitesse est une condition nécessaire mais non suffisante. Pensez-y comme un prérequis : sans vitesse, vous avez un problème technique bloquant. Avec vitesse, vous pouvez travailler sur ce qui génère vraiment des clients : la proposition de valeur, la preuve sociale et l'expérience utilisateur.
 
+La bonne séquence : commencez par résoudre les problèmes de vitesse (ce qui bloque tout le reste), puis optimisez le contenu et le design. C'est la méthode que nous appliquons chez ConvertiLab pour toutes les refontes : performance d'abord, conversion ensuite.
+
 ![Score PageSpeed audit technique - recommandations priorisées gains conversions](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`,
   },
   {
