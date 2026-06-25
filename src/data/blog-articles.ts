@@ -6010,7 +6010,11 @@ Avant de passer à un professionnel, commencez par notre audit SEO gratuit : il 
         answer: "Oui, un site vitrine à 500€ bien conçu suffit pour attirer des clients locaux si le SEO local est correctement optimisé. Monsieur Arancini, restaurateur parisien accompagné par ConvertiLab, a rempli ses soirées du vendredi et samedi dès le premier mois après la mise en ligne, sans publicité payante.",
       },
     ],
-    content: `Un site internet pour un restaurant coûte entre 500€ et 3 000€ selon les fonctionnalités. Un site vitrine avec menu en ligne, galerie photos, horaires et formulaire de réservation est réalisable à partir de 500€. Les systèmes de commande en ligne ou de réservation avancée font monter le budget. Dans tous les cas, un seul client supplémentaire par semaine suffit à rentabiliser l'investissement.
+    content: `Un site internet pour un restaurant coûte entre **500€ et 3 000€** selon les fonctionnalités. Un site vitrine avec menu en ligne, galerie photos, horaires et formulaire de réservation est réalisable à partir de 500€. Les systèmes de commande en ligne ou de réservation avancée font monter le budget. Dans tous les cas, un seul client supplémentaire par semaine suffit à rentabiliser l'investissement.
+
+**Chiffres clés :** 81% des consommateurs consultent le menu d'un restaurant en ligne avant de décider d'y aller. 67% choisissent en fonction de la qualité des photos vues sur internet. Un restaurant sans site web perd en moyenne 30% de ses clients potentiels qui partent chez un concurrent visible sur Google.
+
+![Site web restaurant moderne avec menu en ligne](https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80)
 
 ## Quel est le prix d'un site web pour un restaurant en 2026 ?
 
@@ -6050,6 +6054,8 @@ La différence n'est pas dans la qualité visuelle — un site à 500€ peut ê
 - À 2 000€ : les réservations sont gérées automatiquement (créneaux, rappels SMS, liste d'attente)
 
 Pour un restaurant de quartier avec 20 à 40 couverts et 2 à 3 services par semaine, l'offre à 500€ est largement suffisante. Pour un établissement avec 80+ couverts et plusieurs services par jour, investir dans un module de réservation avancé fait gagner 30 à 60 minutes par jour.
+
+![Réservation en ligne restaurant - interface mobile](https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80)
 
 ## Un site restaurant peut-il se payer seul grâce au SEO local ?
 

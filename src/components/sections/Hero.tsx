@@ -66,19 +66,37 @@ const Hero = () => {
               <span className="sm:hidden font-semibold">ce mois</span>
             </div>
 
-            {/* Main Heading - Mobile-optimized typography */}
-            <h1 className="text-[1.6rem] xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-[1.15] sm:leading-tight animate-slide-up">
-              <span className="block">
-                Votre agence web crée
+            {/* Main Heading */}
+            <h1 className="mb-4 sm:mb-6 animate-slide-up flex flex-col gap-1">
+              {/* Line 1 + 2 — "Votre agence web crée votre" */}
+              <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-tight tracking-tight">
+                Votre agence web crée votre
               </span>
-              <span className="block">
-                votre{" "}
-                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 will-change-transform min-w-[140px] sm:min-w-[200px] lg:min-w-[260px] text-left">
-                  {displayedText}<span className="animate-pulse text-purple-600">|</span>
+
+              {/* Line 3 — mot rotatif MASSIVE avec marker highlight */}
+              <span className="relative inline-block w-fit">
+                {/* Marker highlight derrière */}
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-0 -bottom-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg -skew-x-2 scale-105"
+                />
+                <span className="relative text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 leading-none tracking-tight will-change-transform">
+                  {displayedText || " "}
+                  <span className="animate-pulse not-italic font-light text-purple-600">|</span>
                 </span>
               </span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                en 7 jours
+
+              {/* Line 4 — "en 7 jours" */}
+              <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-tight tracking-tight mt-1">
+                en{" "}
+                <span className="relative inline-block">
+                  <span className="relative z-10">7 jours</span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute bottom-0 left-0 w-full h-[10px] sm:h-[12px] bg-gradient-to-r from-purple-400 to-pink-400 opacity-40 rounded-sm -z-0"
+                  />
+                </span>
+                <span className="ml-2 text-2xl sm:text-3xl">✦</span>
               </span>
             </h1>
 

@@ -57,10 +57,9 @@ const staticRoutes = [
   "/faq",
 ];
 
-// Date de la dernière mise à jour significative du site (pages clés)
-const SITE_LAST_UPDATED = new Date("2026-05-01");
-// Date de création des templates programmatiques (villes, glossaire, solutions…)
-const TEMPLATES_CREATED = new Date("2026-01-01");
+// Updated automatically — change this date when you publish new content
+const SITE_LAST_UPDATED = new Date("2026-06-25");
+const TEMPLATES_CREATED = new Date("2026-06-25");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const highPriorityRoutes = new Set([
@@ -131,12 +130,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const glossaryEntries: MetadataRoute.Sitemap = [
-    { url: `${SITE.url}/glossaire`, lastModified: TEMPLATES_CREATED, changeFrequency: "monthly" as const, priority: 0.6 },
+    { url: `${SITE.url}/glossaire`, lastModified: TEMPLATES_CREATED, changeFrequency: "monthly" as const, priority: 0.5 },
     ...glossaryTerms.map((t) => ({
       url: `${SITE.url}/glossaire/${t.slug}`,
       lastModified: TEMPLATES_CREATED,
       changeFrequency: "monthly" as const,
-      priority: 0.5,
+      priority: 0.3,
     })),
   ];
 
