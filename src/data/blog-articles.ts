@@ -7104,7 +7104,10 @@ Photos avant/après (artisans), études de cas (consultants), avis clients authe
 Numéro de téléphone cliquable (crucial sur mobile), email, adresse si vous accueillez des clients, Google Maps si pertinent, formulaire de contact ou de devis. Ne cachez pas votre numéro — c'est le but du site.
 
 **5. Les informations légales**
-Mentions légales (obligatoires), politique de confidentialité (RGPD), conditions générales si vous faites signer des devis. Ces pages rassurent les visiteurs sur votre sérieux et sont exigées par la loi.
+Mentions légales (obligatoires), politique de confidentialité (RGPD), conditions générales si vous faites signer des devis. Ces pages rassurent les visiteurs sur votre sérieux et sont exigées par la loi. Leur absence est aussi un signal négatif pour Google, qui préfère les sites qui inspirent confiance.
+
+**Élément bonus : le blog**
+Un blog n'est pas indispensable pour un site vitrine de base, mais il multiplie votre visibilité SEO. Chaque article bien ciblé est une nouvelle "porte d'entrée" sur Google pour des requêtes que votre page d'accueil ne peut pas viser. Un plombier qui publie "comment déboucher un évier naturellement" peut toucher des personnes en phase de recherche qui deviennent ensuite clients pour une intervention plus complexe.
 
 ![Éléments d'un site vitrine - page d'accueil, services, témoignages](https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80)
 
