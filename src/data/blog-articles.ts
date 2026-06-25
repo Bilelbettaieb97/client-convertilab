@@ -1266,6 +1266,14 @@ Il n'y a pas de minimum technique imposé par Google, mais en dessous de 500€/
 
 Oui, c'est possible sur Google Ads Search si votre secteur n'est pas trop concurrentiel, votre landing page bien optimisée et votre offre claire. En pratique, le premier mois est souvent une phase d'apprentissage où le coût par acquisition est plus élevé qu'à terme. La rentabilité s'améliore généralement à partir du 2e ou 3e mois à mesure que Google optimise les enchères sur les segments les plus convertissants.
 
+### Quels chiffres surveiller en priorité dans son tableau de bord publicité ?
+
+Trois métriques suffisent pour piloter une campagne PME : le CPC réel (coût par clic), le taux de conversion (clics vers leads) et le coût par acquisition. Si votre CPA dépasse la valeur d'un client, la campagne perd de l'argent. Ignorez le CTR seul — un taux de clics élevé avec un taux de conversion bas indique que vos annonces attirent du trafic non qualifié plutôt que des acheteurs potentiels.
+
+### Comment un artisan peut-il rentabiliser Google Ads avec un petit budget ?
+
+Un artisan peut rentabiliser Google Ads avec 300 à 500€/mois en ciblant exclusivement des mots-clés avec forte intention d'achat ("plombier urgence [ville]", "électricien devis [ville]"), en limitant la diffusion à un rayon de 20 km et en créant une page dédiée avec son numéro en click-to-call. Chez ConvertiLab, un électricien de la région parisienne a généré 8 devis en 2 semaines avec 400€ investis, soit un coût par lead de 50€ pour des chantiers à 800€ minimum.
+
 [Simuler la rentabilité de vos campagnes gratuitement →](/estimateur-ads)`
   },
   {
