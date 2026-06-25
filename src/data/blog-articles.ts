@@ -1634,6 +1634,23 @@ Ce que le benchmark concurrentiel révèle concrètement :
 
 Un écart de 2 secondes en temps de chargement entre votre site et un concurrent peut représenter des dizaines de leads perdus chaque mois. Ce sont des données que l'intuition ne peut pas détecter — seul le benchmark le peut.
 
+Cas concret chez ConvertiLab : un cabinet de conseil en ressources humaines basé à Nantes nous a contactés convaincu que son site était "aussi bien" que ses concurrents. La comparaison a révélé que ses 3 concurrents principaux avaient des blogs avec 50 à 120 articles chacun, tandis que lui n'avait aucune page de contenu. Son score SEO était à 32/100 vs 68/100 pour le leader. En 4 mois de refonte et de création de contenu ciblé, il est passé de 200 à 1 200 visiteurs organiques mensuels.
+
+## Comment interpréter les résultats du benchmark concurrent ?
+
+Une fois le rapport généré, voici comment le lire efficacement :
+
+**Priorité 1 — Corriger les faiblesses graves** (rouge dans le rapport)
+Un score SEO très inférieur à vos concurrents ou un temps de chargement 3x plus lent sont des blocages qui doivent être traités en priorité absolue. Ces points ne diminuent pas d'eux-mêmes — ils s'aggravent avec le temps.
+
+**Priorité 2 — Consolider vos avantages** (vert)
+Si vous êtes devant sur un critère, assurez-vous d'y rester. Mentionnez-le dans votre communication ("notre site charge en 1,2 seconde") et investissez pour accentuer cet écart.
+
+**Priorité 3 — Surveiller les scores proches** (orange)
+Les critères où vous êtes à égalité avec vos concurrents représentent des opportunités : un petit investissement peut vous faire basculer en tête.
+
+La règle d'or : traitez un seul écart important à la fois. Attaquer 5 fronts simultanément dilue les ressources et ralentit les résultats sur chacun d'eux.
+
 ## Comment fonctionne un comparateur de sites web gratuit en 3 étapes ?
 
 Un comparateur de sites web gratuit fonctionne en analysant simultanément votre site et ceux de vos concurrents sur les mêmes critères, puis en affichant les résultats côte à côte avec un code couleur : vert si vous êtes devant, orange si vous êtes à égalité, rouge si un concurrent vous devance. L'ensemble prend moins d'une minute.
