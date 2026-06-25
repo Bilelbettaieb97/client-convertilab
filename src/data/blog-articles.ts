@@ -2974,6 +2974,8 @@ Comment répondre à un avis négatif :
 4. Proposez une solution concrète
 5. Invitez à poursuivre la discussion en privé
 
+**Cas concret :** un plombier à Vincennes géré par ConvertiLab avait 4 avis Google et n'apparaissait pas dans le pack local malgré une fiche complète. Après 2 mois d'une campagne de demande d'avis par SMS automatisée (envoyée 2h après chaque intervention), il a atteint 31 avis avec une note de 4,8. Résultat : entrée dans le pack local sur 7 requêtes cibles — "plombier Vincennes", "dépannage plomberie Vincennes" et 5 requêtes voisines. Le nombre d'appels entrants depuis Google Maps a été multiplié par 4 en 90 jours sans aucune dépense publicitaire.
+
 ## Quels autres signaux de SEO local renforcer en dehors de Google Business Profile ?
 
 Au-delà de Google Business Profile, 3 signaux renforcent le SEO local : les citations locales (cohérence NAP sur Pages Jaunes, Yelp, annuaires sectoriels), le contenu localisé sur votre site web (pages dédiées par zone géographique, balisage Schema LocalBusiness), et les liens entrants depuis des sites locaux. Ces 3 signaux combinés avec une fiche Google bien optimisée permettent d'atteindre les premières positions du pack local en 3 à 6 mois.
