@@ -3567,6 +3567,7 @@ Comment renforcer l'EEAT dans votre contenu :
 - **Mises à jour** : indiquez la date de dernière mise à jour — le contenu frais est valorisé
 - **Sources** : citez des études, statistiques ou références vérifiables
 - **Expérience directe** : racontez votre vécu sur le sujet ("chez nos clients, nous observons que...")
+- **Page auteur** : créez une page avec votre biographie, vos qualifications et vos réalisations — Google la consulte pour évaluer l'expertise
 
 ## Comment choisir ses mots-clés et structurer son article pour apparaître en position 1 ?
 
@@ -3619,7 +3620,7 @@ Il n'y a pas de longueur universelle. L'article doit être aussi long que néces
 
 ### À quelle fréquence faut-il publier du contenu pour le SEO ?
 
-La régularité est plus importante que la fréquence. Publier 1 article de qualité par semaine est plus efficace que 5 articles médiocres. Pour un site qui débute, 4 à 8 articles par mois est un bon rythme. L'important est de maintenir un calendrier éditorial cohérent sur la durée — Google valorise les sites qui publient régulièrement des contenus frais et pertinents.
+La régularité est plus importante que la fréquence. Publier 1 article de qualité par semaine est plus efficace que 5 articles médiocres. Pour un site qui débute, 4 à 8 articles par mois est un bon rythme. L'important est de maintenir un calendrier éditorial cohérent sur la durée — Google valorise les sites qui publient régulièrement des contenus frais et pertinents. Alternez entre nouveaux articles et mises à jour d'articles existants pour maintenir la pertinence de tout votre catalogue de contenu.
 
 ### Le contenu généré par IA est-il pénalisé par Google ?
 
