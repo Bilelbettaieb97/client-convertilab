@@ -5443,7 +5443,7 @@ Analysez votre site avec notre [outil Design Score](/design-score) pour identifi
 
 ### Faut-il choisir entre SEO et CRO ?
 
-Non, les deux sont complémentaires et indissociables. Le SEO amène le trafic, le CRO le convertit. Investir dans le SEO sans optimiser la conversion, c'est remplir un seau percé. L'idéal est de travailler les deux en parallèle — le SEO sur 6 à 12 mois de vision long terme, le CRO sur des cycles de 2 à 4 semaines par test.
+Non, les deux sont complémentaires et indissociables. Le SEO amène le trafic, le CRO le convertit. Investir dans le SEO sans optimiser la conversion, c'est remplir un seau percé. L'idéal est de travailler les deux en parallèle — le SEO sur 6 à 12 mois de vision long terme, le CRO sur des cycles de 2 à 4 semaines par test. Commencez par le CRO si votre site a déjà 500+ visiteurs/mois — optimiser la conversion de votre trafic existant donne des résultats immédiats pendant que le SEO mûrit.
 
 ### Combien coûte une stratégie CRO pour une PME ?
 
