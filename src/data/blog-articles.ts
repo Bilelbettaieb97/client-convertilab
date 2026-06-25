@@ -5682,6 +5682,8 @@ La règle d'or : ne jamais supprimer un avis négatif. 45% des consommateurs son
 
 **Comment rédiger une réponse à un avis négatif qui rassure les futurs clients :** "Bonjour [Prénom], merci d'avoir pris le temps de partager votre retour. Nous sommes sincèrement désolés de [problème spécifique]. Nous avons [action corrective concrète]. Nous vous avons contacté en privé pour trouver une solution. Votre satisfaction est notre priorité." Cette réponse montre aux lecteurs futurs que vous gérez les problèmes avec professionnalisme — c'est souvent plus rassurant qu'un historique parfait sans aucun avis négatif.
 
+**Les données structurées AggregateRating — comment les implémenter :** Ajoutez le schema JSON-LD sur chaque fiche produit avec votre note globale et le nombre d'avis. Google affiche automatiquement les étoiles dans les résultats de recherche, augmentant le CTR de 25 à 35%. Sur Next.js ou WordPress, des plugins dédiés (schema App, Rank Math) génèrent ce balisage automatiquement à partir de vos données d'avis réelles.
+
 Découvrez notre [portfolio](/portfolio) pour voir comment nous intégrons les avis clients sur les sites que nous créons.
 
 ## FAQ — Questions sur les avis clients et la preuve sociale
