@@ -2591,6 +2591,8 @@ La bonne séquence : commencez par résoudre les problèmes de vitesse (ce qui b
 
 Chez ConvertiLab, tous nos sites sont hébergés sur Vercel avec CDN mondial — l'hébergement est inclus la première année dans tous nos forfaits.
 
+![Hébergement web 2026 - comparatif Vercel OVH VPS mutualisé cloud](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80)
+
 ## Qu'est-ce que l'hébergement web et comment ça fonctionne concrètement ?
 
 L'hébergement web est le service qui rend votre site accessible sur internet en stockant ses fichiers (code, images, base de données) sur un serveur connecté en permanence au réseau. Sans hébergement, votre site n'existe pas pour les visiteurs. Quand un internaute tape votre adresse, son navigateur interroge les serveurs DNS, trouve le bon serveur, et reçoit les fichiers de votre page en quelques millisecondes.
@@ -2651,6 +2653,8 @@ Pour choisir le bon hébergement selon son type de site web, la règle est la su
 
 Découvrez nos [services de création de sites web](/services/sites-web) avec Vercel inclus la première année.
 
+![Guide hébergement type de site - Next.js WordPress e-commerce Supabase VPS](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80)
+
 ## FAQ — Questions sur l'hébergement web
 
 ### L'hébergement web gratuit est-il suffisant pour une entreprise ?
@@ -2663,7 +2667,17 @@ Oui, à condition de suivre quelques précautions : ne pas changer le nom de dom
 
 ### Quelle est la différence entre hébergement web et nom de domaine ?
 
-L'hébergement est l'espace de stockage où vivent les fichiers de votre site — la maison. Le nom de domaine est l'adresse postale qui permet aux visiteurs de trouver la maison. Les deux sont nécessaires et peuvent être achetés séparément chez des fournisseurs différents. Chez ConvertiLab, nous gérons les deux pour nos clients : le nom de domaine est enregistré à votre nom et l'hébergement est configuré sur Vercel lors de la livraison.`,
+L'hébergement est l'espace de stockage où vivent les fichiers de votre site — la maison. Le nom de domaine est l'adresse postale qui permet aux visiteurs de trouver la maison. Les deux sont nécessaires et peuvent être achetés séparément chez des fournisseurs différents. Chez ConvertiLab, nous gérons les deux pour nos clients : le nom de domaine est enregistré à votre nom et l'hébergement est configuré sur Vercel lors de la livraison.
+
+### Vercel est-il vraiment gratuit et que couvre le plan gratuit ?
+
+Le plan gratuit de Vercel (Hobby) couvre la majorité des sites PME : hébergement illimité, CDN mondial, SSL automatique, 100 Go de bande passante par mois, déploiement automatique depuis GitHub et support des fonctions serverless jusqu'à 100 000 exécutions/mois. Pour un site vitrine ou une landing page, c'est plus que suffisant. Le plan Pro (20$/mois) devient pertinent à partir de 1 million de visites mensuelles ou si vous avez besoin de collaboration en équipe.
+
+### Comment l'hébergement impacte-t-il directement le SEO ?
+
+L'hébergement impacte le SEO principalement via le TTFB (Time To First Byte) — le temps que met le serveur à répondre à une requête. Un hébergement mutualisé lent peut avoir un TTFB de 1 à 3 secondes, quand Vercel avec CDN affiche un TTFB de 30 à 80ms. Google tient compte du TTFB dans l'évaluation des Core Web Vitals. Un bon hébergement peut à lui seul améliorer votre score PageSpeed de 10 à 20 points sans aucune autre modification du site.
+
+![Vercel CDN global - TTFB performances Core Web Vitals déploiement automatique](https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80)`,
   },
   {
     slug: "formulaire-contact-efficace-conversions",
