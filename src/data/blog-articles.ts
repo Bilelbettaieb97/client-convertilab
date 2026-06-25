@@ -5639,6 +5639,8 @@ L'email transactionnel de suivi est le message le plus ouvert en e-commerce (tau
 
 Chez ConvertiLab, nous affichons 15 avis 4.9★ sur notre profil Trustpilot — chaque avis génère de nouveaux clients.
 
+![Avis clients e-commerce conversion preuve sociale Trustpilot Google 2026 - UGC témoignages](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80)
+
 ## Pourquoi les avis clients ont-ils un impact si fort sur les ventes d'une boutique en ligne ?
 
 Les avis clients créent la confiance nécessaire à l'achat en ligne — là où le client ne peut ni voir, ni toucher le produit. L'impact est chiffrable : 270% d'augmentation de la probabilité d'achat pour un produit avec 5+ avis, 18% d'augmentation du CA grâce aux avis, 63% des consommateurs sont prêts à payer plus sur un site avec de bons avis. Le paradoxe de la perfection : un produit à 4,2 à 4,7 étoiles se vend mieux qu'un produit à 5 étoiles parfaites — les notes parfaites semblent suspectes. Une note de 3,3 étoiles minimum est nécessaire pour que les consommateurs envisagent l'achat.
@@ -5660,6 +5662,8 @@ Techniques pour augmenter le taux de réponse aux demandes d'avis :
 - **Personnaliser** : mentionner le produit acheté dans l'email
 - **Relancer** : un rappel 7 jours après la première demande
 - **Montrer l'impact** : "Votre avis aide d'autres clients à faire le bon choix"
+
+![Collecte avis post-achat email SMS QR code colis taux réponse 5-15%](https://images.unsplash.com/photo-1553484771-047a44eee27b?w=800&q=80)
 
 ## Comment afficher ses avis clients pour un impact maximum sur le taux de conversion ?
 
@@ -5688,7 +5692,15 @@ Non, jamais. Les plateformes (Google, Trustpilot, Amazon) détectent les faux av
 
 ### Google Reviews ou Trustpilot : lequel choisir pour son e-commerce ?
 
-Les deux sont complémentaires et doivent être utilisés en parallèle. Google Reviews est indispensable pour le SEO local et la visibilité dans les résultats de recherche (les étoiles apparaissent sous votre URL). Trustpilot est la référence pour la crédibilité e-commerce internationale. Collectez sur les deux plateformes — les synergies sont réelles.`
+Les deux sont complémentaires et doivent être utilisés en parallèle. Google Reviews est indispensable pour le SEO local et la visibilité dans les résultats de recherche (les étoiles apparaissent sous votre URL). Trustpilot est la référence pour la crédibilité e-commerce internationale. Collectez sur les deux plateformes — les synergies sont réelles.
+
+### Comment exploiter les photos et vidéos de clients (UGC) pour augmenter les ventes ?
+
+L'UGC (User Generated Content) est la forme la plus puissante de preuve sociale : un vrai client qui montre votre produit dans sa vie réelle. Créez un hashtag dédié (#[votre-marque]) et demandez à chaque client satisfait de l'utiliser en échange d'une mise en avant sur votre compte. Intégrez les meilleures photos UGC sur vos fiches produits — les boutiques qui affichent de l'UGC sur leurs pages produits voient leur taux de conversion augmenter de 29% en moyenne.
+
+**Cas concret ConvertiLab :** une épicerie fine en ligne à Bordeaux avait zéro avis en ligne lors de son lancement. Nous avons mis en place un email automatique J+10 après chaque achat avec un lien Trustpilot direct et un code promo de 8% pour le prochain achat. En 3 mois : 34 avis collectés (4,8★), badge Trustpilot sur le site, +22% de taux de conversion sur les fiches produits et +14% sur le checkout.
+
+![UGC photos clients avis Trustpilot épicerie fine +22% conversion hashtag community](https://images.unsplash.com/photo-1607082349566-187342175e2f?w=800&q=80)`
   },
   {
     slug: "vendre-sur-instagram-social-commerce",
