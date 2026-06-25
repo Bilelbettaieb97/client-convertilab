@@ -435,7 +435,7 @@ Non, le Local Pack de Google (résultats sur Google Maps) est entièrement gratu
 
 ### Mon concurrent a plus d'avis que moi, comment le dépasser dans le Local Pack ?
 
-Avoir plus d'avis aide, mais ce n'est pas le seul facteur. La récence des avis compte autant que le volume — 10 avis récents valent souvent plus que 50 avis anciens. La complétude de la fiche, la cohérence NAP, la pertinence des catégories et la présence de pages locales sur le site jouent autant de rôle que le nombre d'avis brut.`
+Avoir plus d'avis aide, mais ce n'est pas le seul facteur. La récence des avis compte autant que le volume — 10 avis récents valent souvent plus que 50 avis anciens. La complétude de la fiche, la cohérence NAP, la pertinence des catégories et la présence de pages locales sur le site jouent autant de rôle que le nombre d'avis brut. Concentrez-vous sur la régularité : 2 avis par mois pendant 12 mois surpassent 24 avis collectés en une semaine.`
   },
   {
     slug: "combien-coute-site-web",
