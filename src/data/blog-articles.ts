@@ -4576,7 +4576,7 @@ Un bon système de remarketing email récupère 5 à 15% des paniers abandonnés
 
 ## Quelles métriques surveiller pour mesurer le ROI de ses campagnes de retargeting ?
 
-Les métriques clés d'une campagne de retargeting sont : ROAS (objectif > 5x — le retargeting doit être très rentable car l'audience est chaude), CTR (objectif > 2% — le public est déjà familier avec votre marque), fréquence (< 5 impressions/semaine pour éviter la lassitude), et taux de conversion (objectif > 5%, soit 2 à 3× une campagne d'acquisition classique). Attention à l'attribution : le retargeting "réclame" souvent des conversions qui auraient eu lieu naturellement — utilisez les rapports multi-touch.
+Les métriques clés d'une campagne de retargeting sont : ROAS (objectif > 5x — le retargeting doit être très rentable car l'audience est chaude), CTR (objectif > 2% — le public est déjà familier avec votre marque), fréquence (< 5 impressions/semaine pour éviter la lassitude), et taux de conversion (objectif > 5%, soit 2 à 3× une campagne d'acquisition classique). Attention à l'attribution : le retargeting "réclame" souvent des conversions qui auraient eu lieu naturellement — utilisez les rapports multi-touch. Pour isoler le vrai impact du retargeting, créez une campagne holdout (10% de l'audience ne reçoit pas de pubs) et comparez les taux de conversion entre le groupe exposé et le groupe témoin.
 
 KPIs spécifiques au retargeting :
 
