@@ -3315,7 +3315,7 @@ Non, aucun professionnel sérieux ne peut garantir la position 1 sur Google. Le 
 
 ### Combien de temps faut-il pour atteindre la première page Google ?
 
-Pour un mot-clé moyennement concurrentiel, comptez 4 à 8 mois de travail SEO régulier. Pour des mots-clés très compétitifs, cela peut prendre 12 mois ou plus. Les sites neufs mettent généralement plus de temps car ils doivent d'abord établir leur autorité. Les clients ConvertiLab qui partent d'un site 0 atteignent leur première page en 4 à 6 mois en suivant la méthode complète.
+Pour un mot-clé moyennement concurrentiel, comptez 4 à 8 mois de travail SEO régulier. Pour des mots-clés très compétitifs, cela peut prendre 12 mois ou plus. Les sites neufs mettent généralement plus de temps car ils doivent d'abord établir leur autorité. Les clients ConvertiLab qui partent d'un site 0 atteignent leur première page en 4 à 6 mois en suivant la méthode complète. Les sites qui ont déjà un historique de domaine (2 ans minimum) voient des résultats en 2 à 4 mois, car Google leur fait davantage confiance dès le départ.
 
 ### Faut-il viser la position 1 sur tous ses mots-clés ?
 
