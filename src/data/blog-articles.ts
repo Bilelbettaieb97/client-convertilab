@@ -6905,7 +6905,7 @@ Les avis Google sont le premier signal que regardent vos prospects avant de vous
 - Une note de 4.5+ avec 30 avis génère **2,7× plus de clics** qu'une fiche sans avis (Google Internal Data)
 - Les avis récents comptent plus que les anciens (un avis de la semaine dernière vaut plus qu'un avis d'il y a 2 ans)
 
-Chez ConvertiLab, nous sommes à 4.9★ sur plus de 15 avis — voici exactement ce que nous faisons.
+Chez ConvertiLab, nous sommes à 4.9★ sur plus de 15 avis sans jamais avoir demandé un seul avis en échange d'une remise — voici exactement ce que nous faisons.
 
 ## Comment créer le lien direct vers votre page d'avis Google ?
 
