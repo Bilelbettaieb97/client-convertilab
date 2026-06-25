@@ -3070,6 +3070,8 @@ Les meilleures stratégies pour obtenir des backlinks en 2026 sont : créer du c
 
 5. **Relations presse digitales** : publiez des communiqués de presse pour vos actualités importantes, répondez aux journalistes via HARO (Help a Reporter Out), participez à des podcasts et interviews en tant qu'expert.
 
+**Cas concret ConvertiLab :** un cabinet de coaching Lyon a créé un guide PDF gratuit "10 erreurs des entrepreneurs en reconversion" et l'a promu auprès de 20 blogueurs RH. En 4 mois, il a obtenu 14 backlinks naturels de DR 25 à 55, ce qui a porté son propre DR de 8 à 24 et fait progresser ses positions sur 3 mots-clés cibles de la 4e à la 2e page Google — sans payer un seul euro de netlinking.
+
 ## Comment mesurer et surveiller son profil de backlinks ?
 
 Pour mesurer son profil de backlinks, les métriques clés à surveiller sont : le nombre de domaines référents (plus important que le nombre total de liens), le Domain Rating (DR) ou Domain Authority (DA), le ratio dofollow/nofollow (idéalement 70-80% dofollow), et la vitesse d'acquisition (une croissance régulière est préférable à un pic soudain). Ces métriques sont disponibles gratuitement dans Google Search Console, et plus en détail via Ahrefs, SEMrush ou Moz.
