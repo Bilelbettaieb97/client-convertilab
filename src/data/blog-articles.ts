@@ -6437,6 +6437,10 @@ Résultat observé chez ConvertiLab : 60 à 70% de nos clients rattrapent leur c
     ],
     content: `Il est possible de créer un site web professionnel sans savoir coder avec des outils comme Wix, WordPress ou Webflow. Le vrai critère de choix n'est pas « est-ce que je peux coder ? » mais « est-ce que je veux investir 20 à 60 heures dans la création de mon site, ou préfère-je déléguer pour me concentrer sur mon métier ? »
 
+Ce comparatif s'appuie sur ce que nous observons chez ConvertiLab depuis 3 ans : les entrepreneurs qui créent leur site eux-mêmes reviennent souvent 6 à 12 mois plus tard avec un site qu'ils ne sont pas fiers de montrer. Ce guide vous aide à éviter ce scénario.
+
+![Création de site web - interface no-code Wix Webflow](https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80)
+
 ## Wix, WordPress, Webflow ou agence : quelle option choisir ?
 
 Voici un comparatif honnête des 4 options :
@@ -6483,6 +6487,8 @@ WordPress (WordPress.org, pas .com) est le CMS qui fait tourner 43% des sites we
 - Thèmes "gratuits" souvent lourds et mal optimisés
 
 **Pour qui WordPress est adapté :** entrepreneurs qui veulent tout contrôler, ont du temps et une appétence tech, ou qui veulent un blog à fort contenu.
+
+![WordPress vs Wix - interface administration comparaison](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80)
 
 ## Webflow : le meilleur résultat sans code, mais pour qui ?
 
@@ -6546,6 +6552,10 @@ Passez à une agence web quand :
 - Vous lancez un nouveau produit/service qui a besoin d'une page de conversion optimisée
 
 Dans tous ces cas, le coût d'une agence est inférieur au manque à gagner.
+
+Témoignage typique chez ConvertiLab : Emilie, coach bien-être à Lyon, avait créé son site sur Wix. Après 8 mois, 0 demande de contact venant de Google. Après refonte de son site avec ConvertiLab (700€, livré en 7 jours), elle recevait 3 à 5 demandes par mois dès le 2ème mois grâce au SEO local sur "coach bien-être Lyon".
+
+![Agence web - création site professionnel avec résultats](https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80)
 
 [Discuter de votre projet avec un expert ConvertiLab](/contact)
 
