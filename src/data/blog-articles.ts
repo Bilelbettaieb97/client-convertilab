@@ -5311,7 +5311,7 @@ Structure optimale d'une fiche produit pour le SEO :
 
 ## Comment optimiser ses catégories et éviter le contenu dupliqué sur une boutique en ligne ?
 
-Les pages de catégorie sont souvent négligées mais rankent sur les requêtes à fort volume ("canapé pas cher", "canapé scandinave"). Ajoutez un texte de 200 à 400 mots en bas de chaque catégorie, avec les mots-clés principaux intégrés naturellement. Les URLs doivent être lisibles et hiérarchiques (ex : /salon/canapes/canape-3-places-velours-gris, jamais /produit?id=4532&cat=12). Le contenu dupliqué est le problème SEO n°1 des boutiques : utilisez des balises canonical sur les variantes de produits (couleurs, tailles), évitez d'indexer les URLs filtrées et les pages de pagination.
+Les pages de catégorie sont souvent négligées mais rankent sur les requêtes à fort volume ("canapé pas cher", "canapé scandinave"). Ajoutez un texte de 200 à 400 mots en bas de chaque catégorie, avec les mots-clés principaux intégrés naturellement. Les URLs doivent être lisibles et hiérarchiques (ex : /salon/canapes/canape-3-places-velours-gris, jamais /produit?id=4532&cat=12). Le contenu dupliqué est le problème SEO n°1 des boutiques : utilisez des balises canonical sur les variantes de produits (couleurs, tailles), évitez d'indexer les URLs filtrées et les pages de pagination. Une astuce avancée : créez des pages de catégorie dédiées à vos requêtes longue traîne les plus recherchées ("canapé velours gris XXX", "canapé convertible 2 places petit appartement") — ces pages hyper-ciblées convertissent 3 à 5× mieux que les catégories générales.
 
 Actions prioritaires pour référencer ses produits sur Google :
 1. Auditer avec Screaming Frog (pages sans H1, meta dupliquées, pages orphelines)
