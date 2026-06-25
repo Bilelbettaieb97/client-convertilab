@@ -6670,7 +6670,7 @@ Site vitrine simple : 2 à 4 semaines (freelance) ou 4 à 8 semaines (agence ave
 
 ### Faut-il signer un contrat avec un freelance ou une agence ?
 
-Absolument, dans les deux cas. Un devis signé n'est pas un contrat — il doit être complété par un document précisant : propriété du code et des designs, nombre de révisions incluses, conditions de résiliation, modalités de paiement (jalons, non à l'acompte total), hébergement et données (à qui appartient votre base de données). Sans contrat, vous n'avez aucune protection en cas de litige.
+Absolument, dans les deux cas. Un devis signé n'est pas un contrat — il doit être complété par un document précisant : propriété du code et des designs, nombre de révisions incluses, conditions de résiliation, modalités de paiement (jalons, non à l'acompte total), hébergement et données (à qui appartient votre base de données). Sans contrat, vous n'avez aucune protection en cas de litige. Les litiges non résolus avec des prestataires web représentent le premier motif de saisine des conciliateurs de justice pour les PME françaises dans le domaine du numérique — un contrat clair vous protège autant que votre prestataire.
 
 ### Peut-on démarrer avec un freelance et passer à une agence ensuite ?
 
