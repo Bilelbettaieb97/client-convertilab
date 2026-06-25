@@ -5569,6 +5569,8 @@ Comment communiquer le seuil de livraison gratuite sur son site :
 - **Sur chaque fiche produit** si le produit dépasse le seuil
 - **Dans les emails** promotionnels et de relance
 
+**Comment calculer le bon seuil de livraison gratuite pour votre boutique :** Le seuil idéal = panier moyen actuel × 1,25. Si votre panier moyen est 40€, fixez le seuil à 50€. Testez pendant 30 jours et mesurez si le panier moyen a augmenté sans que votre taux de conversion chute (signe que le seuil est trop élevé). Attention : un seuil trop ambitieux (panier moyen × 2) décourage davantage qu'il ne motive.
+
 ## Quelles options de livraison proposer pour maximiser ses conversions ?
 
 Ne proposez jamais une seule option de livraison. Chaque client a des priorités différentes. Les 4 options essentielles pour une boutique en ligne en France : 1) Livraison standard à domicile (Colissimo) — 3 à 5 jours ouvrables, l'option par défaut, la moins chère. 2) Point relais (Mondial Relay) — 30 à 40% moins cher que la livraison à domicile, idéal pour ceux qui ne sont pas chez eux en journée. 3) Livraison express (Chronopost, DHL) — 24 à 48h, supplément de 5 à 10€, indispensable pour les achats cadeaux et urgents. 4) Click & Collect si vous avez un point physique — gratuit, disponible sous 2h, génère du trafic en magasin.
@@ -5587,6 +5589,8 @@ Attentes des consommateurs français en matière de livraison (2026) :
 ## Comment réduire ses coûts de livraison e-commerce sans dégrader le service ?
 
 Pour réduire ses coûts de livraison, 3 leviers sont actionnables. 1) Négocier avec les transporteurs : les tarifs sont négociables dès 50 à 100 colis par mois — demandez des devis à minimum 3 transporteurs, négociez sur les volumes annuels. 2) Optimiser les emballages : utilisez des cartons adaptés à la taille du produit (le poids volumétrique peut coûter plus cher que le poids réel), investissez dans des emballages récurrents sur mesure pour vos best-sellers. 3) Utiliser une plateforme d'expédition (Sendcloud, Boxtal, ShipStation) : compare automatiquement les transporteurs et choisit le meilleur rapport qualité-prix à chaque expédition.
+
+**Le coût caché souvent ignoré — les emballages sur-dimensionnés :** Les transporteurs facturent le poids volumétrique (L × l × h / 5000) quand il dépasse le poids réel. Un colis de 200g dans une boîte trop grande peut être facturé comme s'il pesait 2 kg. Standardisez vos boîtes à 3 ou 4 formats maximum couvrant 90% de votre catalogue : vous réduisez vos frais de port de 15 à 25% et diminuez votre empreinte carbone — un argument de communication à valoriser.
 
 ## Comment transformer la politique de retour en argument de vente ?
 
