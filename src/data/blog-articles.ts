@@ -933,7 +933,7 @@ Le score SEO sur 100 est un indicateur global de la santé de votre page. Voici 
 - **40 à 59** : insuffisant — des erreurs bloquantes ralentissent votre classement
 - **0 à 39** : critique — votre page a des problèmes sérieux qui empêchent Google de l'indexer correctement
 
-Un score élevé ne garantit pas la position 1, mais un score faible garantit que vous n'y serez jamais. Le score est le plancher, pas le plafond.
+Un score élevé ne garantit pas la position 1, mais un score faible garantit que vous n'y serez jamais. Le score est le plancher, pas le plafond. Pensez-y comme à un contrôle technique : nécessaire mais pas suffisant pour gagner une course.
 
 [Lancer l'audit SEO gratuit de votre site →](/seo-check)`
   },
