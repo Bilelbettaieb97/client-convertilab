@@ -3648,6 +3648,8 @@ La mise à jour de contenu existant est l'une des actions SEO les plus sous-esti
 
 Chez ConvertiLab, nous auditons des sites depuis 2021. Sur les 150+ audits réalisés, les 15 erreurs suivantes sont les plus fréquentes — et les plus coûteuses en termes de trafic perdu.
 
+![Erreurs SEO courantes 2026 - pénalité Google contenu dupliqué vitesse technique](https://images.unsplash.com/photo-1594322436404-5a0526db4d13?w=800&q=80)
+
 [Diagnostiquer les erreurs SEO de mon site gratuitement →](/seo-check)
 
 ## Quelles erreurs techniques SEO bloquent l'indexation et le classement Google ?
@@ -3701,6 +3703,8 @@ Ce trimestre :
 - Auditez et nettoyez le profil de backlinks
 - Mettez à jour les contenus obsolètes
 
+![Plan d'action correctif SEO - quick wins contenu dupliqué canonicals netlinking](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
+
 ## FAQ — Questions sur les erreurs SEO et les pénalités Google
 
 ### Comment savoir si mon site a été pénalisé par Google ?
@@ -3713,7 +3717,13 @@ Non, le contenu dupliqué n'entraîne pas de pénalité à proprement parler. Ce
 
 ### Combien de temps faut-il pour récupérer d'une erreur SEO majeure ?
 
-La durée dépend de la gravité. Une erreur technique (robots.txt bloquant, noindex accidentel) peut être corrigée en quelques jours à 2 semaines une fois détectée. Une pénalité algorithmique nécessite généralement 2 à 6 mois de travail correctif. Une pénalité manuelle peut prendre 1 à 3 mois après soumission de la demande de réexamen, à condition que les corrections soient effectives.`
+La durée dépend de la gravité. Une erreur technique (robots.txt bloquant, noindex accidentel) peut être corrigée en quelques jours à 2 semaines une fois détectée. Une pénalité algorithmique nécessite généralement 2 à 6 mois de travail correctif. Une pénalité manuelle peut prendre 1 à 3 mois après soumission de la demande de réexamen, à condition que les corrections soient effectives.
+
+### Comment prévenir les erreurs SEO plutôt que les corriger ?
+
+La meilleure approche est préventive : configurez des alertes Google Search Console pour les nouvelles erreurs d'indexation, surveillez votre trafic organique hebdomadairement dans GA4, et faites un mini-audit mensuel des Core Web Vitals. Chaque refonte de site ou migration doit inclure un plan SEO (redirection des anciennes URLs, conservation des meta-données, vérification post-lancement). Chez ConvertiLab, nous livrons avec chaque site un guide de maintenance SEO et une checklist de vérification post-publication.
+
+![Prévention erreurs SEO - alertes Search Console surveillance trafic Core Web Vitals mensuel](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`
   },
   {
     slug: "seo-vs-sea-lequel-choisir",
