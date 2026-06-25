@@ -3729,7 +3729,7 @@ Vérifiez la section "Actions manuelles" dans Google Search Console. Un message 
 
 ### Le contenu dupliqué entraîne-t-il une pénalité Google ?
 
-Non, le contenu dupliqué n'entraîne pas de pénalité à proprement parler. Cependant, Google choisit une seule version à indexer et ignore les autres, ce qui dilue votre autorité et peut faire chuter vos positions. Si la duplication est massive et intentionnelle (scraping de contenu tiers), Google peut appliquer une pénalité manuelle pour spam.
+Non, le contenu dupliqué n'entraîne pas de pénalité à proprement parler. Cependant, Google choisit une seule version à indexer et ignore les autres, ce qui dilue votre autorité et peut faire chuter vos positions. Si la duplication est massive et intentionnelle (scraping de contenu tiers), Google peut appliquer une pénalité manuelle pour spam. Le cas le plus fréquent en e-commerce : des centaines de fiches produit avec des descriptions identiques copiées du fabricant — chacune concourt contre les autres sans jamais se positionner.
 
 ### Combien de temps faut-il pour récupérer d'une erreur SEO majeure ?
 
