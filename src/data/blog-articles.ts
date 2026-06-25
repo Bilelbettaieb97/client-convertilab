@@ -2696,6 +2696,8 @@ L'hébergement impacte le SEO principalement via le TTFB (Time To First Byte) �
 
 Votre formulaire de contact est souvent le dernier obstacle entre un visiteur et un lead. Optimiser ce seul élément peut doubler vos leads sans augmenter votre trafic.
 
+![Formulaire contact optimisé - nombre champs CTA réassurance taux complétion](https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&q=80)
+
 [Voir un exemple de formulaire optimisé →](/contact)
 
 ## Combien de champs doit avoir un formulaire de contact pour maximiser les conversions ?
@@ -2757,6 +2759,8 @@ Les éléments de réassurance qui doivent entourer un formulaire de contact son
 
 **Pour le mobile :** champs d'au moins 48px de hauteur, clavier adapté au type de champ (email, téléphone), un seul champ par ligne, bouton pleine largeur. Plus de 55% des soumissions de formulaires se font sur mobile — un formulaire inconfortable sur mobile est un formulaire que personne ne remplit.
 
+![Formulaire mobile - champs 48px clavier adaptatif bouton pleine largeur](https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80)
+
 **Page de confirmation :** après la soumission, ne redirigez pas vers une page vide. Confirmez la réception, rappelez le délai de réponse, proposez une action suivante (voir le portfolio, télécharger un guide) et installez votre pixel de conversion pour mesurer le ROI de vos campagnes publicitaires.
 
 ## FAQ — Questions sur l'optimisation du formulaire de contact
@@ -2771,7 +2775,13 @@ Pas nécessairement un formulaire complet, mais un CTA clair vers votre page de 
 
 ### Comment réduire le spam sur son formulaire sans CAPTCHA frustrant ?
 
-Trois techniques efficaces et invisibles pour l'utilisateur : le champ honeypot (un champ caché que seuls les bots remplissent), la validation côté serveur (vérification du timing de soumission — un humain met au moins 5 secondes), et les tokens CSRF. Ces méthodes bloquent 95% du spam sans dégrader l'expérience utilisateur, contrairement aux CAPTCHA image qui réduisent le taux de complétion de 3 à 10%.`,
+Trois techniques efficaces et invisibles pour l'utilisateur : le champ honeypot (un champ caché que seuls les bots remplissent), la validation côté serveur (vérification du timing de soumission — un humain met au moins 5 secondes), et les tokens CSRF. Ces méthodes bloquent 95% du spam sans dégrader l'expérience utilisateur, contrairement aux CAPTCHA image qui réduisent le taux de complétion de 3 à 10%.
+
+### Comment mesurer si mon formulaire est performant ?
+
+Le taux de complétion est la métrique clé : combien de visiteurs qui voient le formulaire le soumettent réellement. Pour le mesurer, configurez un événement de conversion dans Google Analytics 4 sur la page de confirmation (/merci ou evenement "form_submit"). Un bon taux de complétion pour un formulaire de contact PME est de 15 à 30%. En dessous de 10%, il y a un problème à résoudre (trop de champs, CTA médiocre, formulaire peu visible). Testez une seule modification à la fois pour identifier ce qui fonctionne.
+
+![Mesure taux complétion formulaire - Google Analytics 4 événement conversion](https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80)`,
   },
   {
     slug: "guide-seo-debutant-2026",
