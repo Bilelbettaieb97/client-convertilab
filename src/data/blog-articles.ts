@@ -2295,6 +2295,8 @@ Le responsive design est une approche de conception qui permet à un site web de
 
 **Impact conversion :** sur les sites ConvertiLab, les pages optimisées mobile first convertissent en moyenne 2,1x mieux que les pages "desktop d'abord adaptées".
 
+Exemple concret : un restaurant à Marseille avait un site qui affichait ses menus en PDF non responsive — les visiteurs sur mobile devaient zoomer et scroller horizontalement pour lire. Taux de rebond sur mobile : 82%. Après refonte avec un menu responsive et un bouton de réservation fixe en bas d'écran, le taux de rebond mobile est tombé à 48% et les réservations en ligne ont augmenté de 67% en 30 jours.
+
 ## Quelle est la différence entre responsive design et mobile first, et laquelle adopter ?
 
 La différence entre responsive design et mobile first est une question d'ordre de conception : le responsive design part du desktop et s'adapte aux petits écrans, tandis que le mobile first part du mobile et enrichit progressivement pour les grands écrans. En 2026, le mobile first est supérieur car il force à prioriser le contenu, produit des sites plus légers, et s'aligne parfaitement avec l'indexation Google.
