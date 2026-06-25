@@ -6892,6 +6892,10 @@ Ordre de priorité recommandé : site web + SEO local d'abord (acquisition), Ins
     ],
     content: `Pour obtenir plus d'avis Google, la méthode la plus efficace est d'envoyer un message personnalisé à chaque client satisfait dans les 24h après la prestation, avec le lien direct vers votre fiche Google. Taux de conversion typique : 20 à 40%. Un flux régulier d'avis — même 1 à 2 par semaine — est plus puissant qu'une campagne de collecte massive suivie de silence.
 
+La plupart des entrepreneurs ne demandent pas d'avis par peur de déranger ou par oubli. Ce guide corrige ça avec des méthodes concrètes, des modèles de messages prêts à copier, et une stratégie pour répondre aux avis négatifs sans aggraver la situation.
+
+![Avis Google - fiche Google Business Profile étoiles](https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&q=80)
+
 ## Pourquoi les avis Google sont-ils si importants pour une entreprise locale ?
 
 Les avis Google sont le premier signal que regardent vos prospects avant de vous contacter. 93% des consommateurs lisent les avis en ligne avant d'acheter un service local (BrightLocal, 2025). Mais leur impact va au-delà de la confiance :
@@ -6936,6 +6940,8 @@ Ce message est court, personnel, non intrusif. Il convertit à 25-35% selon le s
 - Ne pas proposer une remise ou un cadeau en échange (violation des CGU Google → risque de suppression de la fiche)
 - Ne pas envoyer le même message à tous (le destinataire le sent, ça ne marche pas)
 - Ne pas relancer plus d'une fois
+
+![Smartphone - envoyer SMS demande avis Google après prestation](https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80)
 
 ## Comment automatiser la collecte d'avis Google ?
 
@@ -6988,6 +6994,20 @@ Afficher vos meilleurs avis Google sur votre site renforce la confiance des visi
 **Schema Review** : si votre site est en code, intégrez le markup JSON-LD "Review" pour que Google affiche votre note directement dans les résultats de recherche (les étoiles jaunes sous votre URL).
 
 Chez ConvertiLab, tous nos sites incluent une section témoignages visuellement travaillée et un schéma JSON-LD pour les avis, ce qui améliore le CTR dans Google.
+
+![Section témoignages site web - intégration avis Google](https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80)
+
+## Ce qu'il faut retenir pour booster vos avis Google
+
+Résumé des actions les plus efficaces :
+
+1. **Créez votre lien court Google Avis** et sauvegardez-le dans vos contacts comme raccourci
+2. **Envoyez un SMS personnalisé dans les 24h** après chaque prestation réussie — pas après 3 semaines
+3. **Répondez à TOUS les avis** (positifs et négatifs) dans les 24 à 48h maximum
+4. **Visez la régularité** : 2 à 4 nouveaux avis par mois valent mieux qu'une campagne de 30 avis en une semaine
+5. **Affichez vos avis sur votre site** avec un widget ou une section témoignages avec schema markup
+
+Avec ce rythme, vous atteindrez les 30 avis à 4.5+ en moins de 6 mois — seuil à partir duquel les bénéfices SEO locaux et de conversion deviennent très significatifs.
 
 [Voir comment nous intégrons les avis sur vos pages](/portfolio)
 
