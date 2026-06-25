@@ -3530,7 +3530,7 @@ Non. Google est devenu sélectif et n'indexe que les pages qu'il juge suffisamme
 
 ### Faut-il soumettre chaque nouvelle page manuellement dans Search Console ?
 
-Non, ce n'est pas nécessaire si votre sitemap est bien configuré et automatiquement mis à jour. Cependant, pour les pages prioritaires (article important, page de service), une soumission manuelle via l'outil d'inspection d'URL peut accélérer l'indexation. Pour les publications régulières, un bon sitemap et un maillage interne solide suffisent.
+Non, ce n'est pas nécessaire si votre sitemap est bien configuré et automatiquement mis à jour. Cependant, pour les pages prioritaires (article important, page de service), une soumission manuelle via l'outil d'inspection d'URL peut accélérer l'indexation. Pour les publications régulières, un bon sitemap et un maillage interne solide suffisent. Notez que Google limite à 10 demandes d'indexation manuelles par jour par propriété dans Search Console — planifiez vos soumissions pour les pages les plus importantes en premier.
 
 ### Qu'est-ce que le budget de crawl et comment l'optimiser ?
 
