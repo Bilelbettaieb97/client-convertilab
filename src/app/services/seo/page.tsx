@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
 import SeoPageContent from "./SeoPageContent";
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function SeoPage() {
       {schemas.map((s, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />)}
       <Navigation />
       <SeoPageContent />
+      <SeoCheckCta title="Découvrez votre potentiel SEO avant de vous lancer" />
       <Footer />
     </div>
   );

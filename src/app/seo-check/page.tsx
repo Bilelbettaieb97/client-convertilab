@@ -445,6 +445,41 @@ export default function SeoCheckPage() {
           </div>
         </section>
 
+        {/* Ressources SEO — maillage vers le cluster */}
+        <section className="py-20 px-4 border-t border-white/5">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">
+              Aller plus loin en SEO
+            </h2>
+            <p className="text-white/40 text-center mb-10">
+              Nos guides gratuits pour comprendre et améliorer votre référencement
+            </p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {[
+                { label: "Guide complet : améliorer son SEO", href: "/guide/ameliorer-seo" },
+                { label: "Le SEO expliqué aux débutants", href: "/blog/guide-seo-debutant-2026" },
+                { label: "Comment apparaître premier sur Google", href: "/blog/comment-apparaitre-premier-google" },
+                { label: "SEO local : le guide complet", href: "/blog/seo-local-guide-complet" },
+                { label: "Les étapes d'un audit SEO réussi", href: "/blog/audit-seo-site-web-etapes" },
+                { label: "Optimiser ses balises meta", href: "/blog/balises-meta-optimiser-seo" },
+                { label: "Accélérer son indexation Google", href: "/blog/indexation-google-accelerer" },
+                { label: "Les erreurs SEO à éviter", href: "/blog/erreurs-seo-courantes-eviter" },
+                { label: "Backlinks et netlinking en 2026", href: "/blog/backlinks-strategie-netlinking-2026" },
+                { label: "SEO ou Google Ads : que choisir ?", href: "/comparatifs/seo-vs-google-ads" },
+              ].map((r) => (
+                <Link
+                  key={r.href}
+                  href={r.href}
+                  className="flex items-center justify-between bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-white/70 hover:text-purple-300 hover:border-purple-500/30 transition-colors"
+                >
+                  <span>{r.label}</span>
+                  <span className="text-purple-400">→</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Trust */}
         <section className="py-16 px-4 border-t border-white/5">
           <div className="max-w-3xl mx-auto text-center">

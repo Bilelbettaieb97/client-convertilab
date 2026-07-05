@@ -113,7 +113,7 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
   },
   "seo-local-google-business-profile": {
     primary: { title: "Référencement SEO local", description: "Dominez le Local Pack Google dans votre ville.", href: "/services/seo/referencement", cta: "Améliorer mon SEO local" },
-    secondary: { title: "Pages locales optimisées", description: "Pages /agence-web/[ville] pour capter les clients locaux.", href: "/agence-web", cta: "Voir nos pages locales" },
+    secondary: { title: "Audit SEO gratuit en ligne", description: "Vérifiez votre SEO local en 60 secondes, rapport PDF inclus.", href: "/seo-check", cta: "Lancer mon audit SEO" },
   },
   "backlinks-strategie-netlinking-2026": {
     primary: { title: "Stratégie SEO complète", description: "Netlinking, contenu, technique — un plan global.", href: "/services/seo/referencement", cta: "Lancer ma stratégie SEO" },
@@ -145,7 +145,7 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
   },
   "seo-vs-sea-lequel-choisir": {
     primary: { title: "Estimateur de budget ads", description: "Calculez votre ROI Google Ads vs SEO.", href: "/estimateur-ads", cta: "Calculer mon ROI" },
-    secondary: { title: "SEO + SEA : stratégie combinée", description: "Nos experts vous conseillent la meilleure approche.", href: "/services", cta: "Voir nos services" },
+    secondary: { title: "Audit SEO gratuit en ligne", description: "Évaluez votre potentiel SEO avant d'investir en publicité.", href: "/seo-check", cta: "Lancer mon audit SEO" },
   },
   "google-ads-guide-debutant-2026": {
     primary: { title: "Campagnes Google Ads", description: "Création et gestion par nos spécialistes certifiés.", href: "/services/sea/google-ads", cta: "Lancer mes Google Ads" },
@@ -270,6 +270,22 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
   "typographie-web-choisir-polices": {
     primary: { title: "Design UI/UX professionnel", description: "Typographie soignée, cohérence visuelle, identité forte.", href: "/services/design/ui-ux", cta: "Voir nos designs" },
     secondary: { title: "Score design gratuit", description: "Évaluez la qualité typographique de votre site.", href: "/design-score", cta: "Analyser mon design" },
+  },
+  "site-introuvable-google-que-faire": {
+    primary: { title: "Audit SEO gratuit en ligne", description: "Découvrez en 60 secondes pourquoi Google ne trouve pas votre site.", href: "/seo-check", cta: "Diagnostiquer mon site" },
+    secondary: { title: "Audit SEO professionnel", description: "Diagnostic approfondi et correction par nos experts.", href: "/services/seo/audit", cta: "Demander un audit" },
+  },
+  "concurrents-avant-moi-sur-google": {
+    primary: { title: "Audit SEO gratuit en ligne", description: "Identifiez ce qui vous sépare de vos concurrents sur Google.", href: "/seo-check", cta: "Analyser mon site" },
+    secondary: { title: "Comparateur de sites", description: "Comparez votre site à celui d'un concurrent en 2 minutes.", href: "/comparateur-sites", cta: "Comparer mon site" },
+  },
+  "ameliorer-referencement-google-soi-meme": {
+    primary: { title: "Audit SEO gratuit en ligne", description: "Commencez par identifier vos points faibles : rapport PDF en 60s.", href: "/seo-check", cta: "Lancer mon audit SEO" },
+    secondary: { title: "Référencement naturel", description: "Confiez votre SEO à nos experts si vous manquez de temps.", href: "/services/seo/referencement", cta: "Déléguer mon SEO" },
+  },
+  "obtenir-avis-google-entreprise": {
+    primary: { title: "Référencement SEO local", description: "Les avis Google sont un pilier du SEO local : optimisez le reste.", href: "/services/seo/referencement", cta: "Booster mon SEO local" },
+    secondary: { title: "Audit SEO gratuit en ligne", description: "Vérifiez votre visibilité locale en 60 secondes.", href: "/seo-check", cta: "Lancer mon audit SEO" },
   },
 };
 

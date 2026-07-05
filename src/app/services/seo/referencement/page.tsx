@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
 import ReferencementContent from "./ReferencementContent";
 import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
@@ -45,6 +46,6 @@ const serviceSchema = {
 
 export default function ReferencementPage() {
   return (<div className="min-h-screen"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><ReferencementContent /><RelatedServicesSection exclude={["/services/seo/referencement"]} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><ReferencementContent /><SeoCheckCta title="Mesurez votre SEO actuel avant de commencer" /><RelatedServicesSection exclude={["/services/seo/referencement"]} />
       <Footer /></div>);
 }

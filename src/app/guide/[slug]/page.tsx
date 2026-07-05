@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
 import { guides, getGuideBySlug, getAllGuideSlugs } from "@/data/guides";
 import {
   Breadcrumb,
@@ -329,6 +330,10 @@ export default async function GuidePage({ params }: PageProps) {
           </div>
         </section>
       </main>
+
+      {slug === "ameliorer-seo" && (
+        <SeoCheckCta title="Première étape du guide : auditez votre site" />
+      )}
 
       <Footer />
     </div>

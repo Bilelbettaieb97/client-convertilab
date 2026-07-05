@@ -5,6 +5,7 @@ import { SITE } from "@/lib/constants";
 import { glossaryTerms, getTermBySlug } from "@/data/glossary";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -17,6 +18,9 @@ import {
 } from "lucide-react";
 
 type Props = { params: Promise<{ terme: string }> };
+
+// Termes du glossaire liés au SEO — reçoivent le bloc de maillage vers /seo-check
+const SEO_GLOSSARY_TERMS = ["seo", "backlink", "core-web-vitals", "netlinking", "meta-tags", "referencement-local", "indexation"];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { terme } = await params;
@@ -352,6 +356,10 @@ export default async function GlossaryTermPage({ params }: Props) {
           </div>
         </div>
       </article>
+
+      {SEO_GLOSSARY_TERMS.includes(terme) && (
+        <SeoCheckCta title="Passez de la théorie à la pratique : auditez votre site" />
+      )}
 
       <Footer />
     </div>

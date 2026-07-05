@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
 import { comparisons } from "@/data/comparisons";
 
 interface Props {
@@ -286,6 +287,10 @@ export default async function ComparisonDetailPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {["seo-vs-google-ads", "seo-local-vs-seo-national"].includes(slug) && (
+        <SeoCheckCta title="Évaluez votre potentiel SEO avant de choisir" />
+      )}
 
       <Footer />
     </div>

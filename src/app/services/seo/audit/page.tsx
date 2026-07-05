@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
 import AuditSeoContent from "./AuditSeoContent";
 import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
@@ -45,6 +46,6 @@ const serviceSchema = {
 
 export default function AuditSeoPage() {
   return (<div className="min-h-screen"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><AuditSeoContent /><RelatedServicesSection exclude={["/services/seo/audit"]} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><AuditSeoContent /><SeoCheckCta title="Commencez par un premier diagnostic automatique" /><RelatedServicesSection exclude={["/services/seo/audit"]} />
       <Footer /></div>);
 }
