@@ -28,6 +28,25 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,
   },
+  async redirects() {
+    return [
+      // convertilab.fr sert le même site que .com sans redirection :
+      // Google crawle et indexe les deux domaines en doublon.
+      // 301 vers .com pour consolider tous les signaux SEO sur un seul domaine.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.convertilab.fr" }],
+        destination: "https://www.convertilab.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "convertilab.fr" }],
+        destination: "https://www.convertilab.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

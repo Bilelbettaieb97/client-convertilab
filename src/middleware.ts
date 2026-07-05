@@ -32,10 +32,11 @@ export function middleware(request: NextRequest) {
     });
   }
 
-  if (host === "convertilab.fr") {
+  // .fr = domaine secondaire : tout consolider sur www.convertilab.com
+  if (host === "convertilab.fr" || host === "www.convertilab.fr") {
     return new Response(null, {
       status: 301,
-      headers: { Location: `https://www.convertilab.fr${pathname}${search}` },
+      headers: { Location: `https://www.convertilab.com${pathname}${search}` },
     });
   }
 
