@@ -28,6 +28,7 @@ export interface City {
   population: string;
   description: string;
   localContext: string;
+  marcheLocal?: string[];
   keyIndustries: string[];
   faqItems: CityFaqItem[];
   testimonials: CityTestimonial[];
@@ -624,6 +625,10 @@ export const cities: City[] = [
       "Capitale européenne de l'aéronautique et ville étudiante majeure, Toulouse dispose d'un écosystème technologique riche porté par Airbus, le spatial et les startups.",
     localContext:
       "Toulouse est la capitale mondiale de l'aéronautique (Airbus, ATR, Thales) et abrite l'une des plus grandes concentrations d'ingénieurs et de profils tech d'Europe. Cette culture de l'innovation se diffuse dans toute l'économie toulousaine : même les artisans et commerçants locaux adoptent les outils digitaux pour rester compétitifs. La ville rose est aussi une ville étudiante (130 000 étudiants) avec une demande forte pour les services de proximité digitalement accessibles.",
+    marcheLocal: [
+      "Quatrième ville de France, Toulouse est la capitale européenne de l'aéronautique et du spatial : Airbus, le CNES, Thales et tout leur écosystème de sous-traitants structurent une économie B2B exigeante. Autour de Labège et de la Cité de l'espace, startups et bureaux d'études recherchent des prestataires au niveau de leurs standards — un site amateur ferme des portes.",
+      "Mais la ville rose, c'est aussi des milliers de commerçants et d'artisans, du Capitole à Saint-Cyprien en passant par les Minimes. Sur les requêtes locales toulousaines, la concurrence est réelle mais loin d'être verrouillée : les entreprises qui investissent dans un site rapide, un SEO local propre et une fiche Google complète prennent l'avantage durablement.",
+    ],
     keyIndustries: ["Aéronautique & spatial", "Technologies & ingénierie", "Enseignement supérieur", "Santé & médical", "Commerce & restauration"],
     stats: {
       entreprises: "65 000 entreprises",
@@ -1050,6 +1055,10 @@ export const cities: City[] = [
       "Capitale de la Bretagne et pôle numérique majeur, Rennes est reconnue pour son écosystème tech, ses universités et son dynamisme entrepreneurial.",
     localContext:
       "Rennes est la capitale française du numérique en dehors de Paris, abritant des géants comme Orange, Technicolor ou Atos ainsi qu'un écosystème startup très actif. La Bretagne est aussi la première région agricole et agroalimentaire de France, avec des PME qui cherchent à moderniser leur présence digitale. La ville universitaire (70 000 étudiants) génère une forte demande de services de proximité accessibles en ligne.",
+    marcheLocal: [
+      "Rennes est l'une des capitales françaises du numérique : labellisée French Tech avec Saint-Malo, elle héberge le Pôle d'excellence cyber, des dizaines de startups et les campus de Beaulieu et Villejean qui forment chaque année des milliers de diplômés du digital. Conséquence directe pour les entreprises locales : le niveau d'exigence des internautes rennais est élevé, et un site daté ou lent décrédibilise immédiatement.",
+      "Du centre historique aux zones d'activités de Cesson-Sévigné et Saint-Grégoire, les PME bretonnes — agroalimentaire, BTP, services B2B, commerces du centre — se disputent les premières positions sur Google. La bonne nouvelle : la plupart des sites d'artisans et de commerçants d'Ille-et-Vilaine restent techniquement faibles, et un site rapide et bien optimisé permet encore de les dépasser en quelques mois.",
+    ],
     keyIndustries: ["Numérique & télécoms", "Agroalimentaire breton", "Automobile (PSA Rennes)", "Enseignement supérieur", "Commerce & services"],
     stats: {
       entreprises: "28 000 entreprises",
@@ -1405,6 +1414,10 @@ export const cities: City[] = [
       "Premier quartier d'affaires européen, La Défense concentre des milliers d'entreprises, de startups et de prestataires de services B2B sur le territoire de Puteaux.",
     localContext:
       "La Défense est le poumon économique de la France : 3 500 entreprises, 180 000 salariés, 14 des 50 premières entreprises françaises. Les sociétés implantées ici ont des standards digitaux très élevés et choisissent leurs prestataires sur la qualité de leur présence en ligne. Pour les PME de Puteaux qui veulent travailler avec ces grands groupes, un site web professionnel et moderne est la première carte de visite.",
+    marcheLocal: [
+      "Premier quartier d'affaires d'Europe, La Défense concentre plus de 180 000 salariés et les sièges de la moitié du CAC 40. Mais autour des tours, Puteaux et Courbevoie abritent un tissu dense de PME, de cabinets de conseil et d'indépendants qui vivent de cette clientèle corporate : pour eux, un site web crédible est la condition d'accès à ces donneurs d'ordres.",
+      "Dans cet environnement B2B, votre site est audité par des acheteurs professionnels avant même le premier rendez-vous : design soigné, références clients, temps de chargement, sécurité HTTPS — tout est scruté. Un site vitrine premium avec un positionnement clair transforme la proximité géographique avec La Défense en avantage commercial concret.",
+    ],
     keyIndustries: ["Finance & banques", "Conseil stratégique", "Immobilier d'entreprise", "Tech & IT", "Services aux grandes entreprises"],
     stats: {
       entreprises: "15 000 entreprises",
@@ -1689,6 +1702,10 @@ export const cities: City[] = [
       "Capitale de la Bourgogne et ville gastronomique classée UNESCO, Dijon allie patrimoine, tourisme oenologique et un tissu économique diversifié en Côte-d'Or.",
     localContext:
       "Dijon est la capitale de la gastronomie et du vin français, avec des appellations mondialement connues (Bourgogne, Côte de Nuits). Au-delà de son image gastronomique, Dijon est un centre économique régional actif avec un secteur pharmaceutique (Urgo, Solvay), une logistique développée et un commerce de centre-ville dynamique. Les entreprises dijonnaises peuvent capter une clientèle touristique internationale en investissant dans un site web bilingue bien référencé.",
+    marcheLocal: [
+      "Capitale de la Bourgogne et Cité internationale de la gastronomie et du vin, Dijon attire une clientèle locale et touristique qui prépare tout en ligne : restaurants, caves, boutiques du centre historique autour de la rue de la Liberté. Pour les producteurs et cavistes de la route des grands crus, un site e-commerce bien référencé ouvre un marché national, bien au-delà de la Côte-d'Or.",
+      "Le tissu économique dijonnais — santé et pharma, services B2B, artisanat — reste en retard sur le digital par rapport aux grandes métropoles : beaucoup d'entreprises locales n'ont pas de site ou un site vieillissant. C'est précisément ce qui rend le référencement local à Dijon accessible : les positions en première page s'y gagnent plus vite qu'à Paris ou Lyon.",
+    ],
     keyIndustries: ["Viticulture & vins de Bourgogne", "Gastronomie & restauration", "Industrie pharmaceutique", "Logistique & transport", "Commerce & artisanat"],
     stats: {
       entreprises: "18 000 entreprises",
@@ -1760,6 +1777,10 @@ export const cities: City[] = [
       "Surnommée la Venise des Alpes, Annecy est un joyau touristique et un pôle économique dynamique de Haute-Savoie, entre tourisme, outdoor et industries de précision.",
     localContext:
       "Annecy est souvent élue ville la plus belle et agréable de France, avec un lac cristallin et les Alpes en toile de fond. Ce cadre attire touristes, télétravailleurs et entreprises du luxe, créant un marché local premium particulièrement porteur. Les entreprises annéciennes ont l'avantage d'une clientèle fidèle et d'un tourisme quatre saisons, mais doivent absolument être visibles en ligne pour capter les visiteurs avant leur arrivée.",
+    marcheLocal: [
+      "Entre le lac et les montagnes, Annecy vit au rythme d'une économie touristique puissante : hôtellerie, restauration, activités outdoor et immobilier de loisir. Pour ces secteurs, le site web n'est pas une vitrine mais un canal de réservation : les visiteurs préparent leur séjour en ligne des semaines à l'avance, et la saisonnalité impose d'être visible au bon moment sur Google.",
+      "La Haute-Savoie bénéficie aussi de la proximité de Genève : clientèle frontalière au fort pouvoir d'achat, entreprises de services qui rayonnent sur tout le bassin annécien, d'Annecy-le-Vieux à Seynod. Un site professionnel bien référencé sur les requêtes locales du 74 capte cette demande premium que les plateformes généralistes ne servent pas bien.",
+    ],
     keyIndustries: ["Tourisme & hôtellerie 4 saisons", "Sports outdoor & montagne", "Industrie de précision", "Immobilier & résidentiel premium", "Restauration gastronomique"],
     stats: {
       entreprises: "15 000 entreprises",
@@ -2115,6 +2136,10 @@ export const cities: City[] = [
       "Capitale de l'Auvergne et berceau de Michelin, Clermont-Ferrand est un pôle industriel et universitaire dynamique avec un écosystème de startups en forte croissance.",
     localContext:
       "Clermont-Ferrand est le siège mondial de Michelin, la marque française la plus connue dans le monde, et cette présence marque profondément l'économie locale. La ville est aussi un bassin industriel automobile et un marché touristique volcanique unique. La French Tech Clermont Auvergne monte en puissance, avec des startups innovantes dans l'agrotech, la mobilité et la santé.",
+    marcheLocal: [
+      "Clermont-Ferrand, c'est bien sûr Michelin — premier employeur et centre de R&D mondial — mais aussi une vraie ville étudiante (plus de 40 000 étudiants) et un pôle santé-nutrition reconnu. Cette économie diversifiée irrigue un tissu de sous-traitants industriels, de commerces autour de la place de Jaude et de professions libérales qui ont tous le même besoin : être trouvés sur Google.",
+      "L'Auvergne souffre d'un déficit de prestataires web locaux de haut niveau : beaucoup d'entreprises clermontoises se contentent de sites vieillissants ou de pages Facebook. Sur les requêtes locales du Puy-de-Dôme, la concurrence SEO est faible — une opportunité rare de prendre la première page rapidement avec un site moderne et optimisé.",
+    ],
     keyIndustries: ["Industrie automobile & pneumatiques", "Sport & économie sportive", "Tourisme volcanique & nature", "Agrotech & alimentation", "Numérique & startups"],
     stats: {
       entreprises: "10 200 entreprises",

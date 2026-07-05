@@ -401,6 +401,16 @@ export default async function CityPage({ params }: Props) {
             <p className="text-gray-700 leading-relaxed bg-gray-50 rounded-xl p-5 border-l-4 border-purple-400">
               {city.localContext}
             </p>
+            {city.marcheLocal && (
+              <>
+                <h3 className="text-2xl font-bold text-gray-900 pt-4">
+                  Le marché du web à {city.name} : ce qu&apos;il faut savoir
+                </h3>
+                {city.marcheLocal.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </>
+            )}
             <p>
               Avec <strong>{city.stats.entreprises}</strong> recensées,{" "}
               {city.name} est un bassin économique dynamique au sein du
