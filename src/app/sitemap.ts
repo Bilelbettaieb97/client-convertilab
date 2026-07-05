@@ -58,8 +58,8 @@ const staticRoutes = [
 ];
 
 // Updated automatically — change this date when you publish new content
-const SITE_LAST_UPDATED = new Date("2026-06-25");
-const TEMPLATES_CREATED = new Date("2026-06-25");
+const SITE_LAST_UPDATED = new Date("2026-07-05");
+const TEMPLATES_CREATED = new Date("2026-07-05");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const highPriorityRoutes = new Set([

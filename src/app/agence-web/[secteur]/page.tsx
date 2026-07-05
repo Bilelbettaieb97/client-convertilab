@@ -42,14 +42,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(ville);
   if (!city) return { title: "Page introuvable" };
 
+  // Titles et descriptions différenciés par ville (pattern unique + données
+  // locales) pour éviter 53 pages au title identique, signal de contenu dupliqué.
+  const titleVariants = [
+    `Agence Web ${city.name} — Création Site Internet en 7 jours dès 990€`,
+    `Création de Site Internet à ${city.name} (${city.department}) — Agence Web dès 990€`,
+    `Agence Web à ${city.name} : Site Vitrine Pro Livré en 7 jours dès 990€`,
+  ];
+  const title = titleVariants[city.slug.length % titleVariants.length];
+  const industries = city.keyIndustries.slice(0, 2).join(", ").toLowerCase();
+  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine livré en 7 jours dès 990€, satisfait ou remboursé. 15 avis 4.9★. Devis gratuit sous 24h.`;
+
   return {
-    title: `Agence Web ${city.name} — Création Site Internet en 7 jours dès 990€`,
-    description: `Cherchez-vous une agence web à ${city.name} pour créer votre site internet ? ConvertiLab livre votre site vitrine en 7 jours dès 990€, satisfait ou remboursé. +150 clients, 15 avis 4.9★. Devis gratuit sous 24h.`,
+    title,
+    description,
     keywords: city.keywords.join(", "),
     alternates: { canonical: `${SITE.url}/agence-web/${city.slug}` },
     openGraph: {
-      title: `Agence Web ${city.name} — Création Site Internet dès 990€ | ConvertiLab`,
-      description: `Votre agence web à ${city.name}. Site vitrine livré en 7 jours dès 990€. 15 avis 4.9★. Devis gratuit.`,
+      title,
+      description,
       url: `${SITE.url}/agence-web/${city.slug}`,
       type: "website",
       images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
