@@ -82,8 +82,10 @@ export async function POST(request: NextRequest) {
 
     const subject = `[ConvertiLab] Nouveau lead ${formType}${name ? ` — ${name}` : ""}`;
 
-    // Email + Pipedrive en parallèle
-    await Promise.all([
+    // Email + Pipedrive en parallèle.
+    // ATTENTION : le SDK Resend ne throw pas, il retourne { error } — il faut
+    // vérifier le retour, sinon l'échec est silencieux et le lead est perdu.
+    const [emailResult] = await Promise.all([
       resend.emails.send({
         from: "ConvertiLab <bilel@convertilab.com>",
         to: ["contact@convertilab.com", "convertilab@gmail.com"],
@@ -93,6 +95,21 @@ export async function POST(request: NextRequest) {
       }),
       pushToPipedrive(formType, name, email, phone, company, fields),
     ]);
+
+    if (emailResult?.error) {
+      // Cause fréquente : replyTo invalide (email mal saisi par le lead).
+      // On renvoie sans replyTo — la notification interne ne doit jamais sauter.
+      console.error("[notify] resend error, retry sans replyTo:", emailResult.error);
+      const retry = await resend.emails.send({
+        from: "ConvertiLab <bilel@convertilab.com>",
+        to: ["contact@convertilab.com", "convertilab@gmail.com"],
+        subject: `${subject} (email lead invalide : ${email ?? "absent"})`,
+        html,
+      });
+      if (retry.error) {
+        console.error("[notify] resend retry failed:", retry.error);
+      }
+    }
 
     // Séries email (fire-and-forget)
     if (email) {
