@@ -48,7 +48,7 @@ const designStyles = [
 
 const TOTAL_STEPS = 4;
 
-export default function DemandeMaquetteClient() {
+export default function DemandeMaquetteClient({ children }: { children?: React.ReactNode }) {
   const { toast } = useToast();
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -266,6 +266,7 @@ export default function DemandeMaquetteClient() {
             </div>
           </div>
         </section>
+        {children}
       </main>
       <Footer />
     </>
