@@ -121,6 +121,10 @@ export const cities: City[] = [
       "Ville dynamique des Hauts-de-Seine, Rueil-Malmaison accueille de nombreuses PME et professions libérales qui cherchent à développer leur visibilité en ligne.",
     localContext:
       "Rueil-Malmaison héberge les sièges européens de grands groupes comme L'Oréal, Schneider Electric ou SFR, créant un tissu économique B2B très dense. Les PME locales font face à des clients exigeants habitués aux standards digitaux des multinationales voisines. Une présence web professionnelle et un SEO local précis sont indispensables pour capter les artisans, commerces et professions libérales rueillois.",
+    marcheLocal: [
+      "Rueil-Malmaison, c'est notre ville : ConvertiLab y est installée, rue du 4 Septembre. Entre le quartier d'affaires de Rueil-sur-Seine — qui héberge des sièges de grands groupes comme Schneider Electric — et un centre-ville commerçant dense, la ville concentre un tissu rare de PME, professions libérales et commerces qui se disputent une clientèle locale au fort pouvoir d'achat.",
+      "Travailler avec une agence web de Rueil, c'est la possibilité de se rencontrer en personne, de connaître le marché local de l'ouest parisien et d'être accompagné par une équipe qui référence ses propres services sur les mêmes requêtes locales que vous. Nos clients rueillois et des communes voisines (Nanterre, Suresnes, Chatou) en sont la meilleure preuve.",
+    ],
     keyIndustries: ["Industrie pharmaceutique", "Télécommunications", "Services B2B", "Immobilier", "Commerce local"],
     stats: {
       entreprises: "4 800 entreprises",
@@ -194,6 +198,10 @@ export const cities: City[] = [
       "Deuxième ville d'Île-de-France par sa population, Boulogne-Billancourt est un pôle économique majeur avec un tissu dense de PME et startups.",
     localContext:
       "Deuxième ville d'Île-de-France, Boulogne-Billancourt concentre médias (TF1, CANAL+), industrie automobile (Renault) et startups tech. Ses entrepreneurs évoluent dans un environnement ultra-compétitif où la présence digitale fait la différence entre croître et stagner. Les quartiers d'affaires du Trapèze et du Point du Jour attirent entreprises et clients solvables à fort pouvoir d'achat.",
+    marcheLocal: [
+      "Deuxième ville d'Île-de-France, Boulogne-Billancourt est la capitale française des médias et de la communication : TF1 et un écosystème dense de sociétés de production, d'agences et de studios y sont installés, sur les terres de l'ancienne usine Renault réinventées autour de l'île Seguin. S'y ajoutent des milliers de commerces et de professions libérales dans les quartiers résidentiels.",
+      "Dans une ville où vos prospects travaillent pour des marques exigeantes, l'image compte double : un site daté disqualifie d'office. À l'inverse, le volume de recherches locales boulonnaises est l'un des plus élevés du 92 — chaque position gagnée sur Google y rapporte plus de clients qu'ailleurs.",
+    ],
     keyIndustries: ["Médias & audiovisuel", "Automobile & mobilité", "Tech & startups", "Luxe & design", "Services financiers"],
     stats: {
       entreprises: "12 000 entreprises",
@@ -339,6 +347,10 @@ export const cities: City[] = [
       "Ville résidentielle haut de gamme, Neuilly-sur-Seine abrite de nombreux cabinets, professions libérales et commerces premium qui ont besoin d'un site web à la hauteur de leur image.",
     localContext:
       "Neuilly-sur-Seine affiche le revenu médian le plus élevé d'Île-de-France, avec une clientèle exigeante habituée aux standards premium. Cabinets médicaux, avocats, agences immobilières de luxe et commerces haut de gamme y trouvent une clientèle fortunée qui recherche en ligne avant tout achat de service. Un site web soigné et rassurant est ici un critère de sélection avant même le premier contact.",
+    marcheLocal: [
+      "Neuilly-sur-Seine affiche le revenu médian le plus élevé d'Île-de-France et une concentration record de professions libérales : cabinets d'avocats, médecins spécialistes, gestionnaires de patrimoine et commerces premium le long de l'avenue Charles-de-Gaulle. Ici, la clientèle ne cherche pas le moins cher — elle cherche le plus crédible.",
+      "Pour capter cette patientèle et cette clientèle haut de gamme, votre site doit refléter le même standing que votre cabinet ou votre boutique : design soigné, réassurance, prise de rendez-vous fluide. C'est précisément le type de site que nous concevons, avec un référencement local ciblé sur Neuilly et l'ouest parisien.",
+    ],
     keyIndustries: ["Médecine & santé premium", "Cabinet d'avocats", "Immobilier de luxe", "Commerce haut de gamme", "Gestion de patrimoine"],
     stats: {
       entreprises: "5 200 entreprises",
@@ -1343,6 +1355,10 @@ export const cities: City[] = [
       "Aux portes de La Défense, Courbevoie est un pôle d'activité majeur des Hauts-de-Seine avec de nombreux sièges sociaux et un tissu de PME dynamiques.",
     localContext:
       "Courbevoie jouxte La Défense, le premier quartier d'affaires européen, et abrite une dense communauté de consultants et professions intermédiaires. Les PME courbevoisiennes travaillent souvent en sous-traitance avec les grands groupes de La Défense — avoir un site professionnel et convaincant est une condition sine qua non pour décrocher ces contrats B2B.",
+    marcheLocal: [
+      "Courbevoie vit une double vie : une large partie de La Défense — premier quartier d'affaires d'Europe — se trouve sur son territoire, tandis que ses quartiers résidentiels (Bécon, Faubourg de l'Arche, centre-ville) abritent des milliers de commerces, d'artisans et d'indépendants. Cette proximité avec 180 000 salariés du tertiaire crée une clientèle exigeante, habituée aux standards des grandes entreprises.",
+      "Pour un prestataire courbevoisien, un site web professionnel n'est pas une option : vos prospects comparent naturellement votre présence en ligne à celle des enseignes de La Défense. La bonne nouvelle : sur les requêtes locales de Courbevoie, la concurrence SEO reste modérée — un site rapide et bien optimisé prend l'avantage en quelques mois.",
+    ],
     keyIndustries: ["Conseil & consulting B2B", "Finance d'entreprise", "Immobilier commercial", "Services informatiques", "Ressources humaines"],
     stats: {
       entreprises: "9 000 entreprises",
@@ -3489,6 +3505,10 @@ export const cities: City[] = [
       "Ville dynamique des Hauts-de-Seine avec une vue imprenable sur Paris, Suresnes accueille des sièges d'entreprises et un commerce local florissant.",
     localContext:
       "Suresnes est une ville stratégique des Hauts-de-Seine, connue pour héberger le siège de Sanofi (un des plus grands groupes pharmaceutiques mondiaux) et de nombreuses autres multinationales. Cette présence de grands groupes crée un marché B2B dense pour les prestataires de services, avec des exigences élevées en termes de professionnalisme. La ville est aussi un territoire en gentrification rapide, attirant de nouvelles populations cadres qui consomment localement.",
+    marcheLocal: [
+      "Adossée au Mont-Valérien face au bois de Boulogne, Suresnes combine des sièges d'entreprises historiques — comme le groupe Bel, célèbre pour La Vache qui rit — avec un tissu dense de PME de santé, de services B2B et de commerces de proximité le long des bords de Seine. La ville profite directement du bassin d'emploi de La Défense, à quelques minutes.",
+      "Ce positionnement crée une opportunité digitale : les clients suresnois recherchent des prestataires locaux en ligne, mais peu d'entreprises de la ville ont investi sérieusement leur référencement. Une fiche Google soignée et un site optimisé sur les requêtes du 92 suffisent souvent à capter une clientèle que les grandes agences parisiennes ne ciblent pas.",
+    ],
     keyIndustries: ["Industrie pharmaceutique (Sanofi)", "Services aux entreprises & consulting", "Commerce & restauration", "Immobilier & résidentiel", "Tech & innovation"],
     stats: {
       entreprises: "3 800 entreprises",

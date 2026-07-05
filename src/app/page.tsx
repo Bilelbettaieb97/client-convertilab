@@ -144,32 +144,6 @@ const faqSchema = {
   ],
 };
 
-const reviewsSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${SITE.url}#localbusiness-reviews`,
-  name: SITE.name,
-  url: SITE.url,
-  telephone: SITE.phone,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "1 Rue du 4 Septembre",
-    addressLocality: "Rueil-Malmaison",
-    postalCode: "92500",
-    addressRegion: "Île-de-France",
-    addressCountry: "FR",
-  },
-  image: `${SITE.url}/og-image.png`,
-  priceRange: "€€",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: SITE.reviews.rating,
-    reviewCount: SITE.reviews.count,
-    bestRating: "5",
-    worstRating: "1",
-  },
-};
-
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -211,10 +185,6 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
       />
       <script
         type="application/ld+json"

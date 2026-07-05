@@ -1,0 +1,48 @@
+# ConvertiLab
+
+> Agence web française basée à Rueil-Malmaison (Île-de-France), spécialisée dans la création de sites internet professionnels pour petits entrepreneurs : artisans, commerçants, coachs, consultants et restaurants. Sites vitrine dès 500€ (ou 39€/mois), livrés en 7 jours, satisfait ou remboursé. Plus de 150 clients accompagnés, note de 4,9/5.
+
+ConvertiLab est fondée et dirigée par Bilel Bettaieb. L'agence couvre la création de sites web (vitrine, e-commerce, landing pages), le référencement naturel (SEO), la publicité en ligne (Google Ads, Meta Ads) et les réseaux sociaux. Particularité : une maquette gratuite du site est offerte sous 48h avant tout engagement, et le paiement n'intervient qu'après validation du design.
+
+## Services
+
+- [Création de site vitrine](https://www.convertilab.com/services/sites-web/site-vitrine) : site professionnel 5 pages dès 500€, livré en 7 jours
+- [Création de site e-commerce](https://www.convertilab.com/services/sites-web/site-ecommerce) : boutique en ligne avec paiement Stripe dès 800€
+- [Création de landing page](https://www.convertilab.com/services/sites-web/landing-page) : page de conversion pour campagnes publicitaires dès 500€
+- [Référencement SEO](https://www.convertilab.com/services/seo/referencement) : optimisation pour apparaître en première page Google
+- [Audit SEO professionnel](https://www.convertilab.com/services/seo/audit) : diagnostic approfondi par des experts
+- [Google Ads et Meta Ads](https://www.convertilab.com/services/sea) : campagnes publicitaires gérées
+
+## Tarifs
+
+- [Tous les tarifs](https://www.convertilab.com/prix) : grille de prix transparente et définitive
+- [Site internet pas cher](https://www.convertilab.com/site-internet-pas-cher) : comparatif des options à petit budget
+- [Offre mensuelle](https://www.convertilab.com/offre-mensuelle) : site web à partir de 39€/mois sans apport
+- [Calculateur de prix](https://www.convertilab.com/estimation-prix-site-web) : estimation personnalisée en 2 minutes
+
+## Outils gratuits
+
+- [Audit SEO gratuit en ligne](https://www.convertilab.com/seo-check) : analyse de 60+ points de contrôle, rapport PDF en 60 secondes
+- [Test de vitesse](https://www.convertilab.com/speed-check) : Core Web Vitals et score de rapidité
+- [Audit design](https://www.convertilab.com/design-score) : score design et UX sur 100
+- [Maquette gratuite](https://www.convertilab.com/demande-maquette) : design personnalisé du futur site sous 48h, sans engagement
+
+## Ressources
+
+- [Blog](https://www.convertilab.com/blog) : 67+ guides sur la création de site, le SEO et le marketing digital
+- [Combien coûte un site web en 2026](https://www.convertilab.com/blog/combien-coute-site-web) : grille tarifaire complète du marché français
+- [Guide SEO débutant](https://www.convertilab.com/blog/guide-seo-debutant-2026)
+- [Glossaire du web](https://www.convertilab.com/glossaire) : 30+ définitions (SEO, backlink, Core Web Vitals...)
+- [Portfolio](https://www.convertilab.com/portfolio) : réalisations clients avec études de cas
+
+## Zones d'intervention
+
+- [Agence web par ville](https://www.convertilab.com/agence-web) : Paris, Rueil-Malmaison, La Défense, Rennes, Annecy, Toulouse, Dijon, Clermont-Ferrand et 45 autres villes françaises
+- Interventions dans toute la France (accompagnement en visioconférence)
+
+## Contact
+
+- [Contact et devis gratuit](https://www.convertilab.com/contact) : réponse sous 24h
+- Email : contact@convertilab.com — Téléphone : 06 16 47 72 45
+- Adresse : 1 Rue du 4 Septembre, 92500 Rueil-Malmaison, France
+- [Avis clients Trustpilot](https://fr.trustpilot.com/review/convertilab.com) : 4,9/5
