@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import PrixSiteCta from "@/components/internal-links/PrixSiteCta";
 import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
 import { comparisons } from "@/data/comparisons";
 
@@ -290,6 +291,10 @@ export default async function ComparisonDetailPage({ params }: Props) {
 
       {["seo-vs-google-ads", "seo-local-vs-seo-national"].includes(slug) && (
         <SeoCheckCta title="Évaluez votre potentiel SEO avant de choisir" />
+      )}
+
+      {["site-gratuit-vs-professionnel", "wix-vs-agence", "agence-vs-freelance", "squarespace-vs-agence", "shopify-vs-site-sur-mesure"].includes(slug) && (
+        <PrixSiteCta title="Comparez avec un chiffrage réel de votre projet" />
       )}
 
       <Footer />

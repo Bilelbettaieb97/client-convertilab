@@ -3,12 +3,15 @@ import Link from "next/link";
 import { SITE, PRICING } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import PrixSiteCta from "@/components/internal-links/PrixSiteCta";
 import { pricingPages } from "@/data/pricing-pages";
 
 export const metadata: Metadata = {
-  title: "Tarifs Création Site Web 2026 | Dès 500€ | ConvertiLab Paris",
+  title: "Prix d'un Site Web en 2026 — Tarifs Transparents dès 500€",
   description:
-    "Sites web à partir de 500€, e-commerce dès 800€, SEO et Google Ads sur devis. Tarifs transparents, sans frais cachés. Devis gratuit sous 24h.",
+    "Quel budget pour votre site web ? Tarifs transparents : site vitrine dès 500€, e-commerce dès 800€, ou 39€/mois. Combien coûte chaque type de site, sans frais cachés. Devis gratuit sous 24h.",
+  keywords:
+    "prix site web, budget site web, tarif site internet, combien coûte un site web, prix création site internet, tarif site vitrine, prix site e-commerce",
   alternates: { canonical: `${SITE.url}/prix` },
   openGraph: {
     title: "Tarifs Création Site Web 2026 | ConvertiLab",
@@ -226,6 +229,7 @@ export default function PrixPage() {
         </div>
       </section>
 
+      <PrixSiteCta title="Besoin d'un chiffrage précis pour votre projet ?" />
       <Footer />
     </div>
   );

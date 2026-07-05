@@ -441,7 +441,7 @@ Avoir plus d'avis aide, mais ce n'est pas le seul facteur. La récence des avis 
     slug: "combien-coute-site-web",
     title: "Combien coûte un site web professionnel pour une petite entreprise en 2026 ?",
     excerpt: "De 300€ à 30 000€ : les prix d'un site web varient énormément selon le type, le prestataire et les fonctionnalités. Grille tarifaire complète et transparente pour artisans, commerçants et PME.",
-    metaDescription: "Combien coûte un site web professionnel pour une petite entreprise en 2026 ? Grille tarifaire complète : vitrine, e-commerce, sur-mesure. Tarifs réels ConvertiLab inclus.",
+    metaDescription: "Combien coûte un site web professionnel en 2026 ? Quel budget prévoir pour un site vitrine, e-commerce ou sur-mesure : grille tarifaire complète et tarifs réels ConvertiLab inclus.",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
     category: "Business",
     readTime: "7 min",

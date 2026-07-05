@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import PrixSiteCta from "@/components/internal-links/PrixSiteCta";
 import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
 import { pricingPages } from "@/data/pricing-pages";
 
@@ -290,8 +291,10 @@ export default async function PricingDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {slug === "seo" && (
+      {slug === "seo" ? (
         <SeoCheckCta title="Estimez vos besoins : commencez par un audit gratuit" />
+      ) : (
+        <PrixSiteCta title="Obtenez un chiffrage précis en 2 minutes" />
       )}
 
       <Footer />

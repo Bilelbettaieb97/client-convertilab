@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import PrixSiteCta from "@/components/internal-links/PrixSiteCta";
 import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
 import { guides, getGuideBySlug, getAllGuideSlugs } from "@/data/guides";
 import {
@@ -333,6 +334,10 @@ export default async function GuidePage({ params }: PageProps) {
 
       {slug === "ameliorer-seo" && (
         <SeoCheckCta title="Première étape du guide : auditez votre site" />
+      )}
+
+      {["devis-site-web", "creer-site-internet", "site-web-qui-convertit"].includes(slug) && (
+        <PrixSiteCta title="Chiffrez votre projet avant de demander des devis" />
       )}
 
       <Footer />

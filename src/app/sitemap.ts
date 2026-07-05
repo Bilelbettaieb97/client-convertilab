@@ -55,6 +55,7 @@ const staticRoutes = [
   "/comparatifs",
   "/outils",
   "/faq",
+  "/site-internet-pas-cher",
 ];
 
 // Updated automatically — change this date when you publish new content
