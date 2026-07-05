@@ -252,7 +252,7 @@ export default function DemandeMaquetteClient() {
                   <Button onClick={() => goToStep(step + 1)} disabled={!canProceed()} className="bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-700 hover:to-pink-700 text-white shadow-lg shadow-violet-500/20 disabled:opacity-40 disabled:shadow-none transition-all duration-300">Suivant <ArrowRight className="w-4 h-4 ml-2" /></Button>
                 ) : (
                   <Button onClick={handleSubmit} disabled={!canProceed() || isSubmitting} className="bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-700 hover:to-pink-700 text-white shadow-lg shadow-violet-500/20 disabled:opacity-40 disabled:shadow-none transition-all duration-300 px-8">
-                    {isSubmitting ? <><div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />Envoi...</> : <>Envoyer ma demande <Sparkles className="w-4 h-4 ml-2" /></>}
+                    {isSubmitting ? <><div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />Envoi...</> : <>Recevoir ma maquette gratuite <Sparkles className="w-4 h-4 ml-2" /></>}
                   </Button>
                 )}
               </div>

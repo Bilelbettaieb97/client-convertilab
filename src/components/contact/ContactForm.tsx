@@ -113,10 +113,6 @@ const ContactForm = () => {
       toast({ title: "Email invalide", variant: "destructive" });
       return false;
     }
-    if (!formData.company.trim()) {
-      toast({ title: "Entreprise requise", variant: "destructive" });
-      return false;
-    }
     if (!formData.phone.trim() || !phoneRegex.test(formData.phone)) {
       toast({ title: "Telephone requis (min. 10 chiffres)", variant: "destructive" });
       return false;
@@ -495,7 +491,7 @@ const ContactForm = () => {
                   <div className="relative group">
                     <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 group-focus-within:text-purple-500 transition-colors" />
                     <Input
-                      placeholder="Votre entreprise *"
+                      placeholder="Votre entreprise (optionnel)"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="pl-9 h-11 sm:h-12 text-sm bg-slate-50 dark:bg-slate-800 border-0 rounded-xl focus:ring-2 focus:ring-purple-500"
