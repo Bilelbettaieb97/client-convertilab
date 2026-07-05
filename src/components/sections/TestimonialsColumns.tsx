@@ -84,13 +84,13 @@ export default function TestimonialsColumnsSection() {
             Temoignages clients
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
-            Ils nous font{" "}
+            150+ entrepreneurs nous font{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400">
               confiance
             </span>
           </h2>
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-            Plus de 50 entreprises nous confient leur strategie digitale. Voici ce qu&apos;elles en disent.
+            Artisans, commerçants, coachs et indépendants nous ont confié la création de leur site web et leur visibilité Google. Voici ce qu&apos;ils en disent.
           </p>
         </motion.div>
 

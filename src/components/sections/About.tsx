@@ -55,13 +55,13 @@ const About = () => {
             À propos
           </div>
           <h2 className="text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight">
-            Bienvenue chez{" "}
+            ConvertiLab, votre{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 animate-pulse">
-              ConvertiLab
+              agence web
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            Agence de marketing digital spécialisée dans l&apos;acquisition et la conversion.
+            Agence web et marketing digital basée à Rueil-Malmaison, en Île-de-France, spécialisée dans l&apos;acquisition et la conversion.
             Notre équipe d&apos;experts en SEO, publicité, social media et création web transforme
             votre présence digitale en machine à générer du business.
           </p>

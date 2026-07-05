@@ -67,7 +67,7 @@ const FAQ = () => {
             </div>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-            Questions fréquentes
+            Questions fréquentes sur la création de site web
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Tout ce que vous devez savoir avant de lancer votre projet

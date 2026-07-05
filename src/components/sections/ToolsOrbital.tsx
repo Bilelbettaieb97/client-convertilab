@@ -121,7 +121,7 @@ export default function ToolsOrbital() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight">
-              Votre site peut-il{" "}
+              Audit gratuit : votre site web peut-il{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400">
                 faire mieux ?
               </span>

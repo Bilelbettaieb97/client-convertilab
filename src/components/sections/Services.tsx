@@ -110,13 +110,13 @@ const Services = () => {
             <span className="text-sm font-medium text-violet-700 dark:text-violet-300">Nos expertises</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold text-foreground mb-4 tracking-tight">
-            Solutions de{" "}
+            Création de site internet &{" "}
             <span className="bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               Marketing Digital
             </span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            De la stratégie à l&apos;exécution, un accompagnement 360° pour votre croissance digitale
+            Sites web professionnels, référencement SEO, Google Ads et réseaux sociaux : un accompagnement 360° pour votre croissance digitale
           </p>
         </header>
 

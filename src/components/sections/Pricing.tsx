@@ -83,7 +83,7 @@ export default function Pricing() {
             Nos tarifs transparents
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Choisissez l&apos;offre adaptée{" "}
+            Prix de votre site web : l&apos;offre adaptée{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               à votre projet
             </span>
