@@ -23,9 +23,6 @@ const Pricing = dynamic(() => import("@/components/sections/Pricing"));
 const FAQ = dynamic(() => import("@/components/sections/FAQ"));
 const SocialProofToast = dynamic(() => import("@/components/conversion/SocialProofToast"));
 const StickyMobileCTA = dynamic(() => import("@/components/conversion/StickyMobileCTA"));
-const CinematicHero = dynamic(() =>
-  import("@/components/ui/cinematic-landing-hero").then((m) => ({ default: m.CinematicHero }))
-);
 const CinematicFooter = dynamic(() =>
   import("@/components/ui/motion-footer").then((m) => ({ default: m.CinematicFooter }))
 );
@@ -243,69 +240,51 @@ export default function HomePage() {
           <TrustBar />
         </AnimatedSection>
 
-        {/* S3 — RÉALISATIONS / RÉSULTATS CLIENTS (light) */}
-        <AnimatedSection animation="fade-up">
-          <section id="portfolio">
-            <Portfolio />
-          </section>
-        </AnimatedSection>
-
-        {/* S4 — CINEMATIC MOBILE (dark) — showcase responsive */}
-        <section id="mobile-showcase" className="relative">
-          <CinematicHero
-            brandName="MOBILE"
-            tagline1="Vos clients sont"
-            tagline2="sur mobile."
-            cardHeading="100% responsive, 100% rapide."
-            cardDescription={
-              <>
-                <span className="text-white font-semibold">ConvertiLab</span> crée des sites web optimisés mobile-first : design premium, vitesse de chargement sous 2s, et conversions maximales sur smartphone.
-              </>
-            }
-            metricValue={98}
-            metricLabel="Score Mobile"
-            ctaHeading="Pret pour un site mobile ?"
-            ctaDescription="Rejoignez les 150+ marques qui ont transforme leur trafic mobile en clients grace a ConvertiLab."
-          />
-        </section>
-
-        {/* S5 — SERVICES (light gradient) */}
+        {/* S3 — SERVICES (light gradient) — la solution juste après la preuve rapide */}
         <AnimatedSection animation="fade-up">
           <section id="services">
             <Services />
           </section>
         </AnimatedSection>
 
-        {/* S6 — BOÎTE À OUTILS ORBITAL (dark) — lead magnet */}
+        {/* S4 — RÉALISATIONS / RÉSULTATS CLIENTS (light) — preuve concrète */}
         <AnimatedSection animation="fade-up">
-          <ToolsOrbital />
+          <section id="portfolio">
+            <Portfolio />
+          </section>
         </AnimatedSection>
 
-        {/* S7 — PROCESS (white) */}
-        <AnimatedSection animation="fade-up" delay={100}>
-          <ProcessTimeline />
-        </AnimatedSection>
-
-        {/* S9 — TÉMOIGNAGES (dark, 3 scrolling columns) */}
+        {/* S5 — TÉMOIGNAGES (dark, 3 scrolling columns) — preuve sociale */}
         <AnimatedSection animation="fade-up" delay={100}>
           <section id="testimonials">
             <TestimonialsColumnsSection />
           </section>
         </AnimatedSection>
 
-        {/* S10 — À PROPOS (dark) */}
+        {/* S6 — PROCESS (white) — réduit la peur de l'effort */}
+        <AnimatedSection animation="fade-up" delay={100}>
+          <ProcessTimeline />
+        </AnimatedSection>
+
+        {/* S7 — À PROPOS (dark) — l'humain derrière l'agence */}
         <AnimatedSection animation="scale">
           <About />
         </AnimatedSection>
 
-        {/* S11 — PRIX & OFFRES (light) */}
+        {/* S8 — PRIX & OFFRES (light) — l'offre une fois la confiance établie */}
         <AnimatedSection animation="fade-up">
           <Pricing />
         </AnimatedSection>
 
-        {/* S12 — FAQ (white) */}
+        {/* S9 — FAQ (white) — traitement des objections avant le CTA final */}
         <AnimatedSection animation="fade-up">
           <FAQ />
+        </AnimatedSection>
+
+        {/* S10 — BOÎTE À OUTILS ORBITAL (dark) — engagement progressif pour les
+            visiteurs pas encore prêts à demander un devis */}
+        <AnimatedSection animation="fade-up">
+          <ToolsOrbital />
         </AnimatedSection>
 
         {/* S13 — CINEMATIC FOOTER (closer cinématographique GSAP) */}

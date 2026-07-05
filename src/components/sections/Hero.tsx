@@ -125,9 +125,9 @@ const Hero = () => {
                 size="lg"
                 className="group w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl"
               >
-                <Link href="/portfolio">
+                <Link href="/demande-maquette">
                   <Rocket className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-                  Découvrir nos réalisations
+                  Ma maquette gratuite en 48h
                   <ArrowRight className="ml-2 w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </Link>
               </Button>
