@@ -33,13 +33,6 @@ const serviceSchema = {
     telephone: SITE.phone,
   },
   areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: SITE.reviews.rating,
-    reviewCount: SITE.reviews.count,
-    bestRating: "5",
-    worstRating: "1",
-  },
   offers: {
     "@type": "Offer",
     priceCurrency: "EUR",

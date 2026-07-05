@@ -50,14 +50,7 @@ const serviceSchema = {
   "url": `${SITE.url}/services/sites-web/landing-page`,
   "provider": { "@type": "Organization", "name": SITE.name },
   "offers": { "@type": "Offer", "price": PRICING.landing.from, "priceCurrency": "EUR" ,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE.reviews.rating,
-      reviewCount: SITE.reviews.count,
-      bestRating: "5",
-      worstRating: "1",
-    }
-  },
+},
 };
 
 export default function LandingPagePage() {
