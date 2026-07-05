@@ -38,8 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!sector) return { title: "Page introuvable" };
 
   return {
-    title: `Création Site Web ${sector.name} | Site Internet ${sector.name}`,
-    description: `Création de site internet pour ${sector.name.toLowerCase()}. ${sector.description.slice(0, 120)}`,
+    title: [
+      `Création de Site Internet pour ${sector.name} — dès 500€ en 7 jours`,
+      `Site Web ${sector.name} : Création Professionnelle dès 500€`,
+      `Site Internet ${sector.name} — Conçu pour Attirer vos Clients`,
+    ][sector.slug.length % 3],
+    description: `Création de site internet pour ${sector.name.toLowerCase()} : site professionnel dès 500€, livré en 7 jours, optimisé Google. ${sector.description.slice(0, 100)}`,
     keywords: `site web ${sector.name.toLowerCase()}, création site internet ${sector.name.toLowerCase()}, site vitrine ${sector.name.toLowerCase()}`,
     alternates: { canonical: `${SITE.url}/solutions/${sector.slug}` },
     openGraph: {

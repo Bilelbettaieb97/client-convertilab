@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SpeedCheckForm from "@/components/speed-check/SpeedCheckForm";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Audit Vitesse Gratuit — Testez la rapidité de votre site",
+  title: "Test de Vitesse Site Web Gratuit — Core Web Vitals en 60s",
+  keywords:
+    "test vitesse site web, tester la vitesse de son site, test de vitesse gratuit, site web lent, core web vitals, pagespeed, audit vitesse site internet",
   description:
     "Testez gratuitement la vitesse de votre site web. Temps de réponse, poids de page, compression, scripts bloquants, images. Rapport PDF complet envoyé par email.",
   openGraph: {
@@ -49,6 +52,34 @@ const jsonLd = {
   },
 };
 
+
+const faqItems = [
+  { question: "Le test de vitesse est-il vraiment gratuit ?",
+    answer: "Oui, 100% gratuit et sans engagement. Vous entrez l'URL de votre site et votre email, et vous recevez le rapport complet en PDF avec votre score de vitesse, le détail des 20+ points de contrôle et les corrections à apporter, classées par priorité." },
+  { question: "Que sont les Core Web Vitals ?",
+    answer: "Ce sont les trois métriques officielles de Google pour mesurer l'expérience de chargement : le LCP (vitesse d'affichage du contenu principal, cible < 2,5s), le CLS (stabilité visuelle de la page) et l'INP (réactivité aux clics). Depuis 2021, elles font partie des critères de classement Google : un site lent perd des positions." },
+  { question: "Quel est un bon score de vitesse pour un site web ?",
+    answer: "Visez un chargement complet sous 3 secondes sur mobile et un score PageSpeed supérieur à 90. Entre 50 et 89, des optimisations ciblées s'imposent. Sous 50, la lenteur vous coûte concrètement des clients : chaque seconde de chargement supplémentaire fait chuter les conversions d'environ 7%." },
+  { question: "Pourquoi mon site est-il lent ?",
+    answer: "Les causes les plus fréquentes : images trop lourdes ou mal compressées, hébergement bas de gamme, thème WordPress surchargé de plugins, scripts tiers bloquants (chats, trackers), absence de cache et de CDN. Notre rapport identifie précisément lesquelles concernent votre site." },
+  { question: "La vitesse influence-t-elle vraiment mon référencement Google ?",
+    answer: "Oui, doublement. Directement : les Core Web Vitals sont un critère de classement officiel. Indirectement : un site lent augmente le taux de rebond, et Google interprète ces retours utilisateurs négatifs comme un signal de faible qualité. Vitesse et SEO sont indissociables — testez les deux avec notre audit SEO gratuit." },
+  { question: "Testez-vous la version mobile ou desktop ?",
+    answer: "L'analyse porte en priorité sur l'expérience mobile, car Google indexe d'abord la version mobile de votre site (mobile-first indexing) et plus de 60% du trafic est mobile. Un site rapide sur ordinateur mais lent sur smartphone perd l'essentiel de ses visiteurs." },
+  { question: "Que faire si mon score de vitesse est mauvais ?",
+    answer: "Commencez par les corrections prioritaires du rapport : compression des images, mise en cache, suppression des scripts inutiles. Si votre site repose sur une technologie lente par nature, une refonte avec une technologie moderne comme Next.js (score 90+ garanti sur nos créations) est souvent plus rentable que des rustines." },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 const features = [
   {
     icon: "\u23F1\uFE0F",
@@ -88,6 +119,10 @@ export default function SpeedCheckPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <Navigation />
@@ -166,6 +201,71 @@ export default function SpeedCheckPage() {
                   <h3 className="text-white font-semibold text-sm mb-1">{s.title}</h3>
                   <p className="text-white/40 text-xs">{s.desc}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+        {/* Contenu SEO — pourquoi la vitesse compte */}
+        <section className="py-20 px-4 border-t border-white/5">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Pourquoi tester la vitesse de votre site web ?
+            </h2>
+            <div className="space-y-4 text-white/60 leading-relaxed">
+              <p>
+                La vitesse de chargement est le facteur le plus sous-estimé du web :{" "}
+                <strong className="text-white/80">53% des visiteurs mobiles quittent
+                un site qui met plus de 3 secondes à charger</strong>, et chaque seconde
+                supplémentaire fait chuter les conversions d&apos;environ 7%. Un site lent
+                ne fait pas fuir que vos visiteurs — il fait fuir Google : les Core Web
+                Vitals sont un critère de classement officiel depuis 2021.
+              </p>
+              <p>
+                Notre <strong className="text-white/80">test de vitesse gratuit</strong>{" "}
+                analyse votre site comme Google le fait : temps de réponse serveur, poids
+                des pages, compression, images, scripts bloquants. En 60 secondes, vous
+                savez exactement ce qui ralentit votre site et par quoi commencer pour le
+                corriger — le détail complet arrive en PDF dans votre boîte mail.
+              </p>
+              <p>
+                Pour comprendre les leviers d&apos;optimisation, lisez notre guide{" "}
+                <Link href="/blog/optimiser-vitesse-site-web" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">
+                  comment accélérer son site web
+                </Link>{" "}
+                ou découvrez{" "}
+                <Link href="/blog/site-web-lent-fait-fuir-clients" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">
+                  combien un site lent coûte réellement en clients perdus
+                </Link>
+                . Et pour une vision complète de votre visibilité, complétez avec notre{" "}
+                <Link href="/seo-check" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">
+                  audit SEO gratuit
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-20 px-4 border-t border-white/5">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">
+              Questions fréquentes sur le test de vitesse
+            </h2>
+            <p className="text-white/40 text-center mb-12">
+              Core Web Vitals, scores, causes de lenteur : ce qu&apos;il faut savoir
+            </p>
+            <div className="space-y-3">
+              {faqItems.map((faq, i) => (
+                <details key={i} className="group bg-white/[0.03] border border-white/10 rounded-xl overflow-hidden">
+                  <summary className="flex items-center justify-between cursor-pointer p-5 text-left font-semibold text-white/90 hover:text-purple-300 transition-colors [&::-webkit-details-marker]:hidden">
+                    <span className="pr-4 text-sm md:text-base">{faq.question}</span>
+                    <span className="text-purple-400 group-open:rotate-45 transition-transform duration-200 text-xl flex-shrink-0">+</span>
+                  </summary>
+                  <div className="px-5 pb-5 text-white/50 text-sm leading-relaxed">{faq.answer}</div>
+                </details>
               ))}
             </div>
           </div>
