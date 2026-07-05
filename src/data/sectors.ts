@@ -39,6 +39,7 @@ export interface Sector {
   caseStudy: CaseStudy;
   stats: Stat[];
   process: ProcessStep[];
+  marcheSecteur?: string[];
 }
 
 export const sectors: Sector[] = [
@@ -69,6 +70,10 @@ export const sectors: Sector[] = [
       "SEO local optimisé",
     ],
     cta: "Créer le site de mon restaurant",
+    marcheSecteur: [
+      "Un client qui a faim ne lit pas une brochure : il tape « restaurant + quartier » sur son téléphone, regarde les photos, le menu, les avis et l'affluence, puis réserve ou vient. Google, Maps et Instagram décident souvent du choix avant même que la porte ne s'ouvre. Des photos appétissantes et une note récente pèsent plus que n'importe quel argument.",
+      "Le site d'un restaurant doit charger vite sur mobile, afficher le menu à jour, les horaires, un bouton de réservation ou de commande, et de vraies photos des plats. Intégration Google Maps, avis mis en avant et lien vers les plateformes de livraison complètent l'ensemble. C'est une vitrine qui donne faim et lève tous les freins avant la visite.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un restaurant ?",
@@ -177,6 +182,10 @@ export const sectors: Sector[] = [
       "SEO local cabinet",
     ],
     cta: "Créer le site de mon cabinet",
+    marcheSecteur: [
+      "On choisit un avocat sur la confiance, la compétence perçue et la discrétion. Le client potentiel cherche un domaine précis — divorce, droit du travail, immobilier — vérifie l'expertise, lit quelques lignes rassurantes, puis prend contact. La sobriété et la clarté priment : un site tape-à-l'œil inquiète autant qu'un site absent.",
+      "Le site d'un cabinet d'avocats doit inspirer autorité et sérieux : domaines d'intervention détaillés, présentation du parcours, contenus qui démontrent l'expertise, et prise de rendez-vous simple. Il respecte les règles déontologiques de la profession, met en avant la confidentialité et rassure une clientèle souvent en situation de stress. La crédibilité se construit à chaque page.",
+    ],
     faqItems: [
       {
         question:
@@ -289,6 +298,10 @@ export const sectors: Sector[] = [
       "SEO local multi-villes",
     ],
     cta: "Créer le site de mon activité",
+    marcheSecteur: [
+      "Un particulier qui a un projet ou une urgence cherche un artisan local sur Google, compare quelques réalisations, lit les avis et demande un devis. La preuve par l'image — chantiers terminés, avant/après — et la réactivité font la décision. Sans site ni fiche Google, l'artisan reste invisible face à des concurrents pourtant moins compétents.",
+      "Le site d'un artisan doit montrer le travail : galerie de réalisations, zone d'intervention claire, coordonnées visibles et formulaire de devis rapide. Avis clients, garanties et certifications rassurent. Optimisé pour le référencement local, il capte les recherches de proximité au moment précis où le client cherche un professionnel de confiance près de chez lui.",
+    ],
     faqItems: [
       {
         question:
@@ -401,6 +414,10 @@ export const sectors: Sector[] = [
       "SEO local immobilier",
     ],
     cta: "Créer le site de mon agence",
+    marcheSecteur: [
+      "Acheteurs et vendeurs commencent tout en ligne : ils consultent des annonces, comparent les agences, jugent le professionnalisme sur la qualité des photos et la clarté de l'offre. La confiance se gagne avant le premier appel. Une agence peu visible ou au site daté perd des mandats au profit de concurrents mieux positionnés.",
+      "Le site d'une agence immobilière doit présenter les biens avec de belles photos, des filtres de recherche efficaces, une estimation en ligne et une prise de contact fluide. Témoignages de clients satisfaits, connaissance du secteur et réactivité rassurent vendeurs comme acheteurs. Le référencement local sur les quartiers ciblés attire une clientèle en recherche active.",
+    ],
     faqItems: [
       {
         question:
@@ -513,6 +530,10 @@ export const sectors: Sector[] = [
       "Lead magnet (guide gratuit)",
     ],
     cta: "Créer mon site de coaching",
+    marcheSecteur: [
+      "On choisit un coach — sportif, professionnel, de vie — sur le lien humain et la preuve de résultats. Le prospect cherche une approche qui lui parle, lit des témoignages de transformation, regarde qui se cache derrière, puis franchit le pas. L'authenticité et la personnalité comptent davantage que le diplôme affiché.",
+      "Le site d'un coach doit incarner sa méthode et sa personnalité : présentation claire de l'approche, témoignages de clients transformés, contenus qui démontrent l'expertise et prise de rendez-vous pour une première séance découverte. Il crée la relation de confiance avant le premier échange et transforme un visiteur hésitant en client engagé dans sa démarche.",
+    ],
     faqItems: [
       {
         question:
@@ -625,6 +646,10 @@ export const sectors: Sector[] = [
       "Analytics e-commerce",
     ],
     cta: "Créer ma boutique en ligne",
+    marcheSecteur: [
+      "L'acheteur en ligne compare, hésite et abandonne au moindre frein : page lente, photo médiocre, paiement compliqué. Il arrive souvent via Google, une recherche produit ou une publicité, et décide en quelques secondes. Chaque détail — fiche produit, avis, délai de livraison — pèse sur la conversion et sur le panier abandonné.",
+      "Une boutique en ligne performante exige des fiches produits soignées, un tunnel d'achat sans friction, un paiement sécurisé, une vitesse irréprochable et un référencement produit optimisé. Avis clients, réassurance sur la livraison et les retours, relances de panier abandonné : chaque élément est pensé pour transformer le visiteur en acheteur puis en client fidèle.",
+    ],
     faqItems: [
       {
         question:
@@ -737,6 +762,10 @@ export const sectors: Sector[] = [
       "SEO local dentiste",
     ],
     cta: "Créer le site de mon cabinet dentaire",
+    marcheSecteur: [
+      "Un patient cherche un dentiste proche, disponible et rassurant, souvent dans une logique d'urgence ou de suivi. Il vérifie les horaires, la prise de rendez-vous en ligne, les avis et l'ambiance du cabinet. La peur du dentiste rend la réassurance décisive : un site froid ou daté renforce l'appréhension.",
+      "Le site d'un cabinet dentaire doit rassurer et faciliter : présentation des soins, de l'équipe et du cabinet, prise de rendez-vous en ligne, informations pratiques et accès. Un ton apaisant, des photos accueillantes et le respect des règles de la profession installent la confiance. Le référencement local capte les patients qui cherchent un praticien à proximité.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un cabinet dentaire ?",
@@ -842,6 +871,10 @@ export const sectors: Sector[] = [
       "SEO local médecin",
     ],
     cta: "Créer le site de mon cabinet médical",
+    marcheSecteur: [
+      "Le patient cherche un médecin par spécialité et par proximité, vérifie les disponibilités et la possibilité de prendre rendez-vous en ligne. Clarté des informations pratiques, horaires, modalités de consultation et sérieux priment. Dans un contexte de santé, la réassurance et la lisibilité guident chaque choix.",
+      "Le site d'un médecin doit être clair, sobre et pratique : spécialités, horaires, prise de rendez-vous, informations sur les consultations et l'accès au cabinet. Il respecte scrupuleusement les règles déontologiques de la profession médicale. Un site rapide et bien référencé localement facilite la vie des patients et libère le secrétariat d'une partie des appels.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un cabinet médical ?",
@@ -947,6 +980,10 @@ export const sectors: Sector[] = [
       "SEO local salon coiffure",
     ],
     cta: "Créer le site de mon salon de coiffure",
+    marcheSecteur: [
+      "On choisit son salon de coiffure sur le style, l'ambiance et les avis. Le client regarde les réalisations, les tarifs, la facilité de prise de rendez-vous et l'atmosphère du lieu. Instagram et Google jouent un rôle majeur : une belle galerie et de bons avis attirent, un site absent ou daté fait passer son tour.",
+      "Le site d'un salon de coiffure doit donner envie : galerie de coupes et de couleurs, présentation de l'équipe, tarifs, réservation en ligne et lien vers les réseaux sociaux. Ambiance visuelle soignée et avis clients rassurent. Optimisé pour les recherches locales, il capte une clientèle de quartier qui cherche un salon tendance à proximité.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un salon de coiffure ?",
@@ -1052,6 +1089,10 @@ export const sectors: Sector[] = [
       "SEO local boulangerie",
     ],
     cta: "Créer le site de ma boulangerie",
+    marcheSecteur: [
+      "Le client d'une boulangerie décide sur la proximité, la qualité et les horaires. Il cherche « boulangerie + quartier », vérifie si c'est ouvert, regarde les spécialités et les avis. Les photos de produits et une fiche Google à jour comptent énormément pour une activité de proximité et d'impulsion.",
+      "Le site d'une boulangerie doit mettre l'eau à la bouche : photos des pains, viennoiseries et pâtisseries, horaires précis, spécialités maison et éventuellement commande de gâteaux sur mesure. Une fiche Google complète et à jour est essentielle pour capter les recherches de proximité. C'est une vitrine simple mais gourmande qui attire le passage.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une boulangerie ?",
@@ -1157,6 +1198,10 @@ export const sectors: Sector[] = [
       "SEO photographe local",
     ],
     cta: "Créer mon site de photographe",
+    marcheSecteur: [
+      "Un client choisit un photographe sur son style et son portfolio, quasi exclusivement à l'image. Mariage, portrait, entreprise : il compare des galeries, ressent une esthétique, puis contacte celui dont le travail lui parle. Google Images, Instagram et un site portfolio soigné sont les vitrines qui déclenchent la prise de contact.",
+      "Le site d'un photographe est avant tout une galerie : des images de grande qualité, rapides à charger, organisées par prestation, avec des tarifs indicatifs et un formulaire de contact clair. Témoignages, présentation de la démarche et optimisation des images pour Google renforcent l'ensemble. Le site doit refléter exactement le niveau des photos qu'il présente.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site portfolio pour photographe ?",
@@ -1262,6 +1307,10 @@ export const sectors: Sector[] = [
       "Blog et changelog produit",
     ],
     cta: "Créer la landing page de ma startup",
+    marcheSecteur: [
+      "Investisseurs, clients et candidats jugent une startup sur son site en quelques secondes : la clarté de la proposition de valeur, le professionnalisme et la crédibilité de l'équipe. Un site confus ou amateur fait douter de la solidité du projet, quel que soit le potentiel réel. La première impression digitale est décisive.",
+      "Le site d'une startup doit expliquer clairement ce que fait le produit, pour qui et pourquoi c'est mieux, avec un design moderne et une conversion optimisée vers la démo ou l'inscription. Rapidité, tracking, landing pages pour les campagnes et évolutivité sont clés. Il incarne l'ambition du projet tout en restant limpide pour un visiteur pressé.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour une startup SaaS ?",
@@ -1367,6 +1416,10 @@ export const sectors: Sector[] = [
       "SEO architecte local",
     ],
     cta: "Créer le site de mon cabinet d'architecture",
+    marcheSecteur: [
+      "On choisit un architecte sur sa vision et ses réalisations. Le prospect parcourt un portfolio de projets, ressent une signature esthétique, vérifie les compétences puis prend contact pour son propre projet. L'image et la mise en page comptent autant que le contenu : le site est lui-même une démonstration de sens du design.",
+      "Le site d'un architecte doit être un portfolio soigné : projets présentés avec de grandes images, plans et descriptions, mise en page épurée et navigation fluide. Présentation de la démarche, distinctions et prise de contact complètent l'ensemble. Un design irréprochable et rapide reflète le savoir-faire spatial du professionnel et rassure sur son exigence.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un cabinet d'architecture ?",
@@ -1472,6 +1525,10 @@ export const sectors: Sector[] = [
       "SEO local expert-comptable",
     ],
     cta: "Créer le site de mon cabinet comptable",
+    marcheSecteur: [
+      "Un dirigeant choisit son expert-comptable sur la confiance, la proximité et la clarté de l'offre. Il cherche un cabinet compétent, à l'écoute, capable de le rassurer sur ses obligations. Le professionnalisme perçu du site et la lisibilité des services orientent le premier contact, souvent déterminant pour une relation de long terme.",
+      "Le site d'un cabinet comptable doit rassurer et clarifier : services détaillés (comptabilité, paie, conseil), présentation de l'équipe, contenus qui démontrent l'expertise et prise de rendez-vous simple. Un ton sérieux et accessible met en confiance des entrepreneurs qui cherchent un partenaire fiable. Le référencement local attire les TPE-PME du secteur en quête d'un comptable proche.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un expert-comptable ?",
@@ -1577,6 +1634,10 @@ export const sectors: Sector[] = [
       "SEO local fleuriste",
     ],
     cta: "Créer le site de ma boutique de fleurs",
+    marcheSecteur: [
+      "Le client d'un fleuriste cherche souvent dans l'urgence ou l'émotion : un bouquet pour une occasion, une livraison rapide, une composition qui marque. Il regarde les photos, vérifie la livraison et commande parfois en ligne. L'esthétique des créations et la simplicité de commande font la différence.",
+      "Le site d'un fleuriste doit être visuel et pratique : galerie de bouquets et compositions, commande en ligne avec livraison, occasions (mariage, deuil, événements) et coordonnées claires. De belles photos et une fiche Google à jour captent les recherches locales et les commandes de dernière minute. C'est une boutique qui vend de l'émotion, en images.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un fleuriste ?",
@@ -1682,6 +1743,10 @@ export const sectors: Sector[] = [
       "SEO local salle de sport",
     ],
     cta: "Créer le site de ma salle de sport",
+    marcheSecteur: [
+      "Un futur adhérent compare les salles sur les tarifs, les équipements, les horaires, l'ambiance et la proximité. Il regarde les photos, les avis, les cours proposés, puis vient essayer. La transparence sur les prix et la facilité d'inscription lèvent les freins d'un engagement souvent hésitant.",
+      "Le site d'une salle de sport doit convaincre et convertir : présentation des équipements et des cours, planning, tarifs clairs, photos de l'ambiance et inscription ou essai gratuit en ligne. Avis d'adhérents et résultats rassurent. Optimisé pour les recherches locales, il capte ceux qui cherchent une salle près de chez eux, prêts à s'engager.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une salle de sport ?",
@@ -1787,6 +1852,10 @@ export const sectors: Sector[] = [
       "SEO local institut beauté",
     ],
     cta: "Créer le site de mon institut de beauté",
+    marcheSecteur: [
+      "La cliente d'un institut de beauté choisit sur l'ambiance, les prestations et les avis. Elle regarde les soins proposés, les tarifs, la facilité de réservation et l'atmosphère du lieu. L'esthétique du site et de la fiche Google prolonge l'expérience sensorielle attendue : un univers soigné donne envie de pousser la porte.",
+      "Le site d'un institut de beauté doit être élégant et fonctionnel : carte des soins avec tarifs, réservation en ligne, présentation de l'équipe et du cadre, galerie et avis clients. Une ambiance visuelle raffinée et une prise de rendez-vous fluide transforment la visite. Le référencement local attire une clientèle de proximité en quête de détente et de soin.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un institut de beauté ?",
@@ -1892,6 +1961,10 @@ export const sectors: Sector[] = [
       "SEO destinations et thématiques",
     ],
     cta: "Créer le site de mon agence de voyage",
+    marcheSecteur: [
+      "Le voyageur rêve, compare et se rassure en ligne avant de réserver. Il cherche des destinations, des avis, des garanties et un interlocuteur de confiance pour un achat engageant. L'inspiration visuelle et la réassurance — sécurité, accompagnement, expertise — pèsent lourd face aux géants du voyage en ligne.",
+      "Le site d'une agence de voyage doit faire rêver et rassurer : destinations mises en valeur par l'image, offres claires, expertise et accompagnement mis en avant, demande de devis ou réservation simple. Avis clients, garanties et présentation de l'équipe humanisent la relation. Une agence de proximité joue la carte du conseil personnalisé face aux plateformes.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une agence de voyage ?",
@@ -1997,6 +2070,10 @@ export const sectors: Sector[] = [
       "SEO local auto-école",
     ],
     cta: "Créer le site de mon auto-école",
+    marcheSecteur: [
+      "Le futur élève et ses parents comparent les auto-écoles sur le taux de réussite, les tarifs, les horaires et la proximité. Ils cherchent la transparence, lisent les avis et privilégient une inscription simple. Un site clair sur les formules et les résultats inspire immédiatement plus confiance qu'une devanture seule.",
+      "Le site d'une auto-école doit informer et rassurer : formules et tarifs détaillés, taux de réussite, planning, présentation des moniteurs et inscription ou pré-inscription en ligne. Avis d'élèves et clarté sur le déroulement lèvent les hésitations. Optimisé localement, il capte les jeunes et familles qui cherchent une auto-école sérieuse à proximité.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une auto-école ?",
@@ -2102,6 +2179,10 @@ export const sectors: Sector[] = [
       "SEO traiteur local",
     ],
     cta: "Créer le site de mon activité traiteur",
+    marcheSecteur: [
+      "Le client d'un traiteur — particulier pour un événement, entreprise pour un séminaire — cherche des prestations, des photos de buffets et des avis avant de demander un devis. La preuve visuelle des réalisations et la capacité à s'adapter à l'occasion font la différence sur un achat souvent important et ponctuel.",
+      "Le site d'un traiteur doit donner envie et rassurer : galerie de réalisations et de buffets, types de prestations (mariage, entreprise, réception), formules, zone d'intervention et demande de devis. De belles photos et des témoignages d'événements réussis convertissent. Le référencement local attire une clientèle qui prépare un événement dans le secteur.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un traiteur ?",
@@ -2207,6 +2288,10 @@ export const sectors: Sector[] = [
       "SEO local électricien",
     ],
     cta: "Créer le site de mon activité d'électricien",
+    marcheSecteur: [
+      "Un particulier ou une entreprise cherche un électricien pour un dépannage, une rénovation ou une mise aux normes, souvent avec une part d'urgence. La recherche est locale et mobile : il compare disponibilité, avis et sérieux, puis demande un devis. Réactivité et confiance priment sur un métier technique et sensible.",
+      "Le site d'un électricien doit rassurer et convertir vite : services (dépannage, installation, mise aux normes), zone d'intervention, certifications, avis clients et demande de devis rapide, avec numéro bien visible pour les urgences. Optimisé pour le référencement local, il capte les recherches de proximité au moment où le besoin, parfois pressant, se présente.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un électricien ?",
@@ -2312,6 +2397,10 @@ export const sectors: Sector[] = [
       "SEO local plombier urgence",
     ],
     cta: "Créer le site de mon activité de plombier",
+    marcheSecteur: [
+      "Fuite, chauffe-eau en panne, canalisation bouchée : le client d'un plombier cherche en urgence, sur son téléphone, un professionnel disponible et proche. Il regarde les avis, la réactivité affichée et appelle. Sur ce métier, la première position Google et un numéro cliquable valent souvent la prestation elle-même.",
+      "Le site d'un plombier doit être pensé pour l'urgence : numéro cliquable en évidence, services (dépannage, installation, rénovation), zone et horaires d'intervention, avis rassurants et demande de devis. Mobile-first et référencé localement, il capte le client au moment critique où il cherche de l'aide, souvent stressé et pressé de résoudre son problème.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un plombier ?",
@@ -2417,6 +2506,10 @@ export const sectors: Sector[] = [
       "SEO local praticien",
     ],
     cta: "Créer le site de mon cabinet",
+    marcheSecteur: [
+      "Le patient choisit un ostéopathe sur la proximité, la disponibilité et la confiance. Il cherche à comprendre l'approche, vérifie la prise de rendez-vous en ligne et lit les avis. Sur un soin lié au bien-être et au corps, la réassurance et la clarté du parcours de soin guident la décision.",
+      "Le site d'un ostéopathe doit rassurer et faciliter : présentation de l'approche et des motifs de consultation, du praticien, prise de rendez-vous en ligne, tarifs et accès au cabinet. Un ton apaisant et professionnel, dans le respect des règles de la profession, installe la confiance. Le référencement local capte les patients qui cherchent un praticien à proximité.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un ostéopathe ou kiné ?",
@@ -2522,6 +2615,10 @@ export const sectors: Sector[] = [
       "SEO local garage auto",
     ],
     cta: "Créer le site de mon garage",
+    marcheSecteur: [
+      "L'automobiliste cherche un garage de confiance pour l'entretien ou une réparation, en comparant proximité, avis et transparence des tarifs. La crainte de la mauvaise surprise rend la réassurance décisive : avis positifs, clarté sur les prestations et devis honnête orientent le choix bien avant la première visite.",
+      "Le site d'un garage automobile doit rassurer et convertir : prestations (entretien, réparation, pneus), marques traitées, avis clients, demande de rendez-vous ou de devis et coordonnées claires. La transparence et les témoignages lèvent la méfiance. Optimisé localement, il capte les automobilistes du secteur qui cherchent un garagiste sérieux et honnête près de chez eux.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un garage automobile ?",
@@ -2627,6 +2724,10 @@ export const sectors: Sector[] = [
       "SEO bijouterie local",
     ],
     cta: "Créer le site de ma bijouterie",
+    marcheSecteur: [
+      "Le client d'une bijouterie prépare un achat chargé d'émotion et de valeur : alliance, cadeau, réparation. Il s'inspire en ligne, compare les créations, vérifie la réputation et la sécurité, puis vient en boutique pour l'achat définitif. L'image de marque et la confiance sont au cœur de la décision.",
+      "Le site d'une bijouterie doit sublimer les créations : photos de haute qualité, présentation des collections et des services (création sur mesure, réparation), univers de marque soigné et réassurance sur le sérieux de la maison. Il prépare la visite en boutique et valorise le savoir-faire. Le référencement local attire une clientèle en quête d'une pièce d'exception.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une bijouterie ?",
@@ -2732,6 +2833,10 @@ export const sectors: Sector[] = [
       "SEO formation local",
     ],
     cta: "Créer le site de mon centre de formation",
+    marcheSecteur: [
+      "Le futur apprenant ou ses parents comparent les écoles et organismes de formation sur les programmes, les débouchés, les avis et le sérieux. Ils cherchent à se projeter, vérifient les certifications et les modalités, puis demandent des informations. La crédibilité et la clarté de l'offre orientent un choix engageant.",
+      "Le site d'une école ou d'un organisme de formation doit informer et convaincre : programmes détaillés, débouchés, modalités et financements, certifications, témoignages d'anciens et demande d'information ou inscription. Un contenu riche qui démontre le sérieux et un parcours clair rassurent. Le référencement sur les formations recherchées attire des candidats qualifiés.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un centre de formation ?",
@@ -2837,6 +2942,10 @@ export const sectors: Sector[] = [
       "Blog conseils santé animale",
     ],
     cta: "Créer le site de ma clinique vétérinaire",
+    marcheSecteur: [
+      "Le maître d'un animal cherche un vétérinaire proche, disponible et rassurant, souvent avec une part d'urgence ou d'inquiétude. Il vérifie les horaires, la prise de rendez-vous, les services d'urgence et les avis. L'attachement à l'animal rend la réassurance et la proximité décisives dans le choix de la clinique.",
+      "Le site d'une clinique vétérinaire doit rassurer et faciliter : services et spécialités, horaires et urgences, prise de rendez-vous en ligne, présentation de l'équipe et conseils. Un ton bienveillant et des informations pratiques claires installent la confiance. Le référencement local capte les propriétaires d'animaux qui cherchent un vétérinaire fiable à proximité.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un vétérinaire ?",
@@ -2942,6 +3051,10 @@ export const sectors: Sector[] = [
       "SEO local étude notariale",
     ],
     cta: "Créer le site de mon étude notariale",
+    marcheSecteur: [
+      "On consulte un notaire pour des actes engageants — immobilier, succession, mariage — et l'on cherche compétence, sérieux et clarté. Le client vérifie les domaines traités, veut comprendre les démarches et être rassuré sur un sujet souvent complexe. La sobriété et l'autorité du site conditionnent la première prise de contact.",
+      "Le site d'un office notarial doit inspirer confiance et clarifier : domaines d'intervention (immobilier, famille, entreprise), explications pédagogiques des démarches, présentation de l'étude et prise de contact simple, dans le respect des règles de la profession. Un contenu qui vulgarise les sujets complexes rassure une clientèle souvent perdue face aux formalités juridiques.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour une étude notariale ?",
@@ -3047,6 +3160,10 @@ export const sectors: Sector[] = [
       "SEO local psychologue",
     ],
     cta: "Créer le site de mon cabinet",
+    marcheSecteur: [
+      "On choisit un psychologue ou un thérapeute sur la confiance et le ressenti. Le prospect cherche une approche qui lui correspond, veut comprendre la méthode, être rassuré sur la confidentialité, puis franchit un pas souvent difficile. L'authenticité et la douceur du site comptent autant que les qualifications affichées.",
+      "Le site d'un psychologue doit créer un climat de confiance : présentation bienveillante de l'approche et des motifs de consultation, du praticien, modalités (cabinet, visio), tarifs et prise de rendez-vous discrète. Un ton rassurant et le respect de la confidentialité lèvent les freins. Le référencement local capte des personnes qui cherchent de l'aide à proximité.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un psychologue ?",
@@ -3152,6 +3269,10 @@ export const sectors: Sector[] = [
       "SEO immobilier de luxe",
     ],
     cta: "Créer le site de mon agence de prestige",
+    marcheSecteur: [
+      "La clientèle du luxe immobilier — biens d'exception, clientèle internationale — attend un niveau d'image et de discrétion irréprochable. Elle juge une agence sur la beauté des présentations, la confidentialité et le prestige perçu. Un site ordinaire disqualifie immédiatement une maison qui prétend vendre l'exceptionnel.",
+      "Le site d'une agence immobilière de luxe doit incarner le prestige : présentations de biens somptueuses, grandes photos et visites virtuelles, éventuellement multilingue, avec une discrétion et une élégance sans faille. La mise en scène des biens et l'univers de marque priment. Il s'adresse à une clientèle exigeante et internationale qui achète autant un standing qu'un bien.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une agence immobilière de luxe ?",
@@ -3257,6 +3378,10 @@ export const sectors: Sector[] = [
       "SEO local caviste",
     ],
     cta: "Créer le site de ma cave à vin",
+    marcheSecteur: [
+      "L'amateur de vin cherche conseil, sélection et parfois livraison. Il découvre un caviste par sa réputation, explore sa sélection en ligne, apprécie l'expertise et commande ou vient en boutique. Sur ce marché de passion, le conseil personnalisé et l'univers de la maison font la différence face aux grandes surfaces.",
+      "Le site d'un caviste doit valoriser la sélection et l'expertise : présentation des vins et domaines, éventuellement boutique en ligne avec livraison, conseils et accords, événements et dégustations. Un univers soigné et un contenu qui démontre le savoir-faire fidélisent. La vente en ligne ouvre un marché national bien au-delà de la clientèle de quartier.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un caviste ?",
@@ -3362,6 +3487,10 @@ export const sectors: Sector[] = [
       "SEO local pizzeria",
     ],
     cta: "Créer le site de ma pizzeria",
+    marcheSecteur: [
+      "Un client affamé cherche à commander ou à venir vite : il regarde le menu, les prix, les avis, l'affluence et les options de livraison. La rapidité de décision est extrême — quelques secondes sur le téléphone suffisent. Photos alléchantes et commande sans friction déclenchent l'achat impulsif.",
+      "Le site d'une pizzeria ou d'un fast-food doit convertir vite : menu clair avec photos et prix, commande en ligne ou lien vers les plateformes de livraison, horaires et localisation. Une fiche Google à jour et de bons avis captent les recherches de proximité. Optimisé mobile, il transforme la faim en commande en quelques clics.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site de commande en ligne pour une pizzeria ?",
@@ -3467,6 +3596,10 @@ export const sectors: Sector[] = [
       "SEO local hôtel",
     ],
     cta: "Créer le site de mon établissement",
+    marcheSecteur: [
+      "Le voyageur réserve après avoir comparé photos, avis, emplacement et prix, souvent depuis son téléphone et parfois depuis l'étranger. La première impression visuelle et la note des avis décident. Un site propriétaire bien fait permet de réserver en direct et d'échapper aux commissions des plateformes.",
+      "Le site d'un hôtel ou d'une maison d'hôtes doit séduire et convertir : superbes photos des chambres et du cadre, réservation en direct, description de l'environnement et des services, avis et éventuellement plusieurs langues. Encourager la réservation directe évite les commissions. Le référencement local et touristique capte les voyageurs qui préparent leur séjour.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un hôtel ou une chambre d'hôtes ?",
@@ -3572,6 +3705,10 @@ export const sectors: Sector[] = [
       "SEO local crèche",
     ],
     cta: "Créer le site de ma crèche",
+    marcheSecteur: [
+      "Les parents choisissent un mode de garde avec exigence et émotion : sécurité, encadrement, valeurs pédagogiques et proximité guident la décision. Ils cherchent à se rassurer pleinement avant de confier leur enfant, lisent les avis et veulent visiter. La confiance est absolument centrale.",
+      "Le site d'une crèche ou d'un service de garde doit rassurer avant tout : projet pédagogique, présentation de l'équipe et des locaux, sécurité, modalités d'inscription et de tarification, photos chaleureuses et prise de contact. Transparence et ton rassurant lèvent l'inquiétude des parents. Le référencement local capte des familles qui cherchent un mode de garde de confiance.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une crèche ?",
@@ -3677,6 +3814,10 @@ export const sectors: Sector[] = [
       "SEO local déménageur",
     ],
     cta: "Créer le site de mon entreprise de déménagement",
+    marcheSecteur: [
+      "Le client d'un déménageur compare plusieurs devis, vérifie les avis et le sérieux, et cherche à être rassuré sur le soin apporté à ses biens. La demande de devis en ligne et la réactivité sont déterminantes sur un service ponctuel mais stressant, où la confiance pèse autant que le prix.",
+      "Le site d'un déménageur doit rassurer et générer des devis : prestations (déménagement, garde-meuble, emballage), zones desservies, assurances et garanties, avis clients et demande de devis simple et rapide. La transparence et les témoignages lèvent la crainte des mauvaises surprises. Le référencement local capte les particuliers et entreprises en phase de déménagement.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un déménageur ?",
@@ -3782,6 +3923,10 @@ export const sectors: Sector[] = [
       "SEO local serrurier urgence",
     ],
     cta: "Créer le site de mon entreprise de serrurerie",
+    marcheSecteur: [
+      "Porte claquée, serrure forcée, clés perdues : le client d'un serrurier cherche en urgence absolue, sur mobile, un professionnel disponible immédiatement et proche. Il appelle le premier résultat crédible avec de bons avis. Sur ce métier, la visibilité Google locale et un numéro cliquable font toute la différence.",
+      "Le site d'un serrurier doit être taillé pour l'urgence : numéro cliquable très visible, services (ouverture de porte, changement de serrure, blindage), zone et disponibilité 24/7, avis rassurants et tarifs transparents pour lever la méfiance liée au métier. Mobile-first et référencé localement, il capte le client au moment exact où il est bloqué.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un serrurier ?",
@@ -3887,6 +4032,10 @@ export const sectors: Sector[] = [
       "SEO local paysagiste",
     ],
     cta: "Créer le site de mon entreprise paysagère",
+    marcheSecteur: [
+      "Le client d'un paysagiste cherche à se projeter : il regarde des réalisations de jardins, compare le style, lit les avis et demande un devis. La preuve par l'image — avant/après, aménagements réussis — et la vision esthétique du professionnel déclenchent le contact sur un projet souvent réfléchi.",
+      "Le site d'un paysagiste doit montrer le talent : galerie de réalisations, prestations (création, entretien, élagage), zone d'intervention, avis clients et demande de devis. De belles photos de jardins et une présentation de la démarche convertissent. Optimisé pour le référencement local, il capte les particuliers et entreprises qui veulent aménager leurs extérieurs.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un paysagiste ?",
@@ -3992,6 +4141,10 @@ export const sectors: Sector[] = [
       "SEO local peintre",
     ],
     cta: "Créer le site de mon entreprise de peinture",
+    marcheSecteur: [
+      "Un particulier ou un professionnel cherche un peintre pour des travaux et compare réalisations, sérieux, avis et devis. La preuve visuelle des chantiers et la propreté du travail rassurent. Sans site ni avis, le peintre reste invisible face à des concurrents qui montrent, eux, ce qu'ils savent faire.",
+      "Le site d'un peintre en bâtiment doit prouver la qualité : galerie de chantiers (intérieur, façade, décoration), prestations, zone d'intervention, avis clients et demande de devis rapide. Avant/après et finitions soignées convainquent. Optimisé localement, il capte les recherches de proximité de clients qui veulent rénover ou rafraîchir leurs espaces avec un professionnel fiable.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un peintre en bâtiment ?",
@@ -4097,6 +4250,10 @@ export const sectors: Sector[] = [
       "SEO local menuisier",
     ],
     cta: "Créer le site de mon atelier de menuiserie",
+    marcheSecteur: [
+      "Le client d'un menuisier cherche du sur-mesure et de la qualité : meuble, agencement, escalier, menuiseries. Il s'inspire de réalisations, apprécie le savoir-faire artisanal et demande un devis pour son projet précis. La preuve par l'image et la maîtrise du travail du bois font naître la confiance.",
+      "Le site d'un menuisier doit valoriser le savoir-faire : galerie de réalisations sur mesure, types de travaux (agencement, mobilier, menuiseries), matériaux, zone d'intervention et demande de devis. De belles photos du travail du bois et des finitions convertissent. Le référencement local attire les clients en quête d'un artisan pour un projet personnalisé et durable.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un menuisier ?",
@@ -4202,6 +4359,10 @@ export const sectors: Sector[] = [
       "SEO local carreleur",
     ],
     cta: "Créer le site de mon entreprise de carrelage",
+    marcheSecteur: [
+      "Le client d'un carreleur cherche un professionnel pour une pose soignée — sol, salle de bain, terrasse — et compare réalisations, sérieux et devis. La netteté des finitions et la preuve par l'image rassurent sur un travail où la qualité de pose se voit immédiatement et durablement.",
+      "Le site d'un carreleur doit montrer la précision du travail : galerie de poses réussies (sols, salles de bain, terrasses), prestations, matériaux, zone d'intervention et demande de devis. Avant/après et finitions impeccables convainquent. Optimisé pour le référencement local, il capte les particuliers et professionnels qui cherchent un poseur méticuleux dans leur secteur.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un carreleur ?",
@@ -4307,6 +4468,10 @@ export const sectors: Sector[] = [
       "SEO local chauffagiste",
     ],
     cta: "Créer le site de mon entreprise de chauffage",
+    marcheSecteur: [
+      "Panne de chauffage en hiver, besoin de climatisation en été, entretien de chaudière : le client cherche un chauffagiste réactif et compétent, souvent avec urgence. Il compare disponibilité, avis et certifications, puis demande un devis ou une intervention. Réactivité et confiance guident un choix technique et parfois pressant.",
+      "Le site d'un chauffagiste doit rassurer et convertir : services (installation, entretien, dépannage chauffage et climatisation), certifications et aides, zone d'intervention, avis clients et demande de devis ou d'urgence avec numéro visible. Optimisé localement, il capte les recherches de proximité au moment du besoin, qu'il s'agisse d'un projet planifié ou d'une panne à traiter vite.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un chauffagiste ?",
@@ -4412,6 +4577,10 @@ export const sectors: Sector[] = [
       "SEO agence de communication",
     ],
     cta: "Créer le site de mon agence",
+    marcheSecteur: [
+      "Un client qui cherche une agence de communication juge d'abord… sa propre communication. Le site, le portfolio et la clarté du positionnement sont la démonstration en direct du savoir-faire. Un site quelconque ruine la crédibilité : on n'achète pas de la créativité à qui n'en montre pas.",
+      "Le site d'une agence de communication doit être une vitrine irréprochable : portfolio de réalisations marquant, positionnement clair, services, études de cas avec résultats et prise de contact fluide. Design distinctif et cohérence de marque prouvent le talent. C'est le meilleur argument commercial de l'agence, où chaque détail démontre ce qu'elle sait faire pour ses clients.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une agence de communication ?",
@@ -4517,6 +4686,10 @@ export const sectors: Sector[] = [
       "SEO cabinet recrutement",
     ],
     cta: "Créer le site de mon cabinet de recrutement",
+    marcheSecteur: [
+      "Entreprises et candidats jugent un cabinet de recrutement sur son professionnalisme, ses spécialités et sa capacité à comprendre les besoins. L'entreprise cherche un partenaire fiable, le candidat un interlocuteur sérieux. La clarté de l'offre et la crédibilité du site conditionnent la mise en relation des deux côtés.",
+      "Le site d'un cabinet de recrutement doit convaincre deux publics : services et secteurs pour les entreprises, offres et accompagnement pour les candidats, avec une présentation claire de la méthode et de l'expertise. Témoignages, chiffres et prise de contact fluide rassurent. Un contenu qui démontre la connaissance des métiers attire des clients et des talents qualifiés.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un cabinet de recrutement ?",
@@ -4622,6 +4795,10 @@ export const sectors: Sector[] = [
       "SEO centre de formation",
     ],
     cta: "Créer le site de mon centre de formation",
+    marcheSecteur: [
+      "Un professionnel ou une entreprise cherche une formation sur les compétences visées, la certification, le financement et les modalités. Il compare les programmes, vérifie l'éligibilité aux dispositifs et le sérieux de l'organisme, puis demande des informations. La clarté sur les débouchés et le financement est décisive.",
+      "Le site d'un centre de formation professionnelle doit informer et convertir : catalogue de formations détaillé, certifications et éligibilité aux financements, modalités, témoignages et demande d'information ou inscription. Un contenu riche qui répond aux questions pratiques rassure. Le référencement sur les formations recherchées capte des professionnels et entreprises en quête de montée en compétences.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un centre de formation ?",
@@ -4727,6 +4904,10 @@ export const sectors: Sector[] = [
       "SEO local nettoyage",
     ],
     cta: "Créer le site de ma société de nettoyage",
+    marcheSecteur: [
+      "Entreprises et particuliers cherchent une société de nettoyage fiable, régulière et sérieuse. Ils comparent prestations, réactivité et avis, puis demandent un devis. Sur un service récurrent où la confiance et la constance priment, la crédibilité du prestataire et la clarté de l'offre orientent la décision.",
+      "Le site d'une société de nettoyage doit rassurer et générer des devis : prestations (bureaux, copropriétés, vitres, remise en état), zones desservies, engagements qualité, avis clients et demande de devis simple. Sérieux et transparence lèvent les doutes. Le référencement local capte entreprises et particuliers qui cherchent un prestataire de nettoyage fiable dans leur secteur.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une société de nettoyage ?",
@@ -4832,6 +5013,10 @@ export const sectors: Sector[] = [
       "SEO transport logistique",
     ],
     cta: "Créer le site de mon entreprise de transport",
+    marcheSecteur: [
+      "Une entreprise qui cherche un partenaire transport ou logistique évalue la fiabilité, la couverture géographique, les délais et le sérieux. Elle compare les prestataires, vérifie les références et demande un devis. Sur un service B2B critique pour la chaîne d'approvisionnement, la crédibilité et la clarté sont déterminantes.",
+      "Le site d'une entreprise de transport et logistique doit inspirer confiance : prestations (transport, entreposage, distribution), zones et moyens, certifications et références clients, avec une demande de devis claire. Chiffres, flotte et engagements de délai rassurent des donneurs d'ordres exigeants. Un site professionnel positionne l'entreprise comme un partenaire logistique fiable et structuré.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une entreprise de transport ?",
@@ -4937,6 +5122,10 @@ export const sectors: Sector[] = [
       "SEO local opticien",
     ],
     cta: "Créer le site de mon magasin d'optique",
+    marcheSecteur: [
+      "Le client d'un opticien cherche à concilier santé visuelle, choix de montures et budget. Il compare les enseignes, regarde les marques, les avis et la prise en charge, puis vient essayer en boutique. Le conseil, le choix et la confiance orientent un achat à la fois technique et esthétique.",
+      "Le site d'un opticien doit informer et attirer en boutique : services (examen de vue, lunettes, lentilles), marques proposées, prise de rendez-vous, informations sur la prise en charge et univers visuel soigné. Avis et présentation de l'équipe rassurent. Le référencement local capte une clientèle de proximité qui cherche un opticien de confiance et bien achalandé.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour un opticien ?",
@@ -5042,6 +5231,10 @@ export const sectors: Sector[] = [
       "SEO local pharmacie",
     ],
     cta: "Créer le site de ma pharmacie",
+    marcheSecteur: [
+      "Le client d'une pharmacie cherche proximité, horaires, services et parfois disponibilité d'un produit. Il vérifie les horaires de garde, les services (vaccination, matériel médical) et l'accès. Sur une activité de santé et de proximité, l'information pratique claire et à jour est le premier service rendu.",
+      "Le site d'une pharmacie doit informer avant tout : horaires précis et gardes, services proposés, localisation et coordonnées, dans le strict respect des règles encadrant la profession. Une fiche Google à jour est essentielle pour les recherches de proximité et d'urgence. Le site prolonge le rôle de conseil et de service de proximité de l'officine.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une pharmacie ?",
@@ -5147,6 +5340,10 @@ export const sectors: Sector[] = [
       "SEO local librairie",
     ],
     cta: "Créer le site de ma librairie",
+    marcheSecteur: [
+      "Le lecteur choisit une librairie pour sa sélection, ses conseils et son ambiance. Il cherche la disponibilité d'un titre, les événements, les coups de cœur des libraires. Face aux géants du e-commerce, la librairie indépendante joue la carte de la curation, de la proximité et de la rencontre.",
+      "Le site d'une librairie doit prolonger l'expérience de la boutique : sélections et coups de cœur, agenda des événements et dédicaces, éventuellement recherche ou commande de titres, et univers éditorial soigné. Il valorise le conseil humain qui distingue l'indépendant. Une fiche Google active et un contenu vivant fidélisent une clientèle attachée à sa librairie de quartier.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site pour une librairie ?",
@@ -5252,6 +5449,10 @@ export const sectors: Sector[] = [
       "SEO mode et maroquinerie",
     ],
     cta: "Créer la boutique en ligne de ma marque",
+    marcheSecteur: [
+      "Le client de mode et maroquinerie s'inspire, compare les collections et vérifie le style avant d'acheter, en boutique ou en ligne. L'image de marque, la qualité des visuels et l'univers de l'enseigne déclenchent le désir. Instagram et un site soigné sont des vitrines essentielles pour attirer et fidéliser.",
+      "Le site d'une boutique de maroquinerie ou de prêt-à-porter doit incarner le style : belles photos des collections, univers de marque cohérent, éventuellement boutique en ligne, et lien avec les réseaux sociaux. Réassurance sur la qualité et les retours convertit. Le référencement local et l'image de marque attirent une clientèle sensible à l'esthétique et à la nouveauté.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site e-commerce pour la mode ?",
@@ -5357,6 +5558,10 @@ export const sectors: Sector[] = [
       "SEO local association",
     ],
     cta: "Créer le site de mon association",
+    marcheSecteur: [
+      "Une association ou un organisme d'intérêt général cherche à mobiliser, informer et convaincre — donneurs, bénévoles, adhérents. Le public veut comprendre la cause, les actions et comment agir concrètement. La clarté du message et la facilité de passage à l'action déterminent l'engagement.",
+      "Le site d'une association doit informer et mobiliser : présentation de la cause et des actions, agenda, appel à l'engagement (don, bénévolat, adhésion) clair et simple, et transparence sur l'utilisation des ressources. Un ton fédérateur et des témoignages engagent. Un site accessible et bien référencé élargit l'audience et facilite le passage à l'action.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour une association ?",
@@ -5462,6 +5667,10 @@ export const sectors: Sector[] = [
       "SEO local sécurité incendie",
     ],
     cta: "Créer le site de mon entreprise sécurité",
+    marcheSecteur: [
+      "Une entreprise ou un établissement cherche un prestataire en sécurité incendie pour se mettre en conformité et protéger ses locaux. Il évalue les certifications, l'expertise réglementaire et la fiabilité, puis demande un devis. Sur un métier réglementé et critique, la crédibilité et la maîtrise des normes sont déterminantes.",
+      "Le site d'une entreprise de sécurité incendie doit rassurer sur l'expertise : services (extincteurs, alarmes, formation, maintenance), certifications et conformité réglementaire, secteurs desservis, références et demande de devis. La maîtrise des obligations légales et le sérieux priment. Un contenu qui démontre l'expertise attire des professionnels soucieux de leur mise en conformité.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour une entreprise de sécurité incendie ?",
@@ -5567,6 +5776,10 @@ export const sectors: Sector[] = [
       "SEO local recyclage",
     ],
     cta: "Créer le site de mon entreprise recyclage",
+    marcheSecteur: [
+      "Les organisateurs d'événements et les entreprises cherchent des prestataires alignés avec leurs engagements responsables : gestion des déchets, éco-conception, recyclage. Ils évaluent le sérieux de la démarche, les références et l'impact concret. La crédibilité environnementale et la preuve des résultats orientent le choix.",
+      "Le site d'un acteur du recyclage ou de l'événementiel responsable doit prouver l'engagement : services, démarche et certifications environnementales, réalisations chiffrées, références clients et demande de contact. La transparence sur l'impact réel évite le soupçon de greenwashing. Un contenu concret et des cas clients convainquent des organisateurs et entreprises soucieux de leur responsabilité.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour une entreprise de recyclage ?",
@@ -5672,6 +5885,10 @@ export const sectors: Sector[] = [
       "SEO événementiel local",
     ],
     cta: "Créer le site de mon spectacle",
+    marcheSecteur: [
+      "Organisateurs et particuliers cherchent un prestataire de spectacle ou d'événementiel sur ses réalisations, son style et sa capacité à créer l'émotion. Ils regardent des vidéos, des photos, des références, puis prennent contact pour leur projet. La preuve par l'image et l'univers artistique déclenchent la demande.",
+      "Le site d'un professionnel du spectacle et de l'événementiel doit faire vivre l'expérience : vidéos et photos de réalisations, types de prestations, références et témoignages, et demande de devis simple. Un univers immersif et une mise en scène soignée convertissent. Le référencement et l'image attirent des organisateurs qui veulent marquer les esprits lors de leur événement.",
+    ],
     faqItems: [
       {
         question: "Combien coûte un site web pour un spectacle ou un événement ?",

@@ -241,6 +241,26 @@ export default async function SectorPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Contenu unique métier — le digital dans ce secteur */}
+      {sector.marcheSecteur && (
+        <section className="py-16 sm:py-20 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
+              Le web pour les{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                {sector.name.toLowerCase()}s
+              </span>{" "}
+              : ce qui compte vraiment
+            </h2>
+            <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-4">
+              {sector.marcheSecteur.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ============================================================ */}
       {/* 2. LES DEFIS */}
       {/* ============================================================ */}
