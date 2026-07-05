@@ -23,7 +23,7 @@ const faqItems = [
   {
     question: "La maquette de site web est-elle vraiment gratuite ?",
     answer:
-      "Oui, entièrement gratuite et sans engagement. Vous remplissez le formulaire en 2 minutes, nos designers créent la maquette de votre future page d'accueil, et vous la recevez sous 48h. Si elle vous plaît, nous développons le site complet ; sinon, vous ne devez rien. C'est notre façon de prouver notre travail avant de vous demander le moindre euro.",
+      "Oui, entièrement gratuite et sans engagement. Vous remplissez le formulaire en 2 minutes, nos designers créent la maquette de votre future page d'accueil, et nous vous la présentons lors d'un court rendez-vous. Si elle vous plaît, nous développons le site complet ; sinon, vous ne devez rien. C'est notre façon de prouver notre travail avant de vous demander le moindre euro.",
   },
   {
     question: "Qu'est-ce qu'une maquette de site web exactement ?",
@@ -38,7 +38,7 @@ const faqItems = [
   {
     question: "Sous quel délai vais-je recevoir ma maquette ?",
     answer:
-      "Sous 48h ouvrées après votre demande. Nos designers travaillent à partir des informations du formulaire : type de site, secteur d'activité, style visuel souhaité et, si vous en avez un, votre site actuel pour comprendre l'existant.",
+      "La maquette est prête sous 48h ouvrées après votre demande, et nous convenons ensemble d'un créneau pour vous la présenter. Nos designers travaillent à partir des informations du formulaire : type de site, secteur d'activité, style visuel souhaité et, si vous en avez un, votre site actuel pour comprendre l'existant.",
   },
   {
     question: "Puis-je demander des modifications sur la maquette ?",
