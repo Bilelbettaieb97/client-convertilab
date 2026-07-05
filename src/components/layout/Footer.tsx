@@ -36,6 +36,7 @@ const Footer = () => {
     { name: "Offre Spéciale", href: "/offre-speciale" },
     { name: "Offre Mensuelle", href: "/offre-mensuelle" },
     { name: "Agence Web par ville", href: "/agence-web" },
+    { name: "Création de site par ville", href: "/creation-site-internet" },
     { name: "Solutions par secteur", href: "/solutions" },
     { name: "Glossaire Marketing", href: "/glossaire" },
     { name: "FAQ", href: "/faq" },

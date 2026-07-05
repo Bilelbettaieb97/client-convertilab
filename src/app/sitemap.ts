@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
-import { cities } from "@/data/cities";
+import { cities, CREATION_SITE_SLUGS } from "@/data/cities";
 import { sectors } from "@/data/sectors";
 import { glossaryTerms } from "@/data/glossary";
 import { blogArticles } from "@/data/blog-articles";
@@ -56,6 +56,7 @@ const staticRoutes = [
   "/outils",
   "/faq",
   "/site-internet-pas-cher",
+  "/creation-site-internet",
 ];
 
 // Updated automatically — change this date when you publish new content
@@ -140,13 +141,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   ];
 
-  const creationSiteTargetSlugs = [
-    "paris", "lyon", "marseille", "bordeaux", "toulouse",
-    "nice", "nantes", "lille", "montpellier", "strasbourg",
-  ];
-
   const creationSiteEntries: MetadataRoute.Sitemap = cities
-    .filter((city) => creationSiteTargetSlugs.includes(city.slug))
+    .filter((city) => CREATION_SITE_SLUGS.includes(city.slug))
     .map((city) => ({
       url: `${SITE.url}/creation-site-internet/${city.slug}`,
       lastModified: TEMPLATES_CREATED,

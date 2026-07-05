@@ -3798,3 +3798,17 @@ export const cities: City[] = [
 
 export const getCityBySlug = (slug: string) =>
   cities.find((c) => c.slug === slug);
+
+// Villes prioritaires pour les pages /creation-site-internet/[ville].
+// Source unique de vérité, partagée par le hub, le sitemap et le template [ville].
+// Volontairement limitée aux villes à fort potentiel pour ne pas diluer l'autorité
+// avec trop de pages templatées (cf. audit indexation).
+export const CREATION_SITE_SLUGS = [
+  "paris", "lyon", "marseille", "bordeaux", "toulouse",
+  "nice", "nantes", "lille", "montpellier", "strasbourg",
+];
+
+// Villes réellement listées dans le hub /creation-site-internet, dans l'ordre de cities[].
+export const creationSiteCities = cities.filter((c) =>
+  CREATION_SITE_SLUGS.includes(c.slug)
+);
