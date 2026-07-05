@@ -50,6 +50,10 @@ export const cities: City[] = [
       "Capitale de la France et centre économique européen, Paris regroupe des milliers d'entreprises qui ont besoin d'une présence digitale forte pour se démarquer.",
     localContext:
       "À Paris, la concurrence digitale est la plus féroce de France : 73% des Parisiens comparent les entreprises en ligne avant tout achat ou prise de contact. Les arrondissements comme le Marais, Opéra ou La Défense concentrent des milliers de PME, startups et professions libérales qui se disputent la visibilité Google. Un site lent ou mal référencé à Paris, c'est perdre des clients au profit d'un concurrent à quelques rues. Notre expertise SEO local nous permet de cibler précisément vos clients par quartier et par secteur d'activité.",
+    marcheLocal: [
+      "Capitale économique et culturelle, Paris concentre la plus forte densité d'entreprises de France : PME, professions libérales, commerces et startups s'y disputent une visibilité en ligne féroce. Du Marais à Opéra, de la rive gauche à La Défense, chaque arrondissement est un marché à part entière où les habitudes de recherche des habitants sont parmi les plus digitalisées du pays.",
+      "Se démarquer à Paris ne se joue plus sur la vitrine physique mais sur la première page de Google. Un site lent, daté ou invisible cède immédiatement la place à un concurrent situé à quelques rues. Notre approche cible le référencement par quartier et par activité, pour capter des clients qui cherchent un service précis, à proximité immédiate.",
+    ],
     keyIndustries: ["Finance & fintech", "Luxe & mode", "Tourisme & hôtellerie", "Startups tech", "Professions libérales"],
     stats: {
       entreprises: "2.1M d'entreprises",
@@ -275,6 +279,10 @@ export const cities: City[] = [
       "Préfecture des Hauts-de-Seine et porte de La Défense, Nanterre concentre entreprises et commerces qui bénéficient d'une stratégie digitale locale.",
     localContext:
       "Nanterre est la porte d'entrée de La Défense, le premier quartier d'affaires européen avec plus de 180 000 salariés. Cette proximité génère une forte demande en services B2B, juridiques et immobiliers. Les entreprises nanterriennes ont besoin de sites web capables de rivaliser avec les standards des grands groupes internationaux installés juste à côté.",
+    marcheLocal: [
+      "Préfecture des Hauts-de-Seine, Nanterre marie l'université Paris-Nanterre, une part du quartier d'affaires de La Défense et un tissu de PME et de commerces qui vivent de cette double clientèle étudiante et cadre. La ville connaît une transformation rapide autour de ses nouveaux quartiers, attirant sièges d'entreprises et services.",
+      "Pour une entreprise nanterrienne, la proximité de La Défense fixe le niveau d'exigence : vos prospects comparent votre présence en ligne à celle de grands groupes voisins. Bonne nouvelle, la concurrence SEO purement locale reste abordable — un site rapide et une fiche Google soignée suffisent souvent à prendre les premières positions du 92 sur vos requêtes métier.",
+    ],
     keyIndustries: ["Services juridiques & droit", "Finance d'entreprise", "Immobilier commercial", "Administration publique", "Services aux entreprises"],
     stats: {
       entreprises: "7 500 entreprises",
@@ -424,6 +432,10 @@ export const cities: City[] = [
       "Capitale de la gastronomie et deuxième pôle économique de France, Lyon est un hub d'innovation avec un écosystème tech florissant et des milliers de PME dynamiques.",
     localContext:
       "Lyon est la deuxième métropole économique de France, avec un écosystème startup dynamique et un secteur santé/biotech de rang mondial (Merck, Sanofi, BioMérieux). La Presqu'île, la Part-Dieu et Confluence concentrent des milliers d'entrepreneurs qui misent sur le digital pour capter les marchés régionaux et nationaux. Le commerce lyonnais est historiquement pionnier en France — cette tradition se prolonge aujourd'hui dans le e-commerce et le marketing digital.",
+    marcheLocal: [
+      "Deuxième métropole économique de France, Lyon rayonne sur la santé et les biotechnologies, la chimie, le numérique et une gastronomie mondialement reconnue. Des tours de la Part-Dieu au quartier de la Confluence, en passant par les commerces de la Presqu'île et de la Croix-Rousse, la ville abrite un écosystème dense de PME ambitieuses.",
+      "À Lyon, le niveau de maturité digitale est élevé et la concurrence sur les requêtes locales bien réelle. Mais beaucoup de commerçants et d'artisans du Grand Lyon s'appuient encore sur des sites vieillissants : une refonte moderne, rapide et optimisée pour le référencement local permet de les dépasser sur quelques mois, quartier par quartier.",
+    ],
     keyIndustries: ["Santé & biotechnologies", "Restauration gastronomique", "Industrie chimique & pharma", "Numérique & startups", "Commerce & distribution"],
     stats: {
       entreprises: "75 000 entreprises",
@@ -495,6 +507,10 @@ export const cities: City[] = [
       "Deuxième ville de France et premier port de Méditerranée, Marseille possède un tissu économique diversifié entre commerce maritime, tourisme, tech et industries créatives.",
     localContext:
       "Marseille est la troisième ville de France et le premier port méditerranéen européen, avec un tissu commercial dense dans la restauration, le commerce de gros et le tourisme. Les entreprises marseillaises qui investissent dans leur présence en ligne maintenant prennent une longueur d'avance sur une concurrence locale encore peu digitalisée. Les quartiers du Vieux-Port, de la Joliette et d'Euroméditerranée concentrent les activités les plus dynamiques.",
+    marcheLocal: [
+      "Premier port de France et porte de la Méditerranée, Marseille conjugue commerce, logistique, tourisme de croisière et le vaste projet urbain Euroméditerranée qui attire de nouvelles entreprises. Du Vieux-Port aux quartiers d'affaires, la deuxième ville de France abrite un tissu commerçant foisonnant et très ancré dans le quotidien de ses habitants.",
+      "Le marché marseillais est particulier : les recherches locales sont nombreuses mais beaucoup d'acteurs négligent leur référencement, ce qui laisse le champ libre. Une entreprise phocéenne dotée d'un site professionnel, d'avis Google et d'un contenu optimisé sur ses services capte une clientèle que les grandes plateformes nationales servent mal, sur un territoire immense et polycentrique.",
+    ],
     keyIndustries: ["Tourisme & restauration", "Logistique & transport maritime", "Commerce international", "Immobilier", "Artisanat & commerce local"],
     stats: {
       entreprises: "90 000 entreprises",
@@ -566,6 +582,10 @@ export const cities: City[] = [
       "Métropole dynamique du Sud-Ouest, Bordeaux allie patrimoine viticole, tourisme et un écosystème tech en pleine croissance autour de Darwin et de l'Euratlantique.",
     localContext:
       "Bordeaux a connu la plus forte croissance démographique de France sur les 10 dernières années, attirant entrepreneurs, télétravailleurs et investisseurs. La métropole bordelaise allie tradition viticole et dynamisme tech — elle abrite le 4ème écosystème startup de France. Cette affluence crée une concurrence accrue pour les commerces et services locaux, rendant le référencement Google et la présence web stratégiques pour se différencier.",
+    marcheLocal: [
+      "Bordeaux conjugue prestige viticole mondial, dynamisme numérique — porté par la French Tech et des lieux comme la Cité numérique — et un afflux régulier de nouveaux habitants et entreprises. Des Chartrons au quartier Euratlantique autour de la gare, la métropole girondine séduit commerces, cabinets et startups en quête de qualité de vie.",
+      "Cette attractivité crée une concurrence en ligne croissante : chaque mois, de nouveaux acteurs se disputent les mêmes requêtes bordelaises. Prendre position tôt, avec un site optimisé et un référencement local solide, fait la différence. Pour les producteurs et cavistes de la région, un site e-commerce bien référencé ouvre en plus un marché national bien au-delà de la Gironde.",
+    ],
     keyIndustries: ["Vin & gastronomie", "Tourisme & événementiel", "Tech & startups", "Immobilier & construction", "Santé & bien-être"],
     stats: {
       entreprises: "45 000 entreprises",
@@ -712,6 +732,10 @@ export const cities: City[] = [
       "Capitale de la Côte d'Azur, Nice est un pôle touristique international avec un tissu économique diversifié entre hôtellerie, tech, santé et services aux entreprises.",
     localContext:
       "Nice est la 5ème ville de France et un hub touristique mondial, avec 5 millions de touristes par an et une clientèle internationale exigeante. La technopole de Sophia Antipolis, à 20 km, concentre 40 000 salariés dans la tech et l'innovation, créant un vivier de clients B2B premium. Les entreprises niçoises qui dominent Google capturent une clientèle touristique et résidentielle à fort pouvoir d'achat.",
+    marcheLocal: [
+      "Capitale de la Côte d'Azur, Nice vit du tourisme, de l'événementiel et d'une économie de services haut de gamme, adossée à la technopole de Sophia-Antipolis toute proche. De la Promenade des Anglais au Vieux-Nice, hôtels, restaurants, commerces et professions libérales visent une clientèle locale exigeante autant qu'internationale.",
+      "Ici, le site web est un canal de réservation et de première impression : les visiteurs préparent leur venue en ligne, souvent depuis l'étranger. Un site multilingue rapide, des avis récents et un référencement local ciblé sur les Alpes-Maritimes captent cette demande premium que les plateformes généralistes ne valorisent pas correctement.",
+    ],
     keyIndustries: ["Tourisme & hôtellerie", "Tech (Sophia Antipolis)", "Luxe & yachting", "Commerce premium", "Immobilier de prestige"],
     stats: {
       entreprises: "42 000 entreprises",
@@ -783,6 +807,10 @@ export const cities: City[] = [
       "Métropole créative et numérique de l'Ouest, Nantes se distingue par son dynamisme entrepreneurial, sa French Tech et son écosystème culturel unique.",
     localContext:
       "Nantes est régulièrement élue ville où il fait bon vivre et entreprendre, avec un tissu économique diversifié entre industrie agroalimentaire, aéronautique (Airbus) et numérique. La scène startup nantaise est l'une des plus actives de France hors Paris. Les entrepreneurs nantais sont digitalement avertis et cherchent des partenaires web capables de livrer rapidement des résultats concrets.",
+    marcheLocal: [
+      "Sixième ville de France, Nantes s'est réinventée autour de la French Tech, de la création et d'un urbanisme audacieux sur l'Île de Nantes, héritière de son passé industriel et naval. Le long de la Loire, PME innovantes, commerces et acteurs culturels profitent d'une métropole jeune, en croissance continue.",
+      "L'exigence digitale des Nantais est forte, mais le tissu artisanal et commerçant reste inégalement équipé. Une entreprise qui investit un site rapide, un contenu utile et un référencement local propre sur la Loire-Atlantique gagne du terrain durablement, là où beaucoup se contentent encore d'une simple page sur les réseaux sociaux.",
+    ],
     keyIndustries: ["Agroalimentaire & food tech", "Aéronautique & industrie", "Numérique & ESN", "Économie maritime", "Commerce & services"],
     stats: {
       entreprises: "40 000 entreprises",
@@ -854,6 +882,10 @@ export const cities: City[] = [
       "Capitale européenne et carrefour franco-allemand, Strasbourg bénéficie d'un positionnement stratégique avec un tissu économique tourné vers l'international et les institutions.",
     localContext:
       "Strasbourg est à la fois capitale de l'Alsace et siège des institutions européennes (Parlement Européen, Conseil de l'Europe), ce qui attire organisations internationales et entreprises cherchant une visibilité européenne. La ville est aussi un nœud logistique rhénan majeur et un centre pharmaceutique important. Les entreprises strasbourgeoises ont souvent besoin de sites bilingues français/allemand et d'un référencement ciblé sur les deux marchés.",
+    marcheLocal: [
+      "Siège d'institutions européennes et ville frontalière de l'Allemagne, Strasbourg possède une économie tournée vers l'international, l'université, la santé et un commerce de centre-ville très vivant, de la Grande-Île à la Krutenau. Cette position transfrontalière crée une clientèle et des partenariats des deux côtés du Rhin.",
+      "Pour une entreprise strasbourgeoise, être visible en ligne peut vouloir dire l'être aussi en allemand : un atout que peu exploitent. Sur les requêtes locales du Bas-Rhin, la concurrence reste maîtrisable, et un site bien structuré, éventuellement bilingue, avec un ancrage Google local, permet de capter une demande que les acteurs mono-langue laissent passer.",
+    ],
     keyIndustries: ["Institutions européennes & lobbying", "Industrie pharmaceutique", "Tourisme & gastronomie alsacienne", "Logistique & transport", "Commerce transfrontalier"],
     stats: {
       entreprises: "35 000 entreprises",
@@ -925,6 +957,10 @@ export const cities: City[] = [
       "Capitale des Hauts-de-France et carrefour européen, Lille est un pôle commercial et universitaire dynamique avec un tissu de PME et de startups en plein essor.",
     localContext:
       "Lille est la capitale économique du Nord de la France et un carrefour européen à 1h de Paris, Londres et Bruxelles. Son écosystème numérique est l'un des plus dynamiques de France avec EuraTechnologies, l'un des premiers incubateurs tech européens. La métropole lilloise représente 1,2 million d'habitants avec une forte culture du commerce et une demande croissante pour le e-commerce et les services locaux digitaux.",
+    marcheLocal: [
+      "Carrefour de l'Europe du Nord, Lille a transformé son héritage textile et minier en pôle tertiaire, numérique et commercial, porté par des lieux comme EuraTechnologies et un secteur de la vente à distance historiquement puissant. Du Vieux-Lille à Euralille, la métropole abrite un tissu dense de PME et de commerces.",
+      "Le marché lillois est concurrentiel sur le digital, mais le bassin est vaste — de Roubaix à Villeneuve-d'Ascq — et fragmenté. Une entreprise qui soigne son référencement local, ses avis et un site rapide capte une clientèle de proximité que les grands acteurs nationaux, peu ciblés géographiquement, ne parviennent pas à servir finement.",
+    ],
     keyIndustries: ["Commerce & grande distribution", "Tech & ESN", "Enseignement supérieur", "Industrie textile & agroalimentaire", "Logistique & transport"],
     stats: {
       entreprises: "32 000 entreprises",
@@ -996,6 +1032,10 @@ export const cities: City[] = [
       "Ville la plus dynamique du Sud en termes de croissance démographique, Montpellier est un pôle universitaire, médical et numérique majeur de l'Occitanie.",
     localContext:
       "Montpellier est la ville la plus jeune de France (âge médian 33 ans) avec une croissance démographique de +1 000 habitants par mois. Son excellence en santé (CHU de rang mondial) et en numérique (Dell, IBM, HP présents) en fait un marché stratégique. Cette population jeune et connectée consomme massivement en ligne, créant des opportunités majeures pour les commerces et services locaux qui investissent dans leur présence digitale.",
+    marcheLocal: [
+      "L'une des villes les plus dynamiques de France, Montpellier conjugue une population étudiante massive, un pôle santé et medtech reconnu et une croissance démographique parmi les plus fortes du pays. De l'Écusson au quartier Port Marianne, commerces et jeunes entreprises profitent de cet afflux constant de nouveaux habitants.",
+      "Cette croissance rapide signifie un flux permanent de nouveaux clients qui découvrent les entreprises locales… en ligne. Un site professionnel bien référencé sur l'Hérault capte cette demande fraîche avant les concurrents. Pour les commerces et services montpelliérains, la fiche Google et le SEO local sont le premier point de contact avec une clientèle qui ne connaît pas encore la ville.",
+    ],
     keyIndustries: ["Santé & biotech", "Numérique & ESN", "Enseignement supérieur", "Tourisme & restauration", "Immobilier & construction"],
     stats: {
       entreprises: "38 000 entreprises",
@@ -1142,6 +1182,10 @@ export const cities: City[] = [
       "Ville royale et préfecture des Yvelines, Versailles allie prestige historique et dynamisme économique avec de nombreuses professions libérales et commerces haut de gamme.",
     localContext:
       "Versailles attire chaque année 10 millions de visiteurs pour son Château, générant une économie touristique et commerciale unique. Au-delà du tourisme, la ville abrite de nombreuses professions libérales, des commerces premium et des entreprises B2B qui servent une clientèle aisée des Yvelines. La clientèle versaillaise est exigeante sur la qualité des sites web : un design soigné et un contenu professionnel sont des critères de confiance déterminants.",
+    marcheLocal: [
+      "Ville royale mondialement connue pour son château, Versailles vit du tourisme, d'un commerce de centre-ville haut de gamme et d'une forte concentration de professions libérales et de cabinets prestigieux au service d'une population aisée des Yvelines. L'image et la réputation y comptent plus qu'ailleurs.",
+      "Dans une ville où la clientèle recherche le sérieux et le raffinement, un site daté disqualifie immédiatement. Votre présence en ligne doit refléter le même standing que votre enseigne ou votre cabinet : design soigné, réassurance, prise de rendez-vous fluide, référencement local ciblé sur Versailles et l'ouest francilien. C'est exactement le type de site que nous concevons.",
+    ],
     keyIndustries: ["Tourisme & culture", "Professions libérales premium", "Commerce de qualité", "Immobilier & architecture", "Services aux entreprises"],
     stats: {
       entreprises: "6 500 entreprises",
@@ -1213,6 +1257,10 @@ export const cities: City[] = [
       "Ville résidentielle prestigieuse des Yvelines, Saint-Germain-en-Laye accueille de nombreux commerces haut de gamme, professions libérales et cadres supérieurs.",
     localContext:
       "Saint-Germain-en-Laye est l'une des communes les plus aisées d'Île-de-France, avec une population de cadres supérieurs et de professions libérales. La Terrasse et le centre historique concentrent des commerces premium et des prestataires de services haut de gamme. Dans ce marché, la qualité du site web est perçue comme un reflet direct du sérieux du prestataire — une présence digitale médiocre ferme des portes avant même le premier échange.",
+    marcheLocal: [
+      "Écrin résidentiel prisé des Yvelines, Saint-Germain-en-Laye associe patrimoine — château, forêt, terrasse — et une population au pouvoir d'achat élevé qui fait vivre commerces premium, cabinets libéraux et services haut de gamme. La ville attire une clientèle exigeante venue de tout l'ouest parisien.",
+      "Ici, vos prospects ne cherchent pas le moins cher mais le plus crédible. Un site élégant, rapide et rassurant, avec une prise de contact simple et un référencement local soigné, transforme cette clientèle aisée en clients fidèles. Beaucoup d'acteurs locaux sous-investissent leur présence en ligne : une opportunité pour ceux qui s'en donnent les moyens.",
+    ],
     keyIndustries: ["Professions libérales", "Immobilier de prestige", "Commerce premium", "Architecture & décoration", "Enseignement privé"],
     stats: {
       entreprises: "3 800 entreprises",
@@ -1284,6 +1332,10 @@ export const cities: City[] = [
       "Commune la plus densément peuplée d'Europe, Levallois-Perret est un pôle d'entreprises dynamique avec de nombreux sièges sociaux et PME innovantes.",
     localContext:
       "Levallois-Perret est l'une des villes les plus denses d'Europe et un hub majeur du marketing, de la publicité et des médias (Publicis, Havas, NRJ, BFM TV y ont leurs bureaux). Cette concentration de professionnels du marketing crée une demande sophistiquée en termes de sites web : les clients y attendent des réalisations de niveau agence. C'est aussi un marché B2B très actif avec des centaines de PME de services cherchant à développer leur visibilité.",
+    marcheLocal: [
+      "Sur un territoire compact, Levallois-Perret affiche l'une des plus fortes densités d'entreprises de France : sièges sociaux, agences, sociétés de médias et de services y côtoient un commerce de proximité intense. La ville des Hauts-de-Seine vit au rythme d'une population active nombreuse et connectée.",
+      "Cette densité crée un marché local ultra-concurrentiel où chaque recherche Google compte. Pour un commerce ou un cabinet levalloisien, se distinguer passe par un référencement local précis, des avis récents et un site rapide qui répond exactement à l'intention du visiteur pressé. Sur un territoire aussi resserré, la première position vaut de l'or.",
+    ],
     keyIndustries: ["Publicité & marketing", "Médias & communication", "Services financiers", "Tech & SaaS", "Immobilier d'entreprise"],
     stats: {
       entreprises: "8 500 entreprises",
@@ -1505,6 +1557,10 @@ export const cities: City[] = [
       "Ville internationale connue pour son festival, Cannes est un pôle touristique et événementiel de premier plan avec une économie tournée vers le luxe et l'hôtellerie.",
     localContext:
       "Cannes est synonyme de luxe, de festival du cinéma et d'événements internationaux (MIPIM, MIPTV, Lions de Cannes). Cette notoriété mondiale génère un tourisme haut de gamme et un marché local premium pour les commerces, hôtels et restaurants. Les entreprises cannoises doivent souvent gérer une clientèle internationale et bilingue — leur site web doit refléter ce positionnement premium avec un design irréprochable.",
+    marcheLocal: [
+      "Vitrine mondiale du cinéma et du luxe, Cannes vit du tourisme haut de gamme, de l'événementiel d'affaires et d'un commerce premium concentré sur la Croisette et le centre-ville. La clientèle y est internationale, saisonnière et habituée aux standards les plus élevés en matière d'image.",
+      "Un site web cannois doit séduire une clientèle qui compare, réserve et décide en ligne, souvent avant même d'arriver sur place. Multilingue, visuellement soigné, chargé rapidement et appuyé sur des avis récents, il capte une demande premium et internationale. Le référencement local sur les Alpes-Maritimes complète le dispositif pour attirer aussi la clientèle résidente.",
+    ],
     keyIndustries: ["Tourisme & hôtellerie de luxe", "Événementiel & MICE", "Cinéma & culture", "Immobilier de prestige", "Commerce premium"],
     stats: {
       entreprises: "9 500 entreprises",
@@ -1576,6 +1632,10 @@ export const cities: City[] = [
       "Ville d'art et de culture, Aix-en-Provence est aussi un pôle économique majeur avec son technopôle de l'Arbois, ses cabinets juridiques et son tourisme culturel.",
     localContext:
       "Aix-en-Provence est la capitale économique des Bouches-du-Rhône, avec un tissu diversifié entre droit (concentration de grands cabinets d'avocats), économie du savoir (École des Mines, universités) et tourisme culturel (Festival d'Art Lyrique). La ville attire une population aisée de cadres et retraités CSP+ qui comparent systématiquement les prestataires en ligne avant tout achat de service.",
+    marcheLocal: [
+      "Ville d'art, de culture et d'universités, Aix-en-Provence conjugue un patrimoine prestigieux, une clientèle aisée et un tissu de services, de professions libérales et de commerces raffinés autour du Cours Mirabeau. La proximité de grands projets comme ITER et de zones d'activité dynamise l'économie du pays d'Aix.",
+      "La clientèle aixoise valorise l'esthétique et la qualité : votre site doit être à la hauteur de cette exigence. Un design élégant, une navigation fluide et un référencement local ciblé sur les Bouches-du-Rhône permettent de capter une patientèle et une clientèle haut de gamme. Là où beaucoup misent sur le bouche-à-oreille, un site bien référencé élargit nettement l'audience.",
+    ],
     keyIndustries: ["Droit & cabinets d'avocats", "Enseignement supérieur", "Tourisme & culture", "Tech & innovation", "Immobilier & services"],
     stats: {
       entreprises: "18 000 entreprises",
@@ -1647,6 +1707,10 @@ export const cities: City[] = [
       "Capitale des Alpes et pôle d'innovation scientifique et technologique, Grenoble concentre des laboratoires de recherche, des startups deep tech et un écosystème montagne dynamique.",
     localContext:
       "Grenoble est la Silicon Valley française : première métropole pour les dépenses R&D en France, avec des acteurs mondiaux comme STMicroelectronics, Schneider Electric ou le CEA. Cette culture de l'innovation se diffuse dans tout l'écosystème local — même les PME grenobloises ont des attentes élevées en matière de performance digitale. La ville est aussi une capitale mondiale des sports outdoor, avec une économie touristique et sportive très active.",
+    marcheLocal: [
+      "Capitale des Alpes et haut lieu de la recherche française, Grenoble concentre laboratoires, industrie de pointe, nanotechnologies et une forte population étudiante et scientifique. Entre le CEA, les campus et les startups deeptech, la ville attire des profils exigeants et très à l'aise avec le numérique.",
+      "Face à une clientèle aussi technophile, un site amateur ne pardonne pas. Mais le tissu de commerces et d'artisans grenoblois, lui, reste souvent en retard sur le digital : une entreprise locale qui soigne son site, sa vitesse et son référencement sur l'Isère prend rapidement l'avantage sur des concurrents encore peu visibles.",
+    ],
     keyIndustries: ["Haute technologie & R&D", "Industrie électronique", "Sports outdoor & montagne", "Énergie & environnement", "Enseignement & recherche"],
     stats: {
       entreprises: "22 000 entreprises",
@@ -1868,6 +1932,10 @@ export const cities: City[] = [
       "Premier port militaire français, Toulon est aussi un pôle économique dynamique du Var avec un tissu de PME, commerces et acteurs du tourisme méditerranéen.",
     localContext:
       "Toulon est la capitale de la Marine nationale française et une ville portuaire avec une économie mixte entre défense, tourisme et services. La rade de Toulon est l'une des plus belles d'Europe, générant un tourisme nautique et résidentiel important. Les entreprises toulonnaises bénéficient d'un bassin de consommation de 600 000 habitants avec une forte demande de services digitalisés.",
+    marcheLocal: [
+      "Grand port militaire et fenêtre méditerranéenne du Var, Toulon associe une économie liée à la défense et au maritime, un tourisme en croissance et un commerce de centre-ville et de rade en pleine redynamisation. La métropole attire de nouveaux habitants séduits par le climat et le cadre.",
+      "Le marché web toulonnais est encore peu saturé : beaucoup d'entreprises locales n'ont pas de site ou un site dépassé. C'est précisément ce qui rend le référencement local accessible dans le Var — un site rapide, une fiche Google complète et un contenu optimisé suffisent souvent à occuper les premières positions avant que la concurrence ne se réveille.",
+    ],
     keyIndustries: ["Défense & marine nationale", "Tourisme & nautisme", "Immobilier & résidentiel", "Commerce local", "Services à la personne"],
     stats: {
       entreprises: "12 500 entreprises",
@@ -1939,6 +2007,10 @@ export const cities: City[] = [
       "Capitale du Champagne et ville universitaire majeure, Reims possède un écosystème économique riche entre viticulture, industrie et services aux entreprises.",
     localContext:
       "Reims est la capitale mondiale du champagne, avec des maisons comme Veuve Clicquot, Mumm ou Taittinger qui font rayonner la ville internationalement. Au-delà du champagne, la ville est un centre logistique stratégique (à 1h30 de Paris). Les entreprises rémois qui captent les requêtes liées au champagne et au tourisme culturel ont accès à une clientèle internationale à fort pouvoir d'achat.",
+    marcheLocal: [
+      "Capitale du champagne et ville de sacre des rois de France, Reims vit du prestige viticole, du tourisme patrimonial autour de sa cathédrale et d'un tissu de PME et de commerces au cœur de la Marne. Les maisons de champagne et leurs partenaires rayonnent bien au-delà de la région.",
+      "Pour un producteur ou un commerce rémois, un site e-commerce bien référencé ouvre un marché national, voire international. Pour les services locaux, le référencement sur la Marne reste abordable car beaucoup d'acteurs négligent leur visibilité en ligne. Un site soigné et une présence Google active captent une clientèle touristique et locale que le seul bouche-à-oreille ne touche plus.",
+    ],
     keyIndustries: ["Champagne & viticulture", "Tourisme culturel & gastronomique", "Industrie agroalimentaire", "Logistique & transport", "Commerce & artisanat"],
     stats: {
       entreprises: "14 000 entreprises",
@@ -2010,6 +2082,10 @@ export const cities: City[] = [
       "Ville industrielle en pleine reconversion, Saint-Étienne est labellisée Ville de Design UNESCO et développe un écosystème innovant mêlant industrie, numérique et création.",
     localContext:
       "Saint-Étienne est une ville en pleine reconversion, passant de la tradition industrielle (acier, armes, cycles) à une économie créative et de design mondialement reconnue (Ville UNESCO du Design). La Cité du Design et l'École Nationale Supérieure d'Art et Design attirent des professionnels créatifs et des entreprises innovantes. Cette transformation génère de nouvelles opportunités pour les entrepreneurs locaux qui misent sur le digital.",
+    marcheLocal: [
+      "Seule ville française labellisée UNESCO Ville créative de design, Saint-Étienne a converti son passé industriel en pôle de création, de design et d'innovation, autour de la Cité du design et de quartiers en pleine mutation. La métropole stéphanoise cultive une identité forte et une population attachée à son territoire.",
+      "Dans une ville sensible au design, la qualité visuelle d'un site fait vraiment la différence. Le tissu commerçant et artisanal stéphanois reste inégalement équipé en ligne : une entreprise locale dotée d'un site moderne, rapide et bien référencé sur la Loire se distingue nettement et capte une clientèle de proximité fidèle à ses commerces.",
+    ],
     keyIndustries: ["Design & industries créatives", "Industrie & mécanique", "Sport (ASSE, économie sportive)", "Enseignement & formation", "Commerce & services"],
     stats: {
       entreprises: "11 800 entreprises",
@@ -2081,6 +2157,10 @@ export const cities: City[] = [
       "Premier port de France pour le commerce extérieur, Le Havre est un hub logistique et industriel majeur avec un tissu économique tourné vers le maritime et l'international.",
     localContext:
       "Le Havre est le premier port de commerce français et le deuxième d'Europe du Nord pour les conteneurs, créant une économie logistique et industrielle très active. La ville est inscrite au Patrimoine Mondial UNESCO pour son architecture d'après-guerre unique, attirant un tourisme culturel croissant. Les entreprises havraises évoluent dans un contexte B2B international — avoir un site web professionnel et multilingue est un prérequis pour travailler avec les acteurs du transport maritime mondial.",
+    marcheLocal: [
+      "Premier port français pour le commerce extérieur, Le Havre conjugue économie maritime et logistique, industrie et un centre-ville reconstruit par Auguste Perret, classé au patrimoine mondial. La cité océane attire de nouveaux acteurs autour de son port et d'un tourisme urbain en développement.",
+      "Le tissu d'entreprises havraises — services portuaires, commerces, artisans — reste souvent discret en ligne. Sur les requêtes locales de Seine-Maritime, la concurrence SEO est modérée : un site professionnel rapide, appuyé sur une fiche Google active et un contenu optimisé, permet de capter une clientèle locale et de se démarquer dans une ville où peu d'acteurs ont franchi le pas du digital.",
+    ],
     keyIndustries: ["Logistique & transport maritime", "Industrie pétrochimique", "Commerce international", "Tourisme & culture", "Services portuaires"],
     stats: {
       entreprises: "10 500 entreprises",
@@ -2227,6 +2307,10 @@ export const cities: City[] = [
       "Ville d'art et d'histoire au cœur des châteaux de la Loire, Tours combine tourisme, université et services aux entreprises dans un cadre de vie attractif.",
     localContext:
       "Tours est au cœur de la Vallée de la Loire, classée Patrimoine Mondial UNESCO, générant un flux touristique de 8 millions de visiteurs par an attirés par les châteaux, vins et gastronomie. La ville est aussi un centre pharmaceutique important (Pfizer y est historiquement implanté). Les entreprises tourangelles dans l'hôtellerie et la restauration ont une opportunité immense de capter des clients internationaux via un SEO multilingue bien travaillé.",
+    marcheLocal: [
+      "Au cœur du Val de Loire et de ses châteaux classés, Tours vit du tourisme, d'une importante population étudiante, de la santé et d'un art de vivre qui attire régulièrement de nouveaux habitants. Du Vieux-Tours aux quartiers en développement, commerces et services profitent de cette douceur tourangelle recherchée.",
+      "L'afflux de nouveaux arrivants et de visiteurs signifie une clientèle qui découvre les entreprises locales en ligne. Un site bien référencé sur l'Indre-et-Loire capte cette demande avant les concurrents. Pour les commerces et professions libérales tourangeaux, la fiche Google et le SEO local sont devenus le premier point de contact avec une clientèle en renouvellement constant.",
+    ],
     keyIndustries: ["Tourisme & châteaux de la Loire", "Industrie pharmaceutique", "Viticulture & gastronomie", "Logistique & services", "Commerce local"],
     stats: {
       entreprises: "9 500 entreprises",
@@ -2298,6 +2382,10 @@ export const cities: City[] = [
       "Capitale des arts du feu et de la porcelaine, Limoges est une ville industrielle et artisanale avec un savoir-faire reconnu mondialement.",
     localContext:
       "Limoges est mondialement connue pour sa porcelaine et son émail, des artisans d'art qui ont besoin de sites e-commerce performants pour vendre à l'international. Au-delà de cette identité artisanale, la ville développe une filière numérique et des services. Les artisans et PME limougeauds ont souvent un savoir-faire exceptionnel mais une visibilité en ligne limitée — c'est précisément là que se situe l'opportunité de croissance digitale la plus forte.",
+    marcheLocal: [
+      "Mondialement connue pour sa porcelaine et ses savoir-faire d'art, Limoges conjugue artisanat d'excellence, université et un tissu de PME et de commerces au cœur de la Haute-Vienne. La ville cultive une identité forte autour de ses métiers d'art et d'une économie ancrée dans le territoire.",
+      "Pour les artisans et commerçants limougeauds, un site e-commerce soigné ouvre un marché national bien au-delà du Limousin — la porcelaine et les métiers d'art se vendent partout. Sur les requêtes locales, la concurrence reste faible : un site moderne, rapide et bien référencé sur la Haute-Vienne suffit souvent à occuper durablement les premières positions.",
+    ],
     keyIndustries: ["Porcelaine & artisanat d'art", "Élevage & agroalimentaire", "Industrie électrique & électronique", "Numérique & services", "Commerce local"],
     stats: {
       entreprises: "8 200 entreprises",
@@ -2369,6 +2457,10 @@ export const cities: City[] = [
       "Capitale de la Picardie et ville universitaire, Amiens est un pôle économique des Hauts-de-France avec un secteur tertiaire et industriel diversifié.",
     localContext:
       "Amiens est la capitale des Hauts-de-France et une ville industrielle en mutation, traditionnellement connue pour le textile et l'automobile. La présence de grands donneurs d'ordre comme Valeo, Whirlpool ou Goodyear crée un réseau de PME sous-traitantes qui cherchent à moderniser leurs outils commerciaux, dont leur site web. La ville se développe aussi comme pôle logistique stratégique entre Paris et les ports du Nord.",
+    marcheLocal: [
+      "Dominée par la plus vaste cathédrale gothique de France, Amiens conjugue tourisme patrimonial, université, industrie et un commerce de centre-ville actif au cœur de la Somme. Les hortillonnages et un cadre de vie apprécié contribuent à l'attractivité de la capitale picarde.",
+      "Le marché web amiénois est encore peu concurrentiel : de nombreuses entreprises locales s'appuient sur des sites datés ou de simples pages sociales. C'est une opportunité réelle — un site professionnel rapide, une fiche Google complète et un référencement local sur la Somme permettent de prendre l'avantage sur des concurrents encore peu visibles en ligne.",
+    ],
     keyIndustries: ["Industrie automobile & équipementiers", "Logistique & transport", "Agroalimentaire", "Tourisme (Cathédrale UNESCO)", "Services & commerce"],
     stats: {
       entreprises: "8 800 entreprises",
@@ -2440,6 +2532,10 @@ export const cities: City[] = [
       "Ville catalane au carrefour franco-espagnol, Perpignan est un pôle commercial et touristique dynamique avec un tissu de PME tourné vers la Méditerranée.",
     localContext:
       "Perpignan est la porte d'entrée de la péninsule ibérique et un hub commercial majeur pour les fruits et légumes (premier marché d'Europe du marché de gros de Saint-Charles). Cette position de carrefour génère une économie commerciale très active avec une forte composante catalane transfrontalière. Les entreprises perpignanaises ont l'opportunité de capter des clients espagnols et français via un site web bilingue et un référencement local ciblé sur les deux marchés.",
+    marcheLocal: [
+      "Porte de la Catalogne française, Perpignan vit du commerce transfrontalier avec l'Espagne, de l'agriculture méditerranéenne, du tourisme et d'une identité catalane affirmée. Au cœur des Pyrénées-Orientales, la ville attire une clientèle locale et frontalière autour de son centre historique.",
+      "Cette position frontalière ouvre des perspectives : être visible en ligne peut signifier toucher aussi une clientèle catalane du sud. Sur les requêtes locales des Pyrénées-Orientales, la concurrence SEO reste abordable. Un site clair, rapide et bien référencé, éventuellement pensé pour une audience transfrontalière, capte une demande que peu d'acteurs locaux exploitent réellement.",
+    ],
     keyIndustries: ["Commerce fruits & légumes", "Agriculture & viticulture", "Tourisme & culture catalane", "Logistique transfrontalière", "Commerce local"],
     stats: {
       entreprises: "7 800 entreprises",
@@ -2511,6 +2607,10 @@ export const cities: City[] = [
       "Ville d'art et de culture au carrefour européen, Metz est un pôle tertiaire et technologique majeur du Grand Est avec le Centre Pompidou-Metz comme emblème.",
     localContext:
       "Metz est une ville en forte renaissance économique et culturelle, avec le Centre Pompidou-Metz qui a généré un regain de tourisme. La ville bénéficie d'une position stratégique en Lorraine, à la croisée des routes vers Paris, Luxembourg et l'Allemagne. Le tissu PME messin est dynamique, avec des secteurs de pointe comme la cybersécurité (campus Cyber Lorraine) et les technologies de l'information.",
+    marcheLocal: [
+      "Capitale de la Lorraine, Metz conjugue un patrimoine remarquable, une position transfrontalière avec le Luxembourg et l'Allemagne, et un rayonnement culturel porté par le Centre Pompidou-Metz. La ville profite du bassin d'emploi luxembourgeois voisin, au fort pouvoir d'achat.",
+      "La proximité du Luxembourg crée une clientèle de frontaliers exigeants et connectés. Pour une entreprise messine, un site rapide, crédible et bien référencé sur la Moselle, parfois multilingue, capte cette demande. Beaucoup d'acteurs locaux n'exploitent pas encore ce potentiel transfrontalier : un site soigné et une présence Google active font la différence.",
+    ],
     keyIndustries: ["Cybersécurité & tech", "Tourisme culturel (Centre Pompidou)", "Services aux entreprises", "Sidérurgie reconvertie", "Logistique transfrontalière"],
     stats: {
       entreprises: "8 500 entreprises",
@@ -2582,6 +2682,10 @@ export const cities: City[] = [
       "Capitale historique de l'horlogerie française, Besançon est une ville universitaire et industrielle dynamique avec un secteur microtechnique de pointe.",
     localContext:
       "Besançon est la capitale mondiale de l'horlogerie de précision, un savoir-faire inscrit au Patrimoine Immatériel de l'UNESCO. Cette tradition d'excellence dans la mécanique fine se prolonge dans des industries de haute précision (microtechniques, optique, médical). Les artisans et PME bisontines ont besoin de sites web qui valorisent ce positionnement premium et capturent une clientèle internationale sensible à la qualité.",
+    marcheLocal: [
+      "Berceau de l'horlogerie française et pionnière des microtechniques, Besançon conjugue industrie de précision, université, santé et une image de ville verte au cœur du Doubs. La capitale comtoise cultive un savoir-faire technique reconnu et une qualité de vie appréciée.",
+      "Dans une ville marquée par la précision et l'innovation, la qualité d'un site est vite jugée. Le tissu de commerces et d'artisans bisontins reste pourtant inégalement équipé en ligne : une entreprise locale dotée d'un site moderne, rapide et bien référencé sur le Doubs se distingue nettement et capte une clientèle de proximité attachée à son territoire.",
+    ],
     keyIndustries: ["Horlogerie & microtechniques", "Industrie médicale & optique", "Cosmétique & parfumerie", "Santé & bien-être", "Commerce artisanal premium"],
     stats: {
       entreprises: "7 500 entreprises",
@@ -2653,6 +2757,10 @@ export const cities: City[] = [
       "Préfecture du Loiret et métropole du Centre-Val de Loire, Orléans est un pôle cosmétique et pharmaceutique majeur avec un tissu économique diversifié.",
     localContext:
       "Orléans est la capitale de la région Centre-Val de Loire et un hub pharmaceutique et cosmétique stratégique : Servier, LVMH Perfumes & Cosmetics y ont leurs centres R&D. La ville est aussi un nœud logistique essentiel entre Paris et le Centre. Les PME orléanaises fournissant des services aux industries pharma et cosmétique doivent avoir une présence web à la hauteur des exigences de leurs clients grands comptes.",
+    marcheLocal: [
+      "Sur les rives de la Loire, Orléans conjugue un patrimoine johannique célèbre, un pôle logistique majeur et la Cosmetic Valley, premier cluster mondial de la parfumerie-cosmétique. La métropole du Loiret profite de sa position stratégique aux portes de l'Île-de-France.",
+      "Cette économie diversifiée irrigue un tissu de PME, de commerces et de services qui gagnent à être visibles en ligne. Sur les requêtes locales du Loiret, la concurrence SEO reste maîtrisable. Un site rapide, un contenu optimisé et une fiche Google active permettent à une entreprise orléanaise de capter une clientèle locale et de proximité en pleine croissance.",
+    ],
     keyIndustries: ["Industrie pharmaceutique", "Cosmétique & parfums", "Logistique & e-commerce", "Tourisme (Jeanne d'Arc, Châteaux)", "Commerce & services"],
     stats: {
       entreprises: "8 000 entreprises",
@@ -2724,6 +2832,10 @@ export const cities: City[] = [
       "Capitale historique de la Normandie, Rouen est un pôle économique majeur alliant patrimoine, industrie portuaire et services aux entreprises.",
     localContext:
       "Rouen est la capitale normande et le 5ème port fluvial de France, avec une économie diversifiée entre industrie pétrochimique, logistique et commerce. La ville connaît une gentrification de son hypercentre historique, avec l'émergence de commerces et restaurants branchés qui misent sur l'image en ligne pour attirer une clientèle parisienne en escapade. Le tourisme culturel représente un levier important pour les entreprises locales.",
+    marcheLocal: [
+      "Capitale historique de la Normandie, Rouen conjugue un centre médiéval remarquable, une activité portuaire sur la Seine et un tissu tertiaire, universitaire et commerçant dense. La métropole normande attire habitants et entreprises séduits par sa proximité avec Paris et son cadre patrimonial.",
+      "Le marché web rouennais est actif mais loin d'être verrouillé : beaucoup de commerces et d'artisans s'appuient encore sur des sites vieillissants. Une entreprise qui investit un site moderne, rapide et bien référencé sur la Seine-Maritime prend l'avantage sur des concurrents peu visibles, en captant une clientèle locale qui cherche désormais tout sur Google.",
+    ],
     keyIndustries: ["Industrie pétrochimique", "Logistique & transport fluvial", "Tourisme & culture normande", "Commerce & gastronomie", "Services aux entreprises"],
     stats: {
       entreprises: "9 200 entreprises",
@@ -2795,6 +2907,10 @@ export const cities: City[] = [
       "Ville universitaire et numérique de Normandie, Caen est un pôle d'innovation avec un écosystème tech en plein essor et un secteur tertiaire dynamique.",
     localContext:
       "Caen est la capitale économique de la Normandie et un important centre industriel (PSA Peugeot-Citroën) et universitaire (30 000 étudiants). Le tourisme mémoriel (plages du Débarquement, Mémorial de Caen) génère plusieurs millions de visiteurs par an, dont une forte proportion d'Américains et Britanniques. Les entreprises caennaises du tourisme ont une opportunité unique de capter des clients anglophones via un site web multilingue et un SEO international ciblé.",
+    marcheLocal: [
+      "Reconstruite après-guerre et tournée vers la mer, Caen conjugue une importante population étudiante, un pôle santé et recherche, un mémorial de rayonnement international et un commerce de centre-ville dynamique. La capitale du Calvados profite d'un cadre de vie normand recherché.",
+      "L'importante population étudiante et le renouvellement des habitants créent une clientèle qui découvre les entreprises caennaises en ligne. Un site bien référencé sur le Calvados capte cette demande fraîche. Pour les commerces et services locaux, la fiche Google et le référencement de proximité sont devenus le premier réflexe d'une clientèle jeune et connectée.",
+    ],
     keyIndustries: ["Industrie automobile & équipements", "Tourisme mémoriel & historique", "Enseignement supérieur", "Agroalimentaire normand", "Services & commerce"],
     stats: {
       entreprises: "7 800 entreprises",
@@ -2866,6 +2982,10 @@ export const cities: City[] = [
       "Ville d'Art nouveau et universitaire majeure, Nancy est un pôle d'excellence en santé, numérique et industries créatives dans le Grand Est.",
     localContext:
       "Nancy est l'une des plus belles villes de France, avec sa Place Stanislas classée Patrimoine Mondial UNESCO, et un riche héritage Art Nouveau. La ville est aussi un centre industriel lorrain reconverti, avec des filières émergentes dans la tech et la santé. L'écosystème startup nancéien se structure autour de l'Artem et de Sciences Po Nancy, générant une nouvelle génération d'entrepreneurs en quête de prestataires web performants.",
+    marcheLocal: [
+      "Joyau de l'Art nouveau grâce à l'École de Nancy et fière de sa Place Stanislas classée à l'UNESCO, Nancy conjugue patrimoine, université, santé et un commerce de centre-ville raffiné au cœur de la Meurthe-et-Moselle. La ville cultive une identité esthétique forte.",
+      "Dans une ville aussi attachée au beau, la qualité visuelle d'un site pèse dans la décision. Le tissu commerçant et libéral nancéien reste inégalement équipé en ligne : une entreprise dotée d'un site élégant, rapide et bien référencé sur la Meurthe-et-Moselle se démarque nettement et capte une clientèle sensible au soin apporté à l'image.",
+    ],
     keyIndustries: ["Industrie & métallurgie reconvertie", "Tech & numérique", "Santé & médical", "Tourisme culturel (Art Nouveau)", "Enseignement supérieur"],
     stats: {
       entreprises: "7 800 entreprises",
@@ -2937,6 +3057,10 @@ export const cities: City[] = [
       "Plus grande ville du Val-d'Oise, Argenteuil est un pôle économique francilien dynamique avec de nombreuses PME et commerces de proximité.",
     localContext:
       "Argenteuil est la commune la plus peuplée du Val-d'Oise et une ville en pleine transformation avec d'importants programmes de rénovation urbaine. Sa proximité immédiate avec Paris (20 min en RER) en fait une base pour de nombreux artisans, commerçants et prestataires qui travaillent sur toute l'Île-de-France. Les entreprises argentinoises peuvent toucher une clientèle à la fois locale (130 000 habitants) et francilienne via une stratégie SEO local bien ciblée.",
+    marcheLocal: [
+      "Grande ville du Val-d'Oise en bord de Seine, Argenteuil conjugue un passé impressionniste, une population nombreuse et un tissu dense de commerces de proximité et d'artisans au service d'un bassin de vie populaire et actif. La ville profite de sa proximité immédiate avec Paris.",
+      "Sur un territoire aussi peuplé, la demande locale est forte mais souvent mal servie en ligne : beaucoup d'artisans et de commerces argenteuillais n'ont pas de site digne de ce nom. Une fiche Google soignée, des avis et un site rapide sur le Val-d'Oise suffisent à capter une clientèle de proximité que les concurrents laissent filer.",
+    ],
     keyIndustries: ["Artisanat & BTP", "Commerce local", "Services à la personne", "Transport & logistique", "Industrie"],
     stats: {
       entreprises: "6 800 entreprises",
@@ -3008,6 +3132,10 @@ export const cities: City[] = [
       "Ville créative aux portes de Paris, Montreuil est un hub artistique et entrepreneurial avec un écosystème de startups, d'artisans et de créateurs.",
     localContext:
       "Montreuil est la ville la plus peuplée de Seine-Saint-Denis et un hub créatif majeur en Île-de-France, avec une forte concentration de studios de cinéma, d'agences créatives et de startups tech. La ville abrite des entreprises comme Ankama ou Arte, créant un tissu créatif exceptionnel. Ce positionnement permet aux entreprises montreuilloises créatives de bénéficier d'une image innovante — mais encore faut-il la mettre en avant via un site web qui reflète cette identité.",
+    marcheLocal: [
+      "Aux portes de Paris, Montreuil s'est imposée comme un pôle créatif majeur de la Seine-Saint-Denis : artisans d'art, studios, entreprises culturelles et startups y côtoient un commerce de proximité vivant et une population jeune et engagée. La ville connaît une transformation rapide et une forte attractivité.",
+      "Cette clientèle jeune, urbaine et exigeante cherche tout en ligne et valorise l'authenticité. Un site soigné, rapide et bien référencé sur la Seine-Saint-Denis permet à un commerce ou un artisan montreuillois de se démarquer. Le tissu créatif local apprécie les prestataires qui maîtrisent l'image : un atout pour se positionner sur les requêtes de proximité.",
+    ],
     keyIndustries: ["Cinéma & audiovisuel", "Tech & startups créatives", "Artisanat d'art", "Commerce local", "Services numériques"],
     stats: {
       entreprises: "7 200 entreprises",
@@ -3079,6 +3207,10 @@ export const cities: City[] = [
       "Ville olympique et siège de grandes entreprises, Saint-Denis est un pôle économique majeur du nord francilien en pleine transformation urbaine.",
     localContext:
       "Saint-Denis héberge le Stade de France et accueille les grandes compétitions sportives mondiales, générant une économie événementielle et sportive considérable. La ville est en pleine transformation dans le cadre du Grand Paris, avec des milliards d'euros investis dans de nouveaux quartiers et équipements. Cette dynamique crée des opportunités pour les entreprises locales — commerce, restauration, services — qui peuvent capter une clientèle en forte croissance grâce à une présence digitale proactive.",
+    marcheLocal: [
+      "Au nord de Paris, Saint-Denis conjugue un patrimoine majeur — sa basilique royale —, le Stade de France, une économie en pleine mutation autour du quartier Pleyel et des Jeux, et une population parmi les plus jeunes et diverses de France. La ville attire sièges d'entreprises et nouveaux projets urbains.",
+      "Cette transformation crée un marché local en pleine effervescence, encore inégalement couvert en ligne. Pour un commerce ou un service dionysien, un site rapide, une fiche Google active et un référencement de proximité sur la Seine-Saint-Denis captent une clientèle nombreuse et connectée, dans un territoire où l'offre digitale peine encore à suivre la demande.",
+    ],
     keyIndustries: ["Sport & événementiel", "Commerce & grande distribution", "Services aux entreprises", "Construction & immobilier", "Restauration collective"],
     stats: {
       entreprises: "7 500 entreprises",
@@ -3150,6 +3282,10 @@ export const cities: City[] = [
       "Préfecture du Val-de-Marne, Créteil est un pôle administratif, universitaire et commercial majeur du sud-est francilien.",
     localContext:
       "Créteil est la préfecture du Val-de-Marne et un important centre de services publics et de santé (CHU Henri-Mondor, l'un des plus grands de France). La ville concentre aussi une dense activité commerciale avec le centre commercial régional Créteil Soleil. Les professionnels de santé, avocats et prestataires de services locaux ont besoin d'une présence en ligne professionnelle pour se démarquer dans ce marché très concurrentiel.",
+    marcheLocal: [
+      "Préfecture du Val-de-Marne, Créteil conjugue un pôle hospitalier et universitaire majeur, un centre commercial régional, un lac de loisirs et une architecture emblématique des années 70. La ville concentre services de santé, administrations et commerces au service d'un large bassin de population.",
+      "Autour du pôle santé et de l'université, la clientèle cristolienne est nombreuse et cherche ses prestataires en ligne. Sur les requêtes locales du Val-de-Marne, un site rapide, des avis récents et un référencement de proximité soigné permettent à un commerce ou un professionnel de santé de capter une demande de proximité que beaucoup d'acteurs négligent encore.",
+    ],
     keyIndustries: ["Santé & médical (CHU)", "Services publics & administration", "Commerce & grande distribution", "Enseignement & formation", "Professions libérales"],
     stats: {
       entreprises: "5 800 entreprises",
@@ -3221,6 +3357,10 @@ export const cities: City[] = [
       "Ville d'art contemporain et pôle industriel du Val-de-Marne, Vitry-sur-Seine est en pleine mutation économique avec l'arrivée du Grand Paris Express.",
     localContext:
       "Vitry-sur-Seine est en pleine transformation avec l'arrivée du Grand Paris Express et de nombreux projets immobiliers. La ville abrite des sièges de groupes pharmaceutiques (Sanofi) et un tissu industriel dense le long des berges de Seine. L'émergence d'une scène artistique et culturelle (musée MAC/VAL) change l'image de la ville, attirant de nouvelles populations et de nouveaux consommateurs pour les commerces et services locaux.",
+    marcheLocal: [
+      "Plus grande ville du Val-de-Marne, Vitry-sur-Seine conjugue un passé industriel, une scène street art de renommée internationale — véritable musée à ciel ouvert — et un tissu dense de commerces et d'artisans au service d'une population nombreuse et populaire, aux portes de Paris.",
+      "Sur ce territoire très peuplé, la demande locale est massive mais souvent mal adressée en ligne. Un artisan ou un commerce vitriot qui soigne sa fiche Google, ses avis et un site rapide sur le Val-de-Marne prend une longueur d'avance sur des concurrents peu visibles, en captant une clientèle de proximité qui cherche désormais tout sur son smartphone.",
+    ],
     keyIndustries: ["Industrie pharmaceutique", "Industrie & chimie", "Commerce local", "Arts & culture", "Services"],
     stats: {
       entreprises: "4 500 entreprises",
@@ -3292,6 +3432,10 @@ export const cities: City[] = [
       "Ville résidentielle et commerçante des Hauts-de-Seine, Asnières-sur-Seine accueille un tissu dynamique de PME, commerces et professions libérales.",
     localContext:
       "Asnières-sur-Seine est une ville résidentielle cossy des Hauts-de-Seine, limitrophe de Paris (17ème) et de Clichy. Sa population aisée et son tissu de PME services-commerce en font un marché local porteur. Les commerçants, restaurateurs et professions libérales asnièrois cherchent à capter une clientèle de proximité via Google Maps et le SEO local, dans une ville où la concurrence reste inférieure à Paris.",
+    marcheLocal: [
+      "En bord de Seine et aux portes de Paris, Asnières-sur-Seine conjugue un cadre résidentiel prisé, un tissu de PME et de professions libérales et un commerce de proximité actif au sein des Hauts-de-Seine. La ville attire une population active au bon pouvoir d'achat, proche du quartier d'affaires.",
+      "La clientèle asniéroise, connectée et exigeante, compare en ligne avant de choisir. Pour un commerce ou un cabinet local, un site rapide, rassurant et bien référencé sur les Hauts-de-Seine, avec des avis récents et une prise de contact simple, transforme cette proximité en clients. Beaucoup d'acteurs du 92 sous-exploitent encore leur présence en ligne.",
+    ],
     keyIndustries: ["Commerce local & restauration", "Professions libérales", "Services à domicile", "Immobilier résidentiel", "Artisanat & BTP"],
     stats: {
       entreprises: "5 200 entreprises",
@@ -3363,6 +3507,10 @@ export const cities: City[] = [
       "Ville dynamique des Hauts-de-Seine, Colombes combine activité économique, cadre de vie agréable et un tissu de PME et commerces en plein développement.",
     localContext:
       "Colombes est une grande ville des Hauts-de-Seine avec un tissu commercial et industriel dense. Sa proximité avec La Défense et Paris en fait une base idéale pour des PME qui travaillent avec les grands groupes franciliens. La ville bénéficiera directement du Grand Paris Express (ligne 15), augmentant son attractivité et le pouvoir d'achat de ses habitants dans les prochaines années.",
+    marcheLocal: [
+      "Grande ville des Hauts-de-Seine, Colombes conjugue zones résidentielles, activités tertiaires et un tissu dense de commerces et d'artisans au service d'une population nombreuse, à proximité de La Défense et du quartier d'affaires du nord-ouest parisien. La ville bénéficie d'une bonne desserte et d'une dynamique de renouvellement urbain.",
+      "Sur ce territoire peuplé et actif, la demande locale est forte mais l'offre digitale inégale. Une entreprise colombienne qui investit un site rapide, une fiche Google complète et un référencement de proximité sur le 92 capte une clientèle que les concurrents mal référencés laissent échapper. La proximité de La Défense élève par ailleurs les attentes en matière d'image.",
+    ],
     keyIndustries: ["Industrie & logistique", "Commerce local", "Services B2B", "Artisanat & BTP", "Restauration & services"],
     stats: {
       entreprises: "4 800 entreprises",
@@ -3434,6 +3582,10 @@ export const cities: City[] = [
       "Ville résidentielle haut de gamme des Hauts-de-Seine, Saint-Cloud accueille des sièges sociaux, des professions libérales et un commerce de qualité.",
     localContext:
       "Saint-Cloud est l'une des communes les plus résidentielles et aisées des Hauts-de-Seine, avec une population à fort pouvoir d'achat composée de cadres supérieurs et de professions libérales. L'environnement verdoyant du Parc de Saint-Cloud et la qualité de vie exceptionnelle attirent une clientèle exigeante pour les commerces, restaurants gastronomiques et prestataires de services premium. La qualité visuelle du site web y est un facteur de décision majeur.",
+    marcheLocal: [
+      "Écrin résidentiel prisé des Hauts-de-Seine, Saint-Cloud associe son parc et son domaine national, une population aisée et un commerce de qualité au service d'une clientèle exigeante de l'ouest parisien. La ville cultive un cadre de vie recherché, entre Seine et hauteurs boisées.",
+      "Ici, la clientèle privilégie la crédibilité et le soin plutôt que le prix. Un site élégant, rapide et rassurant, avec une prise de contact fluide et un référencement local ciblé sur Saint-Cloud et l'ouest francilien, transforme cette clientèle aisée en clients fidèles. Les acteurs locaux qui soignent leur image en ligne se démarquent nettement d'une concurrence souvent discrète.",
+    ],
     keyIndustries: ["Professions libérales premium", "Restauration gastronomique", "Commerce de qualité", "Immobilier de prestige", "Services à domicile haut de gamme"],
     stats: {
       entreprises: "3 200 entreprises",
@@ -3580,6 +3732,10 @@ export const cities: City[] = [
       "Pôle numérique et média des Hauts-de-Seine, Issy-les-Moulineaux accueille les sièges de grands groupes tech et média avec un écosystème digital très développé.",
     localContext:
       "Issy-les-Moulineaux est le hub tech et médias de l'Ouest parisien : Canal+, Microsoft France, SFR, Bouygues Telecom y ont leurs sièges. Les PME isséennes évoluent dans un environnement digitalement très mature où les standards en termes de site web et de marketing digital sont particulièrement élevés. C'est aussi l'une des villes de France avec le plus fort ratio de startups SaaS B2B par habitant.",
+    marcheLocal: [
+      "Pôle majeur des médias, des télécoms et du numérique, Issy-les-Moulineaux accueille de nombreux sièges d'entreprises et se positionne comme l'une des villes les plus connectées de France, aux portes de Paris. La commune des Hauts-de-Seine conjugue économie tertiaire de pointe et commerces de proximité.",
+      "Dans une ville aussi digitale, le niveau d'exigence en ligne est parmi les plus élevés d'Île-de-France : un site amateur y est immédiatement disqualifié. Pour un commerce ou un service isséen, un site rapide, moderne et parfaitement référencé sur le 92 est indispensable pour capter une clientèle de cadres connectés, habitués aux meilleurs standards du web.",
+    ],
     keyIndustries: ["Tech & SaaS", "Médias & télécoms", "Startups B2B", "Services digitaux", "Conseil & consulting"],
     stats: {
       entreprises: "6 500 entreprises",
