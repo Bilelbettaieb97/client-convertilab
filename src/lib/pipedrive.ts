@@ -159,13 +159,15 @@ export async function pushToPipedrive(
     }
 
     // Router vers le bon pipeline + champ Source
-    const stageId = META_ADS_SOURCES.has(formType)
+    // "Devis - vitrine" → "Devis" pour le routage (le formType complet reste dans le titre/la note)
+    const routeType = formType.startsWith("Devis - ") ? "Devis" : formType;
+    const stageId = META_ADS_SOURCES.has(routeType)
       ? STAGE_META_ADS
-      : FORMULAIRES_SOURCES.has(formType)
+      : FORMULAIRES_SOURCES.has(routeType)
         ? STAGE_FORMULAIRES
         : STAGE_OUTILS;
-    const sourceOptionId = SOURCE_OPTIONS[formType] ?? null;
-    const isFormulaires = FORMULAIRES_SOURCES.has(formType);
+    const sourceOptionId = SOURCE_OPTIONS[routeType] ?? null;
+    const isFormulaires = FORMULAIRES_SOURCES.has(routeType);
 
     // Map known fields to Pipedrive custom field keys
     const customFields: Record<string, unknown> = {};

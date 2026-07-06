@@ -1085,9 +1085,9 @@ export function buildFormSeriesContext(
   if (formType === "promo_lead") {
     ctx.situation = String(fields.situation || "");
     ctx.objectif  = String(fields.objectif  || "");
-  } else if (formType === "Contact") {
+  } else if (formType === "Contact" || formType === "HeroMiniForm") {
     ctx.projet = String(fields.project || "votre projet");
-  } else if (formType === "Devis" || formType.startsWith("Devis - ")) {
+  } else if (formType === "Devis" || formType.startsWith("Devis - ") || formType === "Offre Mensuelle") {
     ctx.offre = String(fields.service || fields.offerName || "votre projet");
     ctx.secteur = String(fields.sector || "");
   } else if (formType === "Demande Maquette") {
@@ -1116,9 +1116,16 @@ export async function scheduleEmailSeries(
   if (!leadEmail) return;
 
   // "Devis - vitrine" → "Devis", "Mentions Légales" → "Mentions Legales"
-  const seriesKey = formType.startsWith("Devis - ")
+  const normalized = formType.startsWith("Devis - ")
     ? "Devis"
     : formType.replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e");
+
+  // Alias : réutilise une série existante pour des formulaires proches
+  const SERIES_ALIASES: Record<string, string> = {
+    HeroMiniForm: "Contact",        // mini-formulaire hero → série Contact
+    "Offre Mensuelle": "Devis",     // devis offre mensuelle → série Devis
+  };
+  const seriesKey = SERIES_ALIASES[normalized] ?? normalized;
 
   const templates = EMAIL_SERIES[seriesKey];
   if (!templates?.length) return;

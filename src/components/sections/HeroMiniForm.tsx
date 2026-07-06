@@ -58,7 +58,7 @@ export default function HeroMiniForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          formType: "Hero Mini Form",
+          formType: "HeroMiniForm",
           name,
           email,
           fields: {

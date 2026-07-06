@@ -17,7 +17,7 @@ interface RobotsApiInput {
 }
 
 export const POST = createToolHandler<RobotsApiInput, RobotsResult>({
-  toolName: "Robots & Sitemap",
+  toolName: "Robots Generator",
   tableName: "robots_generations",
 
   validate(body) {
