@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : term.definition;
 
   return {
-    title: `${term.term} — Définition & Guide Complet`,
+    title: `${term.term} : Définition & Guide Complet`,
     description: desc,
     alternates: { canonical: `${SITE.url}/glossaire/${term.slug}` },
     openGraph: {
