@@ -156,21 +156,6 @@ const webSiteSchema = {
   },
 };
 
-const howToSchema = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  name: "Comment booster votre croissance digitale avec ConvertiLab",
-  description: "Notre processus éprouvé en 5 étapes pour développer votre présence en ligne et maximiser votre ROI.",
-  totalTime: "P30D",
-  step: [
-    { "@type": "HowToStep", name: "Audit & Stratégie", text: "Analyse de votre marché, vos concurrents et vos objectifs pour définir la meilleure stratégie digitale." },
-    { "@type": "HowToStep", name: "Plan d'Action", text: "Construction de votre stratégie marketing digitale personnalisée avec des objectifs clairs et un calendrier détaillé." },
-    { "@type": "HowToStep", name: "Mise en Place", text: "Déploiement des campagnes, création des contenus et configuration des outils de tracking." },
-    { "@type": "HowToStep", name: "Optimisation Continue", text: "Analyse des résultats et optimisation continue pour maximiser votre retour sur investissement." },
-    { "@type": "HowToStep", name: "Scale & Croissance", text: "Développement des leviers performants pour accélérer votre croissance à long terme." },
-  ],
-};
-
 export default function HomePage() {
   return (
     <>
@@ -189,10 +174,6 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <div className="min-h-screen">
         <Navigation />

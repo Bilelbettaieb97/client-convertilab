@@ -5,7 +5,7 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Rapport Digital par Secteur — Guide Gratuit | ConvertiLab",
+  title: "Rapport Digital par Secteur — Guide Gratuit",
   description:
     "Recevez un rapport digital complet et gratuit pour votre secteur d'activite. Diagnostic, checklist, etudes de cas et plan d'action en PDF. 50+ secteurs disponibles.",
   openGraph: {

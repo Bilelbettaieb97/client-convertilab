@@ -9,7 +9,7 @@ import { ArrowRight, Star, Zap, Shield } from "lucide-react";
 import SolutionsGrid from "./SolutionsGrid";
 
 export const metadata: Metadata = {
-  title: "Création Site Web par Secteur d'Activité | ConvertiLab",
+  title: "Création Site Web par Secteur d'Activité",
   description: "Site web sur-mesure par métier : restaurant, avocat, artisan, immobilier, coach, e-commerce. SEO optimisé, livré en 7j, dès 990€. +150 clients. Devis gratuit.",
   keywords: "site web restaurant, site internet avocat, site web artisan, création site par secteur, site web métier, site internet professionnel Paris",
   alternates: { canonical: `${SITE.url}/solutions` },

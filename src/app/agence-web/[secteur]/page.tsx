@@ -161,10 +161,12 @@ export default async function CityPage({ params }: Props) {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": `${SITE.url}/agence-web/${city.slug}#localbusiness`,
     name: `ConvertiLab - Agence Web ${city.name}`,
     url: `${SITE.url}/agence-web/${city.slug}`,
     telephone: SITE.phone,
     email: SITE.email,
+    parentOrganization: { "@id": `${SITE.url}/#organization` },
     address: {
       "@type": "PostalAddress",
       addressLocality: city.name,
@@ -185,6 +187,12 @@ export default async function CityPage({ params }: Props) {
       reviewCount: SITE.reviews.count,
       bestRating: "5",
     },
+    review: city.testimonials.map((t) => ({
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: t.author },
+      reviewBody: t.text,
+    })),
   };
 
   const breadcrumbSchema = {
@@ -216,19 +224,23 @@ export default async function CityPage({ params }: Props) {
 
   const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: `Création de site internet à ${city.name}`,
-    brand: { "@type": "Brand", name: "ConvertiLab" },
-    review: city.testimonials.map((t) => ({
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
+    serviceType: "Création de site internet",
+    provider: { "@id": `${SITE.url}/agence-web/${city.slug}#localbusiness` },
+    areaServed: { "@type": "City", name: city.name },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "EUR",
+      price: "500",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "EUR",
+        minPrice: "500",
       },
-      author: { "@type": "Person", name: t.author },
-      reviewBody: t.text,
-    })),
+      availability: "https://schema.org/InStock",
+      url: `${SITE.url}/agence-web/${city.slug}`,
+    },
   };
 
   const otherCities = cities.filter((c) => c.slug !== city.slug);

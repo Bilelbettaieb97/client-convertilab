@@ -41,6 +41,7 @@ export const DEFAULT_OG_IMAGE = `${SITE.url}/og-image.png`;
 export const STRUCTURED_DATA = {
   organization: {
     "@type": "Organization",
+    "@id": `${SITE.url}/#organization`,
     name: SITE.name,
     url: SITE.url,
     logo: `${SITE.url}/logo.png`,
@@ -54,6 +55,7 @@ export const STRUCTURED_DATA = {
   },
   localBusiness: {
     "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": `${SITE.url}/#localbusiness`,
     name: SITE.name,
     url: SITE.url,
     telephone: SITE.phone,
@@ -89,7 +91,7 @@ export const STRUCTURED_DATA = {
       opens: "09:00",
       closes: "18:00",
     },
-    founder: { "@type": "Person", name: "Bilel Bettaieb" },
+    founder: { "@type": "Person", "@id": `${SITE.url}/#bilel-bettaieb`, name: "Bilel Bettaieb" },
     foundingDate: "2024",
   },
 } as const;

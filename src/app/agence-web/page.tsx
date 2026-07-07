@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Star, Users, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Agence Web par Ville — Création Site Internet en France | ConvertiLab",
+  title: "Agence Web par Ville — Création Site Internet en France",
   description: "Quelle agence web choisir en Île-de-France ? ConvertiLab intervient dans 51 villes : Paris, Lyon, Marseille, Bordeaux et toute la France. Site vitrine dès 990€, livré en 7 jours. +150 clients, 15 avis 4.9★.",
   keywords: "agence web Île-de-France, création site internet Paris Lyon Marseille, agence web locale France, site vitrine entreprise 990€",
   alternates: { canonical: `${SITE.url}/agence-web` },

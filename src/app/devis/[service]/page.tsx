@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const devisService = getDevisServiceBySlug(service);
 
   if (!devisService) {
-    return { title: "Devis Gratuit | ConvertiLab" };
+    return { title: "Devis Gratuit" };
   }
 
   return {

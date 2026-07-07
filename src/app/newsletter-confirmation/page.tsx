@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Inscription confirmee | ConvertiLab",
+  title: "Inscription confirmee",
   description:
     "Votre inscription a la newsletter ConvertiLab a ete confirmee avec succes.",
   robots: { index: false },

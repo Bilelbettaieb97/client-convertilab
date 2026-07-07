@@ -10,7 +10,7 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const cs = getFullCaseStudyBySlug(slug);
-  if (!cs) return { title: "Etude de cas introuvable | ConvertiLab" };
+  if (!cs) return { title: "Étude de cas introuvable" };
 
   return {
     title: `${cs.client} - ${cs.title}`,

@@ -3,7 +3,7 @@ import { SITE } from "@/lib/constants";
 import OffreSpecialeClient from "./OffreSpecialeClient";
 
 export const metadata: Metadata = {
-  title: "Site Web Pro à 300€ — Offre Limitée | ConvertiLab",
+  title: "Site Web Pro à 300€ — Offre Limitée",
   description:
     "Offre limitée : site vitrine 5 pages ou landing page haute conversion pour 300€. Design sur-mesure, SEO optimisé, livré en 7 jours. Vous êtes propriétaire. Places limitées !",
   keywords:

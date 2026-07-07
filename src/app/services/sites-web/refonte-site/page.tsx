@@ -6,7 +6,7 @@ import RefonteSiteContent from "./RefonteSiteContent";
 import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
-  title: "Refonte Site Web Paris | SEO Préservé, Design Moderne | ConvertiLab",
+  title: "Refonte Site Web Paris | SEO Préservé, Design Moderne",
   description: "Modernisez votre site web : design actuel, SEO préservé, conversion optimisée. Audit gratuit et devis sous 24h.",
   alternates: { canonical: `${SITE.url}/services/sites-web/refonte-site` },
   openGraph: {

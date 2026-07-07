@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Page introuvable | ConvertiLab",
+  title: "Page introuvable",
   description:
     "Cette page n'existe pas. Retournez à l'accueil pour découvrir nos services de création web et marketing digital.",
   robots: { index: false, follow: false },

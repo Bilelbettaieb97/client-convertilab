@@ -67,7 +67,7 @@ const Hero = () => {
             </div>
 
             {/* Titre — 2 lignes fixes */}
-            <h1 className="mb-4 sm:mb-6 animate-slide-up font-black text-gray-900 leading-snug tracking-tight">
+            <h1 className="mb-4 sm:mb-6 animate-slide-up-lcp font-black text-gray-900 leading-snug tracking-tight">
 
               {/* Ligne 1 */}
               <span className="block text-2xl sm:text-3xl lg:text-4xl">

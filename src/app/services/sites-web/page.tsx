@@ -36,25 +36,10 @@ const breadcrumbSchema = {
   ],
 };
 
-const howToSchema = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Comment créer un site internet professionnel avec ConvertiLab",
-  "description": "Un processus simple et transparent en 4 étapes pour obtenir votre site web sur-mesure.",
-  "totalTime": "P14D",
-  "step": [
-    { "@type": "HowToStep", "name": "Consultation gratuite", "text": "Echange sur vos objectifs et besoins. Devis detaille sous 24h." },
-    { "@type": "HowToStep", "name": "Maquette & validation", "text": "Validation du design avant tout developpement. Modifications illimitees incluses." },
-    { "@type": "HowToStep", "name": "Developpement", "text": "Votre site prend vie. Vous suivez l'avancement en temps reel." },
-    { "@type": "HowToStep", "name": "Livraison & formation", "text": "Mise en ligne, formation a l'utilisation, et support technique inclus." },
-  ]
-};
-
 export default function SitesWebPage() {
   return (
     <div className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <Navigation />
       <main className="pt-16">
         <div className="container mx-auto px-4 sm:px-6 py-4">

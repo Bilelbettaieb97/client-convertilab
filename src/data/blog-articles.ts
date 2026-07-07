@@ -11,6 +11,7 @@ export interface BlogArticle {
   category: string;
   readTime: string;
   publishedAt: string;
+  updatedAt?: string;
   author: BlogArticleAuthor;
 }
 

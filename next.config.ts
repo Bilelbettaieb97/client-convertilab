@@ -30,6 +30,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Le hub /etude-de-cas renvoyait un 404 alors que le sitemap le référence :
+      // on le redirige vers /portfolio (le vrai hub des réalisations) pour aligner
+      // sitemap et architecture, et éviter les "Découverte, non indexée" en amont.
+      {
+        source: "/etude-de-cas",
+        destination: "/portfolio",
+        permanent: true,
+      },
       // convertilab.fr sert le même site que .com sans redirection :
       // Google crawle et indexe les deux domaines en doublon.
       // 301 vers .com pour consolider tous les signaux SEO sur un seul domaine.
@@ -45,6 +53,13 @@ const nextConfig: NextConfig = {
         destination: "https://www.convertilab.com/:path*",
         permanent: true,
       },
+    ];
+  },
+  async rewrites() {
+    return [
+      // La présentation commerciale (deck slide-par-slide) est un HTML statique
+      // dans /public. On la sert à l'URL propre /presentation.
+      { source: "/presentation", destination: "/presentation.html" },
     ];
   },
   async headers() {
