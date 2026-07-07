@@ -48,19 +48,41 @@ export default async function DevisServicePage({ params }: Props) {
     ],
   };
 
+  // Prix numérique pour l'offre (uniquement les services à prix fixe)
+  const priceMatch = devisService?.priceFrom?.match(/^(\d+)€/);
+
   const serviceSchema = devisService
     ? {
         "@context": "https://schema.org",
         "@type": "Service",
         name: devisService.name,
         description: devisService.description,
-        provider: {
-          "@type": "Organization",
-          name: SITE.name,
-          url: SITE.url,
-        },
+        provider: { "@id": `${SITE.url}/#organization` },
         areaServed: { "@type": "Country", name: "France" },
         url: `${SITE.url}/devis/${service}`,
+        ...(priceMatch
+          ? {
+              offers: {
+                "@type": "Offer",
+                priceCurrency: "EUR",
+                price: priceMatch[1],
+                availability: "https://schema.org/InStock",
+                url: `${SITE.url}/devis/${service}`,
+              },
+            }
+          : {}),
+      }
+    : null;
+
+  const faqSchema = devisService && devisService.faqItems.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: devisService.faqItems.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
       }
     : null;
 
@@ -74,6 +96,12 @@ export default async function DevisServicePage({ params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+      )}
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
       <DevisServiceClient />

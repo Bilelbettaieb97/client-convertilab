@@ -441,6 +441,121 @@ export default function DevisServicePage() {
           </div>
         </section>
 
+        {/* Intro + Décomposition du prix (contenu SEO / information gain) */}
+        {(devisService.intro || devisService.priceBreakdown) && (
+          <section className="py-16 md:py-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+            <div className="container mx-auto px-4 sm:px-6">
+              <div className="max-w-4xl mx-auto">
+                {devisService.intro && (
+                  <>
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
+                      {devisService.name} : combien ça coûte, et pourquoi ?
+                    </h2>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
+                      {devisService.intro}
+                    </p>
+                  </>
+                )}
+
+                {devisService.priceBreakdown && (
+                  <div className="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden mb-6">
+                    <div className="flex items-center justify-between gap-3 px-6 py-4 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+                      <span className="font-bold text-slate-900 dark:text-white">Décomposition du prix</span>
+                      {devisService.priceFrom && (
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-bold">
+                          {devisService.priceFrom}
+                        </span>
+                      )}
+                    </div>
+                    <div className="divide-y divide-slate-100 dark:divide-slate-800">
+                      {devisService.priceBreakdown.map((line, i) => (
+                        <div key={i} className="px-6 py-4 flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                          <div className="sm:w-56 shrink-0 flex items-center justify-between sm:justify-start gap-3">
+                            <span className="font-semibold text-slate-900 dark:text-white">{line.poste}</span>
+                            <span className="font-bold text-purple-600 dark:text-purple-400 whitespace-nowrap">{line.prix}</span>
+                          </div>
+                          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{line.detail}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {devisService.breakdownNote && (
+                  <p className="text-sm text-slate-500 dark:text-slate-400 italic mb-4">
+                    {devisService.breakdownNote}
+                  </p>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Ce qui est inclus + Facteurs de prix */}
+        {(devisService.included || devisService.priceFactors) && (
+          <section className="py-16 md:py-20 bg-slate-50 dark:bg-slate-950">
+            <div className="container mx-auto px-4 sm:px-6">
+              <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                {devisService.included && (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-5 flex items-center gap-2">
+                      <Gift className="w-6 h-6 text-purple-500" />
+                      Ce qui est inclus
+                    </h2>
+                    <ul className="space-y-3">
+                      {devisService.included.map((item, i) => (
+                        <li key={i} className="flex gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                          <span className="text-slate-600 dark:text-slate-400">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {devisService.priceFactors && (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-5 flex items-center gap-2">
+                      <Shield className="w-6 h-6 text-purple-500" />
+                      Ce qui fait varier le prix
+                    </h2>
+                    <ul className="space-y-3">
+                      {devisService.priceFactors.map((item, i) => (
+                        <li key={i} className="flex gap-3">
+                          <ChevronRight className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
+                          <span className="text-slate-600 dark:text-slate-400">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Étapes du projet */}
+        {devisService.steps && (
+          <section className="py-16 md:py-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+            <div className="container mx-auto px-4 sm:px-6">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-10 text-center">
+                  Comment se déroule votre projet {devisService.name.toLowerCase()} ?
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {devisService.steps.map((step, i) => (
+                    <div key={i} className="relative p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                      <div className="w-9 h-9 rounded-full bg-purple-600 text-white font-bold flex items-center justify-center mb-4">
+                        {i + 1}
+                      </div>
+                      <h3 className="font-bold text-slate-900 dark:text-white mb-2">{step.title}</h3>
+                      <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{step.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* FAQ */}
         <section className="py-16 md:py-20 bg-slate-50 dark:bg-slate-950">
           <div className="container mx-auto px-4 sm:px-6">
