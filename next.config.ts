@@ -79,6 +79,27 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
           },
+          {
+            // CSP en mode Report-Only : n'applique AUCUN blocage, log seulement
+            // les violations dans la console navigateur. Une fois la policy
+            // validée en prod (aucune violation légitime), la passer en
+            // Content-Security-Policy pour l'appliquer réellement.
+            key: "Content-Security-Policy-Report-Only",
+            value: [
+              "default-src 'self'",
+              // GTM/GA4, Meta Pixel, AdSense, Vercel Analytics/Speed Insights
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://pagead2.googlesyndication.com https://va.vercel-scripts.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: blob: https:",
+              "font-src 'self' data:",
+              // Supabase (formulaires), GA4/Meta (tracking), Vercel (vitals)
+              "connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.facebook.com https://vitals.vercel-insights.com",
+              // Google Maps embed (pages villes), GTM preview, Calendly
+              "frame-src 'self' https://www.google.com https://www.googletagmanager.com https://calendly.com https://td.doubleclick.net",
+              "object-src 'none'",
+              "base-uri 'self'",
+            ].join("; "),
+          },
         ],
       },
       // Long-term caching for static assets

@@ -57,10 +57,16 @@ const staticRoutes = [
   "/faq",
   "/site-internet-pas-cher",
   "/creation-site-internet",
+  "/devis",
 ];
 
-// Updated automatically — change this date when you publish new content
-const SITE_LAST_UPDATED = new Date("2026-07-05");
+// Dates réelles de dernière modification du contenu (pas la date de build).
+// À mettre à jour quand le contenu correspondant change réellement :
+// SITE_LAST_UPDATED = pages statiques (titles/H2/hero revus le 07/07),
+// CITY_PAGES_UPDATED = pages villes (carte + tel ajoutés le 07/07),
+// TEMPLATES_CREATED = templates non retouchés depuis leur création.
+const SITE_LAST_UPDATED = new Date("2026-07-07");
+const CITY_PAGES_UPDATED = new Date("2026-07-07");
 const TEMPLATES_CREATED = new Date("2026-07-05");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -119,7 +125,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const cityEntries: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${SITE.url}/agence-web/${city.slug}`,
-    lastModified: TEMPLATES_CREATED,
+    lastModified: CITY_PAGES_UPDATED,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));

@@ -173,10 +173,11 @@ const ProcessTimeline = () => {
             Notre Processus
           </div>
           <h2 className="text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight">
-            Votre site web, de l&apos;audit au{" "}
+            Comment créons-nous votre site web, de l&apos;audit au{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 animate-pulse">
               succès
             </span>
+            {" "}?
           </h2>
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Un processus éprouvé en 5 étapes, de la maquette gratuite à la mise

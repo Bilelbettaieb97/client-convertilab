@@ -188,8 +188,9 @@ function PortfolioHeader() {
       </Badge>
 
       <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
-        Des Résultats{" "}
-        <span className="text-primary">Concrets et Mesurables</span>
+        Quels résultats{" "}
+        <span className="text-primary">concrets et mesurables</span>
+        {" "}pour nos clients ?
       </h2>
 
       <p className="text-sm sm:text-lg text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed">

@@ -359,6 +359,17 @@ export default async function CityPage({ params }: Props) {
             >
               <Link href="/portfolio">Voir nos réalisations</Link>
             </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="px-8 py-6 text-lg border-purple-300 text-purple-700 hover:bg-purple-50"
+            >
+              <a href={`tel:${SITE.phone}`}>
+                <Phone className="mr-2 w-5 h-5" />
+                {SITE.phoneDisplay}
+              </a>
+            </Button>
           </div>
 
           {/* Badges confiance */}
@@ -379,6 +390,38 @@ export default async function CityPage({ params }: Props) {
               <CheckCircle2 className="w-4 h-4 text-green-500" />
               Paiement après validation
             </span>
+          </div>
+
+          {/* Preuve de proximité : NAP + carte (SXO local, 1er écran) */}
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+            <div className="flex flex-col justify-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-purple-100 shadow-sm">
+              <div className="flex items-center gap-2 text-gray-900 font-semibold mb-2">
+                <MapPin className="w-5 h-5 text-purple-600" />
+                Votre agence web près de {city.name}
+              </div>
+              <p className="text-sm text-gray-600 mb-3">
+                ConvertiLab est basée à Rueil-Malmaison (92500) et intervient
+                à {city.name} et dans toute l&apos;Île-de-France. Rencontre possible en
+                visio ou sur place selon votre projet.
+              </p>
+              <div className="flex flex-col gap-1.5 text-sm text-gray-700">
+                <a href={`tel:${SITE.phone}`} className="inline-flex items-center gap-2 hover:text-purple-700 font-medium">
+                  <Phone className="w-4 h-4 text-purple-600" /> {SITE.phoneDisplay}
+                </a>
+                <span className="inline-flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-purple-600" /> {SITE.fullAddress}
+                </span>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-purple-100 shadow-sm min-h-[220px]">
+              <iframe
+                title={`Carte de ${city.name} — zone d'intervention ConvertiLab`}
+                src={`https://www.google.com/maps?q=${city.lat},${city.lng}&z=12&output=embed`}
+                className="w-full h-full min-h-[220px]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </section>

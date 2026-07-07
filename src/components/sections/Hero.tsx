@@ -69,25 +69,34 @@ const Hero = () => {
             {/* Titre — 2 lignes fixes */}
             <h1 className="mb-4 sm:mb-6 animate-slide-up-lcp font-black text-gray-900 leading-snug tracking-tight">
 
-              {/* Ligne 1 */}
-              <span className="block text-2xl sm:text-3xl lg:text-4xl">
-                Votre agence web crée
+              {/* Texte propre pour Google et les lecteurs d'écran : le rendu
+                  serveur de l'animation donnait "créevotre | en 7 jours"
+                  (mots collés + curseur + mot rotatif vide). */}
+              <span className="sr-only">
+                Votre agence web crée votre site internet en 7 jours
               </span>
 
-              {/* Ligne 2 — "votre [Mot] en 7 jours" */}
-              <span className="block text-2xl sm:text-3xl lg:text-4xl">
-                votre{" "}
-                <span className="relative inline-block">
-                  <span
-                    aria-hidden="true"
-                    className="absolute inset-x-0 bottom-0 h-[35%] bg-gradient-to-r from-purple-400/25 to-pink-400/25 rounded"
-                  />
-                  <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                    {displayedText}
-                    <span className="animate-pulse font-thin text-purple-600">|</span>
-                  </span>
+              <span aria-hidden="true">
+                {/* Ligne 1 */}
+                <span className="block text-2xl sm:text-3xl lg:text-4xl">
+                  Votre agence web crée
                 </span>
-                {" "}en 7 jours
+
+                {/* Ligne 2 — "votre [Mot] en 7 jours" */}
+                <span className="block text-2xl sm:text-3xl lg:text-4xl">
+                  votre{" "}
+                  <span className="relative inline-block">
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-x-0 bottom-0 h-[35%] bg-gradient-to-r from-purple-400/25 to-pink-400/25 rounded"
+                    />
+                    <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                      {displayedText}
+                      <span className="animate-pulse font-thin text-purple-600">|</span>
+                    </span>
+                  </span>
+                  {" "}en 7 jours
+                </span>
               </span>
 
             </h1>
