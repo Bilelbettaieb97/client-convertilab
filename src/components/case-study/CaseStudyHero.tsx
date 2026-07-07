@@ -33,7 +33,7 @@ export default function CaseStudyHero({ title, subtitle, image, sector, client }
           </div>
           <div ref={rightRef} className={`relative transition-all duration-700 delay-200 ${rightVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-3xl" />
-            <Image src={image} alt={`Etude de cas ${client} - ${title} | ConvertiLab`} className="relative rounded-2xl shadow-2xl w-full h-auto border-4 border-background" width={600} height={400} priority sizes="(max-width: 1024px) 100vw, 600px" />
+            <Image src={image} alt={`Etude de cas ${client} - ${title}`} className="relative rounded-2xl shadow-2xl w-full h-auto border-4 border-background" width={600} height={400} priority sizes="(max-width: 1024px) 100vw, 600px" />
           </div>
         </div>
       </div>

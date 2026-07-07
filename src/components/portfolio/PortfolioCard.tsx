@@ -40,7 +40,7 @@ const PortfolioCard = ({ caseStudy }: PortfolioCardProps) => {
         <AspectRatio ratio={16 / 9}>
           <Image
             src={caseStudy.image}
-            alt={`${caseStudy.title} - ${caseStudy.client} | Portfolio ConvertiLab`}
+            alt={`${caseStudy.title} - ${caseStudy.client}`}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"

@@ -53,13 +53,10 @@ export const metadata: Metadata = {
     description: "Agence web à Paris & Rueil-Malmaison : création site internet, SEO, Google Ads, Meta Ads. +150 clients, 4.9★ Trustpilot. Devis gratuit.",
     images: [DEFAULT_OG_IMAGE],
   },
-  alternates: {
-    canonical: SITE.url,
-    languages: {
-      "fr": SITE.url,
-      "x-default": SITE.url,
-    },
-  },
+  // Pas d'alternates au niveau layout : chaque page indexable définit son
+  // propre canonical, et Next.js remplace l'objet entier (pas de merge).
+  // Un canonical par défaut ici pointerait toute page héritée vers la
+  // homepage — piège de désindexation silencieuse. <html lang="fr"> suffit.
   other: {
     "geo.region": "FR-IDF",
     "geo.placename": "Rueil-Malmaison",

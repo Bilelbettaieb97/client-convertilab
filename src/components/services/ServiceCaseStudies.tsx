@@ -70,7 +70,7 @@ const ServiceCaseStudies = ({ category, title, subtitle, max }: ServiceCaseStudi
               <div className="relative aspect-[16/10]">
                 <Image
                   src={study.image}
-                  alt={`${study.title} - ${study.client} | Realisation ConvertiLab`}
+                  alt={`${study.title} - ${study.client}`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"

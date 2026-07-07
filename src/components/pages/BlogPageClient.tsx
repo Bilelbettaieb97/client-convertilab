@@ -139,6 +139,7 @@ export default function BlogPageClient() {
                       src={featuredArticles[0].image}
                       alt={featuredArticles[0].title}
                       fill
+                      priority
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 1024px) 100vw, 60vw"
                     />

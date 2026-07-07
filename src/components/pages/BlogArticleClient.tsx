@@ -157,7 +157,7 @@ export default function BlogArticleClient({ article, relatedArticles }: Props) {
         <div className="relative h-[50vh] min-h-[400px] overflow-hidden">
           <Image
             src={article.image}
-            alt={`${article.title} - Blog ConvertiLab`}
+            alt={`${article.title}`}
             fill
             className="object-cover"
             priority

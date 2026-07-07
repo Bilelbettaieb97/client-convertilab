@@ -20,7 +20,7 @@ const BlogCard = ({ article, featured = false }: BlogCardProps) => {
         <div className={`relative overflow-hidden ${featured ? "md:w-1/2" : "aspect-[16/10]"}`}>
           <Image
             src={article.image}
-            alt={`${article.title} - ${article.category} | Blog ConvertiLab`}
+            alt={`${article.title} - ${article.category}`}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-700"
             loading="lazy"

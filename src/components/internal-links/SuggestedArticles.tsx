@@ -32,7 +32,7 @@ const SuggestedArticles = ({ exclude = [], max = 3, title = "Articles suggérés
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src={article.image}
-                  alt={`${article.title} - Blog ConvertiLab`}
+                  alt={`${article.title}`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
