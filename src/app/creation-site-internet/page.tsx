@@ -8,13 +8,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Star, Users, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Création de Site Internet par Ville — Site Web Pro dès 990€",
-  description: "Création de site internet professionnel dans les grandes villes de France : Paris, Lyon, Marseille, Bordeaux, Toulouse… Site web livré en 7 jours dès 990€. +150 clients, 15 avis 4.9★.",
-  keywords: "création site internet par ville, création site web Paris Lyon Marseille Bordeaux, site internet professionnel 990€, création site vitrine France",
+  title: "Création de Site Internet par Ville — Site Web Pro dès 500€",
+  description: "Création de site internet professionnel dans les grandes villes de France : Paris, Lyon, Marseille, Bordeaux, Toulouse… Site web livré en 7 jours dès 500€. +150 clients, 15 avis 4.9★.",
+  keywords: "création site internet par ville, création site web Paris Lyon Marseille Bordeaux, site internet professionnel 500€, création site vitrine France",
   alternates: { canonical: `${SITE.url}/creation-site-internet` },
   openGraph: {
     title: "Création de Site Internet par Ville | ConvertiLab",
-    description: "Création de site internet professionnel à Paris, Lyon, Marseille, Bordeaux, Toulouse et plus. Site web livré en 7 jours dès 990€. +150 clients, 15 avis 4.9★.",
+    description: "Création de site internet professionnel à Paris, Lyon, Marseille, Bordeaux, Toulouse et plus. Site web livré en 7 jours dès 500€. +150 clients, 15 avis 4.9★.",
     url: `${SITE.url}/creation-site-internet`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -49,7 +49,7 @@ export default function CreationSiteInternetPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Combien coûte la création d'un site internet ?", acceptedAnswer: { "@type": "Answer", text: "Chez ConvertiLab, la création d'un site vitrine professionnel démarre à 990€. Ce prix inclut le design sur-mesure, 5 pages, le référencement de base, l'hébergement première année et le support 30 jours. Les e-commerces et sites sur-mesure font l'objet d'un devis." } },
+      { "@type": "Question", name: "Combien coûte la création d'un site internet ?", acceptedAnswer: { "@type": "Answer", text: "Chez ConvertiLab, la création d'un site vitrine professionnel démarre à 500€. Ce prix inclut le design sur-mesure, 5 pages, le référencement de base, l'hébergement première année et le support 30 jours. Les e-commerces et sites sur-mesure font l'objet d'un devis." } },
       { "@type": "Question", name: "Combien de temps pour créer un site internet professionnel ?", acceptedAnswer: { "@type": "Answer", text: "ConvertiLab livre votre site en 7 jours ouvrés après validation de la maquette. La maquette est présentée sous 48h après l'appel découverte, soit environ 2 semaines de la prise de contact à la mise en ligne." } },
       { "@type": "Question", name: "Faut-il être dans la même ville que l'agence ?", acceptedAnswer: { "@type": "Answer", text: "Non. ConvertiLab crée des sites internet pour des entreprises partout en France, à distance (visio, Figma, Notion), avec les mêmes résultats. Nous intervenons aussi en présentiel en Île-de-France." } },
     ],
@@ -75,7 +75,7 @@ export default function CreationSiteInternetPage() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">dans votre ville</span>
           </h1>
           <p className="text-base sm:text-lg text-gray-700 mb-6 max-w-3xl mx-auto leading-relaxed bg-purple-50 border-l-4 border-purple-400 px-5 py-4 rounded-r-xl text-left">
-            ConvertiLab crée des sites internet professionnels pour les entrepreneurs et PME dans les grandes villes de France. Site vitrine livré en 7 jours dès 990€, avec référencement local et support 30 jours inclus. Basés à Rueil-Malmaison, nous intervenons en présentiel en Île-de-France et à distance partout en France.
+            ConvertiLab crée des sites internet professionnels pour les entrepreneurs et PME dans les grandes villes de France. Site vitrine livré en 7 jours dès 500€, avec référencement local et support 30 jours inclus. Basés à Rueil-Malmaison, nous intervenons en présentiel en Île-de-France et à distance partout en France.
           </p>
           <p className="text-base text-gray-500 mb-8 max-w-2xl mx-auto">
             +150 clients accompagnés · 15 avis 4.9★ · Satisfait ou remboursé

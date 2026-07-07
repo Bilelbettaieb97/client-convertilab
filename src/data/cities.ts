@@ -61,7 +61,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Paris création site internet PME startup 2026",
-      "site vitrine professionnel Paris dès 990€ livré en 7 jours",
+      "site vitrine professionnel Paris dès 500€ livré en 7 jours",
       "référencement local SEO Paris arrondissements Google Maps",
       "création site internet Paris artisan commerçant professions libérales",
       "meilleure agence web Paris devis gratuit sans engagement",
@@ -70,12 +70,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Paris ?",
         answer:
-          "Chez ConvertiLab, un site vitrine professionnel à Paris démarre dès 990€ et un site e-commerce dès 1 580€. Chaque projet est sur-mesure : nous adaptons le devis à vos besoins exacts après un audit gratuit de 30 minutes.",
+          "Chez ConvertiLab, un site vitrine professionnel à Paris démarre dès 500€ et un site e-commerce dès 800€. Chaque projet est sur-mesure : nous adaptons le devis à vos besoins exacts après un audit gratuit de 30 minutes.",
       },
       {
         question: "Comment une startup, un restaurant ou un cabinet libéral à Paris peut-il trouver des clients grâce à un site internet ?",
         answer:
-          "À Paris, 73% des consommateurs comparent les prestataires en ligne avant tout contact. Un site optimisé pour le SEO local (arrondissements, quartiers) génère des leads qualifiés 24h/24. ConvertiLab livre votre site en 7 jours dès 990€, avec un ciblage SEO spécifique à votre quartier et secteur d'activité.",
+          "À Paris, 73% des consommateurs comparent les prestataires en ligne avant tout contact. Un site optimisé pour le SEO local (arrondissements, quartiers) génère des leads qualifiés 24h/24. ConvertiLab livre votre site en 7 jours dès 500€, avec un ciblage SEO spécifique à votre quartier et secteur d'activité.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Paris ?",
@@ -136,7 +136,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Rueil-Malmaison création site internet Hauts-de-Seine",
-      "site vitrine PME Rueil-Malmaison dès 990€ livraison 7 jours",
+      "site vitrine PME Rueil-Malmaison dès 500€ livraison 7 jours",
       "référencement local SEO Rueil-Malmaison Google Maps 92",
       "création site internet Rueil-Malmaison artisan commerçant 92",
       "agence digitale Rueil-Malmaison La Défense Nanterre devis gratuit",
@@ -145,12 +145,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Rueil-Malmaison ?",
         answer:
-          "Un site vitrine professionnel à Rueil-Malmaison commence dès 990€ et un site e-commerce dès 1 580€. En tant qu'agence basée à Rueil-Malmaison, nous offrons un accompagnement de proximité avec un rapport qualité-prix imbattable.",
+          "Un site vitrine professionnel à Rueil-Malmaison commence dès 500€ et un site e-commerce dès 800€. En tant qu'agence basée à Rueil-Malmaison, nous offrons un accompagnement de proximité avec un rapport qualité-prix imbattable.",
       },
       {
         question: "Comment une PME ou une profession libérale à Rueil-Malmaison peut-elle attirer des clients en ligne ?",
         answer:
-          "À Rueil-Malmaison, les habitants comparent systématiquement les prestataires sur Google avant de les contacter. Un site vitrine optimisé pour le SEO local (Rueil + Hauts-de-Seine) positionne votre entreprise sur les recherches du bassin de vie. ConvertiLab, basé à Rueil-Malmaison, livre en 7 jours dès 990€.",
+          "À Rueil-Malmaison, les habitants comparent systématiquement les prestataires sur Google avant de les contacter. Un site vitrine optimisé pour le SEO local (Rueil + Hauts-de-Seine) positionne votre entreprise sur les recherches du bassin de vie. ConvertiLab, basé à Rueil-Malmaison, livre en 7 jours dès 500€.",
       },
       {
         question:
@@ -213,7 +213,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Boulogne-Billancourt création site internet 92",
-      "site vitrine médias tech startup Boulogne-Billancourt dès 990€",
+      "site vitrine médias tech startup Boulogne-Billancourt dès 500€",
       "référencement local SEO Boulogne-Billancourt Google Maps Hauts-de-Seine",
       "création site internet studio agence communication Boulogne-Billancourt",
       "agence digitale Boulogne-Billancourt devis gratuit livraison 7 jours",
@@ -222,12 +222,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Boulogne-Billancourt ?",
         answer:
-          "Un site vitrine à Boulogne-Billancourt démarre dès 990€ et un site e-commerce dès 1 580€. Nos tarifs sont transparents et fixes : pas de surprise en cours de projet. Le devis est gratuit et détaillé.",
+          "Un site vitrine à Boulogne-Billancourt démarre dès 500€ et un site e-commerce dès 800€. Nos tarifs sont transparents et fixes : pas de surprise en cours de projet. Le devis est gratuit et détaillé.",
       },
       {
         question: "Comment un studio, une agence créative ou une startup à Boulogne-Billancourt peut-elle gagner en visibilité en ligne ?",
         answer:
-          "Boulogne-Billancourt concentre agences médias, studios audiovisuels et startups tech. Dans ce tissu compétitif, un site rapide, bien référencé et professionnel est la vitrine indispensable. ConvertiLab livre des sites Next.js haute performance en 7 jours dès 990€, optimisés pour les recherches B2B et locales.",
+          "Boulogne-Billancourt concentre agences médias, studios audiovisuels et startups tech. Dans ce tissu compétitif, un site rapide, bien référencé et professionnel est la vitrine indispensable. ConvertiLab livre des sites Next.js haute performance en 7 jours dès 500€, optimisés pour les recherches B2B et locales.",
       },
       {
         question:
@@ -290,7 +290,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Nanterre création site internet cabinet avocat PME 92",
-      "site vitrine professionnel Nanterre La Défense dès 990€",
+      "site vitrine professionnel Nanterre La Défense dès 500€",
       "référencement local SEO Nanterre Hauts-de-Seine Google Maps",
       "création site internet Nanterre services aux entreprises juridique",
       "agence digitale Nanterre La Défense devis gratuit 24h",
@@ -299,12 +299,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Nanterre ?",
         answer:
-          "Un site vitrine professionnel à Nanterre démarre dès 990€, un site e-commerce dès 1 580€. Nous proposons aussi des facilités de paiement (mensualités à partir de 39€/mois) pour les entrepreneurs nanterriens.",
+          "Un site vitrine professionnel à Nanterre démarre dès 500€, un site e-commerce dès 800€. Nous proposons aussi des facilités de paiement (mensualités à partir de 39€/mois) pour les entrepreneurs nanterriens.",
       },
       {
         question: "Comment un cabinet d'avocats ou une entreprise de services à Nanterre peut-il trouver des clients grâce à son site web ?",
         answer:
-          "À Nanterre, la proximité de La Défense attire cabinets d'avocats, sociétés de conseil et services financiers. Un site optimisé pour les requêtes locales (Nanterre + La Défense) génère des contacts qualifiés. ConvertiLab crée des sites professionnels en 7 jours dès 990€, adaptés au marché B2B des Hauts-de-Seine.",
+          "À Nanterre, la proximité de La Défense attire cabinets d'avocats, sociétés de conseil et services financiers. Un site optimisé pour les requêtes locales (Nanterre + La Défense) génère des contacts qualifiés. ConvertiLab crée des sites professionnels en 7 jours dès 500€, adaptés au marché B2B des Hauts-de-Seine.",
       },
       {
         question:
@@ -366,7 +366,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Neuilly-sur-Seine création site internet luxe médecin avocat",
-      "site vitrine premium Neuilly-sur-Seine professions libérales dès 990€",
+      "site vitrine premium Neuilly-sur-Seine professions libérales dès 500€",
       "référencement local SEO Neuilly-sur-Seine Google Maps 92",
       "création site internet cabinet médical avocat Neuilly-sur-Seine",
       "agence digitale Neuilly-sur-Seine haut de gamme devis gratuit",
@@ -375,12 +375,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Neuilly-sur-Seine ?",
         answer:
-          "Un site vitrine haut de gamme à Neuilly-sur-Seine démarre dès 990€ et un site e-commerce dès 1 580€. Pour une clientèle premium comme celle de Neuilly, nous soignons particulièrement le design et l'expérience utilisateur.",
+          "Un site vitrine haut de gamme à Neuilly-sur-Seine démarre dès 500€ et un site e-commerce dès 800€. Pour une clientèle premium comme celle de Neuilly, nous soignons particulièrement le design et l'expérience utilisateur.",
       },
       {
         question: "Comment un médecin, un avocat ou un commerce haut de gamme à Neuilly-sur-Seine peut-il attirer des clients en ligne ?",
         answer:
-          "À Neuilly-sur-Seine, la clientèle premium compare minutieusement les prestataires en ligne : un site soigné, rapide et référencé est indispensable pour capter des patients, mandants ou clients haut de gamme. ConvertiLab livre des sites premium en 7 jours dès 990€, avec SEO local optimisé pour le marché de Neuilly.",
+          "À Neuilly-sur-Seine, la clientèle premium compare minutieusement les prestataires en ligne : un site soigné, rapide et référencé est indispensable pour capter des patients, mandants ou clients haut de gamme. ConvertiLab livre des sites premium en 7 jours dès 500€, avec SEO local optimisé pour le marché de Neuilly.",
       },
       {
         question:
@@ -443,7 +443,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Lyon création site internet PME restauration biotech 2026",
-      "site vitrine professionnel Lyon dès 990€ livré en 7 jours",
+      "site vitrine professionnel Lyon dès 500€ livré en 7 jours",
       "référencement local SEO Lyon Google Maps Métropole de Lyon",
       "création site internet Lyon restaurant artisan commerçant startup",
       "meilleure agence web Lyon devis gratuit sans engagement 24h",
@@ -452,12 +452,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Lyon ?",
         answer:
-          "Un site vitrine professionnel à Lyon démarre dès 990€ et un site e-commerce dès 1 580€. Lyon étant un marché très concurrentiel, nous misons sur un design premium et un SEO local poussé pour vous démarquer dans le Rhône.",
+          "Un site vitrine professionnel à Lyon démarre dès 500€ et un site e-commerce dès 800€. Lyon étant un marché très concurrentiel, nous misons sur un design premium et un SEO local poussé pour vous démarquer dans le Rhône.",
       },
       {
         question: "Comment un restaurant, une startup biotech ou un commerce à Lyon peut-il attirer des clients grâce à un site internet ?",
         answer:
-          "À Lyon, la gastronomie, la santé et le numérique sont les secteurs les plus concurrentiels sur Google. Un site SEO local optimisé pour la Métropole de Lyon permet d'apparaître quand vos clients vous cherchent. ConvertiLab livre en 7 jours dès 990€ avec ciblage par arrondissement lyonnais.",
+          "À Lyon, la gastronomie, la santé et le numérique sont les secteurs les plus concurrentiels sur Google. Un site SEO local optimisé pour la Métropole de Lyon permet d'apparaître quand vos clients vous cherchent. ConvertiLab livre en 7 jours dès 500€ avec ciblage par arrondissement lyonnais.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Lyon ?",
@@ -518,7 +518,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Marseille création site internet tourisme restauration PME",
-      "site vitrine professionnel Marseille Bouches-du-Rhône dès 990€",
+      "site vitrine professionnel Marseille Bouches-du-Rhône dès 500€",
       "référencement local SEO Marseille Google Maps arrondissements",
       "création site internet Marseille artisan hôtel restaurant commerce",
       "agence digitale Marseille devis gratuit livraison 7 jours",
@@ -527,12 +527,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Marseille ?",
         answer:
-          "Un site vitrine professionnel à Marseille commence dès 990€ et un site e-commerce dès 1 580€. Nous adaptons chaque projet au marché marseillais avec un design méditerranéen et un SEO ciblé sur les Bouches-du-Rhône.",
+          "Un site vitrine professionnel à Marseille commence dès 500€ et un site e-commerce dès 800€. Nous adaptons chaque projet au marché marseillais avec un design méditerranéen et un SEO ciblé sur les Bouches-du-Rhône.",
       },
       {
         question: "Comment un restaurant, hôtel ou artisan à Marseille peut-il trouver de nouveaux clients grâce à son site internet ?",
         answer:
-          "À Marseille, 40M de touristes et une population locale de 900 000 habitants cherchent des prestataires locaux sur Google chaque mois. Un site SEO optimisé pour le marché marseillais (quartiers, arrondissements) génère des réservations et contacts directs. ConvertiLab livre en 7 jours dès 990€.",
+          "À Marseille, 40M de touristes et une population locale de 900 000 habitants cherchent des prestataires locaux sur Google chaque mois. Un site SEO optimisé pour le marché marseillais (quartiers, arrondissements) génère des réservations et contacts directs. ConvertiLab livre en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Marseille ?",
@@ -593,7 +593,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Bordeaux création site internet vin tourisme startup",
-      "site vitrine professionnel Bordeaux Gironde dès 990€ livraison 7 jours",
+      "site vitrine professionnel Bordeaux Gironde dès 500€ livraison 7 jours",
       "référencement local SEO Bordeaux Google Maps Métropole",
       "création site internet Bordeaux restaurant cave à vin artisan PME",
       "agence web Bordeaux devis gratuit sans engagement 24h",
@@ -602,12 +602,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Bordeaux ?",
         answer:
-          "Un site vitrine à Bordeaux démarre dès 990€ et un site e-commerce dès 1 580€. Bordeaux étant une ville en plein essor numérique, nous créons des sites modernes adaptés au marché girondin.",
+          "Un site vitrine à Bordeaux démarre dès 500€ et un site e-commerce dès 800€. Bordeaux étant une ville en plein essor numérique, nous créons des sites modernes adaptés au marché girondin.",
       },
       {
         question: "Comment un restaurant, une cave à vin ou une startup à Bordeaux peut-il développer sa clientèle grâce à son site web ?",
         answer:
-          "À Bordeaux, le vin, la gastronomie et le tourisme génèrent des millions de recherches Google chaque année. Un site optimisé pour ces mots-clés locaux bordelais attire des clients nationaux et internationaux. ConvertiLab crée des sites performants en 7 jours dès 990€ avec SEO spécifique à la Métropole de Bordeaux.",
+          "À Bordeaux, le vin, la gastronomie et le tourisme génèrent des millions de recherches Google chaque année. Un site optimisé pour ces mots-clés locaux bordelais attire des clients nationaux et internationaux. ConvertiLab crée des sites performants en 7 jours dès 500€ avec SEO spécifique à la Métropole de Bordeaux.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Bordeaux ?",
@@ -668,7 +668,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Toulouse création site internet aéronautique tech PME",
-      "site vitrine professionnel Toulouse Haute-Garonne dès 990€",
+      "site vitrine professionnel Toulouse Haute-Garonne dès 500€",
       "référencement local SEO Toulouse Google Maps Métropole",
       "création site internet Toulouse ingénieur startup artisan commerçant",
       "agence digitale Toulouse devis gratuit livraison 7 jours",
@@ -677,12 +677,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Toulouse ?",
         answer:
-          "Un site vitrine professionnel à Toulouse démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des solutions adaptées aux entreprises toulousaines, de la startup tech au commerce de quartier.",
+          "Un site vitrine professionnel à Toulouse démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des solutions adaptées aux entreprises toulousaines, de la startup tech au commerce de quartier.",
       },
       {
         question: "Comment une startup aéronautique, une PME tech ou un artisan à Toulouse peut-il attirer des clients via son site internet ?",
         answer:
-          "À Toulouse, l'aéronautique, les technologies et l'enseignement supérieur font de la ville l'une des plus dynamiques de France. Les entreprises toulousaines B2B et B2C cherchent des partenaires qualifiés en ligne. ConvertiLab livre votre site en 7 jours dès 990€ avec SEO optimisé pour la Métropole de Toulouse.",
+          "À Toulouse, l'aéronautique, les technologies et l'enseignement supérieur font de la ville l'une des plus dynamiques de France. Les entreprises toulousaines B2B et B2C cherchent des partenaires qualifiés en ligne. ConvertiLab livre votre site en 7 jours dès 500€ avec SEO optimisé pour la Métropole de Toulouse.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Toulouse ?",
@@ -743,7 +743,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Nice création site internet tourisme luxe tech Sophia Antipolis",
-      "site vitrine professionnel Nice Alpes-Maritimes dès 990€",
+      "site vitrine professionnel Nice Alpes-Maritimes dès 500€",
       "référencement local SEO Nice Côte d'Azur Google Maps",
       "création site internet Nice hôtel restaurant yacht immobilier prestige",
       "agence web Nice Sophia Antipolis devis gratuit 24h",
@@ -752,12 +752,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Nice ?",
         answer:
-          "Un site vitrine professionnel à Nice démarre dès 990€ et un site e-commerce dès 1 580€. Pour les entreprises touristiques de la Côte d'Azur, nous proposons des sites multilingues optimisés.",
+          "Un site vitrine professionnel à Nice démarre dès 500€ et un site e-commerce dès 800€. Pour les entreprises touristiques de la Côte d'Azur, nous proposons des sites multilingues optimisés.",
       },
       {
         question: "Comment un hôtel, un commerce de luxe ou une tech company de Sophia Antipolis à Nice peut-il se démarquer en ligne ?",
         answer:
-          "La Côte d'Azur mélange tourisme international, économie du luxe et tech (Sophia Antipolis). Un site optimisé multilingue et SEO local positionne votre entreprise sur les recherches de cette clientèle diverse. ConvertiLab livre des sites premium en 7 jours dès 990€ avec SEO Nice et Alpes-Maritimes.",
+          "La Côte d'Azur mélange tourisme international, économie du luxe et tech (Sophia Antipolis). Un site optimisé multilingue et SEO local positionne votre entreprise sur les recherches de cette clientèle diverse. ConvertiLab livre des sites premium en 7 jours dès 500€ avec SEO Nice et Alpes-Maritimes.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Nice ?",
@@ -818,7 +818,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Nantes création site internet agroalimentaire numérique PME",
-      "site vitrine professionnel Nantes Loire-Atlantique dès 990€",
+      "site vitrine professionnel Nantes Loire-Atlantique dès 500€",
       "référencement local SEO Nantes Métropole Google Maps",
       "création site internet Nantes artisan commerçant ESN startup",
       "agence digitale Nantes devis gratuit livraison 7 jours",
@@ -827,12 +827,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Nantes ?",
         answer:
-          "Un site vitrine professionnel à Nantes démarre dès 990€ et un site e-commerce dès 1 580€. Nantes étant une ville très numérique, nous misons sur la performance et le design pour vous démarquer en Loire-Atlantique.",
+          "Un site vitrine professionnel à Nantes démarre dès 500€ et un site e-commerce dès 800€. Nantes étant une ville très numérique, nous misons sur la performance et le design pour vous démarquer en Loire-Atlantique.",
       },
       {
         question: "Comment une PME agroalimentaire, un prestataire numérique ou un artisan à Nantes peut-il développer sa clientèle en ligne ?",
         answer:
-          "Nantes est l'une des villes françaises où le numérique progresse le plus vite. Les entreprises nantaises, de l'agroalimentaire au nautisme, cherchent des clients en ligne. ConvertiLab crée des sites SEO-optimisés pour la Métropole nantaise en 7 jours dès 990€, adaptés à chaque secteur.",
+          "Nantes est l'une des villes françaises où le numérique progresse le plus vite. Les entreprises nantaises, de l'agroalimentaire au nautisme, cherchent des clients en ligne. ConvertiLab crée des sites SEO-optimisés pour la Métropole nantaise en 7 jours dès 500€, adaptés à chaque secteur.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Nantes ?",
@@ -893,7 +893,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Strasbourg création site internet tourisme gastronomie PME alsace",
-      "site vitrine professionnel Strasbourg Bas-Rhin dès 990€",
+      "site vitrine professionnel Strasbourg Bas-Rhin dès 500€",
       "référencement local SEO Strasbourg Alsace Google Maps",
       "création site internet Strasbourg restaurant hôtel artisan transfrontalier",
       "agence web Strasbourg devis gratuit 24h livraison 7 jours",
@@ -902,12 +902,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Strasbourg ?",
         answer:
-          "Un site vitrine professionnel à Strasbourg démarre dès 990€ et un site e-commerce dès 1 580€. Pour les entreprises transfrontalières, nous proposons des sites bilingues français-allemand.",
+          "Un site vitrine professionnel à Strasbourg démarre dès 500€ et un site e-commerce dès 800€. Pour les entreprises transfrontalières, nous proposons des sites bilingues français-allemand.",
       },
       {
         question: "Comment un restaurant alsacien, un office de tourisme ou une PME à Strasbourg peut-il capter des clients transfrontaliers grâce à son site ?",
         answer:
-          "Strasbourg attire des millions de touristes européens et accueille les institutions de l'UE. Un site multilingue (FR/DE/EN) optimisé pour le marché transfrontalier démultiplie votre visibilité. ConvertiLab livre votre site en 7 jours dès 990€ avec SEO local Alsace et ciblage géographique étendu.",
+          "Strasbourg attire des millions de touristes européens et accueille les institutions de l'UE. Un site multilingue (FR/DE/EN) optimisé pour le marché transfrontalier démultiplie votre visibilité. ConvertiLab livre votre site en 7 jours dès 500€ avec SEO local Alsace et ciblage géographique étendu.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Strasbourg ?",
@@ -968,7 +968,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Lille création site internet commerce tech logistique PME",
-      "site vitrine professionnel Lille Nord dès 990€ livraison 7 jours",
+      "site vitrine professionnel Lille Nord dès 500€ livraison 7 jours",
       "référencement local SEO Lille Métropole Européenne Google Maps",
       "création site internet Lille artisan commerçant ESN entreprise",
       "agence digitale Lille devis gratuit sans engagement 24h",
@@ -977,12 +977,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Lille ?",
         answer:
-          "Un site vitrine professionnel à Lille démarre dès 990€ et un site e-commerce dès 1 580€. Lille étant un marché dynamique, nous créons des sites performants adaptés au tissu économique du Nord.",
+          "Un site vitrine professionnel à Lille démarre dès 500€ et un site e-commerce dès 800€. Lille étant un marché dynamique, nous créons des sites performants adaptés au tissu économique du Nord.",
       },
       {
         question: "Comment un commerçant, une PME tech ou un artisan à Lille peut-il se démarquer en ligne dans la Métropole Européenne ?",
         answer:
-          "Lille est au carrefour de Paris, Londres et Bruxelles. Sa métropole dynamique concentre ESN, commerces et artisans qui cherchent des clients en ligne. ConvertiLab livre votre site SEO-optimisé pour Lille Métropole en 7 jours dès 990€ avec ciblage local (quartiers, communes proches).",
+          "Lille est au carrefour de Paris, Londres et Bruxelles. Sa métropole dynamique concentre ESN, commerces et artisans qui cherchent des clients en ligne. ConvertiLab livre votre site SEO-optimisé pour Lille Métropole en 7 jours dès 500€ avec ciblage local (quartiers, communes proches).",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Lille ?",
@@ -1043,7 +1043,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Montpellier création site internet santé biotech numérique",
-      "site vitrine professionnel Montpellier Hérault dès 990€",
+      "site vitrine professionnel Montpellier Hérault dès 500€",
       "référencement local SEO Montpellier Métropole Google Maps",
       "création site internet Montpellier médecin cabinet artisan startup",
       "agence web Montpellier devis gratuit livraison 7 jours",
@@ -1052,12 +1052,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Montpellier ?",
         answer:
-          "Un site vitrine professionnel à Montpellier démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des sites adaptés au marché héraultais avec un excellent rapport qualité-prix.",
+          "Un site vitrine professionnel à Montpellier démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des sites adaptés au marché héraultais avec un excellent rapport qualité-prix.",
       },
       {
         question: "Comment un médecin, une startup biotech ou un artisan à Montpellier peut-il développer sa clientèle grâce à un site internet ?",
         answer:
-          "Montpellier est l'une des villes à la croissance démographique la plus rapide de France (+8 000 habitants/an). Cette dynamique crée une demande croissante pour tous les services. Un site SEO-optimisé pour Montpellier Métropole positionne votre entreprise face à ce flux constant de nouveaux clients. Livré en 7 jours dès 990€.",
+          "Montpellier est l'une des villes à la croissance démographique la plus rapide de France (+8 000 habitants/an). Cette dynamique crée une demande croissante pour tous les services. Un site SEO-optimisé pour Montpellier Métropole positionne votre entreprise face à ce flux constant de nouveaux clients. Livré en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Montpellier ?",
@@ -1118,7 +1118,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Rennes création site internet numérique agroalimentaire PME",
-      "site vitrine professionnel Rennes Ille-et-Vilaine dès 990€",
+      "site vitrine professionnel Rennes Ille-et-Vilaine dès 500€",
       "référencement local SEO Rennes Métropole Google Maps",
       "création site internet Rennes artisan commerçant startup télécoms",
       "agence digitale Rennes devis gratuit 24h livraison 7 jours",
@@ -1127,12 +1127,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Rennes ?",
         answer:
-          "Un site vitrine professionnel à Rennes démarre dès 990€ et un site e-commerce dès 1 580€. Rennes étant un pôle numérique, nous créons des sites techniquement excellents pour le marché breton.",
+          "Un site vitrine professionnel à Rennes démarre dès 500€ et un site e-commerce dès 800€. Rennes étant un pôle numérique, nous créons des sites techniquement excellents pour le marché breton.",
       },
       {
         question: "Comment une ESN, un acteur de l'agroalimentaire breton ou un artisan à Rennes peut-il attirer des clients grâce à son site web ?",
         answer:
-          "Rennes est la capitale française du numérique par habitant et un hub agroalimentaire majeur. Les entreprises rennaises ont besoin de sites performants pour capter des clients B2B et B2C. ConvertiLab livre votre site en 7 jours dès 990€ avec SEO optimisé pour Rennes Métropole et l'Ille-et-Vilaine.",
+          "Rennes est la capitale française du numérique par habitant et un hub agroalimentaire majeur. Les entreprises rennaises ont besoin de sites performants pour capter des clients B2B et B2C. ConvertiLab livre votre site en 7 jours dès 500€ avec SEO optimisé pour Rennes Métropole et l'Ille-et-Vilaine.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Rennes ?",
@@ -1193,7 +1193,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Versailles création site internet professions libérales PME",
-      "site vitrine premium Versailles Yvelines dès 990€ livraison 7 jours",
+      "site vitrine premium Versailles Yvelines dès 500€ livraison 7 jours",
       "référencement local SEO Versailles Google Maps 78",
       "création site internet Versailles médecin avocat artisan commerce",
       "agence web Versailles devis gratuit sans engagement 24h",
@@ -1202,12 +1202,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Versailles ?",
         answer:
-          "Un site vitrine professionnel à Versailles démarre dès 990€ et un site e-commerce dès 1 580€. Pour une ville au standing de Versailles, nous soignons particulièrement le design et l'élégance du site.",
+          "Un site vitrine professionnel à Versailles démarre dès 500€ et un site e-commerce dès 800€. Pour une ville au standing de Versailles, nous soignons particulièrement le design et l'élégance du site.",
       },
       {
         question: "Comment un médecin, un avocat ou un commerce de qualité à Versailles peut-il attirer une clientèle haut de gamme grâce à son site web ?",
         answer:
-          "À Versailles, la clientèle est exigeante et évalue la qualité d'un prestataire à la qualité de son site. Un site professionnel, rapide et SEO-optimisé positionne votre cabinet ou commerce sur les recherches locales (Versailles, Yvelines). ConvertiLab livre en 7 jours dès 990€ avec design adapté aux standards premium.",
+          "À Versailles, la clientèle est exigeante et évalue la qualité d'un prestataire à la qualité de son site. Un site professionnel, rapide et SEO-optimisé positionne votre cabinet ou commerce sur les recherches locales (Versailles, Yvelines). ConvertiLab livre en 7 jours dès 500€ avec design adapté aux standards premium.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Versailles ?",
@@ -1268,7 +1268,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Saint-Germain-en-Laye création site internet professions libérales",
-      "site vitrine premium Saint-Germain-en-Laye Yvelines 78 dès 990€",
+      "site vitrine premium Saint-Germain-en-Laye Yvelines 78 dès 500€",
       "référencement local SEO Saint-Germain-en-Laye Google Maps 78",
       "création site internet Saint-Germain-en-Laye architecte médecin avocat",
       "agence digitale Saint-Germain-en-Laye devis gratuit 24h",
@@ -1277,12 +1277,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Saint-Germain-en-Laye ?",
         answer:
-          "Un site vitrine professionnel à Saint-Germain-en-Laye démarre dès 990€ et un site e-commerce dès 1 580€. Nous créons des sites premium adaptés au positionnement haut de gamme de la ville.",
+          "Un site vitrine professionnel à Saint-Germain-en-Laye démarre dès 500€ et un site e-commerce dès 800€. Nous créons des sites premium adaptés au positionnement haut de gamme de la ville.",
       },
       {
         question: "Comment un architecte, un médecin ou un commerce premium à Saint-Germain-en-Laye peut-il développer sa clientèle en ligne ?",
         answer:
-          "Saint-Germain-en-Laye concentre des professions libérales et commerces haut de gamme dont la clientèle est connectée et exigeante. Un site professionnel SEO-optimisé pour les Yvelines (78) positionne votre activité sur Google Maps et les recherches locales. Livré en 7 jours dès 990€.",
+          "Saint-Germain-en-Laye concentre des professions libérales et commerces haut de gamme dont la clientèle est connectée et exigeante. Un site professionnel SEO-optimisé pour les Yvelines (78) positionne votre activité sur Google Maps et les recherches locales. Livré en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Saint-Germain-en-Laye ?",
@@ -1343,7 +1343,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Levallois-Perret création site internet agence pub médias SaaS",
-      "site vitrine professionnel Levallois-Perret 92 dès 990€",
+      "site vitrine professionnel Levallois-Perret 92 dès 500€",
       "référencement local SEO Levallois-Perret Hauts-de-Seine Google Maps",
       "création site internet Levallois-Perret startup marketing communication",
       "agence web Levallois-Perret devis gratuit livraison 7 jours",
@@ -1352,12 +1352,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Levallois-Perret ?",
         answer:
-          "Un site vitrine professionnel à Levallois-Perret démarre dès 990€ et un site e-commerce dès 1 580€. Levallois étant un pôle d'entreprises majeur, nous créons des sites à forte valeur ajoutée.",
+          "Un site vitrine professionnel à Levallois-Perret démarre dès 500€ et un site e-commerce dès 800€. Levallois étant un pôle d'entreprises majeur, nous créons des sites à forte valeur ajoutée.",
       },
       {
         question: "Comment une agence marketing, un studio créatif ou une startup SaaS à Levallois-Perret peut-elle attirer des clients B2B en ligne ?",
         answer:
-          "Levallois-Perret concentre agences publicitaires, médias et startups qui ont besoin d'un site professionnel pour convaincre leurs clients B2B. Dans ce marché concurrentiel des Hauts-de-Seine, un site performant est une carte de visite obligatoire. ConvertiLab livre en 7 jours dès 990€.",
+          "Levallois-Perret concentre agences publicitaires, médias et startups qui ont besoin d'un site professionnel pour convaincre leurs clients B2B. Dans ce marché concurrentiel des Hauts-de-Seine, un site performant est une carte de visite obligatoire. ConvertiLab livre en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Levallois-Perret ?",
@@ -1418,7 +1418,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Courbevoie La Défense création site internet consulting B2B",
-      "site vitrine professionnel Courbevoie 92 dès 990€ livraison 7 jours",
+      "site vitrine professionnel Courbevoie 92 dès 500€ livraison 7 jours",
       "référencement local SEO Courbevoie Hauts-de-Seine Google Maps",
       "création site internet Courbevoie cabinet conseil finance immobilier",
       "agence digitale Courbevoie La Défense devis gratuit 24h",
@@ -1427,12 +1427,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Courbevoie ?",
         answer:
-          "Un site vitrine professionnel à Courbevoie démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des solutions digitales adaptées aux entreprises courbevoisien, du commerce local au prestataire B2B.",
+          "Un site vitrine professionnel à Courbevoie démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des solutions digitales adaptées aux entreprises courbevoisien, du commerce local au prestataire B2B.",
       },
       {
         question: "Comment un cabinet de conseil ou une PME B2B à Courbevoie peut-il générer des leads qualifiés grâce à son site web ?",
         answer:
-          "Courbevoie et La Défense concentrent des cabinets de conseil, sociétés financières et services B2B dont les clients recherchent leurs prestataires sur Google. Un site SEO-optimisé pour ce marché B2B local génère des leads qualifiés. ConvertiLab livre en 7 jours dès 990€ avec ciblage La Défense / Hauts-de-Seine.",
+          "Courbevoie et La Défense concentrent des cabinets de conseil, sociétés financières et services B2B dont les clients recherchent leurs prestataires sur Google. Un site SEO-optimisé pour ce marché B2B local génère des leads qualifiés. ConvertiLab livre en 7 jours dès 500€ avec ciblage La Défense / Hauts-de-Seine.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Courbevoie ?",
@@ -1493,7 +1493,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web La Défense Puteaux création site internet finance banque conseil",
-      "site vitrine professionnel La Défense Puteaux 92 dès 990€",
+      "site vitrine professionnel La Défense Puteaux 92 dès 500€",
       "référencement local SEO La Défense Hauts-de-Seine Google Maps",
       "création site internet Puteaux cabinet conseil IT grandes entreprises",
       "agence digitale La Défense Puteaux devis gratuit sans engagement 24h",
@@ -1502,12 +1502,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à La Défense ?",
         answer:
-          "Un site vitrine professionnel à La Défense démarre dès 990€ et un site e-commerce dès 1 580€. Pour les entreprises du quartier d'affaires, nous créons des sites corporate haut de gamme avec un focus B2B.",
+          "Un site vitrine professionnel à La Défense démarre dès 500€ et un site e-commerce dès 800€. Pour les entreprises du quartier d'affaires, nous créons des sites corporate haut de gamme avec un focus B2B.",
       },
       {
         question: "Comment une entreprise de finance, conseil ou IT à La Défense peut-elle développer sa visibilité en ligne ?",
         answer:
-          "La Défense est le premier quartier d'affaires européen. Les prestataires B2B qui y opèrent ont besoin d'un site de référence crédible pour convaincre des décideurs exigeants. ConvertiLab crée des sites professionnels à score PageSpeed 90+ en 7 jours dès 990€, avec SEO ciblé La Défense / Puteaux / Courbevoie.",
+          "La Défense est le premier quartier d'affaires européen. Les prestataires B2B qui y opèrent ont besoin d'un site de référence crédible pour convaincre des décideurs exigeants. ConvertiLab crée des sites professionnels à score PageSpeed 90+ en 7 jours dès 500€, avec SEO ciblé La Défense / Puteaux / Courbevoie.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à La Défense ?",
@@ -1568,7 +1568,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Cannes création site internet hôtel restaurant événementiel luxe",
-      "site vitrine premium Cannes Alpes-Maritimes dès 990€",
+      "site vitrine premium Cannes Alpes-Maritimes dès 500€",
       "référencement local SEO Cannes Côte d'Azur Google Maps",
       "création site internet Cannes MICE cinéma yacht immobilier prestige",
       "agence web Cannes devis gratuit livraison 7 jours",
@@ -1577,12 +1577,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Cannes ?",
         answer:
-          "Un site vitrine professionnel à Cannes démarre dès 990€ et un site e-commerce dès 1 580€. Pour les entreprises cannoises du luxe et du tourisme, nous créons des sites premium multilingues.",
+          "Un site vitrine professionnel à Cannes démarre dès 500€ et un site e-commerce dès 800€. Pour les entreprises cannoises du luxe et du tourisme, nous créons des sites premium multilingues.",
       },
       {
         question: "Comment un hôtel, un restaurant ou un prestataire événementiel à Cannes peut-il attirer des clients internationaux grâce à son site ?",
         answer:
-          "Cannes accueille chaque année des millions de visiteurs internationaux et des centaines de congrès et festivals. Un site multilingue, SEO-optimisé pour les requêtes touristiques et MICE, positionne votre établissement face à cette clientèle mondiale. ConvertiLab livre en 7 jours dès 990€.",
+          "Cannes accueille chaque année des millions de visiteurs internationaux et des centaines de congrès et festivals. Un site multilingue, SEO-optimisé pour les requêtes touristiques et MICE, positionne votre établissement face à cette clientèle mondiale. ConvertiLab livre en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Cannes ?",
@@ -1643,7 +1643,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Aix-en-Provence création site internet avocat cabinet conseil",
-      "site vitrine professionnel Aix-en-Provence Bouches-du-Rhône dès 990€",
+      "site vitrine professionnel Aix-en-Provence Bouches-du-Rhône dès 500€",
       "référencement local SEO Aix-en-Provence Marseille Google Maps",
       "création site internet Aix-en-Provence médecin artisan tourisme",
       "agence digitale Aix-en-Provence devis gratuit 24h livraison 7 jours",
@@ -1652,12 +1652,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Aix-en-Provence ?",
         answer:
-          "Un site vitrine professionnel à Aix-en-Provence démarre dès 990€ et un site e-commerce dès 1 580€. Nous créons des sites élégants adaptés au marché aixois et au standing de la ville.",
+          "Un site vitrine professionnel à Aix-en-Provence démarre dès 500€ et un site e-commerce dès 800€. Nous créons des sites élégants adaptés au marché aixois et au standing de la ville.",
       },
       {
         question: "Comment un avocat, un médecin ou un artisan à Aix-en-Provence peut-il attirer de nouveaux clients grâce à son site internet ?",
         answer:
-          "Aix-en-Provence concentre cabinets d'avocats, médecins et artisans dont la clientèle est connectée et exigeante. Un site professionnel SEO-optimisé pour les Bouches-du-Rhône positionne votre activité sur Google Maps et les recherches locales. ConvertiLab livre en 7 jours dès 990€.",
+          "Aix-en-Provence concentre cabinets d'avocats, médecins et artisans dont la clientèle est connectée et exigeante. Un site professionnel SEO-optimisé pour les Bouches-du-Rhône positionne votre activité sur Google Maps et les recherches locales. ConvertiLab livre en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Aix-en-Provence ?",
@@ -1718,7 +1718,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Grenoble création site internet tech R&D sport outdoor",
-      "site vitrine professionnel Grenoble Isère dès 990€ livraison 7 jours",
+      "site vitrine professionnel Grenoble Isère dès 500€ livraison 7 jours",
       "référencement local SEO Grenoble Métropole Google Maps",
       "création site internet Grenoble startup industrie électronique outdoor",
       "agence web Grenoble devis gratuit sans engagement 24h",
@@ -1727,12 +1727,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Grenoble ?",
         answer:
-          "Un site vitrine professionnel à Grenoble démarre dès 990€ et un site e-commerce dès 1 580€. Grenoble étant un pôle tech, nous créons des sites techniquement excellents adaptés au marché isérois.",
+          "Un site vitrine professionnel à Grenoble démarre dès 500€ et un site e-commerce dès 800€. Grenoble étant un pôle tech, nous créons des sites techniquement excellents adaptés au marché isérois.",
       },
       {
         question: "Comment une startup tech, un acteur du sport outdoor ou une PME industrielle à Grenoble peut-elle se démarquer en ligne ?",
         answer:
-          "Grenoble est la capitale française de la haute technologie et des sports de montagne. Ses startups, laboratoires et industries ont besoin de sites performants pour capter des partenaires et clients B2B ou grand public. ConvertiLab livre en 7 jours dès 990€ avec SEO adapté à l'Isère et la Métropole grenobloise.",
+          "Grenoble est la capitale française de la haute technologie et des sports de montagne. Ses startups, laboratoires et industries ont besoin de sites performants pour capter des partenaires et clients B2B ou grand public. ConvertiLab livre en 7 jours dès 500€ avec SEO adapté à l'Isère et la Métropole grenobloise.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Grenoble ?",
@@ -1793,7 +1793,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Dijon création site internet vin gastronomie artisan PME",
-      "site vitrine professionnel Dijon Côte-d'Or Bourgogne dès 990€",
+      "site vitrine professionnel Dijon Côte-d'Or Bourgogne dès 500€",
       "référencement local SEO Dijon Métropole Google Maps",
       "création site internet Dijon cave viticulteur restaurant artisan",
       "agence digitale Dijon Bourgogne devis gratuit livraison 7 jours",
@@ -1802,12 +1802,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Dijon ?",
         answer:
-          "Un site vitrine professionnel à Dijon démarre dès 990€ et un site e-commerce dès 1 580€. Nous créons des sites adaptés au marché bourguignon avec un design soigné et un SEO local efficace.",
+          "Un site vitrine professionnel à Dijon démarre dès 500€ et un site e-commerce dès 800€. Nous créons des sites adaptés au marché bourguignon avec un design soigné et un SEO local efficace.",
       },
       {
         question: "Comment un viticulteur, un restaurant gastronomique ou un artisan à Dijon peut-il attirer des clients grâce à son site web ?",
         answer:
-          "Dijon est la capitale de la gastronomie et du vin de Bourgogne. Ses viticulteurs, restaurateurs et artisans ont besoin de sites qui attirent une clientèle nationale et internationale. ConvertiLab crée des sites SEO-optimisés pour les requêtes tourisme gastronomique en 7 jours dès 990€.",
+          "Dijon est la capitale de la gastronomie et du vin de Bourgogne. Ses viticulteurs, restaurateurs et artisans ont besoin de sites qui attirent une clientèle nationale et internationale. ConvertiLab crée des sites SEO-optimisés pour les requêtes tourisme gastronomique en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Dijon ?",
@@ -1868,7 +1868,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Annecy création site internet tourisme sport outdoor hôtel",
-      "site vitrine professionnel Annecy Haute-Savoie dès 990€",
+      "site vitrine professionnel Annecy Haute-Savoie dès 500€",
       "référencement local SEO Annecy Haute-Savoie Google Maps",
       "création site internet Annecy restaurant hôtel artisan outdoor",
       "agence web Annecy devis gratuit sans engagement 24h",
@@ -1877,12 +1877,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Annecy ?",
         answer:
-          "Un site vitrine professionnel à Annecy démarre dès 990€ et un site e-commerce dès 1 580€. Pour les entreprises touristiques de Haute-Savoie, nous proposons des sites multilingues et performants.",
+          "Un site vitrine professionnel à Annecy démarre dès 500€ et un site e-commerce dès 800€. Pour les entreprises touristiques de Haute-Savoie, nous proposons des sites multilingues et performants.",
       },
       {
         question: "Comment un hôtel, un loueur de sports outdoor ou un restaurant à Annecy peut-il capter des touristes grâce à son site internet ?",
         answer:
-          "Annecy est l'une des villes les plus visitées de France (8 millions de visiteurs/an). Hôtels, restaurants et prestataires outdoor cherchant des clients trouvent dans le SEO local leur levier n°1. ConvertiLab livre votre site en 7 jours dès 990€ avec SEO optimisé pour les requêtes tourisme et séjour en Haute-Savoie.",
+          "Annecy est l'une des villes les plus visitées de France (8 millions de visiteurs/an). Hôtels, restaurants et prestataires outdoor cherchant des clients trouvent dans le SEO local leur levier n°1. ConvertiLab livre votre site en 7 jours dès 500€ avec SEO optimisé pour les requêtes tourisme et séjour en Haute-Savoie.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Annecy ?",
@@ -1943,7 +1943,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Toulon création site internet tourisme nautisme PME Var",
-      "site vitrine professionnel Toulon Var dès 990€ livraison 7 jours",
+      "site vitrine professionnel Toulon Var dès 500€ livraison 7 jours",
       "référencement local SEO Toulon Métropole Google Maps 83",
       "création site internet Toulon artisan commerçant nautisme service",
       "agence digitale Toulon devis gratuit 24h",
@@ -1952,12 +1952,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Toulon ?",
         answer:
-          "Un site vitrine professionnel à Toulon démarre dès 990€ et un site e-commerce dès 1 580€. Nous adaptons chaque projet aux besoins spécifiques des entreprises toulonnaises après un audit gratuit.",
+          "Un site vitrine professionnel à Toulon démarre dès 500€ et un site e-commerce dès 800€. Nous adaptons chaque projet aux besoins spécifiques des entreprises toulonnaises après un audit gratuit.",
       },
       {
         question: "Comment un prestataire nautique, un artisan ou un commerce à Toulon peut-il trouver des clients grâce à son site web ?",
         answer:
-          "Toulon est la capitale du nautisme en Méditerranée et un pôle économique varois dynamique. Ses prestataires (marine, tourisme, services) ont besoin de sites qui capturent les recherches locales. ConvertiLab crée des sites SEO-optimisés pour le Var en 7 jours dès 990€.",
+          "Toulon est la capitale du nautisme en Méditerranée et un pôle économique varois dynamique. Ses prestataires (marine, tourisme, services) ont besoin de sites qui capturent les recherches locales. ConvertiLab crée des sites SEO-optimisés pour le Var en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Toulon ?",
@@ -2018,7 +2018,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Reims création site internet champagne gastronomie PME Marne",
-      "site vitrine professionnel Reims Marne dès 990€ livraison 7 jours",
+      "site vitrine professionnel Reims Marne dès 500€ livraison 7 jours",
       "référencement local SEO Reims Champagne-Ardenne Google Maps",
       "création site internet Reims vigneron hôtel restaurant artisan",
       "agence web Reims devis gratuit sans engagement 24h",
@@ -2027,12 +2027,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Reims ?",
         answer:
-          "Chez ConvertiLab, un site vitrine professionnel à Reims commence dès 990€ et un site e-commerce dès 1 580€. Chaque projet est adapté aux besoins des entreprises rémoises.",
+          "Chez ConvertiLab, un site vitrine professionnel à Reims commence dès 500€ et un site e-commerce dès 800€. Chaque projet est adapté aux besoins des entreprises rémoises.",
       },
       {
         question: "Comment un vigneron champenois, un restaurant ou un hôtel à Reims peut-il attirer des clients internationaux grâce à son site web ?",
         answer:
-          "Reims est au cœur de la Route du Champagne, l'une des destinations oenotouristiques les plus prisées au monde. Un site multilingue et SEO-optimisé pour les requêtes champagne et gastronomie positionne votre domaine face à une clientèle internationale. ConvertiLab livre en 7 jours dès 990€.",
+          "Reims est au cœur de la Route du Champagne, l'une des destinations oenotouristiques les plus prisées au monde. Un site multilingue et SEO-optimisé pour les requêtes champagne et gastronomie positionne votre domaine face à une clientèle internationale. ConvertiLab livre en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Reims ?",
@@ -2093,7 +2093,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Saint-Étienne création site internet design industrie PME",
-      "site vitrine professionnel Saint-Étienne Loire dès 990€",
+      "site vitrine professionnel Saint-Étienne Loire dès 500€",
       "référencement local SEO Saint-Étienne Métropole Google Maps",
       "création site internet Saint-Étienne artisan designer PME sport",
       "agence digitale Saint-Étienne devis gratuit livraison 7 jours",
@@ -2102,12 +2102,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Saint-Étienne ?",
         answer:
-          "Un site vitrine professionnel à Saint-Étienne démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des solutions adaptées au budget des entreprises stéphanoises.",
+          "Un site vitrine professionnel à Saint-Étienne démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des solutions adaptées au budget des entreprises stéphanoises.",
       },
       {
         question: "Comment une entreprise de design, un artisan ou une PME industrielle à Saint-Étienne peut-elle se démarquer en ligne ?",
         answer:
-          "Saint-Étienne, Ville UNESCO du Design, concentre une économie créative et industrielle unique. Ses designers, artisans et PME ont besoin de sites qui reflètent leur expertise et leur visibilité nationale. ConvertiLab crée des sites design-driven et SEO-optimisés en 7 jours dès 990€.",
+          "Saint-Étienne, Ville UNESCO du Design, concentre une économie créative et industrielle unique. Ses designers, artisans et PME ont besoin de sites qui reflètent leur expertise et leur visibilité nationale. ConvertiLab crée des sites design-driven et SEO-optimisés en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Saint-Étienne ?",
@@ -2168,7 +2168,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Le Havre création site internet logistique maritime PME",
-      "site vitrine professionnel Le Havre Seine-Maritime dès 990€",
+      "site vitrine professionnel Le Havre Seine-Maritime dès 500€",
       "référencement local SEO Le Havre Normandie Google Maps 76",
       "création site internet Le Havre transitaire transport négoce artisan",
       "agence web Le Havre devis gratuit 24h livraison 7 jours",
@@ -2177,12 +2177,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web au Havre ?",
         answer:
-          "Un site vitrine professionnel au Havre commence dès 990€ et un site e-commerce dès 1 580€. Nous adaptons nos offres aux entreprises havraises de toutes tailles.",
+          "Un site vitrine professionnel au Havre commence dès 500€ et un site e-commerce dès 800€. Nous adaptons nos offres aux entreprises havraises de toutes tailles.",
       },
       {
         question: "Comment un transitaire, un prestataire logistique ou un commerçant au Havre peut-il développer sa visibilité en ligne ?",
         answer:
-          "Le Havre est le premier port à conteneurs de France. Son tissu économique — transitaires, négoces, artisans et PME — cherche des clients nationaux et internationaux. ConvertiLab crée des sites SEO-optimisés pour le marché havrais et normand en 7 jours dès 990€.",
+          "Le Havre est le premier port à conteneurs de France. Son tissu économique — transitaires, négoces, artisans et PME — cherche des clients nationaux et internationaux. ConvertiLab crée des sites SEO-optimisés pour le marché havrais et normand en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré au Havre ?",
@@ -2243,7 +2243,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Clermont-Ferrand création site internet industrie sport tourisme",
-      "site vitrine professionnel Clermont-Ferrand Puy-de-Dôme dès 990€",
+      "site vitrine professionnel Clermont-Ferrand Puy-de-Dôme dès 500€",
       "référencement local SEO Clermont-Ferrand Auvergne Google Maps",
       "création site internet Clermont-Ferrand artisan startup PME automobile",
       "agence digitale Clermont-Ferrand devis gratuit livraison 7 jours",
@@ -2252,12 +2252,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Clermont-Ferrand ?",
         answer:
-          "Un site vitrine professionnel à Clermont-Ferrand démarre dès 990€ et un site e-commerce dès 1 580€. Nous offrons un excellent rapport qualité-prix aux entreprises clermontoises.",
+          "Un site vitrine professionnel à Clermont-Ferrand démarre dès 500€ et un site e-commerce dès 800€. Nous offrons un excellent rapport qualité-prix aux entreprises clermontoises.",
       },
       {
         question: "Comment une PME industrielle, une startup tech ou un artisan à Clermont-Ferrand peut-il attirer des clients grâce à son site web ?",
         answer:
-          "Clermont-Ferrand, ville de Michelin et d'une économie industrielle et touristique en transformation, concentre PME et startups qui cherchent des clients locaux et nationaux. ConvertiLab crée des sites SEO-optimisés pour l'Auvergne en 7 jours dès 990€.",
+          "Clermont-Ferrand, ville de Michelin et d'une économie industrielle et touristique en transformation, concentre PME et startups qui cherchent des clients locaux et nationaux. ConvertiLab crée des sites SEO-optimisés pour l'Auvergne en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Clermont-Ferrand ?",
@@ -2318,7 +2318,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Tours création site internet tourisme pharma vin PME",
-      "site vitrine professionnel Tours Indre-et-Loire dès 990€",
+      "site vitrine professionnel Tours Indre-et-Loire dès 500€",
       "référencement local SEO Tours Métropole Val de Loire Google Maps",
       "création site internet Tours hôtel restaurant viticulteur artisan",
       "agence web Tours devis gratuit sans engagement 24h",
@@ -2327,12 +2327,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Tours ?",
         answer:
-          "Un site vitrine professionnel à Tours démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des solutions sur-mesure pour les entreprises tourangelles.",
+          "Un site vitrine professionnel à Tours démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des solutions sur-mesure pour les entreprises tourangelles.",
       },
       {
         question: "Comment un hôtel, un viticulteur ou un artisan à Tours peut-il capter des touristes et clients grâce à son site internet ?",
         answer:
-          "Tours est au cœur de la Vallée de la Loire, classée UNESCO. Ses hôtels, restaurants et vignerons attirent des millions de touristes qui planifient leurs visites sur Google. Un site SEO-optimisé pour le Val de Loire positionne votre activité face à cette clientèle nationale et internationale. Livré en 7 jours dès 990€.",
+          "Tours est au cœur de la Vallée de la Loire, classée UNESCO. Ses hôtels, restaurants et vignerons attirent des millions de touristes qui planifient leurs visites sur Google. Un site SEO-optimisé pour le Val de Loire positionne votre activité face à cette clientèle nationale et internationale. Livré en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Tours ?",
@@ -2393,7 +2393,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Limoges création site internet porcelaine artisanat PME",
-      "site vitrine professionnel Limoges Haute-Vienne dès 990€",
+      "site vitrine professionnel Limoges Haute-Vienne dès 500€",
       "référencement local SEO Limoges Creuse Corrèze Google Maps",
       "création site internet Limoges artisan commerçant agroalimentaire",
       "agence digitale Limoges devis gratuit livraison 7 jours",
@@ -2402,12 +2402,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Limoges ?",
         answer:
-          "Un site vitrine professionnel à Limoges démarre dès 990€ et un site e-commerce dès 1 580€. Idéal pour les artisans et entreprises limougeaudes qui veulent développer leur visibilité.",
+          "Un site vitrine professionnel à Limoges démarre dès 500€ et un site e-commerce dès 800€. Idéal pour les artisans et entreprises limougeaudes qui veulent développer leur visibilité.",
       },
       {
         question: "Comment un artisan porcelainier, un éleveur ou un commerçant à Limoges peut-il développer sa clientèle en ligne ?",
         answer:
-          "Limoges est mondialement connue pour sa porcelaine et son artisanat d'exception. Les maisons de porcelaine, éleveurs et artisans limougeauds cherchent des clients nationaux et internationaux. ConvertiLab crée des sites SEO-optimisés pour la Haute-Vienne en 7 jours dès 990€.",
+          "Limoges est mondialement connue pour sa porcelaine et son artisanat d'exception. Les maisons de porcelaine, éleveurs et artisans limougeauds cherchent des clients nationaux et internationaux. ConvertiLab crée des sites SEO-optimisés pour la Haute-Vienne en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Limoges ?",
@@ -2468,7 +2468,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Amiens création site internet industrie logistique PME",
-      "site vitrine professionnel Amiens Somme dès 990€ livraison 7 jours",
+      "site vitrine professionnel Amiens Somme dès 500€ livraison 7 jours",
       "référencement local SEO Amiens Picardie Google Maps",
       "création site internet Amiens artisan équipementier transport PME",
       "agence web Amiens devis gratuit 24h sans engagement",
@@ -2477,12 +2477,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Amiens ?",
         answer:
-          "Un site vitrine professionnel à Amiens démarre dès 990€ et un site e-commerce dès 1 580€. Nous offrons des tarifs compétitifs pour les entreprises amiénoises.",
+          "Un site vitrine professionnel à Amiens démarre dès 500€ et un site e-commerce dès 800€. Nous offrons des tarifs compétitifs pour les entreprises amiénoises.",
       },
       {
         question: "Comment un industriel, un artisan ou un commerçant à Amiens peut-il attirer des clients grâce à son site internet ?",
         answer:
-          "Amiens est un carrefour logistique et industriel majeur du nord de la France. Ses entreprises de production, artisans et commerçants ont besoin de sites professionnels pour capter des clients locaux et régionaux. ConvertiLab livre en 7 jours dès 990€ avec SEO optimisé pour la Somme.",
+          "Amiens est un carrefour logistique et industriel majeur du nord de la France. Ses entreprises de production, artisans et commerçants ont besoin de sites professionnels pour capter des clients locaux et régionaux. ConvertiLab livre en 7 jours dès 500€ avec SEO optimisé pour la Somme.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Amiens ?",
@@ -2543,7 +2543,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Perpignan création site internet tourisme agricole PME",
-      "site vitrine professionnel Perpignan Pyrénées-Orientales dès 990€",
+      "site vitrine professionnel Perpignan Pyrénées-Orientales dès 500€",
       "référencement local SEO Perpignan Catalogne française Google Maps",
       "création site internet Perpignan vigneron artisan commerce catalan",
       "agence web Perpignan devis gratuit livraison 7 jours",
@@ -2552,12 +2552,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Perpignan ?",
         answer:
-          "Un site vitrine professionnel à Perpignan démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des solutions adaptées aux entreprises perpignanaises.",
+          "Un site vitrine professionnel à Perpignan démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des solutions adaptées aux entreprises perpignanaises.",
       },
       {
         question: "Comment un vigneron, un commerçant ou un artisan à Perpignan peut-il développer sa clientèle locale et transfrontalière en ligne ?",
         answer:
-          "Perpignan est à la frontière espagnole, carrefour commercial entre la France et l'Espagne. Ses vignerons, artisans et commerçants ont une clientèle locale et transfrontalière à capter sur Google. ConvertiLab crée des sites bilingues FR/ES et SEO-optimisés en 7 jours dès 990€.",
+          "Perpignan est à la frontière espagnole, carrefour commercial entre la France et l'Espagne. Ses vignerons, artisans et commerçants ont une clientèle locale et transfrontalière à capter sur Google. ConvertiLab crée des sites bilingues FR/ES et SEO-optimisés en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Perpignan ?",
@@ -2618,7 +2618,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Metz création site internet cybersécurité tech tourisme PME",
-      "site vitrine professionnel Metz Moselle dès 990€ livraison 7 jours",
+      "site vitrine professionnel Metz Moselle dès 500€ livraison 7 jours",
       "référencement local SEO Metz Lorraine Google Maps",
       "création site internet Metz startup artisan commerce culture",
       "agence digitale Metz devis gratuit 24h sans engagement",
@@ -2627,12 +2627,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Metz ?",
         answer:
-          "Un site vitrine professionnel à Metz démarre dès 990€ et un site e-commerce dès 1 580€. Nous adaptons chaque projet aux besoins des entreprises messines.",
+          "Un site vitrine professionnel à Metz démarre dès 500€ et un site e-commerce dès 800€. Nous adaptons chaque projet aux besoins des entreprises messines.",
       },
       {
         question: "Comment une startup tech, un prestataire culturel ou une PME à Metz peut-elle attirer des clients grâce à son site web ?",
         answer:
-          "Metz a réussi une reconversion remarquable grâce à la tech et au tourisme culturel (Centre Pompidou-Metz). Ses entreprises numériques et culturelles cherchent des clients nationaux et internationaux. ConvertiLab crée des sites SEO-optimisés pour la Lorraine en 7 jours dès 990€.",
+          "Metz a réussi une reconversion remarquable grâce à la tech et au tourisme culturel (Centre Pompidou-Metz). Ses entreprises numériques et culturelles cherchent des clients nationaux et internationaux. ConvertiLab crée des sites SEO-optimisés pour la Lorraine en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Metz ?",
@@ -2693,7 +2693,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Besançon création site internet horlogerie médical artisan",
-      "site vitrine professionnel Besançon Doubs dès 990€ livraison 7 jours",
+      "site vitrine professionnel Besançon Doubs dès 500€ livraison 7 jours",
       "référencement local SEO Besançon Franche-Comté Google Maps",
       "création site internet Besançon artisan luxe microtechnique PME",
       "agence web Besançon devis gratuit sans engagement 24h",
@@ -2702,12 +2702,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Besançon ?",
         answer:
-          "Un site vitrine professionnel à Besançon démarre dès 990€ et un site e-commerce dès 1 580€. Nous offrons des solutions adaptées aux entreprises bisontines.",
+          "Un site vitrine professionnel à Besançon démarre dès 500€ et un site e-commerce dès 800€. Nous offrons des solutions adaptées aux entreprises bisontines.",
       },
       {
         question: "Comment un horloger, un artisan médical ou une PME de microtechnique à Besançon peut-il développer sa clientèle en ligne ?",
         answer:
-          "Besançon est la capitale mondiale de la montre mécanique et un pôle de microtechniques reconnu. Ses artisans horlogers, fabricants de dispositifs médicaux et PME de précision cherchent des clients nationaux et internationaux. ConvertiLab livre des sites SEO-optimisés en 7 jours dès 990€.",
+          "Besançon est la capitale mondiale de la montre mécanique et un pôle de microtechniques reconnu. Ses artisans horlogers, fabricants de dispositifs médicaux et PME de précision cherchent des clients nationaux et internationaux. ConvertiLab livre des sites SEO-optimisés en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Besançon ?",
@@ -2768,7 +2768,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Orléans création site internet pharma cosmétique logistique",
-      "site vitrine professionnel Orléans Loiret dès 990€ livraison 7 jours",
+      "site vitrine professionnel Orléans Loiret dès 500€ livraison 7 jours",
       "référencement local SEO Orléans Métropole Val de Loire Google Maps",
       "création site internet Orléans artisan PME e-commerce tourisme",
       "agence digitale Orléans devis gratuit 24h",
@@ -2777,12 +2777,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Orléans ?",
         answer:
-          "Un site vitrine professionnel à Orléans démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des solutions sur-mesure pour les entreprises orléanaises.",
+          "Un site vitrine professionnel à Orléans démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des solutions sur-mesure pour les entreprises orléanaises.",
       },
       {
         question: "Comment une PME pharmaceutique, un prestataire logistique ou un artisan à Orléans peut-il développer sa visibilité en ligne ?",
         answer:
-          "Orléans est au cœur d'une région stratégique entre Paris et la Loire. Son tissu de PME pharmaceutiques, logistiques et artisanales cherche des clients locaux et nationaux sur Google. ConvertiLab crée des sites SEO-optimisés pour le Loiret et le Val de Loire en 7 jours dès 990€.",
+          "Orléans est au cœur d'une région stratégique entre Paris et la Loire. Son tissu de PME pharmaceutiques, logistiques et artisanales cherche des clients locaux et nationaux sur Google. ConvertiLab crée des sites SEO-optimisés pour le Loiret et le Val de Loire en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Orléans ?",
@@ -2843,7 +2843,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Rouen création site internet industrie logistique tourisme",
-      "site vitrine professionnel Rouen Seine-Maritime dès 990€",
+      "site vitrine professionnel Rouen Seine-Maritime dès 500€",
       "référencement local SEO Rouen Métropole Normandie Google Maps",
       "création site internet Rouen artisan commerçant PME gastronomie",
       "agence web Rouen devis gratuit livraison 7 jours",
@@ -2852,12 +2852,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Rouen ?",
         answer:
-          "Un site vitrine professionnel à Rouen démarre dès 990€ et un site e-commerce dès 1 580€. Nous adaptons nos solutions aux entreprises rouennaises de toutes tailles.",
+          "Un site vitrine professionnel à Rouen démarre dès 500€ et un site e-commerce dès 800€. Nous adaptons nos solutions aux entreprises rouennaises de toutes tailles.",
       },
       {
         question: "Comment un prestataire industriel, un restaurateur ou un artisan à Rouen peut-il attirer des clients grâce à son site internet ?",
         answer:
-          "Rouen est la capitale économique de Normandie et le 5ème port fluvial français. Son tissu d'industries, PME et artisans cherche des clients locaux et régionaux. ConvertiLab crée des sites SEO-optimisés pour la Seine-Maritime et la Normandie en 7 jours dès 990€.",
+          "Rouen est la capitale économique de Normandie et le 5ème port fluvial français. Son tissu d'industries, PME et artisans cherche des clients locaux et régionaux. ConvertiLab crée des sites SEO-optimisés pour la Seine-Maritime et la Normandie en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Rouen ?",
@@ -2918,7 +2918,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Caen création site internet industrie tourisme mémorial agroalimentaire",
-      "site vitrine professionnel Caen Calvados Normandie dès 990€",
+      "site vitrine professionnel Caen Calvados Normandie dès 500€",
       "référencement local SEO Caen Métropole Normandie Google Maps",
       "création site internet Caen artisan commerçant PME hôtel restaurant",
       "agence digitale Caen devis gratuit 24h livraison 7 jours",
@@ -2927,12 +2927,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Caen ?",
         answer:
-          "Un site vitrine professionnel à Caen démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des tarifs compétitifs pour les entreprises caennaises.",
+          "Un site vitrine professionnel à Caen démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des tarifs compétitifs pour les entreprises caennaises.",
       },
       {
         question: "Comment un prestataire touristique, un artisan normand ou une PME à Caen peut-il trouver de nouveaux clients en ligne ?",
         answer:
-          "Caen est la capitale du Calvados et un hub économique normand. Ses prestataires touristiques (mémorial, plages du Débarquement), artisans et PME cherchent des clients sur Google. ConvertiLab crée des sites SEO-optimisés pour la Normandie en 7 jours dès 990€.",
+          "Caen est la capitale du Calvados et un hub économique normand. Ses prestataires touristiques (mémorial, plages du Débarquement), artisans et PME cherchent des clients sur Google. ConvertiLab crée des sites SEO-optimisés pour la Normandie en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Caen ?",
@@ -2993,7 +2993,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Nancy création site internet tech santé tourisme Art Nouveau",
-      "site vitrine professionnel Nancy Meurthe-et-Moselle dès 990€",
+      "site vitrine professionnel Nancy Meurthe-et-Moselle dès 500€",
       "référencement local SEO Nancy Métropole Lorraine Google Maps",
       "création site internet Nancy artisan PME médecin restauration",
       "agence web Nancy devis gratuit livraison 7 jours",
@@ -3002,12 +3002,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Nancy ?",
         answer:
-          "Un site vitrine professionnel à Nancy démarre dès 990€ et un site e-commerce dès 1 580€. Nous adaptons nos solutions au budget des entreprises nancéiennes.",
+          "Un site vitrine professionnel à Nancy démarre dès 500€ et un site e-commerce dès 800€. Nous adaptons nos solutions au budget des entreprises nancéiennes.",
       },
       {
         question: "Comment une startup tech, un prestataire culturel ou un artisan à Nancy peut-il développer sa clientèle grâce à son site web ?",
         answer:
-          "Nancy, capitale de l'Art Nouveau, allie patrimoine culturel, économie numérique et services de santé. Ses entreprises cherchent des clients locaux et touristiques. ConvertiLab crée des sites SEO-optimisés pour la Lorraine et Meurthe-et-Moselle en 7 jours dès 990€.",
+          "Nancy, capitale de l'Art Nouveau, allie patrimoine culturel, économie numérique et services de santé. Ses entreprises cherchent des clients locaux et touristiques. ConvertiLab crée des sites SEO-optimisés pour la Lorraine et Meurthe-et-Moselle en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Nancy ?",
@@ -3068,7 +3068,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Argenteuil création site internet artisan BTP PME Val-d'Oise",
-      "site vitrine professionnel Argenteuil 95 dès 990€ livraison 7 jours",
+      "site vitrine professionnel Argenteuil 95 dès 500€ livraison 7 jours",
       "référencement local SEO Argenteuil Val-d'Oise Google Maps",
       "création site internet Argenteuil commerçant artisan service personne",
       "agence digitale Argenteuil devis gratuit 24h",
@@ -3077,12 +3077,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Argenteuil ?",
         answer:
-          "Un site vitrine professionnel à Argenteuil démarre dès 990€ et un site e-commerce dès 1 580€. Nous offrons des tarifs compétitifs pour les entreprises argenteuillaises.",
+          "Un site vitrine professionnel à Argenteuil démarre dès 500€ et un site e-commerce dès 800€. Nous offrons des tarifs compétitifs pour les entreprises argenteuillaises.",
       },
       {
         question: "Comment un artisan BTP, un commerçant ou un prestataire à Argenteuil peut-il trouver des clients grâce à son site web ?",
         answer:
-          "Argenteuil est l'une des communes les plus peuplées du Val-d'Oise avec plus de 100 000 habitants. Ses artisans, commerçants et prestataires de services ont une large base de clients potentiels locaux. Un site SEO-optimisé pour Argenteuil et le 95 capte ces recherches. Livré en 7 jours dès 990€.",
+          "Argenteuil est l'une des communes les plus peuplées du Val-d'Oise avec plus de 100 000 habitants. Ses artisans, commerçants et prestataires de services ont une large base de clients potentiels locaux. Un site SEO-optimisé pour Argenteuil et le 95 capte ces recherches. Livré en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Argenteuil ?",
@@ -3092,7 +3092,7 @@ export const cities: City[] = [
       {
         question: "Pourquoi les artisans et commerçants d'Argenteuil investissent-ils dans un site web professionnel ?",
         answer:
-          "Argenteuil compte 112 000 habitants et une économie locale dynamique. Sans site web, un artisan ou commerçant est invisible face aux concurrents franciliens qui référencent leurs services sur Google. ConvertiLab crée des sites optimisés pour les recherches locales du 95 en 7 jours dès 990€.",
+          "Argenteuil compte 112 000 habitants et une économie locale dynamique. Sans site web, un artisan ou commerçant est invisible face aux concurrents franciliens qui référencent leurs services sur Google. ConvertiLab crée des sites optimisés pour les recherches locales du 95 en 7 jours dès 500€.",
       },
       {
         question: "Proposez-vous le SEO local pour Argenteuil ?",
@@ -3143,7 +3143,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Montreuil création site internet startup créative médias artisanat",
-      "site vitrine professionnel Montreuil Seine-Saint-Denis dès 990€",
+      "site vitrine professionnel Montreuil Seine-Saint-Denis dès 500€",
       "référencement local SEO Montreuil 93 Grand Paris Google Maps",
       "création site internet Montreuil studio cinéma art numérique PME",
       "agence web Montreuil devis gratuit livraison 7 jours",
@@ -3152,12 +3152,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Montreuil ?",
         answer:
-          "Un site vitrine professionnel à Montreuil démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des solutions créatives adaptées à l'esprit montreuillois.",
+          "Un site vitrine professionnel à Montreuil démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des solutions créatives adaptées à l'esprit montreuillois.",
       },
       {
         question: "Comment un studio de cinéma, une startup créative ou un artisan d'art à Montreuil peut-il développer sa visibilité en ligne ?",
         answer:
-          "Montreuil est le Hollywood français — capital des studios de cinéma et des startups créatives. Ses entreprises audiovisuelles, designers et artisans d'art cherchent des clients B2B et B2C sur Google. ConvertiLab crée des sites premium et SEO-optimisés pour la Seine-Saint-Denis en 7 jours dès 990€.",
+          "Montreuil est le Hollywood français — capital des studios de cinéma et des startups créatives. Ses entreprises audiovisuelles, designers et artisans d'art cherchent des clients B2B et B2C sur Google. ConvertiLab crée des sites premium et SEO-optimisés pour la Seine-Saint-Denis en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Montreuil ?",
@@ -3218,7 +3218,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Saint-Denis création site internet sport événementiel PME",
-      "site vitrine professionnel Saint-Denis 93 Seine-Saint-Denis dès 990€",
+      "site vitrine professionnel Saint-Denis 93 Seine-Saint-Denis dès 500€",
       "référencement local SEO Saint-Denis Grand Paris Google Maps",
       "création site internet Saint-Denis commerce artisan construction BTP",
       "agence digitale Saint-Denis devis gratuit 24h livraison 7 jours",
@@ -3227,12 +3227,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Saint-Denis ?",
         answer:
-          "Un site vitrine professionnel à Saint-Denis démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des solutions adaptées aux entreprises dionysiennes.",
+          "Un site vitrine professionnel à Saint-Denis démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des solutions adaptées aux entreprises dionysiennes.",
       },
       {
         question: "Comment un prestataire événementiel, un artisan ou une PME à Saint-Denis peut-il trouver des clients grâce à son site web ?",
         answer:
-          "Saint-Denis accueille le Stade de France et connaît un développement économique accéléré lié aux Jeux Olympiques 2024. De nombreuses nouvelles entreprises s'y installent. Un site SEO-optimisé pour la Seine-Saint-Denis (93) capte les clients de cette zone en pleine transformation. Livré en 7 jours dès 990€.",
+          "Saint-Denis accueille le Stade de France et connaît un développement économique accéléré lié aux Jeux Olympiques 2024. De nombreuses nouvelles entreprises s'y installent. Un site SEO-optimisé pour la Seine-Saint-Denis (93) capte les clients de cette zone en pleine transformation. Livré en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Saint-Denis ?",
@@ -3293,7 +3293,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Créteil création site internet médecin CHU cabinet libéral",
-      "site vitrine professionnel Créteil Val-de-Marne dès 990€",
+      "site vitrine professionnel Créteil Val-de-Marne dès 500€",
       "référencement local SEO Créteil 94 Grand Paris Google Maps",
       "création site internet Créteil professions libérales santé commerce",
       "agence web Créteil devis gratuit sans engagement 24h",
@@ -3302,12 +3302,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Créteil ?",
         answer:
-          "Un site vitrine professionnel à Créteil démarre dès 990€ et un site e-commerce dès 1 580€. Nous offrons des solutions adaptées aux entreprises cristoliennes.",
+          "Un site vitrine professionnel à Créteil démarre dès 500€ et un site e-commerce dès 800€. Nous offrons des solutions adaptées aux entreprises cristoliennes.",
       },
       {
         question: "Comment un médecin, un cabinet paramédical ou une PME à Créteil peut-il attirer de nouveaux patients ou clients grâce à son site web ?",
         answer:
-          "Créteil abrite l'un des plus grands CHU de France et de nombreuses cliniques. Les patients cherchent leurs médecins et spécialistes en ligne avant de prendre rendez-vous. Un site SEO-optimisé pour le Val-de-Marne (94) positionne votre cabinet sur ces recherches. ConvertiLab livre en 7 jours dès 990€.",
+          "Créteil abrite l'un des plus grands CHU de France et de nombreuses cliniques. Les patients cherchent leurs médecins et spécialistes en ligne avant de prendre rendez-vous. Un site SEO-optimisé pour le Val-de-Marne (94) positionne votre cabinet sur ces recherches. ConvertiLab livre en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Créteil ?",
@@ -3368,7 +3368,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Vitry-sur-Seine création site internet pharma industrie PME",
-      "site vitrine professionnel Vitry-sur-Seine Val-de-Marne 94 dès 990€",
+      "site vitrine professionnel Vitry-sur-Seine Val-de-Marne 94 dès 500€",
       "référencement local SEO Vitry-sur-Seine 94 Google Maps",
       "création site internet Vitry-sur-Seine artisan commerçant PME",
       "agence digitale Vitry-sur-Seine devis gratuit 24h",
@@ -3377,12 +3377,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Vitry-sur-Seine ?",
         answer:
-          "Un site vitrine professionnel à Vitry-sur-Seine démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des solutions adaptées aux entreprises vitriotes.",
+          "Un site vitrine professionnel à Vitry-sur-Seine démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des solutions adaptées aux entreprises vitriotes.",
       },
       {
         question: "Comment une PME pharmaceutique, un artisan ou un commerçant à Vitry-sur-Seine peut-il développer sa clientèle en ligne ?",
         answer:
-          "Vitry-sur-Seine concentre des PME pharmaceutiques, industrielles et des commerces de proximité. Ses entreprises cherchent des clients locaux et professionnels sur Google. ConvertiLab crée des sites SEO-optimisés pour le Val-de-Marne (94) en 7 jours dès 990€.",
+          "Vitry-sur-Seine concentre des PME pharmaceutiques, industrielles et des commerces de proximité. Ses entreprises cherchent des clients locaux et professionnels sur Google. ConvertiLab crée des sites SEO-optimisés pour le Val-de-Marne (94) en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Vitry-sur-Seine ?",
@@ -3443,7 +3443,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Asnières-sur-Seine création site internet professions libérales PME",
-      "site vitrine professionnel Asnières-sur-Seine 92 dès 990€",
+      "site vitrine professionnel Asnières-sur-Seine 92 dès 500€",
       "référencement local SEO Asnières-sur-Seine Hauts-de-Seine Google Maps",
       "création site internet Asnières-sur-Seine médecin artisan restaurant",
       "agence web Asnières devis gratuit livraison 7 jours",
@@ -3452,12 +3452,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Asnières-sur-Seine ?",
         answer:
-          "Un site vitrine professionnel à Asnières-sur-Seine démarre dès 990€ et un site e-commerce dès 1 580€. Nous offrons un excellent rapport qualité-prix aux entreprises asniéroises.",
+          "Un site vitrine professionnel à Asnières-sur-Seine démarre dès 500€ et un site e-commerce dès 800€. Nous offrons un excellent rapport qualité-prix aux entreprises asniéroises.",
       },
       {
         question: "Comment un médecin, un artisan ou un commerçant à Asnières-sur-Seine peut-il se démarquer en ligne dans les Hauts-de-Seine ?",
         answer:
-          "Asnières-sur-Seine est une commune résidentielle dynamique des Hauts-de-Seine avec une population croissante. Ses professions libérales, artisans et commerçants cherchent des clients locaux. Un site SEO-optimisé pour le 92 positionne votre activité sur Google Maps. Livré en 7 jours dès 990€.",
+          "Asnières-sur-Seine est une commune résidentielle dynamique des Hauts-de-Seine avec une population croissante. Ses professions libérales, artisans et commerçants cherchent des clients locaux. Un site SEO-optimisé pour le 92 positionne votre activité sur Google Maps. Livré en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Asnières ?",
@@ -3518,7 +3518,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Colombes création site internet industrie logistique PME 92",
-      "site vitrine professionnel Colombes Hauts-de-Seine dès 990€",
+      "site vitrine professionnel Colombes Hauts-de-Seine dès 500€",
       "référencement local SEO Colombes 92 Grand Paris Google Maps",
       "création site internet Colombes artisan commerçant BTP restaurant",
       "agence digitale Colombes devis gratuit 24h livraison 7 jours",
@@ -3527,12 +3527,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Colombes ?",
         answer:
-          "Un site vitrine professionnel à Colombes démarre dès 990€ et un site e-commerce dès 1 580€. Nous adaptons nos offres aux entreprises colombiennes.",
+          "Un site vitrine professionnel à Colombes démarre dès 500€ et un site e-commerce dès 800€. Nous adaptons nos offres aux entreprises colombiennes.",
       },
       {
         question: "Comment un artisan, une PME logistique ou un commerçant à Colombes peut-il attirer des clients locaux grâce à son site web ?",
         answer:
-          "Colombes est une commune industrielle et résidentielle des Hauts-de-Seine avec plus de 85 000 habitants. Son tissu d'artisans, PME logistiques et commerçants cherche des clients locaux. Un site SEO-optimisé pour le 92 positionne votre activité sur les recherches locales. Livré en 7 jours dès 990€.",
+          "Colombes est une commune industrielle et résidentielle des Hauts-de-Seine avec plus de 85 000 habitants. Son tissu d'artisans, PME logistiques et commerçants cherche des clients locaux. Un site SEO-optimisé pour le 92 positionne votre activité sur les recherches locales. Livré en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Colombes ?",
@@ -3593,7 +3593,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Saint-Cloud création site internet professions libérales premium",
-      "site vitrine haut de gamme Saint-Cloud 92 dès 990€ livraison 7 jours",
+      "site vitrine haut de gamme Saint-Cloud 92 dès 500€ livraison 7 jours",
       "référencement local SEO Saint-Cloud Hauts-de-Seine Google Maps",
       "création site internet Saint-Cloud médecin architecte restaurant gastronomique",
       "agence web Saint-Cloud devis gratuit sans engagement 24h",
@@ -3602,12 +3602,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Saint-Cloud ?",
         answer:
-          "Un site vitrine professionnel à Saint-Cloud démarre dès 990€ et un site e-commerce dès 1 580€. Nous créons des sites premium adaptés à l'image haut de gamme de la ville.",
+          "Un site vitrine professionnel à Saint-Cloud démarre dès 500€ et un site e-commerce dès 800€. Nous créons des sites premium adaptés à l'image haut de gamme de la ville.",
       },
       {
         question: "Comment un médecin, un architecte ou un restaurant gastronomique à Saint-Cloud peut-il attirer une clientèle premium en ligne ?",
         answer:
-          "Saint-Cloud est l'une des communes les plus aisées des Hauts-de-Seine. Sa clientèle exigeante évalue la qualité d'un prestataire via son site avant tout contact. Un site premium et SEO-optimisé pour le 92 positionne votre activité face à cette clientèle. ConvertiLab livre en 7 jours dès 990€.",
+          "Saint-Cloud est l'une des communes les plus aisées des Hauts-de-Seine. Sa clientèle exigeante évalue la qualité d'un prestataire via son site avant tout contact. Un site premium et SEO-optimisé pour le 92 positionne votre activité face à cette clientèle. ConvertiLab livre en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Saint-Cloud ?",
@@ -3668,7 +3668,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Suresnes création site internet pharma consulting PME 92",
-      "site vitrine professionnel Suresnes Hauts-de-Seine dès 990€",
+      "site vitrine professionnel Suresnes Hauts-de-Seine dès 500€",
       "référencement local SEO Suresnes La Défense Google Maps 92",
       "création site internet Suresnes Sanofi startup artisan commerçant",
       "agence digitale Suresnes devis gratuit 24h livraison 7 jours",
@@ -3677,12 +3677,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Suresnes ?",
         answer:
-          "Un site vitrine professionnel à Suresnes démarre dès 990€ et un site e-commerce dès 1 580€. Nous offrons des solutions sur-mesure pour les entreprises suresnois.",
+          "Un site vitrine professionnel à Suresnes démarre dès 500€ et un site e-commerce dès 800€. Nous offrons des solutions sur-mesure pour les entreprises suresnois.",
       },
       {
         question: "Comment une PME pharmaceutique, un consultant ou un artisan à Suresnes peut-il développer sa clientèle grâce à son site web ?",
         answer:
-          "Suresnes abrite Sanofi et de nombreuses PME dans les secteurs pharma et consulting. Ses entreprises cherchent des clients B2B et des talents sur Google. Un site professionnel et SEO-optimisé pour les Hauts-de-Seine positionne votre activité sur ces recherches. ConvertiLab livre en 7 jours dès 990€.",
+          "Suresnes abrite Sanofi et de nombreuses PME dans les secteurs pharma et consulting. Ses entreprises cherchent des clients B2B et des talents sur Google. Un site professionnel et SEO-optimisé pour les Hauts-de-Seine positionne votre activité sur ces recherches. ConvertiLab livre en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Suresnes ?",
@@ -3743,7 +3743,7 @@ export const cities: City[] = [
     },
     keywords: [
       "agence web Issy-les-Moulineaux création site internet tech SaaS médias startup",
-      "site vitrine professionnel Issy-les-Moulineaux 92 dès 990€",
+      "site vitrine professionnel Issy-les-Moulineaux 92 dès 500€",
       "référencement local SEO Issy-les-Moulineaux Hauts-de-Seine Google Maps",
       "création site internet Issy-les-Moulineaux startup B2B digital télécoms",
       "agence web Issy-les-Moulineaux devis gratuit livraison 7 jours",
@@ -3752,12 +3752,12 @@ export const cities: City[] = [
       {
         question: "Combien coûte un site web à Issy-les-Moulineaux ?",
         answer:
-          "Un site vitrine professionnel à Issy-les-Moulineaux démarre dès 990€ et un site e-commerce dès 1 580€. Nous proposons des solutions digitales à la hauteur de cette ville tech.",
+          "Un site vitrine professionnel à Issy-les-Moulineaux démarre dès 500€ et un site e-commerce dès 800€. Nous proposons des solutions digitales à la hauteur de cette ville tech.",
       },
       {
         question: "Comment une startup SaaS, un acteur des médias ou un consultant à Issy-les-Moulineaux peut-il attirer des clients B2B grâce à son site web ?",
         answer:
-          "Issy-les-Moulineaux est la Silicon Valley française — Microsoft, SFR, Canal+ y ont leur siège. Dans cet écosystème tech et médias, un site ultra-performant (Next.js, score 90+) est indispensable pour capter des clients B2B exigeants. ConvertiLab livre en 7 jours dès 990€.",
+          "Issy-les-Moulineaux est la Silicon Valley française — Microsoft, SFR, Canal+ y ont leur siège. Dans cet écosystème tech et médias, un site ultra-performant (Next.js, score 90+) est indispensable pour capter des clients B2B exigeants. ConvertiLab livre en 7 jours dès 500€.",
       },
       {
         question: "En combien de temps mon site sera-t-il livré à Issy ?",

@@ -44,8 +44,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(ville);
   if (!city) return { title: "Page introuvable" };
 
-  const title = `Création Site Internet ${city.name} — Site Web Pro dès 990€ en 7 jours`;
-  const description = `Besoin d'un site web à ${city.name} ? ConvertiLab crée votre site internet professionnel dès 990€, livré en 7 jours, satisfait ou remboursé. +150 clients, 15 avis 4.9★. Devis gratuit sous 24h.`;
+  const title = `Création Site Internet ${city.name} — Site Web Pro dès 500€ en 7 jours`;
+  const description = `Besoin d'un site web à ${city.name} ? ConvertiLab crée votre site internet professionnel dès 500€, livré en 7 jours, satisfait ou remboursé. +150 clients, 15 avis 4.9★. Devis gratuit sous 24h.`;
 
   return {
     title,

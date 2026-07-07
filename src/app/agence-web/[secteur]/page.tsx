@@ -45,13 +45,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Titles et descriptions différenciés par ville (pattern unique + données
   // locales) pour éviter 53 pages au title identique, signal de contenu dupliqué.
   const titleVariants = [
-    `Agence Web ${city.name} — Création Site Internet en 7 jours dès 990€`,
-    `Création de Site Internet à ${city.name} (${city.department}) — Agence Web dès 990€`,
-    `Agence Web à ${city.name} : Site Vitrine Pro Livré en 7 jours dès 990€`,
+    `Agence Web ${city.name} — Création Site Internet en 7 jours dès 500€`,
+    `Création de Site Internet à ${city.name} (${city.department}) — Agence Web dès 500€`,
+    `Agence Web à ${city.name} : Site Vitrine Pro Livré en 7 jours dès 500€`,
   ];
   const title = titleVariants[city.slug.length % titleVariants.length];
   const industries = city.keyIndustries.slice(0, 2).join(", ").toLowerCase();
-  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine livré en 7 jours dès 990€, satisfait ou remboursé. 15 avis 4.9★. Devis gratuit sous 24h.`;
+  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine livré en 7 jours dès 500€, satisfait ou remboursé. 15 avis 4.9★. Devis gratuit sous 24h.`;
 
   return {
     title,
