@@ -80,9 +80,9 @@ Chez ConvertiLab, nous intégrons le SEO dès la conception de chaque site : arc
     importance:
       "Le SEO est le canal d'acquisition le plus rentable à long terme. Il génère un trafic qualifié et gratuit qui alimente votre business 24h/24. Sans SEO, votre site est invisible pour les 93% d'expériences en ligne qui commencent par un moteur de recherche.",
     examples: [
-      "Un plombier à Lyon optimise sa fiche Google Business Profile et ses pages de service pour 'plombier Lyon urgence' — il passe de 0 à 40 appels par mois en 4 mois.",
-      "Un e-commerce de cosmétiques bio crée un blog avec 50 articles optimisés sur des requêtes longue traîne — le trafic organique passe de 500 à 8 000 visites/mois en 8 mois.",
-      "Un cabinet d'avocats restructure l'architecture de son site avec un maillage interne par thématique — ses pages services gagnent en moyenne 15 positions sur Google en 3 mois.",
+      "Un plombier à Lyon optimise sa fiche Google Business Profile et ses pages de service pour 'plombier Lyon urgence' : il passe de 0 à 40 appels par mois en 4 mois.",
+      "Un e-commerce de cosmétiques bio crée un blog avec 50 articles optimisés sur des requêtes longue traîne : le trafic organique passe de 500 à 8 000 visites/mois en 8 mois.",
+      "Un cabinet d'avocats restructure l'architecture de son site avec un maillage interne par thématique : ses pages services gagnent en moyenne 15 positions sur Google en 3 mois.",
     ],
     faqItems: [
       {
@@ -156,9 +156,9 @@ Chez ConvertiLab, nous gérons vos campagnes Google Ads et Meta Ads avec un repo
     importance:
       "Le SEA est le moyen le plus rapide de générer du trafic qualifié et des leads. C'est l'outil idéal pour tester un marché, lancer un nouveau produit ou générer des résultats immédiats pendant que le SEO se met en place.",
     examples: [
-      "Un dentiste lance une campagne Google Ads ciblant 'dentiste urgence + sa ville' — il génère 25 nouveaux patients par mois avec un CPA de 35€ et un ROI de 10x.",
-      "Un SaaS B2B utilise des campagnes Search sur des mots-clés d'intention d'achat ('logiciel gestion projet') combinées à du remarketing Display — le coût par lead passe de 120€ à 45€ en 3 mois.",
-      "Un e-commerce de mode lance des campagnes Shopping avec des flux produits optimisés — le ROAS (retour sur dépense publicitaire) atteint 6x en période de soldes.",
+      "Un dentiste lance une campagne Google Ads ciblant 'dentiste urgence + sa ville' : il génère 25 nouveaux patients par mois avec un CPA de 35€ et un ROI de 10x.",
+      "Un SaaS B2B utilise des campagnes Search sur des mots-clés d'intention d'achat ('logiciel gestion projet') combinées à du remarketing Display : le coût par lead passe de 120€ à 45€ en 3 mois.",
+      "Un e-commerce de mode lance des campagnes Shopping avec des flux produits optimisés : le ROAS (retour sur dépense publicitaire) atteint 6x en période de soldes.",
     ],
     faqItems: [
       {
@@ -242,9 +242,9 @@ Chez ConvertiLab, nous créons des landing pages sur mesure, optimisées pour la
     importance:
       "La landing page est le maillon le plus critique de votre tunnel de conversion. Sans landing page optimisée, vos campagnes publicitaires gaspillent leur budget. C'est la différence entre un site qui coûte de l'argent et un site qui en rapporte.",
     examples: [
-      "Une agence immobilière crée une landing page 'Estimation gratuite de votre bien' avec un formulaire en 3 étapes — le taux de conversion passe de 1,8% à 8,5%, générant 120 leads qualifiés par mois.",
-      "Un coach sportif lance une landing page pour son programme en ligne avec une vidéo témoignage en hero — le taux de conversion atteint 12% et il vend 50 programmes par mois à 197€.",
-      "Un éditeur SaaS A/B teste deux versions de son titre de landing page — la version orientée bénéfice ('Gagnez 5h par semaine') surpasse la version orientée fonctionnalité ('Automatisez vos tâches') de 40%.",
+      "Une agence immobilière crée une landing page 'Estimation gratuite de votre bien' avec un formulaire en 3 étapes : le taux de conversion passe de 1,8% à 8,5%, générant 120 leads qualifiés par mois.",
+      "Un coach sportif lance une landing page pour son programme en ligne avec une vidéo témoignage en hero : le taux de conversion atteint 12% et il vend 50 programmes par mois à 197€.",
+      "Un éditeur SaaS A/B teste deux versions de son titre de landing page : la version orientée bénéfice ('Gagnez 5h par semaine') surpasse la version orientée fonctionnalité ('Automatisez vos tâches') de 40%.",
     ],
     faqItems: [
       {
@@ -335,9 +335,9 @@ Chez ConvertiLab, l'optimisation de la conversion est au cœur de chaque projet.
     importance:
       "Le taux de conversion est la métrique qui transforme votre trafic en revenus. Améliorer votre taux de conversion de 1 point peut doubler votre chiffre d'affaires sans augmenter votre budget publicitaire. C'est le levier le plus rentable du marketing digital.",
     examples: [
-      "Un site e-commerce simplifie son tunnel de paiement de 5 étapes à 2 étapes — le taux de conversion passe de 1,8% à 3,2%, soit +78% de ventes sans trafic supplémentaire.",
-      "Un cabinet de conseil ajoute des témoignages vidéo clients sur sa landing page — le taux de conversion du formulaire de contact passe de 4% à 7,5%.",
-      "Un SaaS remplace son CTA 'S'inscrire' par 'Essayer gratuitement pendant 14 jours' — le taux d'inscription augmente de 35%.",
+      "Un site e-commerce simplifie son tunnel de paiement de 5 étapes à 2 étapes : le taux de conversion passe de 1,8% à 3,2%, soit +78% de ventes sans trafic supplémentaire.",
+      "Un cabinet de conseil ajoute des témoignages vidéo clients sur sa landing page : le taux de conversion du formulaire de contact passe de 4% à 7,5%.",
+      "Un SaaS remplace son CTA 'S'inscrire' par 'Essayer gratuitement pendant 14 jours' : le taux d'inscription augmente de 35%.",
     ],
     faqItems: [
       {
@@ -426,9 +426,9 @@ Chez ConvertiLab, tous les sites que nous créons sont 100% responsive et optimi
     importance:
       "Avec 65% du trafic web provenant des mobiles, un site non responsive perd la majorité de ses visiteurs et est pénalisé par Google. Le responsive design n'est plus une option, c'est une exigence fondamentale pour tout site web professionnel.",
     examples: [
-      "Un restaurant refait son site en responsive avec menu accessible et bouton 'Réserver' visible sur mobile — les réservations en ligne augmentent de 85% en un mois.",
-      "Un e-commerce optimise son tunnel d'achat mobile (boutons plus grands, paiement Apple Pay) — le taux de conversion mobile passe de 0,8% à 2,1%.",
-      "Un cabinet comptable passe d'un site desktop-only à un site mobile-first — le taux de rebond mobile chute de 78% à 42% et les demandes de devis doublent.",
+      "Un restaurant refait son site en responsive avec menu accessible et bouton 'Réserver' visible sur mobile : les réservations en ligne augmentent de 85% en un mois.",
+      "Un e-commerce optimise son tunnel d'achat mobile (boutons plus grands, paiement Apple Pay) : le taux de conversion mobile passe de 0,8% à 2,1%.",
+      "Un cabinet comptable passe d'un site desktop-only à un site mobile-first : le taux de rebond mobile chute de 78% à 42% et les demandes de devis doublent.",
     ],
     faqItems: [
       {
@@ -520,9 +520,9 @@ Chez ConvertiLab, nous créons des sites vitrine haut de gamme avec Next.js, Tai
     importance:
       "Le site vitrine est souvent le premier point de contact entre votre entreprise et vos futurs clients. 81% des consommateurs consultent un site web avant de contacter une entreprise. Un site vitrine professionnel crédibilise votre activité et génère des leads qualifiés en continu.",
     examples: [
-      "Un artisan menuisier crée un site vitrine avec portfolio de ses réalisations — il reçoit 15 demandes de devis par mois au lieu de 2, et sélectionne les meilleurs chantiers.",
-      "Un cabinet d'architecte lance un site vitrine immersif avec scroll parallax et galerie de projets — son taux de prise de contact augmente de 200% et il attire des clients premium.",
-      "Un coach en développement personnel crée un site vitrine avec blog SEO et formulaire de découverte — il remplit son agenda de consultations 3 semaines à l'avance.",
+      "Un artisan menuisier crée un site vitrine avec portfolio de ses réalisations : il reçoit 15 demandes de devis par mois au lieu de 2, et sélectionne les meilleurs chantiers.",
+      "Un cabinet d'architecte lance un site vitrine immersif avec scroll parallax et galerie de projets : son taux de prise de contact augmente de 200% et il attire des clients premium.",
+      "Un coach en développement personnel crée un site vitrine avec blog SEO et formulaire de découverte : il remplit son agenda de consultations 3 semaines à l'avance.",
     ],
     faqItems: [
       {
@@ -614,9 +614,9 @@ Chez ConvertiLab, nous intégrons une stratégie de netlinking à nos prestation
     importance:
       "Les backlinks restent le facteur de ranking le plus influent après le contenu. Sans backlinks de qualité, même le meilleur contenu aura du mal à atteindre le top 3 de Google. C'est le nerf de la guerre du SEO off-page.",
     examples: [
-      "Un site e-commerce de produits artisanaux obtient un article dans un magazine lifestyle en ligne (DA 55) — la page produit mentionnée gagne 22 positions sur Google en 3 semaines.",
-      "Une agence web publie une étude statistique sur les tendances web design — l'étude est reprise par 35 blogs tech et génère 50 backlinks naturels en 2 mois.",
-      "Un restaurant obtient des liens depuis TripAdvisor, Le Fooding et le guide local de sa ville — sa fiche Google Business Profile remonte en position 1 du map pack.",
+      "Un site e-commerce de produits artisanaux obtient un article dans un magazine lifestyle en ligne (DA 55) : la page produit mentionnée gagne 22 positions sur Google en 3 semaines.",
+      "Une agence web publie une étude statistique sur les tendances web design : l'étude est reprise par 35 blogs tech et génère 50 backlinks naturels en 2 mois.",
+      "Un restaurant obtient des liens depuis TripAdvisor, Le Fooding et le guide local de sa ville : sa fiche Google Business Profile remonte en position 1 du map pack.",
     ],
     faqItems: [
       {
@@ -706,9 +706,9 @@ Chez ConvertiLab, chaque site est conçu avec des CTAs stratégiques testés et 
     importance:
       "Le CTA est le déclencheur de toute conversion sur votre site. Sans CTA clair et bien placé, vos visiteurs repartent sans agir. Optimiser vos CTAs est le moyen le plus rapide d'augmenter vos leads et ventes sans modifier le reste de votre site.",
     examples: [
-      "Un site de formation en ligne remplace 'S'inscrire' par 'Commencer ma formation gratuite' — le taux d'inscription augmente de 45%.",
-      "Un e-commerce ajoute un CTA sticky 'Ajouter au panier' visible en permanence sur mobile — le taux d'ajout au panier augmente de 28%.",
-      "Un cabinet comptable ajoute 'Réponse sous 2h' sous son bouton 'Demander un devis gratuit' — les demandes de devis augmentent de 60% en un mois.",
+      "Un site de formation en ligne remplace 'S'inscrire' par 'Commencer ma formation gratuite' : le taux d'inscription augmente de 45%.",
+      "Un e-commerce ajoute un CTA sticky 'Ajouter au panier' visible en permanence sur mobile : le taux d'ajout au panier augmente de 28%.",
+      "Un cabinet comptable ajoute 'Réponse sous 2h' sous son bouton 'Demander un devis gratuit' : les demandes de devis augmentent de 60% en un mois.",
     ],
     faqItems: [
       {
@@ -793,9 +793,9 @@ Chez ConvertiLab, nous créons des sites avec un panel d'administration sur mesu
     importance:
       "Le choix du CMS impacte directement la performance, la sécurité et l'évolutivité de votre site. Un bon CMS permet à votre équipe de gérer le contenu en autonomie tout en garantissant une expérience utilisateur optimale.",
     examples: [
-      "Un restaurant utilise un CMS headless pour gérer son menu en ligne — il modifie les plats et prix en temps réel depuis son téléphone, et le site se met à jour instantanément.",
-      "Une PME migre de WordPress vers un site Next.js avec Strapi — le temps de chargement passe de 4,2s à 1,1s et le taux de conversion augmente de 35%.",
-      "Un réseau de franchises utilise un CMS centralisé pour gérer 50 sites locaux — chaque franchise personnalise son contenu tout en respectant la charte graphique globale.",
+      "Un restaurant utilise un CMS headless pour gérer son menu en ligne : il modifie les plats et prix en temps réel depuis son téléphone, et le site se met à jour instantanément.",
+      "Une PME migre de WordPress vers un site Next.js avec Strapi : le temps de chargement passe de 4,2s à 1,1s et le taux de conversion augmente de 35%.",
+      "Un réseau de franchises utilise un CMS centralisé pour gérer 50 sites locaux : chaque franchise personnalise son contenu tout en respectant la charte graphique globale.",
     ],
     faqItems: [
       {
@@ -877,9 +877,9 @@ Chez ConvertiLab, l'UX est au cœur de chaque projet. Nous concevons des parcour
     importance:
       "L'UX détermine si un visiteur reste sur votre site ou le quitte en quelques secondes. 88% des utilisateurs ne reviennent pas après une mauvaise expérience. Investir dans l'UX est le moyen le plus efficace d'augmenter conversions et fidélisation.",
     examples: [
-      "Un e-commerce simplifie son parcours d'achat de 5 à 3 étapes après une analyse UX — le taux d'abandon de panier baisse de 35% et les ventes augmentent de 22%.",
-      "Un site SaaS réorganise sa navigation après des tests utilisateurs — le temps moyen pour trouver les tarifs passe de 45 secondes à 8 secondes, et les inscriptions augmentent de 40%.",
-      "Un cabinet médical refond son site avec un parcours de prise de rendez-vous en 2 clics — les réservations en ligne triplent en un mois.",
+      "Un e-commerce simplifie son parcours d'achat de 5 à 3 étapes après une analyse UX : le taux d'abandon de panier baisse de 35% et les ventes augmentent de 22%.",
+      "Un site SaaS réorganise sa navigation après des tests utilisateurs : le temps moyen pour trouver les tarifs passe de 45 secondes à 8 secondes, et les inscriptions augmentent de 40%.",
+      "Un cabinet médical refond son site avec un parcours de prise de rendez-vous en 2 clics : les réservations en ligne triplent en un mois.",
     ],
     faqItems: [
       {
@@ -966,9 +966,9 @@ Chez ConvertiLab, nous créons des interfaces visuellement impactantes avec Tail
     importance:
       "L'UI est la première impression de votre marque en ligne. 94% des premières impressions sont liées au design. Un UI professionnel inspire confiance, crédibilise votre entreprise et différencie votre site de la concurrence.",
     examples: [
-      "Une startup fintech refond son interface avec un design system cohérent — la perception de fiabilité augmente de 60% dans les enquêtes utilisateurs, et les inscriptions progressent de 25%.",
-      "Un e-commerce passe à un design épuré avec plus de whitespace et des photos produits grand format — le temps passé sur les fiches produits augmente de 40% et le panier moyen de 15%.",
-      "Un site de réservation implémente un mode sombre et des micro-animations — le taux de satisfaction utilisateur passe de 3,2/5 à 4,6/5.",
+      "Une startup fintech refond son interface avec un design system cohérent : la perception de fiabilité augmente de 60% dans les enquêtes utilisateurs, et les inscriptions progressent de 25%.",
+      "Un e-commerce passe à un design épuré avec plus de whitespace et des photos produits grand format : le temps passé sur les fiches produits augmente de 40% et le panier moyen de 15%.",
+      "Un site de réservation implémente un mode sombre et des micro-animations : le taux de satisfaction utilisateur passe de 3,2/5 à 4,6/5.",
     ],
     faqItems: [
       {
@@ -1052,9 +1052,9 @@ Chez ConvertiLab, nous concevons chaque projet avec un objectif de ROI clair. No
     importance:
       "Le ROI est la métrique qui justifie chaque investissement marketing. Sans mesure du ROI, vous ne savez pas si votre site web, vos campagnes ou votre stratégie SEO génèrent réellement de la valeur. C'est la boussole de toute décision business.",
     examples: [
-      "Un artisan investit 4 000€ dans un site vitrine optimisé SEO — il génère 8 nouveaux clients par mois avec un panier moyen de 1 500€, soit un ROI de 3 500% la première année.",
-      "Un e-commerce investit 2 000€/mois en Google Ads et génère 14 000€ de ventes — soit un ROI de 600% qui permet de scaler progressivement le budget.",
-      "Une agence immobilière mesure que chaque lead via son site coûte 25€ et qu'un lead sur 5 signe un mandat à 5 000€ de commission — le ROI par lead est de 3 900%.",
+      "Un artisan investit 4 000€ dans un site vitrine optimisé SEO : il génère 8 nouveaux clients par mois avec un panier moyen de 1 500€, soit un ROI de 3 500% la première année.",
+      "Un e-commerce investit 2 000€/mois en Google Ads et génère 14 000€ de ventes, soit un ROI de 600% qui permet de scaler progressivement le budget.",
+      "Une agence immobilière mesure que chaque lead via son site coûte 25€ et qu'un lead sur 5 signe un mandat à 5 000€ de commission : le ROI par lead est de 3 900%.",
     ],
     faqItems: [
       {
@@ -1144,9 +1144,9 @@ Chez ConvertiLab, nous analysons le taux de rebond de chaque page et optimisons 
     importance:
       "Un taux de rebond élevé signifie que vous perdez la majorité de vos visiteurs sans les convertir. C'est du trafic gaspillé et de l'argent publicitaire perdu. Réduire le taux de rebond est l'un des leviers les plus rapides pour améliorer les performances de votre site.",
     examples: [
-      "Un site e-commerce réduit son temps de chargement de 4,5s à 1,8s — le taux de rebond mobile passe de 68% à 41% et les ventes augmentent de 28%.",
-      "Une agence de voyage restructure sa page d'accueil avec un moteur de recherche visible et des destinations populaires — le taux de rebond chute de 72% à 38%.",
-      "Un blog optimise ses articles avec une table des matières, des visuels et des liens internes — le taux de rebond passe de 85% à 62% et le temps moyen sur page triple.",
+      "Un site e-commerce réduit son temps de chargement de 4,5s à 1,8s : le taux de rebond mobile passe de 68% à 41% et les ventes augmentent de 28%.",
+      "Une agence de voyage restructure sa page d'accueil avec un moteur de recherche visible et des destinations populaires : le taux de rebond chute de 72% à 38%.",
+      "Un blog optimise ses articles avec une table des matières, des visuels et des liens internes : le taux de rebond passe de 85% à 62% et le temps moyen sur page triple.",
     ],
     faqItems: [
       {
@@ -1244,9 +1244,9 @@ Chez ConvertiLab, tous nos sites sont optimisés pour obtenir des scores Core We
     importance:
       "Les Core Web Vitals sont un facteur de ranking Google qui impacte directement votre visibilité dans les résultats de recherche. Un site lent et instable perd des visiteurs et des positions. Optimiser ces métriques améliore votre SEO et vos conversions simultanément.",
     examples: [
-      "Un site e-commerce optimise ses images et passe à Next.js — le LCP passe de 4,2s à 1,8s, le CLS de 0,32 à 0,05, et le trafic organique augmente de 18% en 2 mois.",
-      "Un blog technique implémente le lazy loading et réduit le JavaScript — l'INP passe de 450ms à 120ms, et le taux de rebond mobile diminue de 25%.",
-      "Un site de services corrige les layout shifts causés par des polices et images non dimensionnées — le CLS passe de 0,28 à 0,03 et la position moyenne sur Google gagne 5 places.",
+      "Un site e-commerce optimise ses images et passe à Next.js : le LCP passe de 4,2s à 1,8s, le CLS de 0,32 à 0,05, et le trafic organique augmente de 18% en 2 mois.",
+      "Un blog technique implémente le lazy loading et réduit le JavaScript : l'INP passe de 450ms à 120ms, et le taux de rebond mobile diminue de 25%.",
+      "Un site de services corrige les layout shifts causés par des polices et images non dimensionnées : le CLS passe de 0,28 à 0,03 et la position moyenne sur Google gagne 5 places.",
     ],
     faqItems: [
       {
@@ -1333,9 +1333,9 @@ Chez ConvertiLab, nous intégrons le netlinking à nos stratégies SEO avec des 
     importance:
       "Le netlinking est le facteur SEO le plus difficile à maîtriser et celui qui fait la différence entre la page 2 et le top 3 de Google. Sans stratégie de liens, même le meilleur contenu reste invisible face à des concurrents avec un profil de backlinks solide.",
     examples: [
-      "Une agence immobilière publie une étude sur les prix au m² de sa ville, reprise par 15 médias locaux — elle gagne 15 backlinks de qualité et passe en position 1 sur 'agence immobilière + ville' en 2 mois.",
-      "Un e-commerce de mode crée un guide des tailles interactif, utilisé comme référence par 30 blogs mode — le trafic organique augmente de 45% en 6 mois.",
-      "Un consultant SEO propose des articles invités à 10 blogs marketing — sur 10 sollicitations, 3 acceptent, générant 3 backlinks DA 40+ qui boostent son autorité de domaine de 12 à 22.",
+      "Une agence immobilière publie une étude sur les prix au m² de sa ville, reprise par 15 médias locaux : elle gagne 15 backlinks de qualité et passe en position 1 sur 'agence immobilière + ville' en 2 mois.",
+      "Un e-commerce de mode crée un guide des tailles interactif, utilisé comme référence par 30 blogs mode : le trafic organique augmente de 45% en 6 mois.",
+      "Un consultant SEO propose des articles invités à 10 blogs marketing : sur 10 sollicitations, 3 acceptent, générant 3 backlinks DA 40+ qui boostent son autorité de domaine de 12 à 22.",
     ],
     faqItems: [
       {
@@ -1424,9 +1424,9 @@ Chez ConvertiLab, nous optimisons les meta tags de chaque page : title unique av
     importance:
       "Les meta tags sont votre première impression dans les résultats Google. Un bon title et une bonne meta description peuvent doubler votre taux de clic sans changer votre position. Ce sont des optimisations simples avec un impact direct sur votre trafic.",
     examples: [
-      "Un site e-commerce réécrit ses 200 meta descriptions avec des CTA et des bénéfices — le CTR moyen dans Google passe de 2,1% à 4,8%, soit +128% de trafic organique sans gagner une seule position.",
-      "Un cabinet d'avocats ajoute des balises Open Graph avec des images professionnelles — les partages LinkedIn de ses articles génèrent 3x plus de clics.",
-      "Un site de formation corrige ses 50 titles dupliqués et les optimise avec des mots-clés ciblés — 35 pages gagnent en moyenne 8 positions sur Google en 6 semaines.",
+      "Un site e-commerce réécrit ses 200 meta descriptions avec des CTA et des bénéfices : le CTR moyen dans Google passe de 2,1% à 4,8%, soit +128% de trafic organique sans gagner une seule position.",
+      "Un cabinet d'avocats ajoute des balises Open Graph avec des images professionnelles : les partages LinkedIn de ses articles génèrent 3x plus de clics.",
+      "Un site de formation corrige ses 50 titles dupliqués et les optimise avec des mots-clés ciblés : 35 pages gagnent en moyenne 8 positions sur Google en 6 semaines.",
     ],
     faqItems: [
       {
@@ -1516,9 +1516,9 @@ Chez ConvertiLab, nous gérons vos campagnes Google Ads avec une méthodologie r
     importance:
       "Google Ads est le canal d'acquisition payant le plus puissant pour générer des leads et des ventes immédiatement. C'est le seul canal qui capte une intention d'achat active au moment exact où l'utilisateur cherche votre produit ou service.",
     examples: [
-      "Un dentiste lance des campagnes Search sur 'dentiste + ville' avec landing page dédiée — il génère 30 nouveaux patients/mois avec un CPA de 28€ pour un panier moyen de 350€.",
-      "Un e-commerce lance des campagnes Shopping avec des flux produits optimisés — le ROAS atteint 7x en période de fêtes avec un budget de 5 000€/mois.",
-      "Un SaaS B2B utilise Performance Max combiné à du remarketing — le coût par lead qualifié passe de 85€ à 32€ en 3 mois d'optimisation.",
+      "Un dentiste lance des campagnes Search sur 'dentiste + ville' avec landing page dédiée : il génère 30 nouveaux patients/mois avec un CPA de 28€ pour un panier moyen de 350€.",
+      "Un e-commerce lance des campagnes Shopping avec des flux produits optimisés : le ROAS atteint 7x en période de fêtes avec un budget de 5 000€/mois.",
+      "Un SaaS B2B utilise Performance Max combiné à du remarketing : le coût par lead qualifié passe de 85€ à 32€ en 3 mois d'optimisation.",
     ],
     faqItems: [
       {
@@ -1608,9 +1608,9 @@ Chez ConvertiLab, nous créons et gérons vos campagnes Meta Ads avec des créat
     importance:
       "Meta Ads donne accès à 3 milliards d'utilisateurs avec un ciblage ultra-précis. C'est l'outil le plus puissant pour créer la demande, développer la notoriété et générer des ventes en B2C. Combiné à Google Ads, il forme le duo publicitaire le plus efficace.",
     examples: [
-      "Un e-commerce de bijoux lance des campagnes Advantage+ Shopping sur Instagram — le ROAS atteint 8x avec un budget de 3 000€/mois et 200 ventes générées.",
-      "Un coach business utilise des Lead Ads avec un ebook gratuit comme lead magnet — il collecte 500 leads qualifiés par mois à 2,50€ le lead.",
-      "Un restaurant lance des publicités Reels géolocalisées montrant ses plats — les réservations augmentent de 120% le mois suivant avec un budget de 500€.",
+      "Un e-commerce de bijoux lance des campagnes Advantage+ Shopping sur Instagram : le ROAS atteint 8x avec un budget de 3 000€/mois et 200 ventes générées.",
+      "Un coach business utilise des Lead Ads avec un ebook gratuit comme lead magnet : il collecte 500 leads qualifiés par mois à 2,50€ le lead.",
+      "Un restaurant lance des publicités Reels géolocalisées montrant ses plats : les réservations augmentent de 120% le mois suivant avec un budget de 500€.",
     ],
     faqItems: [
       {
@@ -1714,9 +1714,9 @@ Chez ConvertiLab, nous optimisons le référencement local de nos clients dès l
     importance:
       "Pour toute entreprise locale, le référencement local est le canal d'acquisition le plus rentable. 46% des recherches Google sont locales et 76% des chercheurs locaux visitent un commerce dans les 24h. Être invisible localement, c'est offrir vos clients à la concurrence.",
     examples: [
-      "Un plombier optimise sa fiche Google Business Profile et collecte 80 avis 5 étoiles — il passe en position 1 du Map Pack et reçoit 50 appels/mois sans publicité payante.",
-      "Un restaurant crée des pages optimisées pour 'restaurant italien + quartier' et publie des posts hebdomadaires sur sa fiche — le trafic en salle augmente de 35% en 3 mois.",
-      "Un cabinet dentaire corrige ses incohérences NAP sur 30 annuaires et lance une stratégie d'avis — sa visibilité locale augmente de 180% en 4 mois.",
+      "Un plombier optimise sa fiche Google Business Profile et collecte 80 avis 5 étoiles : il passe en position 1 du Map Pack et reçoit 50 appels/mois sans publicité payante.",
+      "Un restaurant crée des pages optimisées pour 'restaurant italien + quartier' et publie des posts hebdomadaires sur sa fiche : le trafic en salle augmente de 35% en 3 mois.",
+      "Un cabinet dentaire corrige ses incohérences NAP sur 30 annuaires et lance une stratégie d'avis : sa visibilité locale augmente de 180% en 4 mois.",
     ],
     faqItems: [
       {
@@ -1818,9 +1818,9 @@ Chez ConvertiLab, nous créons des sites e-commerce sur mesure avec Next.js et S
     importance:
       "Le e-commerce représente 160 milliards d'euros en France et croît de 10% par an. Avoir une boutique en ligne bien conçue n'est plus une option mais une nécessité pour toute entreprise qui vend des produits ou services. Chaque jour sans e-commerce est un jour de ventes perdues.",
     examples: [
-      "Une marque de cosmétiques bio lance un site e-commerce Next.js + Stripe — elle génère 85 000€ de ventes le premier trimestre avec un panier moyen de 65€.",
-      "Un artisan fromager crée une boutique en ligne avec livraison nationale — il triple son chiffre d'affaires en diversifiant ses canaux de vente au-delà de sa boutique physique.",
-      "Un e-commerce de mode optimise ses fiches produits avec des avis et des photos 360° — le taux de conversion passe de 1,2% à 3,1% et le taux de retour baisse de 25%.",
+      "Une marque de cosmétiques bio lance un site e-commerce Next.js + Stripe : elle génère 85 000€ de ventes le premier trimestre avec un panier moyen de 65€.",
+      "Un artisan fromager crée une boutique en ligne avec livraison nationale : il triple son chiffre d'affaires en diversifiant ses canaux de vente au-delà de sa boutique physique.",
+      "Un e-commerce de mode optimise ses fiches produits avec des avis et des photos 360° : le taux de conversion passe de 1,2% à 3,1% et le taux de retour baisse de 25%.",
     ],
     faqItems: [
       {
@@ -1921,9 +1921,9 @@ Chez ConvertiLab, l'hébergement sur Vercel est inclus dans nos prestations. Nos
     importance:
       "L'hébergement est le fondement invisible de votre site web. Un mauvais hébergement rend votre site lent, instable et vulnérable, ce qui impacte directement votre SEO, votre taux de conversion et l'image de votre entreprise.",
     examples: [
-      "Un site e-commerce migre d'un hébergement mutualisé OVH vers Vercel — le temps de chargement passe de 3,8s à 0,9s et les ventes augmentent de 22% le mois suivant.",
-      "Un blog à fort trafic subit des indisponibilités récurrentes sur hébergement mutualisé (3-4 fois/mois) — la migration vers un VPS cloud résout le problème et le trafic SEO récupère en 2 semaines.",
-      "Une startup déploie son application sur Vercel avec CI/CD automatique — chaque mise à jour est en production en 45 secondes, accélérant le rythme d'innovation de 5x.",
+      "Un site e-commerce migre d'un hébergement mutualisé OVH vers Vercel : le temps de chargement passe de 3,8s à 0,9s et les ventes augmentent de 22% le mois suivant.",
+      "Un blog à fort trafic subit des indisponibilités récurrentes sur hébergement mutualisé (3-4 fois/mois) : la migration vers un VPS cloud résout le problème et le trafic SEO récupère en 2 semaines.",
+      "Une startup déploie son application sur Vercel avec CI/CD automatique : chaque mise à jour est en production en 45 secondes, accélérant le rythme d'innovation de 5x.",
     ],
     faqItems: [
       {
@@ -2020,9 +2020,9 @@ Le nom de domaine est votre adresse permanente sur internet et le pilier de votr
     importance:
       "Le nom de domaine est votre adresse permanente sur internet et le pilier de votre identité en ligne. Un bon nom de domaine inspire confiance, renforce votre marque et facilite le référencement. Perdre son nom de domaine, c'est perdre sa visibilité en ligne.",
     examples: [
-      "Une startup réserve son nom de marque en .fr et .com dès sa création pour 12€/an — elle protège sa marque et construit son autorité de domaine dès le premier jour.",
-      "Un artisan découvre que son ancien prestataire a enregistré le domaine à son propre nom — il perd 6 mois et 2 000€ en procédures pour récupérer la propriété de son domaine.",
-      "Un e-commerce rachète un nom de domaine expiré avec un bon historique SEO et 150 backlinks — il bénéficie immédiatement de l'autorité de domaine existante et se positionne plus vite sur Google.",
+      "Une startup réserve son nom de marque en .fr et .com dès sa création pour 12€/an : elle protège sa marque et construit son autorité de domaine dès le premier jour.",
+      "Un artisan découvre que son ancien prestataire a enregistré le domaine à son propre nom : il perd 6 mois et 2 000€ en procédures pour récupérer la propriété de son domaine.",
+      "Un e-commerce rachète un nom de domaine expiré avec un bon historique SEO et 150 backlinks : il bénéficie immédiatement de l'autorité de domaine existante et se positionne plus vite sur Google.",
     ],
     faqItems: [
       {
@@ -2122,9 +2122,9 @@ Chez ConvertiLab, nous intégrons des formulaires de capture d'email optimisés 
     importance:
       "L'email marketing offre le meilleur ROI de tous les canaux marketing (36€ pour 1€ investi). C'est le seul canal où vous possédez votre audience : contrairement aux réseaux sociaux, votre liste email ne dépend d'aucun algorithme. Négliger l'email, c'est laisser de l'argent sur la table.",
     examples: [
-      "Un e-commerce met en place une séquence de relance de panier abandonné (3 emails sur 48h) — il récupère 12% des paniers abandonnés, soit 8 000€ de ventes supplémentaires par mois.",
-      "Un consultant lance une newsletter hebdomadaire avec des conseils pratiques — en 6 mois, sa liste passe de 0 à 2 500 abonnés et la newsletter génère 40% de ses prises de rendez-vous.",
-      "Un site de formation segmente sa liste par intérêt (marketing, vente, management) et personnalise les emails — le taux de clic passe de 2,1% à 7,8% et les ventes de formations augmentent de 55%.",
+      "Un e-commerce met en place une séquence de relance de panier abandonné (3 emails sur 48h) : il récupère 12% des paniers abandonnés, soit 8 000€ de ventes supplémentaires par mois.",
+      "Un consultant lance une newsletter hebdomadaire avec des conseils pratiques : en 6 mois, sa liste passe de 0 à 2 500 abonnés et la newsletter génère 40% de ses prises de rendez-vous.",
+      "Un site de formation segmente sa liste par intérêt (marketing, vente, management) et personnalise les emails : le taux de clic passe de 2,1% à 7,8% et les ventes de formations augmentent de 55%.",
     ],
     faqItems: [
       {
@@ -2223,9 +2223,9 @@ Chez ConvertiLab, nous intégrons l'A/B testing dans notre processus d'optimisat
     importance:
       "L'A/B testing est la seule méthode fiable pour optimiser un site web. Sans test, vous optimisez à l'aveugle. Avec l'A/B testing, chaque décision est basée sur des données, et les améliorations se cumulent pour doubler ou tripler votre taux de conversion sur quelques mois.",
     examples: [
-      "Un SaaS teste deux titres de landing page : 'Automatisez vos tâches' vs 'Gagnez 5h par semaine' — la version orientée bénéfice gagne avec +42% de conversions.",
-      "Un e-commerce teste un formulaire de checkout en 1 étape vs 3 étapes — le formulaire en 1 étape augmente les conversions de 18% sur desktop mais les réduit de 5% sur mobile.",
-      "Un site de services teste l'ajout d'un témoignage vidéo sur sa landing page — le taux de conversion du formulaire de contact augmente de 32%, validant l'investissement dans le contenu vidéo.",
+      "Un SaaS teste deux titres de landing page : 'Automatisez vos tâches' vs 'Gagnez 5h par semaine' : la version orientée bénéfice gagne avec +42% de conversions.",
+      "Un e-commerce teste un formulaire de checkout en 1 étape vs 3 étapes : le formulaire en 1 étape augmente les conversions de 18% sur desktop mais les réduit de 5% sur mobile.",
+      "Un site de services teste l'ajout d'un témoignage vidéo sur sa landing page : le taux de conversion du formulaire de contact augmente de 32%, validant l'investissement dans le contenu vidéo.",
     ],
     faqItems: [
       {
@@ -2309,9 +2309,9 @@ Chez ConvertiLab, nous concevons des tunnels de conversion complets : du premier
     importance:
       "Le tunnel de conversion est la colonne vertébrale de votre stratégie marketing digital. Sans tunnel structuré, vous perdez des prospects à chaque étape sans savoir où ni pourquoi. Optimiser votre tunnel est le moyen le plus systématique d'augmenter votre chiffre d'affaires.",
     examples: [
-      "Un cabinet de conseil crée un tunnel : article SEO > ebook gratuit > séquence email 7 jours > consultation gratuite > proposition — le taux de conversion visiteur > client passe de 0,3% à 1,8%.",
-      "Un e-commerce identifie via Google Analytics que 45% des paniers sont abandonnés au moment de la livraison — il ajoute la livraison gratuite à partir de 50€ et récupère 20% des abandons.",
-      "Un SaaS met en place un tunnel automatisé : essai gratuit > onboarding email (5 emails sur 14 jours) > upgrade — le taux de conversion essai > payant passe de 8% à 19%.",
+      "Un cabinet de conseil crée un tunnel : article SEO > ebook gratuit > séquence email 7 jours > consultation gratuite > proposition : le taux de conversion visiteur > client passe de 0,3% à 1,8%.",
+      "Un e-commerce identifie via Google Analytics que 45% des paniers sont abandonnés au moment de la livraison : il ajoute la livraison gratuite à partir de 50€ et récupère 20% des abandons.",
+      "Un SaaS met en place un tunnel automatisé : essai gratuit > onboarding email (5 emails sur 14 jours) > upgrade : le taux de conversion essai > payant passe de 8% à 19%.",
     ],
     faqItems: [
       {
@@ -2397,9 +2397,9 @@ Chez ConvertiLab, nous configurons Google Analytics 4 sur chaque site avec un tr
     importance:
       "Google Analytics transforme les intuitions en décisions data-driven. Sans analytics, vous ne savez pas quel canal fonctionne, quelle page convertit, ni si votre investissement marketing est rentable. C'est le tableau de bord indispensable de toute stratégie digitale.",
     examples: [
-      "Un e-commerce découvre via GA4 que 72% de son trafic vient du mobile mais que le taux de conversion mobile est 3x inférieur au desktop — il priorise l'optimisation mobile et les ventes augmentent de 35%.",
-      "Un cabinet de conseil identifie via les UTM que sa newsletter génère 40% de ses leads qualifiés alors qu'il n'y consacrait que 10% de son budget — il réalloue ses efforts et double ses leads en 2 mois.",
-      "Un site vitrine configure le suivi des appels téléphoniques dans GA4 et découvre que son blog génère 60% des appels entrants — il investit dans 20 articles SEO supplémentaires.",
+      "Un e-commerce découvre via GA4 que 72% de son trafic vient du mobile mais que le taux de conversion mobile est 3x inférieur au desktop : il priorise l'optimisation mobile et les ventes augmentent de 35%.",
+      "Un cabinet de conseil identifie via les UTM que sa newsletter génère 40% de ses leads qualifiés alors qu'il n'y consacrait que 10% de son budget : il réalloue ses efforts et double ses leads en 2 mois.",
+      "Un site vitrine configure le suivi des appels téléphoniques dans GA4 et découvre que son blog génère 60% des appels entrants : il investit dans 20 articles SEO supplémentaires.",
     ],
     faqItems: [
       {
@@ -2485,9 +2485,9 @@ Chez ConvertiLab, chaque site que nous créons est optimisé pour l'indexation :
     importance:
       "Sans indexation, votre site est invisible sur Google. C'est la condition préalable à tout référencement. Des problèmes d'indexation silencieux peuvent faire disparaître des pages entières de Google sans que vous le réalisiez, coûtant des milliers de visites perdues.",
     examples: [
-      "Un e-commerce découvre via Search Console que 60% de ses fiches produits ne sont pas indexées à cause de contenu dupliqué — après réécriture des descriptions, 85% des pages sont indexées en 6 semaines.",
-      "Un blog soumet un sitemap XML à Google Search Console et ajoute du maillage interne — le temps moyen d'indexation de ses nouveaux articles passe de 2 semaines à 48 heures.",
-      "Un site vitrine bloquait involontairement ses pages de service via le robots.txt — la correction permet l'indexation et le site passe de 0 à 500 visites organiques/mois en 3 mois.",
+      "Un e-commerce découvre via Search Console que 60% de ses fiches produits ne sont pas indexées à cause de contenu dupliqué : après réécriture des descriptions, 85% des pages sont indexées en 6 semaines.",
+      "Un blog soumet un sitemap XML à Google Search Console et ajoute du maillage interne : le temps moyen d'indexation de ses nouveaux articles passe de 2 semaines à 48 heures.",
+      "Un site vitrine bloquait involontairement ses pages de service via le robots.txt : la correction permet l'indexation et le site passe de 0 à 500 visites organiques/mois en 3 mois.",
     ],
     faqItems: [
       {
@@ -2576,9 +2576,9 @@ Chez ConvertiLab, tous nos sites sont sécurisés en HTTPS dès le premier jour 
     importance:
       "HTTPS est un prérequis absolu pour tout site web en 2026. Sans HTTPS, votre site est pénalisé par Google, marqué 'Non sécurisé' par les navigateurs, et rejeté par 82% des visiteurs. C'est la base de la confiance en ligne et de la protection des données de vos utilisateurs.",
     examples: [
-      "Un site e-commerce en HTTP migre vers HTTPS — le taux de rebond diminue de 15% car les visiteurs ne voient plus l'avertissement 'Non sécurisé', et le trafic organique augmente de 8% grâce au boost SEO.",
-      "Un formulaire de contact sur un site HTTP était ignoré par les visiteurs méfiants — après passage en HTTPS, les soumissions de formulaire augmentent de 42%.",
-      "Un site vitrine active HTTPS gratuitement via Let's Encrypt sur Vercel en 2 minutes — zéro coût, zéro maintenance, et conformité immédiate avec les exigences Google et RGPD.",
+      "Un site e-commerce en HTTP migre vers HTTPS : le taux de rebond diminue de 15% car les visiteurs ne voient plus l'avertissement 'Non sécurisé', et le trafic organique augmente de 8% grâce au boost SEO.",
+      "Un formulaire de contact sur un site HTTP était ignoré par les visiteurs méfiants : après passage en HTTPS, les soumissions de formulaire augmentent de 42%.",
+      "Un site vitrine active HTTPS gratuitement via Let's Encrypt sur Vercel en 2 minutes : zéro coût, zéro maintenance, et conformité immédiate avec les exigences Google et RGPD.",
     ],
     faqItems: [
       {
