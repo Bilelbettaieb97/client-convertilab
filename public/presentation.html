@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConvertiLab — Présentation Commerciale</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  :root{
+    --violet:#8B5CF6;--magenta:#E04090;--grad:linear-gradient(135deg,#8B5CF6 0%,#E04090 100%);
+    --bg:#0B0B12;--text:#F5F5F7;--muted:#A0A0B0;--line:rgba(255,255,255,.08);
+    --green:#34D399;--ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg);color:var(--text);overflow:hidden}
+
+  /* aurora */
+  .aurora{position:fixed;inset:0;z-index:0;overflow:hidden;background:var(--bg)}
+  .blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;mix-blend-mode:screen}
+  .b1{width:55vw;height:55vw;background:var(--violet);top:-15vw;right:-10vw;animation:d1 18s var(--ease) infinite alternate}
+  .b2{width:50vw;height:50vw;background:var(--magenta);bottom:-18vw;left:-12vw;animation:d2 22s var(--ease) infinite alternate}
+  .b3{width:30vw;height:30vw;background:#6D28D9;top:40%;left:45%;opacity:.32;animation:d3 26s var(--ease) infinite alternate}
+  @keyframes d1{to{transform:translate(-8vw,10vh) scale(1.15)}}
+  @keyframes d2{to{transform:translate(10vw,-8vh) scale(1.1)}}
+  @keyframes d3{to{transform:translate(-14vw,-6vh) scale(1.25)}}
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  /* deck */
+  .deck{position:relative;z-index:2;width:100vw;height:100vh}
+  .slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:7vh 9vw;
+    opacity:0;visibility:hidden;pointer-events:none;transform:translateX(60px);
+    transition:opacity .55s var(--ease),transform .7s var(--ease),visibility .55s}
+  .slide.prev{transform:translateX(-60px)}
+  .slide.active{opacity:1;visibility:visible;pointer-events:auto;transform:none}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .slide.active .reveal{opacity:1;transform:none;transition-delay:calc(var(--i,0)*.08s + .1s)}
+
+  .eyebrow{font-size:.88rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text;margin-bottom:1.2rem}
+  h1{font-size:clamp(2.5rem,6vw,5.2rem);font-weight:900;line-height:1.03;letter-spacing:-.03em}
+  h2{font-size:clamp(2.1rem,4.5vw,3.6rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:1.6rem}
+  .lead{font-size:clamp(1.15rem,2.1vw,1.65rem);color:var(--muted);max-width:58ch;line-height:1.5;margin-top:1.2rem;font-weight:400}
+  .grad-text{background:linear-gradient(110deg,#8B5CF6,#E04090 35%,#B57BEA 55%,#E04090 75%,#8B5CF6);background-size:250% 100%;color:transparent;-webkit-background-clip:text;background-clip:text;animation:sh 6s linear infinite}
+  @keyframes sh{to{background-position:-250% 0}}
+
+  /* logo */
+  .brandbar{display:flex;align-items:center;gap:.6rem;margin-bottom:auto}
+  .logo-mark{width:42px;height:42px;border-radius:11px;background:var(--grad);display:grid;place-items:center;font-weight:900;font-size:1.3rem;color:#fff;animation:pulse 3s var(--ease) infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(224,64,144,.45)}50%{box-shadow:0 0 0 12px rgba(224,64,144,0)}}
+  .logo-word{font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+
+  /* live badge */
+  .live{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;color:#c9f5e3;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);padding:.4rem .9rem;border-radius:999px;font-weight:600}
+  .live .dot{position:relative;display:inline-flex;width:9px;height:9px}
+  .live .dot::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--green);animation:ping 1.6s var(--ease) infinite}
+  .live .dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--green)}
+  @keyframes ping{0%{transform:scale(1);opacity:.8}75%,100%{transform:scale(2.6);opacity:0}}
+
+  /* grids / cards */
+  .grid{display:grid;gap:1rem;margin-top:.4rem}
+  .cols-2{grid-template-columns:repeat(2,1fr)}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  .card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:16px;padding:1.4rem 1.3rem;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s}
+  .card::before{content:"";position:absolute;inset:0;border-radius:16px;padding:1px;background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .35s}
+  .card:hover{transform:translateY(-5px);box-shadow:0 18px 46px rgba(139,92,246,.16)}
+  .card:hover::before{opacity:1}
+  .card .ic{width:46px;height:46px;border-radius:11px;background:rgba(139,92,246,.15);display:grid;place-items:center;font-size:1.4rem;margin-bottom:.9rem}
+  .card h3{font-size:1.3rem;font-weight:700;margin-bottom:.4rem}
+  .card p{color:var(--muted);font-size:1.08rem;line-height:1.45}
+
+  /* pain list */
+  .pains{display:flex;flex-direction:column;gap:1.1rem;margin-top:.8rem;max-width:66ch}
+  .pain{display:flex;align-items:flex-start;gap:1rem;font-size:1.4rem;color:#E8E8EE;line-height:1.4}
+  .pain .x{flex:none;width:32px;height:32px;border-radius:50%;background:rgba(224,64,144,.15);color:#F7A8C9;display:grid;place-items:center;font-weight:800;font-size:1rem;margin-top:.15rem}
+
+  /* cost banner */
+  .costbox{margin-top:1.6rem;padding:1.5rem 1.7rem;border-radius:16px;background:rgba(224,64,144,.08);border:1px solid rgba(224,64,144,.28);font-size:1.3rem;line-height:1.5}
+  .costbox b{color:#F7A8C9}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:1rem}
+  .step .num{font-size:3rem;font-weight:900;line-height:1}
+  .step h3{font-size:1.28rem;margin:.6rem 0 .35rem;font-weight:700}
+  .step p{color:var(--muted);font-size:1.05rem;line-height:1.45}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:.6rem}
+  .stat .big{font-size:clamp(2.5rem,5.2vw,4.2rem);font-weight:900;letter-spacing:-.03em;line-height:1}
+  .stat .lbl{color:var(--muted);font-size:1.1rem;margin-top:.5rem;line-height:1.35}
+
+  /* testimonials */
+  .quote{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:16px;padding:1.4rem;display:flex;flex-direction:column;gap:1rem}
+  .quote .stars{color:#FFC24B;font-size:1.15rem;letter-spacing:2px}
+  .quote p{font-size:1.12rem;line-height:1.5;color:#ECECF2}
+  .quote .who{display:flex;align-items:center;gap:.7rem;margin-top:auto}
+  .avatar{width:40px;height:40px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-weight:800;color:#fff}
+  .who b{display:block;font-size:.92rem}
+  .who span{font-size:.82rem;color:var(--muted)}
+
+  /* before / after */
+  .ba{display:grid;grid-template-columns:1fr auto 1fr;gap:1.6rem;align-items:center;margin-top:1rem}
+  .ba .col{border-radius:16px;padding:1.4rem;border:1px solid var(--line)}
+  .ba .before{background:rgba(224,64,144,.06)}
+  .ba .after{background:rgba(52,211,153,.07);border-color:rgba(52,211,153,.25)}
+  .ba h4{font-size:.95rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.9rem}
+  .ba .before h4{color:#F7A8C9}.ba .after h4{color:#8FEAC5}
+  .ba ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+  .ba li{font-size:1.18rem;color:#E8E8EE;display:flex;gap:.6rem;align-items:flex-start}
+  .ba .arrow{font-size:2.6rem;color:var(--violet)}
+
+  /* packages */
+  .pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:.6rem}
+  .pkg{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:18px;padding:1.5rem 1.4rem;display:flex;flex-direction:column}
+  .pkg.reco{border-color:transparent;background:linear-gradient(180deg,rgba(139,92,246,.14),rgba(224,64,144,.06))}
+  .pkg.reco::before{content:"";position:absolute;inset:0;border-radius:18px;padding:1.5px;background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+  .pkg .tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--grad);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.08em;padding:.3rem .8rem;border-radius:999px;text-transform:uppercase}
+  .pkg .name{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
+  .pkg .sub{font-size:.95rem;color:var(--muted);margin-bottom:1rem;min-height:2.4em}
+  .pkg .price{font-size:2.4rem;font-weight:900;letter-spacing:-.02em}
+  .pkg .mo{font-size:.95rem;color:var(--muted);margin-bottom:1rem}
+  .pkg ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;font-size:1rem}
+  .pkg li{display:flex;gap:.5rem;align-items:flex-start;color:#DADAE4}
+  .pkg li .c{color:var(--green);flex:none}
+
+  /* value stack */
+  .stack{display:flex;flex-direction:column;gap:.8rem;margin-top:.8rem;max-width:72ch}
+  .stack .row{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.3rem;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+  .stack .row span{font-size:1.28rem}.stack .row b{color:var(--muted);font-size:1.15rem}
+  .stack .total{background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.35)}
+  .stack .total b{color:var(--text)}
+
+  /* guarantees */
+  .guar{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem;margin-top:.8rem;max-width:82ch}
+  .guar .g{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem 1.3rem;border-radius:14px;background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.2)}
+  .guar .g .ic{flex:none;font-size:1.7rem}
+  .guar .g b{display:block;margin-bottom:.2rem;font-size:1.15rem}
+  .guar .g p{font-size:1.02rem;color:var(--muted);line-height:1.45}
+
+  /* faq */
+  .faq{display:flex;flex-direction:column;gap:.7rem;margin-top:.8rem;max-width:80ch}
+  .qa{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.025)}
+  .qa .q{padding:1.05rem 1.3rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:1.22rem}
+  .qa .q .plus{color:var(--violet);font-size:1.5rem;transition:transform .3s var(--ease)}
+  .qa.open .q .plus{transform:rotate(45deg)}
+  .qa .a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);color:var(--muted);font-size:1.08rem;line-height:1.5}
+  .qa.open .a{max-height:200px}
+  .qa .a div{padding:0 1.1rem 1rem}
+
+  /* CTA */
+  .cta-btn{position:relative;display:inline-flex;align-items:center;gap:.6rem;background:var(--grad);color:#fff;font-weight:700;font-size:1.3rem;padding:1.15rem 2.4rem;border-radius:16px;margin-top:1.8rem;box-shadow:0 12px 40px rgba(224,64,144,.35);overflow:hidden;transition:transform .3s var(--ease)}
+  .cta-btn:hover{transform:translateY(-3px) scale(1.02)}
+  .cta-btn::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:sheen 3.5s ease-in-out infinite}
+  @keyframes sheen{0%,60%{left:-120%}100%{left:150%}}
+  .cta-btn .arrow{transition:transform .3s var(--ease)}.cta-btn:hover .arrow{transform:translateX(5px)}
+  .contact-line{margin-top:2rem;display:flex;gap:1.8rem;flex-wrap:wrap;color:var(--muted);font-size:1.18rem}
+  .contact-line b{color:var(--text)}
+
+  /* nav */
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--grad);width:0;z-index:20;transition:width .5s var(--ease);box-shadow:0 0 12px rgba(224,64,144,.6)}
+  .nav{position:fixed;bottom:20px;right:24px;display:flex;align-items:center;gap:12px;z-index:20;color:var(--muted);font-size:.82rem}
+  .nav button{background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--text);width:36px;height:36px;border-radius:10px;cursor:pointer;font-size:1.05rem;transition:.25s var(--ease)}
+  .nav button:hover{background:rgba(139,92,246,.28);transform:translateY(-2px)}
+  .dots{position:fixed;bottom:24px;left:24px;display:flex;gap:7px;z-index:20;max-width:60vw;flex-wrap:wrap}
+  .dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.2);transition:.4s var(--ease);cursor:pointer}
+  .dot.active{background:var(--grad);width:22px;border-radius:4px}
+  .hint{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.78rem;z-index:20;opacity:.5}
+
+  /* ===== MOTION UPGRADE ===== */
+  #fx{position:fixed;inset:0;z-index:1;pointer-events:none}
+  .spot{position:fixed;top:0;left:0;width:640px;height:640px;margin:-320px 0 0 -320px;z-index:1;pointer-events:none;
+    background:radial-gradient(circle,rgba(139,92,246,.16),transparent 62%);mix-blend-mode:screen;
+    transform:translate(var(--mx,50vw),var(--my,45vh));transition:transform .16s ease-out}
+  /* kinetic word reveal */
+  .kw{display:inline-block;opacity:0;transform:translateY(.55em) rotateZ(3deg);filter:blur(9px);
+    transition:opacity .55s var(--ease),transform .65s var(--ease),filter .55s var(--ease)}
+  .slide.active .kw{opacity:1;transform:none;filter:blur(0);transition-delay:calc(var(--w,0)*.05s + .12s)}
+  /* 3D tilt targets */
+  .card,.pkg,.quote{transform-style:preserve-3d;will-change:transform;transition:transform .25s var(--ease),box-shadow .35s}
+  /* reco rotating glow */
+  .pkg.reco{isolation:isolate}
+  .pkg.reco .spin{position:absolute;inset:-45%;z-index:-1;border-radius:50%;
+    background:conic-gradient(from 0deg,transparent 0deg,rgba(139,92,246,.55) 90deg,rgba(224,64,144,.55) 200deg,transparent 320deg);
+    animation:spin 6s linear infinite;filter:blur(22px);opacity:.8}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  /* intro splash */
+  .splash{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:var(--bg);transition:opacity .7s var(--ease),visibility .7s}
+  .splash.gone{opacity:0;visibility:hidden}
+  .splash .s-logo{display:flex;align-items:center;gap:.9rem;animation:sIn 1s var(--ease) forwards}
+  .splash .s-mark{width:66px;height:66px;border-radius:17px;background:var(--grad);display:grid;place-items:center;font-weight:900;font-size:2.1rem;color:#fff;box-shadow:0 0 70px rgba(224,64,144,.55)}
+  .splash .s-word{font-size:2.1rem;font-weight:800;letter-spacing:-.02em;opacity:0;animation:sWord .6s var(--ease) .3s forwards}
+  @keyframes sIn{from{opacity:0;transform:scale(.82)}to{opacity:1;transform:scale(1)}}
+  @keyframes sWord{to{opacity:1}}
+
+  /* ===== CINEMATIC TRANSITION ===== */
+  .slide{transform:translateX(50px) scale(.965);filter:blur(7px);
+    transition:opacity .6s var(--ease),transform .8s var(--ease),filter .6s var(--ease),visibility .6s}
+  .slide.prev{transform:translateX(-50px) scale(.965)}
+  .slide.active{transform:none;filter:none}
+
+  /* ===== FRAGMENTS (suspense au clic) ===== */
+  .frag{opacity:0;visibility:hidden;transform:translateY(30px);
+    transition:opacity .6s var(--ease),transform .7s var(--ease),visibility .6s}
+  .frag.on{opacity:1;visibility:visible;transform:none}
+  .frag.pop{transform:translateY(24px) scale(.92)}
+  .frag.pop.on{transform:none}
+
+  /* ===== ANIMATED BARS ===== */
+  .bars{display:flex;flex-direction:column;gap:1.5rem;margin-top:1.3rem;max-width:76ch}
+  .barlab{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.5rem;font-size:1.3rem;color:#E8E8EE}
+  .barnum{font-weight:800;font-size:2rem;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+  .bar{height:16px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}
+  .bar .fill{display:block;height:100%;width:0;border-radius:999px;background:var(--grad);transition:width 1.2s var(--ease) .2s}
+
+  /* ===== RING GAUGE ===== */
+  .proofrow{display:grid;grid-template-columns:auto 1fr;gap:2.4rem;align-items:center;margin-top:.6rem}
+  .ringwrap{position:relative;width:190px;height:190px;flex:none}
+  .ring{width:100%;height:100%;transform:rotate(-90deg)}
+  .ring .track{fill:none;stroke:rgba(255,255,255,.08);stroke-width:10}
+  .ring .prog{fill:none;stroke:url(#rg);stroke-width:10;stroke-linecap:round;stroke-dasharray:471;stroke-dashoffset:471;transition:stroke-dashoffset 1.5s var(--ease) .25s}
+  .ringwrap .rc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .ringwrap .rc b{font-size:3rem;font-weight:900;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .ringwrap .rc .st{font-size:1rem;color:#FFC24B;letter-spacing:3px;margin-top:.2rem}
+  .ringwrap .rc small{font-size:.72rem;color:var(--muted);margin-top:.3rem}
+  .proofrow .stats{grid-template-columns:repeat(3,1fr);margin:0}
+
+  /* ===== BROWSER MOCKUP ===== */
+  .split{display:grid;grid-template-columns:1fr .95fr;gap:2.2rem;align-items:center;margin-top:.4rem}
+  .browser{width:100%;max-width:540px;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0E0E17;box-shadow:0 34px 80px rgba(0,0,0,.55)}
+  .bbar{display:flex;align-items:center;gap:7px;padding:11px 13px;background:#15151F;border-bottom:1px solid var(--line)}
+  .bbar i{width:10px;height:10px;border-radius:50%;background:#3a3a48}
+  .bbar i:nth-child(1){background:#ff5f57}.bbar i:nth-child(2){background:#febc2e}.bbar i:nth-child(3){background:#28c840}
+  .bbar .burl{margin-left:10px;flex:1;height:22px;border-radius:7px;background:rgba(255,255,255,.06);font-size:11px;color:#8a8a9a;display:flex;align-items:center;padding:0 11px}
+  .bbody{padding:16px;display:flex;flex-direction:column;gap:11px;min-height:230px}
+  .bhero{height:74px;border-radius:10px;background:var(--grad);position:relative;overflow:hidden}
+  .bhero::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.35) 50%,transparent 80%);transform:translateX(-100%);animation:swoop 2.6s ease-in-out infinite}
+  @keyframes swoop{0%,100%{transform:translateX(-120%)}55%{transform:translateX(120%)}}
+  .bline{height:13px;border-radius:6px;background:rgba(255,255,255,.1)}
+  .w90{width:90%}.w70{width:70%}.w45{width:45%}
+  .bcards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:4px}
+  .bcards span{height:52px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+  .bbtn{margin-top:6px;width:130px;height:30px;border-radius:8px;background:var(--grad)}
+  .ba-el{opacity:0;transform:translateY(14px)}
+  .slide.active .browser .ba-el{animation:baIn .6s var(--ease) forwards;animation-delay:var(--d,.3s)}
+  @keyframes baIn{to{opacity:1;transform:none}}
+
+  /* mini browsers for before/after */
+  .mini{max-width:100%;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+  .mini .bbody{min-height:150px;padding:12px;gap:8px}
+  .mini.bad{filter:grayscale(.6) contrast(.9)}
+  .mini.bad .bhero{background:#4a4a55}
+  .mini.bad .bhero::after{display:none}
+  .mini .badge{position:absolute;top:10px;right:10px;font-size:.72rem;font-weight:700;padding:.25rem .6rem;border-radius:999px}
+  .mini.bad .badge{background:rgba(224,64,144,.25);color:#F7A8C9}
+  .mini.good .badge{background:rgba(52,211,153,.22);color:#8FEAC5}
+  .miniwrap{position:relative}
+
+  /* confetti + sound */
+  #confetti{position:fixed;inset:0;z-index:40;pointer-events:none}
+  #sndbtn{font-size:.95rem}
+
+  /* ===== PERSONNALISATION (avant/maquette réels) ===== */
+  .perso{display:flex;flex-direction:column;gap:.9rem}
+  .plabel{font-size:.85rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+  .plabel.bad{color:#F7A8C9}.plabel.good{color:#8FEAC5}
+  .pshot{position:relative;width:100%;aspect-ratio:16/10;border-radius:14px;overflow:hidden;display:grid;place-items:center;text-align:center}
+  .pshot img{width:100%;height:100%;object-fit:cover;display:block}
+  .pshot.bad{border:2px dashed rgba(224,64,144,.4);background:rgba(224,64,144,.05)}
+  .pshot.good{border:2px dashed rgba(52,211,153,.4);background:rgba(52,211,153,.05)}
+  .pshot span{color:var(--muted);font-size:1rem;line-height:1.5;padding:1rem}
+  .ptags{display:flex;gap:.5rem;flex-wrap:wrap}
+  .tag{font-size:.85rem;font-weight:700;padding:.3rem .8rem;border-radius:999px}
+  .tag.bad{background:rgba(224,64,144,.15);color:#F7A8C9}
+  .tag.good{background:rgba(52,211,153,.15);color:#8FEAC5}
+  .editnote{margin-top:1.1rem;font-size:.9rem;color:var(--muted);opacity:.7;font-style:italic}
+
+  /* ===== ROI CALCULATOR ===== */
+  .roi{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;align-items:center;margin-top:1.2rem}
+  .roi .ctrl{display:flex;flex-direction:column;gap:1.6rem}
+  .roi .field label{display:block;font-size:1.12rem;margin-bottom:.7rem;color:#E8E8EE}
+  .roi .field label b{color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text;font-size:1.4rem}
+  .roi input[type=range]{-webkit-appearance:none;width:100%;height:8px;border-radius:999px;background:rgba(255,255,255,.1);outline:none}
+  .roi input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--grad);cursor:pointer;box-shadow:0 4px 14px rgba(224,64,144,.5);border:3px solid #12121C}
+  .roi .out{background:linear-gradient(180deg,rgba(139,92,246,.12),rgba(224,64,144,.06));border:1px solid rgba(139,92,246,.3);border-radius:18px;padding:1.8rem 2rem;display:flex;flex-direction:column;gap:1.1rem}
+  .roi .out .line{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .roi .out .line span{color:var(--muted);font-size:1.05rem}
+  .roi .out .line b{font-size:2rem;font-weight:900;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text;white-space:nowrap}
+  .roi .out .hero-line{border-top:1px solid var(--line);padding-top:1.1rem}
+  .roi .out .hero-line b{font-size:2.6rem}
+  .presets{display:flex;gap:.55rem;flex-wrap:wrap;margin-bottom:.3rem}
+  .preset{background:rgba(255,255,255,.06);border:1px solid var(--line);color:#DADAE4;padding:.5rem .95rem;border-radius:999px;font-size:.98rem;font-weight:600;cursor:pointer;transition:.2s var(--ease)}
+  .preset:hover{background:rgba(139,92,246,.28);transform:translateY(-2px);border-color:rgba(139,92,246,.5)}
+  .preset.on{background:var(--grad);color:#fff;border-color:transparent}
+  .roiverdict{margin-top:1.3rem;padding:1.1rem 1.4rem;border-radius:14px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.28);font-size:1.35rem;color:#EAFBF3;line-height:1.4}
+  .roiverdict b{color:#8FEAC5}
+  /* break-even chart */
+  .roichart{width:100%;height:150px;display:block;margin-bottom:1rem;overflow:visible}
+  #revLine{fill:none;stroke:url(#revStroke);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+  #costLine{stroke:#E04090;stroke-width:2;stroke-dasharray:5 5;opacity:.8}
+  #revArea{fill:url(#revFill)}
+  #beDot{fill:#fff;stroke:#8B5CF6;stroke-width:3}
+  .chartcap{display:flex;gap:1.4rem;font-size:.9rem;color:var(--muted);margin-bottom:.7rem}
+  .chartcap i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:.35rem;vertical-align:middle}
+
+  /* ===== AUDIT EXPRESS ===== */
+  .audit{display:grid;grid-template-columns:1.25fr .75fr;gap:2.4rem;align-items:center;margin-top:1rem}
+  .checklist{display:flex;flex-direction:column;gap:.65rem}
+  .chk{display:flex;align-items:center;gap:.9rem;padding:.85rem 1.1rem;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line);cursor:pointer;font-size:1.12rem;color:#E8E8EE;transition:.2s var(--ease)}
+  .chk:hover{border-color:rgba(139,92,246,.45)}
+  .chk .box{flex:none;width:26px;height:26px;border-radius:7px;border:2px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:.9rem;color:transparent;transition:.2s}
+  .chk.on{background:rgba(52,211,153,.08);border-color:rgba(52,211,153,.35)}
+  .chk.on .box{background:var(--green);border-color:var(--green);color:#0B0B12}
+  .scorebox{text-align:center}
+  .scorebox .sc{font-size:5.5rem;font-weight:900;line-height:1;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+  .scorebox .sc small{font-size:2rem;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+  .scorebox .verdict{margin-top:1rem;font-size:1.2rem;line-height:1.4;color:#E8E8EE}
+
+  /* ===== CONFIGURATEUR ===== */
+  .confg{display:grid;grid-template-columns:1.1fr .9fr;gap:2.4rem;align-items:center;margin-top:1rem}
+  .qgroup{margin-bottom:1.4rem}
+  .qgroup .qt{font-size:1.1rem;color:var(--muted);margin-bottom:.6rem}
+  .opts{display:flex;gap:.6rem;flex-wrap:wrap}
+  .opt{background:rgba(255,255,255,.06);border:1px solid var(--line);color:#DADAE4;padding:.65rem 1.1rem;border-radius:10px;font-size:1.05rem;font-weight:600;cursor:pointer;transition:.2s var(--ease)}
+  .opt:hover{border-color:rgba(139,92,246,.5)}
+  .opt.on{background:var(--grad);color:#fff;border-color:transparent}
+  .recocard{background:linear-gradient(180deg,rgba(139,92,246,.14),rgba(224,64,144,.06));border:1px solid rgba(139,92,246,.4);border-radius:18px;padding:2rem;text-align:center}
+  .recocard .rl{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+  .recocard .rn{font-size:2.2rem;font-weight:900;margin:.3rem 0}
+  .recocard .rp{font-size:2.8rem;font-weight:900;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+  .recocard .rd{font-size:1.05rem;color:var(--muted);margin-top:.7rem;line-height:1.45}
+
+  /* ===== COMPARATEUR ANIMÉ ===== */
+  .cmp{display:flex;flex-direction:column;gap:1.4rem;margin-top:1.2rem}
+  .cmprow{display:grid;grid-template-columns:190px 1fr;gap:1.6rem;align-items:center}
+  .cmpname{font-size:1.2rem;font-weight:700;color:#E8E8EE}
+  .cmptracks{display:flex;flex-direction:column;gap:.55rem}
+  .cmpline{display:grid;grid-template-columns:110px 1fr 160px;gap:1rem;align-items:center}
+  .cmpline .who2{font-size:.95rem;color:var(--muted)}
+  .cmpline b{font-size:1.02rem;font-weight:700;color:#C7C7D2}
+  .cmpline.cl .who2{color:#DADAE4;font-weight:600}
+  .cmpline.cl b{font-weight:800;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+  .cmpline .bar{height:14px}
+  .fill.gray{background:rgba(255,255,255,.2)}
+
+  /* ===== SIMULATEUR TEMPS ===== */
+  .simu-month{font-size:3.4rem;font-weight:900;margin-bottom:1.4rem;line-height:1;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+  .simu-lbl{font-size:1.1rem;color:var(--muted);margin-bottom:.7rem}
+  .simuout{display:flex;flex-direction:column;gap:1rem}
+  .simucard{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:16px;padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+  .simucard .l{color:#DADAE4;font-size:1.1rem}
+  .simucard .v{font-size:2.2rem;font-weight:900;white-space:nowrap;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+
+  /* ===== BOUTONS D'ACTION (routing) ===== */
+  .toolcta{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;background:rgba(139,92,246,.14);border:1px solid rgba(139,92,246,.45);color:#EADCFF;font-weight:700;font-size:1.05rem;padding:.75rem 1.5rem;border-radius:12px;cursor:pointer;text-decoration:none;transition:.25s var(--ease)}
+  .toolcta:hover{background:var(--grad);color:#fff;border-color:transparent;transform:translateY(-2px)}
+  .toolcta.solid{background:var(--grad);color:#fff;border-color:transparent}
+  .toolcta .ar{transition:transform .25s var(--ease)}
+  .toolcta:hover .ar{transform:translateX(4px)}
+
+  /* ===== OUTILS GRATUITS (vraies pages) ===== */
+  .toolsgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.1rem}
+  .toolcard{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:16px;padding:1.1rem;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+  .toolcard:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(139,92,246,.2);border-color:rgba(139,92,246,.5)}
+  .toolcard .ic{font-size:1.6rem;margin-bottom:.4rem}
+  .toolcard h3{font-size:1.05rem;font-weight:700;margin-bottom:.2rem}
+  .toolcard p{font-size:.85rem;color:var(--muted);line-height:1.3}
+  .toolcard .qr{width:80px;height:80px;margin-top:.8rem;border-radius:8px;background:#fff;padding:5px;align-self:flex-start}
+  .toolcard .scanhint{font-size:.72rem;color:var(--violet);margin-top:.35rem;font-weight:600}
+
+  /* ===== CALENDRIER RDV (repris de /promo-site-web) ===== */
+  .cal{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:18px;padding:1.5rem;display:flex;flex-direction:column;gap:1.1rem;box-shadow:0 20px 60px -20px rgba(0,0,0,.5)}
+  #calForm,#calPick{display:flex;flex-direction:column;gap:1.1rem}
+  .cal-fields{display:flex;flex-direction:column;gap:.6rem}
+  .cal-fields input{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;color:var(--text);font-size:1rem;font-family:inherit;outline:none;transition:.2s var(--ease)}
+  .cal-fields input:focus{border-color:rgba(139,92,246,.6);background:rgba(255,255,255,.09)}
+  .cal-fields input::placeholder{color:var(--muted)}
+  .cal-err{color:#F7A8C9;font-size:.85rem;min-height:1.1em}
+  .cal-step{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.6rem}
+  .cal-days{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.3rem;scrollbar-width:none}
+  .cal-days::-webkit-scrollbar{height:0}
+  .cal-day{flex:none;width:62px;padding:.55rem 0;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:.15rem;cursor:pointer;transition:.2s var(--ease);color:#DADAE4}
+  .cal-day:hover{background:rgba(255,255,255,.1)}
+  .cal-day.on{background:var(--grad);color:#fff;border-color:transparent;transform:scale(1.06);box-shadow:0 8px 24px -6px rgba(224,64,144,.6)}
+  .cal-day .wd{font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;opacity:.72}
+  .cal-day .dn{font-size:1.25rem;font-weight:800;line-height:1}
+  .cal-day .mo{font-size:.62rem;opacity:.6}
+  .cal-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}
+  .cal-slot{height:38px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:#EDEDF2;font-size:.85rem;font-weight:600;cursor:pointer;transition:.15s var(--ease)}
+  .cal-slot:hover{background:rgba(255,255,255,.1)}
+  .cal-slot.on{background:var(--grad);color:#fff;border-color:transparent;transform:scale(1.03)}
+  .cal-confirm{height:50px;border-radius:14px;background:var(--grad);color:#fff;font-weight:800;font-size:1.05rem;border:none;cursor:pointer;opacity:.4;pointer-events:none;transition:.25s var(--ease);display:flex;align-items:center;justify-content:center;gap:.5rem}
+  .cal-confirm.ready{opacity:1;pointer-events:auto;box-shadow:0 10px 30px -8px rgba(224,64,144,.7)}
+  .cal-confirm.ready:hover{transform:translateY(-2px)}
+  .cal-confirm .ar{transition:transform .25s var(--ease)}
+  .cal-confirm.ready:hover .ar{transform:translateX(4px)}
+  .cal-note{font-size:.75rem;color:var(--muted);text-align:center}
+  .cal-done{text-align:center;padding:2.2rem 1rem}
+  .cal-done .big{font-size:3.2rem;margin-bottom:.4rem}
+  .cal-done h3{font-size:1.5rem;font-weight:800;margin-bottom:.3rem}
+  .cal-done .when{font-size:1.25rem;font-weight:800;margin:.7rem 0;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+  .cal-done p{color:var(--muted);font-size:.95rem;line-height:1.5}
+
+  /* ===== ÉTUDE DE CAS ===== */
+  .caseg{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;margin-top:1rem;align-items:center}
+  .casecol{display:flex;flex-direction:column;gap:1rem}
+  .caseblock b{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:#8FEAC5;margin-bottom:.3rem}
+  .caseblock p{font-size:1.15rem;color:#E8E8EE;line-height:1.45}
+  .caseblock.prob b{color:#F7A8C9}
+  .caseres{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .caseres .cr{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:16px;padding:1.3rem;text-align:center}
+  .caseres .cr .n{font-size:2.6rem;font-weight:900;line-height:1;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+  .caseres .cr .l{font-size:.95rem;color:var(--muted);margin-top:.4rem;line-height:1.3}
+  .ribbon{display:inline-block;font-size:.78rem;font-weight:700;padding:.3rem .8rem;border-radius:999px;background:rgba(255,194,75,.15);color:#FFD98A;margin-bottom:.6rem}
+
+  /* ===== CLOSE (démarrage live) ===== */
+  .startsteps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:1.4rem 0}
+  .ss{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:16px;padding:1.3rem}
+  .ss .n{width:38px;height:38px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:.7rem}
+  .ss h3{font-size:1.15rem;font-weight:700;margin-bottom:.3rem}
+  .ss p{font-size:1rem;color:var(--muted);line-height:1.4}
+
+  /* ===== MOBILE ===== */
+  @media (max-width:760px){
+    .slide{padding:7vh 5.5vw 13vh;justify-content:flex-start;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+    h1{font-size:clamp(1.65rem,7.4vw,2.4rem)}
+    h2{font-size:clamp(1.3rem,5.6vw,1.85rem);margin-bottom:1rem}
+    h1,h2,.lead,.pain,.cmpname,.card h3,.pkg .name,.pkg .sub{overflow-wrap:break-word;word-break:break-word}
+    .lead{font-size:1.02rem;margin-top:.9rem;max-width:100%}
+    .eyebrow{font-size:.72rem}
+    /* laisser les enfants de grid/flex rétrécir sous leur contenu (sinon débordement à droite) */
+    .slide>*{min-width:0;max-width:100%}
+    .split>*,.roi>*,.confg>*,.audit>*,.caseg>*,.ba>*,.grid>*,.pkgs>*,.guar>*,.stats>*,.steps>*,.cmptracks,.pains,.pain{min-width:0}
+    .pain{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:start}
+    .split{grid-template-columns:1fr !important;gap:1.3rem !important}
+    .grid,.grid.cols-2,.grid.cols-3{grid-template-columns:1fr !important}
+    .roi,.confg,.audit,.caseg{grid-template-columns:1fr !important;gap:1.3rem !important}
+    .pkgs{grid-template-columns:1fr !important;gap:1.4rem}
+    .guar{grid-template-columns:1fr !important}
+    .startsteps{grid-template-columns:1fr !important}
+    .steps{grid-template-columns:1fr 1fr !important;gap:1rem}
+    .stats{grid-template-columns:1fr 1fr !important;gap:1rem}
+    .toolsgrid{grid-template-columns:1fr 1fr !important}
+    .cmprow{grid-template-columns:1fr !important;gap:.5rem !important}
+    .cmpname{font-size:1.05rem}
+    .cmpline{grid-template-columns:72px 1fr 82px !important;gap:.5rem !important}
+    .cmpline b{font-size:.78rem}
+    .cmpline .who2{font-size:.8rem}
+    .ba{grid-template-columns:1fr !important;gap:.8rem !important}
+    .ba .arrow{transform:rotate(90deg);justify-self:center}
+    .pkg.reco .spin{display:none}
+    .price-big{font-size:clamp(2rem,9vw,2.6rem)}
+    .cal{min-width:0;padding:1.1rem}
+    .cal-slots{grid-template-columns:repeat(3,1fr)}
+    .cal-fields input{width:100%}
+    .stack .row{flex-wrap:wrap;gap:.3rem}
+    .cta-btn,.toolcta{width:100%;justify-content:center}
+    .roiverdict{font-size:1.05rem}
+    .dots,.hint,.spot{display:none}
+    .nav{bottom:14px;right:12px;gap:8px}
+    .nav button{width:46px;height:46px;font-size:1.3rem}
+    #counter{font-size:.78rem}
+    #sndbtn{width:46px;height:46px}
+    .contact-line{font-size:.92rem;gap:.8rem}
+    .brandbar{margin-bottom:1.4rem}
+    .pshot{max-width:100%}
+  }
+
+  @media(prefers-reduced-motion:reduce){*{animation:none !important}}
+</style>
+</head>
+<body>
+<div class="aurora"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="grain"></div>
+<canvas id="fx"></canvas>
+<canvas id="confetti"></canvas>
+<div class="spot" id="spot"></div>
+<div class="splash" id="splash"><div class="s-logo"><div class="s-mark">C</div><div class="s-word">ConvertiLab</div></div></div>
+<div class="progress" id="progress"></div>
+
+<div class="deck" id="deck">
+
+  <!-- 1. COVER -->
+  <section class="slide active">
+    <div class="brandbar reveal" style="--i:0"><div class="logo-mark">C</div><div class="logo-word">ConvertiLab</div></div>
+    <div class="eyebrow reveal" style="--i:1">Proposition pour votre projet web</div>
+    <h1 class="reveal" style="--i:2">Transformons votre site en<br><span class="grad-text">votre meilleur commercial.</span></h1>
+    <p class="lead reveal" style="--i:3">Un site qui travaille pour vous 24h/24 : il attire, rassure et convertit vos visiteurs en clients — pendant que vous gérez votre métier.</p>
+    <div class="contact-line reveal" style="--i:4"><span>Présenté par <b>Bilel Bettaieb</b> · ConvertiLab</span><span class="live"><span class="dot"></span> 150+ entrepreneurs accompagnés</span></div>
+  </section>
+
+  <!-- 2. HOOK / PROMESSE -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">La vraie question</div>
+    <h2 class="reveal" style="--i:1">Votre site vous rapporte-t-il des clients…<br>ou juste une ligne de dépense ?</h2>
+    <p class="lead reveal" style="--i:2">9 sites de petites entreprises sur 10 ne servent qu'à « exister » en ligne. Ils sont jolis, mais ils dorment. Le vôtre peut vendre à votre place.</p>
+    <div class="costbox frag" data-step="1" style="max-width:62ch">💡 Un bon site, c'est le seul commercial qui bosse la nuit, le week-end et les jours fériés — sans jamais réclamer d'augmentation.</div>
+  </section>
+
+  <!-- 3. PROBLÈME -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Le problème · aujourd'hui</div>
+    <h2 class="reveal" style="--i:1">Ce qui vous fait perdre des clients<br>sans même que vous le voyiez.</h2>
+    <div class="pains">
+      <div class="pain frag" data-step="1"><span class="x">✕</span> Votre site est lent ou daté → le visiteur part en 3 secondes.</div>
+      <div class="pain frag" data-step="1"><span class="x">✕</span> Invisible sur Google → vos concurrents captent vos clients à votre place.</div>
+      <div class="pain frag" data-step="2"><span class="x">✕</span> Pas de formulaire, pas de prise de RDV → les intéressés repartent sans laisser de trace.</div>
+      <div class="pain frag" data-step="2"><span class="x">✕</span> Illisible sur mobile → 6 visiteurs sur 10 sont perdus d'entrée.</div>
+    </div>
+  </section>
+
+  <!-- 4. AGITATION / COÛT -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Ce que ça vous coûte, en silence</div>
+    <h2 class="reveal" style="--i:1">Chaque jour, votre site actuel<br>laisse filer des clients.</h2>
+    <div class="bars">
+      <div class="frag" data-step="1"><div class="barlab"><span>partent si votre site met + de 3 secondes à s'afficher</span><b class="barnum" data-count="53" data-suffix="%">0</b></div><div class="bar"><i class="fill" data-w="53"></i></div></div>
+      <div class="frag" data-step="1"><div class="barlab"><span>jugent votre sérieux uniquement d'après votre site</span><b class="barnum" data-count="75" data-suffix="%">0</b></div><div class="bar"><i class="fill" data-w="75"></i></div></div>
+      <div class="frag" data-step="1"><div class="barlab"><span>ne reviennent jamais après une mauvaise expérience mobile</span><b class="barnum" data-count="88" data-suffix="%">0</b></div><div class="bar"><i class="fill" data-w="88"></i></div></div>
+    </div>
+    <div class="costbox frag" data-step="2">Le pire ? Vous ne les voyez jamais. Ces clients ne se plaignent pas : <b>ils cliquent sur le site de votre concurrent</b> — souvent moins bon que le vôtre, mais mieux présenté.</div>
+  </section>
+
+  <!-- 4a. AUDIT EXPRESS INTERACTIF -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Diagnostic express · 30 secondes</div>
+    <h2 class="reveal" style="--i:1">Votre site actuel, il vaut <span class="grad-text">combien sur 10 ?</span></h2>
+    <div class="audit">
+      <div class="checklist reveal" style="--i:2" id="auditList">
+        <div class="chk"><span class="box">✓</span> Il s'affiche en moins de 3 secondes</div>
+        <div class="chk"><span class="box">✓</span> Il est impeccable sur mobile</div>
+        <div class="chk"><span class="box">✓</span> On le trouve facilement sur Google</div>
+        <div class="chk"><span class="box">✓</span> On peut vous contacter / réserver en 1 clic</div>
+        <div class="chk"><span class="box">✓</span> Son design a moins de 3 ans</div>
+        <div class="chk"><span class="box">✓</span> Il a une fiche Google Business à jour</div>
+      </div>
+      <div class="scorebox reveal" style="--i:3">
+        <div class="sc"><span id="auditScore">0</span><small>/10</small></div>
+        <div class="verdict" id="auditVerdict">Cochez ce que votre site fait déjà…</div>
+        <button class="toolcta" onclick="goSlide('s-close')">Je veux un site 10/10 <span class="ar">→</span></button>
+      </div>
+    </div>
+    <p class="editnote reveal" style="--i:4">Cochez avec votre client. En dessous de 7/10, chaque case manquante = des clients qui filent.</p>
+  </section>
+
+  <!-- 4a-bis. COÛT DE L'INACTION -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Le coût d'attendre</div>
+    <h2 class="reveal" style="--i:1">Chaque mois sans site qui convertit<br>a un <span class="grad-text">prix.</span></h2>
+    <div class="roi">
+      <div class="ctrl reveal" style="--i:2">
+        <div class="simu-lbl">Depuis combien de mois cherchez-vous plus de clients ?</div>
+        <div class="simu-month"><span id="waitLbl">6</span> mois</div>
+        <input type="range" id="rWait" min="1" max="24" step="1" value="6">
+      </div>
+      <div class="out reveal" style="--i:3">
+        <div class="line"><span>Clients potentiellement manqués</span><b id="lossCli">18</b></div>
+        <div class="line hero-line"><span>Chiffre d'affaires envolé</span><b id="lossRev">2 700 €</b></div>
+      </div>
+    </div>
+    <div class="roiverdict reveal" style="--i:4" id="lossVerdict">⏳ Attendre coûte souvent plus cher que d'agir.</div>
+    <a class="toolcta reveal" style="--i:5" onclick="goSlide('s-close')">Arrêter l'hémorragie <span class="ar">→</span></a>
+  </section>
+
+  <!-- 4b. PERSONNALISATION (à remplir avant chaque RDV) -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Parlons de vous, maintenant</div>
+    <h2 class="reveal" style="--i:1">Votre site aujourd'hui → <span class="grad-text">votre maquette.</span></h2>
+    <div class="split" style="margin-top:.6rem">
+      <div class="perso reveal" style="--i:2">
+        <div class="plabel bad">Aujourd'hui</div>
+        <!-- POUR PERSONNALISER : remplace le <span> ci-dessous par <img src="captures/site-actuel.png"> -->
+        <div class="pshot bad"><span>📸 Capture du site actuel<br>du client<br><small>(glissez votre image ici)</small></span></div>
+        <div class="ptags"><span class="tag bad">Lent</span><span class="tag bad">Daté</span><span class="tag bad">Aucun RDV</span></div>
+      </div>
+      <div class="perso frag pop" data-step="1">
+        <div class="plabel good">Ce qu'on vous propose</div>
+        <!-- POUR PERSONNALISER : remplace le <span> ci-dessous par <img src="captures/maquette.png"> -->
+        <div class="pshot good"><span>🎨 Maquette préparée<br>pour ce client<br><small>(glissez votre image ici)</small></span></div>
+        <div class="ptags"><span class="tag good">Rapide</span><span class="tag good">Premium</span><span class="tag good">RDV en ligne</span></div>
+      </div>
+    </div>
+    <p class="editnote reveal" style="--i:3">⚙️ Slide à personnaliser avant chaque RDV : glissez 2 captures (site actuel + maquette). C'est ce qui fait signer.</p>
+  </section>
+
+  <!-- 5. SOLUTION -->
+  <section class="slide">
+    <div class="split">
+      <div>
+        <div class="eyebrow reveal" style="--i:0">La solution</div>
+        <h2 class="reveal" style="--i:1">Un site pensé pour <span class="grad-text">convertir</span>, pas juste pour décorer.</h2>
+        <p class="lead reveal" style="--i:2;margin-top:.6rem">On ne livre pas « un joli site ». On construit une machine à transformer vos visiteurs en clients, sur-mesure pour votre métier.</p>
+        <div class="pains" style="margin-top:1.4rem">
+          <div class="pain reveal" style="--i:3"><span class="x" style="background:rgba(52,211,153,.15);color:#8FEAC5">✓</span> Rapide & impeccable sur mobile — là où sont vos clients.</div>
+          <div class="pain reveal" style="--i:4"><span class="x" style="background:rgba(52,211,153,.15);color:#8FEAC5">✓</span> Visible sur Google quand on cherche votre service.</div>
+          <div class="pain reveal" style="--i:5"><span class="x" style="background:rgba(52,211,153,.15);color:#8FEAC5">✓</span> Formulaires & RDV connectés : plus aucun contact perdu.</div>
+        </div>
+      </div>
+      <div class="browser reveal" style="--i:3">
+        <div class="bbar"><i></i><i></i><i></i><div class="burl">🔒 votre-entreprise.fr</div></div>
+        <div class="bbody">
+          <div class="bhero ba-el" style="--d:.35s"></div>
+          <div class="bline w90 ba-el" style="--d:.6s"></div>
+          <div class="bline w70 ba-el" style="--d:.75s"></div>
+          <div class="bcards ba-el" style="--d:.95s"><span></span><span></span><span></span></div>
+          <div class="bbtn ba-el" style="--d:1.15s"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CE QUE VOUS OBTENEZ -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Concrètement, vous repartez avec</div>
+    <h2 class="reveal" style="--i:1">Tout est géré, de A à Z.</h2>
+    <div class="grid cols-2">
+      <div class="card reveal" style="--i:2"><div class="ic">🎨</div><h3>Un design premium sur-mesure</h3><p>À votre image, moderne, qui inspire confiance dès la première seconde.</p></div>
+      <div class="card reveal" style="--i:3"><div class="ic">🔍</div><h3>Le référencement Google</h3><p>Structure SEO + fiche Google Business pour être trouvé localement.</p></div>
+      <div class="card reveal" style="--i:4"><div class="ic">📱</div><h3>100% responsive</h3><p>Impeccable sur ordinateur, tablette et mobile, sans effort de votre part.</p></div>
+      <div class="card reveal" style="--i:5"><div class="ic">🤝</div><h3>Formulaires & RDV connectés</h3><p>Chaque demande arrive directement dans votre boîte mail. Zéro perte.</p></div>
+    </div>
+  </section>
+
+  <!-- 6b. COMPARATEUR -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Pourquoi nous</div>
+    <h2 class="reveal" style="--i:1">Site classique vs <span class="grad-text">ConvertiLab.</span></h2>
+    <div class="cmp">
+      <div class="cmprow reveal" style="--i:2">
+        <div class="cmpname">⏱️ Mise en ligne</div>
+        <div class="cmptracks">
+          <div class="cmpline"><span class="who2">Classique</span><div class="bar"><i class="fill gray" data-w="30"></i></div><b>2–3 mois</b></div>
+          <div class="cmpline cl"><span class="who2">ConvertiLab</span><div class="bar"><i class="fill" data-w="92"></i></div><b>2–3 semaines</b></div>
+        </div>
+      </div>
+      <div class="cmprow reveal" style="--i:3">
+        <div class="cmpname">💶 Budget</div>
+        <div class="cmptracks">
+          <div class="cmpline"><span class="who2">Classique</span><div class="bar"><i class="fill gray" data-w="28"></i></div><b>3 000 € et +</b></div>
+          <div class="cmpline cl"><span class="who2">ConvertiLab</span><div class="bar"><i class="fill" data-w="88"></i></div><b>dès 690 € · 39 €/mois</b></div>
+        </div>
+      </div>
+      <div class="cmprow reveal" style="--i:4">
+        <div class="cmpname">🎯 Orienté résultats</div>
+        <div class="cmptracks">
+          <div class="cmpline"><span class="who2">Classique</span><div class="bar"><i class="fill gray" data-w="25"></i></div><b>« un joli site »</b></div>
+          <div class="cmpline cl"><span class="who2">ConvertiLab</span><div class="bar"><i class="fill" data-w="95"></i></div><b>pensé pour convertir</b></div>
+        </div>
+      </div>
+      <div class="cmprow reveal" style="--i:5">
+        <div class="cmpname">🤝 Accompagnement</div>
+        <div class="cmptracks">
+          <div class="cmpline"><span class="who2">Classique</span><div class="bar"><i class="fill gray" data-w="40"></i></div><b>hotline anonyme</b></div>
+          <div class="cmpline cl"><span class="who2">ConvertiLab</span><div class="bar"><i class="fill" data-w="100"></i></div><b>Bilel, en direct</b></div>
+        </div>
+      </div>
+    </div>
+    <button class="toolcta reveal" style="--i:6" onclick="goSlide('s-formules')">Passer chez ConvertiLab <span class="ar">→</span></button>
+  </section>
+
+  <!-- 7. MÉTHODE -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Comment ça se passe</div>
+    <h2 class="reveal" style="--i:1">Simple pour vous, en 4 étapes.</h2>
+    <div class="steps">
+      <div class="step reveal" style="--i:2"><div class="num grad-text">01</div><h3>Appel découverte</h3><p>30 min pour comprendre votre activité et vos objectifs. Gratuit.</p></div>
+      <div class="step reveal" style="--i:3"><div class="num grad-text">02</div><h3>Maquette gratuite</h3><p>Vous voyez votre futur site avant de payer quoi que ce soit.</p></div>
+      <div class="step reveal" style="--i:4"><div class="num grad-text">03</div><h3>Création & mise en ligne</h3><p>On développe tout. Vous validez, on publie. En 2 à 3 semaines.</p></div>
+      <div class="step reveal" style="--i:5"><div class="num grad-text">04</div><h3>Suivi</h3><p>On reste dispo et on optimise pour plus de résultats.</p></div>
+    </div>
+  </section>
+
+  <!-- 8. PREUVE / RÉSULTATS -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">La preuve, pas des promesses</div>
+    <h2 class="reveal" style="--i:1">150+ entrepreneurs nous font <span class="grad-text">déjà confiance.</span></h2>
+    <div class="proofrow">
+      <div class="ringwrap reveal" style="--i:2">
+        <svg class="ring" viewBox="0 0 190 190">
+          <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#E04090"/></linearGradient></defs>
+          <circle class="track" cx="95" cy="95" r="75"/>
+          <circle class="prog" cx="95" cy="95" r="75" data-off="9"/>
+        </svg>
+        <div class="rc"><b>4,9</b><div class="st">★★★★★</div><small>sur Trustpilot</small></div>
+      </div>
+      <div class="stats">
+        <div class="stat reveal" style="--i:3"><div class="big grad-text" data-count="150" data-suffix="+">0</div><div class="lbl">entrepreneurs accompagnés</div></div>
+        <div class="stat reveal" style="--i:4"><div class="big grad-text" data-count="2" data-suffix=" à 3 sem." data-dec="0">0</div><div class="lbl">pour votre site en ligne</div></div>
+        <div class="stat reveal" style="--i:5"><div class="big grad-text" data-count="39" data-suffix="€">0</div><div class="lbl">paiement étalé, dès /mois</div></div>
+      </div>
+    </div>
+    <p class="lead reveal" style="--i:6">Artisans, coachs, restaurateurs, consultants — accompagnés partout en France.</p>
+  </section>
+
+  <!-- 9. TÉMOIGNAGES  (⚠️ à remplacer par de vrais avis Trustpilot) -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Ils en parlent mieux que nous · 4,9★ sur Trustpilot</div>
+    <h2 class="reveal" style="--i:1">15 avis vérifiés, une même phrase.</h2>
+    <div class="grid cols-3">
+      <div class="quote reveal" style="--i:2"><div class="stars">★★★★★</div><p>« Depuis la mise en ligne, j'ai constaté une <strong style="color:#fff">nette augmentation du nombre de clients</strong> et des demandes de contact. Exactement ce que je voulais ! »</p><div class="who"><div class="avatar">L</div><div><b>Les Artisans Luthiers</b><span>Artisan · Trustpilot ✓</span></div></div></div>
+      <div class="quote reveal" style="--i:3"><div class="stars">★★★★★</div><p>« Bilel comprend votre projet et le rend moderne et impactant. Projet réalisé <strong style="color:#fff">en 24 h, conforme à 100 %</strong>. Excellent rapport qualité-prix. Je le recommande à 100 %. »</p><div class="who"><div class="avatar">G</div><div><b>Gilles</b><span>Vaquier de Labaume · Trustpilot ✓</span></div></div></div>
+      <div class="quote reveal" style="--i:4"><div class="stars">★★★★★</div><p>« Impressionnant, la réactivité et la compréhension de mes besoins. Site créé dans la journée. <strong style="color:#fff">Déjà 2 collègues vont travailler avec lui.</strong> »</p><div class="who"><div class="avatar">C</div><div><b>Conseils en Bâtiment</b><span>Consultant · Trustpilot ✓</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- 9b. ÉTUDE DE CAS -->
+  <section class="slide">
+    <div class="ribbon reveal" style="--i:0">⚙️ Exemple — remplacez par un vrai client</div>
+    <h2 class="reveal" style="--i:1">De « site fantôme » à <span class="grad-text">30 demandes / mois.</span></h2>
+    <div class="caseg">
+      <div class="casecol">
+        <div class="caseblock prob reveal" style="--i:2"><b>Le point de départ</b><p>Un restaurateur avec un vieux site vitrine : introuvable sur Google, aucune réservation en ligne, tables vides en semaine.</p></div>
+        <div class="caseblock reveal" style="--i:3"><b>Ce qu'on a fait</b><p>Site rapide et mobile, réservation en ligne, fiche Google Business optimisée, photos pro mises en valeur.</p></div>
+      </div>
+      <div class="caseres">
+        <div class="cr frag pop" data-step="1"><div class="n">+30</div><div class="l">demandes de réservation / mois</div></div>
+        <div class="cr frag pop" data-step="1"><div class="n">×3</div><div class="l">de trafic en 90 jours</div></div>
+        <div class="cr frag pop" data-step="1"><div class="n">2 sem.</div><div class="l">de la maquette à la mise en ligne</div></div>
+        <div class="cr frag pop" data-step="1"><div class="n">4,9★</div><div class="l">satisfaction client</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. AVANT / APRÈS -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">La transformation</div>
+    <h2 class="reveal" style="--i:1">Avant ConvertiLab → Après.</h2>
+    <div class="ba">
+      <div class="col before reveal" style="--i:2">
+        <h4>✕ Avant</h4>
+        <div class="miniwrap" style="margin-bottom:1rem">
+          <div class="browser mini bad">
+            <div class="bbar"><i></i><i></i><i></i><div class="burl">ancien-site.fr</div></div>
+            <div class="bbody"><div class="bhero"></div><div class="bline w45"></div><div class="bline w90"></div></div>
+          </div>
+          <span class="badge">⚠ 8,2 s de chargement</span>
+        </div>
+        <ul>
+          <li>🔍 Introuvable sur Google</li>
+          <li>📭 Zéro demande entrante</li>
+          <li>😰 « Il me fait presque honte »</li>
+        </ul>
+      </div>
+      <div class="arrow frag" data-step="1">→</div>
+      <div class="col after frag pop" data-step="1">
+        <h4>✓ Après</h4>
+        <div class="miniwrap" style="margin-bottom:1rem">
+          <div class="browser mini good">
+            <div class="bbar"><i></i><i></i><i></i><div class="burl">🔒 votre-entreprise.fr</div></div>
+            <div class="bbody"><div class="bhero"></div><div class="bline w90"></div><div class="bcards"><span></span><span></span><span></span></div></div>
+          </div>
+          <span class="badge">⚡ 0,8 s de chargement</span>
+        </div>
+        <ul>
+          <li>🎯 En tête des recherches locales</li>
+          <li>📈 Des devis chaque semaine</li>
+          <li>😎 « Je suis fier d'envoyer mon lien »</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10a. SIMULATEUR TEMPS -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Projection dans le temps</div>
+    <h2 class="reveal" style="--i:1">Votre site, <span class="grad-text">mois après mois.</span></h2>
+    <div class="roi">
+      <div class="ctrl reveal" style="--i:2">
+        <div class="simu-month">À <span id="simuMonthLbl">6 mois</span></div>
+        <div class="simu-lbl">Faites glisser le temps qui passe :</div>
+        <input type="range" id="rMonth" min="1" max="12" step="1" value="6">
+      </div>
+      <div class="simuout reveal" style="--i:3">
+        <div class="simucard"><span class="l">👀 Visiteurs / mois</span><span class="v" id="simuVis">980</span></div>
+        <div class="simucard"><span class="l">📩 Demandes de contact / mois</span><span class="v" id="simuDem">16</span></div>
+        <div class="simucard"><span class="l">🎉 Nouveaux clients cumulés</span><span class="v" id="simuCli">19</span></div>
+      </div>
+    </div>
+    <p class="editnote reveal" style="--i:4">Estimation pour un site optimisé SEO. Un site, c'est un investissement qui compose : plus le temps passe, plus il rapporte.</p>
+    <a class="toolcta reveal" style="--i:5" onclick="goSlide('s-rdv')">Lancer mon site maintenant <span class="ar">→</span></a>
+  </section>
+
+  <!-- 10b. ROI CALCULATOR -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Le calcul qui change tout</div>
+    <h2 class="reveal" style="--i:1">En combien de temps votre site<br>est-il <span class="grad-text">rentabilisé</span> ?</h2>
+    <div class="roi">
+      <div class="ctrl reveal" style="--i:2">
+        <div class="presets">
+          <button class="preset" data-p="35" data-c="15">🍽️ Restaurant</button>
+          <button class="preset" data-p="450" data-c="3">🔨 Artisan</button>
+          <button class="preset" data-p="90" data-c="6">🧘 Coach</button>
+          <button class="preset" data-p="800" data-c="2">💼 Consultant</button>
+        </div>
+        <div class="field">
+          <label>Ce que vous rapporte <b>un</b> nouveau client : <b id="roiPanier">150 €</b></label>
+          <input type="range" id="rPanier" min="20" max="2000" step="10" value="150">
+        </div>
+        <div class="field">
+          <label>Nouveaux clients / mois grâce au site : <b id="roiClients">4</b></label>
+          <input type="range" id="rClients" min="1" max="30" step="1" value="4">
+        </div>
+      </div>
+      <div class="out reveal" style="--i:3">
+        <div class="chartcap"><span><i style="background:#8B5CF6"></i>Revenus cumulés</span><span><i style="background:#E04090"></i>Coût du site</span><span>⚡ point de rentabilité</span></div>
+        <svg class="roichart" id="roiChart" viewBox="0 0 460 190">
+          <defs>
+            <linearGradient id="revStroke" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#E04090"/></linearGradient>
+            <linearGradient id="revFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8B5CF6" stop-opacity=".45"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></linearGradient>
+          </defs>
+          <polygon id="revArea" points=""></polygon>
+          <line id="costLine" x1="0" y1="0" x2="0" y2="0"></line>
+          <polyline id="revLine" points=""></polyline>
+          <circle id="beDot" r="6" cx="-30" cy="-30"></circle>
+        </svg>
+        <div class="line"><span>Votre site rapporte</span><b id="roiRev">600 €/mois</b></div>
+        <div class="line"><span>Remboursé en</span><b id="roiPay">≈ 2 mois</b></div>
+        <div class="line hero-line"><span>Gain net la 1ʳᵉ année</span><b id="roiGain">+ 5 910 €</b></div>
+      </div>
+    </div>
+    <div class="roiverdict reveal" style="--i:4" id="roiVerdict">👉 Remboursé dès votre <b>9ᵉ client</b>. Tout le reste, c'est votre marge.</div>
+    <p class="editnote reveal" style="--i:5">Estimation basée sur l'offre Site Vitrine à 500 €. Cliquez le métier de votre client, puis affinez avec les curseurs.</p>
+    <a class="toolcta reveal" style="--i:6" onclick="goSlide('s-formules')">Je veux ce ROI → voir les formules <span class="ar">→</span></a>
+  </section>
+
+  <!-- 10b-bis. SÉLECTEUR D'OBJECTIF -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Votre priorité n°1</div>
+    <h2 class="reveal" style="--i:1">C'est quoi, votre <span class="grad-text">objectif</span> ?</h2>
+    <div class="confg">
+      <div class="reveal" style="--i:2" id="goalControls">
+        <div class="qgroup" data-q="goal">
+          <div class="qt">Ce que vous voulez vraiment :</div>
+          <div class="opts" style="flex-direction:column;align-items:stretch">
+            <button class="opt on" data-v="devis">📞 Plus d'appels & de devis</button>
+            <button class="opt" data-v="resa">📅 Plus de réservations</button>
+            <button class="opt" data-v="vente">🛒 Vendre en ligne</button>
+            <button class="opt" data-v="credit">✨ Gagner en crédibilité</button>
+          </div>
+        </div>
+      </div>
+      <div class="recocard reveal" style="--i:3">
+        <div class="rl">Voici comment on y arrive</div>
+        <div class="rn" id="goalTitle" style="font-size:1.55rem">Un site qui capte les demandes</div>
+        <div class="rd" id="goalDesc">Formulaires malins et appel en 1 clic : chaque visiteur intéressé devient un contact.</div>
+        <button class="toolcta solid" style="margin-top:1.3rem" onclick="goSlide('s-formules')">Voir la formule adaptée <span class="ar">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10c. CONFIGURATEUR DE FORMULE -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Trouvons VOTRE formule</div>
+    <h2 class="reveal" style="--i:1">Configurez le site qu'il vous faut.</h2>
+    <div class="confg">
+      <div class="reveal" style="--i:2" id="confControls">
+        <div class="qgroup" data-q="type">
+          <div class="qt">De quoi avez-vous besoin ?</div>
+          <div class="opts">
+            <button class="opt on" data-v="landing">Une page qui convertit</button>
+            <button class="opt" data-v="vitrine">Un site vitrine complet</button>
+            <button class="opt" data-v="ecom">Vendre en ligne</button>
+          </div>
+        </div>
+        <div class="qgroup" data-q="rdv">
+          <div class="qt">Prise de rendez-vous / réservation en ligne ?</div>
+          <div class="opts"><button class="opt" data-v="1">Oui</button><button class="opt on" data-v="0">Pas besoin</button></div>
+        </div>
+        <div class="qgroup" data-q="admin">
+          <div class="qt">Gérer votre contenu vous-même ?</div>
+          <div class="opts"><button class="opt" data-v="1">Oui</button><button class="opt on" data-v="0">Non</button></div>
+        </div>
+      </div>
+      <div class="recocard reveal" style="--i:3">
+        <div class="rl">Notre reco pour vous</div>
+        <div class="rn" id="recoName">Mensuel</div>
+        <div class="rp" id="recoPrice">39€/mois</div>
+        <div class="rd" id="recoDesc">Votre site pro sans investissement initial, tout inclus.</div>
+        <button class="toolcta solid" style="margin-top:1.3rem" onclick="goSlide('s-close')">Je choisis cette formule <span class="ar">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. OFFRE / PACKAGES -->
+  <section class="slide" id="s-formules">
+    <div class="eyebrow reveal" style="--i:0">Nos formules</div>
+    <h2 class="reveal" style="--i:1">Choisissez le niveau qui vous ressemble.</h2>
+    <div class="pkgs">
+      <div class="pkg reveal" style="--i:2">
+        <div class="name">Mensuel</div>
+        <div class="sub">Lancez-vous sans investissement initial</div>
+        <div class="price">39€<span style="font-size:1rem;font-weight:600;color:var(--muted)">/mois</span></div>
+        <div class="mo">Sans engagement</div>
+        <ul>
+          <li><span class="c">✓</span> Site professionnel sur-mesure</li>
+          <li><span class="c">✓</span> Hébergement & nom de domaine inclus</li>
+          <li><span class="c">✓</span> Maintenance & mises à jour continues</li>
+          <li><span class="c">✓</span> Support réactif sous 24h</li>
+          <li><span class="c">✓</span> SEO de base optimisé</li>
+        </ul>
+      </div>
+      <div class="pkg reco frag pop" data-step="1">
+        <div class="tag">★ Le + populaire</div>
+        <div class="name">Site Vitrine</div>
+        <div class="sub">L'offre complète, en paiement unique</div>
+        <div class="price grad-text">500€</div>
+        <div class="mo">Paiement unique</div>
+        <ul>
+          <li><span class="c">✓</span> Site professionnel (5 pages)</li>
+          <li><span class="c">✓</span> Design 100% sur-mesure</li>
+          <li><span class="c">✓</span> SEO technique optimisé</li>
+          <li><span class="c">✓</span> Formulaire de contact intégré</li>
+          <li><span class="c">✓</span> Formation & guide de gestion</li>
+          <li><span class="c">✓</span> 1 an de support inclus</li>
+          <li><span class="c">✓</span> Livraison en 7 jours</li>
+        </ul>
+      </div>
+      <div class="pkg reveal" style="--i:4">
+        <div class="name">Sur mesure</div>
+        <div class="sub">Projets ambitieux & e-commerce</div>
+        <div class="price">Sur devis</div>
+        <div class="mo">Projets ambitieux</div>
+        <ul>
+          <li><span class="c">✓</span> Design & développement sur-mesure</li>
+          <li><span class="c">✓</span> E-commerce, app, back-office</li>
+          <li><span class="c">✓</span> SEO + Google Ads + Meta Ads</li>
+          <li><span class="c">✓</span> Intégrations sur mesure</li>
+          <li><span class="c">✓</span> Accompagnement dédié</li>
+          <li><span class="c">✓</span> Roadmap produit long terme</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. VALUE STACK -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Ce que vous obtenez vraiment</div>
+    <h2 class="reveal" style="--i:1">Bien plus qu'un site.</h2>
+    <div class="stack">
+      <div class="row frag" data-step="1"><span>🎨 Design 100% sur-mesure (5 pages)</span><b style="color:#8FEAC5">inclus</b></div>
+      <div class="row frag" data-step="1"><span>🔍 SEO technique optimisé</span><b style="color:#8FEAC5">inclus</b></div>
+      <div class="row frag" data-step="1"><span>🤝 Formulaire + formation à la gestion</span><b style="color:#8FEAC5">inclus</b></div>
+      <div class="row frag" data-step="1"><span>📱 1 an de support + livraison 7 jours</span><b style="color:#8FEAC5">inclus</b></div>
+      <div class="row total frag pop" data-step="2"><span><b>Votre Site Vitrine à partir de</b></span><b style="font-size:1.35rem">500€ · ou dès 39€/mois</b></div>
+    </div>
+  </section>
+
+  <!-- 13. GARANTIES / RISK REVERSAL -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Zéro risque pour vous</div>
+    <h2 class="reveal" style="--i:1">On enlève tous les freins.</h2>
+    <div class="guar">
+      <div class="g reveal" style="--i:2"><div class="ic">👀</div><div><b>Maquette gratuite avant de payer</b><p>Vous voyez votre site avant de sortir votre carte. Vous décidez ensuite.</p></div></div>
+      <div class="g reveal" style="--i:3"><div class="ic">💳</div><div><b>Paiement étalé dès 39€/mois</b><p>Un site pro sans trou dans la trésorerie. On s'adapte à votre budget.</p></div></div>
+      <div class="g reveal" style="--i:4"><div class="ic">🔁</div><div><b>Satisfait ou on retravaille</b><p>On ajuste jusqu'à ce que vous soyez fier de votre site. Sans supplément.</p></div></div>
+      <div class="g reveal" style="--i:5"><div class="ic">🔑</div><div><b>Vous êtes propriétaire</b><p>Votre site, votre nom de domaine, vos contenus. Rien n'est verrouillé.</p></div></div>
+    </div>
+  </section>
+
+  <!-- 14. OBJECTIONS / FAQ -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">Vos questions, nos réponses</div>
+    <h2 class="reveal" style="--i:1">On lève vos derniers doutes.</h2>
+    <div class="faq">
+      <div class="qa reveal" style="--i:2"><div class="q">« C'est un budget… est-ce que ça vaut le coup ? » <span class="plus">+</span></div><div class="a"><div>Un seul nouveau client gagné grâce au site rembourse souvent l'investissement. Et avec le paiement dès 39€/mois, c'est moins qu'un abonnement pro classique.</div></div></div>
+      <div class="qa reveal" style="--i:3"><div class="q">« Je n'y connais rien en technique. » <span class="plus">+</span></div><div class="a"><div>C'est justement notre rôle. On gère tout de A à Z : design, textes, mise en ligne, Google. Vous n'avez qu'à valider.</div></div></div>
+      <div class="qa reveal" style="--i:4"><div class="q">« J'ai déjà un site, mais il ne marche pas. » <span class="plus">+</span></div><div class="a"><div>Parfait, on part de l'existant pour une refonte. On garde ce qui fonctionne et on corrige ce qui vous fait perdre des clients.</div></div></div>
+      <div class="qa reveal" style="--i:5"><div class="q">« Combien de temps avant d'être en ligne ? » <span class="plus">+</span></div><div class="a"><div>Entre 7 jours (formule Essentiel) et 3 semaines (site complet). Rapide, sans bâcler.</div></div></div>
+    </div>
+  </section>
+
+  <!-- 14b. OUTILS GRATUITS (lead magnets réels) -->
+  <section class="slide">
+    <div class="eyebrow reveal" style="--i:0">En bonus · 100 % gratuit</div>
+    <h2 class="reveal" style="--i:1">8 outils offerts pour <span class="grad-text">votre visibilité.</span></h2>
+    <p class="lead reveal" style="--i:2">Même sans travailler ensemble, servez-vous — c'est cadeau.</p>
+    <div class="toolsgrid">
+      <a class="toolcard reveal" style="--i:3" href="https://www.convertilab.com/seo-check" target="_blank"><div class="ic">🔍</div><h3>Audit SEO</h3><p>Votre référencement Google noté</p><img class="qr" alt="QR https://www.convertilab.com/seo-check" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGAQMAAACzVW0eAAAABlBMVEULCxL///9C3sEbAAABRUlEQVR42u1YsQ3DMAwTqgN8kl73ST7AgEqJiYEOLdCl4FAjgxMvhERSdCzfrG3/k48ny7A8py/swyzq3WI/7N361UnhAUbHs2wD5Ars8VEEG6pESH6DdDFs1ccxNbFVc4t7IYWt+AaEA8owck+Gb63TFecR0ilXa2GzuXQXFb7R30oLe2S/amDLWVUa8+BEQ1X4lpN4DPBGTwehnho5BpGioVjWnVXBhtI1Kmwa3nSdut06PX4iw7c885Tea0OobpkvE6EHqwo2Goi3k+S6Jr6OFugkvvgthHJIOVuJtFy3+JYydatoVAqFrXWEU+JbMIrvLl23NcRyCKdDt3Xp3GWuexaz5Wbu1eHbfUeoznYIUcpvwctp5SVeGbSw9R2wFXFJValuTTY4SeVeG0p8a4VeiVcpv3FaOe33zFYdf/v/yfru5Am4/tG1UQi0eAAAAABJRU5ErkJggg=="><div class="scanhint">📱 Scannez</div></a>
+      <a class="toolcard reveal" style="--i:4" href="https://www.convertilab.com/speed-check" target="_blank"><div class="ic">⚡</div><h3>Test de vitesse</h3><p>La rapidité de votre site</p><img class="qr" alt="QR https://www.convertilab.com/speed-check" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGAQMAAACzVW0eAAAABlBMVEULCxL///9C3sEbAAABQklEQVR42u1YwQ0DMQhDvQEyUlbPSBkAiWKTpK+r1E/lx6E8csrHMmDMWdyE2/Py9WVaxjU7Pmc36/i27i+7i3+9JDagWtgYF0GKYEuWLlAI9rwlTl50sGVm27gijx62GMkYykyMt1VjiGFNqt5Wn54j1KcVk+3QxkddROqtDR5WGvI7XEbfEkmwT2MnVKXeUjeY0DMdEmpyqMMbKw3iluy5Dm+YBSi20hDHBSBFsFHQbKUyFbhEWEPfnDMrT3UEQJpQTpFWq4btNbmE9I1WpMQNTIpgo3nbg36c1pDREISX6kJGQqVPadioHgMubidXZC5ANMpYzmLPdHijDzHI76xhqrPLlH8zOt7lz3U0ZO9ZtSz0UMJW9b81ZLWD1J51xCTqLoStV5+WFVHbs5wmZI/XkNqztidfu6qQvj1/sn57eQOUfuAoJUAs3gAAAABJRU5ErkJggg=="><div class="scanhint">📱 Scannez</div></a>
+      <a class="toolcard reveal" style="--i:5" href="https://www.convertilab.com/design-score" target="_blank"><div class="ic">🎨</div><h3>Score de design</h3><p>Votre site est-il pro ?</p><img class="qr" alt="QR https://www.convertilab.com/design-score" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGAQMAAACzVW0eAAAABlBMVEULCxL///9C3sEbAAABQklEQVR42u1YwQnDQAwTvQEy0q2ekW6AgGvJTvpKoZ+iRw4T0t5HyLJsB3FzDjw3X28W8oyIsSa2YPDM44W786+bxDaDwIRHkTjzTxNsuPDky8rAMMOWQeq2sMO2JLxthxk26i32EG/EZqQ31emaVxjVaZ/9yIQCWQ7tLh45JV2Z05XAhG2xInxqIUlL6gqhnlZ6IyQ9TzOx0BuVVrzJRti8XHIqlkpy0hv04uJvMjeSRq+TA7vojcNI678QMsU2vFFdIF01jTCnLnor1+0JJH/Ch7fM6adOZ7SZTKO+sK4uD6XYxd9KcpIZW4OR3uQhQ3RVg4DavdEc0ubWYbPL1J7F8gx1BHJotWexWjnFDZWq1YxUO0K3ex+99Z51tlQtCz67c/GmnEaNIuG1Z9VI6TaT956l0UgVChxee9bzJeunmzdokOncdZXfTQAAAABJRU5ErkJggg=="><div class="scanhint">📱 Scannez</div></a>
+      <a class="toolcard reveal" style="--i:6" href="https://www.convertilab.com/estimateur-ads" target="_blank"><div class="ic">📊</div><h3>Estimateur Ads</h3><p>Votre budget pub estimé</p><img class="qr" alt="QR https://www.convertilab.com/estimateur-ads" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGAQMAAACzVW0eAAAABlBMVEULCxL///9C3sEbAAABTElEQVR42u1YsY0DMQwjcgN4JK/ukTyAAD1FOblv8sUXAYsYxsGGG0IUKemQb1bg+/LnywbXtbknNzDrjhkPvFufeiG2SYyXvuesgwk2RunKlbmIKkZ2DI2wFaHAKHh22HJhMPumW9w6x4itdDGs8q11Ol/bSKe9iEqZdruLSb4NJtsSudJCrrDxtxhytt26KEJd8o2xEqENSbVilmY98o2ERjlbgayzT9zoZkIVyrritwuECbaNkI1A3ktCfTxEeEhl5V5zaoSNSHAapHxGz0SnTSLPVUzZkGz4YAvpVNhWHlG41IWr+8m2OBV9F53K3ypc3SnhQHXJN9Wp7kBCF5+4dR8CdZWSqs8sc+Ysla1UAG10es9ZPSyoIfHp33D6kDhhnD7zafOItjjB85pPN+6mt0ThNWeFrKPrgo0WzpwVv2ZVm3r6/V/1j5cf+HLYJJmCbkAAAAAASUVORK5CYII="><div class="scanhint">📱 Scannez</div></a>
+      <a class="toolcard reveal" style="--i:7" href="https://www.convertilab.com/comparateur-sites" target="_blank"><div class="ic">🆚</div><h3>Comparateur</h3><p>Vous vs un concurrent</p><img class="qr" alt="QR https://www.convertilab.com/comparateur-sites" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeAQMAAABoqSz0AAAABlBMVEULCxL///9C3sEbAAABiUlEQVR42u1YwQ0CMQyL6AA3UlfvSB0gUoidFPGBD0L4QXUSpf1YkePYtXi93P6Xn11uyzX29Ctiz9znBkc2/WZv1i8uE+1M1APAc7MGPvzNc020WUYiXCwvqjo2qy2M1pMPEYQqj3Zjk2TIvV2hjBa83eZmp7BTmLetCc+friacZddKnAl+PORNEe3Cz7WMMktWgMCyCpbC5afdejqwzpq1fcjC0S5sstSyTKgKc6glJVbNCNEu2+BtcDQYaeA8V50O0LEaEAQMt+CirqbbKoDQyjAMHop2GQ1Y0ZUVZqOJMsHYWdFV7SmsqreoLT40V/tw09VbahehppTNEylU9ZaDAKmhTEL1l+k6xhKBVl1iTrSyClbmlsGBONFxS9jVLDvULavAOocsE5ypoTIvQgTAi6L1zg51UJvpytlht8wWzmDeEc5lrQM0kB0klTPvMTOcEervCVTd4xNM2t+ys2DCZ7E36jFEGO3TO1hHCe23GgovJ0UI+1vj2HVq1zhPuKrZ4f/k/qXLO7jzcUDMwKXYAAAAAElFTkSuQmCC"><div class="scanhint">📱 Scannez</div></a>
+      <a class="toolcard reveal" style="--i:8" href="https://www.convertilab.com/generateur-robots-sitemap" target="_blank"><div class="ic">🤖</div><h3>Robots &amp; Sitemap</h3><p>Générés en 1 clic</p><img class="qr" alt="QR https://www.convertilab.com/generateur-robots-sitemap" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeAQMAAABoqSz0AAAABlBMVEULCxL///9C3sEbAAABlElEQVR42u1YwW3EMAwTmgE8klf3SB7AgE4kdbl+ep8WKB9nBEESfwiGpihF/rxOfDZ/t7mj1rVnXRHzqm8j8Snm+Yo36z82C+0s1FeuQpsAHHzNevZE25QC5yqqgXaDbV+0vMdYJ/TqjraIvSiJ0q0zWv76eYR8QMDGun15wn35eoIW+QTshHTb3jyVIOOidA947u+eaM+4QU6eslWwY1hyC4/twwWcO+ouZ/BEe5ph2NddIEyVQPsqbvFCp9X9uOaE4vZQsXQGKFZRwfaUBQC3PxyS7KrbbISwWYhW5mDqt1ysC0lnCKUaU255oHLr7y9WtE44ng52KdVUywATA1rUC1u/HSoQOFkw2+ezpyfAtXiswCrzmHFOoG5TsZZyhQxsc0LHRdSIkd/SgilaQpUeQLX6X1sHI0IxDA10ddjOvUOw/s7uHWQLvn1Z0G9XHzffWtazGpaGFfTejje+8wQGWk7Aui9zTYyaLDWlyDYdcsznYJrY5LO0Ges21aFTEjS0tPYEtA+quR3Ljf32M4//+80HXdCbpsEjDZ0AAAAASUVORK5CYII="><div class="scanhint">📱 Scannez</div></a>
+      <a class="toolcard reveal" style="--i:9" href="https://www.convertilab.com/rapport-sectoriel" target="_blank"><div class="ic">📈</div><h3>Rapport sectoriel</h3><p>Les tendances de votre secteur</p><img class="qr" alt="QR https://www.convertilab.com/rapport-sectoriel" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeAQMAAABoqSz0AAAABlBMVEULCxL///9C3sEbAAABiElEQVR42u1YwW0DMQwjqgE8klf3SDeAAdWk5Kaf9tMC5aPGIfHFH4agKMrIr9fG/+HPDh+cFQ/2WLXfI/mFud/wzfqLw4N2HtSRRBj3T3DzmKI9NIYQHlaD9M7zGdZol0BODMJ2R/tws8F9MWyLNkXmZq2R3rDWbXnC/Pz4esJdfBmH0pczWKJdwrkgmxVsCtjWwTbhlSRmd4exXKus6T3w8mmnTVmZqYNJrvykG6x+ha8SBHVJA3kJN+VWgIVQnYLGe5Cbcgu1g5V6oqQrnj0dbEuxxweIVpjpCaZKQFVWCDBGdWFbv70mNtbN4fD1WxUU3XW8Ann/YpoYceuLJUac8E2MHb+p224QB+22ncskXYmhEo4MzTeNL804S32hk7lxTmChhTpaYYZasGtO+Jhz0YWmiOs7Ozxts0C3hrCey6CBt7Juz5LGMy9rjaqQhtP+PiHoDMjWrW++LbR3hOzru7TntjpFlVta65ZVVj1XAQy2+bail+b0WUN6pUfnu5r/+/jfPnwHXkhwerStL/cAAAAASUVORK5CYII="><div class="scanhint">📱 Scannez</div></a>
+      <a class="toolcard reveal" style="--i:10" href="https://www.convertilab.com/generateur-mentions-legales" target="_blank"><div class="ic">⚖️</div><h3>Mentions légales</h3><p>Conformes, en 2 minutes</p><img class="qr" alt="QR https://www.convertilab.com/generateur-mentions-legales" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeAQMAAABoqSz0AAAABlBMVEULCxL///9C3sEbAAABi0lEQVR42u1YQY4DMQhDmwfkSfk6T8oDIrHGhKqX9tKV1odG0TSaXFzGGIPF63Xse/nZ5TasEW7TeV5nRr7C4cferP+4BNoF1AObUO8ZP1sULUCOvRBenAsznkMaLciQBAANxtZHu5qxi4B10UaRllBJCWXeUhP2et66mlALCBHbiZMPRjvlTZS3xk9vKbmZa/eNKBMmqsS6Ea5cmy6bZYBaKZaYW77yL2iinX460cDbwxIsGlumVckCobJGMPs0eXsSXlbeIkOJg6qrMeYUn4wzrYKJ8jYSJMvZrQtB9yiqYIUz8utnbFmFT2WfJNrShMqs+3a6auX1a2MIlYeEqsrbJACEixFelXRHNsvKcT0EgbFNWROuZYTnpCvbh9D1CR1VLymAJgQlQtgn8Mke55AVsh36aFkgJbpxUNWEcra1n3yjcF/GYcLD2yj729vzWpnwRBvy04/DQtYjpvSQ0pMlHqi3Pb4Tjm2VYPLWdB3jnTG6cQKWjGXl1e3QM7/a3jQZpPX2O4//+8tfmNtu5dDAYt0AAAAASUVORK5CYII="><div class="scanhint">📱 Scannez</div></a>
+    </div>
+    <a class="toolcta solid reveal" style="--i:11" href="https://www.convertilab.com/outils" target="_blank">Voir tous les outils gratuits <span class="ar">→</span></a>
+  </section>
+
+  <!-- 15. CLOSE / CTA -->
+  <section class="slide" id="s-close">
+    <div class="eyebrow reveal" style="--i:0">On démarre ?</div>
+    <h1 class="reveal" style="--i:1">Votre site peut être en ligne<br><span class="grad-text">dans 3 semaines.</span></h1>
+    <div class="startsteps">
+      <div class="ss reveal" style="--i:2"><div class="n">1</div><h3>On valide ensemble</h3><p>La formule qui vous convient, aujourd'hui.</p></div>
+      <div class="ss reveal" style="--i:3"><div class="n">2</div><h3>Acompte pour lancer</h3><p>Dès 39 €/mois, on réserve votre place.</p></div>
+      <div class="ss reveal" style="--i:4"><div class="n">3</div><h3>Maquette sous 72 h</h3><p>Vous voyez votre site avant tout le reste.</p></div>
+    </div>
+    <div class="reveal" style="--i:5"><span class="live"><span class="dot"></span> Je ne prends que quelques projets par mois — pour garder la qualité</span></div>
+    <a class="cta-btn reveal" style="--i:6" onclick="goSlide('s-rdv')">On lance votre projet <span class="arrow">→</span></a>
+    <div class="contact-line reveal" style="--i:7">
+      <span>📧 <b>contact@convertilab.com</b></span>
+      <span>📞 <b>06 16 47 72 45</b></span>
+      <span>🌐 <b>www.convertilab.com</b></span>
+    </div>
+  </section>
+
+  <!-- 16. PRISE DE RDV (calendrier maison) -->
+  <section class="slide" id="s-rdv">
+    <div class="split" style="grid-template-columns:.82fr 1.18fr;gap:2.2rem;align-items:center">
+      <div>
+        <div class="eyebrow reveal" style="--i:0">Réservez votre créneau</div>
+        <h2 class="reveal" style="--i:1">Choisissez le moment de<br><span class="grad-text">votre appel offert.</span></h2>
+        <div class="pains" style="margin-top:1.1rem">
+          <div class="pain reveal" style="--i:2"><span class="x" style="background:rgba(52,211,153,.15);color:#8FEAC5">✓</span> 30 min, sans engagement</div>
+          <div class="pain reveal" style="--i:3"><span class="x" style="background:rgba(52,211,153,.15);color:#8FEAC5">✓</span> Vous repartez avec une maquette gratuite</div>
+          <div class="pain reveal" style="--i:4"><span class="x" style="background:rgba(52,211,153,.15);color:#8FEAC5">✓</span> Toutes vos questions, une réponse claire</div>
+        </div>
+        <div class="reveal" style="--i:5;margin-top:1.3rem"><span class="live"><span class="dot"></span> Places limitées ce mois-ci</span></div>
+      </div>
+      <div class="reveal" style="--i:3">
+        <div class="cal" id="calBook">
+          <div id="calForm">
+            <div class="cal-step">Vos coordonnées</div>
+            <div class="cal-fields">
+              <input id="fPrenom" type="text" placeholder="Votre prénom" autocomplete="given-name">
+              <input id="fEmail" type="email" placeholder="Votre email" autocomplete="email">
+              <input id="fTel" type="tel" placeholder="Votre téléphone" autocomplete="tel">
+            </div>
+            <div class="cal-err" id="calErr"></div>
+            <button class="cal-confirm ready" id="calNext">Choisir mon créneau <span class="ar">→</span></button>
+            <div class="cal-note">🔒 Vos informations restent 100% confidentielles</div>
+          </div>
+          <div id="calPick" style="display:none">
+            <div>
+              <div class="cal-step">1. Choisissez un jour</div>
+              <div class="cal-days" id="calDays"></div>
+            </div>
+            <div>
+              <div class="cal-step" id="calSlotLabel">2. Choisissez une heure</div>
+              <div class="cal-slots" id="calSlots"></div>
+            </div>
+            <button class="cal-confirm" id="calConfirm">Confirmer mon RDV <span class="ar">→</span></button>
+            <div class="cal-note">📞 Rendez-vous téléphonique · Gratuit &amp; sans engagement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="dots" id="dots"></div>
+<div class="hint">→ dévoile étape par étape · ← revient en arrière · F plein écran</div>
+<div class="nav"><span id="counter">1 / 15</span><button id="sndbtn" onclick="toggleSnd()" title="Activer/couper le son">🔊</button><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  const dotsWrap=document.getElementById('dots');
+  const progress=document.getElementById('progress');
+  const counter=document.getElementById('counter');
+  let cur=0;
+  slides.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i===0?' active':'');d.onclick=()=>go(i);dotsWrap.appendChild(d)});
+  const dots=[...document.querySelectorAll('.dot')];
+
+  // ---- sound (soft, toggleable) ----
+  let audioCtx=null, muted=false;
+  function beep(freq,dur,type,vol){
+    if(muted)return;
+    try{audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
+      const o=audioCtx.createOscillator(),g=audioCtx.createGain();
+      o.type=type||'sine';o.frequency.value=freq;g.gain.value=vol||.04;
+      o.connect(g);g.connect(audioCtx.destination);o.start();
+      g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+(dur||.09));
+      o.stop(audioCtx.currentTime+(dur||.09));}catch(e){}
+  }
+  function whoosh(){beep(300,.12,'triangle',.035);}
+  function sparkle(){[523,659,784,1047].forEach((f,i)=>setTimeout(()=>beep(f,.14,'sine',.05),i*70));}
+  function toggleSnd(){muted=!muted;document.getElementById('sndbtn').textContent=muted?'🔇':'🔊';if(!muted)beep(560,.07,'sine',.05);}
+  window.toggleSnd=toggleSnd;
+
+  // ---- helper: element hidden inside an unrevealed fragment? ----
+  function inHiddenFrag(el){const f=el.closest('.frag');return f&&!f.classList.contains('on');}
+
+  // ---- dataviz (bars + ring gauge) ----
+  function triggerViz(root){
+    root.querySelectorAll('.fill[data-w]').forEach(f=>{if(inHiddenFrag(f))return;f.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>f.style.width=f.dataset.w+'%'));});
+    root.querySelectorAll('.ring .prog[data-off]').forEach(p=>{if(inHiddenFrag(p))return;p.style.strokeDashoffset='471';requestAnimationFrame(()=>requestAnimationFrame(()=>p.style.strokeDashoffset=p.dataset.off));});
+    if(root.querySelector&&root.querySelector('#roiChart')&&window.animateROIChart)window.animateROIChart();
+  }
+
+  // ---- confetti burst ----
+  function confetti(){
+    const c=document.getElementById('confetti');if(!c)return;
+    const ctx=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;
+    const cols=['#8B5CF6','#E04090','#B57BEA','#34D399','#FFC24B'];
+    const parts=Array.from({length:150},()=>({x:innerWidth/2,y:innerHeight*.42,vx:(Math.random()-.5)*15,vy:(Math.random()-1)*15-2,r:Math.random()*7+3,c:cols[Math.random()*cols.length|0],a:1,rot:Math.random()*6.28,vr:(Math.random()-.5)*.35}));
+    let t=0;
+    (function step(){ctx.clearRect(0,0,c.width,c.height);t++;
+      parts.forEach(p=>{p.vy+=.36;p.x+=p.vx;p.y+=p.vy;p.rot+=p.vr;p.a-=.007;
+        ctx.save();ctx.globalAlpha=Math.max(0,p.a);ctx.translate(p.x,p.y);ctx.rotate(p.rot);
+        ctx.fillStyle=p.c;ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*.55);ctx.restore();});
+      if(t<170)requestAnimationFrame(step);else ctx.clearRect(0,0,c.width,c.height);
+    })();
+  }
+
+  function animateCounters(root){
+    root.querySelectorAll('[data-count]').forEach(el=>{
+      if(inHiddenFrag(el))return;
+      const target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||"0"),suffix=el.dataset.suffix||"";
+      const dur=1100,start=performance.now();
+      function tick(now){const p=Math.min((now-start)/dur,1);const e=1-Math.pow(1-p,3);
+        el.textContent=(target*e).toFixed(dec).replace('.',',')+suffix;if(p<1)requestAnimationFrame(tick);}
+      el.textContent=(0).toFixed(dec).replace('.',',')+suffix;requestAnimationFrame(tick);
+    });
+  }
+  // ---- fragments (suspense au clic) ----
+  function pendingFrags(slide){
+    const f=[...slide.querySelectorAll('.frag')].filter(x=>!x.classList.contains('on'));
+    if(!f.length)return null;
+    const min=Math.min(...f.map(x=>+(x.dataset.step||0)));
+    return f.filter(x=>+(x.dataset.step||0)===min);
+  }
+  function next(){
+    const grp=pendingFrags(slides[cur]);
+    if(grp){
+      grp.forEach((f,k)=>{f.style.transitionDelay=(k*.14)+'s';f.classList.add('on');animateCounters(f);triggerViz(f);
+        setTimeout(()=>f.style.transitionDelay='',900+k*140);});
+      beep(520,.07,'sine',.04);return;
+    }
+    go(cur+1);
+  }
+  function prev(){
+    const on=[...slides[cur].querySelectorAll('.frag.on')];
+    if(on.length){
+      const max=Math.max(...on.map(x=>+(x.dataset.step||0)));
+      on.filter(x=>+(x.dataset.step||0)===max).forEach(x=>x.classList.remove('on'));
+      return;
+    }
+    go(cur-1);
+  }
+  window.next=next;window.prev=prev;
+  // saut direct vers une slide (renvoi depuis un outil), en révélant tous ses fragments
+  window.goSlide=function(id){
+    const el=document.getElementById(id); if(!el)return;
+    const idx=slides.indexOf(el); if(idx<0)return;
+    go(idx);
+    slides[idx].querySelectorAll('.frag').forEach(f=>f.classList.add('on'));
+  };
+
+  function go(i){
+    if(i<0||i>=slides.length||i===cur)return;
+    const dir=i>cur?1:-1;
+    slides[cur].classList.remove('active');slides[cur].classList.toggle('prev',dir>0);
+    cur=i;slides[cur].classList.remove('prev');slides[cur].classList.add('active');
+    // en avançant : fragments cachés (suspense) · en reculant : tout est déjà dévoilé
+    slides[cur].querySelectorAll('.frag').forEach(f=>f.classList.toggle('on',dir<0));
+    dots.forEach((d,k)=>d.classList.toggle('active',k===cur));
+    progress.style.width=((cur+1)/slides.length*100)+'%';
+    counter.textContent=(cur+1)+' / '+slides.length;
+    animateCounters(slides[cur]);
+    triggerViz(slides[cur]);
+    whoosh();
+    if(cur===slides.length-1){confetti();sparkle();}
+    slides[cur].querySelectorAll('.card,.pkg,.quote').forEach(c=>c.style.transform='');
+  }
+  progress.style.width=(1/slides.length*100)+'%';
+  counter.textContent='1 / '+slides.length;
+  animateCounters(slides[0]);
+  // FAQ accordion
+  document.querySelectorAll('.qa .q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key===' ')next();
+    if(e.key==='ArrowLeft')prev();
+    if(e.key.toLowerCase()==='f'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();}
+  });
+  let sx=0, lastSwipe=0;
+  addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+  addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>60){lastSwipe=Date.now();(dx<0?next():prev())}},{passive:true});
+  // tap pour avancer (mobile) — taper à droite = suivant, à gauche = précédent
+  document.getElementById('deck').addEventListener('click',e=>{
+    if(innerWidth>760)return;
+    if(Date.now()-lastSwipe<500)return;
+    if(e.target.closest('button,a,input,select,textarea,label,.cal,.opt,.preset,.chk,.qa,.toolcard,.pkg,.dot,.cta-btn,.toolcta'))return;
+    (e.clientX>innerWidth*0.5?next:prev)();
+  });
+
+  /* ===== MOTION UPGRADE ===== */
+  (function(){
+    // intro splash
+    const splash=document.getElementById('splash');
+    if(splash){setTimeout(()=>splash.classList.add('gone'),1500);setTimeout(()=>splash.remove(),2300);}
+    // cursor spotlight
+    const spot=document.getElementById('spot');
+    if(spot)addEventListener('pointermove',e=>{spot.style.setProperty('--mx',e.clientX+'px');spot.style.setProperty('--my',e.clientY+'px');},{passive:true});
+
+    // kinetic word split (preserves <br> and gradient spans)
+    function split(node){
+      const out=[];
+      node.childNodes.forEach(ch=>{
+        if(ch.nodeType===3){
+          ch.textContent.split(/(\s+)/).forEach(tok=>{
+            if(!tok)return;
+            if(/^\s+$/.test(tok))out.push(document.createTextNode(tok));
+            else{const s=document.createElement('span');s.className='kw';s.textContent=tok;out.push(s);}
+          });
+        }else if(ch.nodeType===1){
+          if(ch.tagName==='BR')out.push(document.createElement('br'));
+          else if(ch.classList.contains('grad-text')){const c=ch.cloneNode(true);c.classList.add('kw');out.push(c);}
+          else{const el=ch.cloneNode(false);split(ch).forEach(n=>el.appendChild(n));out.push(el);}
+        }
+      });
+      return out;
+    }
+    document.querySelectorAll('.slide h1, .slide h2').forEach(h=>{
+      h.classList.remove('reveal');
+      const kids=split(h); h.innerHTML=''; kids.forEach(n=>h.appendChild(n));
+      h.querySelectorAll('.kw').forEach((k,i)=>k.style.setProperty('--w',i));
+    });
+    // restart entrance on the initially-active slide so its words animate in
+    const first=document.querySelector('.slide.active');
+    if(first){first.classList.remove('active');void first.offsetWidth;requestAnimationFrame(()=>first.classList.add('active'));}
+
+    // rotating glow behind the recommended package
+    const reco=document.querySelector('.pkg.reco');
+    if(reco){const g=document.createElement('div');g.className='spin';reco.appendChild(g);}
+
+    // 3D tilt on cards
+    document.querySelectorAll('.card,.pkg,.quote').forEach(el=>{
+      el.addEventListener('pointermove',e=>{
+        const r=el.getBoundingClientRect();
+        const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+        el.style.transform=`perspective(850px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-6px)`;
+      });
+      el.addEventListener('pointerleave',()=>{el.style.transform='';});
+    });
+
+    // animated particle constellation
+    const cv=document.getElementById('fx');
+    if(cv){
+      const ctx=cv.getContext('2d'); let W,H,ps;
+      function size(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
+      size(); addEventListener('resize',size,{passive:true});
+      ps=Array.from({length:54},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.7+.5}));
+      function draw(){
+        ctx.clearRect(0,0,W,H);
+        for(const p of ps){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+          ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fillStyle='rgba(185,145,255,.55)';ctx.fill();}
+        for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){
+          const a=ps[i],b=ps[j],dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy;
+          if(d<10000){ctx.globalAlpha=(1-d/10000)*.5;ctx.strokeStyle='rgba(139,92,246,.6)';ctx.lineWidth=.6;
+            ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();ctx.globalAlpha=1;}
+        }
+        requestAnimationFrame(draw);
+      }
+      draw();
+    }
+
+    // ---- ROI calculator + break-even chart ----
+    const rp=document.getElementById('rPanier'), rc=document.getElementById('rClients');
+    if(rp&&rc){
+      const fmt=n=>Math.round(n).toLocaleString('fr-FR');
+      const price=500;
+      const ox=8,oy=168,plotW=444,plotH=154;
+      const revLine=document.getElementById('revLine'),revArea=document.getElementById('revArea'),
+            costLine=document.getElementById('costLine'),beDot=document.getElementById('beDot');
+      function drawChart(rev){
+        if(!revLine)return;
+        const yMax=Math.max(rev*12,price)*1.12||1;
+        const X=m=>ox+m/12*plotW, Y=v=>oy-v/yMax*plotH;
+        const pts=[]; for(let m=0;m<=12;m++)pts.push(X(m).toFixed(1)+','+Y(rev*m).toFixed(1));
+        revLine.setAttribute('points',pts.join(' '));
+        revArea.setAttribute('points',ox+','+oy+' '+pts.join(' ')+' '+(ox+plotW)+','+oy);
+        const cy=Y(price); costLine.setAttribute('x1',ox);costLine.setAttribute('x2',ox+plotW);costLine.setAttribute('y1',cy);costLine.setAttribute('y2',cy);
+        const mStar=rev>0?price/rev:99;
+        if(mStar<=12){beDot.setAttribute('cx',X(mStar).toFixed(1));beDot.setAttribute('cy',cy.toFixed(1));beDot.style.display='';}
+        else beDot.style.display='none';
+      }
+      function animateChart(){
+        if(!revLine)return;
+        const len=revLine.getTotalLength();
+        revLine.style.transition='none';revLine.style.strokeDasharray=len;revLine.style.strokeDashoffset=len;
+        requestAnimationFrame(()=>requestAnimationFrame(()=>{revLine.style.transition='stroke-dashoffset 1.3s var(--ease)';revLine.style.strokeDashoffset=0;}));
+      }
+      window.animateROIChart=animateChart;
+      function upd(){
+        const panier=+rp.value, clients=+rc.value, rev=panier*clients;
+        document.getElementById('roiPanier').textContent=fmt(panier)+' €';
+        document.getElementById('roiClients').textContent=clients;
+        document.getElementById('roiRev').textContent=fmt(rev)+' €/mois';
+        const days=rev>0?price/rev*30:99999;
+        let pay;
+        if(days<=1)pay='moins d\'1 jour';
+        else if(days<30)pay='≈ '+Math.round(days)+' jours';
+        else pay='≈ '+(price/rev).toFixed(1).replace('.',',')+' mois';
+        document.getElementById('roiPay').textContent=pay;
+        document.getElementById('roiGain').textContent='+ '+fmt(rev*12-price)+' €';
+        const nCli=Math.max(1,Math.ceil(price/panier));
+        document.getElementById('roiVerdict').innerHTML='👉 Remboursé dès votre <b>'+nCli+(nCli===1?'ᵉʳ':'ᵉ')+' client</b>. Tout le reste, c\'est votre marge.';
+        drawChart(rev);
+      }
+      const chips=[...document.querySelectorAll('.preset')];
+      function clearPreset(){chips.forEach(c=>c.classList.remove('on'));}
+      rp.addEventListener('input',()=>{clearPreset();upd();});
+      rc.addEventListener('input',()=>{clearPreset();upd();});
+      chips.forEach(ch=>ch.addEventListener('click',()=>{
+        rp.value=ch.dataset.p; rc.value=ch.dataset.c;
+        clearPreset(); ch.classList.add('on'); upd(); animateChart(); beep(560,.06,'sine',.04);
+      }));
+      upd();
+    }
+
+    // ---- audit express /10 ----
+    const auditItems=[...document.querySelectorAll('#auditList .chk')];
+    if(auditItems.length){
+      const scoreEl=document.getElementById('auditScore'), verdEl=document.getElementById('auditVerdict');
+      function updAudit(){
+        const n=auditItems.filter(c=>c.classList.contains('on')).length;
+        const score=Math.round(n/auditItems.length*10);
+        scoreEl.textContent=score;
+        let v;
+        if(n===0)v='Cochez ce que votre site fait déjà…';
+        else if(score<=3)v='🔴 Votre site vous fait perdre des clients chaque jour.';
+        else if(score<=6)v='🟠 Correct, mais il laisse filer des opportunités.';
+        else if(score<=8)v='🟡 Bon site — on peut le rendre redoutable.';
+        else v='🟢 Excellent ! On optimise les derniers détails.';
+        verdEl.textContent=v;
+      }
+      auditItems.forEach(c=>c.addEventListener('click',()=>{c.classList.toggle('on');updAudit();beep(500,.05,'sine',.03);}));
+      updAudit();
+    }
+
+    // ---- coût de l'inaction ----
+    const rw=document.getElementById('rWait');
+    if(rw){
+      const fmt=n=>Math.round(n).toLocaleString('fr-FR');
+      const perMonth=3, avg=150; // clients/mois manqués × panier moyen
+      function updLoss(){
+        const m=+rw.value, cli=m*perMonth, rev=cli*avg;
+        document.getElementById('waitLbl').textContent=m;
+        document.getElementById('lossCli').textContent=fmt(cli);
+        document.getElementById('lossRev').textContent=fmt(rev)+' €';
+        document.getElementById('lossVerdict').innerHTML='⏳ En '+m+' mois, ce sont peut-être <b>'+fmt(rev)+' €</b> qui vous ont échappé.';
+      }
+      rw.addEventListener('input',updLoss); updLoss();
+    }
+
+    // ---- sélecteur d'objectif ----
+    const goalControls=document.getElementById('goalControls');
+    if(goalControls){
+      const gmap={
+        devis:['Un site qui capte les demandes','Formulaires malins et bouton d\'appel en 1 clic : chaque visiteur intéressé devient un contact.'],
+        resa:['La réservation en ligne 24/7','Vos clients réservent seuls, même la nuit. Fini les allers-retours téléphoniques.'],
+        vente:['Votre boutique qui vend en continu','Catalogue, paiement sécurisé, gestion simple : vous vendez même en dormant.'],
+        credit:['Une image pro qui inspire confiance','Un design premium qui vous place au-dessus de vos concurrents dès la 1ʳᵉ seconde.']
+      };
+      function updGoal(v){const g=gmap[v];document.getElementById('goalTitle').textContent=g[0];document.getElementById('goalDesc').textContent=g[1];}
+      goalControls.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{
+        goalControls.querySelectorAll('.opt').forEach(x=>x.classList.remove('on'));
+        o.classList.add('on'); updGoal(o.dataset.v); beep(540,.05,'sine',.03);
+      }));
+    }
+
+    // ---- simulateur temps ----
+    const rm=document.getElementById('rMonth');
+    if(rm){
+      const fmt=n=>Math.round(n).toLocaleString('fr-FR');
+      function updSimu(){
+        const m=+rm.value;
+        document.getElementById('simuMonthLbl').textContent=m+' mois';
+        document.getElementById('simuVis').textContent=fmt(200+m*135);
+        document.getElementById('simuDem').textContent=fmt(4+m*2);
+        document.getElementById('simuCli').textContent=fmt(Math.round(m*3.2));
+      }
+      rm.addEventListener('input',updSimu); updSimu();
+    }
+
+    // ---- configurateur de formule ----
+    const confControls=document.getElementById('confControls');
+    if(confControls){
+      const state={type:'landing',rdv:'0',admin:'0'};
+      const map={
+        essentiel:['Mensuel','39€/mois','Votre site pro sans investissement initial, tout inclus.'],
+        pro:['Site Vitrine','500€','Le site complet en paiement unique, livré en 7 jours.'],
+        premium:['Sur mesure','Sur devis','E-commerce, app ou projet ambitieux, accompagnement dédié.']
+      };
+      function reco(){
+        let t;
+        if(state.type==='ecom')t='premium';
+        else if(state.type==='vitrine'||state.admin==='1')t='pro';
+        else t='essentiel';
+        const r=map[t];
+        document.getElementById('recoName').textContent=r[0];
+        document.getElementById('recoPrice').textContent=r[1];
+        document.getElementById('recoDesc').textContent=r[2];
+      }
+      confControls.querySelectorAll('.qgroup').forEach(g=>{
+        const q=g.dataset.q;
+        g.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{
+          g.querySelectorAll('.opt').forEach(x=>x.classList.remove('on'));
+          o.classList.add('on'); state[q]=o.dataset.v; reco(); beep(540,.05,'sine',.03);
+        }));
+      });
+      reco();
+    }
+
+    // ---- calendrier RDV + capture lead (Supabase / Pipedrive via /promo-site-web) ----
+    const daysEl=document.getElementById('calDays');
+    if(daysEl){
+      const SB_URL='https://fubbjkcxbomoshyunjnn.supabase.co';
+      const SB_ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ1YmJqa2N4Ym9tb3NoeXVuam5uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzODM0NTIsImV4cCI6MjA5MDk1OTQ1Mn0.G3s4DuZNRWeKf9G07vu6onZhr82Wcgw8VHT0-Ha1neQ';
+      const API_BASE='https://www.convertilab.com';
+      const slotsEl=document.getElementById('calSlots'), confirmBtn=document.getElementById('calConfirm'),
+            slotLabel=document.getElementById('calSlotLabel'), calBox=document.getElementById('calBook'),
+            calForm=document.getElementById('calForm'), calPick=document.getElementById('calPick'),
+            calNext=document.getElementById('calNext'), calErr=document.getElementById('calErr'),
+            fPrenom=document.getElementById('fPrenom'), fEmail=document.getElementById('fEmail'), fTel=document.getElementById('fTel');
+      let leadId=null;
+      const WD=["Dim","Lun","Mar","Mer","Jeu","Ven","Sam"], MO=["Jan","Fév","Mar","Avr","Mai","Juin","Juil","Aoû","Sep","Oct","Nov","Déc"];
+      const pad=n=>String(n).padStart(2,'0');
+      const toYMD=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+      function workDays(count){const out=[];const t=new Date();t.setHours(0,0,0,0);let i=0;while(out.length<count&&i<count*3){const d=new Date(t);d.setDate(t.getDate()+i);const wd=d.getDay();if(wd!==0&&wd!==6)out.push(d);i++;}return out;}
+      function slotsFor(ymd){const s=[];for(let h=9;h<18;h++)for(const m of[0,30])s.push(pad(h)+':'+pad(m));const now=new Date();if(ymd===toYMD(now)){const min=now.getTime()+3600000;return s.filter(x=>{const p=x.split(':').map(Number);const d=new Date(now);d.setHours(p[0],p[1],0,0);return d.getTime()>=min;});}return s;}
+      let selDate='', selSlot='';
+      const days=workDays(10);
+      function renderDays(){daysEl.innerHTML='';days.forEach(d=>{const ymd=toYMD(d);const b=document.createElement('button');b.type='button';b.className='cal-day'+(ymd===selDate?' on':'');b.innerHTML='<span class="wd">'+WD[d.getDay()]+'</span><span class="dn">'+d.getDate()+'</span><span class="mo">'+MO[d.getMonth()]+'</span>';b.onclick=()=>{selDate=ymd;selSlot='';renderDays();renderSlots();sync();beep(500,.05,'sine',.03);};daysEl.appendChild(b);});}
+      function renderSlots(){slotsEl.innerHTML='';const sl=selDate?slotsFor(selDate):[];const dobj=selDate?new Date(selDate+'T00:00:00'):null;slotLabel.innerHTML='2. Choisissez une heure'+(dobj?' <span style="opacity:.55;text-transform:none;letter-spacing:0">· '+dobj.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})+'</span>':'');if(!sl.length){slotsEl.innerHTML='<div style="grid-column:1/-1;color:var(--muted);text-align:center;padding:1rem;font-size:.85rem">Aucun créneau ce jour — choisissez un autre jour.</div>';return;}sl.forEach(s=>{const b=document.createElement('button');b.type='button';b.className='cal-slot'+(s===selSlot?' on':'');b.textContent=s;b.onclick=()=>{selSlot=s;renderSlots();sync();beep(580,.05,'sine',.03);};slotsEl.appendChild(b);});}
+      function sync(){confirmBtn.classList.toggle('ready',!!(selDate&&selSlot));}
+
+      // Étape 1 — coordonnées → création du lead (Supabase direct + notify best-effort)
+      function createLead(prenom,email,tel){
+        const id=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():(Date.now()+'-'+Math.round(Math.random()*1e9));
+        leadId=id;
+        fetch(SB_URL+'/rest/v1/rpc/upsert_promo_lead',{method:'POST',headers:{'apikey':SB_ANON,'Authorization':'Bearer '+SB_ANON,'Content-Type':'application/json'},body:JSON.stringify({p_id:id,p_email:email,p_prenom:prenom,p_telephone:tel,p_entreprise:null,p_situation:'RDV via présentation commerciale',p_objectif:'Prise de rendez-vous',p_urgence:'Non spécifié'})}).then(r=>r.ok?r.json():null).then(rid=>{if(rid&&typeof rid==='string'&&rid!==id)leadId=rid;}).catch(e=>console.warn('[RDV] Supabase:',e&&e.message));
+        fetch(API_BASE+'/api/notify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({formType:'promo_lead',name:prenom,email:email,phone:tel,fields:{source:'Présentation commerciale'}})}).catch(()=>{});
+      }
+      calNext.onclick=()=>{
+        const prenom=fPrenom.value.trim(), email=fEmail.value.trim(), tel=fTel.value.trim();
+        if(prenom.length<2){calErr.textContent='Merci d\'indiquer votre prénom.';fPrenom.focus();return;}
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){calErr.textContent='Email invalide, vérifiez le format.';fEmail.focus();return;}
+        if(tel.replace(/\D/g,'').length<8){calErr.textContent='Numéro de téléphone invalide.';fTel.focus();return;}
+        calErr.textContent=''; createLead(prenom,email,tel);
+        calForm.style.display='none'; calPick.style.display='flex';
+        renderDays(); renderSlots(); sync(); beep(560,.06,'sine',.04);
+      };
+
+      // Étape 2 — créneau → confirmation + update_slot (Pipedrive) best-effort
+      confirmBtn.onclick=()=>{
+        if(!(selDate&&selSlot))return;
+        const slotAt=new Date(selDate+'T'+selSlot+':00').toISOString();
+        if(leadId){fetch(API_BASE+'/api/promo',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'update_slot',id:leadId,slot_at:slotAt})}).catch(()=>{});}
+        const dd=new Date(selDate+'T'+selSlot+':00');const txt=dd.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})+' à '+selSlot;
+        calBox.innerHTML='<div class="cal-done"><div class="big">🎉</div><h3>Rendez-vous confirmé !</h3><div class="when">'+txt+'</div><p>Vous allez recevoir la confirmation par email.<br>À très vite !</p></div>';
+        beep(660,.14,'sine',.05);setTimeout(()=>beep(880,.16,'sine',.05),110);
+      };
+
+      if(days[0])selDate=toYMD(days[0]);
+    }
+  })();
+</script>
+</body>
+</html>
