@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE, PRICING } from "@/lib/constants";
+import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import RefonteSiteContent from "./RefonteSiteContent";
@@ -49,44 +49,6 @@ const serviceSchema = {
   },
 };
 
-const refonteFaq = [
-  {
-    question: "Quand faut-il envisager la refonte de son site vitrine ?",
-    answer:
-      "Un site vitrine se refait en général tous les 3 à 5 ans. Les signes qui ne trompent pas : un design daté, un site lent sur mobile, un taux de rebond élevé, des demandes de contact en baisse ou un site que vous ne pouvez plus modifier vous-même. Si votre site n'est pas responsive ou n'apparaît plus sur Google, la refonte devient urgente.",
-  },
-  {
-    question: "Combien coûte une refonte de site web ?",
-    answer:
-      `Chez ConvertiLab, une refonte de site vitrine démarre ${PRICING.refonte.label}. Le prix dépend du nombre de pages, des fonctionnalités à reprendre (formulaires, réservation, blog) et du travail SEO nécessaire. Vous recevez un devis détaillé et gratuit sous 24h.`,
-  },
-  {
-    question: "Vais-je perdre mon référencement Google pendant la refonte ?",
-    answer:
-      "Non, à condition que la migration soit faite correctement. Nous préservons votre SEO : audit des pages qui rankent, redirections 301 de chaque ancienne URL, conservation des balises title et des contenus performants, re-soumission du sitemap à Google. C'est le point le plus critique d'une refonte et notre priorité absolue.",
-  },
-  {
-    question: "Combien de temps dure une refonte de site ?",
-    answer:
-      "Une refonte de site vitrine prend en général 1 à 2 semaines chez ConvertiLab : audit de l'existant, nouvelle maquette (validée avant tout développement), intégration des contenus, redirections et mise en ligne. Les projets plus complexes (e-commerce, application) prennent 3 à 6 semaines.",
-  },
-  {
-    question: "Puis-je garder mon nom de domaine et mes contenus ?",
-    answer:
-      "Oui. Votre nom de domaine vous appartient et reste inchangé. Nous reprenons vos contenus existants (textes, images, avis clients) en les retravaillant si besoin pour le SEO et la conversion. Vous ne repartez pas de zéro : vous capitalisez sur l'existant.",
-  },
-];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: refonteFaq.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
-};
-
 const refonteStats = [
   { value: "53%", label: "des visiteurs mobiles quittent un site qui charge en plus de 3 secondes", source: "Google" },
   { value: "75%", label: "des internautes jugent la crédibilité d'une entreprise sur le design de son site", source: "Stanford" },
@@ -99,7 +61,6 @@ export default function RefonteSitePage() {
     <div className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navigation />
       <RefonteSiteContent />
 
@@ -127,23 +88,6 @@ export default function RefonteSitePage() {
             <Button asChild size="lg">
               <Link href="/portfolio">Voir nos refontes avant/après</Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ refonte (contenu citable IA + rich results) */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-10">
-            Questions fréquentes sur la refonte de site web
-          </h2>
-          <div className="space-y-6">
-            {refonteFaq.map((f) => (
-              <div key={f.question} className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                <h3 className="font-semibold text-gray-900 mb-2">{f.question}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{f.answer}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
