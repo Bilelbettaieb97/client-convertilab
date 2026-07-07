@@ -32,6 +32,7 @@ import {
 import { Button } from "@/components/ui/button";
 import SuggestedArticles from "@/components/internal-links/SuggestedArticles";
 import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
+import LazyMapEmbed from "@/components/ui/LazyMapEmbed";
 
 export const dynamicParams = false;
 
@@ -414,12 +415,10 @@ export default async function CityPage({ params }: Props) {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden border border-purple-100 shadow-sm min-h-[220px]">
-              <iframe
+              <LazyMapEmbed
                 title={`Carte de ${city.name} — zone d'intervention ConvertiLab`}
                 src={`https://www.google.com/maps?q=${city.lat},${city.lng}&z=12&output=embed`}
-                className="w-full h-full min-h-[220px]"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                label={city.name}
               />
             </div>
           </div>
