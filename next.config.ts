@@ -38,6 +38,20 @@ const nextConfig: NextConfig = {
         destination: "/portfolio",
         permanent: true,
       },
+      // /creation-site-internet/[ville] cannibalise /agence-web/[ville] (mêmes
+      // villes, offre identique). Search Console confirme : ces pages sont
+      // "URL inconnue de Google" (zéro trafic), donc on consolide sans risque
+      // vers /agence-web pour renforcer un seul jeu de pages locales.
+      {
+        source: "/creation-site-internet/:ville",
+        destination: "/agence-web/:ville",
+        permanent: true,
+      },
+      {
+        source: "/creation-site-internet",
+        destination: "/agence-web",
+        permanent: true,
+      },
       // convertilab.fr sert le même site que .com sans redirection :
       // Google crawle et indexe les deux domaines en doublon.
       // 301 vers .com pour consolider tous les signaux SEO sur un seul domaine.

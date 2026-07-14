@@ -6,17 +6,16 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Audit SEO Gratuit en Ligne — Analyse SEO de votre Site en 60s",
+  title: "Audit SEO Gratuit en Ligne : Analyse SEO de votre Site en 60s",
   description:
     "Outil d'audit SEO gratuit en ligne : analyse SEO complète de votre site web (60+ points de contrôle), score détaillé, analyse IA (GEO) et rapport SEO gratuit en PDF. Résultats en 60 secondes, sans engagement.",
   keywords:
     "audit seo gratuit, analyse seo, audit seo en ligne, audit seo gratuit en ligne, rapport seo gratuit, analyse seo gratuite, diagnostic seo, outil audit seo, test seo, audit seo site web, analyse seo en ligne",
   openGraph: {
-    title: "Audit SEO Gratuit en Ligne — Analyse SEO en 60 secondes | ConvertiLab",
+    title: "Audit SEO Gratuit en Ligne : Analyse SEO en 60 secondes | ConvertiLab",
     description:
       "60+ points de contrôle SEO, analyse IA, rapport PDF complet envoyé par email. 100% gratuit.",
     url: `${SITE.url}/seo-check`,
-    type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
@@ -24,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Audit SEO Gratuit — ConvertiLab",
+    title: "Audit SEO Gratuit | ConvertiLab",
     description: "Analysez votre site web en 60 secondes. Rapport PDF complet et gratuit.",
   },
   alternates: {
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Audit SEO Gratuit en Ligne — ConvertiLab",
+  name: "Audit SEO Gratuit en Ligne | ConvertiLab",
   description: "Outil d'audit SEO gratuit avec analyse de 60+ points de contrôle et rapport PDF.",
   url: `${SITE.url}/seo-check`,
   applicationCategory: "SEO Tool",
@@ -56,7 +55,7 @@ const faqItems = [
   {
     question: "L'audit SEO est-il vraiment gratuit ?",
     answer:
-      "Oui, l'audit SEO est 100% gratuit et sans engagement. Vous entrez l'URL de votre site, votre email, et vous recevez le rapport complet en PDF. Aucune carte bancaire n'est demandée, aucun abonnement caché. Nous proposons cet outil gratuitement car certains utilisateurs choisissent ensuite de nous confier la correction des problèmes détectés — mais rien ne vous y oblige.",
+      "Oui, l'audit SEO est 100% gratuit et sans engagement. Vous entrez l'URL de votre site, votre email, et vous recevez le rapport complet en PDF. Aucune carte bancaire n'est demandée, aucun abonnement caché. Nous proposons cet outil gratuitement car certains utilisateurs choisissent ensuite de nous confier la correction des problèmes détectés, mais rien ne vous y oblige.",
   },
   {
     question: "Qu'est-ce qu'un audit SEO exactement ?",
@@ -91,7 +90,7 @@ const faqItems = [
   {
     question: "Que faire après avoir reçu mon rapport d'audit SEO ?",
     answer:
-      "Commencez par les problèmes critiques : ce sont eux qui pénalisent le plus votre classement. Beaucoup de corrections sont à votre portée (balises title, textes alternatifs des images, contenu). Pour les problèmes techniques (vitesse, données structurées, indexation), vous pouvez les corriger vous-même si vous êtes à l'aise, ou nous confier la correction — nous proposons un audit SEO professionnel approfondi avec mise en œuvre des corrections.",
+      "Commencez par les problèmes critiques : ce sont eux qui pénalisent le plus votre classement. Beaucoup de corrections sont à votre portée (balises title, textes alternatifs des images, contenu). Pour les problèmes techniques (vitesse, données structurées, indexation), vous pouvez les corriger vous-même si vous êtes à l'aise, ou nous confier la correction, nous proposons un audit SEO professionnel approfondi avec mise en œuvre des corrections.",
   },
   {
     question: "L'outil fonctionne-t-il sur tous les sites ?",
@@ -134,10 +133,10 @@ const auditCategories = [
   },
   {
     title: "Qualité du contenu",
-    desc: "Volume et originalité du texte, structure sémantique, fraîcheur du contenu — les critères E-E-A-T que Google valorise.",
+    desc: "Volume et originalité du texte, structure sémantique, fraîcheur du contenu, les critères E-E-A-T que Google valorise.",
   },
   {
-    title: "GEO — Visibilité IA",
+    title: "GEO : Visibilité IA",
     desc: "Capacité de votre site à être compris et cité par ChatGPT, Perplexity, Gemini et Google AI Overviews. Le référencement de demain.",
   },
   {
@@ -279,7 +278,7 @@ export default function SeoCheckPage() {
         </section>
 
         {/* ============================================
-            CONTENU SEO — Qu'est-ce qu'un audit SEO
+            CONTENU SEO : Qu'est-ce qu'un audit SEO
             ============================================ */}
         <section className="py-20 px-4 border-t border-white/5">
           <div className="max-w-3xl mx-auto">
@@ -300,7 +299,7 @@ export default function SeoCheckPage() {
                 problèmes techniques ou de contenu invisibles à l&apos;œil nu, vous perdez chaque
                 jour des clients au profit de concurrents mieux optimisés. L&apos;
                 <strong className="text-white/80">analyse SEO</strong> révèle précisément ces
-                problèmes — et par quoi commencer pour les corriger.
+                problèmes, et par quoi commencer pour les corriger.
               </p>
               <p>
                 Notre outil d&apos;<strong className="text-white/80">audit SEO en ligne</strong>{" "}
@@ -319,7 +318,7 @@ export default function SeoCheckPage() {
               Que vérifie notre outil d&apos;audit SEO en ligne ?
             </h2>
             <p className="text-white/40 text-center mb-12 max-w-2xl mx-auto">
-              L&apos;analyse couvre 8 catégories et plus de 60 points de contrôle — chaque
+              L&apos;analyse couvre 8 catégories et plus de 60 points de contrôle, chaque
               catégorie reçoit un score sur 100 dans votre rapport.
             </p>
             <div className="grid md:grid-cols-2 gap-5">
@@ -346,7 +345,7 @@ export default function SeoCheckPage() {
               <p>
                 Votre rapport attribue un <strong className="text-white/80">score global sur
                 100</strong>, traduit en grade de A+ à F. Un score de 90+ (A) signifie que votre
-                site est techniquement solide — la marge de progression se situe alors dans le
+                site est techniquement solide, la marge de progression se situe alors dans le
                 contenu et la notoriété. Entre 70 et 89 (B-C), des optimisations ciblées peuvent
                 débloquer des positions rapidement. En dessous de 70 (D-F), des problèmes
                 structurels freinent activement votre visibilité : c&apos;est souvent là que se
@@ -374,7 +373,7 @@ export default function SeoCheckPage() {
               <p>
                 Notre <strong className="text-white/80">audit SEO gratuit</strong> détecte les
                 problèmes mesurables : technique, balises, vitesse, mobile, données structurées.
-                C&apos;est le point de départ idéal pour savoir où vous en êtes — et pour beaucoup
+                C&apos;est le point de départ idéal pour savoir où vous en êtes, et pour beaucoup
                 de sites, corriger ces points suffit à gagner des positions.
               </p>
               <p>
@@ -387,8 +386,8 @@ export default function SeoCheckPage() {
                 </Link>{" "}
                 va plus loin : analyse de la concurrence, stratégie de mots-clés, plan de contenu
                 et mise en œuvre des corrections. Si votre rapport révèle un score faible ou si
-                vous visez des requêtes concurrentielles, nos experts peuvent prendre le relais —
-                découvrez aussi notre accompagnement en{" "}
+                vous visez des requêtes concurrentielles, nos experts peuvent prendre le relais.
+                Découvrez aussi notre accompagnement en{" "}
                 <Link
                   href="/services/seo/referencement"
                   className="text-purple-400 hover:text-purple-300 underline underline-offset-2"
@@ -445,7 +444,7 @@ export default function SeoCheckPage() {
           </div>
         </section>
 
-        {/* Ressources SEO — maillage vers le cluster */}
+        {/* Ressources SEO, maillage vers le cluster */}
         <section className="py-20 px-4 border-t border-white/5">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">

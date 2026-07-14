@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
-import { cities, CREATION_SITE_SLUGS } from "@/data/cities";
+import { cities } from "@/data/cities";
 import { sectors } from "@/data/sectors";
 import { glossaryTerms } from "@/data/glossary";
 import { blogArticles } from "@/data/blog-articles";
@@ -56,7 +56,6 @@ const staticRoutes = [
   "/outils",
   "/faq",
   "/site-internet-pas-cher",
-  "/creation-site-internet",
   "/devis",
 ];
 
@@ -147,14 +146,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   ];
 
-  const creationSiteEntries: MetadataRoute.Sitemap = cities
-    .filter((city) => CREATION_SITE_SLUGS.includes(city.slug))
-    .map((city) => ({
-      url: `${SITE.url}/creation-site-internet/${city.slug}`,
-      lastModified: TEMPLATES_CREATED,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    }));
+  // /creation-site-internet/[ville] redirige désormais (301) vers /agence-web/[ville]
+  // pour cause de cannibalisation (cf. next.config.ts). On ne les liste plus au sitemap.
 
   const blogEntries = [...staticBlogEntries, ...supabaseBlogEntries];
 
@@ -199,7 +192,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...cityEntries,
     ...sectorEntries,
     ...glossaryEntries,
-    ...creationSiteEntries,
     ...guideEntries,
     ...comparatifEntries,
     ...prixEntries,
