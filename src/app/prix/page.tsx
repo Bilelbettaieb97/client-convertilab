@@ -7,7 +7,7 @@ import PrixSiteCta from "@/components/internal-links/PrixSiteCta";
 import { pricingPages } from "@/data/pricing-pages";
 
 export const metadata: Metadata = {
-  title: "Prix d'un Site Web en 2026 — Tarifs Transparents dès 500€",
+  title: "Prix d'un Site Web en 2026 : Tarifs Transparents dès 500€",
   description:
     "Quel budget pour votre site web ? Tarifs transparents : site vitrine dès 500€, e-commerce dès 800€, ou 39€/mois. Combien coûte chaque type de site, sans frais cachés. Devis gratuit sous 24h.",
   keywords:

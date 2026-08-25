@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   keywords: "site web restaurant, site internet avocat, site web artisan, création site par secteur, site web métier, site internet professionnel Paris",
   alternates: { canonical: `${SITE.url}/solutions` },
   openGraph: {
-    title: "Création Site Web par Métier — Restaurant, Artisan, Coach | ConvertiLab",
+    title: "Création Site Web par Métier : Restaurant, Artisan, Coach | ConvertiLab",
     description: "Site web sur-mesure adapté à votre secteur : restaurant, avocat, artisan, immobilier, coach. Livré en 7 jours dès 500€. +150 clients, 15 avis 4.9★.",
     url: `${SITE.url}/solutions`,
     type: "website",

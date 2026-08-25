@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Devis Gratuit — Sites Web, SEO, Google Ads & Meta Ads",
+  title: "Devis Gratuit : Sites Web, SEO, Google Ads & Meta Ads",
   description:
     "Demandez un devis gratuit et sans engagement pour votre projet digital : site vitrine, e-commerce, landing page, SEO, Google Ads, Meta Ads. Réponse sous 24h.",
   alternates: { canonical: `${SITE.url}/devis` },

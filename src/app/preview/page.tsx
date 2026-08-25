@@ -30,7 +30,7 @@ const SocialProofToast = dynamic(() => import("@/components/conversion/SocialPro
 const StickyMobileCTA = dynamic(() => import("@/components/conversion/StickyMobileCTA"));
 
 export const metadata: Metadata = {
-  title: "PREVIEW — Nouvelle homepage ConvertiLab",
+  title: "PREVIEW : Nouvelle homepage ConvertiLab",
   robots: { index: false, follow: false },
 };
 

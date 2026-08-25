@@ -15,14 +15,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Site Internet Pas Cher — Site Web Professionnel dès 500€",
+  title: "Site Internet Pas Cher : Site Web Professionnel dès 500€",
   description:
     "Un site web pas cher ne veut pas dire un site au rabais : site internet professionnel dès 500€ ou 39€/mois, livré en 7 jours, SEO inclus, satisfait ou remboursé. Comparez avant de choisir.",
   keywords:
     "site internet pas cher, site web pas cher, site pas cher, création site internet pas cher, site web professionnel pas cher, site internet petit prix, site web petit budget",
   alternates: { canonical: `${SITE.url}/site-internet-pas-cher` },
   openGraph: {
-    title: "Site Internet Pas Cher — Site Web Professionnel dès 500€ | ConvertiLab",
+    title: "Site Internet Pas Cher : Site Web Professionnel dès 500€ | ConvertiLab",
     description:
       "Site internet professionnel dès 500€ ou 39€/mois, livré en 7 jours, SEO inclus, satisfait ou remboursé.",
     url: `${SITE.url}/site-internet-pas-cher`,

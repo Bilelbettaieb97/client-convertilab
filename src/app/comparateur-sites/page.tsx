@@ -5,11 +5,11 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Comparateur de Sites Web Gratuit — Votre site vs la concurrence",
+  title: "Comparateur de Sites Web Gratuit : Votre site vs la concurrence",
   description:
     "Comparez votre site web avec celui de votre concurrent. 8 catégories analysées, scores détaillés, points forts/faibles et rapport PDF gratuit.",
   openGraph: {
-    title: "Comparateur de Sites Web Gratuit — Votre site vs la concurrence | ConvertiLab",
+    title: "Comparateur de Sites Web Gratuit : Votre site vs la concurrence | ConvertiLab",
     description:
       "Comparez 8 catégories SEO, découvrez qui gagne et recevez un rapport PDF comparatif gratuit.",
     url: `${SITE.url}/comparateur-sites`,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Comparateur de Sites Web — ConvertiLab",
+    title: "Comparateur de Sites Web | ConvertiLab",
     description: "Votre site est-il meilleur que celui de votre concurrent ? Decouvrez-le gratuitement.",
   },
   alternates: {

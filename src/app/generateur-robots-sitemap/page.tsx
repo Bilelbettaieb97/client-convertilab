@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Generateur robots.txt & sitemap.xml Gratuit — ConvertiLab",
+    title: "Generateur robots.txt & sitemap.xml Gratuit | ConvertiLab",
     description: "Generez robots.txt et sitemap.xml optimises pour votre site. 100% gratuit.",
   },
   alternates: {

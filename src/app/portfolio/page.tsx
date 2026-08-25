@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "portfolio agence web, réalisations sites web, études de cas, résultats clients, création site web Paris",
   alternates: { canonical: `${SITE.url}/portfolio` },
   openGraph: {
-    title: "Portfolio ConvertiLab — +150 Sites Web Créés | 4.9★ Trustpilot",
+    title: "Portfolio ConvertiLab : +150 Sites Web Créés | 4.9★ Trustpilot",
     description: "+150 clients accompagnés, +280% de CA moyen. Réalisations e-commerce, restaurants, artisans, B2B. Résultats concrets.",
     url: `${SITE.url}/portfolio`,
     type: "website",

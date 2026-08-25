@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import DevisClient from "./DevisClient";
 
 export const metadata: Metadata = {
-  title: "Demandez votre site vitrine — Réponse sous 24h",
+  title: "Demandez votre site vitrine : Réponse sous 24h",
   description:
     "Obtenez votre site vitrine professionnel à partir de 39€/mois. Formulaire rapide, réponse sous 24h, sans engagement.",
   keywords:

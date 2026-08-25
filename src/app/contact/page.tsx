@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "contact agence web Paris, devis site internet Rueil-Malmaison, agence web Île-de-France, création site web Paris, consultation gratuite",
   alternates: { canonical: `${SITE.url}/contact` },
   openGraph: {
-    title: "Contactez ConvertiLab — Devis Gratuit sous 24h",
+    title: "Contactez ConvertiLab : Devis Gratuit sous 24h",
     description:
       "Agence web Paris & Rueil-Malmaison. Devis gratuit sous 24h, consultation 30 min offerte. 4.9★ Trustpilot. +150 clients accompagnés.",
     url: `${SITE.url}/contact`,

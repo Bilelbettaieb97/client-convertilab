@@ -5,7 +5,7 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Simulateur ROI Google Ads & Meta Ads — Estimation Gratuite",
+  title: "Simulateur ROI Google Ads & Meta Ads : Estimation Gratuite",
   description:
     "Estimez gratuitement le retour sur investissement de vos campagnes Google Ads et Meta Ads. Projection 12 mois, calcul ROAS et rapport PDF complet.",
   keywords:
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Simulateur ROI Ads Gratuit — ConvertiLab",
+    title: "Simulateur ROI Ads Gratuit | ConvertiLab",
     description: "Estimez votre ROI Google Ads et Meta Ads en 60 secondes. Rapport PDF complet et gratuit.",
   },
   alternates: {

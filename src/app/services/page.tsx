@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import ServicesPageContent from "./ServicesPageContent";
 
 export const metadata: Metadata = {
-  title: "Services Marketing Digital Paris — Sites Web, SEO, Google Ads",
+  title: "Services Marketing Digital Paris : Sites Web, SEO, Google Ads",
   description: "Agence marketing digital à Paris : création de sites web dès 500€, SEO, Google Ads, Meta Ads. +150 clients accompagnés, +280% de CA moyen. Devis gratuit sous 24h.",
   alternates: { canonical: `${SITE.url}/services` },
   openGraph: {

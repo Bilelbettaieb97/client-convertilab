@@ -3,7 +3,7 @@ import { SITE } from "@/lib/constants";
 import BlogPageClient from "@/components/pages/BlogPageClient";
 
 export const metadata: Metadata = {
-  title: "Blog — Conseils Web, SEO et Business",
+  title: "Blog : Conseils Web, SEO et Business",
   description:
     "Articles et guides pratiques sur la création de sites web, le SEO et le marketing digital. Conseils d'experts pour développer votre business en ligne.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "business en ligne",
   ],
   openGraph: {
-    title: `Blog — Conseils Web, SEO et Business | ${SITE.name}`,
+    title: `Blog : Conseils Web, SEO et Business | ${SITE.name}`,
     description:
       "Articles et guides pratiques sur la création de sites web, le SEO et le marketing digital.",
     url: `${SITE.url}/blog`,

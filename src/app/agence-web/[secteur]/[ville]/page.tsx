@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: metaTitle,
-      description: `Site internet ${sector.name.toLowerCase()} à ${city.name} — ${priceLabel}, livraison 7 jours, 15 avis 4.9★.`,
+      description: `Site internet ${sector.name.toLowerCase()} à ${city.name}, ${priceLabel}, livraison 7 jours, 15 avis 4.9★.`,
       url: `${SITE.url}/agence-web/${sector.slug}/${city.slug}`,
       type: "website",
       images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],

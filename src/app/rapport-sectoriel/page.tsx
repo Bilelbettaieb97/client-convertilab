@@ -5,11 +5,11 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Rapport Digital par Secteur — Guide Gratuit",
+  title: "Rapport Digital par Secteur : Guide Gratuit",
   description:
     "Recevez un rapport digital complet et gratuit pour votre secteur d'activite. Diagnostic, checklist, etudes de cas et plan d'action en PDF. 50+ secteurs disponibles.",
   openGraph: {
-    title: "Rapport Digital par Secteur — Guide Gratuit",
+    title: "Rapport Digital par Secteur : Guide Gratuit",
     description:
       "50+ secteurs. Diagnostic marche, checklist digitale, etudes de cas et solutions concretes. Rapport PDF gratuit.",
     url: `${SITE.url}/rapport-sectoriel`,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rapport Digital par Secteur — ConvertiLab",
+    title: "Rapport Digital par Secteur | ConvertiLab",
     description: "Decouvrez les opportunites digitales de votre secteur. Rapport PDF gratuit.",
   },
   alternates: {

@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import HeroLabClient from "./HeroLabClient";
 
 export const metadata = {
-  title: "Hero Lab — Comparaison",
+  title: "Hero Lab : Comparaison",
   robots: { index: false, follow: false },
 };
 

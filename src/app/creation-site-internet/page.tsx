@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Star, Users, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Création de Site Internet par Ville — Site Web Pro dès 500€",
+  title: "Création de Site Internet par Ville : Site Web Pro dès 500€",
   description: "Création de site internet professionnel dans les grandes villes de France : Paris, Lyon, Marseille, Bordeaux, Toulouse… Site web livré en 7 jours dès 500€. +150 clients, 15 avis 4.9★.",
   keywords: "création site internet par ville, création site web Paris Lyon Marseille Bordeaux, site internet professionnel 500€, création site vitrine France",
   alternates: { canonical: `${SITE.url}/creation-site-internet` },

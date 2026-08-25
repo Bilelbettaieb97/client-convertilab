@@ -6,12 +6,12 @@ import LandingPageContent from "./LandingPageContent";
 import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
 export const metadata: Metadata = {
-  title: "Landing Page — Création de Page de Vente Haute Conversion en 5 Jours",
+  title: "Landing Page : Création de Page de Vente Haute Conversion en 5 Jours",
   description: "Création de landing page haute conversion dès 500€, livrée en 5-7 jours. Page de vente optimisée pour Google Ads & Meta Ads, tracking inclus. +150 clients, prix fixe garanti. Devis gratuit.",
   keywords: "landing page, création landing page, site web landing page, page de vente, page d'atterrissage, landing page prix, landing page Google Ads",
   alternates: { canonical: `${SITE.url}/services/sites-web/landing-page` },
   openGraph: {
-    title: "Landing Page — Création Haute Conversion en 5 Jours | ConvertiLab",
+    title: "Landing Page : Création Haute Conversion en 5 Jours | ConvertiLab",
     description: "Création de landing page haute conversion dès 500€, livrée en 5-7 jours. Optimisée Google Ads & Meta Ads. Prix fixe garanti.",
     url: `${SITE.url}/services/sites-web/landing-page`,
     type: "website",

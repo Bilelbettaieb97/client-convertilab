@@ -4,12 +4,12 @@ import FaqPageClient from "@/components/pages/FaqPageClient";
 import type { FaqCategory } from "@/components/pages/FaqPageClient";
 
 export const metadata: Metadata = {
-  title: "FAQ — Questions fréquentes sur la création de site web",
+  title: "FAQ : Questions fréquentes sur la création de site web",
   description:
     "Toutes les réponses sur la création de site web, les tarifs, les délais, le SEO et nos services. ConvertiLab répond à vos 35 questions les plus fréquentes.",
   alternates: { canonical: `${SITE.url}/faq` },
   openGraph: {
-    title: "FAQ ConvertiLab — Vos questions sur la création de site web",
+    title: "FAQ ConvertiLab : Vos questions sur la création de site web",
     description:
       "Prix, délais, SEO, propriété du site, support après livraison… Toutes les réponses à vos questions sur nos services de création de site web.",
     url: `${SITE.url}/faq`,

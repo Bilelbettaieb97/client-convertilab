@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `Devis ${devisService.name} Gratuit — Réponse sous 24h`,
+    title: `Devis ${devisService.name} Gratuit : Réponse sous 24h`,
     description: devisService.description,
     alternates: { canonical: `${SITE.url}/devis/${service}` },
     openGraph: {

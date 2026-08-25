@@ -4,7 +4,7 @@ import { SITE } from "@/lib/constants";
 import DemandeMaquetteClient from "./DemandeMaquetteClient";
 
 export const metadata: Metadata = {
-  title: "Maquette de Site Web Gratuite sous 48h — Visualisez Votre Site",
+  title: "Maquette de Site Web Gratuite sous 48h : Visualisez Votre Site",
   description:
     "Demandez votre maquette de site internet gratuite : design personnalisé de votre future page d'accueil livré sous 48h, sans engagement. Vous ne payez que si la maquette vous plaît.",
   keywords:

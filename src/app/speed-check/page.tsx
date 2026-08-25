@@ -6,13 +6,13 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Test de Vitesse Site Web Gratuit — Core Web Vitals en 60s",
+  title: "Test de Vitesse Site Web Gratuit : Core Web Vitals en 60s",
   keywords:
     "test vitesse site web, tester la vitesse de son site, test de vitesse gratuit, site web lent, core web vitals, pagespeed, audit vitesse site internet",
   description:
     "Testez gratuitement la vitesse de votre site web. Temps de réponse, poids de page, compression, scripts bloquants, images. Rapport PDF complet envoyé par email.",
   openGraph: {
-    title: "Audit Vitesse Gratuit — Testez la rapidité de votre site | ConvertiLab",
+    title: "Audit Vitesse Gratuit : Testez la rapidité de votre site | ConvertiLab",
     description:
       "20+ points de contrôle vitesse, analyse complète, rapport PDF gratuit envoyé par email.",
     url: `${SITE.url}/speed-check`,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Audit Vitesse Gratuit — ConvertiLab",
+    title: "Audit Vitesse Gratuit | ConvertiLab",
     description: "Testez la vitesse de votre site web. Rapport PDF complet et gratuit.",
   },
   alternates: {

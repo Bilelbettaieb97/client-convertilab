@@ -116,13 +116,9 @@ export default async function SectorPage({ params }: Props) {
       },
     },
     areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE.reviews.rating,
-      reviewCount: SITE.reviews.count,
-      bestRating: "5",
-      worstRating: "1",
-    },
+    // Pas d'aggregateRating ici : Google ne supporte pas les Review snippets
+    // sur le type Service (erreur "Invalid object type for field parent_node").
+    // Les avis 4.9★ sont portés par le LocalBusiness/Organization de la home.
     offers: {
       "@type": "Offer",
       priceCurrency: "EUR",

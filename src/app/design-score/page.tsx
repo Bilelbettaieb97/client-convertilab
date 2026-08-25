@@ -6,13 +6,13 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Audit Design & UX Gratuit — Notez le Design de votre Site Web",
+  title: "Audit Design & UX Gratuit : Notez le Design de votre Site Web",
   keywords:
     "audit design site web, score design site, audit ux gratuit, améliorer design site internet, site web moderne, refonte design site, test design site web",
   description:
     "Évaluez gratuitement le design et l'UX de votre site web. CTA, hiérarchie visuelle, signaux de confiance, compatibilité mobile. Rapport PDF complet envoyé par email.",
   openGraph: {
-    title: "Audit Design & UX Gratuit — Score sur 100, Rapport PDF | ConvertiLab",
+    title: "Audit Design & UX Gratuit : Score sur 100, Rapport PDF | ConvertiLab",
     description:
       "6 catégories UX analysées, rapport PDF complet et gratuit envoyé par email.",
     url: `${SITE.url}/design-score`,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Audit Design & UX Gratuit — ConvertiLab",
+    title: "Audit Design & UX Gratuit | ConvertiLab",
     description: "Evaluez le design et l'UX de votre site web. Rapport PDF complet et gratuit.",
   },
   alternates: {
