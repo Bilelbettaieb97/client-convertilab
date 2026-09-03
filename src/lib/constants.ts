@@ -25,6 +25,8 @@ export const SITE = {
     gtm: "GTM-5TDHTDHP",
     metaPixel: "1342588771159528",
     adsense: "ca-pub-5844925774606937",
+    googleAdsId: "AW-17772183236",
+    googleAdsLabel: "ow3hCKPNx-0cEMT9t5pC",
   },
 } as const;
 

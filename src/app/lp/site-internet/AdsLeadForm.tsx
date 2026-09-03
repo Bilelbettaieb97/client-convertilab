@@ -69,8 +69,12 @@ export default function AdsLeadForm() {
       }).catch((err) => console.error("[notify] erreur envoi:", err));
 
       setIsSuccess(true);
-      if (typeof window !== "undefined" && (window as unknown as { trackFormConversion?: () => void }).trackFormConversion) {
-        (window as unknown as { trackFormConversion: () => void }).trackFormConversion();
+      type TrackFn = (u?: { email: string; phone: string }) => void;
+      if (typeof window !== "undefined" && (window as unknown as { trackFormConversion?: TrackFn }).trackFormConversion) {
+        (window as unknown as { trackFormConversion: TrackFn }).trackFormConversion({
+          email: email.trim().toLowerCase(),
+          phone: phone.trim(),
+        });
       }
     } catch (err) {
       console.error(err);

@@ -19,15 +19,27 @@ export function GoogleAnalytics() {
           window.gtag = gtag;
           gtag('js', new Date());
           gtag('config', '${SITE.analytics.ga}');
+          gtag('config', '${SITE.analytics.googleAdsId}');
           window.gtagSendEvent = function(url) {
-            gtag('event', 'ads_conversion_Envoi_de_formulaire_pou_1', {
-              'event_callback': function() { if (typeof url === 'string') window.location = url; },
+            var callback = function () { if (typeof url === 'string') { window.location = url; } };
+            gtag('event', 'conversion', {
+              'send_to': '${SITE.analytics.googleAdsId}/${SITE.analytics.googleAdsLabel}',
+              'event_callback': callback,
               'event_timeout': 2000
             });
             return false;
           };
-          window.trackFormConversion = function() {
-            gtag('event', 'ads_conversion_Envoi_de_formulaire_pou_1', {});
+          window.trackFormConversion = function(userData) {
+            try {
+              if (userData && userData.email) {
+                var consent = JSON.parse(localStorage.getItem('convertilab_consent') || '{}');
+                if (consent.marketing) {
+                  gtag('set', 'user_data', { 'email': userData.email, 'phone_number': userData.phone || '' });
+                }
+              }
+            } catch (e) {}
+            gtag('event', 'conversion', { 'send_to': '${SITE.analytics.googleAdsId}/${SITE.analytics.googleAdsLabel}' });
+            gtag('event', 'generate_lead');
             if (typeof fbq === 'function' && window._fbqInitialized) { fbq('track', 'Lead'); }
           };
         `}
