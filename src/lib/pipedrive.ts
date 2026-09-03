@@ -45,6 +45,7 @@ const FORMULAIRES_SOURCES = new Set([
   "Offre Mensuelle",
   "Offre Speciale",
   "HeroMiniForm",
+  "Site Internet (Google Ads)", // Landing pub /lp/site-internet → pipeline Formulaires
 ]);
 
 // Custom deal field keys (created via API)

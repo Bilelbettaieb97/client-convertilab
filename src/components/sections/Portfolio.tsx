@@ -275,9 +275,11 @@ const categoryIconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGE
 /* ─── Main Portfolio Section ─── */
 interface PortfolioProps {
   activeCategory?: string;
+  /** Masque le bloc offre "dès 39€/mois" (utilisé sur les landings pub sans prix) */
+  hideOffer?: boolean;
 }
 
-const Portfolio = ({ activeCategory: externalCategory }: PortfolioProps) => {
+const Portfolio = ({ activeCategory: externalCategory, hideOffer = false }: PortfolioProps) => {
   const [internalCategory, setInternalCategory] = useState("all");
   const isHomepage = externalCategory === undefined;
   const activeCategory = isHomepage ? internalCategory : externalCategory;
@@ -314,7 +316,7 @@ const Portfolio = ({ activeCategory: externalCategory }: PortfolioProps) => {
               </div>
             ))}
           </div>
-          <PortfolioCTA />
+          {!hideOffer && <PortfolioCTA />}
         </div>
       </section>
     );
@@ -421,8 +423,7 @@ const Portfolio = ({ activeCategory: externalCategory }: PortfolioProps) => {
             </div>
           </>
         )}
-
-        <PortfolioCTA />
+        {!hideOffer && <PortfolioCTA />}
       </div>
     </section>
   );
