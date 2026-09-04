@@ -150,6 +150,10 @@ export default function LandingSiteInternet() {
         </div>
       </section>
 
+      {/* ============ RÉSULTATS CLIENTS ============ */}
+      {/* Juste après le hero : la preuve arrive avant l'explication. */}
+      <Portfolio hideOffer forAds />
+
       {/* ============ 3 ÉTAPES ============ */}
       <section className="bg-white py-16 sm:py-24 border-y border-black/[0.05]">
         <div className="container mx-auto px-5 sm:px-6 max-w-5xl">
@@ -178,9 +182,6 @@ export default function LandingSiteInternet() {
           </div>
         </div>
       </section>
-
-      {/* ============ RÉSULTATS CLIENTS (section existante) ============ */}
-      <Portfolio hideOffer forAds />
 
       {/* ============ TRUSTPILOT (carrousel, couleurs Trustpilot) ============ */}
       <section className="py-16 sm:py-24" style={{ backgroundColor: "#f7fbf9" }}>
