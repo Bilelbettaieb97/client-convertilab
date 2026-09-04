@@ -69,6 +69,8 @@ const SOURCE_OPTIONS: Record<string, number> = {
   "Offre Mensuelle":  66,
   "HeroMiniForm":     67,
   "Offre Speciale":   76,
+  // Landings publicitaires — Pipeline 4
+  "Site Internet (Google Ads)": 93,
   // Outils — Pipeline 3
   "Estimateur Ads":   68,
   "Design Score":     69,

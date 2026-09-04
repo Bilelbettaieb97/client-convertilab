@@ -111,10 +111,17 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Séries email (fire-and-forget)
+    // Séries email — AWAITÉ, jamais en fire-and-forget.
+    //
+    // Sur Vercel, la fonction peut être gelée dès la réponse renvoyée : une
+    // écriture encore en vol est alors perdue, et toute la séquence de relances
+    // n'est jamais programmée, sans la moindre trace. Mesuré le 04/09/2026 :
+    // les lignes arrivaient jusqu'à plusieurs secondes APRÈS le `success: true`.
+    // L'attente ne coûte rien côté visiteur : l'appel part du navigateur en
+    // keepalive et son écran n'attend pas cette réponse.
     if (email) {
       const ctx = buildFormSeriesContext(formType, name, company, fields as Record<string, unknown>);
-      scheduleEmailSeries(formType, email, ctx).catch((err) =>
+      await scheduleEmailSeries(formType, email, ctx).catch((err) =>
         console.error("[notify][email_series]", err instanceof Error ? err.message : err)
       );
     }

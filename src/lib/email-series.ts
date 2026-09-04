@@ -1143,6 +1143,46 @@ const PROJET_LABELS: Record<string, string> = {
   autre: "un site web",
 };
 
+/**
+ * {{type_site}} s'insère TOUJOURS après « site » dans les relances (« un site
+ * {{type_site}} », « Pour un site {{type_site}} : »). Les libellés doivent donc
+ * se lire à cette place, ce qui interdit un simple slug.
+ *
+ * Deux conventions cohabitent selon les formulaires, il faut couvrir les deux :
+ * Estimation Prix envoie la valeur technique (« ecommerce »), Demande Maquette
+ * et la landing publicitaire envoient le libellé affiché (« Site Vitrine »).
+ * Sans cette table, le prospect lisait « un site ecommerce », voire « un site
+ * Site Vitrine » ou « un site refonte ».
+ */
+const TYPE_SITE_LABELS: Record<string, string> = {
+  // Estimation Prix (valeurs techniques)
+  vitrine: "vitrine",
+  ecommerce: "e-commerce",
+  landing: "de type landing page",
+  refonte: "à refondre",
+  // Demande Maquette (libellés affichés)
+  "site vitrine": "vitrine",
+  "site e-commerce": "e-commerce",
+  "landing page": "de type landing page",
+  "application web": "de type application web",
+  "refonte de site": "à refondre",
+  autre: "sur mesure",
+  // Offre Spéciale et landing publicitaire
+  "site vitrine 5 pages": "vitrine",
+  "boutique en ligne": "e-commerce",
+  "je ne sais pas encore": "à définir",
+  "je ne sais pas": "à définir",
+};
+
+function libelleTypeSite(brut: unknown): string {
+  const valeur = String(brut ?? "").trim();
+  if (!valeur) return "";
+  const cle = valeur.toLowerCase();
+  return Object.prototype.hasOwnProperty.call(TYPE_SITE_LABELS, cle)
+    ? TYPE_SITE_LABELS[cle]
+    : cle;
+}
+
 export function buildFormSeriesContext(
   formType: string,
   name?: string,
@@ -1168,17 +1208,17 @@ export function buildFormSeriesContext(
     ctx.offre = String(fields.service || fields.offerName || "votre projet");
     ctx.secteur = String(fields.sector || "");
   } else if (formType === "Demande Maquette") {
-    ctx.type_site = String(fields.site_type || "");
+    ctx.type_site = libelleTypeSite(fields.site_type);
     ctx.secteur = String(fields.sector || "");
     ctx.style = String(fields.design_style || "moderne");
   } else if (formType === "Estimation Prix") {
-    ctx.type_site = String(fields.site_type || "");
+    ctx.type_site = libelleTypeSite(fields.site_type);
     ctx.pages = String(fields.page_count || "");
   } else if (formType === "Offre Speciale") {
-    ctx.type_site = String(fields.siteType || "");
+    ctx.type_site = libelleTypeSite(fields.siteType);
   } else if (formType === "Site Internet (Google Ads)") {
     // Landing pub : soit un type de site choisi, soit un métier (restaurant, artisan)
-    ctx.type_site = String(fields.type_site || fields.metier || "site professionnel");
+    ctx.type_site = libelleTypeSite(fields.type_site) || String(fields.metier || "professionnel");
   }
 
   return ctx;
