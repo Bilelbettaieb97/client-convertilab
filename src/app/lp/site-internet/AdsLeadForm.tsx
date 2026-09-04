@@ -127,22 +127,28 @@ export default function AdsLeadForm({
 
     setIsSubmitting(true);
     try {
+      // Table dédiée au trafic payant : mélangés à contact_submissions, ces leads
+      // devenaient indistinguables du formulaire de contact dans le dashboard, et
+      // le rattrapage automatique les étiquetait « Contact » (mauvais pipeline).
       const { error: dbError } = await supabase
-        .from("contact_submissions")
+        .from("google_ads_leads")
         .insert([{
           name: name.trim(),
           email: email.trim().toLowerCase(),
           phone: phone.trim(),
-          project: metier ? `site-${metier.toLowerCase()}` : siteType,
+          company: "",
+          site_type: metier ? null : siteType,
+          metier: metier || null,
+          landing: sourceKey || (metier
+            ? `google-ads-lp-${metier.toLowerCase()}`
+            : "google-ads-lp-site-internet"),
           message: metier
             ? `Demande via landing Google Ads (site ${metier})`
             : "Demande via landing Google Ads (création site internet)",
-          main_challenge: "non_specifie",
-          timeline: "",
-          company: "",
-          urgency: "",
         }]);
-      if (dbError) throw dbError;
+      // Non-bloquant : Pipedrive est la source de vérité pour le lead. Une panne
+      // d'enregistrement en base ne doit pas faire perdre la demande.
+      if (dbError) console.error("[supabase] google_ads_leads:", dbError.message);
 
       // keepalive : la requête survit à la fermeture de l'onglet, sinon le
       // lead peut n'arriver que dans Supabase et jamais dans le CRM.

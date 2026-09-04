@@ -51,6 +51,10 @@ export async function GET(request: NextRequest) {
       "Chatbot Audit":     { icon: "🤖", leads: d.chatbot_leads || [] },
     },
     formulaires: {
+      // Trafic payant : garde sa propre entrée, sinon les leads Google Ads se
+      // noient dans le formulaire de contact du site et on ne peut plus mesurer
+      // le coût par lead de la campagne.
+      "Google Ads":       { icon: "🎯", leads: d.google_ads_leads || [] },
       "Contact":          { icon: "📬", leads: d.contact_submissions || [] },
       "Newsletter":       { icon: "📧", leads: d.newsletter_subscriptions || [] },
       "Devis":            { icon: "💼", leads: d.devis_submissions || [] },

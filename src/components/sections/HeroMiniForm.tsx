@@ -51,7 +51,9 @@ export default function HeroMiniForm() {
           urgency: "",
         }]);
 
-      if (dbError) throw dbError;
+      // Non-bloquant : Pipedrive est la source de vérité pour le lead. Une panne
+      // d'enregistrement en base ne doit pas faire perdre la demande.
+      if (dbError) console.error("[supabase] contact_submissions:", dbError.message);
 
       // Non-bloquant
       fetch("/api/notify", {

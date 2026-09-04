@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
+import { marquerSerieFinie } from "@/lib/pipedrive";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -48,6 +49,7 @@ export async function GET(request: NextRequest) {
 
   let sent = 0;
   let failed = 0;
+  let seriesTerminees = 0;
 
   for (const row of rows as QueueRow[]) {
     try {
@@ -66,6 +68,21 @@ export async function GET(request: NextRequest) {
         .eq("id", row.id);
 
       sent++;
+
+      // Etait-ce la derniere relance de cette serie pour ce lead ? On interroge la
+      // file APRES la mise a jour ci-dessus : s'il ne reste plus rien en attente,
+      // la sequence est epuisee et le deal part en "Serie finie".
+      const { count: restants, error: resteErr } = await supabase
+        .from("email_queue")
+        .select("id", { count: "exact", head: true })
+        .eq("lead_email", row.lead_email)
+        .eq("form_type", row.form_type)
+        .eq("status", "pending");
+
+      if (!resteErr && restants === 0) {
+        const issue = await marquerSerieFinie(row.lead_email, row.form_type);
+        if (issue === "deplace") seriesTerminees++;
+      }
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
       console.error(`[cron/send-emails] failed for ${row.id}:`, msg);
@@ -79,6 +96,8 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  console.log(`[cron/send-emails] sent=${sent} failed=${failed}`);
-  return NextResponse.json({ sent, failed, total: rows.length });
+  console.log(
+    `[cron/send-emails] sent=${sent} failed=${failed} seriesTerminees=${seriesTerminees}`
+  );
+  return NextResponse.json({ sent, failed, seriesTerminees, total: rows.length });
 }

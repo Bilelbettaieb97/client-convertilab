@@ -58,6 +58,13 @@ const SOURCES: Array<{
   },
   { table: "price_estimations", formType: "Estimation Prix", colonnes: COLONNES_COMMUNES },
   { table: "offer_reservations", formType: "Offre Speciale", colonnes: COLONNES_COMMUNES },
+  // Landings publicitaires. Sans cette entrée, un lead payant perdu par /api/notify
+  // n'était jamais rattrapé : c'est le trafic qui coûte le plus cher au clic.
+  {
+    table: "google_ads_leads",
+    formType: "Site Internet (Google Ads)",
+    colonnes: COLONNES_COMMUNES,
+  },
 ];
 
 interface Lead {

@@ -7,6 +7,10 @@ const STAGE_FORMULAIRES = 12; // Pipeline "Formulaires" → Nouveau
 const STAGE_OUTILS      = 16; // Pipeline "Outils" → Nouveau
 const STAGE_GOOGLE_ADS  = 22; // Pipeline "Google Ads" → Nouveau lead
 
+// Etape d'arrivee automatique quand la serie de relances est epuisee.
+// Seul le pipeline "Outils" possede cette etape (verifie cote Pipedrive).
+const STAGE_OUTILS_SERIE_FINIE = 17;
+
 /**
  * Les leads issus des landings publicitaires Google ont leur propre pipeline :
  * le volume va monter et ils se travaillent différemment des formulaires du
@@ -197,6 +201,83 @@ export async function addNoteToLatestDeal(
   } catch (err) {
     console.error("[pipedrive] addNoteToLatestDeal error:", err);
     return false;
+  }
+}
+
+/**
+ * Fait passer le deal d'un lead outil en "Serie finie" quand sa derniere relance
+ * vient de partir : le pipeline montre alors d'un coup d'oeil qui a recu toute la
+ * sequence sans jamais repondre, et donc qui reste a rappeler a la main.
+ *
+ * Deux garde-fous :
+ *  - seul le pipeline Outils possede cette etape, les autres canaux sont ignores ;
+ *  - le deal n'est deplace QUE s'il est encore a l'etape d'entree. Si Bilel l'a
+ *    deja qualifie, planifie ou gagne, on n'y touche pas : une automatisation ne
+ *    doit jamais faire reculer un deal travaille a la main.
+ *
+ * Ne throw jamais : un echec ici ne doit pas empecher l'email de partir.
+ */
+export async function marquerSerieFinie(
+  email: string,
+  formType: string
+): Promise<"deplace" | "ignore" | "echec"> {
+  if (!PIPEDRIVE_TOKEN || !email) return "echec";
+  if (canalDAcquisition(formType) !== "OUTIL") return "ignore";
+
+  try {
+    const searchRes = await fetch(
+      `${PIPEDRIVE_BASE}/persons/search?term=${encodeURIComponent(email)}&fields=email&exact_match=true&api_token=${PIPEDRIVE_TOKEN}`
+    );
+    const searchData = await searchRes.json();
+    const personId: number | undefined = searchData.data?.items?.[0]?.item?.id;
+    if (!personId) return "ignore";
+
+    const dealsRes = await fetch(
+      `${PIPEDRIVE_BASE}/persons/${personId}/deals?status=open&api_token=${PIPEDRIVE_TOKEN}`
+    );
+    const dealsData = await dealsRes.json();
+    const deals: Array<{ id: number; title?: string; stage_id?: number; pipeline_id?: number }> =
+      dealsData.data || [];
+
+    // Le deal issu de CET outil, encore a l'etape d'entree du pipeline Outils.
+    const cible = deals.find(
+      (d) =>
+        d.pipeline_id === 3 &&
+        d.stage_id === STAGE_OUTILS &&
+        (d.title ?? "").includes(formType)
+    );
+    if (!cible) return "ignore";
+
+    const majRes = await fetch(
+      `${PIPEDRIVE_BASE}/deals/${cible.id}?api_token=${PIPEDRIVE_TOKEN}`,
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ stage_id: STAGE_OUTILS_SERIE_FINIE }),
+      }
+    );
+    const majData = await majRes.json();
+    if (!majData.success) {
+      console.error("[pipedrive] marquerSerieFinie:", majData.error);
+      return "echec";
+    }
+
+    await fetch(`${PIPEDRIVE_BASE}/notes?api_token=${PIPEDRIVE_TOKEN}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        deal_id: cible.id,
+        content:
+          `Série de relances terminée (${formType}).<br />` +
+          `Le lead a reçu tous les emails de la séquence sans se manifester.<br />` +
+          `Déplacé automatiquement en « Serie finie » : à rappeler ou à classer.`,
+      }),
+    });
+
+    return "deplace";
+  } catch (err) {
+    console.error("[pipedrive] marquerSerieFinie error:", err);
+    return "echec";
   }
 }
 
