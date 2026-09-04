@@ -45,7 +45,8 @@ const NewsletterSubscription = () => {
           router.push("/newsletter-confirmation");
           return;
         }
-        throw error;
+        // Non-bloquant : une panne d'enregistrement ne doit pas faire perdre l'inscription.
+        console.error("[supabase] newsletter_subscriptions:", (error as any).message);
       }
 
       // Non-bloquant : si la notification échoue, on continue quand même

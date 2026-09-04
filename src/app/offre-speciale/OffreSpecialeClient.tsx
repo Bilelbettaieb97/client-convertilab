@@ -83,10 +83,12 @@ export default function OffreSpecialeClient() {
         company: formData.company.trim(),
       });
 
-      if (dbError) {
-        if (dbError.code === "23505") { setError("Vous avez déjà réservé votre place !"); }
-        else { setError(`Erreur : ${dbError.message}`); }
+      if (dbError && dbError.code === "23505") {
+        setError("Vous avez déjà réservé votre place !");
       } else {
+        // Non-bloquant : Pipedrive est la source de verite pour le lead. Une panne
+        // d'enregistrement en base ne doit pas faire perdre la reservation.
+        if (dbError) console.error("[supabase] offer_reservations:", dbError.message);
         // Notification email (non-bloquant — si ça échoue, on affiche quand même le remerciement)
         fetch("/api/notify", {
           method: "POST",
@@ -309,7 +311,7 @@ export default function OffreSpecialeClient() {
                       </p>
                     </div>
                     <p className="text-gray-400 text-sm mb-6">
-                      Un email de confirmation a été envoyé à <strong className="text-white">{formData.email}</strong>
+                      Nous vous répondons à <strong className="text-white">{formData.email}</strong>
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                       <Link href="/">

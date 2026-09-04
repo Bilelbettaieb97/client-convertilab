@@ -109,7 +109,9 @@ export default function EstimationPrixClient() {
     try {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const { error } = await (supabase as any).from("price_estimations").insert({ site_type: form.site_type, features: form.options, pages: form.page_count || null, product_count: form.product_count || null, landing_objective: form.landing_objective || null, refonte_url: form.refonte_url.trim() || null, refonte_reasons: form.refonte_reasons, refonte_improvements: form.refonte_improvements, name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), company: form.company.trim() || null, description: form.description.trim() || null });
-      if (error) throw error;
+      // Non-bloquant : Pipedrive est la source de verite pour le lead. Une panne
+      // d'enregistrement en base ne doit pas faire perdre la demande.
+      if (error) console.error("[supabase] price_estimations:", error.message);
       // Non-bloquant : si la notification échoue, on continue quand même
       fetch("/api/notify", {
         method: "POST",

@@ -113,6 +113,14 @@ export async function analyzeSpeed(inputUrl: string): Promise<SpeedAuditResult> 
   const url = normalizeUrl(inputUrl);
   const domain = getDomain(url);
   const res = await fetchWithTiming(url);
+
+  // Site injoignable : fetchWithTiming avale l'erreur et renvoie un corps vide,
+  // ce qui produisait paradoxalement un excellent score (page ultra legere, aucun
+  // script bloquant). On refuse d'auditer plutot que d'annoncer un score invente.
+  if (!res.text || res.status === 0) {
+    throw new Error("Impossible de charger la page. Verifiez l'URL.");
+  }
+
   const $ = cheerio.load(res.text);
 
   // Images

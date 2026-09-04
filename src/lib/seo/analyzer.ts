@@ -535,6 +535,13 @@ export async function analyzeSite(inputUrl: string): Promise<SeoAuditResult> {
     fetchWithTimeout(`${url}/sitemap.xml`),
   ]);
 
+  // Site injoignable : sans cette garde on produit un rapport complet sur une page
+  // qu'on n'a jamais reussi a charger (et le comparateur declare gagnant le site
+  // encore debout). Mieux vaut refuser l'audit que livrer une analyse inventee.
+  if (!homepageRes.text || homepageRes.status === 0) {
+    throw new Error(`Impossible de charger ${domain}. Verifiez l'URL.`);
+  }
+
   const homepage = analyzePage(url, homepageRes.text, homepageRes.status, homepageRes.time);
   const robotsTxt = analyzeRobotsTxt(robotsRes.text, robotsRes.status === 200);
   const sitemap = analyzeSitemap(sitemapRes.text, sitemapRes.status === 200);

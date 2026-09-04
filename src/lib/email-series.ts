@@ -1126,6 +1126,23 @@ const COMPANY_TYPE_LABELS: Record<string, string> = {
   autre: "Entreprise",
 };
 
+// Le champ project des formulaires Contact et HeroMiniForm stocke un slug technique.
+// Sans traduction, le prospect lit « Vous cherchez site-ecommerce ». Les libelles
+// portent leur article car la phrase est « Vous cherchez {{projet}} » (serie Contact).
+const PROJET_LABELS: Record<string, string> = {
+  // ContactForm
+  vitrine: "un site vitrine",
+  ecommerce: "une boutique en ligne",
+  landing: "une landing page",
+  audit: "un audit de votre site",
+  // HeroMiniForm
+  "site-vitrine": "un site vitrine",
+  "site-ecommerce": "une boutique en ligne",
+  "landing-page": "une landing page",
+  refonte: "une refonte de site",
+  autre: "un site web",
+};
+
 export function buildFormSeriesContext(
   formType: string,
   name?: string,
@@ -1140,7 +1157,13 @@ export function buildFormSeriesContext(
     ctx.situation = String(fields.situation || "");
     ctx.objectif  = String(fields.objectif  || "");
   } else if (formType === "Contact" || formType === "HeroMiniForm") {
-    ctx.projet = String(fields.project || "votre projet");
+    // hasOwnProperty obligatoire : /api/notify est un POST public non authentifie,
+    // une valeur comme "toString" remonterait sinon la chaine de prototypes et
+    // injecterait du code JavaScript dans le corps de l'email.
+    const projetBrut = String(fields.project || "");
+    ctx.projet = Object.prototype.hasOwnProperty.call(PROJET_LABELS, projetBrut)
+      ? PROJET_LABELS[projetBrut]
+      : "un site web";
   } else if (formType === "Devis" || formType.startsWith("Devis - ") || formType === "Offre Mensuelle") {
     ctx.offre = String(fields.service || fields.offerName || "votre projet");
     ctx.secteur = String(fields.sector || "");

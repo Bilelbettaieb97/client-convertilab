@@ -82,7 +82,9 @@ export default function DemandeMaquetteClient({ children }: { children?: React.R
     setIsSubmitting(true);
     try {
       const { error } = await supabase.from("mockup_requests" as string).insert({ name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), current_site_url: form.current_site_url.trim() || null, sector: form.sector, site_type: form.site_type, style: form.design_style || null, message: form.description.trim() || null });
-      if (error) throw error;
+      // Non-bloquant : Pipedrive est la source de verite pour le lead. Une panne
+      // d'enregistrement en base ne doit pas faire perdre la demande.
+      if (error) console.error("[supabase] mockup_requests:", error.message);
       // Non-bloquant : si la notification échoue, on continue quand même
       fetch("/api/notify", {
         method: "POST",

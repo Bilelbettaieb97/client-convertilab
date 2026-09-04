@@ -10,6 +10,9 @@ interface EmailParams {
   gradeLabel?: string;
   highlights?: string[];
   warnings?: string[];
+  // Malgre son nom, ce booleen signifie « une piece jointe accompagne l'email ».
+  // Le handler le calcule par !!(hasPdf || attachments.length > 0) : a false, il n'y
+  // a AUCUN fichier joint, l'email ne doit donc rien promettre.
   isPdf: boolean;
   ctaText?: string;
   ctaUrl?: string;
@@ -33,7 +36,7 @@ export function buildToolEmailHtml(params: EmailParams): string {
 
 <div style="background:#0a0a1a;border-radius:16px;padding:40px;text-align:center;color:#fff;">
   <div style="font-size:12px;color:#a29bfe;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">${toolLabel}</div>
-  <h1 style="font-size:28px;margin:0 0 8px;">Votre rapport est pret !</h1>
+  <h1 style="font-size:28px;margin:0 0 8px;">${isPdf ? "Votre rapport est pret !" : "Votre analyse est terminee"}</h1>
   ${domain ? `<p style="color:#8888aa;font-size:14px;margin:0;">Analyse de <strong style="color:#a29bfe;">${domain}</strong></p>` : ""}
 </div>
 
@@ -59,7 +62,9 @@ export function buildToolEmailHtml(params: EmailParams): string {
     ${highlights.slice(0, 3).map(h => `<p style="color:#666;font-size:12px;margin:4px 0;">\u2713 ${h}</p>`).join("")}
   </div>` : ""}
 
-  <p style="color:#888;font-size:13px;margin:20px 0;">Le rapport complet est en <strong>piece jointe</strong>${isPdf ? "." : ". Ouvrez le fichier dans votre navigateur puis <strong>Cmd+P</strong> pour l'enregistrer en PDF."}</p>
+  ${isPdf
+    ? `<p style="color:#888;font-size:13px;margin:20px 0;">Le rapport complet est en <strong>piece jointe</strong>.</p>`
+    : `<p style="color:#888;font-size:13px;margin:20px 0;">Le rapport detaille n'a pas pu etre genere cette fois. Vous pouvez relancer l'analyse depuis notre site.</p>`}
 </div>
 
 <div style="background:#1a1040;border-radius:16px;padding:30px;margin-top:16px;text-align:center;color:#fff;">

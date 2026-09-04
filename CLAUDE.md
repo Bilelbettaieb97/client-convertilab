@@ -115,12 +115,16 @@ Les séries email utilisent une table Supabase `email_queue` :
 | `email_queue` | File d'attente emails automatisés (status: pending/sent/failed, send_at, html_body) |
 | `seo_audits` | Résultats audits SEO (score, grade, issues, email_sent) |
 | `mentions_legales` | Mentions légales générées |
-| `comparateur_sites` | Résultats comparaisons |
+| `site_comparisons` | Résultats comparaisons |
 | `speed_audits` | Résultats analyses vitesse |
-| `design_scores` | Résultats scores design |
-| `estimateur_ads` | Résultats estimations ads |
-| `robots_generator` | Fichiers robots/sitemap générés |
-| `rapport_sectoriel` | Rapports sectoriels |
+| `design_audits` | Résultats scores design |
+| `ads_estimations` | Résultats estimations ads |
+| `robots_generations` | Fichiers robots/sitemap générés |
+| `sector_reports` | Rapports sectoriels |
+
+**Tables des formulaires** (écrites depuis le navigateur, relues par `/api/cron/reconcile-leads`) : `contact_submissions`, `devis_submissions` (Devis **et** Offre Mensuelle), `price_estimations`, `offer_reservations`, `mockup_requests`, `newsletter_subscriptions`.
+
+> ⚠️ Les noms de table ne suivent pas le nom de l'outil. Vérifier `tableName` dans `src/app/api/<outil>/route.ts` avant d'écrire une requête : 5 noms documentés ici étaient faux jusqu'au 04/09/2026 et pointaient vers des tables inexistantes.
 
 ---
 

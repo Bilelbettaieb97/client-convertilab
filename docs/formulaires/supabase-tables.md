@@ -1,7 +1,10 @@
 # Tables Supabase
 
 > Structure des tables utilisees par le projet ConvertiLab.
-> Projet Supabase : `hoaofayagbbhenktvchh`
+> Projet Supabase : `fubbjkcxbomoshyunjnn` (eu-west-3)
+>
+> ⚠️ Ce fichier ne fait pas autorite sur les noms de table : se referer au tableau
+> de CLAUDE.md, et surtout au `tableName` de `src/app/api/<outil>/route.ts`.
 
 ---
 

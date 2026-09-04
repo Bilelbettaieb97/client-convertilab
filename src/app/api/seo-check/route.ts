@@ -48,8 +48,19 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true, emailSent: true });
     }
 
-    // 1. Analyze the site
-    const audit = await analyzeSite(url);
+    // 1. Analyze the site — echec isole du catch fatal pour renvoyer au visiteur
+    // la vraie raison (site injoignable) plutot qu'un message generique.
+    let audit;
+    try {
+      audit = await analyzeSite(url);
+    } catch (err) {
+      console.error("[SEO Check][analyze] ERREUR:", err instanceof Error ? err.message : err);
+      const raison =
+        err instanceof Error && err.message
+          ? err.message
+          : "Analyse impossible. Verifiez l'URL et reessayez.";
+      return NextResponse.json({ error: raison }, { status: 400 });
+    }
 
     // 2. Generate HTML report
     const reportHtml = generateReportHtml(audit);

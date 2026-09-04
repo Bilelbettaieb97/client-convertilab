@@ -137,7 +137,9 @@ const ContactForm = () => {
         .from('contact_submissions')
         .insert([formData]);
 
-      if (error) throw error;
+      // Non-bloquant : Pipedrive est la source de verite pour le lead. Une panne
+      // d'enregistrement en base ne doit pas faire perdre la demande.
+      if (error) console.error("[supabase] contact_submissions:", error.message);
 
       // Non-bloquant : si la notification échoue, on continue quand même
       fetch("/api/notify", {
@@ -630,7 +632,7 @@ const ContactForm = () => {
               </div>
 
               <p className="text-[10px] sm:text-xs text-slate-400 mt-4">
-                Un email de confirmation a ete envoye a {formData.email}
+                Nous vous répondons à {formData.email}
               </p>
             </div>
           )}

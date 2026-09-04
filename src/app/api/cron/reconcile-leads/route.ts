@@ -34,11 +34,30 @@ const MIN_MINUTES = 10;
  * Le formType doit être identique à celui envoyé par le formulaire : c'est lui
  * qui choisit le pipeline Pipedrive et la série email.
  */
-const SOURCES: Array<{ table: string; formType: string }> = [
-  { table: "contact_submissions", formType: "Contact" },
-  { table: "devis_submissions", formType: "Devis" },
-  { table: "price_estimations", formType: "Estimation Prix" },
-  { table: "offer_reservations", formType: "Offre Speciale" },
+const COLONNES_COMMUNES = "name, email, phone, company, created_at";
+
+const SOURCES: Array<{
+  table: string;
+  formType: string;
+  colonnes: string;
+  /** Certaines tables reçoivent plusieurs formulaires : on affine au cas par cas. */
+  formTypeDe?: (lead: Lead) => string;
+}> = [
+  { table: "contact_submissions", formType: "Contact", colonnes: COLONNES_COMMUNES },
+  {
+    table: "devis_submissions",
+    formType: "Devis",
+    colonnes: `${COLONNES_COMMUNES}, offer`,
+    // Le formulaire Offre Mensuelle écrit dans CETTE MÊME table que le formulaire
+    // Devis. Sans distinction, un lead Offre Mensuelle rattrapé partait avec la
+    // mauvaise source Pipedrive et la mauvaise série email. Seule l'Offre Mensuelle
+    // enregistre un tarif récurrent dans `offer` (DevisClient.tsx), et son étape 1
+    // est verrouillée tant qu'aucune offre n'est choisie : le repère est fiable.
+    formTypeDe: (lead) =>
+      String(lead.offer ?? "").includes("€/mois") ? "Offre Mensuelle" : "Devis",
+  },
+  { table: "price_estimations", formType: "Estimation Prix", colonnes: COLONNES_COMMUNES },
+  { table: "offer_reservations", formType: "Offre Speciale", colonnes: COLONNES_COMMUNES },
 ];
 
 interface Lead {
@@ -47,6 +66,7 @@ interface Lead {
   phone: string | null;
   company: string | null;
   created_at: string;
+  offer?: string | null;
 }
 
 /** La personne existe-t-elle déjà dans Pipedrive ? */
@@ -96,7 +116,7 @@ export async function GET(request: NextRequest) {
   for (const source of SOURCES) {
     const { data, error } = await supabase
       .from(source.table)
-      .select("name, email, phone, company, created_at")
+      .select(source.colonnes)
       .gte("created_at", depuis)
       .lte("created_at", jusqua)
       .order("created_at", { ascending: false });
@@ -108,7 +128,10 @@ export async function GET(request: NextRequest) {
       continue;
     }
 
-    for (const lead of (data ?? []) as Lead[]) {
+    // Double conversion imposée par PostgREST : la liste de colonnes varie selon la
+    // table, donc `select()` reçoit une chaîne non littérale et le client renonce à
+    // inférer la ligne. Le contenu réel est bien celui décrit par `Lead`.
+    for (const lead of (data ?? []) as unknown as Lead[]) {
       const email = lead.email?.trim().toLowerCase();
       if (!email || dejaTraites.has(email)) continue;
       dejaTraites.add(email);
@@ -117,8 +140,10 @@ export async function GET(request: NextRequest) {
       try {
         if (await existeDansPipedrive(email)) continue;
 
+        const formType = source.formTypeDe ? source.formTypeDe(lead) : source.formType;
+
         await pushToPipedrive(
-          source.formType,
+          formType,
           lead.name ?? undefined,
           email,
           lead.phone ?? undefined,

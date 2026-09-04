@@ -94,7 +94,9 @@ export default function DevisServicePage() {
         offer: devisService?.name || service,
         message: formData.message,
       }]);
-      if (error) throw error;
+      // Non-bloquant : Pipedrive est la source de verite pour le lead. Une panne
+      // d'enregistrement en base ne doit pas faire perdre la demande.
+      if (error) console.error("[supabase] devis_submissions:", error.message);
 
       // Non-bloquant notification
       fetch("/api/notify", {

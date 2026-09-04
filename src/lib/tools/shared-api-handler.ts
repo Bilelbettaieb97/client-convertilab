@@ -20,6 +20,15 @@ function isBlocked(email: string): boolean {
   return BLOCKED_EMAILS.has(email.toLowerCase());
 }
 
+// Identites techniques : le ChatWidget appelle ces memes routes avec une identite
+// factice, uniquement pour afficher une analyse dans la conversation. Ce n'est pas
+// un lead — on renvoie le resultat sans creer de contact, de deal, ni de serie email.
+const IDENTITES_TECHNIQUES = new Set(["chatbot@temp.com"]);
+
+function estAnalyseSeule(email: string): boolean {
+  return IDENTITES_TECHNIQUES.has(email.trim().toLowerCase());
+}
+
 function log(tool: string, step: string, err: unknown) {
   const msg = err instanceof Error ? err.message : String(err);
   console.error(`[${tool}][${step}] ERREUR: ${msg}`);
@@ -47,8 +56,31 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         company: (input as Record<string, unknown>).company as string | undefined,
       };
 
-      // 2. Analyze
-      const result = await config.analyze(input);
+      // 2. Analyze — echec isole du catch fatal : le visiteur doit lire la vraie
+      // raison (URL injoignable) et pas un message generique qui l'empeche de corriger.
+      let result: TResult;
+      try {
+        result = await config.analyze(input);
+      } catch (err) {
+        log(config.toolName, "analyze", err);
+        const raison =
+          err instanceof Error && err.message
+            ? err.message
+            : "Analyse impossible. Verifiez l'URL et reessayez.";
+        return NextResponse.json({ error: raison }, { status: 400 });
+      }
+
+      // Analyse seule (chatbot) — on renvoie le resultat et on s'arrete la : ni email,
+      // ni Supabase, ni serie, ni Pipedrive. Place APRES l'analyse protegee pour que
+      // le chat recoive lui aussi la vraie raison d'un echec.
+      if (estAnalyseSeule(input.email)) {
+        return NextResponse.json({
+          success: true,
+          emailSent: false,
+          pdfBase64: null,
+          ...config.buildResponsePayload(result),
+        });
+      }
 
       // 3. Generate PDF
       let pdfBuffer: Buffer | null = null;
