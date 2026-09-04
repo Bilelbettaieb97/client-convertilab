@@ -74,7 +74,7 @@ const Navigation = () => {
     { label: "Audit Vitesse", href: "/speed-check", icon: Zap, desc: "Testez la performance de votre site", badge: null },
     { label: "Audit Design & UX", href: "/design-score", icon: Palette, desc: "Évaluez l'expérience utilisateur", badge: null },
     { label: "Estimateur Ads", href: "/estimateur-ads", icon: TrendingUp, desc: "Estimez le ROI de vos campagnes", badge: null },
-    { label: "Mentions Légales", href: "/generateur-mentions-legales", icon: FileText, desc: "Générez vos CGU et CGV", badge: null },
+    { label: "Générateur Mentions Légales", href: "/generateur-mentions-legales", icon: FileText, desc: "Générez vos CGU et CGV", badge: null },
     { label: "Robots & Sitemap", href: "/generateur-robots-sitemap", icon: Code, desc: "Créez vos fichiers techniques", badge: null },
     { label: "Rapport Sectoriel", href: "/rapport-sectoriel", icon: BarChart3, desc: "Analysez votre marché", badge: null },
     { label: "Comparateur Sites", href: "/comparateur-sites", icon: GitCompare, desc: "Comparez avec la concurrence", badge: null },

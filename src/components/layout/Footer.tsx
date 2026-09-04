@@ -48,7 +48,7 @@ const Footer = () => {
     { name: "Audit Vitesse", href: "/speed-check" },
     { name: "Audit Design", href: "/design-score" },
     { name: "Estimateur Ads", href: "/estimateur-ads" },
-    { name: "Mentions Légales", href: "/generateur-mentions-legales" },
+    { name: "Générateur Mentions Légales", href: "/generateur-mentions-legales" },
     { name: "Robots & Sitemap", href: "/generateur-robots-sitemap" },
     { name: "Rapport Sectoriel", href: "/rapport-sectoriel" },
     { name: "Comparateur", href: "/comparateur-sites" },
@@ -234,8 +234,16 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} ConvertiLab, agence marketing digital Paris et Île-de-France
             </p>
             <div className="flex items-center gap-4 text-xs text-gray-500">
+              <Link href="/mentions-legales" className="hover:text-purple-400 transition-colors">
+                Mentions légales
+              </Link>
+              <span>•</span>
               <Link href="/politique-de-confidentialite" className="hover:text-purple-400 transition-colors">
                 Confidentialité
+              </Link>
+              <span>•</span>
+              <Link href="/politique-de-cookies" className="hover:text-purple-400 transition-colors">
+                Cookies
               </Link>
               <span>•</span>
               <Link href="/glossaire" className="hover:text-purple-400 transition-colors">
