@@ -419,8 +419,9 @@ export const caseStudies: CaseStudy[] = [
       { label: "Zone", value: "Paris & IDF", icon: "Globe" },
     ],
     technologies: ["Site Vitrine", "Tunnel de devis", "SEO Local"],
-    results: "Demande de devis en 4 étapes",
-    testimonial: "",
+    results: "Équipe agrandie face à la demande",
+    testimonial:
+      "Depuis que j'ai lancé mon site avec ConvertiLab, j'ai embauché d'autres salariés pour pouvoir satisfaire la demande.",
     author: "JSM Jardinage",
     slug: "jsm-jardinage",
     category: "site-vitrine",

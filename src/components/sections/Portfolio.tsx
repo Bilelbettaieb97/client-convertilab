@@ -324,7 +324,13 @@ const Portfolio = ({ activeCategory: externalCategory, hideOffer = false, forAds
   const isFiltered = activeCategory && activeCategory !== "all";
 
   const filteredCases = useMemo(() => {
-    const base = forAds ? caseStudies.filter((c) => !c.excludeFromAds) : caseStudies;
+    let base = forAds ? caseStudies.filter((c) => !c.excludeFromAds) : caseStudies;
+    // Les réalisations dont le site client est consultable en ligne passent en
+    // premier : ce sont les plus convaincantes (le visiteur voit le vrai site).
+    // sort() est stable, l'ordre d'origine est conservé dans chaque groupe.
+    base = [...base].sort(
+      (a, b) => Number(Boolean(LIVE_SITES[b.slug])) - Number(Boolean(LIVE_SITES[a.slug]))
+    );
     if (!isFiltered) return base;
     return base.filter((c) => c.category === activeCategory);
   }, [activeCategory, isFiltered, forAds]);
