@@ -7,9 +7,45 @@ const STAGE_FORMULAIRES = 12; // Pipeline "Formulaires" → Nouveau
 const STAGE_OUTILS      = 16; // Pipeline "Outils" → Nouveau
 const STAGE_GOOGLE_ADS  = 22; // Pipeline "Google Ads" → Nouveau lead
 
-// Etape d'arrivee automatique quand la serie de relances est epuisee.
-// Seul le pipeline "Outils" possede cette etape (verifie cote Pipedrive).
-const STAGE_OUTILS_SERIE_FINIE = 17;
+/** Comparaison de noms d'etapes insensible aux accents et a la casse. */
+function sansAccent(s: string): string {
+  return s
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
+type EtapePipedrive = { id: number; name: string; pipeline_id: number; order_nr: number };
+
+/**
+ * Liste des etapes, mise en cache le temps d'une invocation.
+ *
+ * Le cron traite jusqu'a 50 emails par passage : sans cache, on interrogerait
+ * Pipedrive a chaque fin de serie pour la meme information.
+ */
+let cacheEtapes: { valeur: EtapePipedrive[]; expire: number } | null = null;
+
+async function chargerEtapes(): Promise<EtapePipedrive[]> {
+  if (cacheEtapes && cacheEtapes.expire > Date.now()) return cacheEtapes.valeur;
+  try {
+    const res = await fetch(`${PIPEDRIVE_BASE}/stages?api_token=${PIPEDRIVE_TOKEN}`);
+    const data = await res.json();
+    const etapes: EtapePipedrive[] = (data.data || []).map(
+      (e: { id: number; name: string; pipeline_id: number; order_nr: number }) => ({
+        id: e.id,
+        name: e.name,
+        pipeline_id: e.pipeline_id,
+        order_nr: e.order_nr,
+      })
+    );
+    cacheEtapes = { valeur: etapes, expire: Date.now() + 60_000 };
+    return etapes;
+  } catch (err) {
+    console.error("[pipedrive] chargerEtapes error:", err);
+    return [];
+  }
+}
 
 /**
  * Les leads issus des landings publicitaires Google ont leur propre pipeline :
@@ -224,9 +260,14 @@ export async function marquerSerieFinie(
   formType: string
 ): Promise<"deplace" | "ignore" | "echec"> {
   if (!PIPEDRIVE_TOKEN || !email) return "echec";
-  if (canalDAcquisition(formType) !== "OUTIL") return "ignore";
 
   try {
+    // L'etape d'arrivee est cherchee DANS le pipeline du deal, par son nom.
+    // Aucun pipeline n'est code en dur : le jour ou l'etape « Serie finie » est
+    // creee dans Formulaires ou Google Ads, elle est prise en compte sans
+    // toucher au code. Tant qu'elle n'existe pas, rien ne bouge.
+    const etapes = await chargerEtapes();
+    if (!etapes.length) return "ignore";
     const searchRes = await fetch(
       `${PIPEDRIVE_BASE}/persons/search?term=${encodeURIComponent(email)}&fields=email&exact_match=true&api_token=${PIPEDRIVE_TOKEN}`
     );
@@ -241,21 +282,39 @@ export async function marquerSerieFinie(
     const deals: Array<{ id: number; title?: string; stage_id?: number; pipeline_id?: number }> =
       dealsData.data || [];
 
-    // Le deal issu de CET outil, encore a l'etape d'entree du pipeline Outils.
-    const cible = deals.find(
-      (d) =>
-        d.pipeline_id === 3 &&
-        d.stage_id === STAGE_OUTILS &&
-        (d.title ?? "").includes(formType)
-    );
-    if (!cible) return "ignore";
+    // Le deal issu de CE formulaire, encore a l'etape d'entree de son pipeline,
+    // et dont le pipeline propose bien une etape « Serie finie ».
+    let cible: { id: number; pipeline_id?: number } | undefined;
+    let etapeArrivee: number | undefined;
+
+    for (const d of deals) {
+      if (!(d.title ?? "").includes(formType)) continue;
+      if (d.pipeline_id === undefined || d.stage_id === undefined) continue;
+
+      const duPipeline = etapes.filter((e) => e.pipeline_id === d.pipeline_id);
+      if (!duPipeline.length) continue;
+
+      const entree = [...duPipeline].sort((a, b) => a.order_nr - b.order_nr)[0];
+      const finie = duPipeline.find((e) => sansAccent(e.name) === "serie finie");
+
+      // Garde-fou : on ne deplace que depuis l'etape d'entree. Si le deal a deja
+      // ete qualifie, planifie ou gagne a la main, une automatisation ne doit
+      // jamais le faire reculer.
+      if (!finie || d.stage_id !== entree.id) continue;
+
+      cible = d;
+      etapeArrivee = finie.id;
+      break;
+    }
+
+    if (!cible || etapeArrivee === undefined) return "ignore";
 
     const majRes = await fetch(
       `${PIPEDRIVE_BASE}/deals/${cible.id}?api_token=${PIPEDRIVE_TOKEN}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ stage_id: STAGE_OUTILS_SERIE_FINIE }),
+        body: JSON.stringify({ stage_id: etapeArrivee }),
       }
     );
     const majData = await majRes.json();

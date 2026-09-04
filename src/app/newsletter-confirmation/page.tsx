@@ -131,8 +131,8 @@ export default function NewsletterConfirmationPage() {
                 <div>
                   <h4 className="font-semibold mb-1">Consultez vos emails</h4>
                   <p className="text-sm text-gray-600">
-                    Vous recevrez chaque semaine nos meilleurs conseils et etudes
-                    de cas
+                    Trois emails, espaces dans le temps : nos meilleurs conseils
+                    et etudes de cas, sans vous encombrer la boite
                   </p>
                 </div>
               </div>
@@ -200,15 +200,18 @@ export default function NewsletterConfirmationPage() {
           <Card className="bg-gradient-to-r from-green-50 to-teal-50 border-green-200">
             <CardContent className="py-6">
               <h3 className="text-xl font-bold mb-2">
-                Bonus exclusif abonnes
+                En attendant, nos outils sont ouverts
               </h3>
               <p className="text-gray-600 mb-4">
-                Dans votre premier email, vous recevrez un code promo de{" "}
-                <span className="font-bold text-green-600">-20%</span> sur
-                votre premier audit
+                Audit SEO, test de vitesse, score design : neuf outils{" "}
+                <span className="font-bold text-green-600">gratuits</span>,
+                sans limite d&apos;utilisation. Vous recevez le rapport complet
+                par email.
               </p>
               <p className="text-sm text-gray-500">
-                Offre valable pendant 30 jours
+                <Link href="/outils" className="underline hover:text-gray-700">
+                  Voir les outils
+                </Link>
               </p>
             </CardContent>
           </Card>
