@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 import { marquerSerieFinie } from "@/lib/pipedrive";
+import { tailleDeSerie } from "@/lib/email-series";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -69,19 +70,26 @@ export async function GET(request: NextRequest) {
 
       sent++;
 
-      // Etait-ce la derniere relance de cette serie pour ce lead ? On interroge la
-      // file APRES la mise a jour ci-dessus : s'il ne reste plus rien en attente,
-      // la sequence est epuisee et le deal part en "Serie finie".
-      const { count: restants, error: resteErr } = await supabase
-        .from("email_queue")
-        .select("id", { count: "exact", head: true })
-        .eq("lead_email", row.lead_email)
-        .eq("form_type", row.form_type)
-        .eq("status", "pending");
+      // Etait-ce la derniere relance de cette serie pour ce lead ?
+      //
+      // La longueur de la serie est connue sans requete : tant qu'on n'envoie pas
+      // le dernier index, inutile d'interroger la base. Le cron traite jusqu'a 50
+      // emails par passage, ce court-circuit lui evite autant d'aller-retours.
+      const taille = tailleDeSerie(row.form_type);
+      if (taille > 0 && row.series_index >= taille - 1) {
+        // Confirmation en base : un rattrapage ou une reprogrammation peut avoir
+        // laisse d'autres relances en attente pour ce meme lead.
+        const { count: restants, error: resteErr } = await supabase
+          .from("email_queue")
+          .select("id", { count: "exact", head: true })
+          .eq("lead_email", row.lead_email)
+          .eq("form_type", row.form_type)
+          .eq("status", "pending");
 
-      if (!resteErr && restants === 0) {
-        const issue = await marquerSerieFinie(row.lead_email, row.form_type);
-        if (issue === "deplace") seriesTerminees++;
+        if (!resteErr && restants === 0) {
+          const issue = await marquerSerieFinie(row.lead_email, row.form_type);
+          if (issue === "deplace") seriesTerminees++;
+        }
       }
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);

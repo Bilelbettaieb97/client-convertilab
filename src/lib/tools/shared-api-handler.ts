@@ -44,6 +44,16 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
       // 1. Validate
       const input = config.validate(body);
 
+      // Origine facultative, aujourd'hui posee par le ChatWidget. Le lead garde la
+      // serie email de l'outil qu'il a demande : seule la note du deal indique
+      // qu'il est passe par le chat, sans quoi rien ne l'en distingue en CRM.
+      // Liste blanche : ces routes sont publiques, on n'ecrit pas une valeur libre.
+      const ORIGINES = new Set(["chatbot"]);
+      const origine =
+        typeof body.origine === "string" && ORIGINES.has(body.origine)
+          ? body.origine
+          : null;
+
       // Blocage silencieux — retourne un succès factice sans rien traiter
       if (isBlocked(input.email)) {
         return NextResponse.json({ success: true, emailSent: true, pdfBase64: null });
@@ -172,7 +182,10 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         lead.email,
         lead.phone,
         lead.company,
-        config.buildPipedriveFields ? config.buildPipedriveFields(result) : {}
+        {
+          ...(config.buildPipedriveFields ? config.buildPipedriveFields(result) : {}),
+          ...(origine ? { origine } : {}),
+        }
       ).catch((err) => {
         log(config.toolName, "pipedrive", err);
         warnings.push("pipedrive_failed");

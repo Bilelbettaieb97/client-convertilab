@@ -21,8 +21,6 @@ export interface ToolConfig<TInput, TResult> {
   buildEmailHtml: (lead: LeadInfo, result: TResult, isPdf: boolean) => string;
   buildSupabaseRow: (lead: LeadInfo, result: TResult) => Record<string, unknown>;
   buildResponsePayload: (result: TResult) => Record<string, unknown>;
-  /** File extension for attachment: "pdf" (default) or "html" or "txt" */
-  attachmentExt?: string;
   /** Generate extra attachments (e.g. robots.txt + sitemap.xml) */
   buildExtraAttachments?: (result: TResult) => { filename: string; content: Buffer }[];
   /** Extra fields to include in the Pipedrive lead note */

@@ -1100,7 +1100,7 @@ function wrapEmail(bodyHtml: string): string {
   </div>
   <div style="background:#1a1040;border-radius:0 0 12px 12px;padding:16px 32px;text-align:center;">
     <p style="margin:0;font-size:11px;line-height:1.7;">
-      <a href="https://www.convertilab.fr" style="color:#a29bfe;text-decoration:none;">convertilab.fr</a>
+      <a href="https://www.convertilab.com" style="color:#a29bfe;text-decoration:none;">convertilab.com</a>
       <span style="color:#4a4060;"> &nbsp;·&nbsp; </span>
       <a href="tel:+33616477245" style="color:#a29bfe;text-decoration:none;">06 16 47 72 45</a>
       <span style="color:#4a4060;"> &nbsp;·&nbsp; </span>
@@ -1228,6 +1228,30 @@ export function buildFormSeriesContext(
 // SCHEDULE
 // ─────────────────────────────────────────────────────────────
 
+// Alias : réutilise une série existante pour des formulaires proches
+const SERIES_ALIASES: Record<string, string> = {
+  HeroMiniForm: "Contact",        // mini-formulaire hero → série Contact
+  "Offre Mensuelle": "Devis",     // devis offre mensuelle → série Devis
+};
+
+/** "Devis - vitrine" → "Devis", "Mentions Légales" → "Mentions Legales". */
+function cleDeSerie(formType: string): string {
+  const normalized = formType.startsWith("Devis - ")
+    ? "Devis"
+    : formType.replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e");
+  return SERIES_ALIASES[normalized] ?? normalized;
+}
+
+/**
+ * Nombre d'emails que compte la série d'un formulaire, 0 s'il n'en a pas.
+ *
+ * Permet au cron de savoir si l'email qu'il vient d'envoyer était le dernier
+ * SANS interroger la base : seule la dernière relance déclenche la vérification.
+ */
+export function tailleDeSerie(formType: string): number {
+  return EMAIL_SERIES[cleDeSerie(formType)]?.length ?? 0;
+}
+
 export async function scheduleEmailSeries(
   formType: string,
   leadEmail: string | undefined | null,
@@ -1235,19 +1259,7 @@ export async function scheduleEmailSeries(
 ): Promise<void> {
   if (!leadEmail) return;
 
-  // "Devis - vitrine" → "Devis", "Mentions Légales" → "Mentions Legales"
-  const normalized = formType.startsWith("Devis - ")
-    ? "Devis"
-    : formType.replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e");
-
-  // Alias : réutilise une série existante pour des formulaires proches
-  const SERIES_ALIASES: Record<string, string> = {
-    HeroMiniForm: "Contact",        // mini-formulaire hero → série Contact
-    "Offre Mensuelle": "Devis",     // devis offre mensuelle → série Devis
-  };
-  const seriesKey = SERIES_ALIASES[normalized] ?? normalized;
-
-  const templates = EMAIL_SERIES[seriesKey];
+  const templates = EMAIL_SERIES[cleDeSerie(formType)];
   if (!templates?.length) return;
 
   const supabase = createClient(

@@ -160,11 +160,16 @@ export async function POST(request: NextRequest) {
       (err) => console.error("[SEO Check][email_agency] ERREUR:", err instanceof Error ? err.message : err)
     );
 
+    // origine : pose par le ChatWidget, liste blanche car la route est publique.
+    // Le lead garde la serie SEO Check, seule la note du deal signale le chat.
+    const origine = body.origine === "chatbot" ? "chatbot" : null;
+
     await pushToPipedrive("SEO Check", name, email, phone, company, {
       domain: audit.domain,
       score_global: audit.scores.global,
       grade: audit.grade,
       critical_count: audit.issues.filter(i => i.priority === "critical").length,
+      ...(origine ? { origine } : {}),
     }).catch((err) => {
       console.error("[SEO Check][pipedrive] ERREUR:", err instanceof Error ? err.message : err);
       warnings.push("pipedrive_failed");

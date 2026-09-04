@@ -267,7 +267,9 @@ export default function ChatWidget() {
 
       // Call the tool's report API and WAIT for the response (to get the PDF base64)
       if (tool?.reportApi) {
-        const body: Record<string, string> = { url, name, email };
+        // origine : marque le deal comme venu du chat. Sans ça, un lead du
+        // chatbot est indiscernable d'un lead venu directement de l'outil.
+        const body: Record<string, string> = { url, name, email, origine: "chatbot" };
         if (selectedTool === "compare" && userInputs.urlB) {
           body.urlA = url;
           body.urlB = userInputs.urlB;
