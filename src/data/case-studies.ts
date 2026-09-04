@@ -1061,6 +1061,19 @@ export const LIVE_SITES: Record<string, string> = {
   "spectacle": "https://sarahprod.com/",
 };
 
+/**
+ * Ordre de mise en avant dans le portfolio : ces réalisations sont affichées
+ * en premier, dans cet ordre exact. Viennent ensuite les autres sites
+ * consultables en ligne (LIVE_SITES), puis le reste des études de cas.
+ */
+export const FEATURED_ORDER: string[] = [
+  "jsm-jardinage",
+  "monsieur-arancini",
+  "adsb-wissembourg",
+  "acb-renovation",
+  "funestore",
+];
+
 // Also provide projectOrder for navigation
 export const projectOrder = [
   "monsieur-arancini",

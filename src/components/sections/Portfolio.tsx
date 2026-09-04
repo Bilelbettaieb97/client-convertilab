@@ -41,6 +41,7 @@ import {
   caseStudies,
   portfolioCategories,
   LIVE_SITES,
+  FEATURED_ORDER,
   type CaseStudy,
   type CaseStudyMetric,
 } from "@/data/case-studies";
@@ -325,12 +326,15 @@ const Portfolio = ({ activeCategory: externalCategory, hideOffer = false, forAds
 
   const filteredCases = useMemo(() => {
     let base = forAds ? caseStudies.filter((c) => !c.excludeFromAds) : caseStudies;
-    // Les réalisations dont le site client est consultable en ligne passent en
-    // premier : ce sont les plus convaincantes (le visiteur voit le vrai site).
-    // sort() est stable, l'ordre d'origine est conservé dans chaque groupe.
-    base = [...base].sort(
-      (a, b) => Number(Boolean(LIVE_SITES[b.slug])) - Number(Boolean(LIVE_SITES[a.slug]))
-    );
+    // Ordre d'affichage : les réalisations mises en avant (FEATURED_ORDER)
+    // d'abord, puis les autres sites consultables en ligne, puis le reste.
+    // sort() est stable : l'ordre d'origine est conservé dans chaque groupe.
+    const rank = (c: CaseStudy) => {
+      const featured = FEATURED_ORDER.indexOf(c.slug);
+      if (featured !== -1) return featured;
+      return LIVE_SITES[c.slug] ? 100 : 200;
+    };
+    base = [...base].sort((a, b) => rank(a) - rank(b));
     if (!isFiltered) return base;
     return base.filter((c) => c.category === activeCategory);
   }, [activeCategory, isFiltered, forAds]);
