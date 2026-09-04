@@ -33,12 +33,14 @@ import {
   Camera,
   Award,
   ArrowRight,
+  ExternalLink,
   Key,
   Search,
 } from "lucide-react";
 import {
   caseStudies,
   portfolioCategories,
+  LIVE_SITES,
   type CaseStudy,
   type CaseStudyMetric,
 } from "@/data/case-studies";
@@ -76,6 +78,7 @@ function PortfolioCard({ caseStudy }: { caseStudy: CaseStudy }) {
   const formattedTestimonial = testimonialSentences.slice(0, 2).join(" ").trim();
 
   const Icon = resolveIcon(caseStudy.icon);
+  const liveUrl = LIVE_SITES[caseStudy.slug];
 
   const cardContent = (
     <Card
@@ -142,30 +145,61 @@ function PortfolioCard({ caseStudy }: { caseStudy: CaseStudy }) {
         </div>
 
         <div className="mt-auto space-y-3">
-          <div className="bg-muted/50 rounded-lg p-3 min-h-[5.5rem]">
-            <div className="flex mb-2">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />
+          {formattedTestimonial ? (
+            <div className="bg-muted/50 rounded-lg p-3 min-h-[5.5rem]">
+              <div className="flex mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <p className="text-muted-foreground italic text-sm mb-2 line-clamp-2">
+                &quot;{formattedTestimonial}&quot;
+              </p>
+              <div className="text-xs font-semibold text-foreground">
+                {caseStudy.author}
+              </div>
+            </div>
+          ) : (
+            /* Pas encore de témoignage client : on montre les technologies
+               plutôt qu'un encadré vide (jamais de faux avis). */
+            <div className="bg-muted/50 rounded-lg p-3 min-h-[5.5rem] flex flex-wrap items-center gap-1.5">
+              {caseStudy.technologies.slice(0, 3).map((t) => (
+                <span key={t} className="px-2 py-1 rounded-md bg-background text-xs font-medium text-muted-foreground">
+                  {t}
+                </span>
               ))}
             </div>
-            <p className="text-muted-foreground italic text-sm mb-2 line-clamp-2">
-              &quot;{formattedTestimonial}&quot;
-            </p>
-            <div className="text-xs font-semibold text-foreground">
-              {caseStudy.author}
-            </div>
-          </div>
+          )}
 
           {caseStudy.slug && (
             <div className="w-full bg-primary text-primary-foreground group/btn inline-flex items-center justify-center rounded-md text-sm font-medium h-10 px-4 py-2">
-              Voir l&apos;étude de cas
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              {liveUrl ? (
+                <>
+                  Voir le site en ligne
+                  <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
+                </>
+              ) : (
+                <>
+                  Voir l&apos;étude de cas
+                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </>
+              )}
             </div>
           )}
         </div>
       </CardContent>
     </Card>
   );
+
+  // Site client consultable en ligne → on ouvre le vrai site dans un nouvel
+  // onglet, pour que la page d'origine reste ouverte pour le visiteur.
+  if (liveUrl) {
+    return (
+      <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="block h-full">
+        {cardContent}
+      </a>
+    );
+  }
 
   if (caseStudy.slug) {
     return (
@@ -277,9 +311,12 @@ interface PortfolioProps {
   activeCategory?: string;
   /** Masque le bloc offre "dès 39€/mois" (utilisé sur les landings pub sans prix) */
   hideOffer?: boolean;
+  /** Contexte publicitaire : masque les réalisations marquées `excludeFromAds`
+   *  (contenu hors sujet ou sensible pour une audience Google Ads). */
+  forAds?: boolean;
 }
 
-const Portfolio = ({ activeCategory: externalCategory, hideOffer = false }: PortfolioProps) => {
+const Portfolio = ({ activeCategory: externalCategory, hideOffer = false, forAds = false }: PortfolioProps) => {
   const [internalCategory, setInternalCategory] = useState("all");
   const isHomepage = externalCategory === undefined;
   const activeCategory = isHomepage ? internalCategory : externalCategory;
@@ -287,9 +324,10 @@ const Portfolio = ({ activeCategory: externalCategory, hideOffer = false }: Port
   const isFiltered = activeCategory && activeCategory !== "all";
 
   const filteredCases = useMemo(() => {
-    if (!isFiltered) return caseStudies;
-    return caseStudies.filter((c) => c.category === activeCategory);
-  }, [activeCategory, isFiltered]);
+    const base = forAds ? caseStudies.filter((c) => !c.excludeFromAds) : caseStudies;
+    if (!isFiltered) return base;
+    return base.filter((c) => c.category === activeCategory);
+  }, [activeCategory, isFiltered, forAds]);
 
   // Keep dedicated filtered grid behavior only on /portfolio page
   if (isFiltered && !isHomepage) {

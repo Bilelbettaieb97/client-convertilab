@@ -180,7 +180,7 @@ export default function LandingSiteInternet() {
       </section>
 
       {/* ============ RÉSULTATS CLIENTS (section existante) ============ */}
-      <Portfolio hideOffer />
+      <Portfolio hideOffer forAds />
 
       {/* ============ TRUSTPILOT (carrousel, couleurs Trustpilot) ============ */}
       <section className="py-16 sm:py-24" style={{ backgroundColor: "#f7fbf9" }}>

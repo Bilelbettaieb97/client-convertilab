@@ -14,7 +14,28 @@ const siteTypes = [
 
 const perks = ["Réponse sous 24h", "Sans engagement", "100% gratuit"];
 
-export default function AdsLeadForm() {
+interface AdsLeadFormProps {
+  /** Si défini (ex. "Restaurant"), le formulaire est dédié à un métier :
+   *  le menu "type de site" est masqué (3 champs = plus de leads) et le
+   *  métier est remonté dans le deal Pipedrive. */
+  metier?: string;
+  /** Clé de source pour le suivi (ex. "google-ads-lp-restaurant"). */
+  sourceKey?: string;
+  /** Titre du bloc formulaire (override). */
+  title?: string;
+  /** Sous-titre du bloc formulaire (override). */
+  subtitle?: string;
+  /** Couleur d'accent (dégradé) pour adapter le mood par métier. */
+  accentClass?: string;
+}
+
+export default function AdsLeadForm({
+  metier,
+  sourceKey,
+  title,
+  subtitle,
+  accentClass = "from-purple-600 to-pink-600",
+}: AdsLeadFormProps = {}) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -27,7 +48,7 @@ export default function AdsLeadForm() {
     e.preventDefault();
     setError("");
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!name.trim() || !phone.trim() || !email.trim() || !siteType) {
+    if (!name.trim() || !phone.trim() || !email.trim() || (!metier && !siteType)) {
       setError("Merci de remplir tous les champs.");
       return;
     }
@@ -44,8 +65,10 @@ export default function AdsLeadForm() {
           name: name.trim(),
           email: email.trim().toLowerCase(),
           phone: phone.trim(),
-          project: siteType,
-          message: "Demande via landing Google Ads (création site internet)",
+          project: metier ? `site-${metier.toLowerCase()}` : siteType,
+          message: metier
+            ? `Demande via landing Google Ads (site ${metier})`
+            : "Demande via landing Google Ads (création site internet)",
           main_challenge: "non_specifie",
           timeline: "",
           company: "",
@@ -61,10 +84,12 @@ export default function AdsLeadForm() {
           name: name.trim(),
           email: email.trim().toLowerCase(),
           phone: phone.trim(),
-          fields: {
-            type_site: siteTypes.find((t) => t.value === siteType)?.label || siteType,
-            source: "google-ads-lp-site-internet",
-          },
+          fields: metier
+            ? { metier, source: sourceKey || `google-ads-lp-${metier.toLowerCase()}` }
+            : {
+                type_site: siteTypes.find((t) => t.value === siteType)?.label || siteType,
+                source: sourceKey || "google-ads-lp-site-internet",
+              },
         }),
       }).catch((err) => console.error("[notify] erreur envoi:", err));
 
@@ -87,7 +112,7 @@ export default function AdsLeadForm() {
   if (isSuccess) {
     return (
       <div className="relative bg-white rounded-[1.75rem] shadow-2xl ring-1 ring-black/5 p-8 sm:p-10 min-h-[520px] flex flex-col items-center justify-center text-center overflow-hidden">
-        <div aria-hidden className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-600" />
+        <div aria-hidden className={`absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r ${accentClass}`} />
         <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-5 shadow-lg shadow-emerald-500/30">
           <CheckCircle2 className="w-10 h-10 text-white" />
         </div>
@@ -107,7 +132,7 @@ export default function AdsLeadForm() {
 
   return (
     <div id="devis" className="relative bg-white rounded-[1.75rem] shadow-2xl ring-1 ring-black/5 p-7 sm:p-9 scroll-mt-24 overflow-hidden">
-      <div aria-hidden className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-600" />
+      <div aria-hidden className={`absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r ${accentClass}`} />
 
       {/* En-tête */}
       <div className="mb-6">
@@ -116,10 +141,10 @@ export default function AdsLeadForm() {
           Devis gratuit en 2 minutes
         </div>
         <h2 className="text-[1.7rem] font-black text-gray-900 tracking-tight leading-tight mb-1.5">
-          Recevez votre devis gratuit
+          {title || "Recevez votre devis gratuit"}
         </h2>
         <p className="text-[15px] text-gray-500">
-          On vous rappelle sous 24h. Aucun engagement, aucune carte bancaire.
+          {subtitle || "On vous rappelle sous 24h. Aucun engagement, aucune carte bancaire."}
         </p>
       </div>
 
@@ -158,17 +183,19 @@ export default function AdsLeadForm() {
           disabled={isSubmitting}
           className="w-full px-4 py-3.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition text-gray-900 placeholder:text-gray-400 disabled:opacity-50 text-[15px]"
         />
-        <select
-          value={siteType}
-          onChange={(e) => setSiteType(e.target.value)}
-          disabled={isSubmitting}
-          className="w-full px-4 py-3.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition text-gray-900 disabled:opacity-50 bg-white text-[15px]"
-        >
-          <option value="">Quel type de site souhaitez-vous ?</option>
-          {siteTypes.map((t) => (
-            <option key={t.value} value={t.value}>{t.label}</option>
-          ))}
-        </select>
+        {!metier && (
+          <select
+            value={siteType}
+            onChange={(e) => setSiteType(e.target.value)}
+            disabled={isSubmitting}
+            className="w-full px-4 py-3.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition text-gray-900 disabled:opacity-50 bg-white text-[15px]"
+          >
+            <option value="">Quel type de site souhaitez-vous ?</option>
+            {siteTypes.map((t) => (
+              <option key={t.value} value={t.value}>{t.label}</option>
+            ))}
+          </select>
+        )}
 
         {error && <p className="text-sm text-red-600">{error}</p>}
 
@@ -176,7 +203,7 @@ export default function AdsLeadForm() {
           type="submit"
           disabled={isSubmitting}
           size="lg"
-          className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-7 text-base shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/40 transition-all"
+          className={`w-full bg-gradient-to-r ${accentClass} hover:opacity-95 text-white font-bold py-7 text-base shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/40 transition-all`}
         >
           {isSubmitting ? (
             <><Loader2 className="w-5 h-5 mr-2 animate-spin" />Envoi...</>

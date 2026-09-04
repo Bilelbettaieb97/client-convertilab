@@ -20,6 +20,9 @@ export interface CaseStudy {
   slug: string;
   category: "site-vitrine" | "landing-page" | "e-commerce" | "portfolio";
   relatedSector?: string;
+  /** À masquer sur les landing pages publicitaires (contenu hors sujet ou
+   *  sensible pour l'audience Google Ads). Reste visible sur le site. */
+  excludeFromAds?: boolean;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -400,6 +403,51 @@ export const caseStudies: CaseStudy[] = [
     slug: "ecrin-de-seoul",
     category: "e-commerce",
     relatedSector: "ecommerce",
+  },
+  {
+    icon: "Home",
+    iconColor: "text-green-600",
+    sector: "Jardinage / Paysagiste",
+    client: "JSM Jardinage",
+    title: "Site vitrine avec tunnel de devis pour paysagiste",
+    description:
+      "Site vitrine avec demande de devis guidée en 4 étapes, mise en avant de l'aide d'État 50% et couverture Paris & Île-de-France.",
+    image: "/images/portfolio/portfolio-jsm-hero.webp",
+    metrics: [
+      { label: "Avis clients", value: "4,9/5", icon: "Star" },
+      { label: "Devis", value: "Sous 24h", icon: "Clock" },
+      { label: "Zone", value: "Paris & IDF", icon: "Globe" },
+    ],
+    technologies: ["Site Vitrine", "Tunnel de devis", "SEO Local"],
+    results: "Demande de devis en 4 étapes",
+    testimonial: "",
+    author: "JSM Jardinage",
+    slug: "jsm-jardinage",
+    category: "site-vitrine",
+    relatedSector: "paysagiste-jardinier",
+  },
+  {
+    icon: "Camera",
+    iconColor: "text-amber-600",
+    sector: "Photographie / Portrait",
+    client: "La Chasseuse d'Émotions",
+    title: "Site portfolio premium pour photographe",
+    description:
+      "Site immersif avec galeries, déroulement des séances, tarifs détaillés et réservation en ligne.",
+    image: "/images/portfolio/portfolio-chasseuse-hero.webp",
+    metrics: [
+      { label: "Galeries", value: "En ligne", icon: "Camera" },
+      { label: "Tarifs", value: "Détaillés", icon: "TrendingUp" },
+      { label: "Réservation", value: "En ligne", icon: "Clock" },
+    ],
+    technologies: ["Site Vitrine", "Design Visuel", "UX Portfolio"],
+    results: "Parcours de réservation clarifié",
+    testimonial: "",
+    author: "La Chasseuse d'Émotions",
+    slug: "la-chasseuse-demotions",
+    category: "site-vitrine",
+    // Photographie boudoir : hors sujet pour l'audience des landings pub
+    excludeFromAds: true,
   },
 ];
 
@@ -993,6 +1041,23 @@ export const fullCaseStudies: Record<string, FullCaseStudy> = {
 export function getFullCaseStudyBySlug(slug: string) {
   return fullCaseStudies[slug] as FullCaseStudy | undefined;
 }
+
+/**
+ * Sites clients consultables en ligne. Sur ces études de cas, la carte du
+ * portfolio ouvre directement le vrai site dans un nouvel onglet : le visiteur
+ * voit la réalisation sans perdre la page sur laquelle il était.
+ */
+export const LIVE_SITES: Record<string, string> = {
+  "monsieur-arancini": "https://www.monsieurarancini.fr/",
+  "funestore": "https://www.funestore.fr/catalogue?cat=cercueils",
+  "acb-renovation": "https://www.acb-renovation.fr/",
+  "adsb-wissembourg": "https://donsang-wissembourg.fr/",
+  "trievent": "https://www.trievent.fr/",
+  "ah-studio": "https://ahstudiocaen.fr/",
+  "art-des-roses": "https://artdesroses.fr/",
+  "jsm-jardinage": "https://jsmjardinage.com/",
+  "la-chasseuse-demotions": "https://www.lachasseusedemotions.fr/",
+};
 
 // Also provide projectOrder for navigation
 export const projectOrder = [
