@@ -88,6 +88,62 @@ function formatValue(v: unknown): string {
   return String(v);
 }
 
+/**
+ * Rattache une note au dernier deal ouvert d'une personne, retrouvée par email.
+ *
+ * Sert aux précisions envoyées APRÈS la création du lead (écran de
+ * remerciement) : on enrichit le deal existant au lieu d'en créer un doublon.
+ * Ne throw jamais — un échec ici ne doit pas casser le parcours du lead.
+ */
+export async function addNoteToLatestDeal(
+  email: string,
+  content: string,
+  titleContains?: string
+): Promise<boolean> {
+  if (!PIPEDRIVE_TOKEN || !email) return false;
+
+  try {
+    const searchRes = await fetch(
+      `${PIPEDRIVE_BASE}/persons/search?term=${encodeURIComponent(email)}&fields=email&api_token=${PIPEDRIVE_TOKEN}`
+    );
+    const searchData = await searchRes.json();
+    const personId: number | undefined = searchData.data?.items?.[0]?.item?.id;
+    if (!personId) return false;
+
+    const dealsRes = await fetch(
+      `${PIPEDRIVE_BASE}/persons/${personId}/deals?status=open&api_token=${PIPEDRIVE_TOKEN}`
+    );
+    const dealsData = await dealsRes.json();
+    const deals: Array<{ id: number; title?: string; add_time?: string }> = dealsData.data || [];
+    if (!deals.length) return false;
+
+    const parDateDesc = (
+      a: { add_time?: string },
+      b: { add_time?: string }
+    ) => String(b.add_time ?? "").localeCompare(String(a.add_time ?? ""));
+
+    // On vise le deal issu de CE formulaire (son titre commence par le formType).
+    // Sans ce filtre, une automatisation qui crée un deal quelques secondes plus
+    // tard (pipeline Meta Ads) recevrait la note à la place.
+    const candidats = titleContains
+      ? deals.filter((d) => (d.title ?? "").includes(titleContains))
+      : deals;
+
+    const deal = [...(candidats.length ? candidats : deals)].sort(parDateDesc)[0];
+
+    const noteRes = await fetch(`${PIPEDRIVE_BASE}/notes?api_token=${PIPEDRIVE_TOKEN}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ content, deal_id: deal.id }),
+    });
+    const noteData = await noteRes.json();
+    return Boolean(noteData.success);
+  } catch (err) {
+    console.error("[pipedrive] addNoteToLatestDeal error:", err);
+    return false;
+  }
+}
+
 export async function pushToPipedrive(
   formType: string,
   name?: string,
