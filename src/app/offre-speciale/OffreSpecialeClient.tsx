@@ -90,6 +90,7 @@ export default function OffreSpecialeClient() {
         // Notification email (non-bloquant — si ça échoue, on affiche quand même le remerciement)
         fetch("/api/notify", {
           method: "POST",
+          keepalive: true,
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             formType: "Offre Speciale",

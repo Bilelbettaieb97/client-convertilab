@@ -5,12 +5,54 @@ const PIPEDRIVE_BASE = "https://api.pipedrive.com/v1";
 const STAGE_META_ADS    = 1;  // Pipeline "Meta Ads" → Nouveau lead
 const STAGE_FORMULAIRES = 12; // Pipeline "Formulaires" → Nouveau
 const STAGE_OUTILS      = 16; // Pipeline "Outils" → Nouveau
+const STAGE_GOOGLE_ADS  = 22; // Pipeline "Google Ads" → Nouveau lead
+
+/**
+ * Les leads issus des landings publicitaires Google ont leur propre pipeline :
+ * le volume va monter et ils se travaillent différemment des formulaires du
+ * site (trafic payant, intention plus chaude, relance plus rapide).
+ */
+const GOOGLE_ADS_SOURCES = new Set(["Site Internet (Google Ads)"]);
 
 // Sources qui vont dans le pipeline Meta Ads
 const META_ADS_SOURCES = new Set(["promo_lead"]);
 
 // Champ custom "Source" sur les deals
 const SOURCE_FIELD_KEY = "5e4c0a430208828f8b265769eb91b4af32c3a205";
+
+/**
+ * Champ "Source" sur la PERSONNE : d'où vient ce contact.
+ *
+ * Une automatisation Pipedrive crée un deal dans le pipeline Meta Ads à chaque
+ * nouveau contact, quelle que soit son origine. Sans ce champ, impossible de
+ * distinguer un vrai lead Meta d'un visiteur venu du site ou d'un outil.
+ * Les leads Meta sont créés par Zapier : c'est lui qui doit y mettre "META".
+ */
+const PERSON_SOURCE_FIELD_KEY = "3664166e27d8cbc677739c9a4a49f089016b332a";
+
+const PERSON_SOURCE_OPTIONS = {
+  META: 85,
+  FORMULAIRE: 86,
+  OUTIL: 87,
+  GOOGLE_ADS: 88,
+} as const;
+
+/**
+ * Champ "SOURCE DE CANAL" sur le DEAL : même information que sur la personne,
+ * mais au niveau du deal — les rapports Pipedrive se construisent sur les
+ * deals, c'est donc là qu'il faut le canal pour segmenter les statistiques.
+ *
+ * À ne pas confondre avec le champ "Source" du deal, plus fin, qui indique
+ * quel formulaire ou quel outil précis a été utilisé (SEO Check, Devis…).
+ */
+const DEAL_CHANNEL_FIELD_KEY = "5d3e9b5db28527e066a6edb21997770d63f2433f";
+
+const DEAL_CHANNEL_OPTIONS = {
+  META: 89,
+  FORMULAIRE: 90,
+  OUTIL: 91,
+  GOOGLE_ADS: 92,
+} as const;
 
 // Mapping formType → option ID du champ Source
 const SOURCE_OPTIONS: Record<string, number> = {
@@ -45,7 +87,6 @@ const FORMULAIRES_SOURCES = new Set([
   "Offre Mensuelle",
   "Offre Speciale",
   "HeroMiniForm",
-  "Site Internet (Google Ads)", // Landing pub /lp/site-internet → pipeline Formulaires
 ]);
 
 // Custom deal field keys (created via API)
@@ -79,6 +120,21 @@ const FIELD_MAP: Record<string, string> = {
   siret:           FIELD_SIRET,
   company_type:    FIELD_LEGAL,
 };
+
+type Canal = "META" | "FORMULAIRE" | "OUTIL" | "GOOGLE_ADS";
+
+/**
+ * Canal d'acquisition déduit du formType.
+ * Meta n'apparaît pas ici : ces leads sont créés par Zapier, pas par ce code.
+ */
+function canalDAcquisition(formType: string): Canal {
+  if (formType === "Site Internet (Google Ads)") return "GOOGLE_ADS";
+  if (META_ADS_SOURCES.has(formType)) return "META";
+  if (FORMULAIRES_SOURCES.has(formType) || formType.startsWith("Devis - ")) {
+    return "FORMULAIRE";
+  }
+  return "OUTIL";
+}
 
 function formatValue(v: unknown): string {
   if (v === null || v === undefined || v === "") return "—";
@@ -195,6 +251,7 @@ export async function pushToPipedrive(
       if (email) personBody.email = [{ value: email, primary: true }];
       if (phone) personBody.phone = [{ value: phone, primary: true }];
       if (orgId) personBody.org_id = orgId;
+      personBody[PERSON_SOURCE_FIELD_KEY] = PERSON_SOURCE_OPTIONS[canalDAcquisition(formType)];
 
       const personRes = await fetch(`${PIPEDRIVE_BASE}/persons?api_token=${PIPEDRIVE_TOKEN}`, {
         method: "POST",
@@ -218,11 +275,13 @@ export async function pushToPipedrive(
     // Router vers le bon pipeline + champ Source
     // "Devis - vitrine" → "Devis" pour le routage (le formType complet reste dans le titre/la note)
     const routeType = formType.startsWith("Devis - ") ? "Devis" : formType;
-    const stageId = META_ADS_SOURCES.has(routeType)
-      ? STAGE_META_ADS
-      : FORMULAIRES_SOURCES.has(routeType)
-        ? STAGE_FORMULAIRES
-        : STAGE_OUTILS;
+    const stageId = GOOGLE_ADS_SOURCES.has(routeType)
+      ? STAGE_GOOGLE_ADS
+      : META_ADS_SOURCES.has(routeType)
+        ? STAGE_META_ADS
+        : FORMULAIRES_SOURCES.has(routeType)
+          ? STAGE_FORMULAIRES
+          : STAGE_OUTILS;
     const sourceOptionId = SOURCE_OPTIONS[routeType] ?? null;
     const isFormulaires = FORMULAIRES_SOURCES.has(routeType);
 
@@ -256,6 +315,7 @@ export async function pushToPipedrive(
         channel: isFormulaires ? 3 : 6,
         ...(personId ? { person_id: personId } : {}),
         ...(sourceOptionId ? { [SOURCE_FIELD_KEY]: sourceOptionId } : {}),
+        [DEAL_CHANNEL_FIELD_KEY]: DEAL_CHANNEL_OPTIONS[canalDAcquisition(formType)],
         ...customFields,
       };
 

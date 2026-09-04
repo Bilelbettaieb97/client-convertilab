@@ -56,6 +56,7 @@ export default function HeroMiniForm() {
       // Non-bloquant
       fetch("/api/notify", {
         method: "POST",
+        keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           formType: "HeroMiniForm",

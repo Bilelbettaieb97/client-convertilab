@@ -99,6 +99,7 @@ export default function DevisServicePage() {
       // Non-bloquant notification
       fetch("/api/notify", {
         method: "POST",
+        keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           formType: `Devis - ${service}`,

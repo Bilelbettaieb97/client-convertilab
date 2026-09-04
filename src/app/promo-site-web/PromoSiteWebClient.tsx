@@ -70,6 +70,7 @@ const genId = () =>
 const notify = (body: Record<string, unknown>) =>
   fetch("/api/notify", {
     method: "POST",
+    keepalive: true,
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
   }).catch(() => {});

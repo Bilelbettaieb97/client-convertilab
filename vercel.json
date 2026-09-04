@@ -3,6 +3,10 @@
     {
       "path": "/api/cron/send-emails",
       "schedule": "0 * * * *"
+    },
+    {
+      "path": "/api/cron/reconcile-leads",
+      "schedule": "30 * * * *"
     }
   ],
   "redirects": [],

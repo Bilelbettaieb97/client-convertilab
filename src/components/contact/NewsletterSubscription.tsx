@@ -51,6 +51,7 @@ const NewsletterSubscription = () => {
       // Non-bloquant : si la notification échoue, on continue quand même
       fetch("/api/notify", {
         method: "POST",
+        keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           formType: "Newsletter",

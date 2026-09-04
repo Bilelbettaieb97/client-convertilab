@@ -965,6 +965,60 @@ Si vous souhaitez toujours avancer avec l'offre spéciale :
 Bilel Bettaieb · ConvertiLab`,
     },
   ],
+
+  // Landing pages publicitaires Google Ads. Trafic payant et intention chaude :
+  // on relance plus vite que sur les formulaires du site (J+1, J+3, J+6).
+  "Site Internet (Google Ads)": [
+    {
+      delay: 1,
+      subject: "{{prenom}}, votre devis arrive",
+      body: `Bonjour {{prenom}},
+
+Votre demande est bien arrivée (projet : {{type_site}}), je m'en occupe personnellement.
+
+Je vous rappelle sous 24h pour comprendre votre activité et vos objectifs, puis je vous transmets un devis détaillé. Sans engagement, et sans que vous ayez la moindre démarche technique à faire.
+
+En attendant, si vous préférez choisir vous-même votre créneau :
+
+→ [Réserver un échange de 30 minutes](${CALENDLY})
+
+Bilel · ConvertiLab`,
+    },
+    {
+      delay: 3,
+      subject: "{{prenom}}, à quoi ressemble un site qu'on livre",
+      body: `Bonjour {{prenom}},
+
+Je n'ai pas encore réussi à vous joindre au sujet de votre projet.
+
+Plutôt qu'un long discours, voici des sites que nous avons livrés. Vous pouvez les ouvrir et naviguer dedans, ce sont de vrais sites de vrais clients :
+
+→ [Voir nos réalisations](https://www.convertilab.com/portfolio)
+
+Ce qu'ils ont en commun : vous en êtes propriétaire, aucun abonnement, et le référencement est inclus dès le départ.
+
+Si votre projet est toujours d'actualité, réservez le créneau qui vous arrange :
+
+→ [Choisir mon créneau](${CALENDLY})
+
+Bilel · ConvertiLab`,
+    },
+    {
+      delay: 6,
+      subject: "{{prenom}}, je clos votre demande ?",
+      body: `Bonjour {{prenom}},
+
+Sans nouvelle de votre part, je vais classer votre demande. Aucun souci si le moment n'est pas le bon.
+
+Une seule chose avant de refermer : si vous hésitez sur le budget, sachez que le paiement peut être étalé, et que la prestation est satisfait ou remboursé. Ce sont souvent ces deux points qui bloquent, et ils se règlent en une conversation.
+
+→ [Prendre 30 minutes avec moi](${CALENDLY})
+
+Si je n'ai pas de retour, je ne vous relancerai plus. Merci de m'avoir consulté.
+
+Bilel · ConvertiLab`,
+    },
+  ],
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1099,6 +1153,9 @@ export function buildFormSeriesContext(
     ctx.pages = String(fields.page_count || "");
   } else if (formType === "Offre Speciale") {
     ctx.type_site = String(fields.siteType || "");
+  } else if (formType === "Site Internet (Google Ads)") {
+    // Landing pub : soit un type de site choisi, soit un métier (restaurant, artisan)
+    ctx.type_site = String(fields.type_site || fields.metier || "site professionnel");
   }
 
   return ctx;
