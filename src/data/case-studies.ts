@@ -1057,6 +1057,7 @@ export const LIVE_SITES: Record<string, string> = {
   "art-des-roses": "https://artdesroses.fr/",
   "jsm-jardinage": "https://jsmjardinage.com/",
   "la-chasseuse-demotions": "https://www.lachasseusedemotions.fr/",
+  "spectacle": "https://sarahprod.com/",
 };
 
 // Also provide projectOrder for navigation
