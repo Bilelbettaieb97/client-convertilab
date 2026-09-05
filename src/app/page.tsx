@@ -205,12 +205,20 @@ export default function HomePage() {
           </section>
         </AnimatedSection>
 
-        {/* S6 — PROCESS (white) — réduit la peur de l'effort */}
+        {/* S6 — BOÎTE À OUTILS ORBITAL (dark) — engagement progressif pour les
+            visiteurs pas encore prêts à demander un devis. Placée juste après la
+            preuve sociale : le visiteur qui vient de lire les avis est au plus
+            haut de sa confiance, c'est là qu'un diagnostic gratuit s'attrape. */}
+        <AnimatedSection animation="fade-up">
+          <ToolsOrbital />
+        </AnimatedSection>
+
+        {/* S7 — PROCESS (white) — réduit la peur de l'effort */}
         <AnimatedSection animation="fade-up" delay={100}>
           <ProcessTimeline />
         </AnimatedSection>
 
-        {/* S7 — À PROPOS (dark) — l'humain derrière l'agence */}
+        {/* S8 — À PROPOS (dark) — l'humain derrière l'agence */}
         <AnimatedSection animation="scale">
           <About />
         </AnimatedSection>
@@ -221,12 +229,6 @@ export default function HomePage() {
         {/* S9 — FAQ (white) — traitement des objections avant le CTA final */}
         <AnimatedSection animation="fade-up">
           <FAQ />
-        </AnimatedSection>
-
-        {/* S10 — BOÎTE À OUTILS ORBITAL (dark) — engagement progressif pour les
-            visiteurs pas encore prêts à demander un devis */}
-        <AnimatedSection animation="fade-up">
-          <ToolsOrbital />
         </AnimatedSection>
 
         {/* S13 — CINEMATIC FOOTER (closer cinématographique GSAP) */}
