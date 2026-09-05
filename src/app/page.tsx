@@ -9,17 +9,13 @@ import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
 import Footer from "@/components/layout/Footer";
 import AnimatedSection from "@/components/sections/AnimatedSection";
-import PromoBanner from "@/components/conversion/PromoBanner";
 
 // Dynamic imports — code-split heavy / below-fold sections out of the initial bundle
 const Portfolio = dynamic(() => import("@/components/sections/Portfolio"));
 const ToolsOrbital = dynamic(() => import("@/components/sections/ToolsOrbital"));
-const Services = dynamic(() => import("@/components/sections/Services"));
-const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
-const TestimonialsColumnsSection = dynamic(() => import("@/components/sections/TestimonialsColumns"));
+const TestimonialsTrustpilot = dynamic(() => import("@/components/sections/TestimonialsTrustpilot"));
 const ProcessTimeline = dynamic(() => import("@/components/sections/ProcessTimeline"));
 const About = dynamic(() => import("@/components/sections/About"));
-const Pricing = dynamic(() => import("@/components/sections/Pricing"));
 const FAQ = dynamic(() => import("@/components/sections/FAQ"));
 const SocialProofToast = dynamic(() => import("@/components/conversion/SocialProofToast"));
 const StickyMobileCTA = dynamic(() => import("@/components/conversion/StickyMobileCTA"));
@@ -179,8 +175,9 @@ export default function HomePage() {
         <Navigation />
 
         {/* S1 — HERO (light gradient) */}
+        {/* Le bandeau promotionnel « 39 €/mois » a été retiré : l'offre reste
+            présentée sur /offre-mensuelle. */}
         <div style={{ paddingTop: "64px" }}>
-          <PromoBanner />
           <section id="hero">
             <Hero />
           </section>
@@ -191,24 +188,20 @@ export default function HomePage() {
           <TrustBar />
         </AnimatedSection>
 
-        {/* S3 — SERVICES (light gradient) — la solution juste après la preuve rapide */}
-        <AnimatedSection animation="fade-up">
-          <section id="services">
-            <Services />
-          </section>
-        </AnimatedSection>
-
-        {/* S4 — RÉALISATIONS / RÉSULTATS CLIENTS (light) — preuve concrète */}
+        {/* S3 — RÉSULTATS CLIENTS (light) — la preuve concrète passe en premier,
+            juste après la preuve rapide. La section « Nos expertises » qui
+            occupait cette place a été retirée de la page d'accueil. */}
         <AnimatedSection animation="fade-up">
           <section id="portfolio">
             <Portfolio />
           </section>
         </AnimatedSection>
 
-        {/* S5 — TÉMOIGNAGES (dark, 3 scrolling columns) — preuve sociale */}
+        {/* S5 — AVIS CLIENTS (identité Trustpilot) — preuve sociale.
+            Remplace neuf témoignages inventés par les avis réels des études de cas. */}
         <AnimatedSection animation="fade-up" delay={100}>
           <section id="testimonials">
-            <TestimonialsColumnsSection />
+            <TestimonialsTrustpilot />
           </section>
         </AnimatedSection>
 
@@ -222,10 +215,8 @@ export default function HomePage() {
           <About />
         </AnimatedSection>
 
-        {/* S8 — PRIX & OFFRES (light) — l'offre une fois la confiance établie */}
-        <AnimatedSection animation="fade-up">
-          <Pricing />
-        </AnimatedSection>
+        {/* La section « Nos tarifs transparents » a été retirée de la page
+            d'accueil : les prix restent accessibles sur /prix et /offre-mensuelle. */}
 
         {/* S9 — FAQ (white) — traitement des objections avant le CTA final */}
         <AnimatedSection animation="fade-up">

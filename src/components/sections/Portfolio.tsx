@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { SITE } from "@/lib/constants";
 import Image from "next/image";
 import {
   Carousel,
@@ -34,8 +35,8 @@ import {
   Award,
   ArrowRight,
   ExternalLink,
-  Key,
-  Search,
+  CalendarCheck,
+  MessageCircle,
 } from "lucide-react";
 import {
   caseStudies,
@@ -267,11 +268,12 @@ function PortfolioCTA() {
     <div className="text-center rounded-2xl p-6 sm:p-10 bg-primary relative overflow-hidden">
       <div className="relative z-10">
         <h3 className="text-xl sm:text-3xl font-bold text-primary-foreground mb-2 sm:mb-3">
-          Votre site professionnel dès 39€/mois
+          Parlons de votre projet avec un expert
         </h3>
         <p className="text-sm sm:text-lg text-primary-foreground/80 mb-5 max-w-xl mx-auto">
-          Vous êtes propriétaire de votre site, visible sur Google dès le
-          lancement.
+          30 minutes en visio pour cadrer vos objectifs et savoir ce qui est
+          réaliste pour vous. Vous repartez avec des réponses claires, que nous
+          travaillions ensemble ensuite ou non.
         </p>
 
         <Button
@@ -279,18 +281,18 @@ function PortfolioCTA() {
           size="lg"
           className="w-full sm:w-auto bg-background text-foreground hover:bg-background/90 text-base sm:text-lg px-8 py-6 font-semibold shadow-lg"
         >
-          <Link href="/offre-mensuelle/devis">
-            Lancer mon site
+          <a href={SITE.calendly} target="_blank" rel="noopener noreferrer">
+            Réserver mon rendez-vous
             <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
+          </a>
         </Button>
 
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-5 text-xs sm:text-sm text-primary-foreground/70">
           <span className="flex items-center gap-1.5">
-            <Key className="w-3.5 h-3.5" /> Propriétaire
+            <CalendarCheck className="w-3.5 h-3.5" /> Créneau au choix
           </span>
           <span className="flex items-center gap-1.5">
-            <Search className="w-3.5 h-3.5" /> Visible sur Google
+            <MessageCircle className="w-3.5 h-3.5" /> Sans engagement
           </span>
         </div>
       </div>

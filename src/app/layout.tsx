@@ -72,7 +72,15 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/png" href="/favicon.png" sizes="500x500" />
+        {/* Le .ico multi-tailles (16/32/48) vit dans src/app/favicon.ico : cette
+            convention de l'App Router est PRIORITAIRE sur public/, et Next.js
+            injecte son <link> tout seul. Ne pas le redéclarer ici, et ne pas
+            remettre de public/favicon.ico : il serait masqué sans prévenir.
+            Le PNG 32 sert de repli, les 192 et 512 à l'écran d'accueil Android. */}
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192" />
+        <link rel="icon" type="image/png" href="/icon-512.png" sizes="512x512" />
+        {/* Sans fond opaque, iOS composite la transparence en noir. */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#9333ea" />
         <meta name="msapplication-TileColor" content="#9333ea" />
