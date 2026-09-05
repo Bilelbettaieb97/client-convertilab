@@ -68,6 +68,64 @@ function lireAccuses() {
   return out;
 }
 
+/**
+ * Les outils envoient un email dans la seconde, avec le rapport en pièce jointe.
+ * Il ne vit pas dans email-series.ts mais dans la route de l'outil, si bien que
+ * le dashboard laissait croire qu'un outil ne donnait aucun signe de vie avant
+ * J+1. On le reconstitue ici pour que le tableau dise la vérité.
+ */
+function lireEmailsImmediats() {
+  const routes = path.join(RACINE, "src/app/api");
+  const outils = {
+    "seo-check": "SEO Check",
+    "speed-check": "Speed Check",
+    "design-score": "Design Score",
+    "estimateur-ads": "Estimateur Ads",
+    "comparateur-sites": "Comparateur Sites",
+    "robots-generator": "Robots Generator",
+    "rapport-sectoriel": "Rapport Sectoriel",
+    "mentions-legales": "Mentions Legales",
+  };
+  const out = {};
+  for (const [dossier, nom] of Object.entries(outils)) {
+    const f = path.join(routes, dossier, "route.ts");
+    if (!fs.existsSync(f)) continue;
+    const src = fs.readFileSync(f, "utf8");
+    const m =
+      src.match(/buildEmailSubject[^{]*\{[\s\S]{0,200}?return `([^`]+)`/) ||
+      src.match(/subject: `([^`]+)`/);
+    if (!m) continue;
+    // ${audit.domain} → {domaine} : lisible pour un humain
+    const sujet = m[1]
+      .replace(/\$\{[^}]*domain[^}]*\}/gi, "{domaine}")
+      .replace(/\$\{[^}]*scores?\.global\}/gi, "{score}")
+      .replace(/\$\{[^}]*grade\}/gi, "{grade}")
+      .replace(/\$\{[^}]*\}/g, "{…}");
+    const joint =
+      dossier === "robots-generator"
+        ? "robots.txt et sitemap.xml"
+        : "le rapport complet en PDF";
+    out[nom] = {
+      delay: 0,
+      immediat: true,
+      subject: sujet,
+      body: `Cet email part dans la seconde qui suit l'envoi du formulaire. Ce n'est pas une relance : c'est le livrable que le visiteur est venu chercher.
+
+Il contient :
+• Le score et le grade, en gros caractères
+• Jusqu'à 3 points à améliorer
+• Jusqu'à 3 points forts
+• ${joint} en pièce jointe
+• Un bouton de prise de rendez-vous
+
+C'est pour cette raison qu'un outil n'a pas besoin d'accusé de réception : le prospect ne reçoit pas une promesse, il reçoit la chose demandée.
+
+Ce message est construit par la route de l'outil, pas par la série. Pour le modifier : src/lib/tools/shared-email-template.ts`,
+    };
+  }
+  return out;
+}
+
 /** Alias : quelle série un formulaire réutilise-t-il ? */
 const ALIAS = { HeroMiniForm: "Contact", "Offre Mensuelle": "Devis" };
 function cleDeSerie(f) {
@@ -82,14 +140,17 @@ function slug(v) {
 
 const series = lireSeries();
 const accuses = lireAccuses();
+const immediats = lireEmailsImmediats();
 
-// Assemble : accusé J+0 en tête quand il existe, puis la série
+// Assemble : ce qui part à J+0 en tête (accusé pour un formulaire, rapport pour
+// un outil), puis la série de relances.
 const assemble = {};
 for (const [nom, emails] of Object.entries(series)) {
   const liste = [...emails];
   // un accusé peut être défini sur le formType lui-même ou sur sa série
   const acc = accuses[nom] ?? Object.entries(accuses).find(([k]) => cleDeSerie(k) === nom)?.[1];
   if (acc) liste.unshift(acc);
+  else if (immediats[nom]) liste.unshift(immediats[nom]);
   assemble[NOMS_DASHBOARD[nom] ?? nom] = { serieDe: nom, emails: liste };
 }
 
@@ -99,7 +160,8 @@ let js = "const SERIES = {\n";
 for (const [nomDash, { serieDe, emails }] of Object.entries(assemble)) {
   js += `  ${JSON.stringify(nomDash)}: {\n    campagne: ${JSON.stringify(slug(serieDe))},\n    emails: [\n`;
   for (const e of emails) {
-    js += `      {\n        delay: "J+${e.delay}",\n        utm: "j${e.delay}",\n`;
+    const utm = e.immediat ? "immediat" : `j${e.delay}`;
+    js += `      {\n        delay: "J+${e.delay}",\n        utm: "${utm}",\n`;
     js += `        subject: ${JSON.stringify(e.subject)},\n`;
     js += "        body: `" + echappe(e.body).replace(/\$\{CALENDLY\\?\}/g, "${CALENDLY}") + "`\n";
     js += "      },\n";
