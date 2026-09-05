@@ -975,13 +975,13 @@ Bilel Bettaieb · ConvertiLab`,
       subject: "{{prenom}}, votre devis arrive",
       body: `Bonjour {{prenom}},
 
-Votre demande est bien arrivée (projet : {{type_site}}), je m'en occupe personnellement.
+J'ai regardé votre demande : {{type_site}}.
 
-Je vous rappelle sous 24h pour comprendre votre activité et vos objectifs, puis je vous transmets un devis détaillé. Sans engagement, et sans que vous ayez la moindre démarche technique à faire.
+Pour vous envoyer un chiffrage juste, il me manque trois choses que seul un échange donne. Ce que le site doit déclencher chez vos visiteurs, qui vous cherchez à toucher, et sous quel délai vous voulez être en ligne.
 
-En attendant, si vous préférez choisir vous-même votre créneau :
+Vingt minutes suffisent, et vous repartez avec un prix ferme. Sans engagement, et sans aucune démarche technique de votre côté.
 
-→ [Réserver un échange de 30 minutes](${CALENDLY})
+→ [Réserver 20 minutes](${CALENDLY})
 
 Bilel · ConvertiLab`,
     },
@@ -1202,13 +1202,13 @@ const ACCUSES_RECEPTION: Record<string, { subject: string; body: string }> = {
     subject: "{{prenom}}, votre demande est bien arrivée",
     body: `Bonjour {{prenom}},
 
-Votre demande est enregistrée, je m'en occupe personnellement.
+Votre demande est bien reçue.
 
-Je vous rappelle sous 24h pour comprendre votre activité et vos objectifs, puis je vous transmets un devis détaillé. Sans engagement, et sans aucune démarche technique de votre côté.
+Je vous rappelle sous 24h. Rien à préparer de votre côté.
 
-Si vous préférez choisir votre créneau maintenant :
+Si vous préférez fixer le moment vous-même :
 
-→ [Réserver 30 minutes avec moi](${CALENDLY})
+→ [Choisir mon créneau](${CALENDLY})
 
 Bilel · ConvertiLab
 06 16 47 72 45`,
