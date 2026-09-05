@@ -15,7 +15,11 @@ const ChatWidget = dynamic(
 );
 
 const geistSans = Geist({
-  variable: "--font-sans",
+  // Nom distinct de la variable de theme Tailwind : globals.css declare
+  // `--font-sans: var(--font-geist-sans)`. Les nommer pareil creait une
+  // auto-reference circulaire, `font-sans` ne resolvait plus rien et TOUT le
+  // site tombait sur la police serif par defaut du navigateur.
+  variable: "--font-geist-sans",
   subsets: ["latin"],
   display: "swap",
   preload: true,
@@ -70,7 +74,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    // Les variables de police vivent sur <html> et non sur <body> : le bloc
+    // @theme de Tailwind les lit au niveau :root. Posees sur le body, elles
+    // restaient invisibles pour lui et `font-sans` ne resolvait rien.
+    <html lang="fr" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
         {/* Le .ico multi-tailles (16/32/48) vit dans src/app/favicon.ico : cette
             convention de l'App Router est PRIORITAIRE sur public/, et Next.js
@@ -89,7 +96,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://calendly.com" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="antialiased">
         {/* Google Consent Mode v2 — initialise par defaut tout en "denied" (RGPD)
             strategy="afterInteractive" safe because GA/GTM/Meta Pixel are lazyOnload */}
         <Script id="google-consent-mode" strategy="afterInteractive">
