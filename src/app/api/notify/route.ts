@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { pushToPipedrive } from "@/lib/pipedrive";
-import { scheduleEmailSeries, buildFormSeriesContext } from "@/lib/email-series";
+import { scheduleEmailSeries, buildFormSeriesContext, construireAccuseReception } from "@/lib/email-series";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -121,6 +121,24 @@ export async function POST(request: NextRequest) {
     // keepalive et son écran n'attend pas cette réponse.
     if (email) {
       const ctx = buildFormSeriesContext(formType, name, company, fields as Record<string, unknown>);
+
+      // Accusé de réception immédiat. Il part d'ici et non par la file d'attente :
+      // le cron ne tourne qu'à l'heure, le visiteur aurait pu attendre 60 minutes
+      // une confirmation qu'il attend dans la minute. Un échec ici ne casse rien,
+      // le lead est déjà dans Pipedrive.
+      const accuse = construireAccuseReception(formType, ctx);
+      if (accuse) {
+        const { error: accuseErr } = await resend.emails.send({
+          from: "Bilel · ConvertiLab <bilel@convertilab.com>",
+          to: email,
+          subject: accuse.subject,
+          html: accuse.html,
+        });
+        if (accuseErr) {
+          console.error("[notify][accuse_reception]", accuseErr.message);
+        }
+      }
+
       await scheduleEmailSeries(formType, email, ctx).catch((err) =>
         console.error("[notify][email_series]", err instanceof Error ? err.message : err)
       );

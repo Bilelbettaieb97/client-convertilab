@@ -1184,6 +1184,127 @@ function libelleTypeSite(brut: unknown): string {
     : cle;
 }
 
+
+/**
+ * Accusés de réception, envoyés IMMÉDIATEMENT à la soumission par /api/notify.
+ *
+ * Les outils envoient leur rapport dans la seconde ; les formulaires, eux, ne
+ * donnaient aucun signe de vie avant J+1. Le visiteur qui vient de remplir un
+ * formulaire (et pour la landing publicitaire, de cliquer une annonce payante)
+ * restait 24 heures sans savoir si son envoi était passé, au moment précis où
+ * son intention est la plus forte.
+ *
+ * Volontairement courts : ils confirment, annoncent le délai, et ouvrent une
+ * porte vers le rendez-vous. Le vrai contenu reste dans la série qui suit.
+ */
+const ACCUSES_RECEPTION: Record<string, { subject: string; body: string }> = {
+  "Site Internet (Google Ads)": {
+    subject: "{{prenom}}, votre demande est bien arrivée",
+    body: `Bonjour {{prenom}},
+
+Votre demande est enregistrée, je m'en occupe personnellement.
+
+Je vous rappelle sous 24h pour comprendre votre activité et vos objectifs, puis je vous transmets un devis détaillé. Sans engagement, et sans aucune démarche technique de votre côté.
+
+Si vous préférez choisir votre créneau maintenant :
+
+→ [Réserver 30 minutes avec moi](${CALENDLY})
+
+Bilel · ConvertiLab
+06 16 47 72 45`,
+  },
+
+  "Contact": {
+    subject: "{{prenom}}, j'ai bien reçu votre message",
+    body: `Bonjour {{prenom}},
+
+Votre message est bien arrivé, je le lis personnellement.
+
+Vous aurez une réponse sous 24h ouvrées. Si votre projet est pressé, le plus rapide reste de caler un échange directement :
+
+→ [Choisir un créneau](${CALENDLY})
+
+Bilel · ConvertiLab
+06 16 47 72 45`,
+  },
+
+  "Devis": {
+    subject: "{{prenom}}, votre demande de devis est enregistrée",
+    body: `Bonjour {{prenom}},
+
+Votre demande est bien arrivée.
+
+Je la regarde et je reviens vers vous sous 24h avec un chiffrage clair. Pour qu'il soit juste du premier coup, vingt minutes d'échange valent souvent mieux que dix allers-retours par email :
+
+→ [Réserver un échange](${CALENDLY})
+
+Bilel · ConvertiLab
+06 16 47 72 45`,
+  },
+
+  "Demande Maquette": {
+    subject: "{{prenom}}, votre maquette est lancée",
+    body: `Bonjour {{prenom}},
+
+Votre demande est bien arrivée, je commence à travailler dessus.
+
+Je vous présente la maquette lors d'un rendez-vous, en visio ou par téléphone. Vous la découvrez en direct, vous réagissez, et on l'ajuste ensemble sur le moment. C'est bien plus utile qu'un fichier reçu sans explication.
+
+→ [Choisir le créneau qui vous arrange](${CALENDLY})
+
+Bilel · ConvertiLab
+06 16 47 72 45`,
+  },
+
+  "Estimation Prix": {
+    subject: "{{prenom}}, votre estimation est bien enregistrée",
+    body: `Bonjour {{prenom}},
+
+Votre demande d'estimation est bien arrivée.
+
+Je vous envoie un chiffrage détaillé sous 24h. Les fourchettes affichées en ligne donnent un ordre d'idée, mais le prix réel dépend de deux ou trois détails qui se calent en quelques minutes :
+
+→ [Caler ces détails avec moi](${CALENDLY})
+
+Bilel · ConvertiLab
+06 16 47 72 45`,
+  },
+
+  "Offre Speciale": {
+    subject: "{{prenom}}, votre place est bien réservée",
+    body: `Bonjour {{prenom}},
+
+Votre réservation est enregistrée.
+
+Je vous rappelle sous 24h pour valider les derniers détails et lancer le projet. Vous pouvez aussi prendre les devants :
+
+→ [Réserver votre créneau](${CALENDLY})
+
+Bilel · ConvertiLab
+06 16 47 72 45`,
+  },
+};
+
+/**
+ * Prépare l'accusé de réception d'un formulaire, prêt à envoyer.
+ * Renvoie null si ce formulaire n'en a pas (outils, newsletter, funnel promo).
+ */
+export function construireAccuseReception(
+  formType: string,
+  context: Record<string, string>
+): { subject: string; html: string } | null {
+  const modele = ACCUSES_RECEPTION[cleDeSerie(formType)] ?? ACCUSES_RECEPTION[formType];
+  if (!modele) return null;
+  return {
+    subject: resolveTokens(modele.subject, context),
+    html: baliserLiens(wrapEmail(bodyToHtml(resolveTokens(modele.body, context))), {
+      medium: "accuse",
+      campaign: slug(formType),
+      content: "j0",
+    }),
+  };
+}
+
 export function buildFormSeriesContext(
   formType: string,
   name?: string,
