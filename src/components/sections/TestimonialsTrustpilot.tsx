@@ -1,36 +1,43 @@
 "use client";
 
 /**
- * Avis clients, présentés à l'identité visuelle Trustpilot.
+ * Avis clients, à l'identité visuelle Trustpilot.
  *
- * Les témoignages affichés sont ceux des études de cas : des clients réels,
- * nommés, dont le site est en ligne. La section qu'elle remplace en montrait
- * neuf inventés (« Marie Dubois », « Thomas Laurent »…), ce qui n'a rien à faire
- * sur un site commercial.
+ * Les témoignages sont ceux des études de cas : des clients réels, nommés, dont
+ * le site est consultable. La section qu'elle remplace en montrait neuf inventés
+ * (« Marie Dubois », « Thomas Laurent »…), ce qui n'a rien à faire sur un site
+ * commercial.
  *
- * ⚠️ Aucune note chiffrée n'est affichée ici. Le site annonce ailleurs 4,9/5,
- * un chiffre invérifiable automatiquement (Trustpilot bloque la lecture
- * robotisée) et démenti par le dernier relevé manuel. Tant qu'il n'est pas
- * confirmé, on montre les avis sans les résumer par une note.
+ * Hiérarchie assumée : le meilleur avis occupe une carte double, les suivants
+ * une grille compacte. Le classement suit FEATURED_ORDER (l'ordre de mise en
+ * avant déjà défini dans case-studies), puis les clients dont le site est en
+ * ligne — un avis qu'on peut vérifier en un clic vaut plus qu'un avis isolé.
  *
- * Pour afficher les avis directement depuis Trustpilot, il faut le widget
- * officiel : renseigner `SITE.trustpilotBusinessUnitId` (Trustpilot → Intégrations
- * → TrustBox) et le composant bascule automatiquement dessus.
+ * ⚠️ Aucune note chiffrée : le site annonce 4,9/5 alors que Trustpilot affiche
+ * 4,4/5 sur 12 avis (relevé le 05/09/2026). Tant que les deux divergent, on ne
+ * répète pas le chiffre ici, sous peine de l'afficher deux fois différemment sur
+ * la même page. Le mot « Excellent » est en revanche celui que Trustpilot
+ * attribue lui-même à cette note.
+ *
+ * Pour basculer sur les vrais avis Trustpilot, renseigner
+ * `trustpilotBusinessUnitId: "67495e05214c57486a2ded18"` dans constants.ts :
+ * le composant charge alors le widget officiel.
  */
 
 import { useEffect, useMemo, useRef } from "react";
 import { motion } from "framer-motion";
-import { caseStudies } from "@/data/case-studies";
+import { ExternalLink } from "lucide-react";
+import { caseStudies, LIVE_SITES, FEATURED_ORDER } from "@/data/case-studies";
 import { SITE } from "@/lib/constants";
 
-const VERT_TRUSTPILOT = "#00B67A";
+const VERT = "#00B67A";
 
 /** Étoile Trustpilot : carré vert plein, étoile blanche évidée. */
-function EtoileTrustpilot({ taille = 22 }: { taille?: number }) {
+function Etoile({ taille = 20 }: { taille?: number }) {
   return (
     <span
       className="inline-flex items-center justify-center rounded-[2px]"
-      style={{ width: taille, height: taille, background: VERT_TRUSTPILOT }}
+      style={{ width: taille, height: taille, background: VERT }}
       aria-hidden="true"
     >
       <svg viewBox="0 0 24 24" width={taille * 0.78} height={taille * 0.78} fill="#fff">
@@ -40,35 +47,35 @@ function EtoileTrustpilot({ taille = 22 }: { taille?: number }) {
   );
 }
 
-function Etoiles({ nombre = 5, taille = 20 }: { nombre?: number; taille?: number }) {
+function Etoiles({ taille = 18 }: { taille?: number }) {
   return (
-    <div className="flex gap-[3px]" role="img" aria-label={`${nombre} étoiles sur 5`}>
-      {Array.from({ length: nombre }).map((_, i) => (
-        <EtoileTrustpilot key={i} taille={taille} />
+    <div className="flex gap-[3px]" role="img" aria-label="5 étoiles sur 5">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <Etoile key={i} taille={taille} />
       ))}
     </div>
   );
 }
 
-/** Widget officiel Trustpilot, utilisé dès qu'un identifiant est renseigné. */
+/** Widget officiel, utilisé dès qu'un identifiant est renseigné. */
 function TrustBox({ businessUnitId }: { businessUnitId: string }) {
   const ref = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const id = "trustpilot-widget-script";
     const monter = () => {
-      const w = (window as unknown as { Trustpilot?: { loadFromElement: (el: HTMLElement, b: boolean) => void } }).Trustpilot;
+      const w = (window as unknown as {
+        Trustpilot?: { loadFromElement: (el: HTMLElement, b: boolean) => void };
+      }).Trustpilot;
       if (w && ref.current) w.loadFromElement(ref.current, true);
     };
     if (document.getElementById(id)) return monter();
-    const script = document.createElement("script");
-    script.id = id;
-    script.src = "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js";
-    script.async = true;
-    script.onload = monter;
-    document.head.appendChild(script);
+    const s = document.createElement("script");
+    s.id = id;
+    s.src = "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js";
+    s.async = true;
+    s.onload = monter;
+    document.head.appendChild(s);
   }, []);
-
   return (
     <div
       ref={ref}
@@ -87,82 +94,173 @@ function TrustBox({ businessUnitId }: { businessUnitId: string }) {
   );
 }
 
-type Avis = { texte: string; auteur: string; entreprise: string };
+type Avis = {
+  texte: string;
+  auteur: string;
+  client: string;
+  secteur: string;
+  lien?: string;
+};
 
-export default function TestimonialsTrustpilot() {
-  const businessUnitId = (SITE as { trustpilotBusinessUnitId?: string }).trustpilotBusinessUnitId;
-
-  // Uniquement les études de cas qui portent un témoignage réel.
-  const avis = useMemo<Avis[]>(
-    () =>
-      caseStudies
-        .filter((c) => c.testimonial && c.testimonial.trim().length > 0)
-        .map((c) => ({
-          texte: c.testimonial.trim(),
-          auteur: (c.author || c.client).trim(),
-          entreprise: c.client.trim(),
-        })),
-    []
-  );
-
+function CarteAvis({
+  avis,
+  vedette = false,
+  index,
+}: {
+  avis: Avis;
+  vedette?: boolean;
+  index: number;
+}) {
   return (
-    <section className="relative bg-[#101820] py-20 sm:py-28 overflow-hidden">
-      <div
-        className="absolute inset-0 opacity-[0.07]"
-        style={{ background: `radial-gradient(60% 50% at 50% 0%, ${VERT_TRUSTPILOT} 0%, transparent 70%)` }}
+    <motion.article
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.45, delay: Math.min(index, 6) * 0.06 }}
+      className={[
+        "group relative flex flex-col rounded-xl bg-white",
+        vedette ? "p-7 sm:p-9 sm:col-span-2 sm:row-span-2" : "p-6",
+      ].join(" ")}
+      style={{ boxShadow: "0 1px 2px rgba(0,0,0,.16), 0 14px 34px -18px rgba(0,0,0,.5)" }}
+    >
+      {/* Filet vert en tête : rappelle Trustpilot sans surcharger la carte */}
+      <span
+        className="absolute inset-x-0 top-0 h-[3px] rounded-t-xl"
+        style={{ background: VERT }}
+        aria-hidden="true"
       />
 
-      <div className="container mx-auto px-4 max-w-7xl relative z-10">
+      <div className="flex items-center justify-between gap-3">
+        <Etoiles taille={vedette ? 22 : 17} />
+        <span className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">
+          {avis.secteur}
+        </span>
+      </div>
+
+      <p
+        className={[
+          "mt-5 flex-1 text-[#191919]",
+          vedette
+            ? "text-lg sm:text-[22px] leading-[1.5] font-medium"
+            : "text-[15px] leading-relaxed",
+        ].join(" ")}
+      >
+        {avis.texte}
+      </p>
+
+      <footer className="mt-6 flex items-end justify-between gap-4 border-t border-gray-100 pt-4">
+        <div className="min-w-0">
+          <div
+            className={[
+              "font-bold text-[#191919] truncate",
+              vedette ? "text-base" : "text-sm",
+            ].join(" ")}
+          >
+            {avis.auteur}
+          </div>
+          {avis.client !== avis.auteur && (
+            <div className="truncate text-xs text-gray-500">{avis.client}</div>
+          )}
+        </div>
+
+        {avis.lien && (
+          <a
+            href={avis.lien}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex flex-shrink-0 items-center gap-1.5 text-xs font-semibold text-gray-500 transition-colors hover:text-[#191919]"
+          >
+            Voir le site
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
+        )}
+      </footer>
+    </motion.article>
+  );
+}
+
+export default function TestimonialsTrustpilot() {
+  const businessUnitId = (SITE as { trustpilotBusinessUnitId?: string })
+    .trustpilotBusinessUnitId;
+
+  const avis = useMemo<Avis[]>(() => {
+    const liste = caseStudies
+      .filter((c) => c.testimonial && c.testimonial.trim().length > 0)
+      .map((c) => ({
+        texte: c.testimonial.trim(),
+        auteur: (c.author || c.client).trim(),
+        client: c.client.trim(),
+        secteur: c.sector,
+        lien: LIVE_SITES[c.slug],
+        rang: FEATURED_ORDER.indexOf(c.slug),
+      }));
+
+    // Meilleurs d'abord : ordre de mise en avant, puis site consultable,
+    // puis le témoignage le plus substantiel.
+    return liste
+      .sort((a, b) => {
+        const ra = a.rang === -1 ? 99 : a.rang;
+        const rb = b.rang === -1 ? 99 : b.rang;
+        if (ra !== rb) return ra - rb;
+        if (!!a.lien !== !!b.lien) return a.lien ? -1 : 1;
+        return b.texte.length - a.texte.length;
+      })
+      .map(({ rang: _rang, ...reste }) => reste);
+  }, []);
+
+  const [vedette, ...suivants] = avis;
+
+  return (
+    <section className="relative overflow-hidden bg-[#101820] py-20 sm:py-28">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.09]"
+        style={{ background: `radial-gradient(55% 45% at 50% 0%, ${VERT} 0%, transparent 72%)` }}
+      />
+
+      <div className="container relative z-10 mx-auto max-w-7xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center max-w-2xl mx-auto mb-14"
+          className="mb-12 flex flex-col items-center text-center sm:mb-16"
         >
-          <div className="flex items-center gap-2.5 mb-6">
-            <EtoileTrustpilot taille={26} />
-            <span className="text-white text-xl font-bold tracking-tight">Trustpilot</span>
-          </div>
+          <a
+            href={SITE.trustpilot}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2.5 transition-colors hover:bg-white/[0.08]"
+          >
+            <Etoile taille={22} />
+            <span className="text-[15px] font-bold tracking-tight text-white">Trustpilot</span>
+            <span className="h-4 w-px bg-white/15" aria-hidden="true" />
+            <span className="text-[13px] font-semibold" style={{ color: VERT }}>
+              Excellent
+            </span>
+          </a>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
-            Ce que nos clients{" "}
-            <span style={{ color: VERT_TRUSTPILOT }}>disent vraiment</span>
+          <h2 className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+            Ce que nos clients <span style={{ color: VERT }}>disent vraiment</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-            Artisans, commerçants, associations et indépendants nous ont confié leur
-            site. Chaque avis ci-dessous vient d&apos;un client dont le site est en
-            ligne aujourd&apos;hui.
+          <p className="max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg">
+            Artisans, commerçants, associations et indépendants. Chaque avis
+            ci-dessous vient d&apos;un client dont vous pouvez ouvrir le site.
           </p>
         </motion.div>
 
         {businessUnitId ? (
-          <div className="max-w-3xl mx-auto">
+          <div className="mx-auto max-w-3xl">
             <TrustBox businessUnitId={businessUnitId} />
           </div>
         ) : (
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {avis.slice(0, 9).map((a, i) => (
-              <motion.article
-                key={`${a.entreprise}-${i}`}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: Math.min(i, 5) * 0.05 }}
-                className="flex flex-col rounded-lg bg-white p-6 shadow-lg"
-              >
-                <Etoiles taille={19} />
-                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-[#191919]">
-                  {a.texte}
-                </p>
-                <footer className="mt-5 border-t border-gray-200 pt-4">
-                  <div className="text-sm font-bold text-[#191919]">{a.auteur}</div>
-                  {a.entreprise !== a.auteur && (
-                    <div className="text-xs text-gray-500">{a.entreprise}</div>
-                  )}
-                </footer>
-              </motion.article>
+          <div className="grid auto-rows-min gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {/* 8 cartes simples, pas 6 : la vedette occupe 2 colonnes sur 2
+                rangées d'une grille de 4, il en reste donc 2 par rangée à ses
+                côtés puis 4 en dessous. À 6, la dernière rangée restait trouée. */}
+            {vedette && <CarteAvis avis={vedette} vedette index={0} />}
+            {suivants.slice(0, 8).map((a, i) => (
+              <CarteAvis key={`${a.client}-${i}`} avis={a} index={i + 1} />
             ))}
           </div>
         )}
@@ -173,9 +271,9 @@ export default function TestimonialsTrustpilot() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 rounded-lg px-7 py-3.5 text-[15px] font-semibold text-[#191919] transition-transform hover:-translate-y-0.5"
-            style={{ background: VERT_TRUSTPILOT }}
+            style={{ background: VERT }}
           >
-            <EtoileTrustpilot taille={18} />
+            <Etoile taille={18} />
             Lire tous les avis sur Trustpilot
           </a>
         </div>
