@@ -8,6 +8,7 @@ import React from "react";
 import { SeoAuditPdf } from "@/lib/seo/pdf-template";
 import { pushToPipedrive } from "@/lib/pipedrive";
 import { scheduleEmailSeries, firstName } from "@/lib/email-series";
+import { baliserLiens } from "@/lib/utm";
 import type { SeoAuditResult } from "@/lib/seo/analyzer";
 
 export const maxDuration = 60;
@@ -120,7 +121,10 @@ export async function POST(request: NextRequest) {
         from: "ConvertiLab <bilel@convertilab.com>",
         to: email,
         subject: `Votre Audit SEO — ${audit.domain} — Score : ${audit.scores.global}/100 (${audit.grade})`,
-        html: getEmailHtml(name, audit.domain, audit.scores.global, audit.grade, audit.gradeLabel, audit.issues.filter(i => i.priority === "critical").length, audit.strengths.slice(0, 3), !!pdfBuffer),
+        html: baliserLiens(
+          getEmailHtml(name, audit.domain, audit.scores.global, audit.grade, audit.gradeLabel, audit.issues.filter(i => i.priority === "critical").length, audit.strengths.slice(0, 3), !!pdfBuffer),
+          { medium: "rapport", campaign: "seo-check", content: "immediat" }
+        ),
         attachments: [attachment],
       });
       if (sendErr) throw sendErr;

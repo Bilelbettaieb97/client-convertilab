@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { baliserLiens, slug } from "@/lib/utm";
 
 const CALENDLY = "https://calendly.com/convertilab-5bsc/30min";
 
@@ -1276,7 +1277,16 @@ export async function scheduleEmailSeries(
       series_index: idx,
       lead_email: leadEmail,
       subject: resolvedSubject,
-      html_body: wrapEmail(bodyToHtml(resolvedBody)),
+      // Balisage UTM : la campagne identifie la série, le contenu identifie
+      // l'email precis. On saura ainsi lequel des J+1 / J+3 / J+7 travaille.
+      // La campagne porte le formulaire d'ORIGINE, pas la série partagée : sinon
+      // « Devis - site-vitrine » et « Devis - refonte » se confondent, et l'Offre
+      // Mensuelle disparaît derrière la série Devis dont elle réutilise les textes.
+      html_body: baliserLiens(wrapEmail(bodyToHtml(resolvedBody)), {
+        medium: "relance",
+        campaign: slug(formType),
+        content: `j${tpl.delay}`,
+      }),
       send_at: new Date(now + tpl.delay * 24 * 60 * 60 * 1000).toISOString(),
       status: "pending",
     };

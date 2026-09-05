@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { baliserLiens } from "@/lib/utm";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 
@@ -100,7 +101,9 @@ async function sendICSEmails(
     from: "Bilel · ConvertiLab <bilel@convertilab.com>",
     to: lead.email,
     subject: `✅ Votre RDV est confirmé — ${displayTime}`,
-    html: `
+    // Balisage UTM : seul envoi vers un prospect qui ne passait pas par le
+    // module. Sans lien aujourd'hui, mais tout CTA ajoute ici serait invisible.
+    html: baliserLiens(`
       <div style="font-family:Arial,sans-serif;max-width:560px;margin:0 auto">
         <h2 style="color:#1a1a1a">Votre rendez-vous est confirmé 🎉</h2>
         <p>Bonjour ${prenom},</p>
@@ -113,7 +116,11 @@ async function sendICSEmails(
         <hr style="border:none;border-top:1px solid #eee;margin:24px 0">
         <p style="font-size:12px;color:#888">Des questions ? Répondez à cet email ou appelez le 06 16 47 72 45.</p>
       </div>
-    `,
+    `, {
+      medium: "rapport",
+      campaign: "promo-rdv",
+      content: "confirmation",
+    }),
     attachments: [attachment],
   }).catch(() => {});
 

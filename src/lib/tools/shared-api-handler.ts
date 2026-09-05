@@ -4,6 +4,7 @@ import { Resend } from "resend";
 import type { ToolConfig, LeadInfo } from "./shared-types";
 import { pushToPipedrive } from "@/lib/pipedrive";
 import { scheduleEmailSeries } from "@/lib/email-series";
+import { baliserLiens, slug } from "@/lib/utm";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -122,7 +123,10 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           from: "ConvertiLab <bilel@convertilab.com>",
           to: lead.email,
           subject: config.buildEmailSubject(result),
-          html: config.buildEmailHtml(lead, result, !!(hasPdf || attachments.length > 0)),
+          html: baliserLiens(
+            config.buildEmailHtml(lead, result, !!(hasPdf || attachments.length > 0)),
+            { medium: "rapport", campaign: slug(config.toolName), content: "immediat" }
+          ),
           attachments: attachments.length > 0 ? attachments : undefined,
         });
         if (sendErr) throw sendErr;

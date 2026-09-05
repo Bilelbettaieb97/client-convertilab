@@ -343,7 +343,10 @@ const PromoSiteWeb = () => {
     haptic(15);
     void promoApi({ action: "newsletter", email });
     trackEvent("newsletter_subscribed");
-    notify({ formType: "newsletter", email });
+    // « Newsletter » avec la majuscule : c'est la clé exacte de EMAIL_SERIES.
+    // En minuscules, la recherche échouait en silence et ces inscrits ne
+    // recevaient AUCUNE relance, sans la moindre erreur visible.
+    notify({ formType: "Newsletter", email });
   };
 
   const progress = typeof step === "number" ? step : 3;
