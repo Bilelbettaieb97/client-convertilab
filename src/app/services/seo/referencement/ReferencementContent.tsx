@@ -262,7 +262,7 @@ export default function ReferencementContent() {
 
       {/* FAQ */}
       <ServiceFAQ faqs={[
-        { q: "Combien coûte une prestation de référencement SEO ?", a: "Nos forfaits SEO démarrent à partir de 490€/mois. Le tarif dépend de la concurrence sur vos mots-clés, du volume de pages à optimiser et de vos objectifs. Nous établissons un devis personnalisé après un audit gratuit de votre site." },
+        { q: "Combien coûte une prestation de référencement SEO ?", a: "Nos forfaits SEO démarrent à partir de 500€/mois. Le tarif dépend de la concurrence sur vos mots-clés, du volume de pages à optimiser et de vos objectifs. Nous établissons un devis personnalisé après un audit gratuit de votre site." },
         { q: "Combien de temps faut-il pour voir des résultats en SEO ?", a: "Les premières améliorations techniques sont visibles en quelques semaines. Les positions sur Google commencent à progresser entre le 2e et le 3e mois. Les résultats significatifs arrivent entre 3 et 6 mois. Le SEO est un investissement long terme : plus vous continuez, plus vos positions se renforcent." },
         { q: "Faut-il un contrat longue durée pour le SEO ?", a: "Nous recommandons un engagement de 6 mois minimum pour voir des résultats significatifs, mais il n'y a pas de contrat contraignant. Le SEO est un travail continu — s'arrêter avant d'avoir atteint vos objectifs, c'est perdre une partie du travail accompli." },
         { q: "Que comprend votre prestation de netlinking ?", a: "Notre stratégie de netlinking inclut l'identification de sites à forte autorité dans votre secteur, la création de contenus qualitatifs pour obtenir des backlinks naturels (DA 30+), et le suivi régulier de votre profil de liens entrants." },

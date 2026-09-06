@@ -32,14 +32,14 @@ export const devisServices: DevisService[] = [
     slug: "site-vitrine",
     name: "Site Vitrine",
     description: "Présentez votre activité avec un site vitrine professionnel, moderne et optimisé pour le référencement. Design sur-mesure, responsive et rapide.",
-    intro: "Un site vitrine est votre carte de visite en ligne, disponible 24h sur 24. Chez ConvertiLab, nous concevons des sites vitrine sur-mesure à partir de 500€, livrés en 7 jours, pensés pour rassurer vos visiteurs et les transformer en clients. Vous restez propriétaire de votre site, sans abonnement obligatoire ni frais caché. Voici précisément ce que vous obtenez, et comment se décompose le prix.",
-    priceFrom: "500€",
+    intro: "Un site vitrine est votre carte de visite en ligne, disponible 24h sur 24. Chez ConvertiLab, nous concevons des sites vitrine sur-mesure à partir de 490€, livrés en 2 semaines, pensés pour rassurer vos visiteurs et les transformer en clients. Vous restez propriétaire de votre site, sans abonnement obligatoire ni frais caché. Voici précisément ce que vous obtenez, et comment se décompose le prix.",
+    priceFrom: "490€",
     priceBreakdown: [
       { poste: "Design sur-mesure", prix: "200€", detail: "Maquette personnalisée validée avant tout développement, alignée sur votre identité de marque. Révisions incluses." },
       { poste: "Développement (5 pages)", prix: "200€", detail: "Intégration en Next.js : accueil, à propos, services, contact et une page libre. Site rapide, responsive et sécurisé." },
       { poste: "SEO de base + formulaire", prix: "100€", detail: "Balises title et meta optimisées, structure Hn propre, formulaire de contact connecté et intégration Google Maps." },
     ],
-    breakdownNote: "Soit 500€ tout compris, hébergement de la première année inclus. Aucune commission, aucun abonnement obligatoire. Paiement en 2 ou 3 fois sans frais possible, ou formule mensuelle à partir de 39€/mois.",
+    breakdownNote: "Soit 490€ tout compris, hébergement de la première année inclus. Aucune commission, aucun abonnement obligatoire. Paiement en 2 ou 3 fois sans frais possible, ou formule mensuelle à partir de 39€/mois.",
     included: [
       "5 pages sur-mesure (accueil, à propos, services, contact, page libre)",
       "Hébergement de la première année offert",
@@ -58,7 +58,7 @@ export const devisServices: DevisService[] = [
       { title: "Échange et devis", desc: "Un appel de 30 minutes pour comprendre votre activité et vos objectifs. Vous recevez un devis détaillé sous 24h." },
       { title: "Maquette", desc: "Nous concevons la maquette de votre site. Vous la validez avant tout développement, avec révisions incluses." },
       { title: "Développement", desc: "Nous développons votre site en Next.js. Vous suivez l'avancement et testez le résultat." },
-      { title: "Mise en ligne", desc: "Livraison en 7 jours, formation à l'administration et 30 jours de support inclus." },
+      { title: "Mise en ligne", desc: "Livraison en 2 semaines, formation à l'administration et 30 jours de support inclus." },
     ],
     benefits: [
       "Design personnalisé qui reflète votre identité de marque",
@@ -69,15 +69,15 @@ export const devisServices: DevisService[] = [
     faqItems: [
       {
         question: "Combien coûte un site vitrine ?",
-        answer: "Nos sites vitrine démarrent à 500€ tout compris, hébergement de la première année inclus. Le prix varie selon le nombre de pages et les fonctionnalités souhaitées. Vous recevez un devis détaillé sous 24h."
+        answer: "Nos sites vitrine démarrent à 490€ tout compris, hébergement de la première année inclus. Le prix varie selon le nombre de pages et les fonctionnalités souhaitées. Vous recevez un devis détaillé sous 24h."
       },
       {
-        question: "Y a-t-il des frais cachés après les 500€ ?",
+        question: "Y a-t-il des frais cachés après les 490€ ?",
         answer: "Non. Le prix inclut la création complète et l'hébergement de la première année. Ensuite, l'hébergement revient à environ 39€/mois, ou vous optez pour notre formule mensuelle tout inclus. Aucune commission n'est prélevée."
       },
       {
         question: "En combien de temps mon site sera-t-il en ligne ?",
-        answer: "Un site vitrine est livré en 7 jours ouvrés après validation de la maquette. Si nous dépassons ce délai, un mois de maintenance vous est offert."
+        answer: "Un site vitrine est livré en 2 semaines après validation de la maquette. Si nous dépassons ce délai, un mois de maintenance vous est offert."
       },
       {
         question: "Pourrai-je modifier le contenu moi-même ?",
@@ -91,15 +91,15 @@ export const devisServices: DevisService[] = [
     slug: "site-ecommerce",
     name: "Site E-commerce",
     description: "Lancez votre boutique en ligne avec un site e-commerce performant. Gestion de catalogue, paiement sécurisé et optimisation des conversions.",
-    intro: "Vendre en ligne ne devrait pas coûter une fortune ni vous enfermer dans des commissions sur chaque vente. Chez ConvertiLab, nous créons des boutiques e-commerce à partir de 800€, sans commission sur votre chiffre d'affaires. Vous ne payez que les frais de paiement Stripe (1,5% + 0,25€), comme tout site marchand. Voici le détail de ce que couvre ce budget.",
-    priceFrom: "800€",
+    intro: "Vendre en ligne ne devrait pas coûter une fortune ni vous enfermer dans des commissions sur chaque vente. Chez ConvertiLab, nous créons des boutiques e-commerce à partir de 1490€, sans commission sur votre chiffre d'affaires. Vous ne payez que les frais de paiement Stripe (1,5% + 0,25€), comme tout site marchand. Voici le détail de ce que couvre ce budget.",
+    priceFrom: "1490€",
     priceBreakdown: [
       { poste: "Design de la boutique", prix: "250€", detail: "Identité visuelle de votre boutique, pages produits et parcours d'achat pensés pour la conversion." },
       { poste: "Développement e-commerce", prix: "350€", detail: "Catalogue produits, gestion des stocks, variantes, panier et tunnel de commande optimisé." },
       { poste: "Paiement + livraison", prix: "100€", detail: "Intégration Stripe sécurisé (carte, Apple Pay, Google Pay), configuration des frais et zones de livraison." },
       { poste: "SEO produit de base", prix: "100€", detail: "Optimisation des fiches produits et des catégories pour le référencement, structure adaptée à Google Shopping." },
     ],
-    breakdownNote: "Soit 800€ tout compris pour démarrer avec un catalogue de moins de 50 produits. Zéro commission ConvertiLab sur vos ventes. Paiement en plusieurs fois sans frais possible.",
+    breakdownNote: "Soit 1490€ tout compris pour démarrer avec un catalogue de moins de 50 produits. Zéro commission ConvertiLab sur vos ventes. Paiement en plusieurs fois sans frais possible.",
     included: [
       "Boutique complète avec catalogue et gestion des stocks",
       "Paiement sécurisé Stripe (carte, Apple Pay, Google Pay)",
@@ -129,7 +129,7 @@ export const devisServices: DevisService[] = [
     faqItems: [
       {
         question: "Quel budget prévoir pour un site e-commerce ?",
-        answer: "Nos boutiques en ligne démarrent à 800€ tout compris pour un catalogue de moins de 50 produits. Le prix dépend du nombre de produits, des intégrations de paiement et de livraison, et du niveau de personnalisation."
+        answer: "Nos boutiques en ligne démarrent à 1490€ tout compris pour un catalogue de moins de 50 produits. Le prix dépend du nombre de produits, des intégrations de paiement et de livraison, et du niveau de personnalisation."
       },
       {
         question: "Prenez-vous une commission sur mes ventes ?",
@@ -151,15 +151,15 @@ export const devisServices: DevisService[] = [
     slug: "landing-page",
     name: "Landing Page",
     description: "Convertissez vos visiteurs en clients avec une landing page optimisée. Design percutant, copywriting persuasif et taux de conversion maximisé.",
-    intro: "Une landing page a un seul objectif : convertir. Pour une campagne Google Ads, Meta Ads ou un lancement de produit, elle fait souvent la différence entre un budget publicitaire rentable et un budget gâché. Chez ConvertiLab, nous créons des landing pages haute conversion à partir de 500€, avec copywriting et design pensés pour l'action. Voici comment se répartit ce budget.",
-    priceFrom: "500€",
+    intro: "Une landing page a un seul objectif : convertir. Pour une campagne Google Ads, Meta Ads ou un lancement de produit, elle fait souvent la différence entre un budget publicitaire rentable et un budget gâché. Chez ConvertiLab, nous créons des landing pages haute conversion à partir de 490€, avec copywriting et design pensés pour l'action. Voici comment se répartit ce budget.",
+    priceFrom: "490€",
     priceBreakdown: [
       { poste: "Copywriting et structure CRO", prix: "150€", detail: "Rédaction persuasive, hiérarchie des arguments, gestion des objections et appels à l'action alignés sur votre offre." },
       { poste: "Design de conversion", prix: "150€", detail: "Design percutant orienté action, above-the-fold optimisé, preuves sociales mises en avant." },
       { poste: "Développement rapide", prix: "150€", detail: "Intégration en Next.js avec temps de chargement inférieur à 1 seconde, un facteur clé de conversion." },
       { poste: "Tracking et intégrations", prix: "50€", detail: "Pose du Google Ads et du Meta Pixel, connexion du formulaire, suivi des conversions pour mesurer votre ROI." },
     ],
-    breakdownNote: "Soit 500€ tout compris. Une landing page bien conçue se rentabilise vite : elle augmente le taux de conversion de vos campagnes, donc baisse votre coût par lead.",
+    breakdownNote: "Soit 490€ tout compris. Une landing page bien conçue se rentabilise vite : elle augmente le taux de conversion de vos campagnes, donc baisse votre coût par lead.",
     included: [
       "Copywriting persuasif orienté conversion",
       "Design percutant et testé (CRO)",
@@ -189,7 +189,7 @@ export const devisServices: DevisService[] = [
     faqItems: [
       {
         question: "Combien coûte une landing page ?",
-        answer: "Nos landing pages démarrent à 500€ tout compris, copywriting, design, développement et tracking inclus. Le prix varie selon le nombre de variantes et la production de visuels."
+        answer: "Nos landing pages démarrent à 490€ tout compris, copywriting, design, développement et tracking inclus. Le prix varie selon le nombre de variantes et la production de visuels."
       },
       {
         question: "Quelle différence entre landing page et site vitrine ?",

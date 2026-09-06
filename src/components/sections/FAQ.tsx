@@ -14,7 +14,7 @@ const FAQ = () => {
     },
     {
       question: "En combien de temps mon site sera-t-il livré ?",
-      answer: "Une landing page est livrée en 5 à 7 jours, un site vitrine en 2 à 3 semaines, un site e-commerce en 3 à 4 semaines. Nous respectons toujours les délais annoncés. C'est notre garantie."
+      answer: "Une landing page est livrée en 5 à 2 semaines, un site vitrine en 2 à 3 semaines, un site e-commerce en 3 à 4 semaines. Nous respectons toujours les délais annoncés. C'est notre garantie."
     },
     {
       question: "Mon site sera-t-il optimisé pour Google (SEO) ?",

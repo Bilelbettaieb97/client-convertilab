@@ -45,7 +45,7 @@ const approachSteps = [
   },
   {
     icon: <Rocket className="w-5 h-5 text-primary-foreground" />,
-    title: "En ligne en 7 jours",
+    title: "En ligne en 2 semaines",
     description:
       "Hébergement, domaine et SSL inclus. On gère tout le technique.",
   },
@@ -99,7 +99,7 @@ const allFeatures = [
   { label: "Design responsive sur-mesure", essentiel: true, pro: true, premium: true },
   { label: "SEO, visible sur Google", essentiel: "Base" as string | boolean, pro: "Avancé + GMB" as string | boolean, premium: "Avancé + GMB" as string | boolean },
   { label: "Hébergement & SSL inclus", essentiel: true, pro: true, premium: true },
-  { label: "Livraison en 7 jours", essentiel: true, pro: true, premium: true },
+  { label: "Livraison en 2 semaines", essentiel: true, pro: true, premium: true },
   { label: "Nombre de pages", essentiel: "3 pages" as string | boolean, pro: "7 pages" as string | boolean, premium: "Illimité" as string | boolean },
   { label: "Blog intégré", essentiel: false, pro: true, premium: true },
   { label: "Formulaire avancé", essentiel: false, pro: true, premium: true },
@@ -593,7 +593,7 @@ export default function OffreMensuelleClient() {
             </Link>
           </Button>
           <p className="text-primary-foreground/60 text-[10px] sm:text-xs mt-4">
-            Livré en 7 jours, vous êtes propriétaire, visible sur Google
+            Livré en 2 semaines, vous êtes propriétaire, visible sur Google
           </p>
         </div>
       </section>

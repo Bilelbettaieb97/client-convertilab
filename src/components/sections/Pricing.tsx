@@ -1,66 +1,77 @@
 import Link from "next/link";
 import { Check, Sparkles, Zap, Crown, ArrowRight, Shield } from "lucide-react";
 
+/**
+ * Grille arretee le 06/09/2026. Trois paliers, le site complet en favori.
+ *
+ * Les noms decrivent OU EN EST LE CLIENT, pas le produit. Un artisan se
+ * reconnait dans une phrase et choisit seul, sans qu'on lui vende un "pack".
+ *
+ * La bascule entre 490 et 890 repose sur un fait, pas sur un argument :
+ * une page unique ne peut pas se referencer sur plusieurs metiers.
+ *
+ * Le mensuel n'est PAS un abonnement, c'est le prix etale. La promesse
+ * "Aucun abonnement" de la page d'accueil reste vraie.
+ */
 const plans = [
   {
-    name: "Mensuel",
+    name: "Je me lance",
     icon: Zap,
-    price: "39",
-    period: "€/mois",
-    priceLabel: "Sans engagement",
-    description: "Parfait pour lancer votre activité sans investissement initial.",
+    price: "490",
+    period: "€",
+    priceLabel: "Paiement unique",
+    description: "Une page qui dit qui vous etes, ce que vous faites, et comment vous joindre.",
     features: [
-      "Site web professionnel sur-mesure",
-      "Hébergement & nom de domaine inclus",
-      "Maintenance & mises à jour continues",
-      "Support réactif sous 24h",
-      "Design responsive premium",
-      "SEO de base optimisé",
+      "Une page unique, complete",
+      "Textes rediges pour vous",
+      "Vos realisations et vos avis",
+      "Formulaire et telephone cliquable",
+      "Responsive mobile et tablette",
+      "Livree en 5 a 7 jours",
     ],
     cta: "Choisir cette offre",
-    href: "/offre-mensuelle",
+    href: "/services/sites-web/landing-page",
     highlight: false,
     gradient: "from-blue-500 to-cyan-500",
   },
   {
-    name: "Site Vitrine",
+    name: "Je me developpe",
     icon: Sparkles,
-    price: "500",
+    price: "890",
     period: "€",
-    priceLabel: "Paiement unique",
-    description: "L'offre la plus populaire pour les entreprises qui veulent un site complet.",
+    priceLabel: "ou 39€/mois sur 24 mois",
+    description: "Le site complet, avec une page par metier. C'est ce qui vous fait remonter sur Google.",
     features: [
-      "Site web professionnel (5 pages)",
-      "Design 100% sur-mesure",
-      "Responsive mobile / tablette",
-      "SEO technique optimisé",
-      "Formulaire de contact intégré",
-      "Formation & guide de gestion",
+      "Site complet, 5 pages",
+      "Une page par service, c'est la difference",
+      "Referencement local sur vos metiers",
+      "Fiche Google configuree",
+      "Textes rediges et photos sourcees",
+      "Formation a la gestion du site",
       "1 an de support inclus",
-      "Livraison en 7 jours",
+      "Livre en 2 semaines",
     ],
-    cta: "Démarrer mon projet",
+    cta: "Demarrer mon projet",
     href: "/services/sites-web/site-vitrine",
     highlight: true,
     gradient: "from-purple-500 to-pink-500",
-    badge: "Le + populaire",
+    badge: "Le plus choisi",
   },
   {
-    name: "Sur mesure",
+    name: "Je prends la place",
     icon: Crown,
-    price: "Sur",
-    period: "devis",
-    priceLabel: "Projets ambitieux",
-    description: "E-commerce, applications web, projets complexes et stratégie 360°.",
+    price: "1490",
+    period: "€ et +",
+    priceLabel: "Devis apres echange",
+    description: "Boutique en ligne, reservation, espace client, plusieurs etablissements.",
     features: [
-      "Briefing approfondi & stratégie",
-      "Design & développement sur-mesure",
-      "E-commerce, app, back-office",
-      "SEO + Google Ads + Meta Ads",
-      "Intégrations sur mesure",
-      "Accompagnement dédié",
+      "E-commerce et paiement securise",
+      "Reservation ou prise de rendez-vous",
+      "Espace client ou back-office",
+      "Multi-etablissements ou multilingue",
+      "Integrations sur mesure",
+      "Accompagnement dedie",
       "Support prioritaire",
-      "Roadmap produit à long terme",
     ],
     cta: "Discuter du projet",
     href: "/contact",

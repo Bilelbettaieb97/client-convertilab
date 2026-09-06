@@ -130,7 +130,7 @@ const ExitIntentPopup = () => {
               <p>&#10003; Site vitrine 1-3 pages responsive</p>
               <p>&#10003; Design moderne et professionnel</p>
               <p>&#10003; Optimisé SEO & mobile</p>
-              <p>&#10003; Livraison en 7 jours</p>
+              <p>&#10003; Livraison en 2 semaines</p>
             </div>
 
             <div className="space-y-2 sm:space-y-3">

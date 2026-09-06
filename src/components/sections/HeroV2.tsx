@@ -108,7 +108,7 @@ export default function HeroV2() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl"
             >
-              Livré en <strong className="text-gray-900">7 jours chrono</strong>, clé en main, zéro jargon tech.
+              Livré en <strong className="text-gray-900">2 semaines chrono</strong>, clé en main, zéro jargon tech.
               Rejoignez les <strong className="text-gray-900">150+ entrepreneurs</strong> qui ont transformé leur présence en ligne.
             </motion.p>
 

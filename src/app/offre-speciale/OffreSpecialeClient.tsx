@@ -152,7 +152,7 @@ export default function OffreSpecialeClient() {
   const whyUs = [
     { icon: Globe, title: "Vous êtes propriétaire", desc: "Le site et le code source vous appartiennent. Pas d'abonnement caché, pas de dépendance." },
     { icon: Search, title: "SEO optimisé", desc: "Meta tags, sitemap, vitesse, responsive. Votre site est prêt à être trouvé sur Google dès le jour 1." },
-    { icon: Zap, title: "Livré en 7 jours", desc: "Validation de la maquette sous 48h, site en ligne en 7 jours ouvrés. Garanti." },
+    { icon: Zap, title: "Livré en 2 semaines", desc: "Validation de la maquette sous 48h, site en ligne en 2 semaines. Garanti." },
     { icon: Smartphone, title: "100% responsive", desc: "Votre site s'adapte parfaitement à tous les écrans : mobile, tablette et ordinateur." },
     { icon: Lock, title: "Sécurisé (SSL)", desc: "Certificat HTTPS inclus, hébergement sécurisé, code propre et performant." },
     { icon: Headphones, title: "Support 30 jours", desc: "Formation + support technique inclus pendant 30 jours après la livraison." },
@@ -175,7 +175,7 @@ export default function OffreSpecialeClient() {
     "@context": "https://schema.org",
     "@type": "Product",
     name: "Site Web Professionnel - Offre Spéciale 300€",
-    description: "Site vitrine 5 pages ou landing page haute conversion. Design sur-mesure, SEO optimisé, livré en 7 jours. Vous êtes propriétaire.",
+    description: "Site vitrine 5 pages ou landing page haute conversion. Design sur-mesure, SEO optimisé, livré en 2 semaines. Vous êtes propriétaire.",
     offers: {
       "@type": "Offer",
       price: "300",
@@ -213,14 +213,14 @@ export default function OffreSpecialeClient() {
                 Votre site web pro pour{" "}<span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">300€</span>
               </h1>
               <p className="text-base sm:text-xl text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                Un <strong className="text-white">site vitrine 5 pages</strong> ou une <strong className="text-white">landing page haute conversion</strong>, livrés en 7 jours, optimisés SEO, et <strong className="text-white">vous êtes propriétaire</strong>.
+                Un <strong className="text-white">site vitrine 5 pages</strong> ou une <strong className="text-white">landing page haute conversion</strong>, livrés en 2 semaines, optimisés SEO, et <strong className="text-white">vous êtes propriétaire</strong>.
               </p>
               <p className="text-sm sm:text-lg text-green-400 font-semibold mb-6 sm:mb-8 flex items-center justify-center lg:justify-start gap-2">
                 <Shield className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" /><span>Paiement uniquement après validation.</span>
               </p>
               <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-6 sm:mb-8">
                 {[
-                  { icon: Zap, text: "Livré en 7 jours" },
+                  { icon: Zap, text: "Livré en 2 semaines" },
                   { icon: Globe, text: "Vous êtes propriétaire" },
                   { icon: Search, text: "SEO optimisé" },
                   { icon: Headphones, text: "Support 30 jours" },
@@ -307,7 +307,7 @@ export default function OffreSpecialeClient() {
                       </p>
                       <p className="text-sm text-gray-300 flex items-center gap-2">
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        Site livré en <strong className="text-white">7 jours</strong>
+                        Site livré en <strong className="text-white">2 semaines</strong>
                       </p>
                     </div>
                     <p className="text-gray-400 text-sm mb-6">
@@ -495,7 +495,7 @@ export default function OffreSpecialeClient() {
               { q: "Site vitrine ou landing page, comment choisir ?", a: "Si vous avez besoin de présenter votre activité avec plusieurs pages (accueil, services, contact...), choisissez le site vitrine. Si vous voulez une seule page orientée conversion (inscription, vente, prise de RDV), choisissez la landing page." },
               { q: "Est-ce que je suis vraiment propriétaire du site ?", a: "Oui, à 100%. Vous recevez le code source complet, les accès hébergement, et le nom de domaine. Aucune dépendance à ConvertiLab après la livraison." },
               { q: "Mon site sera-t-il visible sur Google ?", a: "Oui. Chaque site inclut une optimisation SEO complète : balises meta, sitemap, vitesse de chargement optimisée, responsive mobile. Votre site est prêt pour Google dès le jour 1." },
-              { q: "Combien de temps pour avoir mon site ?", a: "7 jours ouvrés après validation de la maquette. La maquette est présentée sous 48h après notre premier échange." },
+              { q: "Combien de temps pour avoir mon site ?", a: "2 semaines après validation de la maquette. La maquette est présentée sous 48h après notre premier échange." },
               { q: "Y a-t-il des frais cachés ou un abonnement ?", a: "Aucun. Les 300€ incluent tout : design, développement, SEO, SSL, hébergement 1 an. Après la première année, l'hébergement coûte environ 5€/mois." },
               { q: "Quand dois-je payer ?", a: "Aucun paiement à la réservation. Vous ne payez qu'après avoir vu et validé le résultat final. Zéro risque." },
             ].map((faq, i) => (

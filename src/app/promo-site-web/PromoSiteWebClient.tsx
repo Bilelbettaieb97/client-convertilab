@@ -462,7 +462,7 @@ const PromoSiteWeb = () => {
 
                     <p className="text-[12px] text-white/70 leading-snug max-w-[300px] mx-auto mt-1">
                       Site vitrine pro livré en{" "}
-                      <strong className="text-white font-semibold">7 jours</strong>.
+                      <strong className="text-white font-semibold">2 semaines</strong>.
                       Sans abonnement caché.
                     </p>
 

@@ -124,8 +124,8 @@ const Services = () => {
         {/* Top 3 services les plus demandés */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
           {[
-            { icon: <Globe className="w-6 h-6" />, title: "Site Vitrine", desc: "à partir de 500€", link: "/services/sites-web/site-vitrine", gradient: "from-violet-500 to-purple-600", badge: "Le + demandé" },
-            { icon: <Store className="w-6 h-6" />, title: "Site E-commerce", desc: "à partir de 800€", link: "/services/sites-web/site-ecommerce", gradient: "from-pink-500 to-rose-600", badge: null },
+            { icon: <Globe className="w-6 h-6" />, title: "Site Vitrine", desc: "à partir de 490€", link: "/services/sites-web/site-vitrine", gradient: "from-violet-500 to-purple-600", badge: "Le + demandé" },
+            { icon: <Store className="w-6 h-6" />, title: "Site E-commerce", desc: "à partir de 1490€", link: "/services/sites-web/site-ecommerce", gradient: "from-pink-500 to-rose-600", badge: null },
             { icon: <Search className="w-6 h-6" />, title: "SEO Google", desc: "Référencement naturel", link: "/services/seo/referencement", gradient: "from-emerald-500 to-teal-600", badge: "ROI le + élevé" },
           ].map((s, i) => (
             <Link key={i} href={s.link} className="group relative p-6 rounded-2xl border-2 border-border bg-card hover:border-purple-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">

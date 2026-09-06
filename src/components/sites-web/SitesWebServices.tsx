@@ -10,7 +10,7 @@ const services = [
     icon: <Rocket className="w-8 h-8" />,
     title: "Landing Page",
     subtitle: "Page unique optimisee conversion",
-    price: "A partir de 500€",
+    price: "A partir de 490€",
     description: "Page web autonome creee pour convertir vos visiteurs en prospects. Ideale pour campagnes publicitaires et capture de leads.",
     features: [
       "Design 100% responsive",
@@ -29,7 +29,7 @@ const services = [
     icon: <FileText className="w-8 h-8" />,
     title: "Site Vitrine",
     subtitle: "Presentation professionnelle complete",
-    price: "A partir de 500€",
+    price: "A partir de 490€",
     description: "Presentez votre entreprise de maniere professionnelle. Renforcez votre credibilite et soyez visible sur Google.",
     features: [
       "Jusqu'a 5 pages personnalisees",
@@ -49,7 +49,7 @@ const services = [
     icon: <Store className="w-8 h-8" />,
     title: "Site E-commerce",
     subtitle: "Boutique en ligne performante",
-    price: "A partir de 800€",
+    price: "A partir de 1490€",
     description: "Vendez en ligne avec une boutique professionnelle. Paiements securises et gestion complete de votre activite.",
     features: [
       "Jusqu'a 50 produits configures",

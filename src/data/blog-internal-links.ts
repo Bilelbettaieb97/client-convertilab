@@ -12,7 +12,7 @@ export interface ArticleInternalLinks {
 
 export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
   "pourquoi-site-web-indispensable-2024": {
-    primary: { title: "Création de site vitrine", description: "Site professionnel en 7 jours dès 500€, satisfait ou remboursé.", href: "/services/sites-web/site-vitrine", cta: "Voir nos offres" },
+    primary: { title: "Création de site vitrine", description: "Site professionnel en 2 semaines dès 490€, satisfait ou remboursé.", href: "/services/sites-web/site-vitrine", cta: "Voir nos offres" },
     secondary: { title: "Estimation de prix", description: "Calculez le coût de votre site en 2 minutes.", href: "/estimation-prix-site-web", cta: "Estimer mon projet" },
   },
   "erreurs-site-web-eviter": {
@@ -68,12 +68,12 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
     secondary: { title: "Audit SEO complet", description: "Score global et plan d'action pour dépasser vos concurrents.", href: "/seo-check", cta: "Auditer mon site" },
   },
   "comment-choisir-agence-web-2026": {
-    primary: { title: "Pourquoi choisir ConvertiLab ?", description: "+150 clients, 4.9★ Trustpilot, livraison en 7 jours.", href: "/a-propos", cta: "Découvrir ConvertiLab" },
+    primary: { title: "Pourquoi choisir ConvertiLab ?", description: "+150 clients, 4.9★ Trustpilot, livraison en 2 semaines.", href: "/a-propos", cta: "Découvrir ConvertiLab" },
     secondary: { title: "Voir nos réalisations", description: "Portfolio de sites créés pour nos clients.", href: "/portfolio", cta: "Voir le portfolio" },
   },
   "site-vitrine-vs-site-ecommerce": {
-    primary: { title: "Création site vitrine dès 500€", description: "5 pages pro, SEO inclus, livré en 7 jours.", href: "/services/sites-web/site-vitrine", cta: "Créer mon site vitrine" },
-    secondary: { title: "Création boutique en ligne dès 800€", description: "Catalogue, paiement Stripe, espace client.", href: "/services/sites-web/site-ecommerce", cta: "Créer ma boutique" },
+    primary: { title: "Création site vitrine dès 490€", description: "5 pages pro, SEO inclus, livré en 2 semaines.", href: "/services/sites-web/site-vitrine", cta: "Créer mon site vitrine" },
+    secondary: { title: "Création boutique en ligne dès 1490€", description: "Catalogue, paiement Stripe, espace client.", href: "/services/sites-web/site-ecommerce", cta: "Créer ma boutique" },
   },
   "pourquoi-nextjs-meilleur-wordpress": {
     primary: { title: "Sites Next.js sur-mesure", description: "Performance 90+, SEO natif, sécurité renforcée.", href: "/services/sites-web/site-vitrine", cta: "Créer mon site Next.js" },
@@ -188,7 +188,7 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
     secondary: { title: "Test de vitesse avec données réelles", description: "Core Web Vitals depuis les données de terrain.", href: "/speed-check", cta: "Tester mon site" },
   },
   "creer-boutique-en-ligne-guide-2026": {
-    primary: { title: "Création boutique en ligne", description: "E-commerce Next.js + Stripe dès 800€.", href: "/services/sites-web/site-ecommerce", cta: "Créer ma boutique" },
+    primary: { title: "Création boutique en ligne", description: "E-commerce Next.js + Stripe dès 1490€.", href: "/services/sites-web/site-ecommerce", cta: "Créer ma boutique" },
     secondary: { title: "Estimation de prix e-commerce", description: "Calculez le coût de votre boutique.", href: "/estimation-prix-site-web", cta: "Estimer mon projet" },
   },
   "fiche-produit-optimisee-vendre": {
@@ -200,7 +200,7 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
     secondary: { title: "Landing page de relance", description: "Page dédiée pour récupérer les paniers abandonnés.", href: "/services/sites-web/landing-page", cta: "Créer ma landing page" },
   },
   "stripe-paiement-en-ligne-guide": {
-    primary: { title: "Boutique en ligne avec Stripe", description: "Paiement sécurisé intégré dès 800€.", href: "/services/sites-web/site-ecommerce", cta: "Créer ma boutique" },
+    primary: { title: "Boutique en ligne avec Stripe", description: "Paiement sécurisé intégré dès 1490€.", href: "/services/sites-web/site-ecommerce", cta: "Créer ma boutique" },
     secondary: { title: "Site vitrine avec paiement", description: "Formulaire de devis avec acompte Stripe.", href: "/services/sites-web/site-vitrine", cta: "En savoir plus" },
   },
   "seo-ecommerce-referencer-produits": {

@@ -16,8 +16,8 @@ export const pricingPages: PricingPage[] = [
     slug: "site-vitrine",
     name: "Site Vitrine",
     description: "Un site vitrine professionnel pour présenter votre activité et attirer de nouveaux clients en ligne.",
-    price: "500",
-    priceLabel: "à partir de 500€",
+    price: "890",
+    priceLabel: "à partir de 490€",
     includes: [
       "Design sur-mesure responsive",
       "Jusqu'à 5 pages (Accueil, Services, À propos, Contact, Mentions légales)",
@@ -35,11 +35,11 @@ export const pricingPages: PricingPage[] = [
     ],
     faqItems: [
       {
-        question: "Pourquoi un site vitrine à 500€ alors que d'autres facturent 3000€ ?",
+        question: "Pourquoi un site vitrine à 490€ alors que d'autres facturent 3000€ ?",
         answer: "Nous utilisons des technologies modernes (Next.js) et des processus optimisés qui réduisent le temps de développement sans sacrifier la qualité. Le résultat est un site performant, rapide et professionnel à un prix accessible.",
       },
       {
-        question: "Y a-t-il des frais cachés après les 500€ ?",
+        question: "Y a-t-il des frais cachés après les 490€ ?",
         answer: "Non. Le prix inclut la création complète du site et l'hébergement première année. Ensuite, l'hébergement coûte environ 39€/mois ou vous pouvez opter pour un forfait mensuel tout inclus.",
       },
       {
@@ -58,8 +58,8 @@ export const pricingPages: PricingPage[] = [
     slug: "site-ecommerce",
     name: "Site E-commerce",
     description: "Une boutique en ligne complète pour vendre vos produits et développer votre chiffre d'affaires sur internet.",
-    price: "800",
-    priceLabel: "à partir de 800€",
+    price: "1490",
+    priceLabel: "à partir de 1490€",
     includes: [
       "Design e-commerce sur-mesure responsive",
       "Catalogue produits avec fiches détaillées",
@@ -77,7 +77,7 @@ export const pricingPages: PricingPage[] = [
     ],
     faqItems: [
       {
-        question: "800€ pour un e-commerce, c'est vraiment possible ?",
+        question: "1490€ pour un e-commerce, c'est vraiment possible ?",
         answer: "Oui. Grâce à notre stack technique optimisée et nos templates éprouvés, nous livrons des boutiques performantes à ce prix. C'est idéal pour démarrer avec un catalogue de moins de 50 produits.",
       },
       {
@@ -100,8 +100,8 @@ export const pricingPages: PricingPage[] = [
     slug: "landing-page",
     name: "Landing Page",
     description: "Une page d'atterrissage optimisée pour la conversion, idéale pour vos campagnes publicitaires.",
-    price: "500",
-    priceLabel: "à partir de 500€",
+    price: "490",
+    priceLabel: "à partir de 490€",
     includes: [
       "Design conversion-first responsive",
       "Copywriting orienté persuasion",
@@ -142,7 +142,7 @@ export const pricingPages: PricingPage[] = [
     slug: "refonte-site",
     name: "Refonte de Site Web",
     description: "Modernisez votre site existant avec un design actuel, de meilleures performances et un SEO optimisé.",
-    price: "400",
+    price: "690",
     priceLabel: "à partir de 400€",
     includes: [
       "Audit complet du site existant",
@@ -261,7 +261,7 @@ export const pricingPages: PricingPage[] = [
         answer: "Oui, il n'y a aucun engagement de durée. Vous pouvez mettre en pause ou arrêter vos campagnes à tout moment. Nous recommandons toutefois 3 mois minimum pour des résultats optimaux.",
       },
     ],
-    deliveryTime: "Lancement en 5 à 7 jours",
+    deliveryTime: "Lancement en 5 à 2 semaines",
     relatedService: "/services/sea",
   },
   {
@@ -303,7 +303,7 @@ export const pricingPages: PricingPage[] = [
         answer: "Les premiers résultats en termes d'engagement sont visibles dès le premier mois. La croissance significative de votre communauté se constate généralement après 3 à 6 mois de travail régulier.",
       },
     ],
-    deliveryTime: "Démarrage sous 7 jours",
+    deliveryTime: "Démarrage sous 2 semaines",
     relatedService: "/services/social-media",
   },
 ];

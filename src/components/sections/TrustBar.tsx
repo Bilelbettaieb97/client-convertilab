@@ -4,7 +4,7 @@ const stats = [
   { icon: Users, value: "150+", label: "clients accompagnés" },
   { icon: Star, value: "4.9/5", label: "15 avis vérifiés" },
   { icon: TrendingUp, value: "+280%", label: "CA moyen généré" },
-  { icon: Award, value: "7 jours", label: "délai de livraison" },
+  { icon: Award, value: "2 semaines", label: "délai de livraison" },
 ];
 
 const logos = [

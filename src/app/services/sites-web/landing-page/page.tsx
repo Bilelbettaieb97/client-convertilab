@@ -7,12 +7,12 @@ import RelatedServicesSection from "@/components/internal-links/RelatedServicesS
 
 export const metadata: Metadata = {
   title: "Landing Page : Création de Page de Vente Haute Conversion en 5 Jours",
-  description: "Création de landing page haute conversion dès 500€, livrée en 5-7 jours. Page de vente optimisée pour Google Ads & Meta Ads, tracking inclus. +150 clients, prix fixe garanti. Devis gratuit.",
+  description: "Création de landing page haute conversion dès 490€, livrée en 5-7 jours. Page de vente optimisée pour Google Ads & Meta Ads, tracking inclus. +150 clients, prix fixe garanti. Devis gratuit.",
   keywords: "landing page, création landing page, site web landing page, page de vente, page d'atterrissage, landing page prix, landing page Google Ads",
   alternates: { canonical: `${SITE.url}/services/sites-web/landing-page` },
   openGraph: {
     title: "Landing Page : Création Haute Conversion en 5 Jours | ConvertiLab",
-    description: "Création de landing page haute conversion dès 500€, livrée en 5-7 jours. Optimisée Google Ads & Meta Ads. Prix fixe garanti.",
+    description: "Création de landing page haute conversion dès 490€, livrée en 5-7 jours. Optimisée Google Ads & Meta Ads. Prix fixe garanti.",
     url: `${SITE.url}/services/sites-web/landing-page`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -35,7 +35,7 @@ const faqSchema = {
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "Qu'est-ce qu'une landing page exactement ?", "acceptedAnswer": { "@type": "Answer", "text": "C'est une page web autonome, concue specifiquement pour convertir les visiteurs en leads ou clients. Contrairement a un site classique, elle n'a qu'un seul objectif : inciter a l'action (formulaire, achat, inscription)." } },
-    { "@type": "Question", "name": "Combien de temps pour créer ma landing page ?", "acceptedAnswer": { "@type": "Answer", "text": "5 a 7 jours ouvres entre le brief valide et la mise en ligne. Nous respectons ce delai avec un engagement de 10% de remise en cas de depassement." } },
+    { "@type": "Question", "name": "Combien de temps pour créer ma landing page ?", "acceptedAnswer": { "@type": "Answer", "text": "5 a 2 semaines ouvres entre le brief valide et la mise en ligne. Nous respectons ce delai avec un engagement de 10% de remise en cas de depassement." } },
     { "@type": "Question", "name": "Ma landing page sera-t-elle compatible mobile ?", "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Le design est pense mobile-first : 70% du trafic publicitaire vient du mobile. Votre page sera parfaitement optimisée sur tous les ecrans." } },
     { "@type": "Question", "name": "Puis-je utiliser ma landing page pour Google Ads et Meta Ads ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est exactement pour ca qu'elle est concue. Nous integrons le tracking Google Analytics, Google Ads et Meta Pixel pour mesurer vos conversions." } },
     { "@type": "Question", "name": "Que se passe-t-il apres la livraison ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous beneficiez d'1 mois de support technique inclus. Nous restons disponibles pour les ajustements mineurs et le suivi des performances." } },

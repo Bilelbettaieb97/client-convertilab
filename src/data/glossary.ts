@@ -93,7 +93,7 @@ Chez ConvertiLab, nous intégrons le SEO dès la conception de chaque site : arc
       {
         question: "Quel budget prévoir pour le SEO ?",
         answer:
-          "Le budget SEO varie selon la concurrence de votre secteur et vos objectifs. Pour une PME locale, comptez entre 500€ et 1 500€/mois. Pour un site national ou un e-commerce, entre 1 500€ et 5 000€/mois. L'important est la régularité : mieux vaut un budget modeste sur 12 mois qu'un gros investissement ponctuel.",
+          "Le budget SEO varie selon la concurrence de votre secteur et vos objectifs. Pour une PME locale, comptez entre 490€ et 1 500€/mois. Pour un site national ou un e-commerce, entre 1 490€ et 5 000€/mois. L'important est la régularité : mieux vaut un budget modeste sur 12 mois qu'un gros investissement ponctuel.",
       },
       {
         question: "Le SEO est-il toujours utile avec l'arrivée de l'IA dans les recherches ?",
@@ -138,7 +138,7 @@ Un des leviers les plus sous-estimés du SEA est le type de correspondance (matc
 
 ## Un exemple chiffré de rentabilité
 
-Rien ne vaut un calcul concret pour comprendre si une campagne est rentable. Imaginons un serrurier qui investit 800€ par mois en Google Ads. Avec un CPC moyen de 4€, il obtient 200 clics. Sa landing page convertit à 8%, soit 16 demandes d'intervention. Il conclut la moitié de ces demandes, donc 8 interventions, à un panier moyen de 220€, ce qui génère 1 760€ de chiffre d'affaires pour 800€ investis. Son ROAS (retour sur dépense publicitaire) est de 2,2x, et son CPA de 50€ pour un client valant 220€. Ce type de calcul, réalisé chaque mois, permet d'ajuster les enchères et de couper les mots-clés non rentables.
+Rien ne vaut un calcul concret pour comprendre si une campagne est rentable. Imaginons un serrurier qui investit 1490€ par mois en Google Ads. Avec un CPC moyen de 4€, il obtient 200 clics. Sa landing page convertit à 8%, soit 16 demandes d'intervention. Il conclut la moitié de ces demandes, donc 8 interventions, à un panier moyen de 220€, ce qui génère 1 760€ de chiffre d'affaires pour 1490€ investis. Son ROAS (retour sur dépense publicitaire) est de 2,2x, et son CPA de 50€ pour un client valant 220€. Ce type de calcul, réalisé chaque mois, permet d'ajuster les enchères et de couper les mots-clés non rentables.
 
 ## Le remarketing : rattraper les visiteurs partis
 
@@ -164,7 +164,7 @@ Chez ConvertiLab, nous gérons vos campagnes Google Ads et Meta Ads avec un repo
       {
         question: "Quel budget minimum pour lancer des campagnes Google Ads ?",
         answer:
-          "Pour une PME locale, un budget de 500€ à 1 000€/mois sur Google Ads est un bon point de départ, hors frais de gestion. Cela permet de collecter suffisamment de données pour optimiser les campagnes. En dessous de 300€/mois, il est difficile d'obtenir des résultats significatifs.",
+          "Pour une PME locale, un budget de 490€ à 1 000€/mois sur Google Ads est un bon point de départ, hors frais de gestion. Cela permet de collecter suffisamment de données pour optimiser les campagnes. En dessous de 300€/mois, il est difficile d'obtenir des résultats significatifs.",
       },
       {
         question: "Google Ads ou Meta Ads : lequel choisir ?",
@@ -256,7 +256,7 @@ Chez ConvertiLab, nous créons des landing pages sur mesure, optimisées pour la
       {
         question: "Combien coûte la création d'une landing page ?",
         answer:
-          "Le coût d'une landing page professionnelle varie de 800€ à 3 000€ selon la complexité, le design et les intégrations nécessaires (formulaire, paiement, CRM). Chez ConvertiLab, nos landing pages sont livrées clé en main, optimisées SEO et prêtes pour vos campagnes publicitaires.",
+          "Le coût d'une landing page professionnelle varie de 1490€ à 3 000€ selon la complexité, le design et les intégrations nécessaires (formulaire, paiement, CRM). Chez ConvertiLab, nos landing pages sont livrées clé en main, optimisées SEO et prêtes pour vos campagnes publicitaires.",
       },
       {
         question: "Quel est un bon taux de conversion pour une landing page ?",
@@ -303,7 +303,7 @@ Règle d'or : ne testez qu'un seul élément à la fois, et attendez d'avoir un 
 
 ## L'impact business concret
 
-Améliorer votre taux de conversion de 1% a un impact direct sur votre chiffre d'affaires. Si votre site génère 10 000 visiteurs par mois avec un taux de conversion de 2% et un panier moyen de 500€, vous réalisez 100 000€ par mois. En passant à 3%, vous gagnez 50 000€ supplémentaires par mois sans dépenser un euro de plus en publicité.
+Améliorer votre taux de conversion de 1% a un impact direct sur votre chiffre d'affaires. Si votre site génère 10 000 visiteurs par mois avec un taux de conversion de 2% et un panier moyen de 490€, vous réalisez 100 000€ par mois. En passant à 3%, vous gagnez 50 000€ supplémentaires par mois sans dépenser un euro de plus en publicité.
 
 ## Le tunnel de conversion : où fuient vos prospects
 
@@ -478,7 +478,7 @@ La **page Contact** doit contenir un formulaire simple (nom, email, message), vo
 
 ## Le coût d'un site vitrine professionnel
 
-Le prix d'un site vitrine varie de 1 500€ à 8 000€ selon le nombre de pages, la complexité du design et les fonctionnalités (blog, multilingue, système de réservation). Les plateformes DIY (Wix, Squarespace) coûtent moins cher (20 à 40€ par mois) mais offrent des résultats limités en termes de SEO, performance et personnalisation.
+Le prix d'un site vitrine varie de 1 490€ à 8 000€ selon le nombre de pages, la complexité du design et les fonctionnalités (blog, multilingue, système de réservation). Les plateformes DIY (Wix, Squarespace) coûtent moins cher (20 à 40€ par mois) mais offrent des résultats limités en termes de SEO, performance et personnalisation.
 
 Un site vitrine professionnel créé sur mesure avec Next.js obtient un score PageSpeed de 95 et plus sur mobile, contre 50 à 70 pour un site Wix moyen. Cette différence impacte directement le référencement Google et l'expérience utilisateur.
 
@@ -1052,7 +1052,7 @@ Chez ConvertiLab, nous concevons chaque projet avec un objectif de ROI clair. No
     importance:
       "Le ROI est la métrique qui justifie chaque investissement marketing. Sans mesure du ROI, vous ne savez pas si votre site web, vos campagnes ou votre stratégie SEO génèrent réellement de la valeur. C'est la boussole de toute décision business.",
     examples: [
-      "Un artisan investit 4 000€ dans un site vitrine optimisé SEO : il génère 8 nouveaux clients par mois avec un panier moyen de 1 500€, soit un ROI de 3 500% la première année.",
+      "Un artisan investit 4 000€ dans un site vitrine optimisé SEO : il génère 8 nouveaux clients par mois avec un panier moyen de 1 490€, soit un ROI de 3 500% la première année.",
       "Un e-commerce investit 2 000€/mois en Google Ads et génère 14 000€ de ventes, soit un ROI de 600% qui permet de scaler progressivement le budget.",
       "Une agence immobilière mesure que chaque lead via son site coûte 25€ et qu'un lead sur 5 signe un mandat à 5 000€ de commission : le ROI par lead est de 3 900%.",
     ],
@@ -1065,7 +1065,7 @@ Chez ConvertiLab, nous concevons chaque projet avec un objectif de ROI clair. No
       {
         question: "Comment calculer le ROI de mon SEO ?",
         answer:
-          "Calculez le trafic organique mensuel, multipliez par le taux de conversion et la valeur moyenne d'une conversion. Comparez ce chiffre au coût mensuel de votre stratégie SEO. Exemple : 2 000 visiteurs organiques x 3% conversion x 500€ valeur = 30 000€/mois, pour un investissement SEO de 1 500€/mois = ROI de 1 900%.",
+          "Calculez le trafic organique mensuel, multipliez par le taux de conversion et la valeur moyenne d'une conversion. Comparez ce chiffre au coût mensuel de votre stratégie SEO. Exemple : 2 000 visiteurs organiques x 3% conversion x 490€ valeur = 30 000€/mois, pour un investissement SEO de 1 500€/mois = ROI de 1 900%.",
       },
       {
         question: "Le ROI est-il le seul indicateur à suivre ?",
@@ -1610,7 +1610,7 @@ Chez ConvertiLab, nous créons et gérons vos campagnes Meta Ads avec des créat
     examples: [
       "Un e-commerce de bijoux lance des campagnes Advantage+ Shopping sur Instagram : le ROAS atteint 8x avec un budget de 3 000€/mois et 200 ventes générées.",
       "Un coach business utilise des Lead Ads avec un ebook gratuit comme lead magnet : il collecte 500 leads qualifiés par mois à 2,50€ le lead.",
-      "Un restaurant lance des publicités Reels géolocalisées montrant ses plats : les réservations augmentent de 120% le mois suivant avec un budget de 500€.",
+      "Un restaurant lance des publicités Reels géolocalisées montrant ses plats : les réservations augmentent de 120% le mois suivant avec un budget de 490€.",
     ],
     faqItems: [
       {
@@ -2309,7 +2309,7 @@ Chez ConvertiLab, nous concevons des tunnels de conversion complets : du premier
     importance:
       "Le tunnel de conversion est la colonne vertébrale de votre stratégie marketing digital. Sans tunnel structuré, vous perdez des prospects à chaque étape sans savoir où ni pourquoi. Optimiser votre tunnel est le moyen le plus systématique d'augmenter votre chiffre d'affaires.",
     examples: [
-      "Un cabinet de conseil crée un tunnel : article SEO > ebook gratuit > séquence email 7 jours > consultation gratuite > proposition : le taux de conversion visiteur > client passe de 0,3% à 1,8%.",
+      "Un cabinet de conseil crée un tunnel : article SEO > ebook gratuit > séquence email 2 semaines > consultation gratuite > proposition : le taux de conversion visiteur > client passe de 0,3% à 1,8%.",
       "Un e-commerce identifie via Google Analytics que 45% des paniers sont abandonnés au moment de la livraison : il ajoute la livraison gratuite à partir de 50€ et récupère 20% des abandons.",
       "Un SaaS met en place un tunnel automatisé : essai gratuit > onboarding email (5 emails sur 14 jours) > upgrade : le taux de conversion essai > payant passe de 8% à 19%.",
     ],
@@ -2584,7 +2584,7 @@ Chez ConvertiLab, tous nos sites sont sécurisés en HTTPS dès le premier jour 
       {
         question: "Un certificat SSL est-il gratuit ?",
         answer:
-          "Oui. Let's Encrypt fournit des certificats SSL gratuits, reconnus par tous les navigateurs. La plupart des hébergeurs modernes (Vercel, Netlify, OVH) les incluent automatiquement. Les certificats payants (50-500€/an) sont nécessaires uniquement pour la validation étendue (EV) qui affiche le nom de l'entreprise dans la barre d'adresse.",
+          "Oui. Let's Encrypt fournit des certificats SSL gratuits, reconnus par tous les navigateurs. La plupart des hébergeurs modernes (Vercel, Netlify, OVH) les incluent automatiquement. Les certificats payants (50-490€/an) sont nécessaires uniquement pour la validation étendue (EV) qui affiche le nom de l'entreprise dans la barre d'adresse.",
       },
       {
         question: "Mon site a besoin de HTTPS même sans e-commerce ?",

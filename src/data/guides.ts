@@ -62,7 +62,7 @@ export const guides: Guide[] = [
     faqItems: [
       {
         question: "Combien coûte la création d'un site internet professionnel ?",
-        answer: "Le coût varie selon la complexité : de 500€ pour une landing page à plusieurs milliers d'euros pour un site e-commerce. Chez ConvertiLab, nos sites vitrine démarrent à 500€ avec un accompagnement complet."
+        answer: "Le coût varie selon la complexité : de 490€ pour une landing page à plusieurs milliers d'euros pour un site e-commerce. Chez ConvertiLab, nos sites vitrine démarrent à 490€ avec un accompagnement complet."
       },
       {
         question: "Combien de temps faut-il pour créer un site internet ?",
@@ -114,7 +114,7 @@ export const guides: Guide[] = [
     faqItems: [
       {
         question: "Quel budget prévoir pour créer une boutique en ligne ?",
-        answer: "Comptez à partir de 800€ pour une boutique e-commerce fonctionnelle. Le budget varie selon le nombre de produits, les intégrations nécessaires et le niveau de personnalisation du design."
+        answer: "Comptez à partir de 1490€ pour une boutique e-commerce fonctionnelle. Le budget varie selon le nombre de produits, les intégrations nécessaires et le niveau de personnalisation du design."
       },
       {
         question: "Peut-on créer un e-commerce sans stock ?",
@@ -278,7 +278,7 @@ export const guides: Guide[] = [
       },
       {
         question: "Quel budget prévoir pour une agence web de qualité ?",
-        answer: "Un site vitrine professionnel coûte entre 500€ et 3000€ selon la complexité. Méfiez-vous des offres à moins de 300€ qui impliquent souvent des templates non personnalisés."
+        answer: "Un site vitrine professionnel coûte entre 490€ et 3000€ selon la complexité. Méfiez-vous des offres à moins de 300€ qui impliquent souvent des templates non personnalisés."
       }
     ],
     relatedService: "sites-web",
@@ -343,7 +343,7 @@ export const guides: Guide[] = [
     steps: [
       {
         title: "Définir votre objectif et votre budget",
-        content: "Avant de créer votre campagne Google Ads, définissez un objectif précis et mesurable. Souhaitez-vous générer des appels téléphoniques, des demandes de devis, des ventes en ligne ou du trafic vers votre site ? Chaque objectif nécessite un type de campagne différent. Définissez votre budget quotidien en fonction de votre capacité d'investissement. Commencez avec un budget test de 10-20€ par jour pendant 2 semaines pour collecter des données. Calculez votre coût d'acquisition client maximum acceptable : si un client vous rapporte 500€, vous pouvez investir jusqu'à 50-100€ pour l'acquérir. Configurez le suivi des conversions dès le départ, c'est indispensable pour mesurer votre ROI."
+        content: "Avant de créer votre campagne Google Ads, définissez un objectif précis et mesurable. Souhaitez-vous générer des appels téléphoniques, des demandes de devis, des ventes en ligne ou du trafic vers votre site ? Chaque objectif nécessite un type de campagne différent. Définissez votre budget quotidien en fonction de votre capacité d'investissement. Commencez avec un budget test de 10-20€ par jour pendant 2 semaines pour collecter des données. Calculez votre coût d'acquisition client maximum acceptable : si un client vous rapporte 490€, vous pouvez investir jusqu'à 50-100€ pour l'acquérir. Configurez le suivi des conversions dès le départ, c'est indispensable pour mesurer votre ROI."
       },
       {
         title: "Rechercher et sélectionner vos mots-clés",
@@ -351,7 +351,7 @@ export const guides: Guide[] = [
       },
       {
         title: "Rédiger des annonces qui convertissent",
-        content: "Vos annonces doivent capter l'attention et inciter au clic. Rédigez des titres percutants qui incluent votre mot-clé principal et votre proposition de valeur unique. Utilisez des chiffres concrets : « Devis en 24h », « À partir de 500€ », « +150 sites livrés ». Ajoutez un appel à l'action clair : « Demandez votre devis gratuit », « Réservez votre consultation ». Rédigez au moins 3 variantes d'annonces par groupe d'annonces pour tester ce qui fonctionne le mieux. Utilisez les extensions d'annonces pour maximiser la visibilité : extensions de liens annexes, d'accroche, d'appel, de lieu. Les extensions augmentent le taux de clic de 10 à 15% en moyenne. Respectez les politiques Google Ads pour éviter la désapprobation de vos annonces."
+        content: "Vos annonces doivent capter l'attention et inciter au clic. Rédigez des titres percutants qui incluent votre mot-clé principal et votre proposition de valeur unique. Utilisez des chiffres concrets : « Devis en 24h », « À partir de 490€ », « +150 sites livrés ». Ajoutez un appel à l'action clair : « Demandez votre devis gratuit », « Réservez votre consultation ». Rédigez au moins 3 variantes d'annonces par groupe d'annonces pour tester ce qui fonctionne le mieux. Utilisez les extensions d'annonces pour maximiser la visibilité : extensions de liens annexes, d'accroche, d'appel, de lieu. Les extensions augmentent le taux de clic de 10 à 15% en moyenne. Respectez les politiques Google Ads pour éviter la désapprobation de vos annonces."
       },
       {
         title: "Configurer le ciblage et les enchères",
@@ -486,7 +486,7 @@ export const guides: Guide[] = [
       },
       {
         question: "Combien coûte l'optimisation des conversions ?",
-        answer: "L'optimisation CRO est incluse dans notre processus de création. Pour un site existant, un audit CRO avec recommandations démarre à 500€."
+        answer: "L'optimisation CRO est incluse dans notre processus de création. Pour un site existant, un audit CRO avec recommandations démarre à 490€."
       },
       {
         question: "Quels outils utiliser pour mesurer les conversions ?",
@@ -511,7 +511,7 @@ export const guides: Guide[] = [
       },
       {
         title: "Comparer les devis intelligemment",
-        content: "Ne comparez pas uniquement les prix finaux. Vérifiez ce qui est inclus dans chaque devis : nombre de pages, responsive, SEO de base, formulaires, formation à la gestion du contenu. Comparez les technologies utilisées : un site WordPress à 500€ et un site Next.js à 500€ n'offrent pas les mêmes performances. Évaluez la qualité du portfolio de chaque prestataire. Vérifiez les conditions de propriété : êtes-vous propriétaire du code source et du design ? Comparez les coûts récurrents : certains prestataires proposent un prix initial bas mais des frais mensuels élevés. Demandez ce qui se passe en cas de dépassement du budget prévu. Attention aux devis qui ne mentionnent pas certains postes : ils les factureront en supplément."
+        content: "Ne comparez pas uniquement les prix finaux. Vérifiez ce qui est inclus dans chaque devis : nombre de pages, responsive, SEO de base, formulaires, formation à la gestion du contenu. Comparez les technologies utilisées : un site WordPress à 490€ et un site Next.js à 490€ n'offrent pas les mêmes performances. Évaluez la qualité du portfolio de chaque prestataire. Vérifiez les conditions de propriété : êtes-vous propriétaire du code source et du design ? Comparez les coûts récurrents : certains prestataires proposent un prix initial bas mais des frais mensuels élevés. Demandez ce qui se passe en cas de dépassement du budget prévu. Attention aux devis qui ne mentionnent pas certains postes : ils les factureront en supplément."
       },
       {
         title: "Identifier les signaux d'alerte",

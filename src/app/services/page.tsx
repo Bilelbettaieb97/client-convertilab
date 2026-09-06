@@ -6,11 +6,11 @@ import ServicesPageContent from "./ServicesPageContent";
 
 export const metadata: Metadata = {
   title: "Services Marketing Digital Paris : Sites Web, SEO, Google Ads",
-  description: "Agence marketing digital à Paris : création de sites web dès 500€, SEO, Google Ads, Meta Ads. +150 clients accompagnés, +280% de CA moyen. Devis gratuit sous 24h.",
+  description: "Agence marketing digital à Paris : création de sites web dès 490€, SEO, Google Ads, Meta Ads. +150 clients accompagnés, +280% de CA moyen. Devis gratuit sous 24h.",
   alternates: { canonical: `${SITE.url}/services` },
   openGraph: {
     title: "Services Marketing Digital Paris | ConvertiLab",
-    description: "Sites web dès 500€, SEO, Google Ads, Meta Ads. +150 clients, +280% de CA moyen. Devis gratuit sous 24h.",
+    description: "Sites web dès 490€, SEO, Google Ads, Meta Ads. +150 clients, +280% de CA moyen. Devis gratuit sous 24h.",
     url: `${SITE.url}/services`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],

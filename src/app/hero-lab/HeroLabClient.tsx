@@ -38,7 +38,7 @@ const clientTestimonials: Testimonial[] = [
   {
     name: "Marie Lefèvre",
     title: "Fondatrice — Papapret",
-    quote: "ConvertiLab a refait notre site en 7 jours. Résultat : +340% de leads en 3 mois. L'équipe est ultra réactive et professionnelle, je recommande à 100%.",
+    quote: "ConvertiLab a refait notre site en 2 semaines. Résultat : +340% de leads en 3 mois. L'équipe est ultra réactive et professionnelle, je recommande à 100%.",
     avatarSrc: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=80",
     rating: 5.0,
   },

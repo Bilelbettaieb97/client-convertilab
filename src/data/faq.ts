@@ -6,7 +6,7 @@ export interface FAQItem {
 export const faqItems: FAQItem[] = [
   {
     question: "Combien coûte la création d'un site web ?",
-    answer: "Nos tarifs démarrent à 500€ pour une landing page et 500€ pour un site vitrine complet. Le prix dépend du nombre de pages, des fonctionnalités et du design souhaité. Nous vous fournissons un devis détaillé et transparent sous 24h.",
+    answer: "Nos tarifs démarrent à 490€ pour une landing page et 490€ pour un site vitrine complet. Le prix dépend du nombre de pages, des fonctionnalités et du design souhaité. Nous vous fournissons un devis détaillé et transparent sous 24h.",
   },
   {
     question: "En combien de temps mon site sera-t-il livré ?",

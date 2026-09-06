@@ -39,11 +39,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: [
-      `Création de Site Internet pour ${sector.name} — dès 500€ en 7 jours`,
-      `Site Web ${sector.name} : Création Professionnelle dès 500€`,
+      `Création de Site Internet pour ${sector.name} — dès 490€ en 2 semaines`,
+      `Site Web ${sector.name} : Création Professionnelle dès 490€`,
       `Site Internet ${sector.name} — Conçu pour Attirer vos Clients`,
     ][sector.slug.length % 3],
-    description: `Création de site internet pour ${sector.name.toLowerCase()} : site professionnel dès 500€, livré en 7 jours, optimisé Google. ${sector.description.slice(0, 100)}`,
+    description: `Création de site internet pour ${sector.name.toLowerCase()} : site professionnel dès 490€, livré en 2 semaines, optimisé Google. ${sector.description.slice(0, 100)}`,
     keywords: `site web ${sector.name.toLowerCase()}, création site internet ${sector.name.toLowerCase()}, site vitrine ${sector.name.toLowerCase()}`,
     alternates: { canonical: `${SITE.url}/solutions/${sector.slug}` },
     openGraph: {
@@ -222,7 +222,7 @@ export default async function SectorPage({ params }: Props) {
           {/* Badges confiance */}
           <div className="flex flex-wrap gap-3 justify-center mt-8">
             <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border">
-              <Zap className="w-4 h-4 text-purple-500" /> Livré en 7 jours
+              <Zap className="w-4 h-4 text-purple-500" /> Livré en 2 semaines
             </span>
             <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border">
               <Shield className="w-4 h-4 text-green-500" /> {priceLabel}
@@ -515,7 +515,7 @@ export default async function SectorPage({ params }: Props) {
             ))}
           </div>
           <p className="text-center text-sm text-gray-500 mt-10">
-            Délai moyen : 7 jours ouvrés de la signature au lancement.
+            Délai moyen : 2 semaines de la signature au lancement.
           </p>
         </div>
       </section>
@@ -661,7 +661,7 @@ export default async function SectorPage({ params }: Props) {
                 Devis gratuit et personnalisé sous 24h.
               </p>
               <p className="text-white/70 mb-8">
-                {priceLabel} &middot; Livraison en 7 jours &middot; Satisfait ou remboursé
+                {priceLabel} &middot; Livraison en 2 semaines &middot; Satisfait ou remboursé
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button

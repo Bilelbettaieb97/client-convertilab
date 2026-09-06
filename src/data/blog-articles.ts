@@ -102,7 +102,7 @@ Chez ConvertiLab, nous optimisons chaque site pour que le formulaire de contact 
 
 ## Quel est le ROI d'un site web professionnel pour un artisan ?
 
-Le ROI d'un site web professionnel pour un artisan est positif dès le premier client signé dans la quasi-totalité des cas. Pour un site créé entre 800€ et 2 000€, un seul client supplémentaire par mois suffit à l'amortir en quelques semaines.
+Le ROI d'un site web professionnel pour un artisan est positif dès le premier client signé dans la quasi-totalité des cas. Pour un site créé entre 1490€ et 2 000€, un seul client supplémentaire par mois suffit à l'amortir en quelques semaines.
 
 Calcul concret pour un plombier en Île-de-France :
 - 1 200 personnes cherchent "plombier [ville]" par mois sur Google
@@ -111,7 +111,7 @@ Calcul concret pour un plombier en Île-de-France :
 - Taux de signature : 30% = 11 nouveaux clients par mois
 - Valeur moyenne d'une intervention : 450€ = **4 950€ de CA mensuel**
 
-Pour un site à 1 500€, le retour sur investissement est atteint en moins de 2 semaines de travail supplémentaire.
+Pour un site à 1 490€, le retour sur investissement est atteint en moins de 2 semaines de travail supplémentaire.
 
 ## Pourquoi le référencement Google est-il un avantage durable ?
 
@@ -135,11 +135,11 @@ Dans ces secteurs, un site professionnel vous place instantanément dans le top 
 
 ### Combien coûte un site web professionnel pour une petite entreprise ?
 
-Un site web professionnel pour une petite entreprise coûte entre 800€ et 3 500€ selon le nombre de pages, les fonctionnalités (formulaire, réservation, e-commerce) et le niveau de personnalisation. Chez ConvertiLab, nos sites vitrine démarrent à 990€ avec formulaire de contact, SEO de base et livraison en 7 jours.
+Un site web professionnel pour une petite entreprise coûte entre 1490€ et 3 490€ selon le nombre de pages, les fonctionnalités (formulaire, réservation, e-commerce) et le niveau de personnalisation. Chez ConvertiLab, nos sites vitrine démarrent à 990€ avec formulaire de contact, SEO de base et livraison en 2 semaines.
 
 ### Combien de temps faut-il pour créer un site web ?
 
-La création d'un site web professionnel prend entre 5 et 15 jours ouvrés selon la complexité. Un site vitrine standard (5 à 8 pages) est livré en 7 jours chez ConvertiLab. Un site e-commerce ou une application web prend 3 à 6 semaines.
+La création d'un site web professionnel prend entre 5 et 15 jours ouvrés selon la complexité. Un site vitrine standard (5 à 8 pages) est livré en 2 semaines chez ConvertiLab. Un site e-commerce ou une application web prend 3 à 6 semaines.
 
 ### Est-ce qu'un site web remplace les réseaux sociaux ?
 
@@ -199,7 +199,7 @@ Testez votre site sur [Google PageSpeed Insights](https://pagespeed.web.dev) —
 Votre message d'accueil doit être compris en 3 secondes parce que c'est le temps dont dispose un visiteur pour décider s'il est au bon endroit. Si votre proposition de valeur n'est pas immédiatement claire, il part chercher un concurrent. Un message ambigu ou trop générique crée une incertitude que la majorité des prospects ne prend pas le temps de lever.
 
 - ❌ "Bienvenue sur notre site. Nous sommes à votre service."
-- ✅ "Site web professionnel livré en 7 jours à partir de 990€ — 150 clients satisfaits en Île-de-France."
+- ✅ "Site web professionnel livré en 2 semaines à partir de 990€ — 150 clients satisfaits en Île-de-France."
 
 Votre proposition de valeur doit répondre en une phrase à : qui vous êtes, ce que vous faites, pour qui et avec quel bénéfice concret.
 
@@ -246,7 +246,7 @@ Preuves sociales à afficher par ordre d'impact :
 - Avis Trustpilot ou Google avec note moyenne et nombre total (ex : 4.9/5 sur 15 avis)
 - Témoignages avec photo, prénom complet et ville
 - Logos de clients reconnus dans votre secteur
-- Chiffres clés : "150+ clients accompagnés", "7 jours de délai moyen"
+- Chiffres clés : "150+ clients accompagnés", "2 semaines de délai moyen"
 
 Placez ces éléments immédiatement après votre CTA principal pour maximiser l'effet de réassurance au moment de la décision.
 
@@ -353,7 +353,7 @@ C'est le facteur le plus déterminant pour votre domaine de pertinence :
 
 **Photos et posts réguliers**
 
-Les fiches avec photos reçoivent **42% plus de demandes d'itinéraire** et **35% plus de clics** vers le site. Publiez 1 à 2 posts par semaine : chaque post reste visible 7 jours et signale à Google que votre activité est réelle et récente.
+Les fiches avec photos reçoivent **42% plus de demandes d'itinéraire** et **35% plus de clics** vers le site. Publiez 1 à 2 posts par semaine : chaque post reste visible 2 semaines et signale à Google que votre activité est réelle et récente.
 
 ## Comment collecter des avis Google pour améliorer son classement local ?
 
@@ -449,9 +449,9 @@ Avoir plus d'avis aide, mais ce n'est pas le seul facteur. La récence des avis 
     publishedAt: "2026-02-10",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
     tags: ["combien coûte un site web", "prix site web PME", "budget création site web", "tarif agence web", "site web artisan prix"],
-    content: `Un site web professionnel pour une petite entreprise coûte en 2026 entre 500€ et 3 000€ pour un site vitrine, entre 1 500€ et 8 000€ pour un site e-commerce et entre 5 000€ et 50 000€ pour une application ou un site sur-mesure. Ces fourchettes varient selon le type de prestataire, les technologies utilisées et les fonctionnalités demandées.
+    content: `Un site web professionnel pour une petite entreprise coûte en 2026 entre 490€ et 3 000€ pour un site vitrine, entre 1 490€ et 8 000€ pour un site e-commerce et entre 5 000€ et 50 000€ pour une application ou un site sur-mesure. Ces fourchettes varient selon le type de prestataire, les technologies utilisées et les fonctionnalités demandées.
 
-Chez ConvertiLab, nos sites vitrine pour artisans et commerçants démarrent à **990€**, livrés en 7 jours avec SEO de base intégré. Voici la grille complète et transparente pour comprendre ce que vous payez réellement.
+Chez ConvertiLab, nos sites vitrine pour artisans et commerçants démarrent à **990€**, livrés en 2 semaines avec SEO de base intégré. Voici la grille complète et transparente pour comprendre ce que vous payez réellement.
 
 [Voir les tarifs détaillés ConvertiLab](/prix)
 
@@ -476,26 +476,26 @@ Le prix d'un site web varie selon 4 facteurs principaux : la complexité du proj
 | Blog SEO | +200 à +600€ |
 | Formulaire multi-étapes | +300 à +600€ |
 | Réservation en ligne | +500 à +2 000€ |
-| Paiement en ligne (Stripe) | +500 à +1 500€ |
+| Paiement en ligne (Stripe) | +500 à +1 490€ |
 | Espace membre / client | +1 000 à +3 000€ |
 | Catalogue produits e-commerce | +1 500 à +5 000€ |
 
 ## Quel est le prix d'un site vitrine professionnel en 2026 ?
 
-Un site vitrine professionnel en 2026 coûte entre 500€ et 3 000€ selon le prestataire et le niveau de finition. C'est le type de site le plus courant pour les artisans, commerçants, professions libérales et consultants. Il comprend généralement 5 à 10 pages, un formulaire de contact, une optimisation SEO de base et une adaptation mobile.
+Un site vitrine professionnel en 2026 coûte entre 490€ et 3 000€ selon le prestataire et le niveau de finition. C'est le type de site le plus courant pour les artisans, commerçants, professions libérales et consultants. Il comprend généralement 5 à 10 pages, un formulaire de contact, une optimisation SEO de base et une adaptation mobile.
 
 | Solution | Prix one-shot | Mensuel récurrent |
 |----------|--------------|-------------------|
 | Wix / Jimdo (DIY) | 0€ | 15-25€/mois |
-| WordPress + thème premium | 500-1 500€ | Hébergement 10-20€/mois |
+| WordPress + thème premium | 500-1 490€ | Hébergement 10-20€/mois |
 | Agence Next.js (ex : ConvertiLab) | 990-2 000€ | Hébergement 20€/mois |
 | Agence premium | 3 000-8 000€ | Maintenance 100-300€/mois |
 
-Chez ConvertiLab, le site vitrine standard est à **990€** tout compris (design, développement, SEO on-page, formulaire de contact, livraison en 7 jours). Nos clients artisans et commerçants le rentabilisent en moyenne en 6 à 8 semaines avec leur premier client acquis via Google.
+Chez ConvertiLab, le site vitrine standard est à **990€** tout compris (design, développement, SEO on-page, formulaire de contact, livraison en 2 semaines). Nos clients artisans et commerçants le rentabilisent en moyenne en 6 à 8 semaines avec leur premier client acquis via Google.
 
 ## Combien coûte un site e-commerce pour démarrer la vente en ligne ?
 
-Un site e-commerce pour démarrer la vente en ligne coûte entre 800€ et 5 000€ selon la solution choisie et la taille du catalogue. Shopify est la solution la moins chère à créer mais la plus chère à l'usage sur le long terme. Un site e-commerce sur-mesure est plus cher à créer mais n'a pas de frais de commission sur les ventes.
+Un site e-commerce pour démarrer la vente en ligne coûte entre 1490€ et 5 000€ selon la solution choisie et la taille du catalogue. Shopify est la solution la moins chère à créer mais la plus chère à l'usage sur le long terme. Un site e-commerce sur-mesure est plus cher à créer mais n'a pas de frais de commission sur les ventes.
 
 | Solution | Création | Mensuel | Commission ventes |
 |----------|----------|---------|-------------------|
@@ -540,7 +540,7 @@ Faites appel à un prestataire si :
 
 Les 5 pièges à éviter lors de la création d'un site web sont : choisir uniquement sur le prix, négliger le contenu, oublier la maintenance, ignorer le SEO dès la création et signer sans contrat précis. Ces erreurs coûtent souvent beaucoup plus cher à corriger après coup qu'elles n'ont fait économiser au départ.
 
-**1. Choisir sur le prix seul** : un site à 200€ qui ne génère aucun client vous coûte plus cher qu'un site à 1 500€ qui en génère 3 par mois.
+**1. Choisir sur le prix seul** : un site à 200€ qui ne génère aucun client vous coûte plus cher qu'un site à 1 490€ qui en génère 3 par mois.
 
 **2. Négliger le contenu** : la plupart des prestataires livrent un site "vide". Prévoyez du temps pour rédiger vos textes ou un budget copywriting (300 à 600€).
 
@@ -554,7 +554,7 @@ Les 5 pièges à éviter lors de la création d'un site web sont : choisir uniqu
 
 ## FAQ — Questions fréquentes sur le prix d'un site web
 
-### Un site web à 500€ est-il vraiment professionnel ?
+### Un site web à 490€ est-il vraiment professionnel ?
 
 Oui, un site web à 500-1 000€ peut être parfaitement professionnel si le prestataire utilise les bonnes technologies et maîtrise le SEO. Le prix dépend du modèle commercial du prestataire, pas forcément de la qualité. Chez ConvertiLab, nos sites à partir de 990€ sont construits en Next.js avec les mêmes performances qu'un site à 5 000€ — la différence est le nombre d'heures de personnalisation.
 
@@ -691,7 +691,7 @@ Oui, le design impacte indirectement le référencement Google via les signaux c
 
 ### Combien coûte une modernisation du design d'un site existant ?
 
-Une modernisation partielle du design (couleurs, typographie, CTA, photos) coûte entre 300€ et 1 000€ chez un prestataire qualifié. Une refonte complète de l'interface avec recodage complet coûte entre 1 500€ et 4 000€ pour un site vitrine. Chez ConvertiLab, nous proposons des audits design gratuits avant tout devis.
+Une modernisation partielle du design (couleurs, typographie, CTA, photos) coûte entre 300€ et 1 000€ chez un prestataire qualifié. Une refonte complète de l'interface avec recodage complet coûte entre 1 490€ et 4 000€ pour un site vitrine. Chez ConvertiLab, nous proposons des audits design gratuits avant tout devis.
 
 ### Un beau design compense-t-il un mauvais contenu ou un mauvais SEO ?
 
@@ -1275,7 +1275,7 @@ Trois métriques suffisent pour piloter une campagne PME : le CPC réel (coût p
 
 ### Comment un artisan peut-il rentabiliser Google Ads avec un petit budget ?
 
-Un artisan peut rentabiliser Google Ads avec 300 à 500€/mois en ciblant exclusivement des mots-clés avec forte intention d'achat ("plombier urgence [ville]", "électricien devis [ville]"), en limitant la diffusion à un rayon de 20 km et en créant une page dédiée avec son numéro en click-to-call. Chez ConvertiLab, un électricien de la région parisienne a généré 8 devis en 2 semaines avec 400€ investis, soit un coût par lead de 50€ pour des chantiers à 800€ minimum. Le ROI était positif dès la première semaine de diffusion.
+Un artisan peut rentabiliser Google Ads avec 300 à 500€/mois en ciblant exclusivement des mots-clés avec forte intention d'achat ("plombier urgence [ville]", "électricien devis [ville]"), en limitant la diffusion à un rayon de 20 km et en créant une page dédiée avec son numéro en click-to-call. Chez ConvertiLab, un électricien de la région parisienne a généré 8 devis en 2 semaines avec 400€ investis, soit un coût par lead de 50€ pour des chantiers à 1490€ minimum. Le ROI était positif dès la première semaine de diffusion.
 
 [Simuler la rentabilité de vos campagnes gratuitement →](/estimateur-ads)`
   },
@@ -1499,7 +1499,7 @@ La fréquence de mise à jour dépend du rythme de publication de votre site. Po
 
 ### Comment savoir si Google a bien indexé mes pages après la soumission du sitemap ?
 
-Pour vérifier l'indexation, tapez "site:domain.com" dans Google et comptez les résultats retournés. Une méthode plus précise est Google Search Console : dans le rapport "Pages", comparez le nombre d'URLs "soumises via sitemap" vs "indexées". Un écart important indique des problèmes à investiguer — pages en noindex, contenu dupliqué, erreurs de crawl, ou contenu jugé insuffisant pour mériter l'indexation. Chez ConvertiLab, lors de refontes SEO, nous avons systématiquement augmenté le taux d'indexation de 70% à 95%+ en nettoyant les sitemaps et en corrigeant les robots.txt. Le délai moyen pour qu'une nouvelle page apparaisse dans Google après soumission du sitemap est de 3 à 7 jours pour les sites avec un bon historique de crawl.
+Pour vérifier l'indexation, tapez "site:domain.com" dans Google et comptez les résultats retournés. Une méthode plus précise est Google Search Console : dans le rapport "Pages", comparez le nombre d'URLs "soumises via sitemap" vs "indexées". Un écart important indique des problèmes à investiguer — pages en noindex, contenu dupliqué, erreurs de crawl, ou contenu jugé insuffisant pour mériter l'indexation. Chez ConvertiLab, lors de refontes SEO, nous avons systématiquement augmenté le taux d'indexation de 70% à 95%+ en nettoyant les sitemaps et en corrigeant les robots.txt. Le délai moyen pour qu'une nouvelle page apparaisse dans Google après soumission du sitemap est de 3 à 2 semaines pour les sites avec un bon historique de crawl.
 
 [Générer mon robots.txt et sitemap XML gratuitement →](/generateur-robots-sitemap)`
   },
@@ -1737,7 +1737,7 @@ Avant de contacter une agence web, il faut définir 4 éléments clés : le type
 
 Les 4 questions à clarifier avant tout devis :
 - **Quel type de site ?** Site vitrine, landing page, e-commerce, refonte ?
-- **Quel budget réaliste ?** Les prix varient de 500€ (landing page simple) à 50 000€ (e-commerce complexe)
+- **Quel budget réaliste ?** Les prix varient de 490€ (landing page simple) à 50 000€ (e-commerce complexe)
 - **Quels objectifs ?** Générer des leads, vendre en ligne, renforcer l'image de marque ?
 - **Quel délai ?** Certaines agences ont 2 à 3 mois d'attente
 
@@ -1761,7 +1761,7 @@ Une agence sérieuse suit un process structuré : brief → maquette → dévelo
 
 ### 4. Le rapport qualité-prix du devis
 
-Comparez le contenu des devis, pas seulement le total. Un devis à 990€ tout inclus (hébergement, SEO de base, maintenance 3 mois) peut être meilleur qu'un devis à 500€ qui facture chaque ajustement en plus.
+Comparez le contenu des devis, pas seulement le total. Un devis à 990€ tout inclus (hébergement, SEO de base, maintenance 3 mois) peut être meilleur qu'un devis à 490€ qui facture chaque ajustement en plus.
 
 ### 5. Le support et la maintenance post-livraison
 
@@ -1804,9 +1804,9 @@ Un devis flou est toujours un signal d'alarme. Une agence sérieuse peut justifi
 
 ### Combien coûte une agence web sérieuse en 2026 ?
 
-Une agence web sérieuse facture entre 600€ et 2 500€ pour un site vitrine professionnel pour une PME ou un artisan, et entre 3 000€ et 15 000€ pour un e-commerce complet. Chez ConvertiLab, nos sites vitrines commencent à 990€ tout inclus — hébergement 1 an, SEO de base et formulaire de contact. En dessous de 300-400€, vous achetez un template revendu, pas un site sur-mesure.
+Une agence web sérieuse facture entre 600€ et 2 490€ pour un site vitrine professionnel pour une PME ou un artisan, et entre 3 000€ et 15 000€ pour un e-commerce complet. Chez ConvertiLab, nos sites vitrines commencent à 990€ tout inclus — hébergement 1 an, SEO de base et formulaire de contact. En dessous de 300-400€, vous achetez un template revendu, pas un site sur-mesure.
 
-Pour contextualiser : si votre site génère un seul client supplémentaire par mois à 500€ de valeur vie, votre investissement de 1 000€ est rentabilisé en 2 mois. Posez-vous cette question avant de négocier : est-ce que je veux un site pas cher ou un site rentable ? Les deux objectifs ne sont pas contradictoires, mais ils ne s'achètent pas au même endroit.
+Pour contextualiser : si votre site génère un seul client supplémentaire par mois à 490€ de valeur vie, votre investissement de 1 000€ est rentabilisé en 2 mois. Posez-vous cette question avant de négocier : est-ce que je veux un site pas cher ou un site rentable ? Les deux objectifs ne sont pas contradictoires, mais ils ne s'achètent pas au même endroit.
 
 ### Faut-il choisir une agence locale ou une agence en remote ?
 
@@ -1908,7 +1908,7 @@ Hésitait entre un site vitrine pour générer des devis et une boutique pour ve
 Vendait exclusivement sur les marchés. Voulait élargir sa distribution. Choix : e-commerce sur Shopify intégré à son site vitrine ConvertiLab. Résultat : 40% de son chiffre d'affaires réalisé en ligne 6 mois après le lancement, sans marché supplémentaire.
 
 **Cas 3 : Coach en développement personnel à Paris**
-Proposait des coachings individuels (sur-mesure, donc vitrine) et des formations en ligne à prix fixe (e-commerce). Choix : site vitrine avec page de vente dédiée pour les formations, intégrée à Stripe Payment Link. Résultat : solution hybride à 2 500€ total au lieu de 8 000€ pour un e-commerce complet.
+Proposait des coachings individuels (sur-mesure, donc vitrine) et des formations en ligne à prix fixe (e-commerce). Choix : site vitrine avec page de vente dédiée pour les formations, intégrée à Stripe Payment Link. Résultat : solution hybride à 2 490€ total au lieu de 8 000€ pour un e-commerce complet.
 
 Ces trois exemples illustrent que le bon choix dépend toujours du modèle commercial, jamais du secteur.
 
@@ -2164,11 +2164,11 @@ Un site web classique a plusieurs pages et plusieurs objectifs : informer, prés
 
 ### Combien coûte une landing page professionnelle en 2026 ?
 
-Une landing page professionnelle coûte entre 600 et 2 500€ chez ConvertiLab selon la complexité (nombre de sections, intégrations, formulaire multi-étapes). Cet investissement est généralement rentabilisé en 4 à 8 semaines si la page est correctement sourcée en trafic. Une landing page à 1 000€ qui génère 3 leads par semaine à 300€ de valeur chacun se rentabilise en moins d'un mois.
+Une landing page professionnelle coûte entre 600 et 2 490€ chez ConvertiLab selon la complexité (nombre de sections, intégrations, formulaire multi-étapes). Cet investissement est généralement rentabilisé en 4 à 8 semaines si la page est correctement sourcée en trafic. Une landing page à 1 000€ qui génère 3 leads par semaine à 300€ de valeur chacun se rentabilise en moins d'un mois.
 
 ### Quelle longueur doit avoir une landing page pour bien convertir ?
 
-La longueur idéale dépend de la complexité de l'offre et du niveau de confiance préalable du visiteur. Pour une offre simple connue (ex. : nettoyage de vitres), 500 à 800 mots suffisent. Pour une offre premium ou une décision d'achat engageante (formation à 1 500€, refonte de site), 1 500 à 2 500 mots permettent de lever toutes les objections. La règle : la page doit être assez longue pour convaincre, mais chaque section doit mériter sa place. Si vous pouvez couper un paragraphe sans perdre de conversion, coupez-le.
+La longueur idéale dépend de la complexité de l'offre et du niveau de confiance préalable du visiteur. Pour une offre simple connue (ex. : nettoyage de vitres), 500 à 800 mots suffisent. Pour une offre premium ou une décision d'achat engageante (formation à 1 490€, refonte de site), 1 500 à 2 500 mots permettent de lever toutes les objections. La règle : la page doit être assez longue pour convaincre, mais chaque section doit mériter sa place. Si vous pouvez couper un paragraphe sans perdre de conversion, coupez-le.
 
 ### Faut-il une landing page différente pour chaque campagne publicitaire ?
 
@@ -2248,7 +2248,7 @@ Cas client ConvertiLab : un cabinet de kinésithérapie à Toulouse avait un sit
 
 ### Combien coûte une refonte de site web en 2026 ?
 
-Chez ConvertiLab, une refonte complète d'un site vitrine coûte entre 990€ et 1 500€ selon le nombre de pages et les fonctionnalités. Un site e-commerce ou un projet plus complexe démarre à 2 500€. Ce budget inclut l'audit de l'existant, le plan de redirections, le nouveau design, le développement et la mise en ligne. Le ROI moyen d'une refonte réussie est une reprise du trafic organique de +40 à +80% dans les 3 mois suivants.
+Chez ConvertiLab, une refonte complète d'un site vitrine coûte entre 990€ et 1 490€ selon le nombre de pages et les fonctionnalités. Un site e-commerce ou un projet plus complexe démarre à 2 490€. Ce budget inclut l'audit de l'existant, le plan de redirections, le nouveau design, le développement et la mise en ligne. Le ROI moyen d'une refonte réussie est une reprise du trafic organique de +40 à +80% dans les 3 mois suivants.
 
 ### Combien de temps dure une refonte de site web ?
 
@@ -2382,7 +2382,7 @@ La vraie question n'est pas "app ou pas app" mais "mes clients ont-ils un compor
     publishedAt: "2026-04-08",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
     tags: ["prix création site internet 2026", "coût site web vitrine PME", "tarif agence web France", "budget site web artisan", "devis site internet gratuit"],
-    content: `La question "combien coûte un site internet ?" est la plus fréquente chez les entrepreneurs qui veulent se lancer en ligne. La vraie réponse : un site vitrine professionnel coûte entre 600€ et 3 000€, une landing page entre 600€ et 2 500€, et un site e-commerce entre 3 000€ et 15 000€ pour un projet PME standard. Les fourchettes "5 000€ à 50 000€" publiées par certaines agences sont réelles, mais concernent des projets sur mesure à grande échelle.
+    content: `La question "combien coûte un site internet ?" est la plus fréquente chez les entrepreneurs qui veulent se lancer en ligne. La vraie réponse : un site vitrine professionnel coûte entre 600€ et 3 000€, une landing page entre 600€ et 2 490€, et un site e-commerce entre 3 000€ et 15 000€ pour un projet PME standard. Les fourchettes "5 000€ à 50 000€" publiées par certaines agences sont réelles, mais concernent des projets sur mesure à grande échelle.
 
 Chez ConvertiLab, nos tarifs commencent à 990€ tout inclus pour un site vitrine complet (hébergement 1 an, SEO de base, formulaire de contact). Ces prix sont transparents et disponibles sur notre [page tarifs](/prix).
 
@@ -2411,7 +2411,7 @@ Les 5 facteurs qui font varier le prix d'un site web à la hausse sont : le nive
 
 - **Design sur mesure** : 2 à 5 fois plus cher qu'un design template, mais meilleure différenciation concurrentielle
 - **Contenu rédactionnel** : représente 15 à 25% du budget total — souvent sous-estimé
-- **Fonctionnalités sur mesure** : espace membre, calculateur de devis, chatbot, intégrations API (+500€ à +3 000€ chacune)
+- **Fonctionnalités sur mesure** : espace membre, calculateur de devis, chatbot, intégrations API (+490€ à +3 000€ chacune)
 - **Technologie** : WordPress moins cher à développer mais plus coûteux en maintenance à 3 ans ; Next.js l'inverse
 - **Niveau de service** : le devis inclut-il hébergement, SSL, maintenance, formation ? Comparez sur une base identique
 
@@ -2434,7 +2434,7 @@ Les coûts cachés à anticiper pour son site web sont : l'hébergement (10 à 5
 
 **Chez ConvertiLab :** l'hébergement est inclus la première année dans tous nos forfaits. Pas de surprise.
 
-Illustration du coût total sur 3 ans : un site WordPress à 1 500€ avec hébergement séparé (120€/an), maintenance (600€/an), mises à jour de plugins (250€/an) revient à environ 3 970€ sur 3 ans. Un site ConvertiLab à 1 490€ (site + offre mensuelle maintenance 33€/mois) revient à 2 678€ sur 3 ans — pour un résultat de meilleure qualité. Le prix visible en ligne est rarement le coût réel : regardez toujours sur la durée.
+Illustration du coût total sur 3 ans : un site WordPress à 1 490€ avec hébergement séparé (120€/an), maintenance (600€/an), mises à jour de plugins (250€/an) revient à environ 3 970€ sur 3 ans. Un site ConvertiLab à 1 490€ (site + offre mensuelle maintenance 33€/mois) revient à 2 678€ sur 3 ans — pour un résultat de meilleure qualité. Le prix visible en ligne est rarement le coût réel : regardez toujours sur la durée.
 
 ## Comment optimiser son budget site web sans sacrifier la qualité ?
 
@@ -2443,7 +2443,7 @@ Pour optimiser son budget site web sans sacrifier la qualité, il faut appliquer
 1. **Lancer un MVP** : créez avec les 5 pages essentielles, ajoutez les autres en fonction du trafic
 2. **Fournir le contenu vous-même** : vous connaissez mieux votre métier — rédigez les textes, l'agence les optimise
 3. **Choisir une solution évolutive** : un site Next.js de 990€ peut évoluer sans refonte pendant 5-7 ans
-4. **Comparer sur 3 ans** : un site WordPress à 1 500€ peut coûter 3 000€ en maintenance sur 3 ans vs un site ConvertiLab à 990€ avec maintenance incluse 1 an
+4. **Comparer sur 3 ans** : un site WordPress à 1 490€ peut coûter 3 000€ en maintenance sur 3 ans vs un site ConvertiLab à 990€ avec maintenance incluse 1 an
 
 Découvrez aussi notre [offre mensuelle](/offre-mensuelle) à partir de 39€/mois tout inclus.
 
@@ -2457,13 +2457,13 @@ Techniquement oui avec Wix ou WordPress.com gratuit, mais ce n'est pas recommand
 
 Le paiement en une fois revient moins cher au total (vous évitez les intérêts implicites). Mais si votre trésorerie est limitée, notre offre mensuelle (à partir de 39€/mois) permet de démarrer avec un investissement minimal. Les deux modèles sont valides — choisissez selon votre situation financière, pas selon ce qui semble le moins cher en apparence.
 
-Un point souvent négligé : la déductibilité fiscale. Les frais de création de site web sont déductibles en tant que charges d'exploitation (ou amortissables en immobilisation) pour les auto-entrepreneurs et les sociétés. Concrètement, un site à 990€ peut ne vous coûter que 700 à 800€ nets d'impôt. Consultez votre expert-comptable pour optimiser ce poste.
+Un point souvent négligé : la déductibilité fiscale. Les frais de création de site web sont déductibles en tant que charges d'exploitation (ou amortissables en immobilisation) pour les auto-entrepreneurs et les sociétés. Concrètement, un site à 990€ peut ne vous coûter que 700 à 1490€ nets d'impôt. Consultez votre expert-comptable pour optimiser ce poste.
 
 Sur le plan pratique : si vous êtes en début d'activité et cherchez à minimiser le risque, commencez par l'offre mensuelle ConvertiLab (39€/mois) — vous obtenez un site professionnel sans investissement initial important, et vous pouvez évoluer vers la formule complète une fois les premières rentrées d'argent confirmées.
 
 ### Quand un devis à bas prix doit-il alerter ?
 
-Un devis anormalement bas (moins de 500€ pour un "site complet sur mesure") est systématiquement un signal d'alarme. Cela indique soit un template revendu sans personnalisation réelle, soit une externalisation offshore sans contrôle qualité, soit un prestataire qui sous-estime le travail et livrera quelque chose d'incomplet. Le test simple : demandez à voir 5 sites récents qu'ils ont livrés, et testez-les sur mobile et PageSpeed. La réponse arrive vite. En 2026, la transparence est la marque des agences sérieuses — les tarifs flous sont un signal d'alerte autant que les prix cassés.
+Un devis anormalement bas (moins de 490€ pour un "site complet sur mesure") est systématiquement un signal d'alarme. Cela indique soit un template revendu sans personnalisation réelle, soit une externalisation offshore sans contrôle qualité, soit un prestataire qui sous-estime le travail et livrera quelque chose d'incomplet. Le test simple : demandez à voir 5 sites récents qu'ils ont livrés, et testez-les sur mobile et PageSpeed. La réponse arrive vite. En 2026, la transparence est la marque des agences sérieuses — les tarifs flous sont un signal d'alerte autant que les prix cassés.
 
 ### Le prix d'un site web inclut-il le SEO ?
 
@@ -2616,14 +2616,14 @@ Les différences entre hébergement mutualisé, VPS et Vercel se résument à 3 
 | Mutualisé | 3-15€ | Limitée | Aucune | Blogs personnels |
 | VPS | 20-100€ | Bonne | Avancée | Apps complexes |
 | Cloud (Vercel/Netlify) | 0-20€ | Excellente | Faible | Sites Next.js/React |
-| Dédié | 100-500€ | Maximale | Experte | E-commerce 50k+ visites |
+| Dédié | 100-490€ | Maximale | Experte | E-commerce 50k+ visites |
 | Supabase + Vercel | 0-25€ | Excellente | Modérée | SaaS, apps avec BDD |
 
 **Hébergement mutualisé :** votre site partage un serveur avec des centaines d'autres sites. Prix bas (3-15€/mois), gestion minimale, mais performances limitées et imprévisibles. À éviter pour tout projet professionnel qui doit charger en moins de 2 secondes.
 
 **VPS (Serveur Privé Virtuel) :** ressources dédiées garanties (CPU, RAM, stockage). Prix 20-100€/mois, performances solides, mais requiert des compétences en administration serveur.
 
-**Hébergement dédié :** serveur entier pour votre site (100-500€+/mois). Performances maximales, mais coût élevé et surdimensionné pour la grande majorité des sites PME.
+**Hébergement dédié :** serveur entier pour votre site (100-490€+/mois). Performances maximales, mais coût élevé et surdimensionné pour la grande majorité des sites PME.
 
 **Cloud (AWS, Google Cloud, Azure) :** ressources qui s'adaptent automatiquement au trafic. Puissant, mais facture imprévisible et complexité DevOps élevée.
 
@@ -2895,7 +2895,7 @@ Pour un site neuf, comptez 6 à 12 mois avant de voir des positions stables sur 
 
 ### Le SEO est-il vraiment gratuit par rapport à la publicité ?
 
-Le trafic généré par le SEO est gratuit (vous ne payez pas au clic), mais le travail d'optimisation représente un investissement en temps ou en budget si vous faites appel à un professionnel. Sur 12 mois, un article SEO bien optimisé continue d'attirer des visiteurs sans coût supplémentaire, alors qu'une campagne Google Ads s'arrête dès que vous coupez le budget. Le SEO est le canal avec le meilleur ROI à 18-24 mois. Pour un artisan ou un prestataire de services local, un investissement de 500€ dans un audit et une optimisation SEO peut générer des leads pendant 3 à 5 ans sans coût additionnel.
+Le trafic généré par le SEO est gratuit (vous ne payez pas au clic), mais le travail d'optimisation représente un investissement en temps ou en budget si vous faites appel à un professionnel. Sur 12 mois, un article SEO bien optimisé continue d'attirer des visiteurs sans coût supplémentaire, alors qu'une campagne Google Ads s'arrête dès que vous coupez le budget. Le SEO est le canal avec le meilleur ROI à 18-24 mois. Pour un artisan ou un prestataire de services local, un investissement de 490€ dans un audit et une optimisation SEO peut générer des leads pendant 3 à 5 ans sans coût additionnel.
 
 ### Faut-il faire le SEO soi-même ou engager une agence ?
 
@@ -3165,7 +3165,7 @@ Pour rédiger une meta description efficace, il faut inclure le mot-clé princip
 
 Exemples de meta description :
 - ❌ "Nous créons des sites web pour les entreprises."
-- ✅ "Création de site web professionnel livré en 7 jours. Dès 990€, satisfait ou remboursé. 150+ clients en Île-de-France. Devis gratuit en 24h."
+- ✅ "Création de site web professionnel livré en 2 semaines. Dès 990€, satisfait ou remboursé. 150+ clients en Île-de-France. Devis gratuit en 24h."
 
 ## Les 5 erreurs de balises meta qui sabotent votre visibilité Google
 
@@ -3823,7 +3823,7 @@ Dans ces secteurs, un budget SEA de 1 000€/mois génère seulement 20 à 200 c
 - Événements et promotions limitées dans le temps
 
 Exemple de ROI comparatif (client ConvertiLab type) :
-- Budget SEO mensuel : 1 500€ → génère 10 000€ de CA → ROI = 567%
+- Budget SEO mensuel : 1 490€ → génère 10 000€ de CA → ROI = 567%
 - Budget SEA mensuel : 3 000€ → génère 9 000€ de CA → ROI = 200%
 
 Le SEO a un meilleur ROI à long terme, mais le SEA permet de générer des revenus dès le premier mois.
@@ -3842,7 +3842,7 @@ Non. Les études montrent que les sites présents à la fois en organique et en 
 
 ### Quel budget minimum pour commencer en Google Ads ?
 
-Il est possible de commencer avec 300 à 500€ par mois pour tester un marché, mais les résultats significatifs arrivent généralement à partir de 1 000€/mois. Le budget idéal dépend du CPC moyen dans votre secteur : divisez votre budget par le CPC pour estimer le nombre de clics. Visez au minimum 30 à 50 clics par jour pour obtenir des données exploitables et prendre des décisions d'optimisation fiables.
+Il est possible de commencer avec 300 à 490€ par mois pour tester un marché, mais les résultats significatifs arrivent généralement à partir de 1 000€/mois. Le budget idéal dépend du CPC moyen dans votre secteur : divisez votre budget par le CPC pour estimer le nombre de clics. Visez au minimum 30 à 50 clics par jour pour obtenir des données exploitables et prendre des décisions d'optimisation fiables.
 
 ### Le SEA aide-t-il indirectement le SEO ?
 
@@ -3942,7 +3942,7 @@ Optimisations hebdomadaires à faire systématiquement :
 
 ![Google Ads optimisation - mots-clés négatifs Quality Score A/B test page de destination](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
 
-**Cas ConvertiLab :** un serrurier à Lyon dépensait 800€/mois en Google Ads avec un ciblage en correspondance Large. 60% des clics venaient de requêtes non pertinentes ("serrurier jeux de rôle", "devenir serrurier formation"). Après basculement en correspondance Exacte et ajout de 40 mots-clés négatifs, le coût par lead est passé de 45€ à 12€ pour le même budget. Le volume de leads qualifiés a triplé sans augmenter le budget.
+**Cas ConvertiLab :** un serrurier à Lyon dépensait 1 500€/mois en Google Ads avec un ciblage en correspondance Large. 60% des clics venaient de requêtes non pertinentes ("serrurier jeux de rôle", "devenir serrurier formation"). Après basculement en correspondance Exacte et ajout de 40 mots-clés négatifs, le coût par lead est passé de 45€ à 12€ pour le même budget. Le volume de leads qualifiés a triplé sans augmenter le budget.
 
 ## FAQ — Questions sur Google Ads pour les PME
 
@@ -4070,7 +4070,7 @@ Oui, surtout via les audiences personnalisées et le retargeting. Le ciblage par
 
 ### Comment tester ses créatifs Meta Ads efficacement ?
 
-Utilisez la fonction "Creative Testing" de Meta Business Suite ou testez manuellement en créant 3 à 5 variantes dans le même ensemble de publicités. Modifiez un seul élément à la fois (visuel, accroche, CTA) pour identifier ce qui fait la différence. Laissez chaque test tourner au moins 7 jours et 2 000 impressions avant de tirer des conclusions. L'image ou la vidéo représente 70% de la performance d'une publicité Meta — testez les visuels en priorité avant de toucher au texte.
+Utilisez la fonction "Creative Testing" de Meta Business Suite ou testez manuellement en créant 3 à 5 variantes dans le même ensemble de publicités. Modifiez un seul élément à la fois (visuel, accroche, CTA) pour identifier ce qui fait la différence. Laissez chaque test tourner au moins 2 semaines et 2 000 impressions avant de tirer des conclusions. L'image ou la vidéo représente 70% de la performance d'une publicité Meta — testez les visuels en priorité avant de toucher au texte.
 
 ![Meta Ads tests créatifs - A/B test visuels accroches CTR performance 70% image](https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80)`
   },
@@ -4289,7 +4289,7 @@ Pour les débutants avec une liste < 1 000 contacts, Brevo (ex-Sendinblue) et Ma
 
 ![Outils email marketing 2026 - Brevo Mailchimp ActiveCampaign Resend comparatif délivrabilité](https://images.unsplash.com/photo-1526628953301-3cd23f6ef0cc?w=800&q=80)
 
-**Cas concret ConvertiLab :** un consultant en management parisien avec 340 contacts sur sa liste (construite en 18 mois via un guide PDF gratuit) génère en moyenne 2 500€ de chiffre d'affaires par campagne mensuelle — soit un ROI de 1 250% pour 50€ d'outil. Ses 3 secrets : objet personnalisé avec le prénom, contenu exclusif jamais publié sur les réseaux, et CTA unique vers une page de prise de RDV Calendly.`
+**Cas concret ConvertiLab :** un consultant en management parisien avec 340 contacts sur sa liste (construite en 18 mois via un guide PDF gratuit) génère en moyenne 2 490€ de chiffre d'affaires par campagne mensuelle — soit un ROI de 1 250% pour 50€ d'outil. Ses 3 secrets : objet personnalisé avec le prénom, contenu exclusif jamais publié sur les réseaux, et CTA unique vers une page de prise de RDV Calendly.`
   },
   {
     slug: "tunnel-conversion-optimiser-ventes",
@@ -4450,8 +4450,8 @@ Répartition type du budget marketing pour une PME (2 000€/mois) :
 
 | Poste | % du budget | Montant exemple |
 |-------|------------|----------------|
-| SEO / Contenu | 25% | 500€ |
-| Publicité payante | 40% | 800€ |
+| SEO / Contenu | 25% | 490€ |
+| Publicité payante | 40% | 1490€ |
 | Social media | 15% | 300€ |
 | Email marketing | 10% | 200€ |
 | Outils / Analytics | 10% | 200€ |
@@ -4647,7 +4647,7 @@ CPC moyens par secteur en France (référence 2026) :
 
 ## Comment calculer son budget publicitaire avec la méthode inverse ?
 
-La méthode de calcul inverse part de vos objectifs pour remonter au budget nécessaire. Formule : budget mensuel = nombre de clients souhaités × coût d'acquisition client (CAC). Exemple concret pour une PME locale : objectif 20 clients/mois, taux de conversion du site 3%, CPC moyen 2€ → 20 / 0,03 = 667 clics nécessaires × 2€ = 1 334€/mois. Vérification de rentabilité : 20 clients × panier moyen 500€ = 10 000€ de CA / 1 334€ de budget = ROAS 7,5× (excellent).
+La méthode de calcul inverse part de vos objectifs pour remonter au budget nécessaire. Formule : budget mensuel = nombre de clients souhaités × coût d'acquisition client (CAC). Exemple concret pour une PME locale : objectif 20 clients/mois, taux de conversion du site 3%, CPC moyen 2€ → 20 / 0,03 = 667 clics nécessaires × 2€ = 1 334€/mois. Vérification de rentabilité : 20 clients × panier moyen 490€ = 10 000€ de CA / 1 334€ de budget = ROAS 7,5× (excellent).
 
 Les 3 métriques à calculer avant de lancer toute campagne publicitaire :
 
@@ -4859,10 +4859,10 @@ Pour configurer les conversions dans GA4, allez dans Admin > Événements, trouv
 
 ## Comment lire ses données GA4 et prendre des décisions marketing basées sur les chiffres ?
 
-Les 3 métriques GA4 à surveiller chaque semaine : utilisateurs actifs sur 7 jours (évolution de votre audience), taux d'engagement supérieur à 60% (qualité du trafic — si < 40%, le contenu ou l'expérience utilisateur pose problème), et conversions par source (quels canaux génèrent le plus de leads). Interprétation pratique : si 80% de votre trafic vient de "Direct" et presque rien d'"Organic Search", votre SEO a besoin d'attention. Si votre page Services a 1 000 vues mais seulement 5 clics vers Contact, la page n'est pas convaincante. Planifiez une revue hebdomadaire de 15 minutes de ces 3 métriques.
+Les 3 métriques GA4 à surveiller chaque semaine : utilisateurs actifs sur 2 semaines (évolution de votre audience), taux d'engagement supérieur à 60% (qualité du trafic — si < 40%, le contenu ou l'expérience utilisateur pose problème), et conversions par source (quels canaux génèrent le plus de leads). Interprétation pratique : si 80% de votre trafic vient de "Direct" et presque rien d'"Organic Search", votre SEO a besoin d'attention. Si votre page Services a 1 000 vues mais seulement 5 clics vers Contact, la page n'est pas convaincante. Planifiez une revue hebdomadaire de 15 minutes de ces 3 métriques.
 
 **Le tableau de bord GA4 idéal pour une PME — 6 cartes à afficher :**
-1. Utilisateurs actifs 7 jours (vs semaine précédente)
+1. Utilisateurs actifs 2 semaines (vs semaine précédente)
 2. Taux d'engagement (objectif > 60%)
 3. Conversions total du mois (vs mois précédent)
 4. Canal source n°1 de leads (SEO, Ads ou Social)
@@ -4972,7 +4972,7 @@ Pour auditer votre boutique existante, utilisez notre [audit SEO gratuit](/seo-c
 
 ### Combien coûte la création d'une boutique en ligne ?
 
-Le budget varie de 500€ pour une solution clé en main basique à 5 000€ pour un site e-commerce professionnel livré en 7 à 10 jours. Chez ConvertiLab, nos boutiques en ligne démarrent à 990€ et sont livrées en moins de 2 semaines avec SEO et paiement intégré. L'investissement dépend du nombre de produits, des fonctionnalités souhaitées et du niveau de personnalisation.
+Le budget varie de 490€ pour une solution clé en main basique à 5 000€ pour un site e-commerce professionnel livré en 7 à 10 jours. Chez ConvertiLab, nos boutiques en ligne démarrent à 990€ et sont livrées en moins de 2 semaines avec SEO et paiement intégré. L'investissement dépend du nombre de produits, des fonctionnalités souhaitées et du niveau de personnalisation.
 
 ### Faut-il un stock pour vendre en ligne ?
 
@@ -4986,7 +4986,7 @@ Négliger le mobile. 65%+ des achats se font sur smartphone — un site non resp
 
 La technique la plus efficace pour les 30 premiers jours : vendre à votre réseau personnel en premier. Contactez vos 50 proches par message personnalisé, pas une annonce générique. Proposez-leur un tarif de lancement exclusif en échange d'un avis honnête. Ces premières ventes vous donnent des avis clients, des photos de clients réels utilisant vos produits, et un premier chiffre d'affaires — les 3 éléments qui crédibilisent votre boutique pour les inconnus.
 
-**Cas concret ConvertiLab :** une artisane marseillaise qui fabriquait des bougies a lancé sa boutique en ligne avec 32 produits et un budget initial de 0€ en publicité. Semaine 1 : 17 commandes depuis son réseau personnel (2 350€). Semaine 2-4 : les photos et avis de ses proches ont généré 8 partages organiques sur Instagram. Résultat mois 1 : 4 800€ de CA, 100% organique. Elle a ensuite réinvesti 15% en Meta Ads pour accélérer la croissance.
+**Cas concret ConvertiLab :** une artisane marseillaise qui fabriquait des bougies a lancé sa boutique en ligne avec 32 produits et un budget initial de 0€ en publicité. Semaine 1 : 17 commandes depuis son réseau personnel (2 350€). Semaine 2-4 : les photos et avis de ses proches ont généré 8 partages organiques sur Instagram. Résultat mois 1 : 4 1490€ de CA, 100% organique. Elle a ensuite réinvesti 15% en Meta Ads pour accélérer la croissance.
 
 ![Premières ventes e-commerce - réseau personnel avis clients photos réelles organique Meta Ads](https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=800&q=80)`
   },
@@ -5064,7 +5064,7 @@ Minimum 300 mots pour les produits standards, 500 à 1 000 mots pour les produit
 
 ### Comment obtenir des avis clients pour ses fiches produits ?
 
-Envoyez un email automatique 7 jours après la livraison pour demander un avis. Offrez un bon de réduction de 5 à 10% pour le prochain achat en échange d'un avis honnête. Ne censurez jamais les avis négatifs — répondez-y professionnellement. Les fiches avec 10+ avis convertissent en moyenne 3× mieux que celles sans aucun avis. Astuce supplémentaire : les avis qui mentionnent des cas d'usage spécifiques ("parfait pour les randonnées longues distance") convertissent 2× mieux que les avis génériques ("très bon produit"). Encouragez vos clients à décrire leur situation concrète dans leur avis.
+Envoyez un email automatique 2 semaines après la livraison pour demander un avis. Offrez un bon de réduction de 5 à 10% pour le prochain achat en échange d'un avis honnête. Ne censurez jamais les avis négatifs — répondez-y professionnellement. Les fiches avec 10+ avis convertissent en moyenne 3× mieux que celles sans aucun avis. Astuce supplémentaire : les avis qui mentionnent des cas d'usage spécifiques ("parfait pour les randonnées longues distance") convertissent 2× mieux que les avis génériques ("très bon produit"). Encouragez vos clients à décrire leur situation concrète dans leur avis.
 
 ### Les vidéos produit sont-elles vraiment nécessaires en e-commerce ?
 
@@ -5140,7 +5140,7 @@ Le retargeting publicitaire complète la séquence email pour atteindre les visi
 **Le combo optimal anti-abandon :**
 - Étape 1 : exit-intent popup avec code promo -5% au moment de la tentative de fermeture
 - Étape 2 : email relance 1h après (si email capturé en micro-engagement)
-- Étape 3 : retargeting Meta/Google pendant 7 jours avec le produit exact
+- Étape 3 : retargeting Meta/Google pendant 2 semaines avec le produit exact
 - Étape 4 : email avec offre spéciale -10% à 72h
 - Étape 5 : SMS de rappel si numéro disponible (taux d'ouverture 95%)
 
@@ -5164,7 +5164,7 @@ Non. Des outils comme Klaviyo, Brevo (ex-Sendinblue) ou Mailchimp proposent des 
 
 Le meilleur indicateur est le "taux de récupération" : nombre de commandes provenant des emails de relance panier / nombre total de paniers abandonnés. Un taux de 5 à 10% est la norme. Si votre taux est inférieur à 3%, les problèmes possibles sont : email trop tardif (attendez pas plus d'1h pour le premier), objet du premier email trop commercial (privilégiez "Oups, vous avez oublié quelque chose"), lien vers le panier cassé, ou email qui atterrit en spam (vérifiez votre score de délivrabilité avec Mail-Tester).
 
-**Cas concret ConvertiLab :** une boutique de cosmétiques bio avait un taux d'abandon de 74% avec aucune relance en place. Après implémentation de la séquence 3 emails + retargeting Meta Ads (budget 8€/jour), elle récupère désormais 12% de ses paniers abandonnés, représentant 2 800€ de chiffre d'affaires supplémentaire chaque mois — sans changer son trafic ni ses produits.
+**Cas concret ConvertiLab :** une boutique de cosmétiques bio avait un taux d'abandon de 74% avec aucune relance en place. Après implémentation de la séquence 3 emails + retargeting Meta Ads (budget 8€/jour), elle récupère désormais 12% de ses paniers abandonnés, représentant 2 1490€ de chiffre d'affaires supplémentaire chaque mois — sans changer son trafic ni ses produits.
 
 ![Récupération panier abandonné cas concret - 12% paniers récupérés 2800€/mois cosmétiques bio](https://images.unsplash.com/photo-1526628953301-3cd23f6ef0cc?w=800&q=80)`
   },
@@ -5260,7 +5260,7 @@ Oui, avec Stripe Checkout (page hébergée par Stripe) ou via les plugins pour W
 
 ### Combien de temps faut-il pour recevoir ses paiements Stripe ?
 
-En France, les virements Stripe sont effectués sous 7 jours pour les nouveaux comptes, puis sous 2 jours une fois l'historique établi. Vous pouvez activer les virements instantanés moyennant un supplément (0,5% de frais supplémentaires).
+En France, les virements Stripe sont effectués sous 2 semaines pour les nouveaux comptes, puis sous 2 jours une fois l'historique établi. Vous pouvez activer les virements instantanés moyennant un supplément (0,5% de frais supplémentaires).
 
 ### Comment utiliser Stripe pour des paiements récurrents ou des abonnements ?
 
@@ -5404,7 +5404,7 @@ Les 5 techniques CRO avec le plus fort impact sont : 1) Clarifier la proposition
 
 L'A/B testing consiste à comparer deux versions d'une page pour identifier laquelle convertit le mieux. Règle fondamentale : testez un seul élément à la fois pour mesurer son impact isolément. Outils recommandés : Google Optimize (gratuit), VWO ou Optimizely pour les tests avancés, Hotjar pour les heatmaps et enregistrements de sessions. Un test valide nécessite au minimum 1 000 visiteurs par variante et 2 semaines de durée — en dessous, les résultats ne sont pas statistiquement fiables.
 
-**Comment interpréter un test A/B :** la variante B gagne si elle obtient un taux de conversion statistiquement supérieur avec un niveau de confiance de 95% minimum. La plupart des outils calculent cette signification statistique automatiquement. Méfiez-vous des "faux gagnants" : un pic sur les 3 premiers jours peut s'inverser sur 2 semaines complètes. Ne coupez jamais un test avant 7 jours complets de données, même si les résultats semblent évidents.
+**Comment interpréter un test A/B :** la variante B gagne si elle obtient un taux de conversion statistiquement supérieur avec un niveau de confiance de 95% minimum. La plupart des outils calculent cette signification statistique automatiquement. Méfiez-vous des "faux gagnants" : un pic sur les 3 premiers jours peut s'inverser sur 2 semaines complètes. Ne coupez jamais un test avant 2 semaines complets de données, même si les résultats semblent évidents.
 
 **Les 3 erreurs A/B les plus coûteuses pour une PME :**
 - Tester avec un trafic trop faible (< 500 visiteurs/semaine = résultats non fiables)
@@ -5663,7 +5663,7 @@ Techniques pour augmenter le taux de réponse aux demandes d'avis :
 - **Simplifier** : note en étoiles + un seul champ texte
 - **Incentiver** : code promo de 5 à 10% pour le prochain achat
 - **Personnaliser** : mentionner le produit acheté dans l'email
-- **Relancer** : un rappel 7 jours après la première demande
+- **Relancer** : un rappel 2 semaines après la première demande
 - **Montrer l'impact** : "Votre avis aide d'autres clients à faire le bon choix"
 
 ![Collecte avis post-achat email SMS QR code colis taux réponse 5-15%](https://images.unsplash.com/photo-1553484771-047a44eee27b?w=800&q=80)
@@ -5726,7 +5726,7 @@ L'UGC (User Generated Content) est la forme la plus puissante de preuve sociale 
 
 ## Comment configurer Instagram Shopping pour sa boutique en ligne étape par étape ?
 
-Pour activer Instagram Shopping, vous devez avoir un compte Instagram professionnel (Business ou Creator), vendre des produits physiques éligibles, être connecté à une Page Facebook et avoir un catalogue produits (via Facebook Commerce Manager ou un partenaire comme Shopify). La configuration en 6 étapes : convertissez votre compte en compte professionnel, connectez votre page Facebook à votre compte Instagram, créez votre catalogue dans Facebook Commerce Manager (manuellement ou via votre plateforme e-commerce), soumettez votre compte pour vérification (5 à 7 jours), activez Shopping dans les paramètres Instagram, taguez vos produits dans vos posts et stories.
+Pour activer Instagram Shopping, vous devez avoir un compte Instagram professionnel (Business ou Creator), vendre des produits physiques éligibles, être connecté à une Page Facebook et avoir un catalogue produits (via Facebook Commerce Manager ou un partenaire comme Shopify). La configuration en 6 étapes : convertissez votre compte en compte professionnel, connectez votre page Facebook à votre compte Instagram, créez votre catalogue dans Facebook Commerce Manager (manuellement ou via votre plateforme e-commerce), soumettez votre compte pour vérification (5 à 2 semaines), activez Shopping dans les paramètres Instagram, taguez vos produits dans vos posts et stories.
 
 Votre catalogue doit être irréprochable pour être approuvé :
 - **Photos conformes** aux standards Instagram (carré 1:1 ou 4:5)
@@ -5754,7 +5754,7 @@ La règle de contenu 70-20-10 pour ne pas passer pour un catalogue :
 
 ## Comment transformer ses abonnés Instagram en clients avec un tunnel de vente structuré ?
 
-Le tunnel Instagram en 5 étapes : Découverte (Reels, Explore, Hashtags) → Engagement (likes, commentaires, sauvegardes) → Considération (Stories, Highlights, témoignages) → Achat (tags produits, lien en bio, DM) → Fidélisation (UGC, communauté). Optimisez votre profil : photo de profil reconnaissable (logo), bio avec proposition de valeur + CTA + lien, nom incluant un mot-clé (ex: "NomMarque | Bijoux Artisanaux"), Highlights organisés par catégories (Produits, Avis, FAQ, Livraison). Pour les collaborations, les micro-influenceurs (5 000 à 50 000 abonnés) offrent le meilleur ROI (100 à 500€ par micro-influenceur avec codes promo traçables).
+Le tunnel Instagram en 5 étapes : Découverte (Reels, Explore, Hashtags) → Engagement (likes, commentaires, sauvegardes) → Considération (Stories, Highlights, témoignages) → Achat (tags produits, lien en bio, DM) → Fidélisation (UGC, communauté). Optimisez votre profil : photo de profil reconnaissable (logo), bio avec proposition de valeur + CTA + lien, nom incluant un mot-clé (ex: "NomMarque | Bijoux Artisanaux"), Highlights organisés par catégories (Produits, Avis, FAQ, Livraison). Pour les collaborations, les micro-influenceurs (5 000 à 50 000 abonnés) offrent le meilleur ROI (100 à 490€ par micro-influenceur avec codes promo traçables).
 
 **Stratégie DM pour la conversion directe :** Configurez une réponse automatique aux commentaires "Je veux ça" ou "Prix ?" avec un lien direct vers la fiche produit. Cette tactique augmente le taux de conversion des commentaires de 400 à 600% et déplace les conversations vers un espace privé où la probabilité d'achat est plus élevée. Des outils comme ManyChat permettent d'automatiser ces réponses DM en respectant les CGU Instagram.
 
@@ -5874,7 +5874,7 @@ La règle d'or : **chaque élément décoratif doit avoir un coût de performanc
 **Priorité 2 — Bento Grid + typographie expressive** (différenciation visible) :
 - Redesigner la page d'accueil avec une structure bento pour les sections services et résultats
 - Adopter une police variable expressive (Space Grotesk ou Syne) pour les H1 et H2
-- Coût : entre 0 et 500€ selon si vous le faites vous-même ou confiez à un pro
+- Coût : entre 0 et 490€ selon si vous le faites vous-même ou confiez à un pro
 
 **Priorité 3 — Micro-animations + dark mode** (engagement et rétention) :
 - Implémenter les animations scroll-driven en CSS pur (pas de librairie JS)
@@ -5900,7 +5900,7 @@ Oui, avec des adaptations. Le Bento Grid peut très bien structurer la présenta
 
 ### Quel budget prévoir pour moderniser le design de son site web en 2026 ?
 
-Pour des optimisations ciblées sur un site existant (performance, accessibilité, quelques sections redesignées) : **500 à 1 500€**. Pour une refonte complète intégrant les tendances 2026 (Bento Grid, typographie expressive, dark mode, micro-animations) : **1 500 à 3 500€**. Chez ConvertiLab, nos sites vitrine partent de **990€** avec toutes les bonnes pratiques 2026 intégrées dès la création — moins cher que de corriger un site existant.
+Pour des optimisations ciblées sur un site existant (performance, accessibilité, quelques sections redesignées) : **500 à 1 490€**. Pour une refonte complète intégrant les tendances 2026 (Bento Grid, typographie expressive, dark mode, micro-animations) : **1 500 à 3 490€**. Chez ConvertiLab, nos sites vitrine partent de **990€** avec toutes les bonnes pratiques 2026 intégrées dès la création — moins cher que de corriger un site existant.
 
 ### Les tendances visuelles nuisent-elles au SEO ?
 
@@ -5996,12 +5996,12 @@ Le budget d'une identité visuelle varie selon le périmètre du projet et le ni
 
 | Périmètre | Budget indicatif | Ce qui est inclus |
 |-----------|-----------------|-------------------|
-| Logo seul (freelance) | 500€ – 3 000€ | Logo vectoriel + déclinaisons basiques |
-| Logo + charte graphique | 1 500€ – 8 000€ | Logo complet + brand book + palette + typo |
+| Logo seul (freelance) | 490€ – 3 000€ | Logo vectoriel + déclinaisons basiques |
+| Logo + charte graphique | 1 490€ – 8 000€ | Logo complet + brand book + palette + typo |
 | Identité complète | 3 000€ – 15 000€ | + déclinaisons tous supports print et digital |
 | Rebranding complet | 5 000€ – 30 000€ | Repositionnement stratégique inclus |
 
-Pour les PME et artisans, **le package logo + charte graphique entre 1 500€ et 4 000€** est le plus cohérent. C'est l'investissement minimum pour une image professionnelle crédible qui tient dans le temps.
+Pour les PME et artisans, **le package logo + charte graphique entre 1 490€ et 4 000€** est le plus cohérent. C'est l'investissement minimum pour une image professionnelle crédible qui tient dans le temps.
 
 **Protection juridique** : une fois votre logo créé, déposez-le à l'INPI (environ 190€ pour 10 ans dans une classe de produits/services). Sans dépôt, un concurrent peut légalement reprendre un signe similaire.
 
@@ -6759,7 +6759,7 @@ Budget mensuel recommandé selon la taille de l'entreprise :
 
 | Taille | Budget mensuel | Priorités |
 |--------|--------------|---------|
-| Auto-entrepreneur / TPE | 200 à 500€ | Site + SEO local + GBP |
+| Auto-entrepreneur / TPE | 200 à 490€ | Site + SEO local + GBP |
 | PME 1 à 10 salariés | 500 à 2 000€ | Site + SEO + 1 réseau |
 | PME 10 à 50 salariés | 2 000 à 5 000€ | Site + SEO + social + pub |
 
@@ -6769,7 +6769,7 @@ Budget mensuel recommandé selon la taille de l'entreprise :
 
 Le ROI digital se calcule simplement : (revenus générés par le web - investissement total) / investissement total × 100. Un bon ROI web pour une PME se situe entre 200 et 500% — autrement dit, chaque euro investi en rapporte 3 à 6.
 
-Pour calculer les revenus générés par le web : suivez le nombre de contacts entrants par formulaire, appel ou email, estimez le taux de conversion de ces contacts en clients et multipliez par votre valeur client moyenne. Exemple : 20 contacts/mois × 30% de taux de closing × 800€ de panier moyen = 4 800€/mois générés par le web.
+Pour calculer les revenus générés par le web : suivez le nombre de contacts entrants par formulaire, appel ou email, estimez le taux de conversion de ces contacts en clients et multipliez par votre valeur client moyenne. Exemple : 20 contacts/mois × 30% de taux de closing × 1490€ de panier moyen = 4 1 500€/mois générés par le web.
 
 **Les 6 erreurs les plus fréquentes à éviter :**
 1. Être partout sans stratégie — mieux vaut 2 canaux maîtrisés que 6 abandonnés
@@ -6966,7 +6966,7 @@ Valide uniquement que vous contrôlez le domaine. Fourni gratuitement par Let's 
 **OV — Organization Validation (50 à 200€/an)**
 Valide le domaine ET l'existence légale de l'entreprise (extrait Kbis, vérification téléphonique). Donne une assurance légèrement supérieure pour les visiteurs. Idéal pour : e-commerces, sites avec espace client, B2B.
 
-**EV — Extended Validation (200 à 500€/an)**
+**EV — Extended Validation (200 à 490€/an)**
 Validation complète avec vérification juridique approfondie. Autrefois affichait le nom de l'entreprise en vert dans la barre d'adresse (Chrome a supprimé cet affichage en 2019). Idéal pour : banques, assurances, institutions financières.
 
 **Let's Encrypt en pratique :**
@@ -7176,18 +7176,18 @@ Avant de passer à un professionnel, commencez par notre audit SEO gratuit : il 
   {
     slug: "combien-coute-site-internet-restaurant",
     title: "Combien coûte un site internet pour un restaurant ?",
-    excerpt: "Prix réels, ce qui est inclus, différence entre offres à 500€ et 2 000€, et ROI attendu : tout ce qu'un restaurateur doit savoir avant de commander son site web.",
-    metaDescription: "Combien coûte un site internet pour un restaurant en 2026 ? Prix détaillés, comparatif des offres et retour sur investissement réel. Dès 500€, livré en 7 jours.",
+    excerpt: "Prix réels, ce qui est inclus, différence entre offres à 490€ et 2 000€, et ROI attendu : tout ce qu'un restaurateur doit savoir avant de commander son site web.",
+    metaDescription: "Combien coûte un site internet pour un restaurant en 2026 ? Prix détaillés, comparatif des offres et retour sur investissement réel. Dès 490€, livré en 2 semaines.",
     image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
     category: "Business",
     readTime: "7 min",
     publishedAt: "2026-06-24",
     author: { name: "Bilel Bettaieb — ConvertiLab" },
-    tags: ["prix site internet restaurant 2026 vitrine", "créer site web restaurant menu réservation en ligne", "combien coûte site vitrine restaurant France", "SEO local restaurant Google Maps avis", "ConvertiLab site web restaurant livré 7 jours"],
+    tags: ["prix site internet restaurant 2026 vitrine", "créer site web restaurant menu réservation en ligne", "combien coûte site vitrine restaurant France", "SEO local restaurant Google Maps avis", "ConvertiLab site web restaurant livré 2 semaines"],
     faqItems: [
       {
         question: "Combien coûte un site web pour un restaurant ?",
-        answer: "Un site internet pour un restaurant coûte entre 500€ et 3 000€ selon les fonctionnalités. Un site vitrine avec menu, galerie et formulaire de réservation est proposé à partir de 500€. Un site avec commande en ligne ou système de réservation avancé démarre à 800€.",
+        answer: "Un site internet pour un restaurant coûte entre 490€ et 3 000€ selon les fonctionnalités. Un site vitrine avec menu, galerie et formulaire de réservation est proposé à partir de 490€. Un site avec commande en ligne ou système de réservation avancé démarre à 1490€.",
       },
       {
         question: "Que doit contenir un site internet pour un restaurant ?",
@@ -7195,14 +7195,14 @@ Avant de passer à un professionnel, commencez par notre audit SEO gratuit : il 
       },
       {
         question: "En combien de temps peut-on créer un site pour un restaurant ?",
-        answer: "Chez ConvertiLab, un site vitrine restaurant est livré en 7 jours ouvrés. Ce délai inclut le design sur-mesure validé par vous, le développement, l'intégration du menu et des photos, l'optimisation SEO locale et la mise en ligne.",
+        answer: "Chez ConvertiLab, un site vitrine restaurant est livré en 2 semaines. Ce délai inclut le design sur-mesure validé par vous, le développement, l'intégration du menu et des photos, l'optimisation SEO locale et la mise en ligne.",
       },
       {
-        question: "Un site restaurant à 500€ est-il suffisant pour attirer des clients ?",
-        answer: "Oui, un site vitrine à 500€ bien conçu suffit pour attirer des clients locaux si le SEO local est correctement optimisé. Monsieur Arancini, restaurateur parisien accompagné par ConvertiLab, a rempli ses soirées du vendredi et samedi dès le premier mois après la mise en ligne, sans publicité payante.",
+        question: "Un site restaurant à 490€ est-il suffisant pour attirer des clients ?",
+        answer: "Oui, un site vitrine à 490€ bien conçu suffit pour attirer des clients locaux si le SEO local est correctement optimisé. Monsieur Arancini, restaurateur parisien accompagné par ConvertiLab, a rempli ses soirées du vendredi et samedi dès le premier mois après la mise en ligne, sans publicité payante.",
       },
     ],
-    content: `Un site internet pour un restaurant coûte entre **500€ et 3 000€** selon les fonctionnalités. Un site vitrine avec menu en ligne, galerie photos, horaires et formulaire de réservation est réalisable à partir de 500€. Les systèmes de commande en ligne ou de réservation avancée font monter le budget. Dans tous les cas, un seul client supplémentaire par semaine suffit à rentabiliser l'investissement.
+    content: `Un site internet pour un restaurant coûte entre **490€ et 3 000€** selon les fonctionnalités. Un site vitrine avec menu en ligne, galerie photos, horaires et formulaire de réservation est réalisable à partir de 490€. Les systèmes de commande en ligne ou de réservation avancée font monter le budget. Dans tous les cas, un seul client supplémentaire par semaine suffit à rentabiliser l'investissement.
 
 **Chiffres clés :** 81% des consommateurs consultent le menu d'un restaurant en ligne avant de décider d'y aller. 67% choisissent en fonction de la qualité des photos vues sur internet. Un restaurant sans site web perd en moyenne 30% de ses clients potentiels qui partent chez un concurrent visible sur Google.
 
@@ -7212,22 +7212,22 @@ Avant de passer à un professionnel, commencez par notre audit SEO gratuit : il 
 
 Le prix d'un site web pour un restaurant varie selon trois niveaux d'offre :
 
-**Site vitrine restaurant — à partir de 500€**
-C'est la solution idéale pour la grande majorité des restaurants. Elle comprend : page d'accueil avec ambiance, menu complet consultable sur mobile, galerie photos, horaires et coordonnées, carte Google Maps intégrée, formulaire de contact et de réservation, optimisation SEO locale. Résultat en 7 jours.
+**Site vitrine restaurant — à partir de 490€**
+C'est la solution idéale pour la grande majorité des restaurants. Elle comprend : page d'accueil avec ambiance, menu complet consultable sur mobile, galerie photos, horaires et coordonnées, carte Google Maps intégrée, formulaire de contact et de réservation, optimisation SEO locale. Résultat en 2 semaines.
 
-**Site restaurant avec réservation avancée — 800€ à 1 500€**
+**Site restaurant avec réservation avancée — 1490€ à 1 490€**
 Pour les restaurants qui veulent automatiser les réservations (intégration TheFork, module de réservation sur-mesure avec gestion des tables et des créneaux). Idéal pour les établissements de plus de 30 couverts avec un flux important.
 
-**Site restaurant avec commande en ligne — 1 500€ à 3 000€**
+**Site restaurant avec commande en ligne — 1 490€ à 3 000€**
 Pour les restaurants qui proposent la livraison ou le click & collect. Inclut un catalogue de plats, un panier, un paiement sécurisé et une interface de gestion des commandes. Alternative moins chère que Deliveroo ou Uber Eats sur le long terme.
 
-Chez ConvertiLab, nos sites restaurant démarrent à **500€** avec un paiement possible en 3 fois sans frais.
+Chez ConvertiLab, nos sites restaurant démarrent à **490€** avec un paiement possible en 3 fois sans frais.
 
 ## Que comprend un site internet pour restaurant à ce prix ?
 
-Beaucoup de restaurateurs découvrent trop tard que leur "site à 500€" ne comprenait ni SEO, ni hébergement, ni optimisation mobile. Voici exactement ce que comprend une offre sérieuse à ce tarif.
+Beaucoup de restaurateurs découvrent trop tard que leur "site à 490€" ne comprenait ni SEO, ni hébergement, ni optimisation mobile. Voici exactement ce que comprend une offre sérieuse à ce tarif.
 
-Un site vitrine restaurant à 500€ chez ConvertiLab comprend :
+Un site vitrine restaurant à 490€ chez ConvertiLab comprend :
 
 - Design sur-mesure aux couleurs de votre restaurant (validé avant développement)
 - Menu interactif lisible sur mobile, modifiable par vous
@@ -7238,16 +7238,16 @@ Un site vitrine restaurant à 500€ chez ConvertiLab comprend :
 - Optimisation SEO locale : apparaître sur « restaurant [votre ville] » sur Google
 - Hébergement 1 an inclus, certificat SSL, support 30 jours
 
-Ce qui n'est **pas inclus** dans l'offre à 500€ : système de commande en ligne, module de réservation avec gestion des tables automatisée, traduction multilingue, shooting photo professionnel.
+Ce qui n'est **pas inclus** dans l'offre à 490€ : système de commande en ligne, module de réservation avec gestion des tables automatisée, traduction multilingue, shooting photo professionnel.
 
-## Site restaurant à 500€ vs 2 000€ : quelle différence réelle ?
+## Site restaurant à 490€ vs 2 000€ : quelle différence réelle ?
 
-La différence n'est pas dans la qualité visuelle — un site à 500€ peut être aussi beau qu'un site à 2 000€. La différence est dans les **fonctionnalités automatisées** :
+La différence n'est pas dans la qualité visuelle — un site à 490€ peut être aussi beau qu'un site à 2 000€. La différence est dans les **fonctionnalités automatisées** :
 
-- À 500€ : les réservations arrivent par email, vous les confirmez manuellement
+- À 490€ : les réservations arrivent par email, vous les confirmez manuellement
 - À 2 000€ : les réservations sont gérées automatiquement (créneaux, rappels SMS, liste d'attente)
 
-Pour un restaurant de quartier avec 20 à 40 couverts et 2 à 3 services par semaine, l'offre à 500€ est largement suffisante. Pour un établissement avec 80+ couverts et plusieurs services par jour, investir dans un module de réservation avancé fait gagner 30 à 60 minutes par jour.
+Pour un restaurant de quartier avec 20 à 40 couverts et 2 à 3 services par semaine, l'offre à 490€ est largement suffisante. Pour un établissement avec 80+ couverts et plusieurs services par jour, investir dans un module de réservation avancé fait gagner 30 à 60 minutes par jour.
 
 ![Réservation en ligne restaurant - interface mobile](https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80)
 
@@ -7261,7 +7261,7 @@ Oui, et c'est le cas dans la majorité des restaurants accompagnés par Converti
 - Taux de conversion d'un bon site : 3 à 8% soit 2 à 16 réservations supplémentaires par mois
 - Valeur moyenne d'une table de 2 : 60€ → 120€ à 960€ de CA supplémentaire par mois
 
-Un site à 500€ s'amortit en **moins de 2 semaines** si le SEO local est bien fait.
+Un site à 490€ s'amortit en **moins de 2 semaines** si le SEO local est bien fait.
 
 Exemple réel : Monsieur Arancini, traiteur parisien, n'avait aucune présence en ligne. Après la création de son site avec ConvertiLab, il a rempli ses soirées du vendredi et du samedi dès le premier mois, sans publicité payante — uniquement grâce au référencement Google.
 
@@ -7273,7 +7273,7 @@ Autre exemple : La Table d'Emma, restaurant de 35 couverts en province, recevait
 
 Les deux modèles existent, avec des avantages différents :
 
-**Paiement unique (recommandé)** : vous payez une fois (500€ à 3 000€), vous êtes propriétaire du site et du code source. Les coûts récurrents se limitent à l'hébergement (5€ à 15€/mois) et au nom de domaine (10€/an).
+**Paiement unique (recommandé)** : vous payez une fois (490€ à 3 000€), vous êtes propriétaire du site et du code source. Les coûts récurrents se limitent à l'hébergement (5€ à 15€/mois) et au nom de domaine (10€/an).
 
 **Abonnement mensuel** (type Wix, Squarespace ou agences "location de site") : 30€ à 150€/mois sans jamais être propriétaire. Si vous arrêtez de payer, votre site disparaît. Sur 3 ans, vous payez 1 080€ à 5 400€ pour un site qui ne vous appartient pas.
 
@@ -7300,7 +7300,7 @@ Votre fiche GBP (l'encadré qui apparaît sur Google Maps) génère souvent plus
 Pour choisir une agence web pour votre restaurant, vérifiez ces 5 points :
 
 - **Elle a déjà fait des sites restaurant** : demandez des exemples concrets dans votre secteur et vérifiez que les sites sont encore en ligne.
-- **Le délai est garanti** : un restaurant ne peut pas attendre 3 mois. Exigez une date de livraison contractuelle — chez ConvertiLab, nos sites restaurant sont livrés en 7 jours ouvrés.
+- **Le délai est garanti** : un restaurant ne peut pas attendre 3 mois. Exigez une date de livraison contractuelle — chez ConvertiLab, nos sites restaurant sont livrés en 2 semaines.
 - **Vous êtes propriétaire du site** : le nom de domaine et le code source doivent vous appartenir dès le premier paiement.
 - **Le SEO local est inclus** : un beau site invisible sur Google n'attire aucun client. Vérifiez que l'optimisation pour "restaurant [votre ville]" est dans la prestation.
 - **Le prix est transparent** : demandez un devis fixe tout inclus, sans coûts cachés ni upsells sur la maintenance.
@@ -7331,7 +7331,7 @@ Méfiez-vous des devis à 99€ ou 199€ — ces offres livrent généralement 
       },
       {
         question: "Un artisan a-t-il besoin d'un site web pour trouver des clients ?",
-        answer: "Oui, un site web est indispensable pour un artisan en 2026. 87% des consommateurs cherchent un artisan sur Google avant de l'appeler. Sans site, vous n'existez pas pour eux. Un site vitrine à 500€ avec SEO local peut générer 3 à 10 devis supplémentaires par mois.",
+        answer: "Oui, un site web est indispensable pour un artisan en 2026. 87% des consommateurs cherchent un artisan sur Google avant de l'appeler. Sans site, vous n'existez pas pour eux. Un site vitrine à 490€ avec SEO local peut générer 3 à 10 devis supplémentaires par mois.",
       },
       {
         question: "Les réseaux sociaux sont-ils utiles pour trouver des clients artisan ?",
@@ -7371,7 +7371,7 @@ Vos photos de chantier, votre zone d'intervention, votre spécialité, vos tarif
 
 Résultat typique pour un artisan chez ConvertiLab : **4 à 8 demandes de devis supplémentaires par mois** en 3 à 6 mois, sans budget publicité.
 
-Cas concret : Karim, plombier à Rueil-Malmaison, avait zéro présence en ligne et dépendait uniquement du bouche-à-oreille. Après création d'une page « plombier Rueil-Malmaison » optimisée, il a atteint la position 3 sur cette requête (500 recherches/mois) en 5 semaines. Résultat : 6 à 9 devis supplémentaires par mois pour un investissement de 500€.
+Cas concret : Karim, plombier à Rueil-Malmaison, avait zéro présence en ligne et dépendait uniquement du bouche-à-oreille. Après création d'une page « plombier Rueil-Malmaison » optimisée, il a atteint la position 3 sur cette requête (500 recherches/mois) en 5 semaines. Résultat : 6 à 9 devis supplémentaires par mois pour un investissement de 490€.
 
 [Vérifier gratuitement votre visibilité sur Google](/seo-check)
 
@@ -7423,7 +7423,7 @@ Des plateformes comme **Houzz**, **Habitissimo** ou **MesArtisans** mettent en r
 
 ## Méthode 6 : La publicité locale (Google Ads ou Meta Ads)
 
-**Google Ads local** : votre annonce apparaît en tête sur « électricien [ville] ». Coût : 2€ à 15€ par clic. Budget recommandé : 300€ à 800€/mois.
+**Google Ads local** : votre annonce apparaît en tête sur « électricien [ville] ». Coût : 2€ à 15€ par clic. Budget recommandé : 300€ à 1 500€/mois.
 
 **Meta Ads** : ciblage géographique précis autour de votre zone. Efficace pour les travaux de rénovation. Budget minimum : 10€/jour.
 
@@ -7438,11 +7438,11 @@ Le budget complet pour une présence digitale efficace d'artisan :
 | Action | Coût | Délai résultats |
 |--------|------|-----------------|
 | Fiche Google Business Profile | Gratuit | 2 à 4 semaines |
-| Site vitrine avec SEO local | 500€ à 1 500€ | 2 à 6 mois |
-| Campagne Google Ads locale | 300€ à 800€/mois | Immédiat |
+| Site vitrine avec SEO local | 490€ à 1 490€ | 2 à 6 mois |
+| Campagne Google Ads locale | 300€ à 1 500€/mois | Immédiat |
 | Gestion réseaux sociaux | 0€ si en autonomie | 3 à 6 mois |
 
-**Le minimum viable pour un artisan débutant en ligne :** fiche Google Business optimisée + site vitrine 5 pages à 500€ = présence complète pour moins de 700€ tout compris.
+**Le minimum viable pour un artisan débutant en ligne :** fiche Google Business optimisée + site vitrine 5 pages à 490€ = présence complète pour moins de 700€ tout compris.
 
 ## Par où commencer quand on est artisan sans présence en ligne ?
 
@@ -7457,7 +7457,7 @@ Le budget complet pour une présence digitale efficace d'artisan :
 
 Le point le plus important : **la régularité bat l'intensité**. 30 minutes par semaine pendant 6 mois valent mieux qu'une semaine d'efforts suivie de 5 mois d'inaction.
 
-**Calculez le ROI de votre présence digitale en tant qu'artisan :** Si vous réalisez en moyenne 2 chantiers par mois grâce au digital (soit 1 chantier tous les 2 semaines sur un carnet déjà bien rempli) à 800€ de facture moyenne, c'est 1 600€ de CA additionnel par mois ou 19 200€ sur l'année. Un site vitrine à 990€ est amorti en moins de 3 semaines. Cette estimation est conservatrice — nos clients artisans rapportent généralement entre 3 et 8 nouveaux chantiers dès les 3 premiers mois, portés par le référencement local et les avis Google.
+**Calculez le ROI de votre présence digitale en tant qu'artisan :** Si vous réalisez en moyenne 2 chantiers par mois grâce au digital (soit 1 chantier tous les 2 semaines sur un carnet déjà bien rempli) à 1490€ de facture moyenne, c'est 1 600€ de CA additionnel par mois ou 19 200€ sur l'année. Un site vitrine à 990€ est amorti en moins de 3 semaines. Cette estimation est conservatrice — nos clients artisans rapportent généralement entre 3 et 8 nouveaux chantiers dès les 3 premiers mois, portés par le référencement local et les avis Google.
 
 [Voir nos offres de création de site web pour artisans](/solutions/artisan)
 
@@ -7624,7 +7624,7 @@ Résultat observé chez ConvertiLab : 60 à 70% de nos clients rattrapent leur c
       },
       {
         question: "Combien coûte un site Wix par rapport à une agence web ?",
-        answer: "Wix coûte entre 17€ et 35€ par mois selon le plan, soit 204€ à 420€ par an — sans compter votre temps (20 à 40 heures pour créer un site correct). Une agence web comme ConvertiLab propose des sites à partir de 500€, livrés en 7 jours, optimisés SEO et propriété du client. Sur 3 ans, le coût total est souvent similaire, mais le résultat est très différent.",
+        answer: "Wix coûte entre 17€ et 35€ par mois selon le plan, soit 204€ à 420€ par an — sans compter votre temps (20 à 40 heures pour créer un site correct). Une agence web comme ConvertiLab propose des sites à partir de 490€, livrés en 2 semaines, optimisés SEO et propriété du client. Sur 3 ans, le coût total est souvent similaire, mais le résultat est très différent.",
       },
       {
         question: "Combien de temps faut-il pour créer son site web soi-même ?",
@@ -7712,7 +7712,7 @@ La question n'est pas "l'agence est-elle chère ?" mais "quel est le coût total
 - Propriété du site : 0 (vous louez)
 
 **Coût réel d'une agence web sur 3 ans :**
-- Création : 500€ à 1 000€ (achat unique)
+- Création : 490€ à 1 000€ (achat unique)
 - Hébergement : 10€/mois = 360€
 - Maintenance : quasi nulle (site stable)
 - Total temps investi : 2 à 5h (réunion + validation)
@@ -7755,7 +7755,7 @@ Passez à une agence web quand :
 
 Dans tous ces cas, le coût d'une agence est inférieur au manque à gagner.
 
-Témoignage typique chez ConvertiLab : Emilie, coach bien-être à Lyon, avait créé son site sur Wix. Après 8 mois, 0 demande de contact venant de Google. Après refonte de son site avec ConvertiLab (700€, livré en 7 jours), elle recevait 3 à 5 demandes par mois dès le 2ème mois grâce au SEO local sur "coach bien-être Lyon".
+Témoignage typique chez ConvertiLab : Emilie, coach bien-être à Lyon, avait créé son site sur Wix. Après 8 mois, 0 demande de contact venant de Google. Après refonte de son site avec ConvertiLab (700€, livré en 2 semaines), elle recevait 3 à 5 demandes par mois dès le 2ème mois grâce au SEO local sur "coach bien-être Lyon".
 
 ![Agence web - création site professionnel avec résultats](https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80)
 
@@ -7933,7 +7933,7 @@ Le minimum à viser : **score PageSpeed > 70 sur mobile**. L'objectif : > 90. Si
     faqItems: [
       {
         question: "Combien coûte un site web pour un coiffeur ?",
-        answer: "Un site web pour un coiffeur coûte entre 400€ et 2 000€. Un site vitrine avec tarifs, galerie de coiffures et formulaire de réservation simple démarre à 400€. Un site avec système de réservation en ligne intégré (choix du coiffeur, créneau, service) est entre 800€ et 2 000€.",
+        answer: "Un site web pour un coiffeur coûte entre 400€ et 2 000€. Un site vitrine avec tarifs, galerie de coiffures et formulaire de réservation simple démarre à 400€. Un site avec système de réservation en ligne intégré (choix du coiffeur, créneau, service) est entre 1490€ et 2 000€.",
       },
       {
         question: "Un coiffeur a-t-il besoin d'un système de réservation en ligne ?",
@@ -7945,10 +7945,10 @@ Le minimum à viser : **score PageSpeed > 70 sur mobile**. L'objectif : > 90. Si
       },
       {
         question: "En combien de temps un site coiffeur peut-il être créé ?",
-        answer: "Un site vitrine pour coiffeur est réalisé en 7 jours ouvrés chez ConvertiLab. Ce délai inclut le design sur-mesure aux couleurs du salon, l'intégration du menu de prestations et des tarifs, la galerie de coiffures, l'optimisation SEO locale et la mise en ligne.",
+        answer: "Un site vitrine pour coiffeur est réalisé en 2 semaines chez ConvertiLab. Ce délai inclut le design sur-mesure aux couleurs du salon, l'intégration du menu de prestations et des tarifs, la galerie de coiffures, l'optimisation SEO locale et la mise en ligne.",
       },
     ],
-    content: `Un site web pour un coiffeur coûte entre 400€ et 2 000€ selon les fonctionnalités. Un site vitrine avec galerie, tarifs et formulaire de contact démarre à 400€. L'intégration d'un système de réservation en ligne (choix du coiffeur, créneau horaire, service) fait monter le budget à 800€-2 000€ selon la complexité. Dans les deux cas, un seul nouveau client par semaine rembourse l'investissement en moins d'un mois.
+    content: `Un site web pour un coiffeur coûte entre 400€ et 2 000€ selon les fonctionnalités. Un site vitrine avec galerie, tarifs et formulaire de contact démarre à 400€. L'intégration d'un système de réservation en ligne (choix du coiffeur, créneau horaire, service) fait monter le budget à 1490€-2 000€ selon la complexité. Dans les deux cas, un seul nouveau client par semaine rembourse l'investissement en moins d'un mois.
 
 **Chiffres secteur :** 70% des réservations de services beauté se font désormais en dehors des heures d'ouverture — la nuit, le dimanche, pendant la pause déjeuner. Un salon sans réservation en ligne rate toutes ces opportunités. Et 80% des clients choisissent leur coiffeur via une recherche Google Maps avant d'appeler. Même un formulaire de contact simple sur un site vitrine permet de capter ces demandes qui partent sinon chez le concurrent visible en ligne.
 
@@ -7959,19 +7959,19 @@ Le minimum à viser : **score PageSpeed > 70 sur mobile**. L'objectif : > 90. Si
 Trois niveaux d'offre selon les besoins du salon :
 
 **Site vitrine coiffeur — 400€ à 600€**
-La solution pour les salons qui veulent une présence professionnelle et attirer des clients via Google local. Comprend : page d'accueil, menu des prestations et tarifs, galerie de coupes et colorations, horaires, adresse avec Google Maps, formulaire de contact. Livré en 7 jours.
+La solution pour les salons qui veulent une présence professionnelle et attirer des clients via Google local. Comprend : page d'accueil, menu des prestations et tarifs, galerie de coupes et colorations, horaires, adresse avec Google Maps, formulaire de contact. Livré en 2 semaines.
 
 **Site avec réservation en ligne simple — 700€ à 1 200€**
 Pour les salons qui veulent supprimer les appels de prise de rendez-vous. Inclut un module de réservation : le client choisit son créneau, son coiffeur (si salon avec plusieurs coiffeurs) et son service. L'agenda du salon est synchronisé et le client reçoit une confirmation par email et un rappel SMS.
 
-**Site avec système avancé — 1 500€ à 2 000€**
+**Site avec système avancé — 1 490€ à 2 000€**
 Pour les salons avec plusieurs coiffeurs, des services complexes (colorations, soins, extensions), une gestion des stocks ou une boutique de produits en ligne. Ce niveau inclut souvent un espace client pour l'historique des réservations.
 
-Chez ConvertiLab, nos sites coiffeur démarrent à **500€** avec possibilité de paiement en 3 fois.
+Chez ConvertiLab, nos sites coiffeur démarrent à **490€** avec possibilité de paiement en 3 fois.
 
 ## Que comprend un site internet pour coiffeur à ce prix ?
 
-Un site vitrine coiffeur à 500€ chez ConvertiLab inclut :
+Un site vitrine coiffeur à 490€ chez ConvertiLab inclut :
 
 - Design sur-mesure aux couleurs et à l'ambiance du salon
 - Menu des prestations avec description et fourchette de prix
@@ -7983,7 +7983,7 @@ Un site vitrine coiffeur à 500€ chez ConvertiLab inclut :
 - Fiche Google Business Profile optimisée
 - Hébergement et domaine inclus la première année
 
-Ce qui n'est **pas inclus** dans l'offre à 500€ : système de réservation en ligne avec agenda synchronisé, vente de produits en ligne, gestion multi-coiffeurs avec planning.
+Ce qui n'est **pas inclus** dans l'offre à 490€ : système de réservation en ligne avec agenda synchronisé, vente de produits en ligne, gestion multi-coiffeurs avec planning.
 
 ![Menu prestations coiffure - tarifs et galerie photos salon](https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80)
 
@@ -8004,8 +8004,8 @@ Ce que Fresha ne dit pas :
 | Solution | Propriété | SEO | Commission | Coût annuel |
 |----------|-----------|-----|------------|-------------|
 | Fresha seul | Non | Mauvais (fresha.com) | Sur nvx clients | 0€ |
-| Site vitrine + Fresha | Oui | Excellent | Sur nvx clients via Fresha | 500€ + 120€ hébergement |
-| Site vitrine seul | Oui | Excellent | Aucune | 500€ + 120€ hébergement |
+| Site vitrine + Fresha | Oui | Excellent | Sur nvx clients via Fresha | 490€ + 120€ hébergement |
+| Site vitrine seul | Oui | Excellent | Aucune | 490€ + 120€ hébergement |
 
 ## Un site coiffeur peut-il se rentabiliser rapidement ?
 
@@ -8013,7 +8013,7 @@ Le calcul est simple. En France, « coiffeur [ville] » génère entre 200 et 3 
 
 Un client coiffeur dépense en moyenne 45€ à 80€ par visite et revient 4 à 8 fois par an. Valeur client annuelle : 180€ à 640€.
 
-5 nouveaux clients × 300€ de valeur annuelle moyenne = **1 500€ de CA supplémentaire par mois**. Un site à 500€ amorti en moins d'une semaine une fois positionné.
+5 nouveaux clients × 300€ de valeur annuelle moyenne = **1 490€ de CA supplémentaire par mois**. Un site à 490€ amorti en moins d'une semaine une fois positionné.
 
 Exemple réel : un salon de coiffure en banlieue parisienne accompagné par ConvertiLab a doublé ses réservations en ligne dans les 90 jours suivant la mise en ligne de son site, grâce au SEO local sur « coiffeur [ville] » et à l'intégration d'un module de réservation.
 
@@ -8231,11 +8231,11 @@ Avec ce rythme, vous atteindrez les 30 avis à 4.5+ en moins de 6 mois — seuil
       },
       {
         question: "Quelle est la différence entre un site vitrine et un site e-commerce ?",
-        answer: "Un site vitrine présente les produits ou services sans permettre de les acheter en ligne. Un site e-commerce permet d'ajouter des produits au panier et de payer directement sur le site. Le site vitrine est moins coûteux (400€ à 1 500€), plus simple à maintenir, et suffisant pour la grande majorité des petites entreprises qui travaillent sur devis ou rendez-vous.",
+        answer: "Un site vitrine présente les produits ou services sans permettre de les acheter en ligne. Un site e-commerce permet d'ajouter des produits au panier et de payer directement sur le site. Le site vitrine est moins coûteux (400€ à 1 490€), plus simple à maintenir, et suffisant pour la grande majorité des petites entreprises qui travaillent sur devis ou rendez-vous.",
       },
       {
         question: "Combien coûte un site vitrine professionnel ?",
-        answer: "Un site vitrine professionnel coûte entre 400€ et 2 500€ selon le nombre de pages, les fonctionnalités (formulaire de réservation, galerie, blog) et le niveau de personnalisation. Chez ConvertiLab, nos sites vitrines démarrent à 500€, sont livrés en 7 jours et incluent l'optimisation SEO locale.",
+        answer: "Un site vitrine professionnel coûte entre 400€ et 2 490€ selon le nombre de pages, les fonctionnalités (formulaire de réservation, galerie, blog) et le niveau de personnalisation. Chez ConvertiLab, nos sites vitrines démarrent à 490€, sont livrés en 2 semaines et incluent l'optimisation SEO locale.",
       },
       {
         question: "Un site vitrine est-il suffisant pour trouver des clients sur Google ?",
@@ -8262,7 +8262,7 @@ La différence fondamentale est dans la transaction :
 - Présente les produits ou services
 - Le visiteur vous contacte pour commander, réserver ou obtenir un devis
 - Pas de panier, pas de paiement en ligne
-- Coût : 400€ à 2 500€
+- Coût : 400€ à 2 490€
 - Maintenance simple
 
 **Site e-commerce :**
@@ -8329,7 +8329,7 @@ Le prix d'un site vitrine dépend de 3 facteurs :
 
 **1. Le nombre de pages** : un site 5 pages coûte moins qu'un site 15 pages
 
-**2. Les fonctionnalités** : un formulaire simple (gratuit à intégrer) vs un système de réservation en ligne avec gestion d'agenda (+ 300€ à 500€)
+**2. Les fonctionnalités** : un formulaire simple (gratuit à intégrer) vs un système de réservation en ligne avec gestion d'agenda (+ 300€ à 490€)
 
 **3. Le prestataire** : freelance, agence ou DIY avec un outil comme Wix
 
@@ -8337,9 +8337,9 @@ Le prix d'un site vitrine dépend de 3 facteurs :
 |---|---|---|---|
 | Wix / Squarespace (DIY) | 0€ + 17-35€/mois | 2 à 8 semaines | Moyen |
 | Freelance | 600€ à 2 000€ | 4 à 12 semaines | Variable |
-| Agence web | 500€ à 3 000€ | 1 à 4 semaines | Bon à excellent |
+| Agence web | 490€ à 3 000€ | 1 à 4 semaines | Bon à excellent |
 
-Chez ConvertiLab, un site vitrine professionnel est disponible à partir de **500€**, livré en **7 jours**, avec optimisation SEO locale incluse. Le paiement est possible en 3 fois sans frais, ce qui rend l'investissement accessible dès 167€/mois — pour rappel, un seul nouveau client par mois dans la plupart des secteurs couvre largement ce budget.
+Chez ConvertiLab, un site vitrine professionnel est disponible à partir de **490€**, livré en **2 semaines**, avec optimisation SEO locale incluse. Le paiement est possible en 3 fois sans frais, ce qui rend l'investissement accessible dès 167€/mois — pour rappel, un seul nouveau client par mois dans la plupart des secteurs couvre largement ce budget.
 
 [Estimer le budget de votre site vitrine](/estimation-prix-site-web)
 
@@ -8364,7 +8364,7 @@ Oui si :
 - Vous travaillez sur devis, rendez-vous ou contact direct
 - Votre activité est locale ou régionale
 - Vous avez besoin d'être visible sur Google Maps et dans les résultats locaux
-- Votre budget est de 500€ à 2 000€ (pas de fonctionnalités e-commerce complexes)
+- Votre budget est de 490€ à 2 000€ (pas de fonctionnalités e-commerce complexes)
 
 Non si :
 - Vous vendez des produits en ligne à la commande

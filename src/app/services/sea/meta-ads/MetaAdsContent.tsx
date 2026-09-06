@@ -64,7 +64,7 @@ export default function MetaAdsContent() {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>Facebook et Instagram réunissent plus de <strong>3,2 milliards d'utilisateurs actifs</strong> dans le monde, dont 45 millions en France. Ces plateformes collectent des données comportementales exceptionnellement précises : centres d'intérêt, comportements d'achat, événements de vie, interactions avec des pages similaires à la vôtre.</p>
                 <p>La différence avec Google Ads est fondamentale : <strong>Meta Ads crée la demande</strong> là où Google Ads répond à une demande existante. C'est pourquoi Meta excelle pour les produits découverts impulsivement — mode, décoration, cosmétiques, restaurants — et pour construire une notoriété de marque auprès d'audiences ciblées.</p>
-                <p>Notre agence Meta Ads à Paris gère des budgets de 500€ à 50 000€/mois. Nous créons des campagnes complètes incluant la stratégie créative, le ciblage d'audience, les tests A/B et l'optimisation quotidienne. Nos clients e-commerce atteignent en moyenne un <strong>ROAS de x3.2</strong>.</p>
+                <p>Notre agence Meta Ads à Paris gère des budgets de 490€ à 50 000€/mois. Nous créons des campagnes complètes incluant la stratégie créative, le ciblage d'audience, les tests A/B et l'optimisation quotidienne. Nos clients e-commerce atteignent en moyenne un <strong>ROAS de x3.2</strong>.</p>
               </div>
             </div>
             <div className="space-y-6">

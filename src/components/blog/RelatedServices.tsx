@@ -14,7 +14,7 @@ interface ServiceLink {
 
 const servicesByCategory: Record<string, ServiceLink[]> = {
   Business: [
-    { icon: <FileText className="w-5 h-5" />, title: "Site Vitrine", description: "Présentez votre activité dès 500€", href: "/services/sites-web/site-vitrine" },
+    { icon: <FileText className="w-5 h-5" />, title: "Site Vitrine", description: "Présentez votre activité dès 490€", href: "/services/sites-web/site-vitrine" },
     { icon: <Rocket className="w-5 h-5" />, title: "Landing Page", description: "Convertissez vos visiteurs dès 300€", href: "/services/sites-web/landing-page" },
   ],
   "Web Design": [
@@ -26,11 +26,11 @@ const servicesByCategory: Record<string, ServiceLink[]> = {
     { icon: <Search className="w-5 h-5" />, title: "Audit SEO", description: "Diagnostic complet de visibilité", href: "/services/seo/audit" },
   ],
   Technique: [
-    { icon: <Store className="w-5 h-5" />, title: "Site E-commerce", description: "Boutique en ligne dès 800€", href: "/services/sites-web/site-ecommerce" },
+    { icon: <Store className="w-5 h-5" />, title: "Site E-commerce", description: "Boutique en ligne dès 1490€", href: "/services/sites-web/site-ecommerce" },
     { icon: <Megaphone className="w-5 h-5" />, title: "Google Ads", description: "Campagnes publicitaires ciblées", href: "/services/sea/google-ads" },
   ],
   "E-commerce": [
-    { icon: <Store className="w-5 h-5" />, title: "Site E-commerce", description: "Boutique en ligne performante dès 800€", href: "/services/sites-web/site-ecommerce" },
+    { icon: <Store className="w-5 h-5" />, title: "Site E-commerce", description: "Boutique en ligne performante dès 1490€", href: "/services/sites-web/site-ecommerce" },
     { icon: <Search className="w-5 h-5" />, title: "SEO E-commerce", description: "Référencez vos produits sur Google", href: "/services/seo/referencement" },
   ],
   Marketing: [

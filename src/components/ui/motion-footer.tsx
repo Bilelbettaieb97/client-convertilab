@@ -211,7 +211,7 @@ Magnetic.displayName = "Magnetic";
 // ConvertiLab agency value marquee items
 const MarqueeBlock = () => (
   <div className="flex items-center space-x-10 px-4 whitespace-nowrap">
-    <span>Sites livrés en 7 jours</span>
+    <span>Sites livrés en 2 semaines</span>
     <span className="text-purple-400">✦</span>
     <span>+280% de CA moyen</span>
     <span className="text-pink-400">✦</span>

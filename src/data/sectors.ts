@@ -78,7 +78,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un restaurant ?",
         answer:
-          "Nos sites vitrines pour restaurants démarrent à 500€. Ce tarif inclut le menu en ligne, la galerie photos, le bouton de réservation, l'intégration Google Maps et un an d'hébergement. Pour un système de réservation avancé ou de commande en ligne, comptez un supplément selon vos besoins.",
+          "Nos sites vitrines pour restaurants démarrent à 490€. Ce tarif inclut le menu en ligne, la galerie photos, le bouton de réservation, l'intégration Google Maps et un an d'hébergement. Pour un système de réservation avancé ou de commande en ligne, comptez un supplément selon vos besoins.",
       },
       {
         question:
@@ -191,7 +191,7 @@ export const sectors: Sector[] = [
         question:
           "Combien coûte un site internet pour un cabinet d'avocats ?",
         answer:
-          "Un site vitrine pour cabinet d'avocats démarre à 500€. Ce prix comprend un design professionnel, les pages par domaine de compétence, le formulaire de contact sécurisé, les mentions légales conformes et un an d'hébergement. Un blog juridique ou un espace client sécurisé peut être ajouté en option.",
+          "Un site vitrine pour cabinet d'avocats démarre à 490€. Ce prix comprend un design professionnel, les pages par domaine de compétence, le formulaire de contact sécurisé, les mentions légales conformes et un an d'hébergement. Un blog juridique ou un espace client sécurisé peut être ajouté en option.",
       },
       {
         question:
@@ -307,7 +307,7 @@ export const sectors: Sector[] = [
         question:
           "Combien coûte un site internet pour un artisan ?",
         answer:
-          "Un site vitrine pour artisan démarre à 500€. Ce tarif inclut la galerie de réalisations, le formulaire de demande de devis, les zones d'intervention, les témoignages clients et un an d'hébergement. C'est un investissement qui se rentabilise dès les premiers chantiers obtenus grâce au site.",
+          "Un site vitrine pour artisan démarre à 490€. Ce tarif inclut la galerie de réalisations, le formulaire de demande de devis, les zones d'intervention, les témoignages clients et un an d'hébergement. C'est un investissement qui se rentabilise dès les premiers chantiers obtenus grâce au site.",
       },
       {
         question:
@@ -423,7 +423,7 @@ export const sectors: Sector[] = [
         question:
           "Combien coûte un site internet pour une agence immobilière ?",
         answer:
-          "Un site vitrine pour agence immobilière démarre à 500€. Il comprend le catalogue de biens, la recherche par critères, les pages par quartier, le formulaire d'estimation et un an d'hébergement. Pour un site avec import automatique depuis votre logiciel métier, un devis personnalisé sera établi.",
+          "Un site vitrine pour agence immobilière démarre à 490€. Il comprend le catalogue de biens, la recherche par critères, les pages par quartier, le formulaire d'estimation et un an d'hébergement. Pour un site avec import automatique depuis votre logiciel métier, un devis personnalisé sera établi.",
       },
       {
         question:
@@ -539,7 +539,7 @@ export const sectors: Sector[] = [
         question:
           "Combien coûte un site internet pour un coach ou consultant ?",
         answer:
-          "Un site vitrine pour coach ou consultant démarre à 500€. Il comprend votre page de présentation, vos offres, l'intégration Calendly, les témoignages, le blog et un an d'hébergement. C'est l'investissement le plus rentable pour développer votre activité au-delà du bouche-à-oreille.",
+          "Un site vitrine pour coach ou consultant démarre à 490€. Il comprend votre page de présentation, vos offres, l'intégration Calendly, les témoignages, le blog et un an d'hébergement. C'est l'investissement le plus rentable pour développer votre activité au-delà du bouche-à-oreille.",
       },
       {
         question:
@@ -655,7 +655,7 @@ export const sectors: Sector[] = [
         question:
           "Combien coûte la création d'une boutique en ligne ?",
         answer:
-          "Nos boutiques e-commerce démarrent à 800€. Ce tarif inclut le catalogue produits, le paiement sécurisé Stripe, la gestion des stocks, les pages catégories SEO, la relance panier abandonné et un an d'hébergement. Le prix final dépend du nombre de produits et des fonctionnalités souhaitées.",
+          "Nos boutiques e-commerce démarrent à 1490€. Ce tarif inclut le catalogue produits, le paiement sécurisé Stripe, la gestion des stocks, les pages catégories SEO, la relance panier abandonné et un an d'hébergement. Le prix final dépend du nombre de produits et des fonctionnalités souhaitées.",
       },
       {
         question:
@@ -770,7 +770,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un cabinet dentaire ?",
         answer:
-          "Un site vitrine pour cabinet dentaire démarre à 500€. Il comprend la présentation du cabinet et de l'équipe, les pages par type de soin, la prise de rendez-vous en ligne, la FAQ patients et un an d'hébergement. Un module de galerie avant/après peut être ajouté en option.",
+          "Un site vitrine pour cabinet dentaire démarre à 490€. Il comprend la présentation du cabinet et de l'équipe, les pages par type de soin, la prise de rendez-vous en ligne, la FAQ patients et un an d'hébergement. Un module de galerie avant/après peut être ajouté en option.",
       },
       {
         question: "Le site peut-il intégrer Doctolib ?",
@@ -879,7 +879,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un cabinet médical ?",
         answer:
-          "Un site vitrine pour cabinet médical démarre à 500€. Il inclut la présentation du praticien, les pages par consultation, la prise de RDV en ligne, les informations pratiques et un an d'hébergement.",
+          "Un site vitrine pour cabinet médical démarre à 490€. Il inclut la présentation du praticien, les pages par consultation, la prise de RDV en ligne, les informations pratiques et un an d'hébergement.",
       },
       {
         question: "Le site respectera-t-il les obligations déontologiques du médecin ?",
@@ -988,7 +988,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un salon de coiffure ?",
         answer:
-          "Un site vitrine pour salon de coiffure démarre à 500€. Il comprend la galerie de réalisations, la grille tarifaire, la réservation en ligne, la présentation de l'équipe et un an d'hébergement.",
+          "Un site vitrine pour salon de coiffure démarre à 490€. Il comprend la galerie de réalisations, la grille tarifaire, la réservation en ligne, la présentation de l'équipe et un an d'hébergement.",
       },
       {
         question: "Puis-je ajouter des photos de mes réalisations facilement ?",
@@ -1097,7 +1097,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une boulangerie ?",
         answer:
-          "Un site vitrine pour boulangerie démarre à 500€. Il comprend la galerie photos, la carte des produits, le formulaire de commande, les horaires et un an d'hébergement.",
+          "Un site vitrine pour boulangerie démarre à 490€. Il comprend la galerie photos, la carte des produits, le formulaire de commande, les horaires et un an d'hébergement.",
       },
       {
         question: "Les clients pourront-ils commander des gâteaux en ligne ?",
@@ -1206,7 +1206,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site portfolio pour photographe ?",
         answer:
-          "Un site portfolio pour photographe démarre à 500€. Il comprend les galeries thématiques, la page tarifs, le formulaire de réservation, le blog et un an d'hébergement. Les galeries clients privées sont disponibles en option.",
+          "Un site portfolio pour photographe démarre à 490€. Il comprend les galeries thématiques, la page tarifs, le formulaire de réservation, le blog et un an d'hébergement. Les galeries clients privées sont disponibles en option.",
       },
       {
         question: "Les photos seront-elles affichées en haute qualité ?",
@@ -1315,7 +1315,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour une startup SaaS ?",
         answer:
-          "Une landing page SaaS démarre à 500€ pour une page unique optimisée conversion. Un site multi-pages avec blog, pricing et changelog démarre à 800€. L'objectif est toujours de maximiser le ratio visiteurs → inscriptions.",
+          "Une landing page SaaS démarre à 490€ pour une page unique optimisée conversion. Un site multi-pages avec blog, pricing et changelog démarre à 1490€. L'objectif est toujours de maximiser le ratio visiteurs → inscriptions.",
       },
       {
         question: "Le site sera-t-il optimisé pour la conversion ?",
@@ -1424,7 +1424,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un cabinet d'architecture ?",
         answer:
-          "Un site portfolio pour architecte démarre à 500€. Il comprend les galeries de projets, les études de cas, les pages par spécialité, le formulaire de contact et un an d'hébergement.",
+          "Un site portfolio pour architecte démarre à 490€. Il comprend les galeries de projets, les études de cas, les pages par spécialité, le formulaire de contact et un an d'hébergement.",
       },
       {
         question: "Comment mes projets seront-ils mis en valeur ?",
@@ -1533,7 +1533,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un expert-comptable ?",
         answer:
-          "Un site vitrine pour cabinet comptable démarre à 500€. Il comprend les pages par service, la grille tarifaire, le blog fiscal, le formulaire de devis et un an d'hébergement.",
+          "Un site vitrine pour cabinet comptable démarre à 490€. Il comprend les pages par service, la grille tarifaire, le blog fiscal, le formulaire de devis et un an d'hébergement.",
       },
       {
         question: "Le blog fiscal est-il vraiment utile pour attirer des clients ?",
@@ -1642,7 +1642,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un fleuriste ?",
         answer:
-          "Un site vitrine avec commande en ligne pour fleuriste démarre à 500€. Il comprend le catalogue, la commande en ligne, la galerie par événement et un an d'hébergement.",
+          "Un site vitrine avec commande en ligne pour fleuriste démarre à 490€. Il comprend le catalogue, la commande en ligne, la galerie par événement et un an d'hébergement.",
       },
       {
         question: "Les clients pourront-ils commander et se faire livrer ?",
@@ -1751,7 +1751,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une salle de sport ?",
         answer:
-          "Un site vitrine pour salle de sport démarre à 500€. Il comprend le planning des cours, les tarifs, la présentation des coachs, la galerie et le formulaire de séance d'essai avec un an d'hébergement.",
+          "Un site vitrine pour salle de sport démarre à 490€. Il comprend le planning des cours, les tarifs, la présentation des coachs, la galerie et le formulaire de séance d'essai avec un an d'hébergement.",
       },
       {
         question: "Le planning des cours sera-t-il modifiable facilement ?",
@@ -1860,7 +1860,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un institut de beauté ?",
         answer:
-          "Un site vitrine pour institut de beauté démarre à 500€. Il comprend la carte des soins, la réservation en ligne, la galerie, les chèques cadeaux et un an d'hébergement.",
+          "Un site vitrine pour institut de beauté démarre à 490€. Il comprend la carte des soins, la réservation en ligne, la galerie, les chèques cadeaux et un an d'hébergement.",
       },
       {
         question: "Le site aura-t-il un aspect luxueux ?",
@@ -1969,7 +1969,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une agence de voyage ?",
         answer:
-          "Un site vitrine pour agence de voyage démarre à 500€. Il comprend les fiches destinations, le catalogue par thème, le formulaire sur mesure, le blog voyage et un an d'hébergement.",
+          "Un site vitrine pour agence de voyage démarre à 490€. Il comprend les fiches destinations, le catalogue par thème, le formulaire sur mesure, le blog voyage et un an d'hébergement.",
       },
       {
         question: "Comment le site peut-il rivaliser avec Booking ou Expedia ?",
@@ -2078,7 +2078,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une auto-école ?",
         answer:
-          "Un site vitrine pour auto-école démarre à 500€. Il comprend les formules et tarifs, le formulaire d'inscription, les témoignages élèves, le taux de réussite et un an d'hébergement.",
+          "Un site vitrine pour auto-école démarre à 490€. Il comprend les formules et tarifs, le formulaire d'inscription, les témoignages élèves, le taux de réussite et un an d'hébergement.",
       },
       {
         question: "Le taux de réussite sera-t-il bien mis en avant ?",
@@ -2187,7 +2187,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un traiteur ?",
         answer:
-          "Un site vitrine pour traiteur démarre à 500€. Il comprend la galerie d'événements, les menus par occasion, le formulaire de devis, les témoignages et un an d'hébergement.",
+          "Un site vitrine pour traiteur démarre à 490€. Il comprend la galerie d'événements, les menus par occasion, le formulaire de devis, les témoignages et un an d'hébergement.",
       },
       {
         question: "Le site m'aidera-t-il à décrocher des mariages ?",
@@ -2296,7 +2296,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un électricien ?",
         answer:
-          "Un site vitrine pour électricien démarre à 500€. Il comprend les pages par service, le formulaire de devis, les zones d'intervention, les certifications et un an d'hébergement.",
+          "Un site vitrine pour électricien démarre à 490€. Il comprend les pages par service, le formulaire de devis, les zones d'intervention, les certifications et un an d'hébergement.",
       },
       {
         question: "Le site peut-il remplacer les plateformes comme MesDépanneurs ?",
@@ -2405,7 +2405,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un plombier ?",
         answer:
-          "Un site vitrine pour plombier démarre à 500€. Il comprend le numéro d'urgence, les pages par service, le formulaire de devis, les zones d'intervention et un an d'hébergement.",
+          "Un site vitrine pour plombier démarre à 490€. Il comprend le numéro d'urgence, les pages par service, le formulaire de devis, les zones d'intervention et un an d'hébergement.",
       },
       {
         question: "Le site sera-t-il visible pour les recherches d'urgence ?",
@@ -2514,7 +2514,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un ostéopathe ou kiné ?",
         answer:
-          "Un site vitrine pour ostéopathe ou kiné démarre à 500€. Il comprend la présentation du praticien, les pages par pathologie, la prise de RDV en ligne, le blog et un an d'hébergement.",
+          "Un site vitrine pour ostéopathe ou kiné démarre à 490€. Il comprend la présentation du praticien, les pages par pathologie, la prise de RDV en ligne, le blog et un an d'hébergement.",
       },
       {
         question: "Les pages par pathologie sont-elles utiles pour le SEO ?",
@@ -2623,7 +2623,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un garage automobile ?",
         answer:
-          "Un site vitrine pour garage automobile démarre à 500€. Il comprend les pages par service, la grille tarifaire, la prise de RDV en ligne, les avis clients et un an d'hébergement.",
+          "Un site vitrine pour garage automobile démarre à 490€. Il comprend les pages par service, la grille tarifaire, la prise de RDV en ligne, les avis clients et un an d'hébergement.",
       },
       {
         question: "Comment me différencier des centres auto franchisés ?",
@@ -2732,7 +2732,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une bijouterie ?",
         answer:
-          "Un site vitrine pour bijouterie démarre à 500€. Il comprend le catalogue de collections, la galerie HD, la page sur mesure, l'histoire de la maison et un an d'hébergement.",
+          "Un site vitrine pour bijouterie démarre à 490€. Il comprend le catalogue de collections, la galerie HD, la page sur mesure, l'histoire de la maison et un an d'hébergement.",
       },
       {
         question: "Le site aura-t-il un aspect luxueux et haut de gamme ?",
@@ -2841,7 +2841,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un centre de formation ?",
         answer:
-          "Un site vitrine pour centre de formation démarre à 500€. Il comprend le catalogue de formations, le formulaire d'inscription, les témoignages, la page équipe et un an d'hébergement.",
+          "Un site vitrine pour centre de formation démarre à 490€. Il comprend le catalogue de formations, le formulaire d'inscription, les témoignages, la page équipe et un an d'hébergement.",
       },
       {
         question: "Les élèves pourront-ils s'inscrire en ligne ?",
@@ -2950,7 +2950,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un vétérinaire ?",
         answer:
-          "Nos sites pour vétérinaires démarrent à 500€. Ce tarif inclut la prise de rendez-vous en ligne, les fiches services, la page urgences, l'intégration Google Maps et un an d'hébergement. Un blog santé animale ou un espace client peut être ajouté en option.",
+          "Nos sites pour vétérinaires démarrent à 490€. Ce tarif inclut la prise de rendez-vous en ligne, les fiches services, la page urgences, l'intégration Google Maps et un an d'hébergement. Un blog santé animale ou un espace client peut être ajouté en option.",
       },
       {
         question: "Les clients pourront-ils prendre RDV en ligne ?",
@@ -3059,7 +3059,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour une étude notariale ?",
         answer:
-          "Un site vitrine pour notaire démarre à 500€. Ce prix inclut un design professionnel, les pages par domaine d'intervention, le formulaire de contact sécurisé et un an d'hébergement. Un blog juridique ou un espace documentaire client peut être ajouté en option.",
+          "Un site vitrine pour notaire démarre à 490€. Ce prix inclut un design professionnel, les pages par domaine d'intervention, le formulaire de contact sécurisé et un an d'hébergement. Un blog juridique ou un espace documentaire client peut être ajouté en option.",
       },
       {
         question: "Le site respectera-t-il les règles de la profession ?",
@@ -3168,7 +3168,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un psychologue ?",
         answer:
-          "Nos sites pour psychologues et thérapeutes démarrent à 500€. Ce prix inclut un design apaisant, les pages par spécialité, la prise de RDV en ligne, la section tarifs et un an d'hébergement.",
+          "Nos sites pour psychologues et thérapeutes démarrent à 490€. Ce prix inclut un design apaisant, les pages par spécialité, la prise de RDV en ligne, la section tarifs et un an d'hébergement.",
       },
       {
         question: "Le site sera-t-il rassurant pour mes patients ?",
@@ -3386,7 +3386,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un caviste ?",
         answer:
-          "Un site pour caviste démarre à 500€. Ce prix inclut le catalogue de vins en ligne, la page événements, le blog accords mets-vins et un an d'hébergement. La vente en ligne avec paiement sécurisé peut être ajoutée en option.",
+          "Un site pour caviste démarre à 490€. Ce prix inclut le catalogue de vins en ligne, la page événements, le blog accords mets-vins et un an d'hébergement. La vente en ligne avec paiement sécurisé peut être ajoutée en option.",
       },
       {
         question: "Peut-on présenter notre catalogue de vins en ligne ?",
@@ -3495,7 +3495,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site de commande en ligne pour une pizzeria ?",
         answer:
-          "Un site avec commande en ligne pour pizzeria démarre à 800€. Ce prix inclut le menu digital, le système de commande, le paiement en ligne sécurisé, le click & collect et un an d'hébergement. Vous économisez les commissions des plateformes de livraison.",
+          "Un site avec commande en ligne pour pizzeria démarre à 1490€. Ce prix inclut le menu digital, le système de commande, le paiement en ligne sécurisé, le click & collect et un an d'hébergement. Vous économisez les commissions des plateformes de livraison.",
       },
       {
         question: "Peut-on se passer d'Uber Eats et Deliveroo ?",
@@ -3604,7 +3604,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un hôtel ou une chambre d'hôtes ?",
         answer:
-          "Un site avec réservation en ligne démarre à 800€. Ce prix inclut les galeries photos, les fiches chambres, le moteur de réservation, la page activités et un an d'hébergement. Vous économisez les commissions des OTA (Booking, Airbnb).",
+          "Un site avec réservation en ligne démarre à 1490€. Ce prix inclut les galeries photos, les fiches chambres, le moteur de réservation, la page activités et un an d'hébergement. Vous économisez les commissions des OTA (Booking, Airbnb).",
       },
       {
         question: "Peut-on se passer de Booking ?",
@@ -3713,7 +3713,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une crèche ?",
         answer:
-          "Un site pour crèche ou structure de garde d'enfants démarre à 500€. Ce prix inclut un design chaleureux, la page projet pédagogique, la présentation de l'équipe, le formulaire de pré-inscription et un an d'hébergement.",
+          "Un site pour crèche ou structure de garde d'enfants démarre à 490€. Ce prix inclut un design chaleureux, la page projet pédagogique, la présentation de l'équipe, le formulaire de pré-inscription et un an d'hébergement.",
       },
       {
         question: "Les parents pourront-ils pré-inscrire leur enfant en ligne ?",
@@ -3822,7 +3822,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un déménageur ?",
         answer:
-          "Un site vitrine pour déménageur démarre à 500€. Ce prix inclut le formulaire de devis en ligne, les pages services, la zone d'intervention, les témoignages et un an d'hébergement.",
+          "Un site vitrine pour déménageur démarre à 490€. Ce prix inclut le formulaire de devis en ligne, les pages services, la zone d'intervention, les témoignages et un an d'hébergement.",
       },
       {
         question: "Le formulaire de devis est-il détaillé ?",
@@ -3844,7 +3844,7 @@ export const sectors: Sector[] = [
       client: "Déménagements Rapides IDF",
       sector: "Déménagement — Île-de-France",
       challenge:
-        "L'entreprise dépensait 800€/mois sur des plateformes de devis avec un taux de conversion faible. Les prospects comparaient systématiquement 5 devis et choisissaient le moins cher.",
+        "L'entreprise dépensait 1 500€/mois sur des plateformes de devis avec un taux de conversion faible. Les prospects comparaient systématiquement 5 devis et choisissaient le moins cher.",
       solution:
         "Création d'un site professionnel avec formulaire de devis détaillé, pages par type de déménagement, galerie photos, témoignages vidéo et SEO local sur les principales villes d'IDF.",
       results: [
@@ -3931,7 +3931,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un serrurier ?",
         answer:
-          "Un site pour serrurier démarre à 500€. Ce prix inclut le numéro cliquable, la grille tarifaire, les pages par zone d'intervention, les avis clients et un an d'hébergement. Le SEO local est inclus pour apparaître en urgence.",
+          "Un site pour serrurier démarre à 490€. Ce prix inclut le numéro cliquable, la grille tarifaire, les pages par zone d'intervention, les avis clients et un an d'hébergement. Le SEO local est inclus pour apparaître en urgence.",
       },
       {
         question: "Comment inspirer confiance face aux arnaques en ligne ?",
@@ -4040,7 +4040,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un paysagiste ?",
         answer:
-          "Un site vitrine pour paysagiste démarre à 500€. Ce prix inclut le portfolio avant/après, le formulaire de devis, les pages services, la galerie photos et un an d'hébergement.",
+          "Un site vitrine pour paysagiste démarre à 490€. Ce prix inclut le portfolio avant/après, le formulaire de devis, les pages services, la galerie photos et un an d'hébergement.",
       },
       {
         question: "Peut-on montrer des photos avant/après ?",
@@ -4149,7 +4149,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un peintre en bâtiment ?",
         answer:
-          "Un site vitrine pour peintre en bâtiment démarre à 500€. Ce prix inclut le portfolio avant/après, le formulaire de devis, les pages par spécialité, les certifications et un an d'hébergement.",
+          "Un site vitrine pour peintre en bâtiment démarre à 490€. Ce prix inclut le portfolio avant/après, le formulaire de devis, les pages par spécialité, les certifications et un an d'hébergement.",
       },
       {
         question: "Comment montrer la qualité de mon travail en ligne ?",
@@ -4258,7 +4258,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un menuisier ?",
         answer:
-          "Un site vitrine pour menuisier démarre à 500€. Ce prix inclut la galerie de réalisations, le formulaire de devis, les pages par spécialité, la section matériaux et un an d'hébergement.",
+          "Un site vitrine pour menuisier démarre à 490€. Ce prix inclut la galerie de réalisations, le formulaire de devis, les pages par spécialité, la section matériaux et un an d'hébergement.",
       },
       {
         question: "Comment mettre en valeur mes créations sur-mesure ?",
@@ -4367,7 +4367,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un carreleur ?",
         answer:
-          "Un site vitrine pour carreleur démarre à 500€. Ce prix inclut le portfolio avant/après, le formulaire de devis, les pages par type de pose, les avis clients et un an d'hébergement.",
+          "Un site vitrine pour carreleur démarre à 490€. Ce prix inclut le portfolio avant/après, le formulaire de devis, les pages par type de pose, les avis clients et un an d'hébergement.",
       },
       {
         question: "Comment montrer la qualité de mes poses ?",
@@ -4476,7 +4476,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un chauffagiste ?",
         answer:
-          "Un site pour chauffagiste/climaticien démarre à 500€. Ce prix inclut les pages services, les certifications, le formulaire de devis, la section aides financières et un an d'hébergement.",
+          "Un site pour chauffagiste/climaticien démarre à 490€. Ce prix inclut les pages services, les certifications, le formulaire de devis, la section aides financières et un an d'hébergement.",
       },
       {
         question: "Peut-on mettre en avant nos certifications RGE ?",
@@ -4585,7 +4585,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une agence de communication ?",
         answer:
-          "Un site portfolio pour agence de communication démarre à 800€. Ce prix inclut le portfolio interactif, les études de cas, les pages par expertise, le blog et un an d'hébergement.",
+          "Un site portfolio pour agence de communication démarre à 1490€. Ce prix inclut le portfolio interactif, les études de cas, les pages par expertise, le blog et un an d'hébergement.",
       },
       {
         question: "Comment le site reflétera-t-il notre créativité ?",
@@ -4694,7 +4694,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un cabinet de recrutement ?",
         answer:
-          "Un site pour cabinet de recrutement démarre à 800€. Ce prix inclut l'espace offres d'emploi, le formulaire candidature, les pages par secteur, les études de cas et un an d'hébergement.",
+          "Un site pour cabinet de recrutement démarre à 1490€. Ce prix inclut l'espace offres d'emploi, le formulaire candidature, les pages par secteur, les études de cas et un an d'hébergement.",
       },
       {
         question: "Peut-on gérer les offres d'emploi depuis le site ?",
@@ -4803,7 +4803,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un centre de formation ?",
         answer:
-          "Un site pour centre de formation démarre à 800€. Ce prix inclut le catalogue filtrable, les fiches formation, le formulaire d'inscription, la certification Qualiopi et un an d'hébergement.",
+          "Un site pour centre de formation démarre à 1490€. Ce prix inclut le catalogue filtrable, les fiches formation, le formulaire d'inscription, la certification Qualiopi et un an d'hébergement.",
       },
       {
         question: "Peut-on présenter chaque formation en détail ?",
@@ -4912,7 +4912,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une société de nettoyage ?",
         answer:
-          "Un site pour société de nettoyage démarre à 500€. Ce prix inclut les pages prestations, les références clients, le formulaire de devis B2B, les certifications et un an d'hébergement.",
+          "Un site pour société de nettoyage démarre à 490€. Ce prix inclut les pages prestations, les références clients, le formulaire de devis B2B, les certifications et un an d'hébergement.",
       },
       {
         question: "Peut-on afficher nos références clients ?",
@@ -5021,7 +5021,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une entreprise de transport ?",
         answer:
-          "Un site pour entreprise de transport/logistique démarre à 800€. Ce prix inclut la présentation de la flotte, les pages services, le formulaire de cotation, les certifications et un an d'hébergement.",
+          "Un site pour entreprise de transport/logistique démarre à 1490€. Ce prix inclut la présentation de la flotte, les pages services, le formulaire de cotation, les certifications et un an d'hébergement.",
       },
       {
         question: "Peut-on présenter notre flotte de véhicules ?",
@@ -5130,7 +5130,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour un opticien ?",
         answer:
-          "Un site pour opticien démarre à 500€. Ce prix inclut le catalogue montures, la prise de RDV, les pages services, la section mutuelles et un an d'hébergement. La vente en ligne de lentilles peut être ajoutée en option.",
+          "Un site pour opticien démarre à 490€. Ce prix inclut le catalogue montures, la prise de RDV, les pages services, la section mutuelles et un an d'hébergement. La vente en ligne de lentilles peut être ajoutée en option.",
       },
       {
         question: "Peut-on présenter nos collections de montures ?",
@@ -5239,7 +5239,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une pharmacie ?",
         answer:
-          "Un site pour pharmacie démarre à 500€. Ce prix inclut les horaires de garde, les pages services, le click & collect, la section conseils santé et un an d'hébergement.",
+          "Un site pour pharmacie démarre à 490€. Ce prix inclut les horaires de garde, les pages services, le click & collect, la section conseils santé et un an d'hébergement.",
       },
       {
         question: "Peut-on afficher les horaires de garde ?",
@@ -5348,7 +5348,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site pour une librairie ?",
         answer:
-          "Un site pour librairie démarre à 500€. Ce prix inclut les coups de coeur, la page événements, la commande en ligne avec retrait, le blog et un an d'hébergement.",
+          "Un site pour librairie démarre à 490€. Ce prix inclut les coups de coeur, la page événements, la commande en ligne avec retrait, le blog et un an d'hébergement.",
       },
       {
         question: "Peut-on concurrencer Amazon avec un site ?",
@@ -5566,7 +5566,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour une association ?",
         answer:
-          "Nos sites pour associations démarrent à 500€. Ce tarif inclut le design engageant, l'agenda des événements, le formulaire de don, l'espace bénévole et un an d'hébergement. Nous proposons des tarifs adaptés aux structures associatives.",
+          "Nos sites pour associations démarrent à 490€. Ce tarif inclut le design engageant, l'agenda des événements, le formulaire de don, l'espace bénévole et un an d'hébergement. Nous proposons des tarifs adaptés aux structures associatives.",
       },
       {
         question: "Peut-on intégrer un système de don en ligne ?",
@@ -5675,7 +5675,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour une entreprise de sécurité incendie ?",
         answer:
-          "Nos sites pour entreprises de sécurité incendie démarrent à 500€. Ce tarif inclut la structuration de vos services, le formulaire de devis, la mise en avant de vos certifications et un an d'hébergement.",
+          "Nos sites pour entreprises de sécurité incendie démarrent à 490€. Ce tarif inclut la structuration de vos services, le formulaire de devis, la mise en avant de vos certifications et un an d'hébergement.",
       },
       {
         question: "Peut-on mettre en avant nos certifications et agréments ?",
@@ -5784,7 +5784,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour une entreprise de recyclage ?",
         answer:
-          "Nos sites pour entreprises de recyclage et environnement démarrent à 500€. Ce tarif inclut un design éco-responsable, la structuration de vos services, le formulaire de devis et un an d'hébergement.",
+          "Nos sites pour entreprises de recyclage et environnement démarrent à 490€. Ce tarif inclut un design éco-responsable, la structuration de vos services, le formulaire de devis et un an d'hébergement.",
       },
       {
         question: "Le design reflétera-t-il notre engagement écologique ?",
@@ -5893,7 +5893,7 @@ export const sectors: Sector[] = [
       {
         question: "Combien coûte un site web pour un spectacle ou un événement ?",
         answer:
-          "Nos sites pour le spectacle et l'événementiel démarrent à 500€. Ce tarif inclut le design immersif, la billetterie en ligne, le calendrier des représentations et un an d'hébergement.",
+          "Nos sites pour le spectacle et l'événementiel démarrent à 490€. Ce tarif inclut le design immersif, la billetterie en ligne, le calendrier des représentations et un an d'hébergement.",
       },
       {
         question: "Peut-on intégrer une billetterie en ligne ?",

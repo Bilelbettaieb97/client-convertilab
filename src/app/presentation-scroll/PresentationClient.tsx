@@ -582,7 +582,7 @@ const FAQS = [
   ["« C'est un budget… est-ce que ça vaut le coup ? »", "Un seul nouveau client gagné grâce au site rembourse souvent l'investissement. Et avec le paiement dès 39€/mois, c'est moins qu'un abonnement pro classique."],
   ["« Je n'y connais rien en technique. »", "C'est justement notre rôle. On gère tout de A à Z : design, textes, mise en ligne, Google. Vous n'avez qu'à valider."],
   ["« J'ai déjà un site, mais il ne marche pas. »", "Parfait, on part de l'existant pour une refonte. On garde ce qui fonctionne et on corrige ce qui vous fait perdre des clients."],
-  ["« Combien de temps avant d'être en ligne ? »", "Entre 7 jours (formule Essentiel) et 3 semaines (site complet). Rapide, sans bâcler."],
+  ["« Combien de temps avant d'être en ligne ? »", "Entre 2 semaines (formule Essentiel) et 3 semaines (site complet). Rapide, sans bâcler."],
 ];
 
 function Faq() {
@@ -615,7 +615,7 @@ const TESTIMONIALS = [
 ];
 
 const PACKAGES = [
-  { name: "Essentiel", sub: "La landing page qui convertit", price: "690€", mo: "ou dès 39€/mois", reco: false, feats: ["1 page premium orientée conversion", "Design sur-mesure & mobile", "Formulaire de contact connecté", "Mise en ligne sous 7 jours"] },
+  { name: "Essentiel", sub: "La landing page qui convertit", price: "690€", mo: "ou dès 39€/mois", reco: false, feats: ["1 page premium orientée conversion", "Design sur-mesure & mobile", "Formulaire de contact connecté", "Mise en ligne sous 2 semaines"] },
   { name: "Pro", sub: "Le site vitrine complet", price: "1 290€", mo: "ou dès 59€/mois", reco: true, feats: ["Site multi-sections (jusqu'à 6)", "Optimisation SEO + Google Business", "Formulaires & prise de RDV", "1 an d'hébergement inclus", "Suivi & optimisation"] },
   { name: "Premium", sub: "La machine à clients complète", price: "2 380€", mo: "ou dès 99€/mois", reco: false, feats: ["E-commerce ou site sur-mesure", "Outils marketing automatisés", "Relances email / SMS / WhatsApp", "Espace admin autonome"] },
 ];

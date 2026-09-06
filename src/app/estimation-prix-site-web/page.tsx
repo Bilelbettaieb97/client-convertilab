@@ -5,14 +5,14 @@ import EstimationPrixClient from "./EstimationPrixClient";
 export const metadata: Metadata = {
   title: "Calculateur de Prix Site Internet : Simulateur Gratuit en 2 min",
   description:
-    "Simulateur de prix de site internet gratuit : estimez le coût de votre site web en 2 minutes selon vos besoins. Site vitrine dès 500€, e-commerce dès 800€. Estimation immédiate, devis sous 24h.",
+    "Simulateur de prix de site internet gratuit : estimez le coût de votre site web en 2 minutes selon vos besoins. Site vitrine dès 490€, e-commerce dès 1490€. Estimation immédiate, devis sous 24h.",
   keywords:
     "calculateur de prix site internet, simulateur prix site internet, estimation site internet, estimation site web, calculateur prix site web, estimer son site internet, devis site internet en ligne",
   alternates: { canonical: `${SITE.url}/estimation-prix-site-web` },
   openGraph: {
     title: "Calculateur de Prix Site Internet : Simulateur Gratuit en 2 min",
     description:
-      "Calculez le prix de votre site web en 2 minutes. Site vitrine dès 500€, e-commerce dès 800€. Résultat immédiat, devis détaillé sous 24h.",
+      "Calculez le prix de votre site web en 2 minutes. Site vitrine dès 490€, e-commerce dès 1490€. Résultat immédiat, devis détaillé sous 24h.",
     url: `${SITE.url}/estimation-prix-site-web`,
     type: "website",
   },

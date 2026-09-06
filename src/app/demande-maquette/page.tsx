@@ -58,7 +58,7 @@ const faqItems = [
   {
     question: "Et après la maquette, combien coûte le site complet ?",
     answer:
-      "Un site vitrine complet démarre à 500€ (ou 39€/mois en paiement étalé), livré en 7 jours après validation de la maquette. Le devis exact dépend de vos besoins : nombre de pages, fonctionnalités, e-commerce. Vous pouvez estimer votre budget en 2 minutes avec notre calculateur de prix en ligne.",
+      "Un site vitrine complet démarre à 490€ (ou 39€/mois en paiement étalé), livré en 2 semaines après validation de la maquette. Le devis exact dépend de vos besoins : nombre de pages, fonctionnalités, e-commerce. Vous pouvez estimer votre budget en 2 minutes avec notre calculateur de prix en ligne.",
   },
 ];
 
@@ -129,7 +129,7 @@ function MaquetteSeoContent() {
               Concrètement : vous décrivez votre projet en 2 minutes dans le formulaire
               ci-dessus, nos designers créent la maquette de votre page d&apos;accueil
               sous 48h, puis nous vous la présentons. Elle vous plaît ? Nous développons
-              le site complet — vitrine dès 500€, livré en 7 jours, avec{" "}
+              le site complet — vitrine dès 490€, livré en 2 semaines, avec{" "}
               <Link href="/prix" className="text-violet-400 hover:text-violet-300 underline underline-offset-2">
                 des tarifs publiés et définitifs
               </Link>

@@ -31,11 +31,16 @@ export const SITE = {
 } as const;
 
 export const PRICING = {
-  vitrine: { from: 500, label: "à partir de 500€", monthly: "à partir de 39€/mois" },
-  landing: { from: 500, label: "à partir de 500€", monthly: "à partir de 39€/mois" },
-  ecommerce: { from: 800, label: "à partir de 800€", monthly: "à partir de 59€/mois" },
+  // Grille arretee le 06/09/2026 : trois paliers, le site complet en favori.
+  // Le mensuel n'est PAS un abonnement, c'est le prix etale sur 24 mois
+  // 890 en 24 mensualites de 39 = 936, soit 46 de marge de financement.
+  // L'accroche historique "des 39EUR/mois" reste donc vraie, et la promesse
+  // "Aucun abonnement" de la page d'accueil tient : c'est un paiement etale.
+  landing: { from: 490, label: "490€", monthly: "ou 45€/mois sur 12 mois" },
+  vitrine: { from: 890, label: "890€", monthly: "à partir de 39€/mois sur 24 mois" },
+  ecommerce: { from: 1490, label: "à partir de 1490€", monthly: "ou 65€/mois sur 24 mois" },
   application: { label: "Sur devis" },
-  refonte: { from: 400, label: "à partir de 400€" },
+  refonte: { from: 690, label: "690€", monthly: "ou 30€/mois sur 24 mois" },
 } as const;
 
 export const DEFAULT_OG_IMAGE = `${SITE.url}/og-image.png`;

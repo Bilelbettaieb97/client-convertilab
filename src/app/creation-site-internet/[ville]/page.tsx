@@ -44,8 +44,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(ville);
   if (!city) return { title: "Page introuvable" };
 
-  const title = `Création Site Internet ${city.name} — Site Web Pro dès 500€ en 7 jours`;
-  const description = `Besoin d'un site web à ${city.name} ? ConvertiLab crée votre site internet professionnel dès 500€, livré en 7 jours, satisfait ou remboursé. +150 clients, 15 avis 4.9★. Devis gratuit sous 24h.`;
+  const title = `Création Site Internet ${city.name} — Site Web Pro dès 490€ en 2 semaines`;
+  const description = `Besoin d'un site web à ${city.name} ? ConvertiLab crée votre site internet professionnel dès 490€, livré en 2 semaines, satisfait ou remboursé. +150 clients, 15 avis 4.9★. Devis gratuit sous 24h.`;
 
   return {
     title,
@@ -86,7 +86,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
     {
       icon: Globe,
       name: "Site Vitrine",
-      price: "500€",
+      price: "490€",
       features: [
         "Design sur-mesure responsive",
         "5 pages optimisées SEO",
@@ -100,7 +100,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
     {
       icon: Store,
       name: "Site E-commerce",
-      price: "800€",
+      price: "1490€",
       features: [
         "Catalogue produits illimité",
         "Paiement sécurisé Stripe",
@@ -114,7 +114,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
     {
       icon: Rocket,
       name: "Landing Page",
-      price: "500€",
+      price: "490€",
       features: [
         "Page de conversion optimisée",
         "A/B testing",
@@ -128,7 +128,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
   ];
 
   const avantages = [
-    { icon: Clock, title: "Livré en 7 jours", desc: "Votre site est en ligne rapidement, sans compromis sur la qualité." },
+    { icon: Clock, title: "Livré en 2 semaines", desc: "Votre site est en ligne rapidement, sans compromis sur la qualité." },
     { icon: BadgeCheck, title: "Vous êtes propriétaire", desc: "Le code source et le nom de domaine vous appartiennent à 100%." },
     { icon: Search, title: "SEO intégré", desc: "Chaque site est optimisé pour apparaître sur Google dès le lancement." },
     { icon: Headphones, title: "Support réactif", desc: "Une équipe disponible pour répondre à vos questions sous 24h." },
@@ -235,7 +235,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-purple-100 max-w-2xl mb-4">
-              Votre site web professionnel, livré en 7 jours.{" "}
+              Votre site web professionnel, livré en 2 semaines.{" "}
               <span className="font-semibold text-white">À partir de {PRICING.vitrine.label}.</span>
             </p>
             <p className="text-purple-200 max-w-2xl mb-8">
@@ -256,7 +256,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
             <div className="flex items-center gap-6 mt-8 text-sm text-purple-200">
               <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-green-400" /> +150 sites livrés</span>
               <span className="flex items-center gap-1.5"><Star className="w-4 h-4 text-amber-400" /> 4.9/5 avis</span>
-              <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-blue-400" /> 7 jours</span>
+              <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-blue-400" /> 2 semaines</span>
             </div>
           </div>
         </section>

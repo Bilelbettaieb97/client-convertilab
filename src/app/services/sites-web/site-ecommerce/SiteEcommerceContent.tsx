@@ -82,7 +82,7 @@ export default function SiteEcommerceContent() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-foreground">Pourquoi créer votre boutique en ligne maintenant ?</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>Le e-commerce français a dépassé <strong>160 milliards d&apos;euros</strong> en 2024, avec une croissance de +9,6% par an. Chaque jour sans boutique en ligne, vous laissez des revenus aux concurrents qui ont franchi le pas. La barrière à l&apos;entrée n&apos;a jamais été aussi basse : nous créons votre boutique en 21 à 30 jours à partir de 800€.</p>
+                <p>Le e-commerce français a dépassé <strong>160 milliards d&apos;euros</strong> en 2024, avec une croissance de +9,6% par an. Chaque jour sans boutique en ligne, vous laissez des revenus aux concurrents qui ont franchi le pas. La barrière à l&apos;entrée n&apos;a jamais été aussi basse : nous créons votre boutique en 21 à 30 jours à partir de 1490€.</p>
                 <p>Une boutique en ligne bien construite n&apos;est pas qu&apos;un catalogue de produits — c&apos;est un <strong>commercial qui travaille 24h/24 sans prendre de congés</strong>. Un client peut découvrir votre produit à 2h du matin, comparer, lire les avis, ajouter au panier et payer — sans aucune intervention de votre part.</p>
                 <p>Nos boutiques sont développées avec <strong>Next.js + Stripe</strong>, les technologies utilisées par les plus grandes marques mondiales. Résultat : des sites ultra-rapides (score PageSpeed 90+), sécurisés SSL, conformes RGPD et parfaitement optimisés pour référencer vos produits sur Google Shopping.</p>
               </div>

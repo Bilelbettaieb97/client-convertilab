@@ -46,13 +46,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Titles et descriptions différenciés par ville (pattern unique + données
   // locales) pour éviter 53 pages au title identique, signal de contenu dupliqué.
   const titleVariants = [
-    `Agence Web ${city.name} — Création Site Internet en 7 jours dès 500€`,
-    `Création de Site Internet à ${city.name} (${city.department}) — Agence Web dès 500€`,
-    `Agence Web à ${city.name} : Site Vitrine Pro Livré en 7 jours dès 500€`,
+    `Agence Web ${city.name} — Création Site Internet en 2 semaines dès 490€`,
+    `Création de Site Internet à ${city.name} (${city.department}) — Agence Web dès 490€`,
+    `Agence Web à ${city.name} : Site Vitrine Pro Livré en 2 semaines dès 490€`,
   ];
   const title = titleVariants[city.slug.length % titleVariants.length];
   const industries = city.keyIndustries.slice(0, 2).join(", ").toLowerCase();
-  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine livré en 7 jours dès 500€, satisfait ou remboursé. 15 avis 4.9★. Devis gratuit sous 24h.`;
+  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine livré en 2 semaines dès 490€, satisfait ou remboursé. 15 avis 4.9★. Devis gratuit sous 24h.`;
 
   return {
     title,
@@ -147,8 +147,8 @@ export default async function CityPage({ params }: Props) {
     },
     {
       icon: CalendarCheck,
-      title: "Délai de 7 jours garanti",
-      desc: "Votre site vitrine est livré en 7 jours ouvrés maximum. Si nous dépassons ce délai, nous vous offrons un mois de maintenance gratuit.",
+      title: "Délai de 2 semaines garanti",
+      desc: "Votre site vitrine est livré en 2 semaines maximum. Si nous dépassons ce délai, nous vous offrons un mois de maintenance gratuit.",
     },
     {
       icon: Headphones,
@@ -377,7 +377,7 @@ export default async function CityPage({ params }: Props) {
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />
-              Livraison en 7 jours
+              Livraison en 2 semaines
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />

@@ -70,10 +70,10 @@ const Hero = () => {
             <h1 className="mb-4 sm:mb-6 xl:mb-8 2xl:mb-10 animate-slide-up-lcp font-black text-gray-900 leading-snug tracking-tight">
 
               {/* Texte propre pour Google et les lecteurs d'écran : le rendu
-                  serveur de l'animation donnait "créevotre | en 7 jours"
+                  serveur de l'animation donnait "créevotre | en 2 semaines"
                   (mots collés + curseur + mot rotatif vide). */}
               <span className="sr-only">
-                Votre agence web crée votre site internet en 7 jours
+                Votre agence web crée votre site internet en 2 semaines
               </span>
 
               <span aria-hidden="true">
@@ -82,7 +82,7 @@ const Hero = () => {
                   Votre agence web crée
                 </span>
 
-                {/* Ligne 2 — "votre [Mot] en 7 jours" */}
+                {/* Ligne 2 — "votre [Mot] en 2 semaines" */}
                 <span className="block text-2xl sm:text-3xl lg:text-4xl xl:text-[44px] xl:leading-[1.18] 2xl:text-[52px]">
                   votre{" "}
                   <span className="relative inline-block">
@@ -95,7 +95,7 @@ const Hero = () => {
                       <span className="animate-pulse font-thin text-purple-600">|</span>
                     </span>
                   </span>
-                  {" "}en 7 jours
+                  {" "}en 2 semaines
                 </span>
               </span>
 

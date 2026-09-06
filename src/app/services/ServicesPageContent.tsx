@@ -78,7 +78,7 @@ export default function ServicesPageContent() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
-              { value: "Des 500€", label: "Sites web" },
+              { value: "Des 490€", label: "Sites web" },
               { value: "Page 1", label: "Objectif Google" },
               { value: "x4.8", label: "ROAS moyen Ads" },
               { value: "24h", label: "Delai de reponse" },

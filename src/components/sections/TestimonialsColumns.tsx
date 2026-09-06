@@ -29,7 +29,7 @@ const testimonials: TestimonialItem[] = [
     role: "Directeur Digital, E-commerce Mode",
   },
   {
-    text: "Site livre en 7 jours chrono, design premium, SEO aux petits oignons. L'equipe est ultra professionnelle et reactive. Je recommande sans hesiter.",
+    text: "Site livre en 2 semaines chrono, design premium, SEO aux petits oignons. L'equipe est ultra professionnelle et reactive. Je recommande sans hesiter.",
     image: "",
     name: "Julie Bernard",
     role: "Fondatrice, Studio de Yoga",

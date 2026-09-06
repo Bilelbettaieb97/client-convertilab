@@ -26,7 +26,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Combien coûte la création d'un site web ?",
         answer:
-          "Nos tarifs démarrent à 500€ pour un site vitrine ou une landing page. Un site e-commerce démarre à 800€. Le prix dépend du nombre de pages, des fonctionnalités (réservation en ligne, boutique, espace client) et du niveau de personnalisation du design. Nous fournissons un devis détaillé et fixe sous 24h — aucune surprise en cours de projet.",
+          "Nos tarifs démarrent à 490€ pour un site vitrine ou une landing page. Un site e-commerce démarre à 1490€. Le prix dépend du nombre de pages, des fonctionnalités (réservation en ligne, boutique, espace client) et du niveau de personnalisation du design. Nous fournissons un devis détaillé et fixe sous 24h — aucune surprise en cours de projet.",
       },
       {
         question: "Peut-on payer en plusieurs fois ?",
@@ -58,7 +58,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "En combien de temps mon site sera-t-il livré ?",
         answer:
-          "Un site vitrine est livré en 7 jours ouvrés, une landing page en 5 jours, un site e-commerce en 10 à 14 jours. Ces délais incluent le design (validé par vous avant développement), le développement, l'intégration du contenu et la mise en ligne. Nous respectons toujours les délais annoncés — c'est notre garantie contractuelle.",
+          "Un site vitrine est livré en 2 semaines, une landing page en 5 jours, un site e-commerce en 10 à 14 jours. Ces délais incluent le design (validé par vous avant développement), le développement, l'intégration du contenu et la mise en ligne. Nous respectons toujours les délais annoncés — c'est notre garantie contractuelle.",
       },
       {
         question: "Comment se déroule le projet, étape par étape ?",
@@ -180,7 +180,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Créez-vous des sites e-commerce ?",
         answer:
-          "Oui. Nos sites e-commerce incluent un catalogue produits, un panier, un paiement sécurisé par carte bancaire via Stripe, une gestion des stocks, un espace de commande pour les clients et un espace admin pour vous. Ils démarrent à 800€ et sont livrés en 10 à 14 jours.",
+          "Oui. Nos sites e-commerce incluent un catalogue produits, un panier, un paiement sécurisé par carte bancaire via Stripe, une gestion des stocks, un espace de commande pour les clients et un espace admin pour vous. Ils démarrent à 1490€ et sont livrés en 10 à 14 jours.",
       },
       {
         question: "Peut-on intégrer un système de réservation en ligne ?",
@@ -195,7 +195,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Créez-vous aussi des landing pages pour la publicité ?",
         answer:
-          "Oui, c'est même une de nos spécialités. Une landing page est une page unique, sans menu ni distraction, conçue pour convertir un visiteur en prospect ou en client. Elle est particulièrement efficace pour des campagnes Google Ads ou Meta Ads. Nos landing pages démarrent à 500€ et sont livrées en 5 jours.",
+          "Oui, c'est même une de nos spécialités. Une landing page est une page unique, sans menu ni distraction, conçue pour convertir un visiteur en prospect ou en client. Elle est particulièrement efficace pour des campagnes Google Ads ou Meta Ads. Nos landing pages démarrent à 490€ et sont livrées en 5 jours.",
       },
       {
         question: "Proposez-vous un blog ou un espace contenu ?",

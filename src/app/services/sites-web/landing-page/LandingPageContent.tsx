@@ -48,7 +48,7 @@ const guarantees = [
 
 const faqs = [
   { q: "Qu'est-ce qu'une landing page exactement ?", a: "C'est une page web autonome, concue specifiquement pour convertir les visiteurs en leads ou clients. Contrairement a un site classique, elle n'a qu'un seul objectif : inciter a l'action (formulaire, achat, inscription)." },
-  { q: "Combien de temps pour créer ma landing page ?", a: "5 a 7 jours ouvres entre le brief valide et la mise en ligne. Nous respectons ce delai avec un engagement de 10% de remise en cas de depassement." },
+  { q: "Combien de temps pour créer ma landing page ?", a: "5 a 2 semaines ouvres entre le brief valide et la mise en ligne. Nous respectons ce delai avec un engagement de 10% de remise en cas de depassement." },
   { q: "Ma landing page sera-t-elle compatible mobile ?", a: "Absolument. Le design est pense mobile-first : 70% du trafic publicitaire vient du mobile. Votre page sera parfaitement optimisée sur tous les ecrans." },
   { q: "Puis-je utiliser ma landing page pour Google Ads et Meta Ads ?", a: "Oui, c'est exactement pour ca qu'elle est concue. Nous integrons le tracking Google Analytics, Google Ads et Meta Pixel pour mesurer vos conversions." },
   { q: "Que se passe-t-il apres la livraison ?", a: "Vous beneficiez d'1 mois de support technique inclus. Nous restons disponibles pour les ajustements mineurs et le suivi des performances." },

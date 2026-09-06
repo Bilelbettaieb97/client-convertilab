@@ -15,16 +15,16 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Site Internet Pas Cher : Site Web Professionnel dès 500€",
+  title: "Site Internet Pas Cher : Site Web Professionnel dès 490€",
   description:
-    "Un site web pas cher ne veut pas dire un site au rabais : site internet professionnel dès 500€ ou 39€/mois, livré en 7 jours, SEO inclus, satisfait ou remboursé. Comparez avant de choisir.",
+    "Un site web pas cher ne veut pas dire un site au rabais : site internet professionnel dès 490€ ou 39€/mois, livré en 2 semaines, SEO inclus, satisfait ou remboursé. Comparez avant de choisir.",
   keywords:
     "site internet pas cher, site web pas cher, site pas cher, création site internet pas cher, site web professionnel pas cher, site internet petit prix, site web petit budget",
   alternates: { canonical: `${SITE.url}/site-internet-pas-cher` },
   openGraph: {
-    title: "Site Internet Pas Cher : Site Web Professionnel dès 500€ | ConvertiLab",
+    title: "Site Internet Pas Cher : Site Web Professionnel dès 490€ | ConvertiLab",
     description:
-      "Site internet professionnel dès 500€ ou 39€/mois, livré en 7 jours, SEO inclus, satisfait ou remboursé.",
+      "Site internet professionnel dès 490€ ou 39€/mois, livré en 2 semaines, SEO inclus, satisfait ou remboursé.",
     url: `${SITE.url}/site-internet-pas-cher`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -40,12 +40,12 @@ const faqItems = [
   {
     question: "Combien coûte réellement un site internet pas cher ?",
     answer:
-      "Chez ConvertiLab : landing page dès 500€, site vitrine 5 pages dès 500€, site e-commerce dès 800€. En paiement mensuel, votre site démarre à 39€/mois sans apport. Ces prix incluent le design sur-mesure, le développement, l'optimisation SEO de base et 30 jours de support. Seuls restent à votre charge le nom de domaine (~12€/an) et l'hébergement.",
+      "Chez ConvertiLab : landing page dès 490€, site vitrine 5 pages dès 490€, site e-commerce dès 1490€. En paiement mensuel, votre site démarre à 39€/mois sans apport. Ces prix incluent le design sur-mesure, le développement, l'optimisation SEO de base et 30 jours de support. Seuls restent à votre charge le nom de domaine (~12€/an) et l'hébergement.",
   },
   {
     question: "Quelle est la différence avec un site gratuit (Wix, site builder) ?",
     answer:
-      "Un site \"gratuit\" se paie autrement : publicités imposées, sous-domaine peu crédible (monsite.wixsite.com), référencement limité, et vous ne possédez rien. Dès que vous voulez un nom de domaine, retirer la pub et débloquer les fonctions de base, l'abonnement dépasse 200-300€/an — à vie. Un site professionnel pas cher à 500€ vous appartient à 100% (code et domaine) et est conçu pour être trouvé sur Google.",
+      "Un site \"gratuit\" se paie autrement : publicités imposées, sous-domaine peu crédible (monsite.wixsite.com), référencement limité, et vous ne possédez rien. Dès que vous voulez un nom de domaine, retirer la pub et débloquer les fonctions de base, l'abonnement dépasse 200-300€/an — à vie. Un site professionnel pas cher à 490€ vous appartient à 100% (code et domaine) et est conçu pour être trouvé sur Google.",
   },
   {
     question: "Pourquoi certains sites pas chers sont-ils des pièges ?",
@@ -53,14 +53,14 @@ const faqItems = [
       "Trois pièges classiques : la location déguisée (vous payez chaque mois mais ne possédez jamais votre site), les frais cachés (maintenance obligatoire, modifications facturées au prix fort), et l'absence de SEO (un site invisible sur Google ne sert à rien, même gratuit). Avant de signer, demandez toujours : suis-je propriétaire du code et du domaine ? Le SEO est-il inclus ? Le prix annoncé est-il définitif ?",
   },
   {
-    question: "Que comprend exactement votre offre à 500€ ?",
+    question: "Que comprend exactement votre offre à 490€ ?",
     answer:
-      "Le site vitrine à partir de 500€ comprend : 5 pages sur-mesure (accueil, services, à propos, contact...), design responsive adapté mobile, formulaire de contact, optimisation SEO de base (balises, vitesse, indexation), intégration Google Maps, certificat SSL et 30 jours de support après livraison. Livraison en 7 jours ouvrés, satisfait ou remboursé.",
+      "Le site vitrine à partir de 490€ comprend : 5 pages sur-mesure (accueil, services, à propos, contact...), design responsive adapté mobile, formulaire de contact, optimisation SEO de base (balises, vitesse, indexation), intégration Google Maps, certificat SSL et 30 jours de support après livraison. Livraison en 2 semaines, satisfait ou remboursé.",
   },
   {
     question: "Le paiement mensuel à 39€/mois, comment ça marche ?",
     answer:
-      "Au lieu de payer votre site en une fois, vous étalez le coût à partir de 39€/mois. C'est la solution idéale pour lancer votre activité sans immobiliser de trésorerie : votre site est en ligne en 7 jours et vous lissez l'investissement. Le détail complet est sur notre page offre mensuelle.",
+      "Au lieu de payer votre site en une fois, vous étalez le coût à partir de 39€/mois. C'est la solution idéale pour lancer votre activité sans immobiliser de trésorerie : votre site est en ligne en 2 semaines et vous lissez l'investissement. Le détail complet est sur notre page offre mensuelle.",
   },
   {
     question: "Un site pas cher sera-t-il bien référencé sur Google ?",
@@ -70,7 +70,7 @@ const faqItems = [
   {
     question: "Combien de temps pour avoir mon site en ligne ?",
     answer:
-      "7 jours ouvrés pour un site vitrine, 5 jours pour une landing page. Le process : un appel de 30 minutes, une maquette sous 48h que vous validez, puis le développement et la mise en ligne. Si nous dépassons le délai annoncé, un mois de maintenance vous est offert.",
+      "2 semaines pour un site vitrine, 5 jours pour une landing page. Le process : un appel de 30 minutes, une maquette sous 48h que vous validez, puis le développement et la mise en ligne. Si nous dépassons le délai annoncé, un mois de maintenance vous est offert.",
   },
 ];
 
@@ -113,7 +113,7 @@ const offres = [
     monthly: PRICING.vitrine.monthly,
     desc: "5 pages professionnelles sur-mesure : la solution complète pour présenter votre activité et être trouvé sur Google.",
     link: "/services/sites-web/site-vitrine",
-    delai: "7 jours",
+    delai: "2 semaines",
     popular: true,
   },
   {
@@ -129,9 +129,9 @@ const offres = [
 const comparatif = [
   {
     critere: "Prix de départ",
-    convertilab: "500€ (ou 39€/mois)",
+    convertilab: "490€ (ou 39€/mois)",
     gratuit: "0€... puis 200-300€/an à vie",
-    freelance: "300-1 500€, très variable",
+    freelance: "300-1 490€, très variable",
     agence: "3 000-10 000€",
   },
   {
@@ -150,7 +150,7 @@ const comparatif = [
   },
   {
     critere: "Délai de livraison",
-    convertilab: "7 jours garantis",
+    convertilab: "2 semaines garantis",
     gratuit: "Immédiat mais à faire soi-même",
     freelance: "2-8 semaines",
     agence: "1-3 mois",
@@ -198,7 +198,7 @@ export default function SiteInternetPasCherPage() {
           <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
             Un site web pas cher ne devrait jamais être un site au rabais. Site
             sur-mesure dès <strong>{PRICING.vitrine.from}€</strong> ou{" "}
-            <strong>39€/mois</strong>, livré en 7 jours, optimisé pour Google,
+            <strong>39€/mois</strong>, livré en 2 semaines, optimisé pour Google,
             satisfait ou remboursé.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -222,7 +222,7 @@ export default function SiteInternetPasCherPage() {
           <div className="flex flex-wrap gap-4 justify-center text-sm text-gray-500">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />
-              Livraison en 7 jours
+              Livraison en 2 semaines
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -293,7 +293,7 @@ export default function SiteInternetPasCherPage() {
             >
               Étalez le paiement dès 39€/mois
             </Link>{" "}
-            — votre site en ligne en 7 jours, sans apport.
+            — votre site en ligne en 2 semaines, sans apport.
           </p>
         </div>
       </section>

@@ -71,8 +71,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isEcommerce = sector.slug === "ecommerce";
   const priceLabel = isEcommerce ? PRICING.ecommerce.label : PRICING.vitrine.label;
 
-  const metaTitle = `Site Web ${sector.name} à ${city.name} — ${priceLabel}, livré en 7 jours`;
-  const metaDesc = `Combien coûte un site internet pour ${sector.name.toLowerCase()} à ${city.name} ? ConvertiLab crée votre site professionnel ${priceLabel}, livré en 7 jours, satisfait ou remboursé. +150 clients, 15 avis 4.9★.`;
+  const metaTitle = `Site Web ${sector.name} à ${city.name} — ${priceLabel}, livré en 2 semaines`;
+  const metaDesc = `Combien coûte un site internet pour ${sector.name.toLowerCase()} à ${city.name} ? ConvertiLab crée votre site professionnel ${priceLabel}, livré en 2 semaines, satisfait ou remboursé. +150 clients, 15 avis 4.9★.`;
 
   return {
     title: metaTitle,
@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: metaTitle,
-      description: `Site internet ${sector.name.toLowerCase()} à ${city.name}, ${priceLabel}, livraison 7 jours, 15 avis 4.9★.`,
+      description: `Site internet ${sector.name.toLowerCase()} à ${city.name}, ${priceLabel}, livraison 2 semaines, 15 avis 4.9★.`,
       url: `${SITE.url}/agence-web/${sector.slug}/${city.slug}`,
       type: "website",
       images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -286,7 +286,7 @@ export default async function SecteurVillePage({ params }: Props) {
             de conversion conçu pour attirer des clients locaux. Il intègre le
             référencement local Google, un design adapté au secteur et des pages
             optimisées pour les recherches «&nbsp;{sector.name.toLowerCase()} {city.name}&nbsp;».
-            Livraison en 7 jours, {priceLabel}.
+            Livraison en 2 semaines, {priceLabel}.
           </p>
 
           <p className="text-base text-gray-600 mb-8 max-w-3xl leading-relaxed">
@@ -329,7 +329,7 @@ export default async function SecteurVillePage({ params }: Props) {
           {/* Badges confiance */}
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
             {[
-              "Livraison en 7 jours",
+              "Livraison en 2 semaines",
               "Satisfait ou remboursé",
               `+150 clients en IDF`,
               "Paiement après validation",
@@ -635,7 +635,7 @@ export default async function SecteurVillePage({ params }: Props) {
                 Devis gratuit et personnalisé sous 24h.
               </p>
               <p className="text-sm text-white/70 mb-8">
-                {priceLabel} &middot; Livraison 7 jours &middot; Satisfait ou remboursé
+                {priceLabel} &middot; Livraison 2 semaines &middot; Satisfait ou remboursé
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
@@ -739,7 +739,7 @@ export default async function SecteurVillePage({ params }: Props) {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
             {[
-              { icon: Zap, label: "Livraison en 7 jours" },
+              { icon: Zap, label: "Livraison en 2 semaines" },
               { icon: Shield, label: "Satisfait ou remboursé" },
               { icon: Star, label: `4.9/5 (${SITE.reviews.count} avis)` },
               { icon: Clock, label: "Devis sous 24h" },

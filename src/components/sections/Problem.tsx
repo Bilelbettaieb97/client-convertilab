@@ -77,7 +77,7 @@ export default function Problem() {
         <p className="text-center text-lg text-gray-700 mt-14 max-w-2xl mx-auto font-medium">
           La bonne nouvelle ?{" "}
           <span className="text-purple-700 font-bold">Il existe une solution</span>{" "}
-          et elle prend moins de 7 jours à mettre en place.
+          et elle prend moins de 2 semaines à mettre en place.
         </p>
       </div>
     </section>
