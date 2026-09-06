@@ -80,7 +80,7 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
     secondary: { title: "Test de vitesse", description: "Comparez la vitesse de votre site WordPress actuel.", href: "/speed-check", cta: "Tester mon site" },
   },
   "landing-page-convertir-visiteurs": {
-    primary: { title: "Création de landing page", description: "Page de conversion optimisée dès 300€, livrée en 5 jours.", href: "/services/sites-web/landing-page", cta: "Créer ma landing page" },
+    primary: { title: "Création de landing page", description: "Page de conversion optimisée à 490€, livrée en 5 à 7 jours.", href: "/services/sites-web/landing-page", cta: "Créer ma landing page" },
     secondary: { title: "Demander une maquette", description: "Maquette de votre landing page en 48h, gratuite.", href: "/demande-maquette", cta: "Voir une maquette" },
   },
   "refonte-site-web-quand-comment": {

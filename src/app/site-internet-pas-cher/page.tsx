@@ -40,7 +40,7 @@ const faqItems = [
   {
     question: "Combien coûte réellement un site internet pas cher ?",
     answer:
-      "Chez ConvertiLab : landing page dès 490€, site vitrine 5 pages dès 490€, site e-commerce dès 1490€. En paiement mensuel, votre site démarre à 39€/mois sans apport. Ces prix incluent le design sur-mesure, le développement, l'optimisation SEO de base et 30 jours de support. Seuls restent à votre charge le nom de domaine (~12€/an) et l'hébergement.",
+      "Chez ConvertiLab : landing page à 490€, site vitrine 5 pages à 890€, site e-commerce dès 1490€. En paiement mensuel, votre site démarre à 39€/mois sans apport. Ces prix incluent le design sur-mesure, le développement, l'optimisation SEO de base et 30 jours de support. Seuls restent à votre charge le nom de domaine (~12€/an) et l'hébergement.",
   },
   {
     question: "Quelle est la différence avec un site gratuit (Wix, site builder) ?",
@@ -53,9 +53,9 @@ const faqItems = [
       "Trois pièges classiques : la location déguisée (vous payez chaque mois mais ne possédez jamais votre site), les frais cachés (maintenance obligatoire, modifications facturées au prix fort), et l'absence de SEO (un site invisible sur Google ne sert à rien, même gratuit). Avant de signer, demandez toujours : suis-je propriétaire du code et du domaine ? Le SEO est-il inclus ? Le prix annoncé est-il définitif ?",
   },
   {
-    question: "Que comprend exactement votre offre à 490€ ?",
+    question: "Que comprend exactement le site vitrine à 890€ ?",
     answer:
-      "Le site vitrine à partir de 490€ comprend : 5 pages sur-mesure (accueil, services, à propos, contact...), design responsive adapté mobile, formulaire de contact, optimisation SEO de base (balises, vitesse, indexation), intégration Google Maps, certificat SSL et 30 jours de support après livraison. Livraison en 2 semaines, satisfait ou remboursé.",
+      "Le site vitrine à 890€ comprend : 5 pages sur-mesure (accueil, services, à propos, contact...), design responsive adapté mobile, formulaire de contact, optimisation SEO de base (balises, vitesse, indexation), intégration Google Maps, certificat SSL et 30 jours de support après livraison. Livraison en 2 semaines, satisfait ou remboursé.",
   },
   {
     question: "Le paiement mensuel à 39€/mois, comment ça marche ?",
@@ -129,9 +129,9 @@ const offres = [
 const comparatif = [
   {
     critere: "Prix de départ",
-    convertilab: "490€ (ou 39€/mois)",
+    convertilab: "890€ (ou 39€/mois sur 24 mois)",
     gratuit: "0€... puis 200-300€/an à vie",
-    freelance: "300-1 490€, très variable",
+    freelance: "800-3 000€, très variable",
     agence: "3 000-10 000€",
   },
   {

@@ -34,6 +34,14 @@ const nextConfig: NextConfig = {
       // on le redirige vers /portfolio (le vrai hub des réalisations) pour aligner
       // sitemap et architecture, et éviter les "Découverte, non indexée" en amont.
       {
+        // L'offre a 300 EUR a ete retiree le 06/09/2026 : elle ancrait sous le
+        // nouveau palier d'entree a 490 EUR. La page etait indexee, on redirige
+        // plutot que de laisser un 404.
+        source: "/offre-speciale",
+        destination: "/prix",
+        permanent: true,
+      },
+      {
         source: "/etude-de-cas",
         destination: "/portfolio",
         permanent: true,

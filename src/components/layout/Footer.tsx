@@ -34,7 +34,6 @@ const Footer = () => {
     { name: "À propos", href: "/a-propos" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
-    { name: "Offre Spéciale", href: "/offre-speciale" },
     { name: "Offre Mensuelle", href: "/offre-mensuelle" },
     { name: "Agence Web par ville", href: "/agence-web" },
     { name: "Création de site par ville", href: "/creation-site-internet" },

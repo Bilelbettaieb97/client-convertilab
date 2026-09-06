@@ -15,7 +15,7 @@ interface ServiceLink {
 const servicesByCategory: Record<string, ServiceLink[]> = {
   Business: [
     { icon: <FileText className="w-5 h-5" />, title: "Site Vitrine", description: "Présentez votre activité dès 490€", href: "/services/sites-web/site-vitrine" },
-    { icon: <Rocket className="w-5 h-5" />, title: "Landing Page", description: "Convertissez vos visiteurs dès 300€", href: "/services/sites-web/landing-page" },
+    { icon: <Rocket className="w-5 h-5" />, title: "Landing Page", description: "Convertissez vos visiteurs à partir de 490€", href: "/services/sites-web/landing-page" },
   ],
   "Web Design": [
     { icon: <Palette className="w-5 h-5" />, title: "Design UI/UX", description: "Interfaces intuitives et esthétiques", href: "/services/design/ui-ux" },

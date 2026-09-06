@@ -62,7 +62,7 @@ const ExitIntentPopup = () => {
 
   const goToOffer = () => {
     setIsOpen(false);
-    router.push('/offre-speciale');
+    router.push('/demande-maquette');
   };
 
   const scrollToContact = () => {

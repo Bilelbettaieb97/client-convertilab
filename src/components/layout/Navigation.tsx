@@ -63,7 +63,6 @@ const Navigation = () => {
 
   const offerItems = [
     { label: "Site à 39€/mois", href: "/offre-mensuelle", icon: Rocket, desc: "Votre site web en mensualités", badge: "Populaire" as const },
-    { label: "Offre à 300€", href: "/offre-speciale", icon: Zap, desc: "Site professionnel à petit prix", badge: "Limitée" as const },
     { label: "Demande de maquette", href: "/demande-maquette", icon: Palette, desc: "Maquette gratuite de votre futur site", badge: null },
     { label: "Estimation de prix", href: "/estimation-prix-site-web", icon: BarChart3, desc: "Calculez le prix de votre projet", badge: null },
     { label: "Nos tarifs", href: "/prix", icon: FileText, desc: "Tous nos prix détaillés", badge: null },

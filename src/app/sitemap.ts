@@ -35,7 +35,6 @@ const staticRoutes = [
   "/contact",
   "/a-propos",
   "/blog",
-  "/offre-speciale",
   "/offre-mensuelle",
   "/demande-maquette",
   "/estimation-prix-site-web",
