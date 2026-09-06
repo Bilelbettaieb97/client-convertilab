@@ -361,9 +361,8 @@ export default function SiteInternetPasCherPage() {
               vous payez ses réunions, ses allers-retours interminables et sa
               structure. Chez ConvertiLab, le process est radicalement optimisé :
               un appel de 30 minutes, une maquette sous 48h que vous validez{" "}
-              <strong>avant</strong> tout développement, puis une livraison en 7
-              jours. Moins de temps perdu = un prix divisé par 5, sans toucher à la
-              qualité.
+              <strong>avant</strong> tout développement, puis une livraison en 2 semaines. Moins de temps perdu, donc un prix sans commune mesure avec
+              celui d'une agence classique, sans toucher à la qualité.
             </p>
             <p>
               Deuxième levier : la technologie. Nous développons avec Next.js — pas
