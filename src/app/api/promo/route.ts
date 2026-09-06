@@ -185,7 +185,7 @@ async function createPipedriveRdv(email: string, slotAt: string, prenom: string)
 
   // 3. Créer l'activité RDV sur le deal
   await pipedrivePost("/activities", {
-    subject: `📅 RDV — ${prenom} (Funnel Promo 300€)`,
+    subject: `📅 RDV — ${prenom} (Funnel Promo 890€)`,
     type: "meeting",
     deal_id: deal.id,
     person_id: person.id,

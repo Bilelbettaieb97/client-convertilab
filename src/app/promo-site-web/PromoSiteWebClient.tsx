@@ -297,7 +297,7 @@ const PromoSiteWeb = () => {
         const w = window as any;
         if (w.dataLayer) w.dataLayer.push({ event: "promo_lead_submit" });
         if (typeof w.fbq === "function" && w._fbqInitialized) {
-          w.fbq("track", "Lead", { content_name: "Promo Site Web 300€", currency: "EUR", value: 300 });
+          w.fbq("track", "Lead", { content_name: "Promo Site Web 890€", currency: "EUR", value: 890 });
         }
       }
       trackEvent("form_submitted", { situation: payload.situation, objectif: payload.objectif }, id);
@@ -455,15 +455,17 @@ const PromoSiteWeb = () => {
 
                     <div
                       className="text-[48px] font-extrabold tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#ec4899] py-1 drop-shadow-[0_0_25px_rgba(167,139,250,0.35)]"
-                      aria-label="à partir de 300 euros"
+                      aria-label="890 euros"
                     >
-                      à partir de 300€
+                      890€
                     </div>
 
                     <p className="text-[12px] text-white/70 leading-snug max-w-[300px] mx-auto mt-1">
                       Site vitrine pro livré en{" "}
                       <strong className="text-white font-semibold">2 semaines</strong>.
-                      Sans abonnement caché.
+                      Payable en une fois ou{" "}
+                      <strong className="text-white font-semibold">39€/mois sur 24 mois</strong>.
+                      Vous en êtes propriétaire, sans abonnement.
                     </p>
 
                     {/* Preuves sociales */}
