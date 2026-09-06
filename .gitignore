@@ -42,3 +42,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Configuration locale de Claude Code (serveur de dev, reglages machine)
+.claude/
