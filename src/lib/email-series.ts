@@ -531,7 +531,7 @@ Bilel Bettaieb · ConvertiLab`,
   "promo_lead": [
     {
       delay: 0,
-      subject: "{{prenom}}, votre demande de site à 300€ est bien reçue ✅",
+      subject: "{{prenom}}, votre demande de site à 890€ est bien reçue ✅",
       body: `Bonjour {{prenom}},
 
 Votre demande est bien enregistrée.
@@ -567,7 +567,7 @@ Bilel · ConvertiLab`,
     },
     {
       delay: 4,
-      subject: "Ce que disent nos clients après leur site à 300€",
+      subject: "Ce que disent nos clients après la livraison de leur site",
       body: `Bonjour {{prenom}},
 
 En 3 ans, on a livré plus de 150 sites pour des entrepreneurs comme vous.
@@ -843,7 +843,7 @@ Bilel Bettaieb · ConvertiLab`,
 
 Vous avez demandé une estimation pour un site {{type_site}}.
 
-La réalité du marché : les prix vont de 1490€ à 25 000 € pour "un site web". Cette fourchette ne veut rien dire sans savoir exactement ce qui est inclus.
+La réalité du marché : les prix vont de 800 € à 25 000 € pour "un site web". Cette fourchette ne veut rien dire sans savoir exactement ce qui est inclus.
 
 Ce que je peux vous donner : un chiffrage précis, honnête, avec ce qui est inclus, ce qui ne l'est pas, et ce que vous pouvez attendre en retour.
 
@@ -858,7 +858,7 @@ Bilel · ConvertiLab`,
       subject: "Combien coûte vraiment un site {{type_site}} en 2026 — réponse honnête",
       body: `Bonjour {{prenom}},
 
-La vraie réponse : entre 1 490€ et 15 000 € pour un site professionnel. Tout dépend de ce que vous mettez dedans — pas du prestataire.
+La vraie réponse : entre 1 500 € et 15 000 € pour un site professionnel. Tout dépend de ce que vous mettez dedans — pas du prestataire.
 
 Ce qui fait exploser les budgets : les fonctionnalités ajoutées en cours de route, les aller-retours interminables, les prestataires qui ne posent pas les bonnes questions au départ.
 

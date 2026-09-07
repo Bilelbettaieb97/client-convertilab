@@ -17,7 +17,7 @@ export const pricingPages: PricingPage[] = [
     name: "Site Vitrine",
     description: "Un site vitrine professionnel pour présenter votre activité et attirer de nouveaux clients en ligne.",
     price: "890",
-    priceLabel: "à partir de 490€",
+    priceLabel: "à partir de 890€",
     includes: [
       "Design sur-mesure responsive",
       "Jusqu'à 5 pages (Accueil, Services, À propos, Contact, Mentions légales)",
@@ -35,11 +35,11 @@ export const pricingPages: PricingPage[] = [
     ],
     faqItems: [
       {
-        question: "Pourquoi un site vitrine à 490€ alors que d'autres facturent 3000€ ?",
+        question: "Pourquoi un site vitrine à 890€ alors que d'autres facturent 3000€ ?",
         answer: "Nous utilisons des technologies modernes (Next.js) et des processus optimisés qui réduisent le temps de développement sans sacrifier la qualité. Le résultat est un site performant, rapide et professionnel à un prix accessible.",
       },
       {
-        question: "Y a-t-il des frais cachés après les 490€ ?",
+        question: "Y a-t-il des frais cachés après les 890€ ?",
         answer: "Non. Le prix inclut la création complète du site et l'hébergement première année. Ensuite, l'hébergement coûte environ 39€/mois ou vous pouvez opter pour un forfait mensuel tout inclus.",
       },
       {
@@ -143,7 +143,7 @@ export const pricingPages: PricingPage[] = [
     name: "Refonte de Site Web",
     description: "Modernisez votre site existant avec un design actuel, de meilleures performances et un SEO optimisé.",
     price: "690",
-    priceLabel: "à partir de 400€",
+    priceLabel: "à partir de 690€",
     includes: [
       "Audit complet du site existant",
       "Nouveau design moderne responsive",
