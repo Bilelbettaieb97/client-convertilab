@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { pushToPipedrive } from "@/lib/pipedrive";
-import { scheduleEmailSeries, buildFormSeriesContext, construireAccuseReception } from "@/lib/email-series";
+import { scheduleEmailSeries, buildFormSeriesContext, construireAccuseReception, htmlVersTexte } from "@/lib/email-series";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -133,6 +133,7 @@ export async function POST(request: NextRequest) {
           to: email,
           subject: accuse.subject,
           html: accuse.html,
+          text: htmlVersTexte(accuse.html),
         });
         if (accuseErr) {
           console.error("[notify][accuse_reception]", accuseErr.message);

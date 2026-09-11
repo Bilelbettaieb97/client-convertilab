@@ -1035,8 +1035,18 @@ function resolveTokens(template: string, ctx: Record<string, string>): string {
 }
 
 function bodyToHtml(text: string): string {
+  // Rendu « email écrit à la main ». Chaque ligne du modèle devient un bloc,
+  // une ligne vide devient un espace : les lignes consécutives (signature,
+  // listes) restent serrées, les paragraphes respirent.
+  //
+  // Plus de bouton violet ni de ligne colorée : un lien hypertexte simple,
+  // comme dans un email personnel. Test Gmail du 11/09/2026 sur le moteur
+  // Meta : 4 emails sur 9 en boîte principale avec l'habillage de marque,
+  // 9 sur 9 sans, à textes et liens identiques.
   const lines = text.split("\n");
   const out: string[] = [];
+  const bloc = `style="display:block;color:#0B0F1A;font-size:16px;line-height:1.6;"`;
+  const lien = `style="color:#6D28D9;font-weight:600;text-decoration:underline;"`;
 
   for (const line of lines) {
     const trimmed = line.trim();
@@ -1047,30 +1057,23 @@ function bodyToHtml(text: string): string {
       const [, label, url, rest] = ctaMatch;
       const phone = rest.trim().replace(/^[·•\-]\s*/, "").trim();
       out.push(
-        `<div style="margin:24px 0;text-align:center;">` +
-        `<a href="${url}" style="display:inline-block;background:#6c5ce7;color:#fff;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;">→ ${label}</a>` +
-        (phone ? `<br><span style="font-size:12px;color:#888;margin-top:8px;display:inline-block;">${phone}</span>` : "") +
-        `</div>`
+        `<span ${bloc}><a href="${url}" ${lien}>${label}</a>` +
+        (phone ? ` · ${phone}` : "") +
+        `</span>`
       );
       continue;
     }
 
     // Bullet •
     if (trimmed.startsWith("•")) {
-      out.push(`<div style="margin:3px 0 3px 12px;color:#444;font-size:15px;line-height:1.6;">• ${trimmed.slice(1).trim()}</div>`);
+      out.push(`<span ${bloc}>• ${trimmed.slice(1).trim()}</span>`);
       continue;
     }
 
     // Numbered list
     const numMatch = trimmed.match(/^(\d+)\. (.+)$/);
     if (numMatch) {
-      out.push(`<div style="margin:4px 0 4px 12px;color:#444;font-size:15px;line-height:1.6;"><strong>${numMatch[1]}.</strong> ${numMatch[2]}</div>`);
-      continue;
-    }
-
-    // Arrow prefix without link (→ text)
-    if (trimmed.startsWith("→ ") && !trimmed.includes("](")) {
-      out.push(`<div style="margin:4px 0;color:#6c5ce7;font-size:15px;font-weight:600;line-height:1.6;">${trimmed}</div>`);
+      out.push(`<span ${bloc}><strong>${numMatch[1]}.</strong> ${numMatch[2]}</span>`);
       continue;
     }
 
@@ -1080,38 +1083,65 @@ function bodyToHtml(text: string): string {
       continue;
     }
 
-    // Regular text
-    out.push(`<span style="display:block;color:#333;font-size:15px;line-height:1.7;">${trimmed}</span>`);
+    // Regular text (y compris les lignes « → texte » sans lien)
+    out.push(`<span ${bloc}>${trimmed}</span>`);
   }
 
   return out.join("");
 }
 
 function wrapEmail(bodyHtml: string): string {
+  // Fond blanc, texte aligné à gauche, aucun bandeau de marque en tête ni en
+  // pied. L'ancien habillage (bandeau sombre « ConvertiLab », pied sombre
+  // avec « Vous recevez cet email car vous avez utilisé un outil ») est
+  // celui d'une newsletter ; ces emails sont des réponses à une demande.
+  // La signature est dans le corps de chaque modèle.
   return `<!DOCTYPE html>
 <html lang="fr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
-<body style="margin:0;padding:0;background:#f1f0f7;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-<div style="max-width:600px;margin:0 auto;padding:20px;">
-  <div style="background:#0a0a1a;border-radius:12px 12px 0 0;padding:18px 32px;text-align:center;">
-    <span style="font-size:13px;color:#a29bfe;letter-spacing:3px;text-transform:uppercase;font-weight:700;">ConvertiLab</span>
-  </div>
-  <div style="background:#ffffff;padding:32px 36px;border-left:1px solid #e8e6f0;border-right:1px solid #e8e6f0;">
-    ${bodyHtml}
-  </div>
-  <div style="background:#1a1040;border-radius:0 0 12px 12px;padding:16px 32px;text-align:center;">
-    <p style="margin:0;font-size:11px;line-height:1.7;">
-      <a href="https://www.convertilab.com" style="color:#a29bfe;text-decoration:none;">convertilab.com</a>
-      <span style="color:#4a4060;"> &nbsp;·&nbsp; </span>
-      <a href="tel:+33616477245" style="color:#a29bfe;text-decoration:none;">06 16 47 72 45</a>
-      <span style="color:#4a4060;"> &nbsp;·&nbsp; </span>
-      <a href="mailto:contact@convertilab.com" style="color:#a29bfe;text-decoration:none;">contact@convertilab.com</a>
-    </p>
-    <p style="color:#3a3050;font-size:10px;margin:8px 0 0;">Vous recevez cet email car vous avez utilisé un outil ConvertiLab.</p>
-  </div>
+<body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;text-align:left;">
+<div dir="ltr" style="max-width:640px;padding:20px 16px;text-align:left;">
+${bodyHtml}
 </div>
 </body>
 </html>`;
+}
+
+/**
+ * Version texte d'un email HTML, à envoyer à côté de lui (multipart/alternative).
+ *
+ * Un email écrit par une personne en a toujours une ; un HTML seul est un
+ * signal d'envoi automatisé. Les liens sont conservés en clair, tels qu'ils
+ * sont dans le HTML (donc déjà balisés UTM), pour que les deux versions
+ * mesurent la même chose. Fonctionne aussi sur les emails déjà en file
+ * d'attente, rendus avec l'ancien habillage.
+ */
+export function htmlVersTexte(html: string): string {
+  let t = html;
+  t = t.replace(/<head[\s\S]*?<\/head>/gi, "");
+  t = t.replace(/<style[\s\S]*?<\/style>/gi, "");
+  t = t.replace(/<br\s*\/?>/gi, "\n");
+  t = t.replace(/<\/(span|p|div|li|tr|h[1-6])>/gi, "\n");
+  t = t.replace(/<a\s+[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi, (_m, url: string, inner: string) => {
+    const texte = inner.replace(/<[^>]+>/g, "").replace(/\s*→\s*$/, "").trim();
+    const nu = url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+    const nt = texte.replace(/^https?:\/\//, "").replace(/\/$/, "");
+    return nt && nu.startsWith(nt) ? url : `${texte} : ${url}`;
+  });
+  t = t.replace(/<[^>]+>/g, "");
+  t = t
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, "\"")
+    .replace(/&#39;/g, "'");
+  return t
+    .split("\n")
+    .map((l) => l.replace(/[ \t]+/g, " ").trim())
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -1374,6 +1404,35 @@ export function tailleDeSerie(formType: string): number {
   return EMAIL_SERIES[cleDeSerie(formType)]?.length ?? 0;
 }
 
+/**
+ * Rend les emails d'une série, prêts à l'envoi, sans rien écrire en base.
+ * Sert à la file d'attente (scheduleEmailSeries) et aux envois de test.
+ *
+ * Balisage UTM : la campagne identifie la série, le contenu identifie l'email
+ * précis. On saura ainsi lequel des J+1 / J+3 / J+7 travaille. La campagne
+ * porte le formulaire d'ORIGINE, pas la série partagée : sinon « Devis -
+ * site-vitrine » et « Devis - refonte » se confondent, et l'Offre Mensuelle
+ * disparaît derrière la série Devis dont elle réutilise les textes.
+ */
+export function rendreSerie(
+  formType: string,
+  context: Record<string, string>
+): Array<{ series_index: number; delay: number; subject: string; html_body: string }> {
+  const templates = EMAIL_SERIES[cleDeSerie(formType)];
+  if (!templates?.length) return [];
+
+  return templates.map((tpl, idx) => ({
+    series_index: idx,
+    delay: tpl.delay,
+    subject: resolveTokens(tpl.subject, context),
+    html_body: baliserLiens(wrapEmail(bodyToHtml(resolveTokens(tpl.body, context))), {
+      medium: "relance",
+      campaign: slug(formType),
+      content: `j${tpl.delay}`,
+    }),
+  }));
+}
+
 export async function scheduleEmailSeries(
   formType: string,
   leadEmail: string | undefined | null,
@@ -1381,8 +1440,8 @@ export async function scheduleEmailSeries(
 ): Promise<void> {
   if (!leadEmail) return;
 
-  const templates = EMAIL_SERIES[cleDeSerie(formType)];
-  if (!templates?.length) return;
+  const rendus = rendreSerie(formType, context);
+  if (!rendus.length) return;
 
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -1390,28 +1449,15 @@ export async function scheduleEmailSeries(
   );
 
   const now = Date.now();
-  const rows = templates.map((tpl, idx) => {
-    const resolvedSubject = resolveTokens(tpl.subject, context);
-    const resolvedBody = resolveTokens(tpl.body, context);
-    return {
-      form_type: formType,
-      series_index: idx,
-      lead_email: leadEmail,
-      subject: resolvedSubject,
-      // Balisage UTM : la campagne identifie la série, le contenu identifie
-      // l'email precis. On saura ainsi lequel des J+1 / J+3 / J+7 travaille.
-      // La campagne porte le formulaire d'ORIGINE, pas la série partagée : sinon
-      // « Devis - site-vitrine » et « Devis - refonte » se confondent, et l'Offre
-      // Mensuelle disparaît derrière la série Devis dont elle réutilise les textes.
-      html_body: baliserLiens(wrapEmail(bodyToHtml(resolvedBody)), {
-        medium: "relance",
-        campaign: slug(formType),
-        content: `j${tpl.delay}`,
-      }),
-      send_at: new Date(now + tpl.delay * 24 * 60 * 60 * 1000).toISOString(),
-      status: "pending",
-    };
-  });
+  const rows = rendus.map((r) => ({
+    form_type: formType,
+    series_index: r.series_index,
+    lead_email: leadEmail,
+    subject: r.subject,
+    html_body: r.html_body,
+    send_at: new Date(now + r.delay * 24 * 60 * 60 * 1000).toISOString(),
+    status: "pending",
+  }));
 
   const { error } = await supabase.from("email_queue").insert(rows);
   if (error) console.error("[email_series] insert error:", error.message);

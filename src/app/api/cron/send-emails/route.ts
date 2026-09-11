@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 import { marquerSerieFinie } from "@/lib/pipedrive";
-import { tailleDeSerie } from "@/lib/email-series";
+import { tailleDeSerie, htmlVersTexte } from "@/lib/email-series";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -59,6 +59,7 @@ export async function GET(request: NextRequest) {
         to: row.lead_email,
         subject: row.subject,
         html: row.html_body,
+        text: htmlVersTexte(row.html_body),
       });
 
       if (sendErr) throw sendErr;
