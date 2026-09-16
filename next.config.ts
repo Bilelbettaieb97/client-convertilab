@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Dev uniquement (ignoré en production) : autorise l'ouverture du serveur local
+  // depuis un téléphone du même réseau Wi-Fi (http://192.168.1.4:4650). Sans cette
+  // ligne, Next 16 répond 403 aux chunks demandés depuis une autre origine que localhost.
+  allowedDevOrigins: ["192.168.1.4"],
   poweredByHeader: false,
   compress: true,
   typescript: {
@@ -114,8 +118,9 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https:",
               "font-src 'self' data:",
-              // Supabase (formulaires), GA4/Meta (tracking), Vercel (vitals)
-              "connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.facebook.com https://vitals.vercel-insights.com",
+              // Supabase (formulaires), GA4 (collecte UE sur region1.google-analytics.com), Google Ads
+              // (ccm/collect sur pagead2.googlesyndication.com), GTM, Meta (tracking), Vercel (vitals)
+              "connect-src 'self' https://*.supabase.co https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.facebook.com https://vitals.vercel-insights.com",
               // Google Maps embed (pages villes), GTM preview, Calendly
               "frame-src 'self' https://www.google.com https://www.googletagmanager.com https://calendly.com https://td.doubleclick.net",
               "object-src 'none'",
@@ -124,33 +129,26 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      // Long-term caching for static assets
-      {
-        source: "/:path*.(jpg|jpeg|png|webp|avif|gif|ico|svg|woff|woff2|ttf|eot)",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-        ],
-      },
-      {
-        source: "/images/:path*",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-        ],
-      },
-      {
-        source: "/fonts/:path*",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-        ],
-      },
-      {
-        source: "/_next/static/:path*",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-        ],
-      },
+      // Cache long des ressources statiques : production uniquement. En développement,
+      // les chunks Turbopack gardent le même nom d'un redémarrage à l'autre : avec
+      // « immutable », le navigateur conservait pendant un an l'ancien CSS et l'ancien
+      // JS (rechargement normal compris), d'où des pages qui semblaient ne jamais changer
+      // et des erreurs d'hydratation. Une image remplacée sous le même nom restait
+      // aussi invisible. Seul un rechargement forcé (Cmd+Maj+R) contournait le cache.
+      ...(process.env.NODE_ENV === "production" ? CACHE_LONG : []),
     ];
   },
 };
+
+/** Un an, immuable : uniquement pour les ressources dont l'URL change avec le contenu. */
+const CACHE_LONG = [
+  "/:path*.(jpg|jpeg|png|webp|avif|gif|ico|svg|woff|woff2|ttf|eot)",
+  "/images/:path*",
+  "/fonts/:path*",
+  "/_next/static/:path*",
+].map((source) => ({
+  source,
+  headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+}));
 
 export default nextConfig;

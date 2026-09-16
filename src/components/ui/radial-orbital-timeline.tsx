@@ -12,7 +12,7 @@ export interface OrbitalItem {
   date: string;
   content: string;
   category: string;
-  icon: React.ElementType;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
   href: string;
   relatedIds: number[];
   status: "live" | "popular" | "new";

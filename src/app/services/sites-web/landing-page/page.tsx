@@ -1,68 +1,65 @@
 import type { Metadata } from "next";
-import { SITE, PRICING } from "@/lib/constants";
+import { PRICING, SITE, STRUCTURED_DATA, PROVIDER_ORGANISATION } from "@/lib/constants";
+import { faqPageSchema } from "@/lib/faq-schema";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
-import LandingPageContent from "./LandingPageContent";
-import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
+import { filArianeSchema } from "@/components/pole";
+import LandingPageContent, { FAQ_LANDING, FIL_ARIANE_LANDING, URL_LANDING_PAGE } from "./LandingPageContent";
+
+const URL = URL_LANDING_PAGE;
+
+/** ≤ 60 caractères : le gabarit du layout ajoute « | ConvertiLab ». */
+const TITLE = "Landing page 490 €, livrée en 5 à 7 jours";
+/** ≤ 155 caractères. */
+const DESCRIPTION =
+  "Création de landing page à Rueil-Malmaison et Paris : une page, un objectif, des demandes comptées. 490 €, livrée en 5 à 7 jours, devis écrit sous 24 h.";
 
 export const metadata: Metadata = {
-  title: "Landing Page : Création de Page de Vente Haute Conversion en 5 Jours",
-  description: "Création de landing page haute conversion dès 490€, livrée en 5-7 jours. Page de vente optimisée pour Google Ads & Meta Ads, tracking inclus. +150 clients, prix fixe garanti. Devis gratuit.",
-  keywords: "landing page, création landing page, site web landing page, page de vente, page d'atterrissage, landing page prix, landing page Google Ads",
-  alternates: { canonical: `${SITE.url}/services/sites-web/landing-page` },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: `${SITE.url}${URL}` },
   openGraph: {
-    title: "Landing Page : Création Haute Conversion en 5 Jours | ConvertiLab",
-    description: "Création de landing page haute conversion dès 490€, livrée en 5-7 jours. Optimisée Google Ads & Meta Ads. Prix fixe garanti.",
-    url: `${SITE.url}/services/sites-web/landing-page`,
+    title: `${TITLE} | ${SITE.name}`,
+    description: DESCRIPTION,
+    url: `${SITE.url}${URL}`,
     type: "website",
+    locale: "fr_FR",
+    siteName: SITE.name,
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
   },
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE.url },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE.url}/services` },
-    { "@type": "ListItem", "position": 3, "name": "Sites Web", "item": `${SITE.url}/services/sites-web` },
-    { "@type": "ListItem", "position": 4, "name": "Landing Page", "item": `${SITE.url}/services/sites-web/landing-page` },
-  ],
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Qu'est-ce qu'une landing page exactement ?", "acceptedAnswer": { "@type": "Answer", "text": "C'est une page web autonome, concue specifiquement pour convertir les visiteurs en leads ou clients. Contrairement a un site classique, elle n'a qu'un seul objectif : inciter a l'action (formulaire, achat, inscription)." } },
-    { "@type": "Question", "name": "Combien de temps pour créer ma landing page ?", "acceptedAnswer": { "@type": "Answer", "text": "5 a 2 semaines ouvres entre le brief valide et la mise en ligne. Nous respectons ce delai avec un engagement de 10% de remise en cas de depassement." } },
-    { "@type": "Question", "name": "Ma landing page sera-t-elle compatible mobile ?", "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Le design est pense mobile-first : 70% du trafic publicitaire vient du mobile. Votre page sera parfaitement optimisée sur tous les ecrans." } },
-    { "@type": "Question", "name": "Puis-je utiliser ma landing page pour Google Ads et Meta Ads ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est exactement pour ca qu'elle est concue. Nous integrons le tracking Google Analytics, Google Ads et Meta Pixel pour mesurer vos conversions." } },
-    { "@type": "Question", "name": "Que se passe-t-il apres la livraison ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous beneficiez d'1 mois de support technique inclus. Nous restons disponibles pour les ajustements mineurs et le suivi des performances." } },
-    { "@type": "Question", "name": "Proposez-vous le paiement en plusieurs fois ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, paiement en 2 ou 3 fois sans frais : un acompte au demarrage, le solde a la livraison." } },
-  ],
-};
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Création Landing Page",
-  "description": "Landing page haute conversion optimisée pour Google Ads et Meta Ads. Livraison en 5-7 jours.",
-  "url": `${SITE.url}/services/sites-web/landing-page`,
-  "provider": { "@type": "Organization", "name": SITE.name },
-  "offers": { "@type": "Offer", "price": PRICING.landing.from, "priceCurrency": "EUR" ,
-},
-};
-
 export default function LandingPagePage() {
+  const jsonLd = [
+    filArianeSchema(FIL_ARIANE_LANDING, URL),
+    faqPageSchema(FAQ_LANDING),
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${SITE.url}${URL}#service`,
+      name: "Création de landing page",
+      serviceType: "Création de landing page orientée conversion",
+      description: DESCRIPTION,
+      url: `${SITE.url}${URL}`,
+      provider: PROVIDER_ORGANISATION,
+      areaServed: STRUCTURED_DATA.localBusiness.areaServed,
+      // Prix affiché tel quel sur la page (section « Combien coûte une landing page ? »).
+      offers: {
+        "@type": "Offer",
+        price: PRICING.landing.from,
+        priceCurrency: "EUR",
+        url: `${SITE.url}${URL}#prix`,
+      },
+    },
+  ];
+
   return (
     <div className="min-h-screen">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      {jsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <Navigation />
       <LandingPageContent />
-      <RelatedServicesSection exclude={["/services/sites-web/landing-page"]} />
       <Footer />
     </div>
   );

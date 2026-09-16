@@ -34,7 +34,7 @@ const About = () => {
 
   const highlights = [
     { icon: TrendingUp, text: "ROI mesurable sur chaque action" },
-    { icon: Users, text: "Équipe d'experts pluridisciplinaire" },
+    { icon: Users, text: "Un seul interlocuteur, le fondateur, sur les quatre leviers" },
     { icon: Zap, text: "Exécution rapide et agile" },
     { icon: Heart, text: "Relation client privilégiée" },
   ];
@@ -63,8 +63,8 @@ const About = () => {
           </h2>
           <p className="text-lg sm:text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
             Agence web et marketing digital basée à Rueil-Malmaison, en Île-de-France, spécialisée dans l&apos;acquisition et la conversion.
-            Notre équipe d&apos;experts en SEO, publicité, social media et création web transforme
-            votre présence digitale en machine à générer du business.
+            Le fondateur, votre seul interlocuteur, travaille votre site, votre publicité, votre SEO et vos automatisations IA
+            pour que votre présence en ligne vous apporte des clients.
           </p>
         </div>
 

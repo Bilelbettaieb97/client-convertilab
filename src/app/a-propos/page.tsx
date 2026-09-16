@@ -12,14 +12,14 @@ import {
   Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import {
-  Award, CheckCircle2, ArrowRight, Calendar, Globe, Search,
-  BarChart3, Code, Users, TrendingUp, Sparkles, MapPin, GraduationCap, Briefcase
+  CheckCircle2, ArrowRight, Globe, Search,
+  BarChart3, Code, Sparkles, MapPin, GraduationCap, Briefcase
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Bilel Bettaieb : Fondateur ConvertiLab | Agence Web Paris",
   description:
-    "Découvrez ConvertiLab et son fondateur Bilel Bettaieb. +150 sites créés, +50 clients accompagnés, expertise en création web, SEO et publicité digitale à Paris & Île-de-France.",
+    "Découvrez ConvertiLab et son fondateur Bilel Bettaieb : 150+ clients accompagnés, création de sites internet, publicité, SEO et CRM à Rueil-Malmaison, Paris et Île-de-France.",
   keywords:
     "agence web Paris, ConvertiLab, Bilel Bettaieb, création site internet, agence digitale, développement web",
   alternates: { canonical: `${SITE.url}/a-propos` },
@@ -52,9 +52,9 @@ export default function AboutPage() {
     "@context": "https://schema.org",
     ...STRUCTURED_DATA.organization,
     founder: { "@type": "Person", name: "Bilel Bettaieb" },
-    foundingDate: "2024",
-    numberOfEmployees: { "@type": "QuantitativeValue", value: "5" },
+    numberOfEmployees: { "@type": "QuantitativeValue", value: "1" },
     areaServed: [
+      { "@type": "City", name: "Rueil-Malmaison" },
       { "@type": "City", name: "Paris" },
       { "@type": "AdministrativeArea", name: "Île-de-France" },
     ],
@@ -64,7 +64,7 @@ export default function AboutPage() {
     { icon: Globe, title: "Création Web", desc: "Sites vitrines, e-commerce, landing pages et applications web sur-mesure avec Next.js et React." },
     { icon: Search, title: "SEO & Référencement", desc: "Stratégies SEO on-page, technique et local pour dominer Google dans votre secteur." },
     { icon: BarChart3, title: "Google Ads & Meta Ads", desc: "Campagnes publicitaires ROI-driven avec optimisation continue et reporting transparent." },
-    { icon: Code, title: "Développement Sur-Mesure", desc: "Applications web complexes, automatisations, intégrations API et solutions techniques avancées." },
+    { icon: Code, title: "CRM, relances automatiques et IA", desc: "Mise en place de votre CRM, relances automatiques, et Claude (Anthropic) pour le travail répétitif : devis, avis Google, rédaction." },
   ];
 
   const parcours = [
@@ -72,14 +72,14 @@ export default function AboutPage() {
     { year: "2020", title: "Spécialisation Marketing Digital", desc: "Approfondissement en SEO, Google Ads et stratégie d'acquisition. Premières campagnes performantes pour des clients." },
     { year: "2022", title: "Expert Full-Stack & Growth", desc: "Maîtrise de React, Next.js, Node.js. Combinaison unique de compétences techniques et marketing." },
     { year: "2024", title: "Création de ConvertiLab", desc: "Lancement de l'agence avec une mission claire : aider les PME et entrepreneurs à développer leur business grâce au digital." },
-    { year: "2025-26", title: "+150 sites livrés", desc: "ConvertiLab accompagne plus de 50 clients actifs en Île-de-France avec un taux de satisfaction de 4.9/5." },
+    { year: "2025-26", title: "150+ clients accompagnés", desc: "Artisans, commerces, indépendants et petites équipes, en Île-de-France et partout en France, avec une note de 4,9/5 sur Trustpilot." },
   ];
 
   const chiffres = [
-    { value: "150+", label: "Sites créés" },
-    { value: "50+", label: "Clients actifs" },
-    { value: "4.9/5", label: "Satisfaction" },
-    { value: "+280%", label: "CA moyen clients" },
+    { value: "150+", label: "Clients accompagnés" },
+    { value: `${SITE.reviews.rating.replace(".", ",")}/5`, label: `${SITE.reviews.count} avis Trustpilot` },
+    { value: "2 semaines", label: "Pour livrer un site" },
+    { value: "1", label: "Interlocuteur : le fondateur" },
   ];
 
   const certifications = [
@@ -130,12 +130,12 @@ export default function AboutPage() {
                 <p className="text-base text-gray-500 mb-8 leading-relaxed">
                   Après +5 ans d&apos;expérience en développement web et marketing digital, j&apos;ai créé ConvertiLab pour offrir
                   aux PME et entrepreneurs d&apos;Île-de-France un accompagnement complet : de la création du site web jusqu&apos;à
-                  l&apos;acquisition de clients via le SEO et la publicité en ligne.
+                  l&apos;acquisition de clients via le SEO et la publicité en ligne, et désormais le CRM, les relances automatiques et l&apos;intégration de l&apos;IA. Je travaille seul, sans équipe : vous parlez toujours à la même personne.
                 </p>
 
                 <div className="flex flex-wrap gap-3 mb-8">
                   <div className="flex items-center gap-2 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border">
-                    <MapPin className="w-4 h-4 text-purple-500" /> Rueil-Malmaison, IDF
+                    <MapPin className="w-4 h-4 text-purple-500" /> Rueil-Malmaison (92)
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border">
                     <Briefcase className="w-4 h-4 text-purple-500" /> +5 ans d&apos;expérience
@@ -162,9 +162,14 @@ export default function AboutPage() {
               {/* Photo + Stats */}
               <div className="space-y-6">
                 <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
-                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-5xl font-bold mb-6 shadow-lg">
-                    BB
-                  </div>
+                  <Image
+                    src="/images/fondateur-carre.webp"
+                    alt="Le fondateur de ConvertiLab"
+                    width={600}
+                    height={600}
+                    sizes="8rem"
+                    className="w-32 h-32 mx-auto rounded-full object-cover mb-6 shadow-lg"
+                  />
                   <div className="text-center mb-6">
                     <h2 className="text-xl font-bold text-gray-900">Bilel Bettaieb</h2>
                     <p className="text-purple-600 font-medium">Fondateur de ConvertiLab</p>

@@ -463,7 +463,7 @@ export default function DevisClient() {
 
           {step <= 2 && (
             <div className="mt-4 text-center animate-fade-in">
-              <p className="text-xs text-muted-foreground">Rejoint par <span className="font-semibold text-foreground">+50 entreprises</span> en 2024</p>
+              <p className="text-xs text-muted-foreground"><span className="font-semibold text-foreground">150+ clients accompagnés</span>, artisans, commerces et indépendants</p>
             </div>
           )}
         </div>

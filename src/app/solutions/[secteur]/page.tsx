@@ -39,9 +39,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: [
-      `Création de Site Internet pour ${sector.name} — dès 490€ en 2 semaines`,
+      `Création de Site Internet pour ${sector.name} : dès 490€ en 2 semaines`,
       `Site Web ${sector.name} : Création Professionnelle dès 490€`,
-      `Site Internet ${sector.name} — Conçu pour Attirer vos Clients`,
+      `Site Internet ${sector.name} : Conçu pour Attirer vos Clients`,
     ][sector.slug.length % 3],
     description: `Création de site internet pour ${sector.name.toLowerCase()} : site professionnel dès 490€, livré en 2 semaines, optimisé Google. ${sector.description.slice(0, 100)}`,
     keywords: `site web ${sector.name.toLowerCase()}, création site internet ${sector.name.toLowerCase()}, site vitrine ${sector.name.toLowerCase()}`,
@@ -661,7 +661,7 @@ export default async function SectorPage({ params }: Props) {
                 Devis gratuit et personnalisé sous 24h.
               </p>
               <p className="text-white/70 mb-8">
-                {priceLabel} &middot; Livraison en 2 semaines &middot; Satisfait ou remboursé
+                {priceLabel} &middot; Livraison en 2 semaines &middot; Paiement étalé, pas d&apos;abonnement
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button

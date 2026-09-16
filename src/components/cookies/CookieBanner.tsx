@@ -204,7 +204,7 @@ export default function CookieBanner() {
                     <Cookie className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-gray-900 mb-1">Nous utilisons des cookies 🍪</h3>
+                    <h3 className="font-bold text-gray-900 mb-1">Nous utilisons des cookies</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
                       Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu.
                       En savoir plus dans notre{" "}

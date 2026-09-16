@@ -45,8 +45,8 @@ export default function PortfolioClient() {
               <span className="text-primary">categorie</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              +50 projets realises. Filtrez par type de projet pour decouvrir nos
-              realisations et resultats concrets.
+              Filtrez par type de projet pour découvrir des sites livrés, consultables
+              en ligne, et les mots de leurs propriétaires.
             </p>
           </div>
 
@@ -83,14 +83,14 @@ export default function PortfolioClient() {
                   />
                 ))}
               </div>
-              <span className="font-medium text-foreground">4.9/5</span>
-              <span>de satisfaction</span>
+              <span className="font-medium text-foreground">4,9/5</span>
+              <span>sur 15 avis</span>
             </div>
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-primary" />
               <span>
-                <strong className="text-foreground">+50</strong> clients
-                accompagnes
+                <strong className="text-foreground">150+</strong> clients
+                accompagnés
               </span>
             </div>
           </div>

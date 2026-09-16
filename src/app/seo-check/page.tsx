@@ -487,8 +487,8 @@ export default function SeoCheckPage() {
                 <span className="text-yellow-400">★★★★★</span>
                 <span>4.9/5 sur 15 avis</span>
               </div>
-              <div>+150 sites crees</div>
-              <div>+50 clients actifs</div>
+              <div>150+ clients accompagnés</div>
+              <div>Rueil-Malmaison (92)</div>
               <div>Certifie Google</div>
             </div>
           </div>

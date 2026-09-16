@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE } from "@/lib/constants";
+import { SITE, PROVIDER_ORGANISATION } from "@/lib/constants";
 import { getDevisServiceBySlug, getAllDevisServiceSlugs } from "@/data/devis-pages";
 import DevisServiceClient from "./DevisServiceClient";
 
@@ -57,7 +57,7 @@ export default async function DevisServicePage({ params }: Props) {
         "@type": "Service",
         name: devisService.name,
         description: devisService.description,
-        provider: { "@id": `${SITE.url}/#organization` },
+        provider: PROVIDER_ORGANISATION,
         areaServed: { "@type": "Country", name: "France" },
         url: `${SITE.url}/devis/${service}`,
         ...(priceMatch

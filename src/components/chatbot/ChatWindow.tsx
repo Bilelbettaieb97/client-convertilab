@@ -401,7 +401,7 @@ export default function ChatWindow({
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 24, scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300, damping: 28 }}
-      className="fixed bottom-24 right-6 z-50 flex w-[400px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a1a] shadow-2xl shadow-purple-900/20 max-sm:inset-0 max-sm:bottom-0 max-sm:right-0 max-sm:w-full max-sm:rounded-none max-sm:border-0"
+      className="fixed bottom-[calc(6rem+var(--barre-cta,0px))] right-6 z-50 flex w-[400px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a1a] shadow-2xl shadow-purple-900/20 max-sm:inset-0 max-sm:bottom-0 max-sm:right-0 max-sm:w-full max-sm:rounded-none max-sm:border-0"
       style={{ height: "520px" }}
     >
       {/* ===== Header ===== */}

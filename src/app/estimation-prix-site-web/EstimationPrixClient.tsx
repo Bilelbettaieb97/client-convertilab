@@ -142,7 +142,7 @@ export default function EstimationPrixClient() {
 
   useEffect(() => { if (isSubmitted) { window.scrollTo({ top: 0, behavior: "smooth" }); const colors = ["#8B5CF6", "#E04090", "#F59E0B", "#10B981", "#3B82F6"]; setParticles(Array.from({ length: 30 }, (_, i) => ({ id: i, x: Math.random() * 100, y: Math.random() * 100, color: colors[Math.floor(Math.random() * colors.length)], delay: Math.random() * 0.5 }))); } }, [isSubmitted]);
 
-  const OptionCard = ({ value, label, icon: Icon, description, selected, onClick }: { value: string; label: string; icon: React.ElementType; description?: string; selected: boolean; onClick: () => void }) => (
+  const OptionCard = ({ value, label, icon: Icon, description, selected, onClick }: { value: string; label: string; icon: React.ComponentType<{ className?: string }>; description?: string; selected: boolean; onClick: () => void }) => (
     <button onClick={onClick} className={cn("group relative p-4 rounded-xl border-2 transition-all duration-300 text-left", selected ? "border-violet-500 bg-violet-500/10 shadow-lg shadow-violet-500/20" : "border-slate-700/50 bg-slate-900/50 hover:border-slate-600 hover:bg-slate-800/50")}>
       {selected && <div className="absolute top-2 right-2"><CheckCircle className="w-4 h-4 text-violet-400" /></div>}
       <div className="flex items-center gap-3"><div className={cn("w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-300 shrink-0", selected ? "bg-gradient-to-br from-violet-500 to-pink-500" : "bg-slate-800 group-hover:bg-slate-700")}><Icon className={cn("w-4 h-4 transition-colors", selected ? "text-white" : "text-slate-400 group-hover:text-violet-400")} /></div><div><h3 className={cn("font-semibold text-sm transition-colors", selected ? "text-white" : "text-slate-300")}>{label}</h3>{description && <p className="text-xs text-slate-500 mt-0.5">{description}</p>}</div></div>
@@ -158,7 +158,7 @@ export default function EstimationPrixClient() {
   }
 
   const getStepLabels = () => {
-    const labels: { num: number; label: string; icon: React.ElementType }[] = [{ num: 1, label: "Type de site", icon: Globe }];
+    const labels: { num: number; label: string; icon: React.ComponentType<{ className?: string }> }[] = [{ num: 1, label: "Type de site", icon: Globe }];
     if (form.site_type === "vitrine") labels.push({ num: 2, label: "Options & pages", icon: Layout });
     else if (form.site_type === "ecommerce") labels.push({ num: 2, label: "Fonctionnalites", icon: Store });
     else if (form.site_type === "landing") labels.push({ num: 2, label: "Objectif & options", icon: Target });

@@ -71,8 +71,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isEcommerce = sector.slug === "ecommerce";
   const priceLabel = isEcommerce ? PRICING.ecommerce.label : PRICING.vitrine.label;
 
-  const metaTitle = `Site Web ${sector.name} à ${city.name} — ${priceLabel}, livré en 2 semaines`;
-  const metaDesc = `Combien coûte un site internet pour ${sector.name.toLowerCase()} à ${city.name} ? ConvertiLab crée votre site professionnel ${priceLabel}, livré en 2 semaines, satisfait ou remboursé. +150 clients, 15 avis 4.9★.`;
+  const metaTitle = `Site Web ${sector.name} à ${city.name} : ${priceLabel}, livré en 2 semaines`;
+  const metaDesc = `Combien coûte un site internet pour ${sector.name.toLowerCase()} à ${city.name} ? ConvertiLab crée votre site professionnel ${priceLabel}, livré en 2 semaines, prix fixe. 150+ clients accompagnés, 4,9/5 sur 15 avis.`;
 
   return {
     title: metaTitle,
@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: metaTitle,
-      description: `Site internet ${sector.name.toLowerCase()} à ${city.name}, ${priceLabel}, livraison 2 semaines, 15 avis 4.9★.`,
+      description: `Site internet ${sector.name.toLowerCase()} à ${city.name}, ${priceLabel}, livraison 2 semaines, 4,9/5 sur 15 avis.`,
       url: `${SITE.url}/agence-web/${sector.slug}/${city.slug}`,
       type: "website",
       images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -305,7 +305,7 @@ export default async function SecteurVillePage({ params }: Props) {
             </div>
             <div className="flex items-center gap-2 text-gray-700">
               <Star className="w-5 h-5 text-yellow-500" />
-              <span className="font-semibold">4.9/5</span> ({SITE.reviews.count} avis)
+              <span className="font-semibold">4,9/5</span> ({SITE.reviews.count} avis)
             </div>
           </div>
 
@@ -330,8 +330,8 @@ export default async function SecteurVillePage({ params }: Props) {
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
             {[
               "Livraison en 2 semaines",
-              "Satisfait ou remboursé",
-              `+150 clients en IDF`,
+              "Deux tours de corrections inclus",
+              "150+ clients accompagnés",
               "Paiement après validation",
             ].map((b) => (
               <span key={b} className="flex items-center gap-1.5">
@@ -393,7 +393,7 @@ export default async function SecteurVillePage({ params }: Props) {
             ?
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Tout est inclus dans un forfait fixe — design sur-mesure, SEO local {city.name}, fonctionnalités secteur et support 30 jours.
+            Tout est inclus dans un forfait fixe : design sur-mesure, SEO local {city.name}, fonctionnalités secteur et support 30 jours.
           </p>
           <div className="grid sm:grid-cols-2 gap-4 mb-10">
             {sector.solutions.map((sol, i) => (
@@ -536,7 +536,7 @@ export default async function SecteurVillePage({ params }: Props) {
             <div>
               <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm mb-4">
                 <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                  Chiffres clés — {city.name}
+                  Chiffres clés : {city.name}
                 </p>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center py-2 border-b border-gray-100">
@@ -549,7 +549,7 @@ export default async function SecteurVillePage({ params }: Props) {
                   </div>
                   <div className="flex justify-between items-center py-2">
                     <span className="text-sm text-gray-600">Sites ConvertiLab livrés</span>
-                    <span className="font-bold text-purple-600">+150 en IDF</span>
+                    <span className="font-bold text-purple-600">150+ accompagnés</span>
                   </div>
                 </div>
               </div>
@@ -581,7 +581,7 @@ export default async function SecteurVillePage({ params }: Props) {
       <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Questions fréquentes — Site web{" "}
+            Questions fréquentes : site web{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               {sector.name.toLowerCase()} à {city.name}
             </span>
@@ -635,7 +635,7 @@ export default async function SecteurVillePage({ params }: Props) {
                 Devis gratuit et personnalisé sous 24h.
               </p>
               <p className="text-sm text-white/70 mb-8">
-                {priceLabel} &middot; Livraison 2 semaines &middot; Satisfait ou remboursé
+                {priceLabel} &middot; Livraison 2 semaines &middot; Paiement étalé, pas d&apos;abonnement
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
@@ -717,7 +717,7 @@ export default async function SecteurVillePage({ params }: Props) {
               className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold hover:bg-purple-200 transition-colors border border-purple-200"
             >
               <MapPin className="w-3.5 h-3.5 inline-block mr-1" />
-              Agence web {city.name} — tous secteurs
+              Agence web {city.name}, tous secteurs
             </Link>
             {otherSectorsForCity.map((s) =>
               s ? (
@@ -740,8 +740,8 @@ export default async function SecteurVillePage({ params }: Props) {
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
             {[
               { icon: Zap, label: "Livraison en 2 semaines" },
-              { icon: Shield, label: "Satisfait ou remboursé" },
-              { icon: Star, label: `4.9/5 (${SITE.reviews.count} avis)` },
+              { icon: Shield, label: "Paiement étalé, pas d'abonnement" },
+              { icon: Star, label: `4,9/5 (${SITE.reviews.count} avis)` },
               { icon: Clock, label: "Devis sous 24h" },
             ].map(({ icon: Icon, label }) => (
               <span key={label} className="flex items-center gap-2">

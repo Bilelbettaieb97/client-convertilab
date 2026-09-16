@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Simulateur ROI Ads Gratuit — ConvertiLab",
+  name: "Simulateur ROI Ads Gratuit : ConvertiLab",
   description:
     "Outil gratuit d'estimation du retour sur investissement pour Google Ads et Meta Ads avec projections sur 12 mois.",
   url: `${SITE.url}/estimateur-ads`,
@@ -184,8 +183,8 @@ export default function EstimateurAdsPage() {
                 <span className="text-yellow-400">{"\u2605\u2605\u2605\u2605\u2605"}</span>
                 <span>4.9/5 sur 15 avis</span>
               </div>
-              <div>+150 sites crees</div>
-              <div>+50 clients actifs</div>
+              <div>150+ clients accompagnés</div>
+              <div>Rueil-Malmaison (92)</div>
               <div>Certifie Google Ads</div>
             </div>
           </div>

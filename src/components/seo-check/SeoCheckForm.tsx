@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -44,9 +45,29 @@ const ANALYSIS_STEPS = [
   "Envoi par email...",
 ];
 
+/**
+ * Pré-remplissage depuis `?url=` (formulaire inline de la page SEO).
+ * useSearchParams rend son sous-arbre côté client jusqu'au Suspense le plus
+ * proche : on l'isole ici pour que /seo-check reste prérendue en statique,
+ * le fallback étant le même formulaire sans URL (aucun décalage).
+ */
+function SeoCheckFormAvecUrl() {
+  const params = useSearchParams();
+  const initialUrl = (params.get("url") ?? "").trim().slice(0, 200);
+  return <SeoCheckFormInner initialUrl={initialUrl} />;
+}
+
 export default function SeoCheckForm() {
+  return (
+    <Suspense fallback={<SeoCheckFormInner />}>
+      <SeoCheckFormAvecUrl />
+    </Suspense>
+  );
+}
+
+function SeoCheckFormInner({ initialUrl = "" }: { initialUrl?: string }) {
   const [step, setStep] = useState(1);
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState(initialUrl);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");

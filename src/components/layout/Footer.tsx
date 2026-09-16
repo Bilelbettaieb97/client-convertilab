@@ -1,56 +1,75 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Globe, ArrowRight, BarChart3 } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, ArrowUp } from "lucide-react";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { supabase } from "@/lib/supabase/client";
 import { SITE } from "@/lib/constants";
+import { POLES } from "@/data/poles";
+import { cn } from "@/lib/utils";
+import { FILET_LIEN_TEXTE } from "@/components/motion/ff/c-soulignement-centre";
+
+/** Liens de listes : changement de couleur + soulignement fin, décalé, à 40 % de blanc. */
+const LIEN_LISTE =
+  "text-sm text-gray-400 hover:text-purple-400 transition-colors hover:underline decoration-1 underline-offset-4 decoration-white/40";
+
+/** Trait vertical entre les liens de la barre du bas (remplace les « • »). */
+const Separateur = () => <span aria-hidden="true" className="h-3 w-px bg-white/15" />;
 
 const Footer = () => {
-  const router = useRouter();
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const services = [
-    { name: "Création de Sites Web", href: "/services/sites-web" },
-    { name: "Site Vitrine", href: "/services/sites-web/site-vitrine" },
-    { name: "Site E-commerce", href: "/services/sites-web/site-ecommerce" },
-    { name: "Landing Page", href: "/services/sites-web/landing-page" },
-    { name: "SEO & Référencement", href: "/services/seo" },
-    { name: "Google Ads", href: "/services/sea/google-ads" },
-    { name: "Meta Ads", href: "/services/sea/meta-ads" },
-    { name: "Social Media", href: "/services/social-media" },
-    { name: "Design UI/UX", href: "/services/design/ui-ux" },
-  ];
+  /**
+   * Pied de page par pôle : quatre colonnes (source unique : src/data/poles.ts),
+   * ancres descriptives, sous-pages et outil gratuit de chaque pôle.
+   */
+  const colonnesPoles = POLES.map((pole) => ({
+    numero: pole.numero,
+    titre: pole.nomCourt,
+    href: pole.href,
+    ancre: pole.ancre,
+    liens: [...pole.sousPages, ...pole.outils],
+  }));
 
   const quickLinks = [
     { name: "Accueil", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "Devis gratuit", href: "/devis" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "À propos", href: "/a-propos" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
-    { name: "Offre Mensuelle", href: "/offre-mensuelle" },
-    { name: "Agence Web par ville", href: "/agence-web" },
-    { name: "Création de site par ville", href: "/creation-site-internet" },
+    { name: "Tous nos services", href: "/services" },
+    { name: "Portfolio et études de cas", href: "/portfolio" },
+    { name: "À propos du fondateur", href: "/a-propos" },
+    { name: "Blog marketing digital", href: "/blog" },
+    { name: "Contact et devis", href: "/contact" },
+    { name: "Maquette gratuite en 48 h", href: "/demande-maquette" },
+    { name: "Site en paiement étalé", href: "/offre-mensuelle" },
+    { name: "Nos tarifs", href: "/prix" },
+    { name: "Questions fréquentes", href: "/faq" },
+    { name: "Glossaire marketing", href: "/glossaire" },
+  ];
+
+  const zonesLinks = [
+    { name: "Agence web à Rueil-Malmaison", href: "/agence-web/rueil-malmaison" },
+    { name: "Agence web à Paris", href: "/agence-web/paris" },
+    { name: "Agence web à La Défense et Puteaux", href: "/agence-web/la-defense-puteaux" },
+    { name: "Agence web par ville", href: "/agence-web" },
     { name: "Solutions par secteur", href: "/solutions" },
-    { name: "Glossaire Marketing", href: "/glossaire" },
-    { name: "FAQ", href: "/faq" },
+  ];
+
+  const autresServices = [
+    { name: "Social media et community management", href: "/services/social-media" },
+    { name: "Design UI/UX et identité visuelle", href: "/services/design" },
   ];
 
   const toolsLinks = [
-    { name: "Audit SEO", href: "/seo-check" },
-    { name: "Audit Vitesse", href: "/speed-check" },
-    { name: "Audit Design", href: "/design-score" },
-    { name: "Estimateur Ads", href: "/estimateur-ads" },
-    { name: "Générateur Mentions Légales", href: "/generateur-mentions-legales" },
-    { name: "Robots & Sitemap", href: "/generateur-robots-sitemap" },
-    { name: "Rapport Sectoriel", href: "/rapport-sectoriel" },
-    { name: "Comparateur", href: "/comparateur-sites" },
+    { name: "Audit SEO gratuit", href: "/seo-check" },
+    { name: "Test de vitesse", href: "/speed-check" },
+    { name: "Score design et UX", href: "/design-score" },
+    { name: "Estimateur de budget Ads", href: "/estimateur-ads" },
+    { name: "Estimation du prix d'un site", href: "/estimation-prix-site-web" },
+    { name: "Générateur de mentions légales", href: "/generateur-mentions-legales" },
+    { name: "Générateur robots.txt et sitemap", href: "/generateur-robots-sitemap" },
+    { name: "Rapport sectoriel", href: "/rapport-sectoriel" },
+    { name: "Comparateur de sites", href: "/comparateur-sites" },
   ];
 
   const socialLinks = [
@@ -69,8 +88,11 @@ const Footer = () => {
     setIsSubmitting(true);
     try {
       const trimmedEmail = newsletterEmail.trim().toLowerCase();
+      // Import à la demande : supabase-js (~55 Ko gz) ne pèse pas sur le chargement initial de chaque page,
+      // il n'est requis qu'à la soumission de la newsletter (même règle que ContactForm et ChatWidget).
+      const { supabase } = await import("@/lib/supabase/client");
       const { error } = await supabase.from("newsletter_subscriptions").insert([{ email: trimmedEmail }]);
-      if (error && (error as any).code === "23505") {
+      if (error && error.code === "23505") {
         setNewsletterStatus("success");
       } else if (error) {
         setNewsletterStatus("error");
@@ -86,7 +108,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white relative overflow-hidden">
+    <footer id="pied-de-page" className="bg-gray-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/10"></div>
       <div className="absolute top-20 right-10 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-5"></div>
 
@@ -96,7 +118,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
               <h3 className="text-xl sm:text-2xl font-bold mb-2">Conseils marketing digital gratuits</h3>
-              <p className="text-gray-400 text-sm">Recevez nos meilleures stratégies SEO, Ads et social media</p>
+              <p className="text-gray-400 text-sm">Nos conseils sur les sites internet, la publicité, le SEO et le CRM, sans jargon</p>
             </div>
             <form onSubmit={handleNewsletterSubmit} className="flex w-full sm:w-auto gap-3">
               <input
@@ -121,12 +143,39 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10 py-12 sm:py-16">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 sm:gap-10">
+      {/* Pied de page principal : les quatre pôles, puis l'agence */}
+      {/* Mobile et tablette : contact et marque d'abord (order), pôles en deux colonnes ; desktop : pôles puis marque, quatre colonnes. */}
+      <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10 py-12 sm:py-16 flex flex-col">
+        <nav aria-label="Nos quatre pôles" className="order-2 mt-12 pt-12 border-t border-white/10 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 lg:order-none lg:mt-0 lg:pt-0 lg:border-t-0">
+          {colonnesPoles.map((pole) => (
+            <div key={pole.href}>
+              <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+                <span className="text-purple-400 mr-2">{pole.numero}</span>
+                <Link href={pole.href} className="hover:text-purple-400 transition-colors" title={pole.ancre}>
+                  {pole.titre}
+                </Link>
+              </h4>
+              <ul className="space-y-2.5">
+                {pole.liens.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className={LIEN_LISTE}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link href={pole.href} className="group inline-flex items-center gap-1 text-sm font-medium text-purple-300 hover:text-purple-200 transition-colors">
+                    {pole.ancre} <ArrowRight className="w-3 h-3 flex-shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 motion-reduce:transition-none" aria-hidden="true" />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          ))}
+        </nav>
 
-          {/* Brand */}
-          <div className="col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-1 space-y-5">
+        <div className="order-1 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 lg:order-none lg:mt-12 lg:pt-12 lg:border-t lg:border-white/10">
+          {/* Marque et contact : pleine largeur sur mobile, en tête du pied de page. */}
+          <div className="space-y-5 col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block">
               <span className="text-2xl font-bold">
                 <span className="text-white">Converti</span>
@@ -134,7 +183,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Agence de marketing digital à Rueil-Malmaison. Création de sites web, SEO et publicité en ligne.
+              Agence marketing digital à Rueil-Malmaison (92). Création de sites internet, publicité en ligne, SEO, CRM et relances automatiques pour les entreprises de Paris, d&apos;Île-de-France et de toute la France.
             </p>
 
             {/* Réseaux sociaux */}
@@ -146,7 +195,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="p-2.5 bg-white/5 rounded-lg text-gray-400 hover:text-white hover:bg-purple-600/30 focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:outline-none transition-all duration-200"
+                  className="p-3 bg-white/5 rounded-lg text-gray-400 hover:text-white hover:bg-purple-600/30 focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:outline-none transition-all duration-200"
                 >
                   {social.icon}
                 </a>
@@ -155,30 +204,32 @@ const Footer = () => {
 
             {/* Contact rapide */}
             <div className="space-y-2">
-              <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 text-sm text-gray-400 hover:text-purple-400 transition-colors">
-                <Mail className="w-4 h-4 flex-shrink-0" /> {SITE.email}
+              <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 min-h-11 text-sm text-gray-400 hover:text-purple-400 transition-colors">
+                <Mail className="w-4 h-4 flex-shrink-0" aria-hidden="true" /> {SITE.email}
               </a>
-              <a href={`tel:${SITE.phone}`} className="flex items-center gap-2 text-sm text-gray-400 hover:text-purple-400 transition-colors">
-                <Phone className="w-4 h-4 flex-shrink-0" /> {SITE.phoneDisplay}
+              <a href={`tel:${SITE.phone}`} className="flex items-center gap-2 min-h-11 text-sm text-gray-400 hover:text-purple-400 transition-colors">
+                <Phone className="w-4 h-4 flex-shrink-0" aria-hidden="true" /> {SITE.phoneDisplay}
               </a>
-              <a href={SITE.googleMaps} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 hover:text-purple-400 transition-colors">
-                <MapPin className="w-4 h-4 flex-shrink-0" /> Rueil-Malmaison (92)
+              <a href={SITE.googleMaps} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 min-h-11 text-sm text-gray-400 hover:text-purple-400 transition-colors">
+                <MapPin className="w-4 h-4 flex-shrink-0" aria-hidden="true" /> Rueil-Malmaison (92)
               </a>
-              <a href={SITE.trustpilot} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-1 px-3 py-1.5 bg-[#00b67a]/10 border border-[#00b67a]/30 rounded-lg hover:bg-[#00b67a]/20 transition-colors">
-                <svg className="w-4 h-4 text-[#00b67a]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg>
-                <span className="text-xs font-semibold text-[#00b67a]">4.9★ Trustpilot</span>
-                <span className="text-xs text-gray-500">15 avis</span>
+              {/* Nom accessible = texte visible (WCAG 2.5.3), précision « nouvel onglet » en sr-only. */}
+              <a href={SITE.trustpilot} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-1 min-h-11 px-3 py-1.5 bg-[#00b67a]/10 border border-[#00b67a]/30 rounded-lg hover:bg-[#00b67a]/20 transition-colors">
+                <svg className="w-4 h-4 text-[#00b67a]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg>
+                <span className="text-xs font-semibold text-[#00b67a]">{SITE.reviews.rating.replace(".", ",")}/5 · {SITE.reviews.count} avis</span>
+                <span className="text-xs text-gray-500">Trustpilot</span>
+                <span className="sr-only"> (ouvre dans un nouvel onglet)</span>
               </a>
             </div>
           </div>
 
-          {/* Services */}
+          {/* Navigation */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Services</h4>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">L&apos;agence</h4>
             <ul className="space-y-2.5">
-              {services.map((item) => (
+              {quickLinks.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-gray-400 hover:text-purple-400 transition-colors">
+                  <Link href={item.href} className={LIEN_LISTE}>
                     {item.name}
                   </Link>
                 </li>
@@ -186,13 +237,23 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Liens rapides */}
+          {/* Zones et autres services */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Navigation</h4>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Où nous intervenons</h4>
             <ul className="space-y-2.5">
-              {quickLinks.map((item) => (
+              {zonesLinks.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-gray-400 hover:text-purple-400 transition-colors">
+                  <Link href={item.href} className={LIEN_LISTE}>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mt-8 mb-4">Autres services</h4>
+            <ul className="space-y-2.5">
+              {autresServices.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className={LIEN_LISTE}>
                     {item.name}
                   </Link>
                 </li>
@@ -206,7 +267,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {toolsLinks.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-gray-400 hover:text-purple-400 transition-colors">
+                  <Link href={item.href} className={LIEN_LISTE}>
                     {item.name}
                   </Link>
                 </li>
@@ -215,9 +276,9 @@ const Footer = () => {
 
             {/* CTA */}
             <div className="mt-6">
-              <Button asChild size="sm" className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold text-xs">
+              <Button asChild size="sm" className="w-full min-h-11 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold text-xs">
                 <Link href="/contact">
-                  Devis gratuit <ArrowRight className="ml-1 w-3 h-3" />
+                  Demander un devis gratuit <ArrowRight className="ml-1 w-3 h-3" aria-hidden="true" />
                 </Link>
               </Button>
             </div>
@@ -230,25 +291,44 @@ const Footer = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-xs text-center sm:text-left">
-              &copy; {new Date().getFullYear()} ConvertiLab, agence marketing digital Paris et Île-de-France
+              &copy; {new Date().getFullYear()} ConvertiLab, agence marketing digital à Rueil-Malmaison (92), Paris et Île-de-France
             </p>
-            <div className="flex items-center gap-4 text-xs text-gray-500">
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-gray-500">
+              {/* Retour en haut : un lien (pas de bouton fixe, la barre collante et la bulle
+                  occupent déjà le bas). « #top » sans id = haut du document (HTML), défilement
+                  doux via scroll-behavior. Filet 1 px qui se dessine sous le texte ; `after:bottom-3`
+                  ajuste le filet au text-xs dans la cible de 44 px. */}
+              <a
+                href="#top"
+                className={cn(
+                  "group inline-flex min-h-11 items-center gap-1.5 text-xs text-gray-400 hover:text-white transition-colors",
+                  FILET_LIEN_TEXTE,
+                  "after:bottom-3"
+                )}
+              >
+                <ArrowUp
+                  className="h-3.5 w-3.5 -rotate-12 transition-transform duration-300 group-hover:rotate-0 group-hover:-translate-y-px motion-reduce:transition-none"
+                  aria-hidden="true"
+                />
+                Retour en haut
+              </a>
+              <Separateur />
               <Link href="/mentions-legales" className="hover:text-purple-400 transition-colors">
                 Mentions légales
               </Link>
-              <span>•</span>
+              <Separateur />
               <Link href="/politique-de-confidentialite" className="hover:text-purple-400 transition-colors">
                 Confidentialité
               </Link>
-              <span>•</span>
+              <Separateur />
               <Link href="/politique-de-cookies" className="hover:text-purple-400 transition-colors">
                 Cookies
               </Link>
-              <span>•</span>
+              <Separateur />
               <Link href="/glossaire" className="hover:text-purple-400 transition-colors">
                 Glossaire
               </Link>
-              <span>•</span>
+              <Separateur />
               <Link href="/sitemap.xml" className="hover:text-purple-400 transition-colors">
                 Sitemap
               </Link>

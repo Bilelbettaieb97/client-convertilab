@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Portfolio from "@/components/sections/Portfolio";
 import AnimatedSection from "@/components/sections/AnimatedSection";
+import { caseStudies, type CaseStudy } from "@/data/case-studies";
 import {
   ArrowRight,
   CheckCircle,
@@ -73,26 +74,11 @@ const withUs = [
   "Hébergement premium ultra-rapide inclus",
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Mon site a ete livre en 5 jours. Je suis deja sur Google et j'ai recu mes premiers appels. Incroyable pour 39eur/mois.",
-    name: "Sophie M.",
-    company: "Naturopathe",
-  },
-  {
-    quote:
-      "Enfin un vrai site pro dont je suis propriétaire, sans me ruiner. L'équipe est réactive et à l'écoute.",
-    name: "Marc D.",
-    company: "Plombier",
-  },
-  {
-    quote:
-      "J'ai double mes demandes de devis depuis que j'ai mon nouveau site. Il sort en premier sur Google dans ma ville.",
-    name: "Camille R.",
-    company: "Photographe",
-  },
-];
+/** Avis réels uniquement (src/data/case-studies.ts) : les mots des clients, sans réécriture. */
+const testimonials = ["acb-renovation", "monsieur-arancini", "institut-nomad"]
+  .map((slug) => caseStudies.find((cs) => cs.slug === slug))
+  .filter((cs): cs is CaseStudy => Boolean(cs && cs.testimonial))
+  .map((cs) => ({ quote: cs.testimonial, name: cs.author, company: cs.sector }));
 
 const allFeatures = [
   { label: "Vous êtes propriétaire du site", essentiel: true, pro: true, premium: true },
@@ -211,27 +197,27 @@ export default function OffreMensuelleClient() {
           <div className="flex justify-center gap-6 sm:gap-10 text-center animate-fade-in">
             <div className="flex flex-col items-center gap-1">
               <Users className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-              <p className="text-lg sm:text-2xl font-bold text-primary">+50</p>
+              <p className="text-lg sm:text-2xl font-bold text-primary">150+</p>
               <p className="text-[10px] sm:text-xs text-muted-foreground">
-                Clients
+                Clients accompagnés
               </p>
             </div>
             <div className="flex flex-col items-center gap-1">
               <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
               <p className="text-lg sm:text-2xl font-bold text-primary">
-                +280%
+                2 semaines
               </p>
               <p className="text-[10px] sm:text-xs text-muted-foreground">
-                CA moyen
+                Site livré
               </p>
             </div>
             <div className="flex flex-col items-center gap-1">
               <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
               <p className="text-lg sm:text-2xl font-bold text-primary">
-                4.9/5
+                4,9/5
               </p>
               <p className="text-[10px] sm:text-xs text-muted-foreground">
-                Satisfaction
+                sur 15 avis
               </p>
             </div>
           </div>

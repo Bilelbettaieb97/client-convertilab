@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Loader2, CheckCircle2, Sparkles } from "lucide-react";
-import { supabase } from "@/lib/supabase/client";
 
 const projectTypes = [
   { value: "site-vitrine", label: "Site vitrine" },
@@ -37,6 +37,8 @@ export default function HeroMiniForm() {
 
     setIsSubmitting(true);
     try {
+      // Import à la demande : supabase-js ne pèse pas sur le chargement initial.
+      const { supabase } = await import("@/lib/supabase/client");
       const { error: dbError } = await supabase
         .from("contact_submissions")
         .insert([{
@@ -72,8 +74,8 @@ export default function HeroMiniForm() {
       }).catch((err) => console.error("[notify] erreur envoi:", err));
 
       setIsSuccess(true);
-      if (typeof window !== 'undefined' && (window as any).trackFormConversion) {
-        (window as any).trackFormConversion();
+      if (typeof window !== 'undefined' && (window as Window & { trackFormConversion?: () => void }).trackFormConversion) {
+        (window as Window & { trackFormConversion?: () => void }).trackFormConversion?.();
       }
     } catch (err) {
       console.error(err);
@@ -99,9 +101,9 @@ export default function HeroMiniForm() {
             réalisations
           </a>{" "}
           ou consultez nos{" "}
-          <a href="/prix" className="text-purple-600 font-semibold hover:underline">
+          <Link href="/prix" className="text-purple-600 font-semibold hover:underline">
             tarifs
-          </a>.
+          </Link>.
         </p>
       </div>
     );

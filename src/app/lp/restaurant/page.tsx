@@ -70,10 +70,10 @@ const stats = [
 ];
 
 const caseResults = [
-  "+65% de réservations en ligne en 3 mois",
-  "1ère page Google sur « restaurant italien Paris 11 »",
-  "+40% de couverts le midi en semaine",
-  "120 avis Google collectés en 6 mois",
+  "Site vitrine premium, pensé pour le mobile",
+  "Offre produit structurée, claire pour le client",
+  "Design et branding cohérents avec l'artisan",
+  "Site consultable sur monsieurarancini.fr",
 ];
 
 export default function LandingRestaurant() {
@@ -147,7 +147,7 @@ export default function LandingRestaurant() {
               <div className="lp-rise flex flex-wrap items-center gap-x-6 gap-y-3" style={{ animationDelay: "360ms" }}>
                 <span className="inline-flex items-center gap-2 font-semibold text-[#1a1310]">
                   <Users className="w-[18px] h-[18px] text-rose-500" />
-                  +150 entreprises accompagnées
+                  150+ clients accompagnés
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-gray-500">
                   <span className="flex gap-0.5">
@@ -250,12 +250,12 @@ export default function LandingRestaurant() {
             <Reveal delay={140}>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-rose-500">Cas client</span>
               <h2 className="text-3xl sm:text-[2.4rem] font-black text-[#1a1310] mt-3 mb-5 tracking-[-0.02em] leading-tight">
-                La Table de Marco remplit son midi
+                Monsieur Arancini, artisan sicilien à Paris
               </h2>
               <blockquote className="relative pl-5 border-l-2 border-rose-300 text-lg text-gray-600 italic leading-relaxed mb-6">
                 <MessageSquareQuote aria-hidden className="absolute -left-3 -top-2 w-6 h-6 text-rose-200" />
-                « Depuis que j&apos;ai mon site, je reçois des réservations tous les jours sans rien faire. Le midi, c&apos;est plein maintenant. »
-                <footer className="mt-3 not-italic text-sm font-semibold text-[#1a1310]">Marco Benedetti · Gérant, La Table de Marco</footer>
+                « Très sérieux et réactifs, ils m&apos;ont fait un très joli site web avec de bons conseils et du professionnalisme. Je recommande vivement ! »
+                <footer className="mt-3 not-italic text-sm font-semibold text-[#1a1310]">Monsieur Arancini · Restauration, Paris</footer>
               </blockquote>
               <div className="grid sm:grid-cols-2 gap-3">
                 {caseResults.map((r) => (

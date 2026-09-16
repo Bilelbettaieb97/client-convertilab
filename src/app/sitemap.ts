@@ -7,7 +7,7 @@ import { blogArticles } from "@/data/blog-articles";
 import { guides } from "@/data/guides";
 import { comparisons } from "@/data/comparisons";
 import { pricingPages } from "@/data/pricing-pages";
-import { caseStudies } from "@/data/case-studies";
+import { caseStudies, fullCaseStudies } from "@/data/case-studies";
 import { devisServices } from "@/data/devis-pages";
 
 const staticRoutes = [
@@ -25,9 +25,19 @@ const staticRoutes = [
   "/services/seo",
   "/services/seo/referencement",
   "/services/seo/audit",
+  "/services/seo/seo-local",
+  "/services/seo/visibilite-ia",
   "/services/sea",
   "/services/sea/google-ads",
   "/services/sea/meta-ads",
+  "/services/sea/tiktok-ads",
+  "/services/sea/pinterest-ads",
+  "/services/sea/linkedin-ads",
+  "/services/integration-ia",
+  "/services/crm",
+  "/services/crm/creation-crm",
+  "/services/crm/optimisation-crm",
+  "/services/crm/nettoyage-crm",
   "/services/social-media",
   "/services/social-media/community-management",
   "/services/social-media/strategie",
@@ -66,17 +76,45 @@ const staticRoutes = [
 const SITE_LAST_UPDATED = new Date("2026-07-07");
 const CITY_PAGES_UPDATED = new Date("2026-07-07");
 const TEMPLATES_CREATED = new Date("2026-07-05");
+// Refonte de septembre 2026 : accueil, /services, les quatre pôles et leurs sous-pages (dont les cinq nouvelles et les trois sous-pages CRM du 16/09).
+const REFONTE_POLES_UPDATED = new Date("2026-09-16");
+const ROUTES_REFONTE_POLES = new Set([
+  "",
+  "/services",
+  "/services/sites-web",
+  "/services/sites-web/landing-page",
+  "/services/sites-web/site-vitrine",
+  "/services/sites-web/site-ecommerce",
+  "/services/sites-web/application-web",
+  "/services/sites-web/refonte-site",
+  "/services/seo",
+  "/services/seo/referencement",
+  "/services/seo/audit",
+  "/services/seo/seo-local",
+  "/services/seo/visibilite-ia",
+  "/services/sea",
+  "/services/sea/google-ads",
+  "/services/sea/meta-ads",
+  "/services/sea/tiktok-ads",
+  "/services/sea/pinterest-ads",
+  "/services/sea/linkedin-ads",
+  "/services/integration-ia",
+  "/services/crm",
+  "/services/crm/creation-crm",
+  "/services/crm/optimisation-crm",
+  "/services/crm/nettoyage-crm",
+]);
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const highPriorityRoutes = new Set([
-    "", "/services", "/services/sites-web", "/services/sea", "/services/seo",
+    "", "/services", "/services/sites-web", "/services/sea", "/services/seo", "/services/integration-ia", "/services/crm",
     "/prix", "/contact", "/a-propos", "/portfolio", "/blog",
     "/offre-mensuelle", "/demande-maquette", "/estimation-prix-site-web",
   ]);
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${SITE.url}${route}`,
-    lastModified: SITE_LAST_UPDATED,
+    lastModified: ROUTES_REFONTE_POLES.has(route) ? REFONTE_POLES_UPDATED : SITE_LAST_UPDATED,
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1.0 : highPriorityRoutes.has(route) ? 0.9 : route.startsWith("/services") ? 0.8 : 0.7,
   }));
@@ -171,7 +209,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  const caseStudyEntries: MetadataRoute.Sitemap = caseStudies.map((cs) => ({
+  // Seules les études de cas décrites dans fullCaseStudies ont une page (sinon 404).
+  const caseStudyEntries: MetadataRoute.Sitemap = caseStudies.filter((cs) => cs.slug in fullCaseStudies).map((cs) => ({
     url: `${SITE.url}/etude-de-cas/${cs.slug}`,
     lastModified: TEMPLATES_CREATED,
     changeFrequency: "monthly" as const,

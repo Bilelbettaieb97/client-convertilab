@@ -111,7 +111,7 @@ export default function LandingSiteInternet() {
               </h1>
 
               <p className="lp-rise text-lg text-gray-500 max-w-md mb-8 leading-relaxed" style={{ animationDelay: "200ms" }}>
-                Site sur-mesure livré en 14 jours. On s&apos;occupe de tout, vous validez. Satisfait ou remboursé.
+                Site sur-mesure livré en 2 semaines. On s&apos;occupe de tout, vous validez la maquette avant paiement.
               </p>
 
               <div className="lp-rise grid gap-3 mb-9" style={{ animationDelay: "280ms" }}>
@@ -131,7 +131,7 @@ export default function LandingSiteInternet() {
               <div className="lp-rise flex flex-wrap items-center gap-x-6 gap-y-3" style={{ animationDelay: "360ms" }}>
                 <span className="inline-flex items-center gap-2 font-semibold text-[#14121a]">
                   <Users className="w-[18px] h-[18px] text-purple-600" />
-                  +150 entreprises accompagnées
+                  150+ clients accompagnés
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-gray-500">
                   <span className="flex gap-0.5">

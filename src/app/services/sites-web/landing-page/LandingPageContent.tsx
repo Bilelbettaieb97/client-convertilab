@@ -1,335 +1,743 @@
-"use client";
-
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, CheckCircle, Clock, Target, Zap, BarChart, Smartphone, Star, Users, Shield, RotateCcw, Lock, Headphones, Phone } from "lucide-react";
-import ServiceCaseStudies from "@/components/services/ServiceCaseStudies";
-import { SITE, PRICING } from "@/lib/constants";
+import {
+  BarChart3,
+  CalendarCheck,
+  CircleHelp,
+  FileText,
+  Gauge,
+  Globe,
+  Heart,
+  Inbox,
+  KeyRound,
+  LayoutTemplate,
+  Mail,
+  MousePointerClick,
+  PenLine,
+  PenTool,
+  PhoneCall,
+  Rocket,
+  Search,
+  Server,
+  Smartphone,
+  Target,
+  Timer,
+  Wrench,
+} from "lucide-react";
+import { PRICING, SITE } from "@/lib/constants";
+import type { FaqItem } from "@/lib/faq-schema";
+import { getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { caseStudies, fullCaseStudies, LIVE_SITES } from "@/data/case-studies";
+import { CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import {
+  BoutonLien,
+  CtaIntermediaire,
+  Engagements,
+  FilAriane,
+  FormulaireFinal,
+  SectionOutil,
+  PainPoints,
+  PoleAutresPoles,
+  PoleCTA,
+  PoleFAQ,
+  PoleLivrables,
+  PolePreuve,
+  PolePrix,
+  PoleSection,
+  SectionSombre,
+  StickyCtaBar,
+  Timeline,
+  type FilArianeElement,
+  type PoleCas,
+} from "@/components/pole";
+import DesignScoreForm from "@/components/design-score/DesignScoreForm";
+import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
+import { MockLanding } from "../_illustrations/MockLanding";
 
-const features = [
-  { icon: <Target className="w-6 h-6" />, title: "Optimisation Conversion", description: "Chaque élément est pense pour maximiser votre taux de conversion" },
-  { icon: <Smartphone className="w-6 h-6" />, title: "100% Responsive", description: "Parfaitement adapte a tous les ecrans : mobile, tablette, desktop" },
-  { icon: <Zap className="w-6 h-6" />, title: "Ultra-Rapide", description: "Score PageSpeed > 90 pour un chargement quasi instantane" },
-  { icon: <BarChart className="w-6 h-6" />, title: "Analytics Integres", description: "Tracking complet pour mesurer et optimiser vos résultats" },
+/**
+ * Sous-page « Landing page » du pôle création de site internet.
+ * Tout le texte visible vit ici, rendu côté serveur. Les prix viennent de
+ * PRICING, les cas réels de src/data/case-studies.ts, les liens de poles.ts.
+ * Aucun chiffre de résultat client, aucune garantie, aucune rareté.
+ */
+
+const pole = getPole("sites-web");
+const estimateur = pole.outils[0];
+
+/** URL de la page, réutilisée par page.tsx pour le canonical et les JSON-LD. */
+export const URL_LANDING_PAGE = "/services/sites-web/landing-page";
+
+/** Ancre du formulaire final : cible des CTA de la page et de la barre collante. */
+const ANCRE_FORMULAIRE = "#formulaire";
+
+/* ── Prix : une seule source, PRICING ───────────────────────────────────── */
+
+const euros = (montant: number) => `${montant.toLocaleString("fr-FR")}\u00a0€`;
+/** « ou 45€/mois » devient « ou 45 €/mois », sans changer le chiffre. */
+const mensualite = (texte: string) => texte.replace(/(\d)€/g, "$1\u00a0€");
+
+const PRIX_LANDING = euros(PRICING.landing.from);
+const PRIX_LANDING_DETAIL = `${mensualite(PRICING.landing.monthly)}, paiement étalé, pas d'abonnement`;
+const PRIX_VITRINE = euros(PRICING.vitrine.from);
+const DELAI_LANDING = "5 à 7 jours";
+
+/** Première lettre en minuscule, pour insérer une ancre au milieu d'une phrase sans casser un nom propre. */
+const minuscule = (texte: string) => texte.charAt(0).toLowerCase() + texte.slice(1);
+
+/* ── Sous-pages sœurs et pages du pôle publicité ────────────────────────── */
+
+const sousPage = (chemin: string) => {
+  const lien = pole.sousPages.find((s) => s.href.endsWith(chemin));
+  if (!lien) throw new Error(`Sous-page inconnue : ${chemin}`);
+  return lien;
+};
+
+const siteVitrine = sousPage("/site-vitrine");
+const refonte = sousPage("/refonte-site");
+const publicite = getPole("publicite");
+const [googleAds, metaAds] = publicite.sousPages;
+
+export const FIL_ARIANE_LANDING: FilArianeElement[] = [
+  { label: "Accueil", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: pole.nomCourt, href: pole.href },
+  { label: "Landing page" },
 ];
 
-const includes = [
-  "Design 100% responsive et moderne",
-  "Optimisation pour la conversion (CRO)",
-  "Formulaire de contact / capture de leads",
-  "Integration Google Analytics + Meta Pixel",
-  "Hebergement 1 an inclus",
-  "Support technique 1 mois",
-  "Optimisation SEO technique",
-  "Certificat SSL gratuit",
+/** Trois points de réassurance du hero, tous tenus sur la page prix. */
+/** Quatre chips de réassurance du hero, même gabarit que site-vitrine. */
+const CHIPS_HERO = [
+  { icon: Timer, label: "Devis écrit sous 24 h" },
+  { icon: Rocket, label: `Livrée en ${DELAI_LANDING}` },
+  { icon: PenTool, label: "Maquette validée avant le code" },
+  { icon: CalendarCheck, label: "Paiement étalé, pas d'abonnement" },
+] as const;
+
+/** Landing page ou site vitrine : comparaison qualitative, sans taux de conversion inventé. */
+const COMPARAISON = [
+  { critere: "Objectif", vitrine: "Présenter l'activité, être trouvé sur Google", landing: "Une seule action : appel, devis ou réservation" },
+  { critere: "Structure", vitrine: "Cinq pages ou plus, avec un menu", landing: "Une page, sans menu ni lien sortant" },
+  { critere: "D'où viennent les visiteurs", vitrine: "Google, fiche Google, bouche-à-oreille", landing: "Annonces Google Ads, Meta Ads, emailing, QR code" },
+  { critere: "Référencement naturel", vitrine: "Oui, c'est sa force", landing: "Limité : une seule page, souvent non indexée" },
+  { critere: "Délai", vitrine: "2 semaines", landing: DELAI_LANDING },
+  { critere: "Prix", vitrine: PRIX_VITRINE, landing: PRIX_LANDING },
 ];
 
-const processSteps = [
-  { num: "01", title: "Brief & stratégie", desc: "On definit ensemble vos objectifs, votre cible et votre proposition de valeur." },
-  { num: "02", title: "Maquette & validation", desc: "Vous validez le design avant développement. Modifications illimitees a cette étape." },
-  { num: "03", title: "Développement", desc: "Integration pixel-perfect, optimisation vitesse et SEO technique." },
-  { num: "04", title: "Livraison & lancement", desc: "Mise en ligne, tests cross-browser, tracking configure. Prêt à convertir." },
+/** Votre landing page en 5 à 7 jours : repères cohérents avec la FAQ et la page prix. */
+const METHODE = [
+  {
+    repere: "Jour 1",
+    titre: "Appel de 30 minutes",
+    icon: PhoneCall,
+    texte:
+      "Votre offre, votre campagne, le client que vous voulez attirer et l'action attendue. Si un site vitrine vous servirait mieux qu'une landing page, nous vous le disons.",
+  },
+  {
+    repere: "Sous 48 h",
+    titre: "Maquette gratuite et devis écrit",
+    icon: LayoutTemplate,
+    texte:
+      "Vous recevez une maquette de la page et un devis à prix fixe. Rien n'est construit tant que vous n'avez pas validé le design.",
+  },
+  {
+    repere: "Jours 3 à 5",
+    titre: "Textes, page et formulaire",
+    icon: PenLine,
+    texte:
+      "Rédaction avec les mots de vos clients, intégration, formulaire relié à votre email ou à votre CRM, suivi des demandes installé. Vous relisez et validez.",
+  },
+  {
+    repere: "Jours 5 à 7",
+    titre: "Tests et mise en ligne",
+    icon: Rocket,
+    texte:
+      "Test sur téléphone et ordinateur, envoi d'essai du formulaire, vérification du comptage des demandes, puis mise en ligne et transmission des accès.",
+  },
+  {
+    repere: "Après le lancement",
+    titre: "Ajustements avec la campagne",
+    icon: Gauge,
+    texte:
+      "Les premières demandes disent ce qui fonctionne. Un titre, un bouton ou une question à corriger : c'est compris dans le prix.",
+  },
 ];
 
-const testimonials = [
-  { quote: "Notre landing page a généré 150 leads qualifiés en 2 semaines. Le ROI de nos campagnes Google Ads a ete multiplie par 4.", result: "+150 leads en 14 jours", name: "Marie L.", role: "Fondatrice, StartupTech", initial: "M" },
-  { quote: "Taux de conversion passe de 1,2% a 8,7% apres la refonte de notre landing page. Un investissement ultra rentable.", result: "Taux de conversion x7", name: "Thomas R.", role: "Responsable Marketing, SaaS B2B", initial: "T" },
-  { quote: "Page livrée en 5 jours, pile dans les temps pour notre lancement produit. Résultat : 340 inscriptions le premier jour.", result: "340 inscriptions jour 1", name: "Julie K.", role: "Product Manager", initial: "J" },
+/* ── Preuve : cas réels depuis case-studies.ts uniquement ───────────────── */
+
+const casReel = (slug: string, prestation: string, ancre: string): PoleCas[] => {
+  const cs = caseStudies.find((c) => c.slug === slug);
+  if (!cs || !cs.testimonial) return [];
+  return [
+    {
+      nom: cs.client,
+      prestation,
+      // Les mots exacts du client, sans réécriture.
+      fait: `« ${cs.testimonial} »`,
+      // L'étude de cas n'existe que si fullCaseStudies la décrit (sinon 404).
+      href: slug in fullCaseStudies ? `/etude-de-cas/${slug}` : undefined,
+      siteHref: LIVE_SITES[slug],
+      ancre,
+    },
+  ];
+};
+
+const CAS_LANDING: PoleCas[] = [
+  ...casReel("papapret", "Landing page avec tunnel de vente pour une formation", "Lire l'étude de cas PapaPrêt"),
+  ...casReel("vinoboat", "Landing page pour une expérience nautique à Cannes", "Lire l'étude de cas Vinoboat Prestige"),
+  ...casReel("spectacle", "Landing page événementielle avec billetterie", "Lire l'étude de cas du spectacle"),
 ];
 
-const guarantees = [
-  { icon: <RotateCcw className="w-5 h-5" />, title: "Satisfait ou retravaille", desc: "On retravaille gratuitement si le résultat ne correspond pas au brief valide." },
-  { icon: <Lock className="w-5 h-5" />, title: "Prix fixe garanti", desc: "Le devis signe est le prix final. Aucun cout cache." },
-  { icon: <Shield className="w-5 h-5" />, title: "Livraison 5-7 jours", desc: "Delai garanti. 10% de remise en cas de retard de notre fait." },
-  { icon: <Headphones className="w-5 h-5" />, title: "Support inclus", desc: "1 mois de support technique apres livraison. Reponse sous 24h." },
+export const FAQ_LANDING: FaqItem[] = [
+  {
+    q: "Qu'est-ce qu'une landing page, concrètement ?",
+    a: "C'est une page web unique, sans menu ni lien vers d'autres pages, conçue pour une seule action : appeler, demander un devis, réserver ou s'inscrire. Le visiteur arrive depuis une annonce Google Ads, une publicité Facebook ou Instagram, un email ou un QR code, trouve la promesse de l'annonce, la preuve, l'offre et le formulaire. Rien ne le distrait de la demande.",
+  },
+  {
+    q: "Combien coûte une landing page ?",
+    a: `${PRIX_LANDING}, prix fixe écrit sur le devis, ${PRIX_LANDING_DETAIL}. Ce prix comprend la maquette, les textes, le formulaire relié à votre email ou à votre CRM, le suivi des demandes, l'hébergement et l'adresse configurés, la formation et les corrections après la mise en ligne. Une page supplémentaire pour une autre offre ou une autre ville est chiffrée à part, avant de commencer.`,
+  },
+  {
+    q: "En combien de temps ma landing page est-elle livrée ?",
+    a: "En 5 à 7 jours après validation de la maquette, que vous recevez sous 48 h après l'appel de cadrage. Le délai dépend surtout de la rapidité de vos retours sur la maquette et les textes. Il est écrit sur le devis.",
+  },
+  {
+    q: "Landing page ou site vitrine : que choisir ?",
+    a: `Une landing page sert une campagne : elle reçoit des visiteurs que vous avez payés ou sollicités et les transforme en demandes. Un site vitrine sert à être trouvé sur Google et à présenter l'ensemble de votre activité. Si vous n'avez encore aucun site, commencez par le site vitrine (${PRIX_VITRINE}, livré en 2 semaines) ; si vous lancez une campagne et que votre site existe déjà, ajoutez une landing page dédiée. Les deux se complètent, et nous vous conseillons franchement lors de l'appel.`,
+  },
+  {
+    q: "Ma landing page fonctionne-t-elle avec Google Ads et Meta Ads ?",
+    a: "Oui, c'est son premier usage. Nous installons Google Analytics, la balise de conversion Google Ads et le pixel Meta, puis nous testons que chaque appel et chaque formulaire envoyé est bien compté. Vous savez ainsi combien de demandes chaque campagne vous apporte et ce que chacune vous coûte. Si vous le souhaitez, notre pôle publicité crée et pilote la campagne.",
+  },
+  {
+    q: "Puis-je utiliser une landing page sans campagne publicitaire ?",
+    a: "Oui : pour un emailing, un QR code sur un flyer ou une vitrine, un lien dans votre bio Instagram, un salon ou une offre saisonnière. En revanche, une page seule est mal placée pour être trouvée sur Google par des personnes qui ne vous connaissent pas : pour cela, il faut un site vitrine et un travail de référencement.",
+  },
+  {
+    q: "À qui appartient la landing page une fois livrée ?",
+    a: "À vous. La page, le nom de domaine ou le sous-domaine, les textes et les images sont votre propriété. Vous recevez les accès à la livraison, avec une courte formation pour modifier vous-même les textes, et vous restez libre de la confier à quelqu'un d'autre.",
+  },
+  {
+    q: "Que se passe-t-il après la mise en ligne ?",
+    a: "Les corrections après la mise en ligne sont comprises : un titre, un bouton, une question à ajuster quand les premières demandes arrivent. Vous gardez un seul interlocuteur, le fondateur, joignable par téléphone ou par email. Si la campagne évolue, une seconde page ou une variante est chiffrée à part, par écrit.",
+  },
 ];
 
-const faqs = [
-  { q: "Qu'est-ce qu'une landing page exactement ?", a: "C'est une page web autonome, concue specifiquement pour convertir les visiteurs en leads ou clients. Contrairement a un site classique, elle n'a qu'un seul objectif : inciter a l'action (formulaire, achat, inscription)." },
-  { q: "Combien de temps pour créer ma landing page ?", a: "5 a 2 semaines ouvres entre le brief valide et la mise en ligne. Nous respectons ce delai avec un engagement de 10% de remise en cas de depassement." },
-  { q: "Ma landing page sera-t-elle compatible mobile ?", a: "Absolument. Le design est pense mobile-first : 70% du trafic publicitaire vient du mobile. Votre page sera parfaitement optimisée sur tous les ecrans." },
-  { q: "Puis-je utiliser ma landing page pour Google Ads et Meta Ads ?", a: "Oui, c'est exactement pour ca qu'elle est concue. Nous integrons le tracking Google Analytics, Google Ads et Meta Pixel pour mesurer vos conversions." },
-  { q: "Que se passe-t-il apres la livraison ?", a: "Vous beneficiez d'1 mois de support technique inclus. Nous restons disponibles pour les ajustements mineurs et le suivi des performances." },
-  { q: "Proposez-vous le paiement en plusieurs fois ?", a: "Oui, paiement en 2 ou 3 fois sans frais : un acompte au demarrage, le solde a la livraison." },
-];
+const NOTE_AVIS = Number(SITE.reviews.rating);
 
 export default function LandingPageContent() {
   return (
-    <main className="pt-16">
-      {/* Breadcrumb */}
-      <div className="container mx-auto px-4 sm:px-6 py-4">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem><BreadcrumbLink asChild><Link href="/">Accueil</Link></BreadcrumbLink></BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link href="/services">Services</Link></BreadcrumbLink></BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link href="/services/sites-web">Sites Web</Link></BreadcrumbLink></BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbPage>Landing Page</BreadcrumbPage></BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
+    <div className="pt-16">
+      <FilAriane elements={FIL_ARIANE_LANDING} />
 
-      {/* Hero */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6 animate-pulse">
-              <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-sm font-semibold text-accent">3 creneaux disponibles ce mois-ci</span>
+      {/* Hero : H1 et texte rendus côté serveur, fond mesh + projecteur (seuls décors animés de l'écran). */}
+      <section className="relative isolate overflow-hidden py-14 sm:py-20">
+        <HeroMesh />
+        <Spotlight />
+        <Conteneur>
+          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
+            <div className="flex flex-col lg:col-span-7">
+              <Surtitre>{SURTITRE_ZONE}</Surtitre>
+              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+                Création de landing page à Rueil-Malmaison et Paris : une page qui transforme vos clics en demandes
+              </h1>
+              <div className="mt-5 max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600">
+                <p>
+                  Une landing page est une page unique, sans menu, avec un seul objectif : que le visiteur venu d&apos;une
+                  annonce Google Ads ou Meta Ads vous appelle ou remplisse le formulaire. Nous la concevons,
+                  l&apos;écrivons et la mettons en ligne en {DELAI_LANDING}, pour {PRIX_LANDING}, prix fixe écrit sur le
+                  devis.
+                </p>
+                {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
+                <p className="hidden sm:block">
+                  Formulaire relié à votre email ou à votre CRM, suivi des demandes installé avant le lancement : vous
+                  savez combien de demandes chaque campagne vous apporte.
+                </p>
+              </div>
+
+              {/* Mobile : boutons juste après le texte (order), chips et chiffres ensuite ; desktop : ordre du DOM (même gabarit que site-vitrine). */}
+              <ul className="order-1 mt-6 flex flex-wrap gap-2 sm:order-none sm:mt-8" aria-label="Nos engagements">
+                {CHIPS_HERO.map((chip) => {
+                  const Icon = chip.icon;
+                  return (
+                    <li
+                      key={chip.label}
+                      className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-border bg-white/80 px-3 py-1.5 text-sm font-medium text-foreground backdrop-blur"
+                    >
+                      <Icon className="h-4 w-4 text-purple-700" strokeWidth={2} aria-hidden="true" />
+                      {chip.label}
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander mon devis de landing page" variante="primaire" />
+                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
+              </div>
+              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
+                Vous hésitez entre une landing page et un site vitrine ? Commencez par{" "}
+                <Link href={estimateur.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+                  estimer le prix de votre projet en 2 minutes
+                </Link>{" "}
+                avec notre outil gratuit.
+              </p>
+
+              {/* Trois chiffres, valeur finale dans le HTML (NumberTicker n'anime qu'au montage). */}
+              <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
+                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
+                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">clients accompagnés</dt>
+                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
+                    <NumberTicker value={150} />+
+                  </dd>
+                </div>
+                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
+                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">sur {SITE.reviews.count} avis</dt>
+                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
+                    <NumberTicker value={NOTE_AVIS} decimalPlaces={1} delay={0.1} />
+                    /5
+                  </dd>
+                </div>
+                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
+                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">prix fixe d&apos;une landing page</dt>
+                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
+                    <NumberTicker value={PRICING.landing.from} delay={0.2} /> €
+                  </dd>
+                </div>
+              </dl>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Une Landing Page Qui <span className="text-primary">Multiplie Vos Conversions</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Nos clients obtiennent en moyenne <strong className="text-foreground">5x plus de leads</strong> qu&apos;avec un site classique. Livree en 5-7 jours, prix fixe.
+
+            {/* Maquette annotée d'une landing page (promesse, preuve, offre, objections, formulaire), en perspective légère : une structure d'exemple, pas un résultat. Empilée sous lg. */}
+            <div className="lg:col-span-5">
+              <CardContainer intensite={60} containerClassName="w-full" className="w-full max-w-md">
+                <CardBody className="w-full">
+                  <CardItem translateZ={24} className="w-full">
+                    <MockLanding />
+                  </CardItem>
+                </CardBody>
+              </CardContainer>
+            </div>
+          </div>
+        </Conteneur>
+      </section>
+
+      {/* Outil gratuit de la page, juste après le hero (fond blanc, le constat est gris) : score de conversion d'une page existante. */}
+      <SectionOutil
+        disposition="large"
+        badge="Outil gratuit"
+        titre="Votre landing page convertit-elle ? Score en 60 secondes"
+        accroche="Entrez l'adresse de votre page : l'outil note ce qui fait convertir ou non, la visibilité de l'appel à l'action, la hiérarchie du message, les preuves de confiance et l'affichage sur téléphone, puis liste les corrections dans l'ordre."
+        obtenez={[
+          "Un score global et six notes : appel à l'action, hiérarchie visuelle, confiance, mobile, images, navigation",
+          "Les problèmes trouvés, classés par priorité, et ce qui fonctionne déjà",
+          "Le rapport complet en PDF par email, avec un plan d'action",
+        ]}
+      >
+        <div className="mx-auto max-w-3xl rounded-3xl bg-[#0a0a1a] p-6 shadow-[0_24px_48px_-24px_rgba(15,23,42,0.35)] sm:p-10">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+            <DesignScoreForm />
+          </div>
+        </div>
+      </SectionOutil>
+
+      <Reveal y={16}>
+        <PainPoints
+          id="constat"
+          surtitre="Le constat"
+          titre="Si vos annonces envoient vers votre page d'accueil, vous payez des clics pour rien"
+          intro="Les trois problèmes que nous rencontrons le plus souvent en regardant un compte publicitaire relié à un site classique."
+          points={[
+            {
+              icon: MousePointerClick,
+              titre: "Le clic arrive sur une page qui parle de tout",
+              texte:
+                "Votre annonce promet un devis de rénovation, la page d'accueil présente l'entreprise, son histoire, le blog et huit entrées de menu. Le visiteur cherche, ne trouve pas, repart.",
+            },
+            {
+              icon: Inbox,
+              titre: "Le formulaire est en bas, s'il existe",
+              texte:
+                "Sur téléphone, il faut défiler longtemps pour trouver comment vous joindre. Chaque écran de plus fait perdre des demandes que vous avez déjà payées.",
+            },
+            {
+              icon: BarChart3,
+              titre: "Vous ne savez pas ce que la campagne rapporte",
+              texte:
+                "Sans suivi des demandes, impossible de dire combien viennent de Google Ads, de Meta Ads ou du bouche-à-oreille. Vous continuez ou arrêtez à l'aveugle.",
+            },
+          ]}
+        />
+      </Reveal>
+
+      {/* Landing page ou site vitrine : comparaison qualitative, sans taux de conversion. */}
+      <PoleSection
+        id="landing-ou-vitrine"
+        surtitre="Landing page ou site vitrine"
+        titre="Landing page ou site vitrine : quelle différence, et laquelle vous faut-il ?"
+        intro="Les deux ne servent pas le même but. Nous préférons vous orienter vers la bonne formule que de vendre une page dont vous n'avez pas besoin."
+      >
+        <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="space-y-4 leading-relaxed text-muted-foreground lg:col-span-5">
+            <p>
+              Un site vitrine présente votre entreprise et vos services pour être trouvé sur Google : c&apos;est ce
+              qu&apos;il faut en premier quand vous n&apos;avez rien en ligne. Une landing page reçoit des visiteurs que
+              vous avez payés (Google Ads, Facebook, Instagram, emailing) et leur propose une seule action, sans menu.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-lg">
-                <Link href="/contact">Obtenir mon devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
-                <Link href="/portfolio">Voir nos realisations</Link>
-              </Button>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6 sm:gap-10 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-1">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
-                <span className="font-medium text-foreground">4.9/5</span><span>sur 15 avis</span>
-              </div>
-              <div className="flex items-center gap-2"><Users className="w-4 h-4 text-primary" /><span><strong className="text-foreground">+50</strong> landing pages livrées</span></div>
-              <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary" /><span>Livree en <strong className="text-foreground">5-7 jours</strong></span></div>
-            </div>
+            <p>
+              Notre conseil : un{" "}
+              <Link href={siteVitrine.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+                {siteVitrine.label.toLowerCase()}
+              </Link>{" "}
+              pour être trouvé, une landing page par campagne pour convertir. Si votre site existe mais a vieilli, une{" "}
+              <Link href={refonte.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+                {refonte.label.toLowerCase()}
+              </Link>{" "}
+              peut précéder la page de campagne.
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* Key metrics bar */}
-      <section className="py-10 bg-primary">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            {[
-              { value: "5-7j", label: "Delai de livraison" },
-              { value: "x5", label: "Taux de conversion moyen" },
-              { value: "100%", label: "Responsive mobile" },
-              { value: ">90", label: "Score PageSpeed" },
-            ].map((m, i) => (
-              <div key={i}>
-                <p className="text-3xl sm:text-4xl font-black text-primary-foreground">{m.value}</p>
-                <p className="text-sm text-primary-foreground/70 mt-1">{m.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* POURQUOI LANDING */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Landing page vs site web : quelle différence et quand choisir ?</h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>Un site web classique a plusieurs objectifs simultanés : présenter votre entreprise, détailler vos services, vous contacter, lire le blog... Cette richesse est un atout pour le SEO, mais un handicap pour la conversion publicitaire. Un visiteur qui arrive depuis une pub Google Ads avec un besoin précis se retrouve perdu dans un menu à 8 entrées.</p>
-                <p>Une <strong>landing page est une page à un seul objectif</strong> : faire en sorte que le visiteur réalise l&apos;action que vous souhaitez. Pas de menu de navigation. Pas de liens vers d&apos;autres pages. Pas de distraction. Juste votre proposition, vos preuves et votre formulaire. Résultat : nos clients voient leur taux de conversion multiplié par <strong>5 à 10 en moyenne</strong>.</p>
-                <p>La landing page est le meilleur outil pour <strong>Google Ads, Meta Ads, l&apos;emailing et les partenariats</strong>. Pour chaque campagne avec un objectif précis (inscription, devis, achat, téléchargement), une landing page dédiée surperforme systématiquement une page de site classique.</p>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Site web vs Landing page : le comparatif</h3>
-              <div className="space-y-2">
-                {[
-                  { label: "Objectif", site: "Multiple (informer, convertir, SEO)", landing: "Unique (1 action cible)" },
-                  { label: "Taux de conversion", site: "1-3% en moyenne", landing: "5-15% avec landing dédiée" },
-                  { label: "Idéal pour", site: "SEO, référencement naturel", landing: "Campagnes publicitaires" },
-                  { label: "Menu de navigation", site: "Oui (8-12 liens)", landing: "Aucun (0 distraction)" },
-                  { label: "Délai de création", site: "10-30 jours", landing: "5-7 jours" },
-                  { label: "Mesure du ROI", site: "Complexe (multi-parcours)", landing: "Simple (1 action = 1 conversion)" },
-                ].map((row, i) => (
-                  <div key={i} className="grid grid-cols-3 text-xs p-2.5 bg-gray-50 rounded-lg">
-                    <span className="font-medium text-gray-700">{row.label}</span>
-                    <span className="text-gray-400">{row.site}</span>
-                    <span className="text-purple-600 font-semibold">{row.landing}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs text-gray-400 mt-2">Notre recommandation : site web pour le SEO + landing pages dédiées pour chaque campagne pub.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Pourquoi une Landing Page convertit mieux ?</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">Un seul objectif, un seul message, un seul appel à l&apos;action = un maximum de conversions.</p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((f, i) => (
-              <div key={i} className="p-6 rounded-2xl border border-border bg-card hover:shadow-md transition-shadow text-center">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">{f.icon}</div>
-                <h3 className="font-bold text-foreground mb-2">{f.title}</h3>
-                <p className="text-sm text-muted-foreground">{f.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What's included + Pricing */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Tout est inclus dans votre landing page</h2>
-              <p className="text-muted-foreground mb-8">Pas de surprise, pas d&apos;options cachees. Vous recevez une page complète, prete a convertir.</p>
-              <div className="grid sm:grid-cols-2 gap-3">
-                {includes.map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-1" />
-                    <span className="text-sm text-foreground">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="w-full max-w-md mx-auto">
-              <div className="p-8 rounded-2xl border-2 border-primary bg-card shadow-xl relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wide">Le plus rapide</span>
-                </div>
-                <div className="text-center mb-6">
-                  <p className="text-4xl font-black text-foreground">{PRICING.landing.label}</p>
-                  <p className="text-sm text-muted-foreground mt-1">Prix fixe, sans surprise</p>
-                </div>
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <Clock className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-foreground">Livraison : 5-7 jours</span>
-                </div>
-                <div className="flex flex-wrap gap-2 justify-center mb-6">
-                  {["Campagnes Ads", "Capture leads", "Lancement produit"].map((tag, i) => (
-                    <span key={i} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">{tag}</span>
+          <Reveal y={16} className="min-w-0 lg:col-span-7">
+            <div className="max-w-full overflow-x-auto rounded-2xl border border-border bg-card shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
+              <table className="w-full min-w-[560px] text-left text-sm">
+                <caption className="sr-only">Comparaison entre un site vitrine et une landing page</caption>
+                <thead>
+                  <tr className="border-b border-border bg-muted/40 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                    <th scope="col" className="px-4 py-3 font-semibold">
+                      Critère
+                    </th>
+                    <th scope="col" className="px-4 py-3 font-semibold">
+                      Site vitrine
+                    </th>
+                    <th scope="col" className="px-4 py-3 font-semibold text-purple-700">
+                      Landing page
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {COMPARAISON.map((ligne) => (
+                    <tr key={ligne.critere} className="border-b border-border last:border-b-0">
+                      <th scope="row" className="px-4 py-3 font-medium text-foreground">
+                        {ligne.critere}
+                      </th>
+                      <td className="px-4 py-3 text-muted-foreground">{ligne.vitrine}</td>
+                      <td className="bg-primary/5 px-4 py-3 font-medium text-foreground">{ligne.landing}</td>
+                    </tr>
                   ))}
-                </div>
-                <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-base">
-                  <Link href="/contact">Demander mon devis gratuit <ArrowRight className="ml-2 w-4 h-4" /></Link>
-                </Button>
-                <p className="text-center text-xs text-muted-foreground mt-3">Paiement en 2-3x sans frais</p>
-              </div>
+                </tbody>
+              </table>
             </div>
-          </div>
+            <p className="mt-3 text-xs text-muted-foreground">
+              Prix fixes, écrits sur le devis. Délais comptés après validation de la maquette.
+            </p>
+          </Reveal>
         </div>
-      </section>
+      </PoleSection>
 
-      {/* Process */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Votre landing page en 4 étapes</h2>
-            <p className="text-muted-foreground">Un processus simple et transparent, de la premiere idee a la mise en ligne.</p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {processSteps.map((s, i) => (
-              <div key={i} className="relative text-center">
-                <div className="text-5xl font-black text-primary/15 mb-2">{s.num}</div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground">{s.desc}</p>
-                {i < processSteps.length - 1 && <div className="hidden lg:block absolute top-8 -right-4 w-8 text-primary/30 text-2xl">&rarr;</div>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PoleSection
+        id="contenu"
+        fond="gris"
+        surtitre="Ce que vous obtenez"
+        titre="Que contient une landing page ConvertiLab, concrètement ?"
+        intro="Six éléments, tous compris dans le prix. Une belle page sans formulaire relié ni comptage des demandes ne sert à rien."
+      >
+        <Reveal y={16}>
+          <PoleLivrables
+            livrables={[
+              {
+                icon: Target,
+                titre: "Une page, un seul objectif",
+                texte: "Pas de menu, pas de lien sortant : chaque bloc pousse vers l'appel ou le formulaire.",
+              },
+              {
+                icon: PenLine,
+                titre: "Des textes écrits avec les mots de vos clients",
+                texte: "Promesse, offre, preuve, réponses aux objections : rédigés à partir du diagnostic, relus et validés par vous.",
+              },
+              {
+                icon: Smartphone,
+                titre: "Pensée pour le téléphone d'abord",
+                texte: "La plupart des clics publicitaires viennent d'un téléphone : boutons larges, formulaire court, chargement rapide.",
+              },
+              {
+                icon: Inbox,
+                titre: "Un formulaire relié à votre email ou à votre CRM",
+                texte: "Chaque demande arrive au bon endroit, avec un accusé de réception et, si vous le souhaitez, une relance automatique.",
+              },
+              {
+                icon: Gauge,
+                titre: "Le suivi des demandes installé",
+                texte: "Google Analytics, balise de conversion Google Ads et pixel Meta posés puis testés : chaque appel et chaque formulaire est compté.",
+              },
+              {
+                icon: Server,
+                titre: "Hébergement et adresse configurés",
+                texte: "Sur votre nom de domaine, un sous-domaine ou une adresse dédiée à la campagne, prête le jour de la livraison.",
+              },
+            ]}
+          />
+        </Reveal>
+        <p className="mx-auto mt-10 max-w-3xl text-center leading-relaxed text-muted-foreground">
+          La page est livrée avec ses accès, une courte formation pour modifier les textes et les corrections après la
+          mise en ligne. Vous êtes propriétaire de la page, de l&apos;adresse et des contenus. Vous n&apos;avez pas
+          encore de campagne ? Notre{" "}
+          <Link href={publicite.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+            agence Google Ads et Meta Ads à Paris
+          </Link>{" "}
+          peut la créer et la piloter.
+        </p>
+      </PoleSection>
 
-      {/* Guarantees */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 mb-4">
-              <Shield className="w-4 h-4 text-green-600" />
-              <span className="text-sm font-semibold text-green-700 dark:text-green-300">Zero risque</span>
-            </div>
-            <h2 className="text-3xl font-bold text-foreground mb-4">Nos garanties</h2>
-            <p className="text-muted-foreground">Vous ne prenez aucun risque en travaillant avec nous.</p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {guarantees.map((g, i) => (
-              <div key={i} className="text-center p-6 rounded-2xl border border-border bg-card hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-4 text-green-600">{g.icon}</div>
-                <h3 className="font-bold text-foreground mb-2">{g.title}</h3>
-                <p className="text-sm text-muted-foreground">{g.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Notre méthode : votre landing page en 5 à 7 jours, sur fond sombre (seul bloc sombre de la page). */}
+      <SectionSombre
+        id="methode"
+        surtitre="Notre méthode"
+        titre="Votre landing page en 5 à 7 jours : comment travaillons-nous ?"
+        intro="Cinq repères dans le temps, toujours dans le même ordre, chacun avec quelque chose que vous validez."
+      >
+        <Reveal y={16}>
+          <Timeline etapes={METHODE} sombre />
+        </Reveal>
+      </SectionSombre>
 
-      {/* Case Studies */}
-      <ServiceCaseStudies category="landing-page" title="Nos landing pages realisees" subtitle="Decouvrez les landing pages que nous avons creees pour nos clients" />
+      <PolePreuve
+        id="preuve"
+        surtitre="Ce que vous pouvez vérifier"
+        titre="Des landing pages livrées, consultables, avec les mots de leurs clients"
+        texte={[
+          "Trois landing pages réalisées par l'agence, présentées avec la prestation livrée et ce que le client en dit, avec ses mots. Nous ne publions pas de taux de conversion : il dépend de l'offre, de la campagne et de la saison, et ces chiffres appartiennent à nos clients.",
+          "Avec vous : regarder votre campagne et votre page actuelle, puis vous dire par écrit ce qu'une page dédiée changerait, avant de dépenser un euro de plus.",
+        ]}
+        note="Citations reprises de nos études de cas, sans réécriture."
+        lien={{ href: "/portfolio", label: "Voir toutes nos réalisations" }}
+        cas={CAS_LANDING}
+      />
 
-      {/* Testimonials */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Résultats concrets de nos clients</h2>
-            <p className="text-muted-foreground">Des landing pages qui ont transforme leurs campagnes</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {testimonials.map((t, i) => (
-              <div key={i} className="p-6 rounded-2xl bg-card border border-border">
-                <div className="inline-block px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-bold mb-4">{t.result}</div>
-                <div className="flex items-center gap-1 mb-3">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
-                <p className="text-muted-foreground mb-4 italic text-sm">&quot;{t.quote}&quot;</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">{t.initial}</div>
-                  <div><p className="font-medium text-foreground text-sm">{t.name}</p><p className="text-xs text-muted-foreground">{t.role}</p></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CtaIntermediaire
+        id="cta-devis"
+        titre="Votre campagne démarre bientôt ?"
+        texte="Envoyez-nous l'annonce ou l'offre que vous voulez pousser : nous vous disons sous 24 h ce que la page doit contenir, et à quel prix."
+        bouton={{ href: ANCRE_FORMULAIRE, label: "Demander mon devis de landing page" }}
+        alternativeLabel="ou appelez-nous au"
+      />
 
-      {/* FAQ */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Questions fréquentes</h2>
-              <p className="text-muted-foreground">Tout ce que vous devez savoir avant de vous lancer</p>
-            </div>
-            <Accordion type="single" collapsible className="space-y-3">
-              {faqs.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-xl px-6 bg-card">
-                  <AccordionTrigger className="text-left text-foreground font-medium hover:no-underline">{faq.q}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">{faq.a}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </div>
-      </section>
+      <Reveal y={16}>
+        <Engagements
+          id="engagements"
+          surtitre="Nos engagements"
+          titre="Ce que nous nous engageons à faire, écrit sur le devis"
+          intro="Six engagements sur la façon de travailler, pas sur un résultat : personne ne peut promettre un taux de conversion."
+          items={[
+            {
+              icon: FileText,
+              titre: "Un devis écrit sous 24 h",
+              texte: "Prix fixe, contenu de la page, délai : tout est écrit avant de commencer.",
+            },
+            {
+              icon: LayoutTemplate,
+              titre: "Une maquette validée avant le code",
+              texte: "Vous voyez la page avant qu'elle n'existe. Rien n'est construit sans votre accord.",
+            },
+            {
+              icon: Gauge,
+              titre: "Le comptage des demandes avant le lancement",
+              texte: "Formulaire testé, appels et envois comptés : vous savez ce que la campagne rapporte dès le premier jour.",
+            },
+            {
+              icon: KeyRound,
+              titre: "Vous êtes propriétaire",
+              texte: "La page, l'adresse, les textes et les images sont à vous, accès transmis à la livraison.",
+            },
+            {
+              icon: Wrench,
+              titre: "Corrections comprises après la mise en ligne",
+              texte: "Un titre à changer, un bouton à déplacer, une question à ajouter : c'est compris dans le prix.",
+            },
+            {
+              icon: PhoneCall,
+              titre: "Un seul interlocuteur",
+              texte: "Le fondateur, qui conçoit, écrit et construit votre page, joignable par téléphone ou par email.",
+            },
+          ]}
+        />
+      </Reveal>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">Prêt à lancer votre landing page ?</h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto text-lg">Recevez un devis personnalisé sous 24h. Consultation gratuite, sans engagement.</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-8 py-6">
-              <Link href="/contact">Obtenir mon devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6">
-              <a href={`tel:${SITE.phone}`}><Phone className="mr-2 w-4 h-4" />Nous appeler</a>
-            </Button>
-          </div>
-          <p className="text-primary-foreground/60 text-sm mt-6">Reponse sous 24h - Prix fixe garanti - Paiement en 3x sans frais</p>
-        </div>
-      </section>
-    </main>
+      <Reveal y={16}>
+        <PolePrix
+          id="prix"
+          surtitre="Prix et engagement"
+          titre="Combien coûte une landing page ?"
+          intro="Un prix fixe, écrit sur le devis, qui comprend la conception, les textes, le formulaire relié et le suivi des demandes. Aucun abonnement."
+          lignes={[
+            {
+              libelle: "Landing page",
+              valeur: PRIX_LANDING,
+              detail: `${PRIX_LANDING_DETAIL}. Livrée en ${DELAI_LANDING} après validation de la maquette.`,
+            },
+            {
+              libelle: "Page supplémentaire ou variante",
+              valeur: "Sur devis",
+              detail: "Une seconde page pour une autre offre ou une autre ville : chiffrée à part, prix écrit avant de commencer.",
+            },
+            {
+              libelle: "Campagne Google Ads ou Meta Ads",
+              valeur: "Sur devis",
+              detail: "Frais de gestion sur devis, budget média conseillé dès 500 €/mois par plateforme, via notre pôle publicité.",
+            },
+          ]}
+          engagementsTitre="Compris dans le prix"
+          engagements={[
+            "Maquette, textes, formulaire relié à votre email ou à votre CRM",
+            "Suivi des demandes : Google Analytics, balise Google Ads, pixel Meta",
+            "Hébergement et adresse configurés, formation, corrections après la mise en ligne",
+          ]}
+          lien={{ href: ANCRE_FORMULAIRE, label: "Recevoir mon devis de landing page" }}
+          note="TVA non applicable, art. 293 B du CGI. Le devis est écrit et validé avant tout travail."
+        />
+      </Reveal>
+
+      <PoleFAQ
+        id="faq"
+        surtitre="FAQ"
+        titre="Vos questions sur la création d'une landing page"
+        items={FAQ_LANDING}
+        lien={{ href: "/contact", label: "Poser une autre question" }}
+      />
+
+      {/* Pages sœurs : maillage vers le hub du pôle, les formules voisines et les deux plateformes publicitaires documentées. */}
+      <PoleSection
+        id="pages-liees"
+        fond="gris"
+        surtitre="Pour aller plus loin"
+        titre="Une landing page s'inscrit dans un ensemble : site vitrine, refonte et publicité"
+        intro="La page reçoit les visiteurs, le site vitrine les fait venir depuis Google, la campagne les envoie."
+      >
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              icon: Globe,
+              lien: siteVitrine,
+              texte: `Pour être trouvé sur Google et présenter toute votre activité : ${PRIX_VITRINE}, livré en 2 semaines.`,
+            },
+            {
+              icon: Wrench,
+              lien: refonte,
+              texte: "Votre site existe mais se lit mal sur téléphone ou charge lentement : nous le remettons à niveau.",
+            },
+            {
+              icon: LayoutTemplate,
+              lien: { href: pole.href, label: pole.ancre },
+              texte: "Les cinq formules du pôle, la méthode, ce qui est compris dans le prix et les cas réels.",
+            },
+            {
+              icon: Search,
+              lien: googleAds,
+              texte: "Pour capter ceux qui tapent déjà votre métier dans Google et les envoyer vers votre page.",
+            },
+            {
+              icon: Heart,
+              lien: metaAds,
+              texte: "Facebook et Instagram : faire connaître une offre à un quartier ou une ville, puis la convertir sur la page.",
+            },
+            {
+              icon: LayoutTemplate,
+              lien: { href: "/demande-maquette", label: "Demander une maquette gratuite en 48 h" },
+              texte: "Vous voulez voir la page avant de décider : nous vous envoyons une maquette, sans engagement.",
+            },
+          ].map(({ icon: Icon, lien, texte }) => (
+            <li key={lien.href}>
+              <Link
+                href={lien.href}
+                className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 transition-colors motion-reduce:transition-none hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              >
+                <span
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary"
+                  aria-hidden="true"
+                >
+                  <Icon className="h-5 w-5" strokeWidth={1.75} />
+                </span>
+                <h3 className="mt-4 font-semibold text-foreground group-hover:text-primary-texte">{lien.label}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{texte}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className="mx-auto mt-10 max-w-3xl text-center leading-relaxed text-muted-foreground">
+          Depuis Rueil-Malmaison (92), comme{" "}
+          <Link href={pole.pageVille.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+            {minuscule(pole.pageVille.label)}
+          </Link>
+          , à Paris et partout en France, en visio. Voir{" "}
+          <Link href="/services" className="font-medium text-primary-texte underline-offset-4 hover:underline">
+            tous les services de l&apos;agence
+          </Link>
+          .
+        </p>
+      </PoleSection>
+
+      <PoleAutresPoles
+        slug="sites-web"
+        surtitre="Nos autres pôles"
+        titre="Nos trois autres pôles pour trouver vos clients"
+      />
+
+      <FormulaireFinal
+        id="formulaire"
+        pole="site"
+        page={URL_LANDING_PAGE}
+        surtitre="Devis sous 24 h"
+        titre="Demandez votre devis de landing page"
+        intro="Dites-nous pour quelle campagne la page doit travailler. Vous recevez sous 24 h un devis écrit à prix fixe et, si vous le souhaitez, une maquette gratuite en 48 h. Sans engagement."
+        question={{
+          libelle: "D'où viendront vos visiteurs ?",
+          aide: "Aucune coordonnée demandée à cette étape.",
+          options: [
+            {
+              value: "google-ads",
+              label: "Google Ads",
+              desc: "Des personnes qui cherchent déjà votre métier",
+              icon: <Search className="h-5 w-5" />,
+            },
+            {
+              value: "meta-ads",
+              label: "Meta Ads (Facebook, Instagram)",
+              desc: "Une offre à faire connaître",
+              icon: <Heart className="h-5 w-5" />,
+            },
+            {
+              value: "autre-source",
+              label: "Emailing, QR code, salon, réseaux",
+              desc: "Une page pour une opération précise",
+              icon: <Mail className="h-5 w-5" />,
+            },
+            {
+              value: "je-ne-sais-pas",
+              label: "Je ne sais pas encore",
+              desc: "Nous en parlons lors de l'appel",
+              icon: <CircleHelp className="h-5 w-5" />,
+            },
+          ],
+        }}
+        titreEtape2="Où vous envoyer le devis ?"
+        boutonLabel="Recevoir mon devis sous 24 h"
+        calendlyLabel="ou réservez 30 min avec le fondateur"
+        confirmation={{
+          titre: "Demande bien reçue",
+          texte: "Nous revenons vers vous sous 24 h avec un devis écrit pour votre landing page. Si vous préférez en parler de vive voix, réservez directement un créneau.",
+        }}
+      />
+
+      <PoleCTA
+        titre="Une campagne à lancer, une page qui ne convertit pas ?"
+        texte="Réservez 30 minutes, c'est gratuit et vous parlez au fondateur. Vous repartez avec un avis honnête sur votre page et un prix."
+        calendlyLabel={LABEL_CALENDLY}
+        contactLabel="Écrire à l'agence"
+        afficherTelephone
+      />
+
+      <StickyCtaBar
+        label="Devis landing page sous 24 h"
+        href={ANCRE_FORMULAIRE}
+        mentions={["Gratuit", "Sans engagement", "Réponse sous 24 h"]}
+        formulaireId="formulaire"
+      />
+    </div>
   );
 }

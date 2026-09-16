@@ -58,7 +58,7 @@ export function HeroShowcase({ className = "" }: { className?: string }) {
           >
             <Image
               src={p.image}
-              alt={`${p.name} — Site créé par ConvertiLab`}
+              alt={`${p.name}, site créé par ConvertiLab`}
               fill
               sizes="(max-width: 768px) 50vw, 30vw"
               className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -110,7 +110,7 @@ export function HeroShowcase({ className = "" }: { className?: string }) {
               ))}
             </div>
             <div className="text-[10px] font-bold text-gray-900 mt-0.5">
-              4.9/5 • 15 avis vérifiés
+              4,9/5 • 15 avis Trustpilot
             </div>
           </div>
         </div>

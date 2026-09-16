@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, CheckCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SITE } from "@/lib/constants";
 
 const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
 
@@ -136,7 +137,7 @@ export default function HeroV2() {
                   ))}
                   <span className="ml-1 font-bold text-gray-900 text-sm">4.9/5</span>
                 </div>
-                <p className="text-xs text-gray-500">15 avis vérifiés Trustpilot</p>
+                <p className="text-xs text-gray-500">15 avis Trustpilot</p>
               </div>
             </motion.div>
 

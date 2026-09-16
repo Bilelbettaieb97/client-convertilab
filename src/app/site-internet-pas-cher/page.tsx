@@ -17,14 +17,14 @@ import {
 export const metadata: Metadata = {
   title: "Site Internet Pas Cher : Site Web Professionnel dès 490€",
   description:
-    "Un site web pas cher ne veut pas dire un site au rabais : site internet professionnel dès 490€ ou 39€/mois, livré en 2 semaines, SEO inclus, satisfait ou remboursé. Comparez avant de choisir.",
+    "Un site web pas cher ne veut pas dire un site au rabais : site internet professionnel dès 490€ ou 39€/mois, livré en 2 semaines, SEO de base inclus, prix fixe. Comparez avant de choisir.",
   keywords:
     "site internet pas cher, site web pas cher, site pas cher, création site internet pas cher, site web professionnel pas cher, site internet petit prix, site web petit budget",
   alternates: { canonical: `${SITE.url}/site-internet-pas-cher` },
   openGraph: {
     title: "Site Internet Pas Cher : Site Web Professionnel dès 490€ | ConvertiLab",
     description:
-      "Site internet professionnel dès 490€ ou 39€/mois, livré en 2 semaines, SEO inclus, satisfait ou remboursé.",
+      "Site internet professionnel dès 490€ ou 39€/mois, livré en 2 semaines, SEO de base inclus, prix fixe.",
     url: `${SITE.url}/site-internet-pas-cher`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -45,7 +45,7 @@ const faqItems = [
   {
     question: "Quelle est la différence avec un site gratuit (Wix, site builder) ?",
     answer:
-      "Un site \"gratuit\" se paie autrement : publicités imposées, sous-domaine peu crédible (monsite.wixsite.com), référencement limité, et vous ne possédez rien. Dès que vous voulez un nom de domaine, retirer la pub et débloquer les fonctions de base, l'abonnement dépasse 200-300€/an — à vie. Un site professionnel pas cher à 490€ vous appartient à 100% (code et domaine) et est conçu pour être trouvé sur Google.",
+      "Un site \"gratuit\" se paie autrement : publicités imposées, sous-domaine peu crédible (monsite.wixsite.com), référencement limité, et vous ne possédez rien. Dès que vous voulez un nom de domaine, retirer la pub et débloquer les fonctions de base, l'abonnement dépasse 200-300€/an, à vie. Un site professionnel pas cher à 490€ vous appartient à 100% (code et domaine) et est conçu pour être trouvé sur Google.",
   },
   {
     question: "Pourquoi certains sites pas chers sont-ils des pièges ?",
@@ -55,7 +55,7 @@ const faqItems = [
   {
     question: "Que comprend exactement le site vitrine à 890€ ?",
     answer:
-      "Le site vitrine à 890€ comprend : 5 pages sur-mesure (accueil, services, à propos, contact...), design responsive adapté mobile, formulaire de contact, optimisation SEO de base (balises, vitesse, indexation), intégration Google Maps, certificat SSL et 30 jours de support après livraison. Livraison en 2 semaines, satisfait ou remboursé.",
+      "Le site vitrine à 890€ comprend : 5 pages sur-mesure (accueil, services, à propos, contact...), design responsive adapté mobile, formulaire de contact, optimisation SEO de base (balises, vitesse, indexation), intégration Google Maps, certificat SSL et 30 jours de support après livraison. Livraison en 2 semaines, prix fixe écrit dans le devis.",
   },
   {
     question: "Le paiement mensuel à 39€/mois, comment ça marche ?",
@@ -65,7 +65,7 @@ const faqItems = [
   {
     question: "Un site pas cher sera-t-il bien référencé sur Google ?",
     answer:
-      "Nos sites sont développés avec Next.js, une technologie ultra-rapide que Google valorise (Core Web Vitals au vert). L'optimisation SEO de base est incluse : structure des balises, vitesse, mobile, indexation. Pour viser la première page sur des requêtes concurrentielles, un accompagnement SEO complémentaire est possible — mais la fondation technique, elle, est déjà excellente.",
+      "Nos sites sont développés avec Next.js, une technologie ultra-rapide que Google valorise (Core Web Vitals au vert). L'optimisation SEO de base est incluse : structure des balises, vitesse, mobile, indexation. Pour viser la première page sur des requêtes concurrentielles, un accompagnement SEO complémentaire est possible, mais la fondation technique, elle, est déjà excellente.",
   },
   {
     question: "Combien de temps pour avoir mon site en ligne ?",
@@ -150,14 +150,14 @@ const comparatif = [
   },
   {
     critere: "Délai de livraison",
-    convertilab: "2 semaines garantis",
+    convertilab: "2 semaines, écrit dans le devis",
     gratuit: "Immédiat mais à faire soi-même",
     freelance: "2-8 semaines",
     agence: "1-3 mois",
   },
   {
-    critere: "Garantie",
-    convertilab: "Satisfait ou remboursé",
+    critere: "Corrections",
+    convertilab: "Maquette validée avant paiement, deux tours de corrections inclus",
     gratuit: "Aucune",
     freelance: "Rare",
     agence: "Variable",
@@ -183,7 +183,7 @@ export default function SiteInternetPasCherPage() {
         <div className="container mx-auto px-4 max-w-4xl relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-semibold mb-6">
             <BadgeCheck className="w-4 h-4" />
-            Prix fixe garanti, zéro frais caché
+            Prix fixe écrit dans le devis, zéro frais caché
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Site Internet{" "}
@@ -199,7 +199,7 @@ export default function SiteInternetPasCherPage() {
             Un site web pas cher ne devrait jamais être un site au rabais. Site
             sur-mesure dès <strong>{PRICING.vitrine.from}€</strong> ou{" "}
             <strong>39€/mois</strong>, livré en 2 semaines, optimisé pour Google,
-            satisfait ou remboursé.
+            à un prix fixe écrit dans le devis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button
@@ -234,7 +234,7 @@ export default function SiteInternetPasCherPage() {
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />
-              +150 clients, 4.9★
+              150+ clients accompagnés, 4,9/5
             </span>
           </div>
         </div>
@@ -247,7 +247,7 @@ export default function SiteInternetPasCherPage() {
             Nos sites web à petit prix
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Des prix transparents, publiés et définitifs — comparez avec les
+            Des prix transparents, publiés et définitifs : comparez avec les
             devis flous que vous recevez ailleurs. Détail complet sur notre{" "}
             <Link href="/prix" className="text-purple-600 underline underline-offset-2">
               page tarifs
@@ -293,7 +293,7 @@ export default function SiteInternetPasCherPage() {
             >
               Étalez le paiement dès 39€/mois
             </Link>{" "}
-            — votre site en ligne en 2 semaines, sans apport.
+            : votre site en ligne en 2 semaines, sans apport.
           </p>
         </div>
       </section>
@@ -314,7 +314,7 @@ export default function SiteInternetPasCherPage() {
                 <tr className="border-b border-gray-200 bg-gray-50">
                   <th className="text-left p-4 font-semibold text-gray-500"></th>
                   <th className="text-left p-4 font-bold text-purple-700">ConvertiLab</th>
-                  <th className="text-left p-4 font-semibold text-gray-700">Site "gratuit" (Wix...)</th>
+                  <th className="text-left p-4 font-semibold text-gray-700">Site &quot;gratuit&quot; (Wix...)</th>
                   <th className="text-left p-4 font-semibold text-gray-700">Freelance low-cost</th>
                   <th className="text-left p-4 font-semibold text-gray-700">Agence classique</th>
                 </tr>
@@ -362,10 +362,10 @@ export default function SiteInternetPasCherPage() {
               structure. Chez ConvertiLab, le process est radicalement optimisé :
               un appel de 30 minutes, une maquette sous 48h que vous validez{" "}
               <strong>avant</strong> tout développement, puis une livraison en 2 semaines. Moins de temps perdu, donc un prix sans commune mesure avec
-              celui d'une agence classique, sans toucher à la qualité.
+              celui d&apos;une agence classique, sans toucher à la qualité.
             </p>
             <p>
-              Deuxième levier : la technologie. Nous développons avec Next.js — pas
+              Deuxième levier : la technologie. Nous développons avec Next.js, pas
               de licence CMS à payer, pas de plugins premium, pas de maintenance
               WordPress mensuelle imposée. Le site livré est plus rapide (score
               Google PageSpeed 90+), plus sécurisé, et vous appartient à 100%.
@@ -373,7 +373,7 @@ export default function SiteInternetPasCherPage() {
             <p>
               Résultat : plus de 150 entrepreneurs, artisans et commerçants ont
               choisi cette formule, avec une note de 4.9/5. Un site web pas cher
-              peut être votre meilleur investissement — à condition qu&apos;il soit
+              peut être votre meilleur investissement, à condition qu&apos;il soit
               fait pour durer et pour être trouvé sur Google. Pour savoir combien
               coûterait le vôtre, utilisez notre{" "}
               <Link href="/estimation-prix-site-web" className="text-purple-600 underline underline-offset-2">
@@ -422,8 +422,9 @@ export default function SiteInternetPasCherPage() {
             <p className="text-gray-600 text-sm leading-relaxed">
               <strong className="text-gray-900">Notre engagement anti-piège :</strong>{" "}
               prix publiés et définitifs, code source et nom de domaine 100% à
-              vous, SEO de base inclus, satisfait ou remboursé, et 30 jours de
-              support offerts. Tout est écrit dans le devis.
+              vous, SEO de base inclus, corrections sans frais jusqu&apos;à ce que
+              le site corresponde au brief validé, et 30 jours de support offerts.
+              Tout est écrit dans le devis.
             </p>
           </div>
         </div>
@@ -468,7 +469,7 @@ export default function SiteInternetPasCherPage() {
               </h2>
               <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
                 Devis gratuit et définitif sous 24h. Maquette offerte sous 48h.
-                Paiement uniquement après validation — vous ne risquez rien.
+                Paiement uniquement après validation de la maquette.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button

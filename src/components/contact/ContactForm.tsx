@@ -1,13 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { supabase } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { SITE } from "@/lib/constants";
-import { User, Mail, Building2, Phone, ArrowRight, ArrowLeft, CheckCircle2, Send, Globe, ShoppingCart, FileText, Search, Zap, Calendar, Target, Waves } from "lucide-react";
+import { User, Mail, Building2, Phone, ArrowRight, ArrowLeft, CheckCircle2, Send, Globe, ShoppingCart, FileText, Search, Calendar, Megaphone, Bot, RefreshCw, MapPin, Sparkles, HelpCircle, BellRing, Users, type LucideIcon } from "lucide-react";
 import confetti from "canvas-confetti";
 
 interface ContactFormData {
@@ -25,30 +24,98 @@ interface ContactFormData {
 
 const STORAGE_KEY = "convertilab_contact_form";
 
-const projectTypes = [
-  { value: "vitrine", label: "Site vitrine", icon: Globe, desc: "Presenter votre activite" },
-  { value: "ecommerce", label: "E-commerce", icon: ShoppingCart, desc: "Vendre en ligne" },
-  { value: "landing", label: "Landing Page", icon: FileText, desc: "Page de conversion" },
-  { value: "audit", label: "Audit", icon: Search, desc: "Analyser & optimiser" },
+interface Choix {
+  value: string;
+  label: string;
+  icon: LucideIcon;
+  desc: string;
+}
+
+/**
+ * Étape 1 : les quatre pôles de l'agence (même ordre que src/data/poles.ts).
+ * La valeur part dans `project` (colonne texte libre de contact_submissions
+ * et champ `fields.project` de /api/notify).
+ */
+const projectTypes: Choix[] = [
+  { value: "site", label: "Un site internet", icon: Globe, desc: "Vitrine, e-commerce, landing, refonte" },
+  { value: "publicite", label: "De la publicité", icon: Megaphone, desc: "Google, Meta, TikTok, Pinterest, LinkedIn" },
+  { value: "seo-ia", label: "Être trouvé sur Google et dans les IA", icon: Search, desc: "SEO, fiche Google, ChatGPT" },
+  { value: "crm", label: "Un CRM et des relances", icon: Users, desc: "HubSpot, Salesforce, Pipedrive, IA" },
 ];
 
+/**
+ * Étape 2 : une précision adaptée au besoin choisi. La valeur part dans
+ * `main_challenge` (colonne texte existante, auparavant figée à « non_specifie »).
+ */
+const precisions: Record<string, { question: string; options: Choix[] }> = {
+  site: {
+    question: "Quel type de site ?",
+    options: [
+      { value: "site-vitrine", label: "Site vitrine", icon: Globe, desc: "Présenter votre activité" },
+      { value: "site-ecommerce", label: "E-commerce", icon: ShoppingCart, desc: "Vendre en ligne" },
+      { value: "landing-page", label: "Landing page", icon: FileText, desc: "Une page qui convertit" },
+      { value: "refonte", label: "Refonte", icon: RefreshCw, desc: "Moderniser un site existant" },
+    ],
+  },
+  publicite: {
+    question: "Sur quelle plateforme ?",
+    options: [
+      { value: "google-ads", label: "Google Ads", icon: Search, desc: "Être vu dès la recherche" },
+      { value: "meta-ads", label: "Meta Ads", icon: Megaphone, desc: "Facebook et Instagram" },
+      { value: "social-ads", label: "TikTok, Pinterest, LinkedIn", icon: Sparkles, desc: "Autres réseaux" },
+      { value: "a-definir", label: "Je ne sais pas encore", icon: HelpCircle, desc: "Nous vous conseillons" },
+    ],
+  },
+  "seo-ia": {
+    question: "Quel est votre objectif ?",
+    options: [
+      { value: "seo-local", label: "Fiche Google et avis", icon: MapPin, desc: "Être trouvé près de chez vous" },
+      { value: "referencement", label: "Référencement naturel", icon: Search, desc: "Monter dans Google" },
+      { value: "visibilite-ia", label: "Visibilité dans les IA", icon: Sparkles, desc: "ChatGPT, Perplexity, AI Overviews" },
+      { value: "audit-seo", label: "Audit SEO", icon: FileText, desc: "Savoir d'où vous partez" },
+    ],
+  },
+  crm: {
+    question: "Par quoi commencer ?",
+    options: [
+      { value: "mise-en-place-crm", label: "Mettre en place un CRM", icon: Users, desc: "HubSpot, Salesforce, Pipedrive ou un autre" },
+      { value: "relances-rdv", label: "Relances automatiques", icon: BellRing, desc: "Devis, rendez-vous, sans y penser" },
+      { value: "devis-emails", label: "IA sur les devis et avis", icon: Bot, desc: "Répondre même la nuit" },
+      { value: "a-definir", label: "Je ne sais pas encore", icon: HelpCircle, desc: "Nous vous conseillons" },
+    ],
+  },
+};
 
-const timelines = [
-  { value: "urgent", label: "< 1 semaine", icon: Zap, desc: "Express", recommended: false },
-  { value: "1-2weeks", label: "1 a 2 semaines", icon: Calendar, desc: "Ideal", recommended: true },
-  { value: "1month", label: "1 mois", icon: Target, desc: "Confortable", recommended: false },
-  { value: "flexible", label: "Flexible", icon: Waves, desc: "Pas de rush", recommended: false },
-];
+const trouverBesoin = (value: string) => projectTypes.find((p) => p.value === value);
+const trouverPrecision = (besoin: string, value: string) =>
+  precisions[besoin]?.options.find((o) => o.value === value);
 
-const ContactForm = () => {
-  const [step, setStep] = useState(1);
+/** Valeurs de l'étape 1 (`projectTypes`), réutilisables par les pages pôles. */
+export type BesoinInitial = "site" | "publicite" | "seo-ia" | "crm";
+
+interface ContactFormProps {
+  /**
+   * Présélectionne le besoin (étape 1) et ouvre directement l'étape 2.
+   * Utilisé par les pages pôles : le visiteur a déjà choisi son sujet.
+   */
+  besoinInitial?: BesoinInitial;
+  /**
+   * Version resserrée pour le hero de l'accueil : ligne « Étape x sur 3 »
+   * retirée (les trois pastilles la disent déjà) et cartes de l'étape 1 plus
+   * basses, pour que le formulaire fasse la hauteur de la colonne de texte.
+   */
+  compact?: boolean;
+}
+
+const ContactForm = ({ besoinInitial, compact = false }: ContactFormProps = {}) => {
+  const [step, setStep] = useState(besoinInitial ? 2 : 1);
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     company: "",
     phone: "",
-    project: "",
-    main_challenge: "non_specifie",
+    project: besoinInitial ?? "",
+    main_challenge: "",
     timeline: "",
     message: "",
     urgency: ""
@@ -72,7 +139,7 @@ const ContactForm = () => {
           phone: parsed.phone || "",
         }));
       }
-    } catch (e) {
+    } catch {
       // Ignore parse errors
     }
   }, []);
@@ -91,7 +158,7 @@ const ContactForm = () => {
 
   const validateStep1 = () => {
     if (!formData.project) {
-      toast({ title: "Selectionnez un type de site", variant: "destructive" });
+      toast({ title: "Choisissez votre besoin", variant: "destructive" });
       return false;
     }
     return true;
@@ -114,7 +181,7 @@ const ContactForm = () => {
       return false;
     }
     if (!formData.phone.trim() || !phoneRegex.test(formData.phone)) {
-      toast({ title: "Telephone requis (min. 10 chiffres)", variant: "destructive" });
+      toast({ title: "Téléphone requis (10 chiffres minimum)", variant: "destructive" });
       return false;
     }
     return true;
@@ -128,11 +195,14 @@ const ContactForm = () => {
 
   const prevStep = () => setStep(step - 1);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
+      // Import à la demande : supabase-js (~49 Ko gz) ne pèse pas sur le
+      // chargement initial de l'accueil, il n'est requis qu'à la soumission.
+      const { supabase } = await import("@/lib/supabase/client");
       const { error } = await supabase
         .from('contact_submissions')
         .insert([formData]);
@@ -155,6 +225,9 @@ const ContactForm = () => {
           fields: {
             project: formData.project,
             main_challenge: formData.main_challenge,
+            // Libellés lisibles pour la note Pipedrive et l'email interne.
+            besoin: trouverBesoin(formData.project)?.label ?? "",
+            precision: trouverPrecision(formData.project, formData.main_challenge)?.label ?? "",
             timeline: formData.timeline,
             message: formData.message,
             urgency: formData.urgency,
@@ -162,8 +235,9 @@ const ContactForm = () => {
         }),
       }).catch((err) => console.error("[notify] erreur envoi:", err));
 
-      if (typeof window !== 'undefined' && (window as any).trackFormConversion) {
-        (window as any).trackFormConversion();
+      const w = window as Window & { trackFormConversion?: () => void };
+      if (typeof w.trackFormConversion === "function") {
+        w.trackFormConversion();
       }
 
       // Trigger confetti celebration
@@ -171,19 +245,22 @@ const ContactForm = () => {
       const end = Date.now() + duration;
 
       const frame = () => {
+        // disableForReducedMotion : aucune animation pour les personnes qui les ont réduites.
         confetti({
           particleCount: 3,
           angle: 60,
           spread: 55,
           origin: { x: 0 },
-          colors: ['#8b5cf6', '#ec4899', '#a855f7', '#f472b6']
+          colors: ['#8b5cf6', '#ec4899', '#a855f7', '#f472b6'],
+          disableForReducedMotion: true
         });
         confetti({
           particleCount: 3,
           angle: 120,
           spread: 55,
           origin: { x: 1 },
-          colors: ['#8b5cf6', '#ec4899', '#a855f7', '#f472b6']
+          colors: ['#8b5cf6', '#ec4899', '#a855f7', '#f472b6'],
+          disableForReducedMotion: true
         });
 
         if (Date.now() < end) {
@@ -193,15 +270,15 @@ const ContactForm = () => {
       frame();
 
       toast({
-        title: "Demande envoyee !",
-        description: "Nous vous recontacterons sous 24h.",
+        title: "Demande envoyée !",
+        description: "Nous vous recontactons sous 24 h.",
       });
 
       setStep(4); // Go to confirmation screen
-    } catch (error: any) {
+    } catch {
       toast({
         title: "Erreur",
-        description: "Veuillez reessayer.",
+        description: "Veuillez réessayer.",
         variant: "destructive",
       });
     } finally {
@@ -212,12 +289,13 @@ const ContactForm = () => {
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-800">
       {/* Header */}
-      <div className={`px-4 sm:px-5 py-2.5 sm:py-3 ${step === 4 ? 'bg-gradient-to-r from-green-500 to-emerald-500' : 'bg-gradient-to-r from-purple-600 to-pink-600'}`}>
+      {/* En-tête en violet uni : le dégradé violet → rose est réservé au bouton principal de l'écran. */}
+      <div className={`px-4 sm:px-5 py-2.5 sm:py-3 ${step === 4 ? 'bg-green-600' : 'bg-primary'}`}>
         <p className="text-white font-bold text-base sm:text-lg text-center">
-          {step === 4 ? 'Demande envoyee !' : 'Devis instantane'}
+          {step === 4 ? 'Demande envoyée !' : 'Estimation en 2 minutes'}
         </p>
-        <p className="text-white/80 text-[10px] sm:text-xs text-center mt-0.5">
-          {step === 4 ? 'Merci pour votre confiance' : 'On revient vers vous sous 24h'}
+        <p className="text-white text-xs text-center mt-0.5">
+          {step === 4 ? 'Merci pour votre confiance' : 'Réponse sous 24 h'}
         </p>
       </div>
 
@@ -232,22 +310,19 @@ const ContactForm = () => {
                 className="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 rounded-full transition-all duration-500 ease-out relative overflow-hidden"
                 style={{ width: `${((step - 1) / (totalSteps - 1)) * 100}%` }}
               >
-                {/* Shimmer effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shimmer_2s_infinite] -translate-x-full"
-                     style={{ animation: 'shimmer 2s infinite' }} />
               </div>
             </div>
 
             {/* Step indicators */}
             <div className="flex justify-between mt-2">
               {[
-                { num: 1, label: "Projet" },
-                { num: 2, label: "Details" },
+                { num: 1, label: "Besoin" },
+                { num: 2, label: "Précision" },
                 { num: 3, label: "Contact" }
               ].map((s) => (
                 <div key={s.num} className="flex flex-col items-center">
                    <div className={`
-                    w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center font-bold text-[10px] sm:text-xs
+                    w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center font-bold text-xs
                     transition-all duration-500 ease-out transform
                     ${s.num < step
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white scale-100'
@@ -258,10 +333,10 @@ const ContactForm = () => {
                     {s.num < step ? (
                       <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 animate-scale-in" />
                     ) : (
-                      <span className={s.num === step ? 'animate-pulse' : ''}>{s.num}</span>
+                      <span className={s.num === step ? 'animate-pulse motion-reduce:animate-none' : ''}>{s.num}</span>
                     )}
                   </div>
-                  <span className={`mt-1 text-[9px] sm:text-[10px] font-medium transition-all duration-300 ${
+                  <span className={`mt-1 text-xs font-medium transition-all duration-300 ${
                     s.num < step ? 'text-purple-600' : s.num === step ? 'text-purple-700 font-semibold' : 'text-slate-600'
                   }`}>
                     {s.label}
@@ -271,11 +346,13 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className="text-center mt-2">
-            <span className="text-[10px] text-slate-500">
-              Etape <span className="font-bold text-purple-600">{step}</span> sur <span className="font-bold">{totalSteps}</span>
-            </span>
-          </div>
+          {!compact && (
+            <div className="text-center mt-2">
+              <span className="text-xs text-slate-500">
+                Étape <span className="font-bold text-purple-600">{step}</span> sur <span className="font-bold">{totalSteps}</span>
+              </span>
+            </div>
+          )}
         </div>
       )}
 
@@ -285,7 +362,7 @@ const ContactForm = () => {
           <div className="flex flex-wrap justify-center gap-2 text-[10px] sm:text-xs">
             <span className="bg-purple-50 text-purple-700 px-2 py-1 rounded-full font-medium">100% gratuit</span>
             <span className="bg-pink-50 text-pink-700 px-2 py-1 rounded-full font-medium">Sans engagement</span>
-            <span className="bg-purple-50 text-purple-700 px-2 py-1 rounded-full font-medium">Reponse rapide</span>
+            <span className="bg-purple-50 text-purple-700 px-2 py-1 rounded-full font-medium">Vous parlez au fondateur</span>
           </div>
         </div>
       )}
@@ -296,11 +373,12 @@ const ContactForm = () => {
           {step === 1 && (
             <div className="space-y-3 sm:space-y-4 animate-fade-in">
               <div className="text-center mb-3 sm:mb-4">
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Votre projet</h3>
-                <p className="text-slate-500 text-[10px] sm:text-xs mt-0.5">Quel type de site recherchez-vous ?</p>
+                {/* role="heading" : titre d'étape pour les lecteurs d'écran, sans H3 avant le premier H2 de la page. */}
+                <p role="heading" aria-level={2} className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Votre besoin</p>
+                <p className="text-slate-500 text-[10px] sm:text-xs mt-0.5">De quoi avez-vous besoin en premier ?</p>
               </div>
 
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className={`grid grid-cols-2 ${compact ? 'gap-3' : 'gap-3 sm:gap-4'}`}>
                 {projectTypes.map((type) => {
                   const IconComponent = type.icon;
                   const isSelected = formData.project === type.value;
@@ -308,17 +386,18 @@ const ContactForm = () => {
                     <button
                       key={type.value}
                       type="button"
-                      onClick={() => setFormData({ ...formData, project: type.value })}
-                      className={`p-4 sm:p-5 rounded-xl sm:rounded-2xl text-center transition-all duration-300 border-2 ${
+                      onClick={() => setFormData({ ...formData, project: type.value, main_challenge: formData.project === type.value ? formData.main_challenge : "" })}
+                      aria-pressed={isSelected}
+                      className={`${compact ? 'p-4' : 'p-4 sm:p-5'} rounded-xl sm:rounded-2xl text-center transition-all duration-300 border-2 ${
                         isSelected
                           ? 'border-purple-500 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/50 dark:to-pink-950/50 shadow-lg shadow-purple-500/20 scale-[1.02]'
                           : 'border-slate-200 dark:border-slate-700 hover:border-purple-300 bg-white dark:bg-slate-800 hover:shadow-md'
                       }`}
                     >
-                      <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl mx-auto mb-3 flex items-center justify-center transition-all ${
+                      <div className={`${compact ? 'w-10 h-10 mb-2' : 'w-12 h-12 sm:w-14 sm:h-14 mb-3'} rounded-xl mx-auto flex items-center justify-center transition-all ${
                         isSelected ? 'bg-gradient-to-br from-purple-500 to-pink-500 text-white' : 'bg-slate-100 dark:bg-slate-700 text-slate-500'
                       }`}>
-                        <IconComponent className="w-6 h-6 sm:w-7 sm:h-7" />
+                        <IconComponent className={compact ? 'w-5 h-5' : 'w-6 h-6 sm:w-7 sm:h-7'} />
                       </div>
                       <p className="font-semibold text-slate-900 dark:text-white text-sm sm:text-base">{type.label}</p>
                       <p className="text-slate-500 text-[10px] sm:text-xs mt-1">{type.desc}</p>
@@ -330,7 +409,7 @@ const ContactForm = () => {
               <Button
                 type="button"
                 onClick={nextStep}
-                className="w-full h-12 sm:h-14 bg-purple-600 hover:bg-purple-700 text-white text-sm sm:text-base font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-purple-500/25"
+                className={`w-full ${compact ? 'h-12' : 'h-12 sm:h-14'} bg-purple-600 hover:bg-purple-700 text-white text-sm sm:text-base font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-purple-500/25`}
               >
                 Continuer
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
@@ -338,82 +417,77 @@ const ContactForm = () => {
             </div>
           )}
 
-          {/* Step 2: Project Info */}
-          {step === 2 && (
+          {/* Step 2: précision adaptée au besoin choisi */}
+          {step === 2 && (() => {
+            const besoin = trouverBesoin(formData.project);
+            const groupe = precisions[formData.project];
+            const BesoinIcon = besoin?.icon || Globe;
+            return (
             <div className="space-y-4 sm:space-y-5 animate-fade-in">
               <div className="text-center mb-4 sm:mb-6">
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Details du projet</h3>
-                <p className="text-slate-500 text-xs sm:text-sm mt-1">Delai souhaite</p>
+                <p role="heading" aria-level={2} className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Une précision</p>
+                <p className="text-slate-500 text-xs sm:text-sm mt-1">{groupe?.question ?? "Précisez votre besoin"}</p>
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 rounded-xl p-3 mb-4">
                 <div className="flex items-center gap-2 text-xs sm:text-sm">
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center bg-purple-500 text-white`}>
-                    {(() => {
-                      const IconComponent = projectTypes.find(p => p.value === formData.project)?.icon || Globe;
-                      return <IconComponent className="w-4 h-4" />;
-                    })()}
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-purple-500 text-white">
+                    <BesoinIcon className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="font-semibold text-slate-900 dark:text-white">{projectTypes.find(p => p.value === formData.project)?.label || "Type de site"}</p>
-                    <p className="text-slate-500 text-[10px] sm:text-xs">{projectTypes.find(p => p.value === formData.project)?.desc}</p>
+                    <p className="font-semibold text-slate-900 dark:text-white">{besoin?.label || "Votre besoin"}</p>
+                    <p className="text-slate-500 text-[10px] sm:text-xs">{besoin?.desc}</p>
                   </div>
                 </div>
               </div>
 
-              {/* Timeline Section */}
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <label className="text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200">Delai souhaite</label>
-                  <span className="text-[10px] sm:text-xs text-slate-400">Optionnel</span>
-                </div>
-                <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                  {timelines.map((t) => {
-                    const IconComponent = t.icon;
-                    const isSelected = formData.timeline === t.value;
-                    return (
-                      <button
-                        key={t.value}
-                        type="button"
-                        onClick={() => setFormData({ ...formData, timeline: t.value })}
-                        className={`relative p-3 sm:p-4 rounded-xl text-left transition-all duration-300 group ${
-                          isSelected
-                            ? 'bg-gradient-to-br from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25 scale-[1.02]'
-                            : 'bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-purple-300 hover:shadow-md hover:scale-[1.01]'
-                        }`}
-                      >
-                        {t.recommended && (
-                          <span className={`absolute -top-2 right-2 text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                            isSelected ? 'bg-white text-purple-600' : 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
-                          }`}>
-                            Recommande
-                          </span>
-                        )}
-                        <div className="flex items-start gap-2 sm:gap-3">
-                          <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                            isSelected ? 'bg-white/20' : 'bg-pink-100 dark:bg-pink-900/30'
-                          }`}>
-                            <IconComponent className={`w-4 h-4 sm:w-5 sm:h-5 ${isSelected ? 'text-white' : 'text-pink-600 dark:text-pink-400'}`} />
+              {groupe && (
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <p className="text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200">{groupe.question}</p>
+                    <span className="text-xs text-slate-600">Optionnel</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                    {groupe.options.map((o) => {
+                      const IconComponent = o.icon;
+                      const isSelected = formData.main_challenge === o.value;
+                      return (
+                        <button
+                          key={o.value}
+                          type="button"
+                          onClick={() => setFormData({ ...formData, main_challenge: isSelected ? "" : o.value })}
+                          aria-pressed={isSelected}
+                          className={`relative min-h-11 p-3 sm:p-4 rounded-xl text-left transition-all duration-300 group ${
+                            isSelected
+                              ? 'bg-gradient-to-br from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25 scale-[1.02]'
+                              : 'bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-purple-300 hover:shadow-md hover:scale-[1.01]'
+                          }`}
+                        >
+                          <div className="flex items-start gap-2 sm:gap-3">
+                            <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                              isSelected ? 'bg-white/20' : 'bg-pink-100 dark:bg-pink-900/30'
+                            }`}>
+                              <IconComponent className={`w-4 h-4 sm:w-5 sm:h-5 ${isSelected ? 'text-white' : 'text-pink-600 dark:text-pink-400'}`} />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className={`font-bold text-sm sm:text-base ${isSelected ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
+                                {o.label}
+                              </p>
+                              <p className={`text-xs ${isSelected ? 'text-white' : 'text-slate-500'}`}>
+                                {o.desc}
+                              </p>
+                            </div>
                           </div>
-                          <div className="flex-1 min-w-0">
-                            <p className={`font-bold text-sm sm:text-base ${isSelected ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
-                              {t.label}
-                            </p>
-                            <p className={`text-[10px] sm:text-xs ${isSelected ? 'text-white/80' : 'text-slate-500'}`}>
-                              {t.desc}
-                            </p>
-                          </div>
-                        </div>
-                      </button>
-                    );
-                  })}
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
+              )}
 
-              {/* Reassurance message */}
               <div className="text-center py-2">
-                <p className="text-[10px] sm:text-xs text-slate-400 italic">
-                  Ces informations nous aident a mieux estimer votre projet
+                <p className="text-xs text-slate-600 italic">
+                  Cette précision nous aide à préparer une réponse utile dès le premier échange
                 </p>
               </div>
 
@@ -437,13 +511,14 @@ const ContactForm = () => {
                 </Button>
               </div>
             </div>
-          )}
+            );
+          })()}
 
           {/* Step 3: Contact Info & Message */}
           {step === 3 && (
             <div className="space-y-3 sm:space-y-4 animate-fade-in">
               <div className="text-center mb-3 sm:mb-4">
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Vos coordonnees</h3>
+                <p role="heading" aria-level={2} className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Vos coordonnées</p>
                 <p className="text-slate-500 text-xs sm:text-sm mt-1">Pour vous recontacter rapidement</p>
               </div>
 
@@ -452,14 +527,14 @@ const ContactForm = () => {
                 <div className="flex items-center gap-2 text-xs sm:text-sm">
                   <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-purple-500 text-white">
                     {(() => {
-                      const IconComponent = projectTypes.find(p => p.value === formData.project)?.icon || Globe;
+                      const IconComponent = trouverBesoin(formData.project)?.icon || Globe;
                       return <IconComponent className="w-4 h-4" />;
                     })()}
                   </div>
                   <div>
-                    <p className="font-semibold text-slate-900 dark:text-white">{projectTypes.find(p => p.value === formData.project)?.label}</p>
+                    <p className="font-semibold text-slate-900 dark:text-white">{trouverBesoin(formData.project)?.label}</p>
                     <p className="text-slate-500 text-[10px] sm:text-xs">
-                      {formData.timeline && timelines.find(t => t.value === formData.timeline)?.label}
+                      {trouverPrecision(formData.project, formData.main_challenge)?.label}
                     </p>
                   </div>
                 </div>
@@ -472,6 +547,7 @@ const ContactForm = () => {
                     <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 group-focus-within:text-purple-500 transition-colors" />
                     <Input
                       placeholder="Votre nom *"
+                      aria-label="Votre nom"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="pl-9 h-11 sm:h-12 text-sm bg-slate-50 dark:bg-slate-800 border-0 rounded-xl focus:ring-2 focus:ring-purple-500"
@@ -483,6 +559,7 @@ const ContactForm = () => {
                     <Input
                       type="email"
                       placeholder="votre@email.com *"
+                      aria-label="Votre email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="pl-9 h-11 sm:h-12 text-sm bg-slate-50 dark:bg-slate-800 border-0 rounded-xl focus:ring-2 focus:ring-purple-500"
@@ -495,6 +572,7 @@ const ContactForm = () => {
                     <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 group-focus-within:text-purple-500 transition-colors" />
                     <Input
                       placeholder="Votre entreprise (optionnel)"
+                      aria-label="Votre entreprise"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="pl-9 h-11 sm:h-12 text-sm bg-slate-50 dark:bg-slate-800 border-0 rounded-xl focus:ring-2 focus:ring-purple-500"
@@ -505,7 +583,8 @@ const ContactForm = () => {
                     <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 group-focus-within:text-purple-500 transition-colors" />
                     <Input
                       type="tel"
-                      placeholder="Votre telephone *"
+                      placeholder="Votre téléphone *"
+                      aria-label="Votre téléphone"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="pl-9 h-11 sm:h-12 text-sm bg-slate-50 dark:bg-slate-800 border-0 rounded-xl focus:ring-2 focus:ring-purple-500"
@@ -515,7 +594,8 @@ const ContactForm = () => {
               </div>
 
               <Textarea
-                placeholder="Decrivez brievement votre projet... (optionnel)"
+                placeholder="Décrivez brièvement votre projet (optionnel)"
+                aria-label="Votre message"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 rows={2}
@@ -536,7 +616,7 @@ const ContactForm = () => {
                   type="button"
                   onClick={(e) => {
                     if (validateStep3()) {
-                      handleSubmit(e as any);
+                      handleSubmit(e);
                     }
                   }}
                   disabled={isSubmitting}
@@ -559,7 +639,7 @@ const ContactForm = () => {
               <div className="flex items-center justify-center gap-3 sm:gap-4 text-[10px] sm:text-xs text-slate-500 pt-1 sm:pt-2">
                 <span className="flex items-center gap-1">
                   <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-green-500" />
-                  Reponse 24h
+                  Réponse sous 24 h
                 </span>
                 <span className="flex items-center gap-1">
                   <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-green-500" />
@@ -581,20 +661,20 @@ const ContactForm = () => {
               </h3>
 
               <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base mb-6 max-w-sm mx-auto">
-                Votre demande a bien ete envoyee. Notre equipe vous recontactera sous <span className="font-semibold text-purple-600">24 heures</span>.
+                Votre demande a bien été envoyée. Nous vous recontactons sous <span className="font-semibold text-purple-600">24 heures</span>.
               </p>
 
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 rounded-xl p-4 mb-6 text-left">
-                <h4 className="font-semibold text-slate-900 dark:text-white text-sm mb-3">Recapitulatif de votre demande :</h4>
+                <h4 className="font-semibold text-slate-900 dark:text-white text-sm mb-3">Récapitulatif de votre demande :</h4>
                 <div className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
                   <div className="flex items-center gap-2">
                     <Globe className="w-4 h-4 text-purple-500" />
-                    <span>{projectTypes.find(p => p.value === formData.project)?.label}</span>
+                    <span>{trouverBesoin(formData.project)?.label}</span>
                   </div>
-                  {formData.timeline && (
+                  {formData.main_challenge && (
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-purple-500" />
-                      <span>Delai : {timelines.find(t => t.value === formData.timeline)?.label}</span>
+                      <CheckCircle2 className="w-4 h-4 text-purple-500" />
+                      <span>Précision : {trouverPrecision(formData.project, formData.main_challenge)?.label}</span>
                     </div>
                   )}
                   <div className="flex items-center gap-2">
@@ -611,7 +691,7 @@ const ContactForm = () => {
                   className="w-full h-12 sm:h-14 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-xl font-semibold transition-all hover:shadow-lg hover:shadow-purple-500/25 text-sm"
                 >
                   <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-                  Reserver un appel maintenant
+                  Réserver un appel maintenant
                 </Button>
 
                 <Button
@@ -619,7 +699,7 @@ const ContactForm = () => {
                   onClick={() => {
                     setFormData({
                       name: "", email: "", company: "", phone: "",
-                      project: "", main_challenge: "non_specifie",
+                      project: "", main_challenge: "",
                       timeline: "", message: "", urgency: ""
                     });
                     setStep(1);

@@ -13,8 +13,6 @@ import {
   MapPin,
   Phone,
   Star,
-  Shield,
-  Clock,
   Zap,
   Globe,
   Search,
@@ -46,13 +44,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Titles et descriptions différenciés par ville (pattern unique + données
   // locales) pour éviter 53 pages au title identique, signal de contenu dupliqué.
   const titleVariants = [
-    `Agence Web ${city.name} — Création Site Internet en 2 semaines dès 490€`,
-    `Création de Site Internet à ${city.name} (${city.department}) — Agence Web dès 490€`,
+    `Agence Web ${city.name} : Création Site Internet en 2 semaines dès 490€`,
+    `Création de Site Internet à ${city.name} (${city.department}) : Agence Web dès 490€`,
     `Agence Web à ${city.name} : Site Vitrine Pro Livré en 2 semaines dès 490€`,
   ];
   const title = titleVariants[city.slug.length % titleVariants.length];
   const industries = city.keyIndustries.slice(0, 2).join(", ").toLowerCase();
-  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine livré en 2 semaines dès 490€, satisfait ou remboursé. 15 avis 4.9★. Devis gratuit sous 24h.`;
+  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine livré en 2 semaines dès 490€, prix fixe. 150+ clients accompagnés, 4,9/5 sur 15 avis. Devis gratuit sous 24h.`;
 
   return {
     title,
@@ -124,7 +122,7 @@ export default async function CityPage({ params }: Props) {
       icon: Code2,
       step: "03",
       title: "Développement",
-      desc: "Développement avec les technologies les plus performantes (Next.js, React). Site ultra-rapide, sécurisé, optimisé SEO. Score Google PageSpeed 90+ garanti.",
+      desc: "Développement avec les technologies les plus performantes (Next.js, React). Site ultra-rapide, sécurisé, optimisé SEO, avec un score Google PageSpeed vérifiable à la livraison.",
     },
     {
       icon: Rocket,
@@ -137,23 +135,23 @@ export default async function CityPage({ params }: Props) {
   const garanties = [
     {
       icon: BadgeCheck,
-      title: "Satisfait ou remboursé",
-      desc: "Si le résultat ne vous convient pas après les révisions, nous vous remboursons intégralement. Zéro risque pour vous.",
+      title: "Deux tours de corrections inclus",
+      desc: "Vous validez une maquette avant la mise en ligne, puis deux tours de corrections sont inclus. Vous savez ce que vous obtenez avant de payer.",
     },
     {
       icon: DollarSign,
-      title: "Prix fixe garanti",
+      title: "Prix fixe, écrit dans le devis",
       desc: "Le prix annoncé dans le devis est le prix final. Aucun coût caché, aucune surprise. Vous savez exactement ce que vous payez.",
     },
     {
       icon: CalendarCheck,
-      title: "Délai de 2 semaines garanti",
-      desc: "Votre site vitrine est livré en 2 semaines maximum. Si nous dépassons ce délai, nous vous offrons un mois de maintenance gratuit.",
+      title: "Livré en 2 semaines",
+      desc: "Votre site vitrine est livré en 2 semaines, le délai est écrit dans le devis. Pour un e-commerce ou une application, le délai est fixé au devis.",
     },
     {
       icon: Headphones,
       title: "Support 30 jours inclus",
-      desc: "Après la livraison, nous restons à vos côtés pendant 30 jours pour toute modification, question ou ajustement. Réponse sous 24h garantie.",
+      desc: "Après la livraison, nous restons à vos côtés pendant 30 jours pour toute modification, question ou ajustement. Réponse sous 24h.",
     },
   ];
 
@@ -167,7 +165,6 @@ export default async function CityPage({ params }: Props) {
     url: `${SITE.url}/agence-web/${city.slug}`,
     telephone: SITE.phone,
     email: SITE.email,
-    parentOrganization: { "@id": `${SITE.url}/#organization` },
     address: {
       "@type": "PostalAddress",
       addressLocality: city.name,
@@ -300,9 +297,8 @@ export default async function CityPage({ params }: Props) {
             {city.name}, {city.department}
           </div>
 
-          {/* Badge urgence */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold mb-6 ml-3">
-            <Zap className="w-4 h-4" />3 créneaux disponibles cette semaine
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-semibold mb-6 ml-3">
+            <Zap className="w-4 h-4" />Réponse sous 24h, vous parlez au fondateur
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -336,7 +332,7 @@ export default async function CityPage({ params }: Props) {
             </div>
             <div className="flex items-center gap-2 text-gray-700">
               <Star className="w-5 h-5 text-yellow-500" />
-              <span className="font-semibold">4.9/5</span> (15 avis clients)
+              <span className="font-semibold">4,9/5</span> (15 avis)
             </div>
           </div>
 
@@ -381,11 +377,11 @@ export default async function CityPage({ params }: Props) {
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />
-              Satisfait ou remboursé
+              Deux tours de corrections inclus
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />
-              +150 clients en IDF
+              150+ clients accompagnés
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -416,7 +412,7 @@ export default async function CityPage({ params }: Props) {
             </div>
             <div className="rounded-2xl overflow-hidden border border-purple-100 shadow-sm min-h-[220px]">
               <LazyMapEmbed
-                title={`Carte de ${city.name} — zone d'intervention ConvertiLab`}
+                title={`Carte de ${city.name}, zone d'intervention ConvertiLab`}
                 src={`https://www.google.com/maps?q=${city.lat},${city.lng}&z=12&output=embed`}
                 label={city.name}
               />
@@ -509,7 +505,7 @@ export default async function CityPage({ params }: Props) {
             </span>{" "}?
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Création de site, SEO local et publicité digitale — tout ce qu&apos;il faut pour être visible à {city.name} et en {city.department}
+            Création de site, SEO local et publicité digitale : tout ce qu&apos;il faut pour être visible à {city.name} et en {city.department}
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((s, i) => (
@@ -648,13 +644,13 @@ export default async function CityPage({ params }: Props) {
       <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Quelles garanties pour votre site internet à{" "}
+            Quels engagements pour votre site internet à{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               {city.name}
             </span>{" "}?
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Des engagements concrets et vérifiables. Zéro risque, zéro mauvaise surprise.
+            Des engagements concrets, écrits dans le devis. Zéro mauvaise surprise.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {garanties.map((g, i) => (
@@ -725,13 +721,13 @@ export default async function CityPage({ params }: Props) {
                 Prêt à lancer votre projet à {city.name} ?
               </h2>
               <p className="text-lg text-white/90 mb-4 max-w-2xl mx-auto">
-                Rejoignez les +150 entreprises d&apos;Île-de-France qui nous font
+                Rejoignez les 150+ clients que nous avons accompagnés et qui nous font
                 confiance. Obtenez un devis gratuit et personnalisé sous 24h.
                 Sites vitrine à partir de {PRICING.vitrine.label}, e-commerce à
                 partir de {PRICING.ecommerce.label}.
               </p>
               <p className="text-sm text-white/70 mb-8">
-                Paiement uniquement après validation. Satisfait ou remboursé.
+                Paiement uniquement après validation de la maquette. Paiement étalé possible, pas d&apos;abonnement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button

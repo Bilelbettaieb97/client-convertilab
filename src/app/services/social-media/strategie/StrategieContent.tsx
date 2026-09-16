@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  BarChart3, ArrowRight, CheckCircle2, Calendar, Target,
+  BarChart3, ArrowRight, Calendar, Target,
   TrendingUp, Search, FileText, Lightbulb, Sparkles, Users, Eye
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
@@ -126,7 +125,7 @@ export default function StrategieContent() {
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>Publier sur les réseaux sociaux sans stratégie, c&apos;est comme envoyer des lettres sans adresse : de l&apos;énergie dépensée, peu de résultats. <strong>80% des entreprises présentes sur les réseaux sociaux publient sans ligne éditoriale cohérente</strong>, sans objectifs mesurables et sans comprendre pourquoi certains contenus performent et d&apos;autres pas.</p>
                 <p>Une stratégie social media professionnelle définit <strong>pour qui vous publiez</strong> (persona client), <strong>quoi publier</strong> (mix de contenus : éducatif, inspirationnel, commercial, communautaire), <strong>où publier</strong> (LinkedIn, Instagram, Facebook, TikTok selon votre cible), et <strong>comment mesurer</strong> si votre présence génère réellement des leads et du chiffre d&apos;affaires.</p>
-                <p>Nos clients qui adoptent une stratégie structurée réduisent leur temps de publication de <strong>40%</strong> tout en multipliant leur engagement par <strong>3 en moyenne</strong>. La clé : moins mais mieux, avec un message cohérent et des appels à l&apos;action qui guident vers la conversion.</p>
+                <p>Une stratégie structurée fait gagner du temps de publication et rend chaque contenu plus utile. La clé : moins mais mieux, avec un message cohérent et des appels à l&apos;action qui guident vers la conversion.</p>
               </div>
             </div>
             <div>

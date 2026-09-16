@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Users, BarChart3, Mail, Share2, ArrowRight, CheckCircle2,
-  Calendar, MessageSquare, TrendingUp, Heart, Sparkles, Target
+  Calendar, Sparkles
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
 

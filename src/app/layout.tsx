@@ -32,14 +32,19 @@ const geistMono = Geist_Mono({
   preload: false,
 });
 
+// 155 caractères maximum : un seul chiffre de clients, aucune promesse chiffrée.
+const TITLE_DEFAUT = `Agence marketing digital Rueil-Malmaison (92) | ${SITE.name}`;
+const DESCRIPTION =
+  "Agence marketing digital à Rueil-Malmaison (92), Paris et Île-de-France : site internet, publicité, SEO et CRM. 150+ clients accompagnés.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `Agence Web Paris & Île-de-France | SEO & Ads | ${SITE.name}`,
+    default: TITLE_DEFAUT,
     template: `%s | ${SITE.name}`,
   },
-  description: "Agence web à Paris & Rueil-Malmaison : création site internet, SEO, Google Ads, Meta Ads. +150 clients, 4.9★ Trustpilot. Devis gratuit.",
-  keywords: ["agence web Paris", "création site internet", "SEO Paris", "Google Ads Île-de-France", "agence digitale Rueil-Malmaison", "marketing digital Paris"],
+  description: DESCRIPTION,
+  keywords: ["agence marketing digital Rueil-Malmaison", "agence web Rueil-Malmaison", "agence digitale Hauts-de-Seine", "création site internet Rueil-Malmaison", "agence web Île-de-France", "agence marketing digital Paris"],
   authors: [{ name: SITE.name }],
   creator: SITE.name,
   openGraph: {
@@ -47,20 +52,20 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: SITE.url,
     siteName: SITE.name,
-    title: `Agence Web Paris & Île-de-France | SEO & Ads | ${SITE.name}`,
-    description: "Agence web à Paris & Rueil-Malmaison : création site internet, SEO, Google Ads, Meta Ads. +150 clients, 4.9★ Trustpilot. Devis gratuit.",
+    title: TITLE_DEFAUT,
+    description: DESCRIPTION,
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630 }],
   },
+  // Seul le type de carte est hérité : X et LinkedIn retombent sur og:title,
+  // og:description et og:image de chaque page. Un titre Twitter défini ici
+  // écrasait le titre de toutes les pages qui ne redéfinissent pas ce bloc.
   twitter: {
     card: "summary_large_image",
-    title: `Agence Web Paris & Île-de-France | SEO & Ads | ${SITE.name}`,
-    description: "Agence web à Paris & Rueil-Malmaison : création site internet, SEO, Google Ads, Meta Ads. +150 clients, 4.9★ Trustpilot. Devis gratuit.",
-    images: [DEFAULT_OG_IMAGE],
   },
   // Pas d'alternates au niveau layout : chaque page indexable définit son
   // propre canonical, et Next.js remplace l'objet entier (pas de merge).
   // Un canonical par défaut ici pointerait toute page héritée vers la
-  // homepage — piège de désindexation silencieuse. <html lang="fr"> suffit.
+  // homepage : piège de désindexation silencieuse. <html lang="fr"> suffit.
   other: {
     "geo.region": "FR-IDF",
     "geo.placename": "Rueil-Malmaison",
@@ -91,13 +96,13 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#9333ea" />
         <meta name="msapplication-TileColor" content="#9333ea" />
-        {/* Resource hints — uniquement les origines chargées au premier rendu */}
+        {/* Resource hints : uniquement les origines chargées au premier rendu */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://calendly.com" />
       </head>
       <body className="antialiased">
-        {/* Google Consent Mode v2 — initialise par defaut tout en "denied" (RGPD)
+        {/* Google Consent Mode v2 : initialise par defaut tout en "denied" (RGPD)
             strategy="afterInteractive" safe because GA/GTM/Meta Pixel are lazyOnload */}
         <Script id="google-consent-mode" strategy="afterInteractive">
           {`

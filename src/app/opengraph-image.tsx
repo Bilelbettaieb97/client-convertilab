@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "ConvertiLab - Agence de Marketing Digital";
+export const alt = "ConvertiLab, agence marketing digital à Rueil-Malmaison (92)";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -38,20 +38,23 @@ export default function Image() {
             </span>
           </div>
           <span style={{ fontSize: "28px", color: "rgba(255,255,255,0.85)", fontWeight: 500 }}>
-            Agence de Marketing Digital
+            Agence marketing digital à Rueil-Malmaison (92)
+          </span>
+          <span style={{ fontSize: "20px", color: "rgba(255,255,255,0.7)", fontWeight: 400, marginTop: "8px" }}>
+            Site internet · Publicité · SEO · CRM
           </span>
           <div style={{ display: "flex", gap: "32px", marginTop: "40px" }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", background: "rgba(255,255,255,0.15)", borderRadius: "16px", padding: "16px 24px" }}>
               <span style={{ fontSize: "32px", fontWeight: 800, color: "white" }}>150+</span>
-              <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>Sites créés</span>
+              <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>clients accompagnés</span>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", background: "rgba(255,255,255,0.15)", borderRadius: "16px", padding: "16px 24px" }}>
-              <span style={{ fontSize: "32px", fontWeight: 800, color: "white" }}>4.9/5</span>
-              <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>Satisfaction</span>
+              <span style={{ fontSize: "32px", fontWeight: 800, color: "white" }}>4,9/5</span>
+              <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>sur 15 avis</span>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", background: "rgba(255,255,255,0.15)", borderRadius: "16px", padding: "16px 24px" }}>
-              <span style={{ fontSize: "32px", fontWeight: 800, color: "white" }}>+280%</span>
-              <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>CA moyen</span>
+              <span style={{ fontSize: "32px", fontWeight: 800, color: "white" }}>2 semaines</span>
+              <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>pour livrer un site</span>
             </div>
           </div>
         </div>

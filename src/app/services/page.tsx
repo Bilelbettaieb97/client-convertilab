@@ -1,51 +1,64 @@
 import type { Metadata } from "next";
-import { SITE, STRUCTURED_DATA } from "@/lib/constants";
+import { DEFAULT_OG_IMAGE, SITE, STRUCTURED_DATA, PROVIDER_ORGANISATION } from "@/lib/constants";
+import { faqPageSchema } from "@/lib/faq-schema";
+import { filArianeSchema } from "@/components/pole";
+import { POLES } from "@/data/poles";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
-import ServicesPageContent from "./ServicesPageContent";
+import ServicesPageContent, { FAQ_SERVICES, FIL_ARIANE_SERVICES } from "./ServicesPageContent";
+
+const URL = "/services";
+const PAGE_URL = `${SITE.url}${URL}`;
+
+// 155 caractères maximum (règle du brief).
+const DESCRIPTION =
+  "Agence marketing digital à Rueil-Malmaison et Paris : site internet dès 490 €, Google et Meta Ads, SEO, visibilité IA, CRM et relances. Prix fixe sous 24h.";
 
 export const metadata: Metadata = {
-  title: "Services Marketing Digital Paris : Sites Web, SEO, Google Ads",
-  description: "Agence marketing digital à Paris : création de sites web dès 490€, SEO, Google Ads, Meta Ads. +150 clients accompagnés, +280% de CA moyen. Devis gratuit sous 24h.",
-  alternates: { canonical: `${SITE.url}/services` },
+  title: "Services marketing digital Paris et Rueil (92)",
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "Services Marketing Digital Paris | ConvertiLab",
-    description: "Sites web dès 490€, SEO, Google Ads, Meta Ads. +150 clients, +280% de CA moyen. Devis gratuit sous 24h.",
-    url: `${SITE.url}/services`,
+    title: `Services marketing digital à Paris et Rueil-Malmaison | ${SITE.name}`,
+    description: DESCRIPTION,
+    url: PAGE_URL,
     type: "website",
-    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
+    locale: "fr_FR",
+    siteName: SITE.name,
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630 }],
   },
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE.url },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE.url}/services` },
-  ],
-};
+// La note agrégée n'est pas affichée sur cette page : elle reste déclarée sur l'accueil seulement.
+const { aggregateRating: _noteAccueil, ...localBusinessSansNote } = STRUCTURED_DATA.localBusiness;
+void _noteAccueil;
 
 const servicesSchema = {
   "@context": "https://schema.org",
-  ...STRUCTURED_DATA.localBusiness,
-  "hasOfferCatalog": {
+  ...localBusinessSansNote,
+  hasOfferCatalog: {
     "@type": "OfferCatalog",
-    "name": "Services Marketing Digital",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création de sites web", "url": `${SITE.url}/services/sites-web` } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Référencement SEO", "url": `${SITE.url}/services/seo` } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads", "url": `${SITE.url}/services/sea/google-ads` } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meta Ads Facebook Instagram", "url": `${SITE.url}/services/sea/meta-ads` } },
-    ]
-  }
+    name: "Services marketing digital",
+    itemListElement: POLES.map((pole) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: pole.nomCourt,
+        url: `${SITE.url}${pole.href}`,
+        provider: PROVIDER_ORGANISATION,
+      },
+    })),
+  },
 };
 
 export default function ServicesPage() {
+  const jsonLd = [filArianeSchema(FIL_ARIANE_SERVICES, URL), servicesSchema, faqPageSchema(FAQ_SERVICES)];
+
   return (
     <div className="min-h-screen">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
+      {jsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <Navigation />
       <ServicesPageContent />
       <Footer />

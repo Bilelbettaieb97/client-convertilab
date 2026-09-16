@@ -60,10 +60,9 @@ const Hero = () => {
             {/* Badge urgence */}
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-xs sm:text-sm xl:px-5 xl:py-2.5 xl:mb-6 bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 text-red-800 rounded-full animate-fade-in shadow-lg">
               <Flame className="w-4 h-4 text-red-600 animate-pulse" />
-              <span className="font-bold">3 places restantes</span>
+              <span className="font-bold">Devis gratuit sous 24 h</span>
               <span className="hidden sm:inline">•</span>
-              <span className="hidden sm:inline font-semibold">Devis gratuit ce mois-ci</span>
-              <span className="sm:hidden font-semibold">ce mois</span>
+              <span className="hidden sm:inline font-semibold">Prix fixe, paiement étalé possible</span>
             </div>
 
             {/* Titre — 2 lignes fixes */}
@@ -111,19 +110,19 @@ const Hero = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 xl:gap-5 mb-6 sm:mb-8 xl:mb-10 2xl:mb-12 animate-scale-in">
               <div className="group text-center p-3 sm:p-4 xl:p-5 2xl:p-7 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1">+280%</div>
-                <div className="text-xs sm:text-sm xl:text-base text-gray-700 font-semibold">CA moyen</div>
-                <div className="text-[11px] sm:text-xs xl:text-sm text-gray-500 mt-0.5">Moyenne clients 2025</div>
+                <div className="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1">2 sem.</div>
+                <div className="text-xs sm:text-sm xl:text-base text-gray-700 font-semibold">Site livré</div>
+                <div className="text-[11px] sm:text-xs xl:text-sm text-gray-500 mt-0.5">Landing en 5 à 7 jours</div>
               </div>
               <div className="group text-center p-3 sm:p-4 xl:p-5 2xl:p-7 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-1">150+</div>
-                <div className="text-xs sm:text-sm xl:text-base text-gray-700 font-semibold">Sites Livrés</div>
-                <div className="text-[11px] sm:text-xs xl:text-sm text-gray-500 mt-0.5">Depuis 2024</div>
+                <div className="text-xs sm:text-sm xl:text-base text-gray-700 font-semibold">Clients accompagnés</div>
+                <div className="text-[11px] sm:text-xs xl:text-sm text-gray-500 mt-0.5">Artisans, commerces, indépendants</div>
               </div>
               <div className="group text-center p-3 sm:p-4 xl:p-5 2xl:p-7 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent mb-1">4.9&#9733;</div>
                 <div className="text-xs sm:text-sm xl:text-base text-gray-700 font-semibold">Avis Clients</div>
-                <div className="text-[11px] sm:text-xs xl:text-sm text-gray-500 mt-0.5">15 avis vérifiés</div>
+                <div className="text-[11px] sm:text-xs xl:text-sm text-gray-500 mt-0.5">15 avis Trustpilot</div>
               </div>
             </div>
 
@@ -155,7 +154,7 @@ const Hero = () => {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 text-sm text-gray-600 animate-fade-in">
               <div className="glass px-3 py-1.5 sm:px-4 sm:py-2 xl:px-3.5 xl:py-2.5 rounded-full border border-green-200 flex items-center gap-2 shadow-lg">
                 <Shield className="w-4 h-4 text-green-600" />
-                <span className="font-semibold text-green-700">Garantie satisfait</span>
+                <span className="font-semibold text-green-700">Prix fixe</span>
               </div>
               <div className="glass px-3 py-1.5 sm:px-4 sm:py-2 xl:px-3.5 xl:py-2.5 rounded-full border border-purple-200 flex items-center gap-2 shadow-lg">
                 <CheckCircle className="w-4 h-4 text-purple-600" />

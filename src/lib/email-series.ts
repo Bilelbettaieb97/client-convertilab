@@ -570,7 +570,7 @@ Bilel · ConvertiLab`,
       subject: "Ce que disent nos clients après la livraison de leur site",
       body: `Bonjour {{prenom}},
 
-En 3 ans, on a livré plus de 150 sites pour des entrepreneurs comme vous.
+On a accompagné plus de 150 entrepreneurs comme vous.
 
 Ce qu'ils retiennent : un site professionnel, livré rapidement, sans se ruiner.
 
@@ -1011,7 +1011,7 @@ Bilel · ConvertiLab`,
 
 Sans nouvelle de votre part, je vais classer votre demande. Aucun souci si le moment n'est pas le bon.
 
-Une seule chose avant de refermer : si vous hésitez sur le budget, sachez que le paiement peut être étalé, et que la prestation est satisfait ou remboursé. Ce sont souvent ces deux points qui bloquent, et ils se règlent en une conversation.
+Une seule chose avant de refermer : si vous hésitez sur le budget, sachez que le paiement peut être étalé, et que deux tours de corrections sont inclus dans la prestation. Ce sont souvent ces deux points qui bloquent, et ils se règlent en une conversation.
 
 → [Prendre 30 minutes avec moi](${CALENDLY})
 
@@ -1161,7 +1161,13 @@ const COMPANY_TYPE_LABELS: Record<string, string> = {
 // Sans traduction, le prospect lit « Vous cherchez site-ecommerce ». Les libelles
 // portent leur article car la phrase est « Vous cherchez {{projet}} » (serie Contact).
 const PROJET_LABELS: Record<string, string> = {
-  // ContactForm
+  // ContactForm (étape 1 depuis la refonte du 14/09/2026 : quatre pôles)
+  site: "un site internet",
+  publicite: "de la publicité en ligne",
+  "seo-ia": "à être trouvé sur Google et dans les IA",
+  crm: "un CRM et des relances automatiques",
+  "integration-ia": "à automatiser votre travail répétitif avec l'IA",
+  // ContactForm (anciennes valeurs)
   vitrine: "un site vitrine",
   ecommerce: "une boutique en ligne",
   landing: "une landing page",

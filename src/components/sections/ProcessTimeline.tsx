@@ -101,7 +101,7 @@ const ProcessTimeline = () => {
         ],
         tools: ["Google Ads", "Meta Business Suite", "Mailchimp", "Canva"],
         process:
-          "Notre équipe déploie chaque levier selon le plan validé. Les campagnes sont lancées, les contenus publiés, le SEO optimisé. Vous suivez l'avancement en temps réel sur un dashboard partagé.",
+          "Nous déployons chaque levier selon le plan validé. Les campagnes sont lancées, les contenus publiés, le SEO optimisé. Vous suivez l'avancement en temps réel sur un dashboard partagé.",
       },
     },
     {

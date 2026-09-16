@@ -26,7 +26,6 @@ const FinalCTA = dynamic(() => import("@/components/sections/FinalCTA"));
 const CinematicFooter = dynamic(() =>
   import("@/components/ui/motion-footer").then((m) => ({ default: m.CinematicFooter }))
 );
-const SocialProofToast = dynamic(() => import("@/components/conversion/SocialProofToast"));
 const StickyMobileCTA = dynamic(() => import("@/components/conversion/StickyMobileCTA"));
 
 export const metadata: Metadata = {
@@ -183,7 +182,6 @@ export default function PreviewHomePage() {
       </div>
 
       <Footer />
-      <SocialProofToast />
       <StickyMobileCTA />
     </div>
   );

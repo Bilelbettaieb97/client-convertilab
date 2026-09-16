@@ -21,8 +21,8 @@ const Contact = () => {
 
   const guarantees = [
     { icon: Shield, text: "Devis gratuit sans engagement" },
-    { icon: Clock, text: "Livraison dans les delais" },
-    { icon: Star, text: "Satisfaction garantie" },
+    { icon: Clock, text: "Livraison dans les délais" },
+    { icon: Star, text: "Prix fixe écrit dans le devis" },
   ];
 
   return (
@@ -45,9 +45,9 @@ const Contact = () => {
           <span className="inline-block px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-semibold mb-4">
             Contactez-nous
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Lancez votre projet
-          </h2>
+          </h1>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
             Obtenez une estimation personnalisee en moins de 2 minutes
           </p>
@@ -130,7 +130,7 @@ const Contact = () => {
               <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-5 text-white">
                 <h4 className="font-bold mb-4 flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5" />
-                  Nos garanties
+                  Nos engagements
                 </h4>
                 <ul className="space-y-3">
                   {guarantees.map((item, idx) => {
@@ -156,7 +156,7 @@ const Contact = () => {
                     </div>
                   ))}
                 </div>
-                <span>+150 entrepreneurs en Ile-de-France nous font confiance</span>
+                <span>150+ clients accompagnés nous font confiance</span>
               </div>
             </div>
           </div>

@@ -44,8 +44,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(ville);
   if (!city) return { title: "Page introuvable" };
 
-  const title = `Création Site Internet ${city.name} — Site Web Pro dès 490€ en 2 semaines`;
-  const description = `Besoin d'un site web à ${city.name} ? ConvertiLab crée votre site internet professionnel dès 490€, livré en 2 semaines, satisfait ou remboursé. +150 clients, 15 avis 4.9★. Devis gratuit sous 24h.`;
+  const title = `Création Site Internet ${city.name} : Site Web Pro dès 490€ en 2 semaines`;
+  const description = `Besoin d'un site web à ${city.name} ? ConvertiLab crée votre site internet professionnel dès 490€, livré en 2 semaines, prix fixe. 150+ clients accompagnés, 4,9/5 sur 15 avis. Devis gratuit sous 24h.`;
 
   return {
     title,
@@ -254,7 +254,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
               </Button>
             </div>
             <div className="flex items-center gap-6 mt-8 text-sm text-purple-200">
-              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-green-400" /> +150 sites livrés</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-green-400" /> 150+ clients accompagnés</span>
               <span className="flex items-center gap-1.5"><Star className="w-4 h-4 text-amber-400" /> 4.9/5 avis</span>
               <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-blue-400" /> 2 semaines</span>
             </div>
@@ -353,19 +353,19 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
                   ))}
                 </div>
                 <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
-                  <p className="text-sm text-gray-500 mb-3">Nos clients à {city.name} obtiennent en moyenne :</p>
+                  <p className="text-sm text-gray-500 mb-3">Ce que nous tenons pour nos clients à {city.name} :</p>
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
-                      <div className="text-2xl font-bold text-purple-600">+280%</div>
-                      <div className="text-xs text-gray-500 mt-1">de CA</div>
+                      <div className="text-2xl font-bold text-purple-600">150+</div>
+                      <div className="text-xs text-gray-500 mt-1">clients accompagnés</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-pink-600">7j</div>
-                      <div className="text-xs text-gray-500 mt-1">délai livraison</div>
+                      <div className="text-2xl font-bold text-pink-600">2 sem.</div>
+                      <div className="text-xs text-gray-500 mt-1">site livré</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-amber-600">4.9★</div>
-                      <div className="text-xs text-gray-500 mt-1">satisfaction</div>
+                      <div className="text-2xl font-bold text-amber-600">4,9/5</div>
+                      <div className="text-xs text-gray-500 mt-1">sur 15 avis</div>
                     </div>
                   </div>
                 </div>

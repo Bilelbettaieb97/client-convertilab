@@ -240,22 +240,22 @@ function PortfolioHeader() {
           <div className="flex items-center justify-center gap-1 mb-0.5">
             <Users className="w-4 h-4 text-primary" />
           </div>
-          <div className="text-2xl font-black text-foreground">+50</div>
-          <div className="text-xs text-muted-foreground">Clients</div>
+          <div className="text-2xl font-black text-foreground">150+</div>
+          <div className="text-xs text-muted-foreground">Clients accompagnés</div>
         </div>
         <div className="text-center">
           <div className="flex items-center justify-center gap-1 mb-0.5">
             <TrendingUp className="w-4 h-4 text-green-500" />
           </div>
-          <div className="text-2xl font-black text-foreground">+280%</div>
-          <div className="text-xs text-muted-foreground">CA moyen</div>
+          <div className="text-2xl font-black text-foreground">2 semaines</div>
+          <div className="text-xs text-muted-foreground">Site livré</div>
         </div>
         <div className="text-center">
           <div className="flex items-center justify-center gap-1 mb-0.5">
             <Star className="w-4 h-4 text-yellow-500" />
           </div>
-          <div className="text-2xl font-black text-foreground">4.9/5</div>
-          <div className="text-xs text-muted-foreground">Satisfaction</div>
+          <div className="text-2xl font-black text-foreground">4,9/5</div>
+          <div className="text-xs text-muted-foreground">sur 15 avis</div>
         </div>
       </div>
     </div>
@@ -268,7 +268,7 @@ function PortfolioCTA() {
     <div className="text-center rounded-2xl p-6 sm:p-10 bg-primary relative overflow-hidden">
       <div className="relative z-10">
         <h3 className="text-xl sm:text-3xl font-bold text-primary-foreground mb-2 sm:mb-3">
-          Parlons de votre projet avec un expert
+          Parlons de votre projet avec le fondateur
         </h3>
         <p className="text-sm sm:text-lg text-primary-foreground/80 mb-5 max-w-xl mx-auto">
           30 minutes en visio pour cadrer vos objectifs et savoir ce qui est

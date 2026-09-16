@@ -10,15 +10,15 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: "En combien de temps mon site sera-t-il livré ?",
-    answer: "Une landing page est livrée en 5-7 jours, un site vitrine en 2-3 semaines, un site e-commerce en 3-4 semaines. Nous respectons toujours les délais annoncés — c'est notre garantie.",
+    answer: "Une landing page est livrée en 5 à 7 jours, un site vitrine en 2 semaines. Pour un site e-commerce ou une application, le délai est écrit dans le devis, et c'est celui que nous tenons.",
   },
   {
     question: "Mon site sera-t-il optimisé pour Google (SEO) ?",
     answer: "Oui ! Chaque site inclut une optimisation SEO de base : balises meta, vitesse de chargement, responsive mobile, sitemap, robots.txt. Pour un accompagnement SEO avancé (référencement continu), nous proposons des forfaits dédiés.",
   },
   {
-    question: "Que comprend votre garantie satisfait ou remboursé ?",
-    answer: "Si le site livré ne correspond pas au brief validé ensemble, nous le modifions gratuitement. Si après 2 tours de révisions vous n'êtes pas satisfait, nous vous remboursons intégralement. Aucun risque pour vous.",
+    question: "Que se passe-t-il si le site livré ne correspond pas à ce que nous avons validé ?",
+    answer: "Nous le corrigeons sans frais jusqu'à ce qu'il corresponde au brief validé ensemble. Vous validez chaque étape (maquette, contenus, mise en ligne), ce qui évite les mauvaises surprises à la livraison.",
   },
   {
     question: "Est-ce que je pourrai modifier mon site moi-même ?",

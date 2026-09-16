@@ -28,7 +28,7 @@ const faqItems = [
   {
     question: "Qu'est-ce qu'une maquette de site web exactement ?",
     answer:
-      "Une maquette (ou mockup) est une représentation visuelle fidèle de votre futur site : mise en page, couleurs, typographies, textes et images en situation réelle. Ce n'est pas un croquis abstrait — c'est le design de votre page d'accueil tel qu'il apparaîtra en ligne, adapté à votre secteur d'activité et au style que vous avez choisi.",
+      "Une maquette (ou mockup) est une représentation visuelle fidèle de votre futur site : mise en page, couleurs, typographies, textes et images en situation réelle. Ce n'est pas un croquis abstrait : c'est le design de votre page d'accueil tel qu'il apparaîtra en ligne, adapté à votre secteur d'activité et au style que vous avez choisi.",
   },
   {
     question: "Que contient la maquette gratuite ?",
@@ -43,17 +43,17 @@ const faqItems = [
   {
     question: "Puis-je demander des modifications sur la maquette ?",
     answer:
-      "Oui. La maquette est un point de départ pour la discussion : lors de sa présentation, vous nous dites ce que vous aimez et ce que vous voulez changer. Les révisions sont incluses jusqu'à validation — nous ne développons le site qu'une fois que le design vous plaît à 100%.",
+      "Oui. La maquette est un point de départ pour la discussion : lors de sa présentation, vous nous dites ce que vous aimez et ce que vous voulez changer. Les révisions sont incluses jusqu'à validation : nous ne développons le site qu'une fois que le design vous plaît à 100%.",
   },
   {
     question: "Que se passe-t-il si la maquette ne me plaît pas ?",
     answer:
-      "Rien — c'est justement l'intérêt de la formule. Vous n'avez aucun engagement et rien à payer. Soit nous retravaillons le design selon vos retours, soit vous en restez là, sans frais ni justification à donner. Vous ne prenez aucun risque à demander votre maquette.",
+      "Rien : c'est justement l'intérêt de la formule. Vous n'avez aucun engagement et rien à payer. Soit nous retravaillons le design selon vos retours, soit vous en restez là, sans frais ni justification à donner. Vous ne prenez aucun risque à demander votre maquette.",
   },
   {
     question: "Pourquoi une agence web offre-t-elle des maquettes gratuites ?",
     answer:
-      "Parce que c'est le meilleur moyen de vous convaincre sur pièce plutôt que sur promesse. La plupart des agences vous demandent de signer un devis avant de voir quoi que ce soit. Nous faisons l'inverse : vous jugez notre travail concrètement, puis vous décidez. Environ un tiers des maquettes se transforment en projet — c'est notre modèle, transparent et assumé.",
+      "Parce que c'est le meilleur moyen de vous convaincre sur pièce plutôt que sur promesse. La plupart des agences vous demandent de signer un devis avant de voir quoi que ce soit. Nous faisons l'inverse : vous jugez notre travail concrètement, puis vous décidez. Une partie des maquettes se transforment en projet : c'est notre modèle, transparent et assumé.",
   },
   {
     question: "Et après la maquette, combien coûte le site complet ?",
@@ -93,7 +93,7 @@ function MaquetteSeoContent() {
             <p>
               Chez ConvertiLab, la maquette est <strong className="text-slate-200">créée
               sur-mesure par un designer</strong> à partir de votre secteur d&apos;activité
-              et du style visuel que vous choisissez — pas un template générique
+              et du style visuel que vous choisissez, pas un template générique
               recoloré. Restaurant, artisan, cabinet, boutique en ligne : chaque secteur a
               ses codes, et votre maquette les respecte dès la première version.
             </p>
@@ -129,7 +129,7 @@ function MaquetteSeoContent() {
               Concrètement : vous décrivez votre projet en 2 minutes dans le formulaire
               ci-dessus, nos designers créent la maquette de votre page d&apos;accueil
               sous 48h, puis nous vous la présentons. Elle vous plaît ? Nous développons
-              le site complet — vitrine dès 490€, livré en 2 semaines, avec{" "}
+              le site complet : vitrine dès 490€, livré en 2 semaines, avec{" "}
               <Link href="/prix" className="text-violet-400 hover:text-violet-300 underline underline-offset-2">
                 des tarifs publiés et définitifs
               </Link>
@@ -143,8 +143,8 @@ function MaquetteSeoContent() {
               ou découvrir nos{" "}
               <Link href="/site-internet-pas-cher" className="text-violet-400 hover:text-violet-300 underline underline-offset-2">
                 sites internet à petit prix
-              </Link>{" "}
-              — professionnels, sans frais cachés.
+              </Link>
+              , professionnels et sans frais cachés.
             </p>
           </div>
         </div>

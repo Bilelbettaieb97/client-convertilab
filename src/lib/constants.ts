@@ -51,7 +51,7 @@ export const STRUCTURED_DATA = {
     "@id": `${SITE.url}/#organization`,
     name: SITE.name,
     url: SITE.url,
-    logo: `${SITE.url}/logo.png`,
+    logo: `${SITE.url}/images/logo.png`,
     sameAs: [...Object.values(SITE.social), SITE.trustpilot, SITE.googleMaps],
     contactPoint: {
       "@type": "ContactPoint",
@@ -76,15 +76,15 @@ export const STRUCTURED_DATA = {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "48.8769",
-      longitude: "2.1894",
+      latitude: 48.8769,
+      longitude: 2.1894,
     },
     priceRange: "€€",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: SITE.reviews.rating,
-      reviewCount: SITE.reviews.count,
-      bestRating: "5",
+      ratingValue: Number(SITE.reviews.rating),
+      reviewCount: Number(SITE.reviews.count),
+      bestRating: 5,
     },
     areaServed: [
       { "@type": "City", name: "Paris" },
@@ -99,6 +99,17 @@ export const STRUCTURED_DATA = {
       closes: "18:00",
     },
     founder: { "@type": "Person", "@id": `${SITE.url}/#bilel-bettaieb`, name: "Bilel Bettaieb" },
-    foundingDate: "2024",
   },
+} as const;
+
+/**
+ * Fournisseur d'un Service en JSON-LD, sous forme de nœud autonome : Google lit le
+ * balisage de chaque page isolément, un simple « @id » vers l'accueil y serait vide.
+ */
+export const PROVIDER_ORGANISATION = {
+  "@id": `${SITE.url}/#organization`,
+  "@type": "Organization",
+  name: SITE.name,
+  url: SITE.url,
+  logo: `${SITE.url}/images/logo.png`,
 } as const;

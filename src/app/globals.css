@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+/* Frise « Ce que nous faisons » (accueil) : fusionnée ici pour rester dans les deux
+   feuilles de style bloquantes (un import depuis le composant créait un troisième chunk CSS). */
+@import "../components/motion/ff/a-frise-active.css";
 
 @keyframes spotlight {
   0% { opacity: 0; transform: translate(-72%, -62%) scale(0.5); }
@@ -43,6 +46,7 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-primary-texte: var(--primary-texte);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -65,6 +69,9 @@
   --popover-foreground: hsl(222.2 84% 4.9%);
   --primary: hsl(270 70% 60%);
   --primary-foreground: hsl(0 0% 100%);
+  /* Violet plus foncé réservé au TEXTE (liens, libellés) : ~6:1 sur blanc, AA garanti ;
+     --primary (4,4:1 sur fond gris) reste pour les fonds, dégradés et icônes. */
+  --primary-texte: hsl(270 70% 48%);
   --secondary: hsl(210 40% 96.1%);
   --secondary-foreground: hsl(222.2 47.4% 11.2%);
   --muted: hsl(210 40% 96.1%);
@@ -325,3 +332,133 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee { animation: none; }
 }
+
+/* Palette `src/components/motion/` : keyframes namespacés (motion-*) pour ne pas
+   toucher à .animate-marquee (TrustBar). Les utilitaires animate-motion-* sont
+   générés par Tailwind v4 depuis ce bloc. `inline` est obligatoire : les valeurs
+   contiennent var(--duration), posée sur l'élément, qui serait invalide si la
+   variable --animate-* était résolue sur :root. */
+@theme inline {
+  --animate-motion-marquee: motion-marquee var(--duration) linear infinite;
+  --animate-motion-marquee-vertical: motion-marquee-vertical var(--duration) linear infinite;
+  --animate-motion-orbit: motion-orbit calc(var(--duration) * 1s) linear infinite;
+  --animate-motion-mesh: motion-mesh var(--duration, 18s) ease-in-out infinite alternate;
+  /* BorderBeam : offset-distance animé en CSS (pas en JS image par image). */
+  --animate-motion-beam: motion-beam var(--duration, 8s) linear infinite;
+  /* MotsClesVague : le dégradé (deux fois la largeur du mot, périodique) glisse vers la
+     droite ; la durée est posée par le composant, le retard par mot aussi. */
+  --animate-motion-vague: motion-vague var(--duration, 6s) linear infinite;
+
+  @keyframes motion-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - var(--gap))); }
+  }
+  @keyframes motion-marquee-vertical {
+    from { transform: translateY(0); }
+    to { transform: translateY(calc(-100% - var(--gap))); }
+  }
+  @keyframes motion-orbit {
+    0% {
+      transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+    }
+    100% {
+      transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg));
+    }
+  }
+  @keyframes motion-mesh {
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(var(--mesh-x, 4%), var(--mesh-y, -3%), 0) scale(1.06); }
+    100% { transform: translate3d(calc(var(--mesh-x, 4%) * -0.6), calc(var(--mesh-y, -3%) * -1), 0) scale(0.98); }
+  }
+  @keyframes motion-beam {
+    from { offset-distance: var(--beam-from, 0%); }
+    to { offset-distance: var(--beam-to, 100%); }
+  }
+  @keyframes motion-vague {
+    from { background-position: 200% 50%; }
+    to { background-position: 0% 50%; }
+  }
+}
+
+/* Mots clés colorés du H1 (MotsClesVague) : dégradé violet → fuchsia → rose → violet,
+   périodique pour boucler sans à-coup, découpé sur le texte. Les teintes 600 gardent
+   plus de 4,5:1 sur fond clair, même si un titre de cette taille n'exige que 3:1. */
+.motion-vague {
+  background-image: linear-gradient(90deg, #7c3aed 0%, #c026d3 25%, #db2777 50%, #c026d3 75%, #7c3aed 100%);
+  background-size: 200% 100%;
+  background-repeat: repeat-x;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* HeroMesh figé sous lg : trois halos floutés de 60 vw animés en boucle coûtent cher
+   au GPU mobile pour un effet imperceptible à cette taille (le dégradé reste). */
+@media (max-width: 1023px) {
+  .animate-motion-mesh {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-motion-marquee,
+  .animate-motion-marquee-vertical,
+  .animate-motion-orbit,
+  .animate-motion-mesh,
+  .animate-motion-beam,
+  .animate-motion-vague {
+    animation: none;
+  }
+  /* Marquee figé : une seule rangée (les copies inert sont masquées) qui passe à la ligne.
+     La rangée garde `shrink-0` en mode animé : ici elle prend 100 % de la largeur et peut
+     rétrécir (`min-width: 0`), sinon sa largeur reste celle du contenu non replié (2 400 px
+     pour dix pastilles) et toute la page déborde en 390 px. */
+  .motion-marquee-conteneur,
+  .motion-marquee-conteneur > .animate-motion-marquee {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .motion-marquee-conteneur > .animate-motion-marquee {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+  .motion-marquee-conteneur > [inert] {
+    display: none;
+  }
+}
+
+/* Socle typographique et ergonomique (lot C, finitions).
+   Couche `base` : un utilitaire (`text-balance`, `scroll-*`) garde la main. */
+@layer base {
+  /* Titres équilibrés, paragraphes sans mot orphelin, sans classe par titre. */
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+
+  /* Sélection de texte aux couleurs de la charte (violet à 18 %). */
+  ::selection { background: hsl(270 70% 60% / 0.18); }
+
+  /* Pas de halo gris au toucher sur iOS / Android : le focus visible reste géré par ring. */
+  a, button { -webkit-tap-highlight-color: transparent; }
+
+  /* La navigation fixe mesure 64 px : une ancre (#poles, #faq, #rendez-vous,
+     #formulaire...) s'arrête sous elle, jamais derrière. */
+  html { scroll-padding-top: 4.5rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+}
+
+/* La règle globale `button, a, input, textarea { transition-all }` (plus haut
+   dans cette couche) animait aussi les propriétés de mise en page (width,
+   height, padding, top...). Même durée et même courbe, mais seulement les
+   propriétés de finition. Tailwind v4 pose `translate`, `scale` et `rotate`
+   en propriétés distinctes de `transform` : elles font partie de la liste. */
+@layer utilities {
+  button, a, input, textarea {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, translate, scale, rotate;
+  }
+}
+

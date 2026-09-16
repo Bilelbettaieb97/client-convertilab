@@ -17,7 +17,7 @@ interface PortfolioCase {
   metrics: Array<{
     label: string;
     value: string;
-    icon: React.ComponentType<any>;
+    icon: React.ComponentType<{ className?: string }>;
   }>;
   technologies: string[];
   results: string;

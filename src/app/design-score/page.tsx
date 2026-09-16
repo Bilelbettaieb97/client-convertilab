@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Audit Design & UX Gratuit — ConvertiLab",
+  name: "Audit Design & UX Gratuit : ConvertiLab",
   description: "Outil gratuit pour evaluer le design et l'experience utilisateur de votre site web avec rapport PDF detaille.",
   url: `${SITE.url}/design-score`,
   applicationCategory: "UX Tool",
@@ -57,17 +56,17 @@ const faqItems = [
   { question: "L'audit design est-il vraiment gratuit ?",
     answer: "Oui, entièrement gratuit et sans engagement. Vous entrez l'URL de votre site et votre email, et vous recevez un score design sur 100 avec le détail des points analysés (lisibilité, confiance, mobile) et les corrections prioritaires, en PDF dans votre boîte mail." },
   { question: "Pourquoi le design de mon site influence-t-il mes ventes ?",
-    answer: "Les visiteurs jugent la crédibilité d'un site en 50 millisecondes — avant même de lire une ligne. 75% des internautes évaluent le sérieux d'une entreprise sur le design de son site. Un design daté ou brouillon fait fuir des clients qui ne vous diront jamais pourquoi ils sont partis." },
+    answer: "Les visiteurs jugent la crédibilité d'un site en 50 millisecondes, avant même de lire une ligne. 75% des internautes évaluent le sérieux d'une entreprise sur le design de son site. Un design daté ou brouillon fait fuir des clients qui ne vous diront jamais pourquoi ils sont partis." },
   { question: "Que vérifie exactement l'audit design ?",
     answer: "Trois familles de critères : la lisibilité (hiérarchie visuelle, typographie, contrastes, espacement), les signaux de confiance (cohérence graphique, professionnalisme perçu, éléments de réassurance) et l'expérience mobile (affichage responsive, zones tactiles, navigation au pouce)." },
   { question: "Quelles sont les erreurs de design les plus courantes ?",
     answer: "Les plus fréquentes : trop d'informations sans hiérarchie (le visiteur ne sait pas où regarder), des textes peu lisibles (petite taille, faible contraste), un design non adapté au mobile, des appels à l'action invisibles, et un style visuel daté qui décrédibilise l'entreprise. Notre rapport identifie celles qui concernent votre site." },
   { question: "Mon site est vieux de quelques années, dois-je le refondre ?",
-    answer: "Pas systématiquement. Si la structure est saine, des retouches ciblées (typographie, couleurs, espacement, CTA) suffisent parfois. Mais si le site n'est pas responsive, lent, ou visuellement dépassé, une refonte complète est généralement plus rentable — nos refontes démarrent à 400€ et conservent votre référencement." },
+    answer: "Pas systématiquement. Si la structure est saine, des retouches ciblées (typographie, couleurs, espacement, CTA) suffisent parfois. Mais si le site n'est pas responsive, lent, ou visuellement dépassé, une refonte complète est généralement plus rentable : nos refontes démarrent à 690€ et conservent votre référencement." },
   { question: "Le design influence-t-il aussi mon référencement Google ?",
-    answer: "Indirectement mais fortement. Un design confus augmente le taux de rebond et réduit le temps passé sur le site — des signaux que Google interprète négativement. L'expérience mobile, elle, est un critère direct de classement. Design, vitesse et SEO forment un tout : testez les trois." },
+    answer: "Indirectement mais fortement. Un design confus augmente le taux de rebond et réduit le temps passé sur le site, des signaux que Google interprète négativement. L'expérience mobile, elle, est un critère direct de classement. Design, vitesse et SEO forment un tout : testez les trois." },
   { question: "Que faire après avoir reçu mon score design ?",
-    answer: "Commencez par les corrections prioritaires du rapport. Si vous êtes à l'aise, beaucoup sont réalisables vous-même (contrastes, tailles de texte). Pour une transformation en profondeur, nos designers peuvent retravailler votre interface — jetez un œil à nos réalisations pour voir le niveau de finition." },
+    answer: "Commencez par les corrections prioritaires du rapport. Si vous êtes à l'aise, beaucoup sont réalisables vous-même (contrastes, tailles de texte). Pour une transformation en profondeur, nous pouvons retravailler votre interface : jetez un œil à nos réalisations pour voir le niveau de finition." },
 ];
 
 const faqJsonLd = {
@@ -216,7 +215,7 @@ export default function DesignScorePage() {
             <div className="space-y-4 text-white/60 leading-relaxed">
               <p>
                 Vos visiteurs jugent votre entreprise en{" "}
-                <strong className="text-white/80">50 millisecondes</strong> — le temps
+                <strong className="text-white/80">50 millisecondes</strong>, le temps
                 de percevoir votre design, avant même de lire un mot. 75% des
                 internautes évaluent la crédibilité d&apos;une entreprise sur
                 l&apos;apparence de son site : un design daté, surchargé ou peu lisible
@@ -227,7 +226,7 @@ export default function DesignScorePage() {
                 note votre site sur 100 en analysant trois dimensions : la lisibilité
                 (hiérarchie, typographie, contrastes), les signaux de confiance et
                 l&apos;expérience mobile. Le rapport PDF vous donne les corrections
-                classées par priorité — certaines se règlent en une heure.
+                classées par priorité : certaines se règlent en une heure.
               </p>
               <p>
                 Pour aller plus loin, lisez notre guide de{" "}
@@ -292,8 +291,8 @@ export default function DesignScorePage() {
                 <span className="text-yellow-400">{"\u2605\u2605\u2605\u2605\u2605"}</span>
                 <span>4.9/5 sur 15 avis</span>
               </div>
-              <div>+150 sites crees</div>
-              <div>+50 clients actifs</div>
+              <div>150+ clients accompagnés</div>
+              <div>Rueil-Malmaison (92)</div>
               <div>Certifie Google</div>
             </div>
           </div>

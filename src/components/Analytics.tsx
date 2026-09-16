@@ -67,7 +67,7 @@ export function MetaPixel() {
 
   // Fire PageView on each SPA navigation (App Router doesn't reload the page)
   useEffect(() => {
-    const w = window as any;
+    const w = window as Window & { fbq?: (...args: unknown[]) => void; _fbqInitialized?: boolean; dataLayer?: unknown[] };
     if (w._fbqInitialized && typeof w.fbq === "function") {
       w.fbq("track", "PageView");
     }
@@ -78,7 +78,7 @@ export function MetaPixel() {
     const handler = (e: Event) => {
       const detail = (e as CustomEvent).detail;
       if (!detail?.marketing) return;
-      const w = window as any;
+      const w = window as Window & { fbq?: (...args: unknown[]) => void; _fbqInitialized?: boolean; dataLayer?: unknown[] };
       if (typeof w.fbq !== "function" || w._fbqInitialized) return;
       w._fbqInitialized = true;
       w.fbq("init", SITE.analytics.metaPixel);

@@ -261,7 +261,7 @@ export const pricingPages: PricingPage[] = [
         answer: "Oui, il n'y a aucun engagement de durée. Vous pouvez mettre en pause ou arrêter vos campagnes à tout moment. Nous recommandons toutefois 3 mois minimum pour des résultats optimaux.",
       },
     ],
-    deliveryTime: "Lancement en 5 à 2 semaines",
+    deliveryTime: "Lancement en 1 à 2 semaines",
     relatedService: "/services/sea",
   },
   {

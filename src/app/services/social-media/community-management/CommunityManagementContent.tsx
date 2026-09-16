@@ -1,12 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  Users, ArrowRight, CheckCircle2, Calendar, MessageSquare,
-  Heart, Camera, BarChart3, Shield, Clock, Sparkles, Share2
+  Users, ArrowRight, Calendar, MessageSquare,
+  Heart, Camera, BarChart3, Share2
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
@@ -108,7 +107,7 @@ export default function CommunityManagementContent() {
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>Les réseaux sociaux exigent une présence quotidienne et cohérente. Publier 3 à 5 fois par semaine, répondre aux commentaires, interagir avec les abonnés, analyser les statistiques, adapter la stratégie aux tendances : tout cela représente <strong>15 à 20 heures par semaine</strong> qu&apos;un entrepreneur ne peut pas se permettre de sacrifier.</p>
                 <p>Un community manager professionnel connaît les algorithmes de chaque plateforme, sait quels formats performent (Reels, Stories, Carrousels), à quelle heure publier pour maximiser la portée, et comment transformer des abonnés passifs en clients actifs. Cette expertise s&apos;acquiert en années, pas en quelques jours de formation YouTube.</p>
-                <p>Nos clients qui délèguent leur community management constatent en moyenne <strong>+340% d&apos;engagement</strong> et <strong>×2,5 de croissance d&apos;abonnés</strong> dans les 3 premiers mois. Parce que la régularité, la qualité de contenu et la réactivité font une différence radicale par rapport à une publication sporadique et improvisée.</p>
+                <p>Déléguer son community management, c&apos;est retrouver de la régularité, une qualité de contenu constante et une vraie réactivité aux messages : trois choses qui font la différence par rapport à une publication sporadique et improvisée.</p>
               </div>
             </div>
             <div>
@@ -116,7 +115,7 @@ export default function CommunityManagementContent() {
               <div className="space-y-3">
                 {[
                   { icon: "📅", title: "Calendrier éditorial", detail: "Planning mensuel avec thèmes, formats et messages alignés sur vos objectifs commerciaux." },
-                  { icon: "✍️", title: "Création de contenu", detail: "Textes, visuels, vidéos courtes, Stories — tout est créé et optimisé pour chaque plateforme." },
+                  { icon: "✍️", title: "Création de contenu", detail: "Textes, visuels, vidéos courtes, Stories : tout est créé et optimisé pour chaque plateforme." },
                   { icon: "💬", title: "Modération & réponses", detail: "Réponse sous 2h aux commentaires et messages. Aucun client laissé sans réponse." },
                   { icon: "📊", title: "Reporting mensuel", detail: "Rapport détaillé : reach, engagement, croissance, publications les plus performantes." },
                   { icon: "🔥", title: "Gestion des tendances", detail: "Intégration des trends et sujets viraux pour maximiser votre visibilité organique." },

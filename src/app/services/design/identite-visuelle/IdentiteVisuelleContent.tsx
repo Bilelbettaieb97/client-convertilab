@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { ArrowRight, CheckCircle, Fingerprint, Clock, Palette, Type, Image, BookOpen } from "lucide-react";
+import { ArrowRight, CheckCircle, Fingerprint, Clock, Palette, Type, Image as ImageIcon, BookOpen } from "lucide-react";
 import ServiceFAQ from "@/components/services/ServiceFAQ";
 
 const features = [
   { icon: <Palette className="w-6 h-6" />, title: "Création Logo", description: "Un logo unique et memorable pour votre marque" },
   { icon: <Type className="w-6 h-6" />, title: "Typographie", description: "Selection de polices coherentes avec votre identite" },
-  { icon: <Image className="w-6 h-6" />, title: "Univers Visuel", description: "Couleurs, formes et style graphique distinctifs" },
+  { icon: <ImageIcon className="w-6 h-6" />, title: "Univers Visuel", description: "Couleurs, formes et style graphique distinctifs" },
   { icon: <BookOpen className="w-6 h-6" />, title: "Charte Graphique", description: "Document de reference pour une communication coherente" },
 ];
 const includes = ["Création de logo (3 propositions)", "Charte graphique complète", "Palette de couleurs", "Typographies définies", "Declinaisons supports print/web", "Fichiers sources (AI, PSD, PDF)", "Guide d'utilisation", "Formats optimisés réseaux sociaux"];

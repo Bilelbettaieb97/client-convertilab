@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { HelpCircle, ArrowRight, Shield, Clock, Zap } from "lucide-react";
+import { HelpCircle, ArrowRight, Clock, Zap } from "lucide-react";
 import { PRICING } from "@/lib/constants";
 
 const FAQ = () => {
@@ -14,15 +15,15 @@ const FAQ = () => {
     },
     {
       question: "En combien de temps mon site sera-t-il livré ?",
-      answer: "Une landing page est livrée en 5 à 2 semaines, un site vitrine en 2 à 3 semaines, un site e-commerce en 3 à 4 semaines. Nous respectons toujours les délais annoncés. C'est notre garantie."
+      answer: "Une landing page est livrée en 5 à 7 jours, un site vitrine en 2 semaines. Pour un site e-commerce ou une application, le délai est écrit dans le devis. Le délai annoncé est celui que nous tenons."
     },
     {
       question: "Mon site sera-t-il optimisé pour Google (SEO) ?",
       answer: "Oui ! Chaque site inclut une optimisation SEO de base : balises meta, vitesse de chargement, responsive mobile, sitemap, robots.txt. Pour un accompagnement SEO avancé (référencement continu), nous proposons des forfaits dédiés."
     },
     {
-      question: "Que comprend votre garantie satisfait ou remboursé ?",
-      answer: "Si le site livré ne correspond pas au brief validé ensemble, nous le modifions gratuitement. Si après 2 tours de révisions vous n'êtes pas satisfait, nous vous remboursons intégralement. Aucun risque pour vous."
+      question: "Que se passe-t-il si le site livré ne correspond pas à ce que nous avons validé ?",
+      answer: "Nous le corrigeons sans frais jusqu'à ce qu'il corresponde au brief validé ensemble. Vous validez chaque étape (maquette, contenus, mise en ligne), ce qui évite les mauvaises surprises à la livraison."
     },
     {
       question: "Est-ce que je pourrai modifier mon site moi-même ?",
@@ -30,7 +31,7 @@ const FAQ = () => {
     },
     {
       question: "Quels services de marketing digital proposez-vous en plus ?",
-      answer: "Au-delà de la création de sites, nous proposons : SEO (référencement naturel), Google Ads, Meta Ads (Facebook/Instagram), gestion des réseaux sociaux, email marketing et branding. Un accompagnement 360° pour votre croissance."
+      answer: "Au-delà de la création de sites, nous proposons trois autres pôles : la publicité en ligne (Google Ads, Meta Ads, TikTok, Pinterest, LinkedIn Ads), le SEO avec la visibilité dans les IA, et le CRM avec des relances automatiques, l'IA prenant le travail répétitif."
     },
     {
       question: "Je n'ai pas de textes ni de contenu, vous pouvez vous en charger ?",
@@ -46,16 +47,9 @@ const FAQ = () => {
     },
     {
       question: "Je peux payer en plusieurs fois ?",
-      answer: "Oui ! Nous proposons le paiement en 2 à 4 mensualités sans frais. Vous pouvez aussi opter pour notre offre mensuelle à partir de 39€/mois avec un site livré clé en main."
+      answer: `Oui. Le prix peut être étalé en mensualités : un site vitrine ${PRICING.vitrine.monthly.replace(/^ou /, "")}, une landing page ${PRICING.landing.monthly.replace(/^ou /, "")}. C'est un paiement étalé, pas d'abonnement : le site vous appartient.`
     }
   ];
-
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="py-16 sm:py-24 bg-white">
@@ -109,18 +103,17 @@ const FAQ = () => {
               </p>
 
               <Button
-                onClick={scrollToContact}
+                asChild
                 size="lg"
                 className="bg-white text-purple-600 hover:bg-gray-100 px-6 sm:px-10 py-4 sm:py-6 text-sm sm:text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
-                Demander mon devis gratuit
-                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                <Link href="/contact">
+                  Demander mon devis gratuit
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                </Link>
               </Button>
 
               <div className="flex flex-wrap justify-center gap-4 mt-4 text-xs sm:text-sm text-white/80">
-                <span className="flex items-center gap-1.5">
-                  <Shield className="w-3 h-3 sm:w-4 sm:h-4" /> Satisfait ou remboursé
-                </span>
                 <span className="flex items-center gap-1.5">
                   <Clock className="w-3 h-3 sm:w-4 sm:h-4" /> Réponse sous 24h
                 </span>

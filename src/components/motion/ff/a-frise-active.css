@@ -1,0 +1,72 @@
+/*
+ * Adapté de Frontend Forever : https://frontendforever.com/frontendforever/css-custom-property-timeline-with-active-highlight, licence MIT.
+ * Gardé du modèle : le principe seulement (segment de ligne + puce colorés par
+ * état). Ici l'état est la position de lecture : chaque segment et chaque puce
+ * se colorent au fil du défilement grâce à `animation-timeline: view()`, sans
+ * JavaScript, sans police mono, sans bouton. Les couleurs sont le violet de la
+ * charte (hsl(270 70% 60%)).
+ *
+ * Chaque segment (entre deux puces) a sa propre timeline : la bande
+ * `cover 42 % → 57 %` place la pointe du remplissage juste sous la ligne
+ * médiane de l'écran (52 à 58 % de la hauteur, mesuré en 900 px et 844 px),
+ * quelle que soit la hauteur de l'écran ou de la liste. Le remplissage suit
+ * donc la lecture au lieu de la précéder. La puce finit de se colorer juste
+ * avant que la pointe l'atteigne (`entry 100 % → cover 45 %`). Note : le
+ * `scroll-padding-top` du site réduit d'autant la zone de vue de `view()`.
+ *
+ * Replis : navigateurs sans `animation-timeline` et prefers-reduced-motion
+ * reçoivent l'état final statique, dès le rendu serveur.
+ */
+
+@keyframes ff-frise {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes ff-puce {
+  to {
+    border-color: hsl(270 70% 60%);
+    background-color: hsl(270 70% 60% / 0.1);
+  }
+}
+
+/* Le raccourci `animation` remet `animation-timeline` à `auto` : il doit précéder. */
+.ff-frise {
+  animation: ff-frise linear both;
+  animation-timeline: view();
+  animation-range: cover 42% cover 57%;
+}
+
+.ff-puce {
+  animation: ff-puce linear both;
+  animation-timeline: view();
+  animation-range: entry 100% cover 45%;
+}
+
+@supports not (animation-timeline: view()) {
+  .ff-frise {
+    animation: none;
+    transform: none;
+  }
+  .ff-puce {
+    animation: none;
+    border-color: hsl(270 70% 60%);
+    background-color: hsl(270 70% 60% / 0.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ff-frise {
+    animation: none;
+    transform: none;
+  }
+  .ff-puce {
+    animation: none;
+    border-color: hsl(270 70% 60%);
+    background-color: hsl(270 70% 60% / 0.1);
+  }
+}

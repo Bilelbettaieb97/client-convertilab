@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { caseStudies } from "@/data/case-studies";
 import { SITE, STRUCTURED_DATA } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
@@ -16,15 +17,15 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Portfolio Agence Web | +150 Sites Créés, 4.9★ Trustpilot",
+  title: "Portfolio Agence Web : sites livrés et études de cas",
   description:
-    "+150 clients accompagnés, +280% de CA moyen. Études de cas e-commerce, restaurants, B2B. Découvrez nos résultats concrets.",
+    "150+ clients accompagnés, 4,9/5 sur 15 avis. Sites vitrines, e-commerce, landing pages et études de cas : restaurants, artisans, B2B. Des sites consultables et les mots de leurs propriétaires.",
   keywords:
     "portfolio agence web, réalisations sites web, études de cas, résultats clients, création site web Paris",
   alternates: { canonical: `${SITE.url}/portfolio` },
   openGraph: {
-    title: "Portfolio ConvertiLab : +150 Sites Web Créés | 4.9★ Trustpilot",
-    description: "+150 clients accompagnés, +280% de CA moyen. Réalisations e-commerce, restaurants, artisans, B2B. Résultats concrets.",
+    title: "Portfolio ConvertiLab : sites livrés et études de cas",
+    description: "150+ clients accompagnés, 4,9/5 sur 15 avis. Réalisations e-commerce, restaurants, artisans, B2B, consultables en ligne.",
     url: `${SITE.url}/portfolio`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -61,41 +62,16 @@ export default function PortfolioPage() {
       reviewCount: SITE.reviews.count,
       bestRating: "5",
     },
-    review: [
-      {
+    // Avis réels uniquement : les mots des clients de src/data/case-studies.ts.
+    review: caseStudies
+      .filter((cs) => cs.testimonial)
+      .slice(0, 5)
+      .map((cs) => ({
         "@type": "Review",
-        author: { "@type": "Person", name: "Marie L." },
-        reviewBody:
-          "ConvertiLab a transforme notre presence en ligne. +180% de trafic en 6 mois.",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: 5,
-          bestRating: 5,
-        },
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Thomas D." },
-        reviewBody:
-          "Un accompagnement professionnel et des resultats concrets sur nos campagnes Ads.",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: 5,
-          bestRating: 5,
-        },
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Sophie M." },
-        reviewBody:
-          "Notre site e-commerce genere maintenant 3x plus de ventes.",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: 5,
-          bestRating: 5,
-        },
-      },
-    ],
+        author: { "@type": "Organization", name: cs.author },
+        reviewBody: cs.testimonial,
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+      })),
   };
 
   return (

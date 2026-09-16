@@ -266,7 +266,7 @@ export default function OutilsClient() {
                 Vous avez identifié des points à améliorer ?
               </h2>
               <p className="text-purple-100 mb-8 text-lg">
-                Notre équipe analyse votre situation gratuitement et vous propose un plan d&apos;action concret.
+                Nous analysons votre situation gratuitement et vous proposons un plan d&apos;action concret.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

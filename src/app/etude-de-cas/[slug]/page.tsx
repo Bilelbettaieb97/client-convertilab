@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
-import { caseStudies, getFullCaseStudyBySlug, getCaseStudyBySlug } from "@/data/case-studies";
+import { caseStudies, fullCaseStudies, getFullCaseStudyBySlug, getCaseStudyBySlug } from "@/data/case-studies";
 import { getSectorBySlug } from "@/data/sectors";
 import { notFound } from "next/navigation";
 import CaseStudyPageClient from "./CaseStudyPageClient";
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export function generateStaticParams() {
-  return caseStudies.map((cs) => ({ slug: cs.slug }));
+  return caseStudies.filter((cs) => cs.slug in fullCaseStudies).map((cs) => ({ slug: cs.slug }));
 }
 
 export default async function CaseStudyPage({ params }: Props) {

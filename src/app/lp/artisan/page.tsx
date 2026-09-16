@@ -74,10 +74,10 @@ const stats = [
 ];
 
 const caseResults = [
-  "+15 demandes de devis par mois via le site",
-  "1ère page Google sur « menuisier Versailles »",
-  "3 nouveaux chantiers par mois en moyenne",
-  "Site rentabilisé en 6 semaines",
+  "Demande de devis guidée en 4 étapes",
+  "Devis renvoyé sous 24h par l'entreprise",
+  "Couverture Paris et Île-de-France mise en avant",
+  "Site consultable sur jsmjardinage.com",
 ];
 
 export default function LandingArtisan() {
@@ -157,7 +157,7 @@ export default function LandingArtisan() {
               <div className="lp-rise flex flex-wrap items-center gap-x-6 gap-y-3" style={{ animationDelay: "380ms" }}>
                 <span className="inline-flex items-center gap-2 font-semibold text-[#1c1917]">
                   <Users className="w-[18px] h-[18px] text-orange-500" />
-                  +150 entreprises accompagnées
+                  150+ clients accompagnés
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-gray-500">
                   <span className="flex gap-0.5">
@@ -258,12 +258,12 @@ export default function LandingArtisan() {
             <Reveal delay={140}>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-500">Cas client</span>
               <h2 className="text-3xl sm:text-[2.4rem] font-black text-[#1c1917] mt-3 mb-5 tracking-[-0.02em] leading-tight">
-                Menuiserie Dupont, débordé de devis
+                JSM Jardinage a agrandi son équipe
               </h2>
               <blockquote className="relative pl-5 border-l-2 border-orange-300 text-lg text-gray-600 italic leading-relaxed mb-6">
                 <MessageSquareQuote aria-hidden className="absolute -left-3 -top-2 w-6 h-6 text-orange-200" />
-                « Je pensais qu&apos;un site ne servait à rien pour un artisan. En 2 mois, j&apos;avais plus de demandes que je ne pouvais en traiter. »
-                <footer className="mt-3 not-italic text-sm font-semibold text-[#1c1917]">Laurent Dupont · Gérant, Menuiserie Dupont</footer>
+                « Depuis que j&apos;ai lancé mon site avec ConvertiLab, j&apos;ai embauché d&apos;autres salariés pour pouvoir satisfaire la demande. »
+                <footer className="mt-3 not-italic text-sm font-semibold text-[#1c1917]">JSM Jardinage · Paysagiste, Paris et Île-de-France</footer>
               </blockquote>
               <div className="grid sm:grid-cols-2 gap-3">
                 {caseResults.map((r) => (

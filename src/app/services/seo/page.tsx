@@ -1,35 +1,62 @@
 import type { Metadata } from "next";
-import { SITE } from "@/lib/constants";
+import { DEFAULT_OG_IMAGE, SITE, STRUCTURED_DATA, PROVIDER_ORGANISATION } from "@/lib/constants";
+import { faqPageSchema } from "@/lib/faq-schema";
+import { filArianeSchema } from "@/components/pole";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
-import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
-import SeoPageContent from "./SeoPageContent";
+import SeoPageContent, { FAQ, FIL, URL_PAGE, pole } from "./SeoPageContent";
+
+// Le gabarit du layout ajoute « | ConvertiLab » : 45 + 14 = 59 caractères.
+const TITRE = "Agence SEO Rueil-Malmaison, Paris : local, IA";
+const DESCRIPTION =
+  "Référencement naturel, SEO local (fiche Google, avis) et visibilité dans ChatGPT, Perplexity et AI Overviews. Forfait dès 500 €/mois, effets en 3 à 6 mois.";
 
 export const metadata: Metadata = {
-  title: "SEO & Référencement Naturel Paris : Page 1 Google",
-  description: "Référencement naturel et audit SEO. Atteignez la page 1 de Google avec une stratégie sur-mesure. +150 clients, résultats dès 3 mois. Devis gratuit.",
-  alternates: { canonical: `${SITE.url}/services/seo` },
-  openGraph: { title: "SEO & Référencement Naturel Paris | ConvertiLab", description: "Référencement naturel et audit SEO. Atteignez la page 1 de Google avec une stratégie sur-mesure. Devis gratuit.", url: `${SITE.url}/services/seo`,
+  title: TITRE,
+  description: DESCRIPTION,
+  alternates: { canonical: `${SITE.url}${URL_PAGE}` },
+  openGraph: {
+    title: `${TITRE} | ${SITE.name}`,
+    description: DESCRIPTION,
+    url: `${SITE.url}${URL_PAGE}`,
     type: "website",
-    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }] },
+    locale: "fr_FR",
+    siteName: SITE.name,
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630 }],
+  },
 };
 
-const schemas = [
-  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE.url },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE.url}/services` },
-    { "@type": "ListItem", "position": 3, "name": "SEO", "item": `${SITE.url}/services/seo` },
-  ]},
-  { "@context": "https://schema.org", "@type": "Service", "name": "SEO & Referencement Naturel", "description": "Strategie SEO sur-mesure pour atteindre la page 1 de Google. Audit technique, optimisation on-page et netlinking.", "url": `${SITE.url}/services/seo`, "provider": { "@type": "Organization", "name": SITE.name } },
+const jsonLd = [
+  filArianeSchema(FIL, URL_PAGE),
+  faqPageSchema(FAQ),
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE.url}${URL_PAGE}#service`,
+    name: pole.nomCourt,
+    serviceType: "Référencement naturel, SEO local et visibilité dans les IA",
+    description: DESCRIPTION,
+    url: `${SITE.url}${URL_PAGE}`,
+    provider: PROVIDER_ORGANISATION,
+    areaServed: STRUCTURED_DATA.localBusiness.areaServed,
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "EUR",
+      price: "500",
+      description: "Forfait de référencement naturel, à partir de 500 € par mois, 6 mois minimum. Visibilité IA incluse.",
+      url: `${SITE.url}${pole.sousPages[0].href}`,
+    },
+  },
 ];
 
 export default function SeoPage() {
   return (
     <div className="min-h-screen">
-      {schemas.map((s, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />)}
+      {jsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <Navigation />
       <SeoPageContent />
-      <SeoCheckCta title="Découvrez votre potentiel SEO avant de vous lancer" />
       <Footer />
     </div>
   );

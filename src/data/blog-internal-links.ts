@@ -263,10 +263,6 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
     primary: { title: "Sites avec HTTPS automatique", description: "SSL Let's Encrypt sur Vercel — aucune action requise.", href: "/services/sites-web/site-vitrine", cta: "Créer un site sécurisé" },
     secondary: { title: "Test de sécurité de votre site", description: "Audit technique incluant HTTPS et headers de sécurité.", href: "/seo-check", cta: "Auditer ma sécurité" },
   },
-  "budget-publicite-en-ligne-combien": {
-    primary: { title: "Estimateur de budget ads", description: "Budget optimal, ROI et leads estimés pour votre secteur.", href: "/estimateur-ads", cta: "Calculer mon budget" },
-    secondary: { title: "Gestion Google Ads + Meta Ads", description: "Nos experts gèrent vos campagnes pour vous.", href: "/services/sea", cta: "Voir nos offres SEA" },
-  },
   "typographie-web-choisir-polices": {
     primary: { title: "Design UI/UX professionnel", description: "Typographie soignée, cohérence visuelle, identité forte.", href: "/services/design/ui-ux", cta: "Voir nos designs" },
     secondary: { title: "Score design gratuit", description: "Évaluez la qualité typographique de votre site.", href: "/design-score", cta: "Analyser mon design" },

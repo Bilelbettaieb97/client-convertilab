@@ -4,10 +4,15 @@ import { useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
-import { supabase } from "@/lib/supabase/client";
 import { SITE } from "@/lib/constants";
-import ChatWindow from "./ChatWindow";
+import { cn } from "@/lib/utils";
+import { BULLE_CHAT, EtiquetteBulle } from "@/components/motion/ff/c-bulle-chat";
+import dynamic from "next/dynamic";
 import type { ChatMessage, ChatStep } from "./ChatWindow";
+
+// Chargé à l'ouverture seulement : la fenêtre de chat (formulaire complet, textes) ne fait plus partie
+// du bundle initial de chaque page. Aucun fallback : elle n'apparaît qu'après un clic sur la bulle.
+const ChatWindow = dynamic(() => import("./ChatWindow"), { ssr: false });
 
 // ============ TOOL DEFINITIONS ============
 
@@ -246,19 +251,21 @@ export default function ChatWidget() {
       const name = userInputs.name;
       const url = userInputs.url;
 
-      // Store lead in Supabase
-      supabase
-        .from("chatbot_leads")
-        .insert({
-          website_url: url,
-          domain: auditData?.domain || "",
-          name,
-          email,
-          phone: null,
-          score_global: auditData?.score || (auditData?.scores as Record<string, number>)?.global || 0,
-          grade: auditData?.grade || "",
-          email_sent: false,
-        })
+      // Store lead in Supabase (import à la demande : supabase-js ne pèse pas
+      // sur le chargement initial de toutes les pages via le layout).
+      import("@/lib/supabase/client")
+        .then(({ supabase }) =>
+          supabase.from("chatbot_leads").insert({
+            website_url: url,
+            domain: auditData?.domain || "",
+            name,
+            email,
+            phone: null,
+            score_global: auditData?.score || (auditData?.scores as Record<string, number>)?.global || 0,
+            grade: auditData?.grade || "",
+            email_sent: false,
+          })
+        )
         .then(() => {}, (err: unknown) => console.error("Supabase error:", err));
 
       // Show loading message while we wait for the PDF
@@ -463,10 +470,23 @@ export default function ChatWidget() {
         )}
       </AnimatePresence>
 
+      {/*
+        --barre-cta : hauteur de la StickyCtaBar (pages pôles, accueil) posée sur
+        <html> quand elle est visible ; la bulle remonte d'autant par un
+        transform (pas de `bottom` animé : un transform n'entre pas dans le CLS).
+        L'enveloppe porte le transform car framer-motion pilote celui du bouton.
+      */}
+      <div
+        // Collé au bord (right-0, bottom-0) avec les marges en padding. pl-40 réserve
+        // la place de l'étiquette « Une question ? » à gauche de la bulle ; l'enveloppe
+        // ne capte aucun clic (pointer-events-none), seul le bouton en reçoit.
+        className="fixed bottom-0 right-0 z-50 pointer-events-none pb-6 pl-40 pr-6 pt-8 translate-y-[calc(-1*var(--barre-cta,0px))] transition-transform duration-300 motion-reduce:transition-none"
+      >
+      {/* Bulle : violet uni au repos, le rose glisse au survol ; aucun mouvement permanent
+          (plus de « ping »). Voir motion/ff/c-bulle-chat. */}
       <motion.button
         onClick={open ? handleClose : handleOpen}
-        className="fixed bottom-6 right-6 z-50 flex h-[60px] w-[60px] items-center justify-center rounded-full bg-[#6c5ce7] text-white shadow-lg shadow-purple-900/30 transition-colors hover:bg-[#5b4bd5]"
-        whileHover={{ scale: 1.05 }}
+        className={cn(BULLE_CHAT, "pointer-events-auto")}
         whileTap={{ scale: 0.95 }}
         aria-label={open ? "Fermer le chat" : "Ouvrir le chat"}
       >
@@ -499,10 +519,9 @@ export default function ChatWidget() {
           )}
         </AnimatePresence>
 
-        {!open && (
-          <span className="absolute inset-0 animate-ping rounded-full bg-purple-500/30" />
-        )}
+        {!open && <EtiquetteBulle>Une question ?</EtiquetteBulle>}
       </motion.button>
+      </div>
     </>
   );
 }

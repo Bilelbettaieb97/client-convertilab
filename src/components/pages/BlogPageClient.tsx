@@ -307,7 +307,7 @@ export default function BlogPageClient() {
                       Besoin d&apos;un site web qui convertit ?
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      Site vitrine dès 490€, livré en 2 semaines. Prix fixe, satisfait ou remboursé, +150 clients accompagnés.
+                      Site vitrine dès 490€, livré en 2 semaines. Prix fixe, paiement étalé possible, 150+ clients accompagnés.
                     </p>
                   </div>
                   <Button

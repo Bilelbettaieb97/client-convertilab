@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -31,22 +30,24 @@ const NewsletterSubscription = () => {
     setIsNewsletterSubmitting(true);
 
     try {
+      // Import à la demande : supabase-js ne pèse pas sur le chargement initial.
+      const { supabase } = await import("@/lib/supabase/client");
       const { error } = await supabase
         .from('newsletter_subscriptions')
         .insert([{ email: trimmedEmail }]);
 
       if (error) {
         // Si l'email existe deja, on considere l'inscription comme reussie
-        if ((error as any).code === '23505') {
-          if (typeof window !== 'undefined' && (window as any).trackFormConversion) {
-            (window as any).trackFormConversion();
+        if ((error as { code?: string }).code === '23505') {
+          if (typeof window !== 'undefined' && (window as Window & { trackFormConversion?: () => void }).trackFormConversion) {
+            (window as Window & { trackFormConversion?: () => void }).trackFormConversion?.();
           }
           setNewsletterEmail("");
           router.push("/newsletter-confirmation");
           return;
         }
         // Non-bloquant : une panne d'enregistrement ne doit pas faire perdre l'inscription.
-        console.error("[supabase] newsletter_subscriptions:", (error as any).message);
+        console.error("[supabase] newsletter_subscriptions:", (error as { message?: string }).message);
       }
 
       // Non-bloquant : si la notification échoue, on continue quand même
@@ -61,8 +62,8 @@ const NewsletterSubscription = () => {
       }).catch((err) => console.error("[notify] erreur envoi:", err));
 
       // Track Google Ads conversion
-      if (typeof window !== 'undefined' && (window as any).trackFormConversion) {
-        (window as any).trackFormConversion();
+      if (typeof window !== 'undefined' && (window as Window & { trackFormConversion?: () => void }).trackFormConversion) {
+        (window as Window & { trackFormConversion?: () => void }).trackFormConversion?.();
       }
 
       setNewsletterEmail("");

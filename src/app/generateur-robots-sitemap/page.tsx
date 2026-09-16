@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Generateur robots.txt & sitemap.xml Gratuit — ConvertiLab",
+  name: "Générateur robots.txt & sitemap.xml Gratuit : ConvertiLab",
   description: "Outil gratuit de generation de fichiers robots.txt et sitemap.xml optimises.",
   url: `${SITE.url}/generateur-robots-sitemap`,
   applicationCategory: "SEO Tool",
@@ -181,8 +180,8 @@ export default function GenerateurRobotsSitemapPage() {
                 <span className="text-yellow-400">★★★★★</span>
                 <span>4.9/5 sur 15 avis</span>
               </div>
-              <div>+150 sites crees</div>
-              <div>+50 clients actifs</div>
+              <div>150+ clients accompagnés</div>
+              <div>Rueil-Malmaison (92)</div>
               <div>Certifie Google</div>
             </div>
           </div>

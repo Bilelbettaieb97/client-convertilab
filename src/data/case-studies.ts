@@ -1,7 +1,7 @@
 export interface CaseStudyMetric {
   label: string;
   value: string;
-  icon: "TrendingUp" | "Star" | "Clock" | "Users";
+  icon: "TrendingUp" | "Star" | "Clock" | "Users" | "Globe" | "Camera";
 }
 
 export interface CaseStudy {
@@ -35,7 +35,7 @@ export const caseStudies: CaseStudy[] = [
     description: "Création de site web vitrine avec design UI/UX premium, optimisation mobile et structuration de l'offre produit.",
     image: "/images/portfolio/portfolio-arancini-hero.webp",
     metrics: [
-      { label: "Crédibilité", value: "+100%", icon: "TrendingUp" },
+      { label: "Mobile", value: "Optimisé", icon: "Globe" },
       { label: "Saveurs", value: "15+", icon: "Star" },
       { label: "Certifié", value: "HACCP", icon: "Star" },
     ],
@@ -58,7 +58,7 @@ export const caseStudies: CaseStudy[] = [
     metrics: [
       { label: "Catalogue", value: "24/7", icon: "Clock" },
       { label: "Commandes", value: "En ligne", icon: "TrendingUp" },
-      { label: "Réductions", value: "-30%", icon: "Star" },
+      { label: "Espace pro", value: "Réservé", icon: "Star" },
     ],
     technologies: ["E-commerce", "UX Design", "B2B"],
     results: "Digitalisation complète",
@@ -77,8 +77,8 @@ export const caseStudies: CaseStudy[] = [
     description: "Landing page avec tunnel de vente, copywriting persuasif et design UX optimisé pour la conversion.",
     image: "/images/portfolio/portfolio-papapret-hero.webp",
     metrics: [
-      { label: "Papas formés", value: "15K+", icon: "Users" },
-      { label: "Note", value: "4.9/5", icon: "Star" },
+      { label: "Programme", value: "En ligne", icon: "Users" },
+      { label: "Paiement", value: "Sécurisé", icon: "Star" },
       { label: "Livraison", value: "24h", icon: "Clock" },
     ],
     technologies: ["Landing Page", "Copywriting", "UX Conversion"],
@@ -119,8 +119,8 @@ export const caseStudies: CaseStudy[] = [
     description: "Site haut de gamme avec estimation gratuite, tunnel de conversion et design luxueux pour conciergerie de location courte durée.",
     image: "/images/portfolio/portfolio-eleva-hero.webp",
     metrics: [
-      { label: "Propriétaires", value: "+50", icon: "Users" },
-      { label: "Note", value: "4.9/5", icon: "Star" },
+      { label: "Gestion", value: "Clé en main", icon: "Users" },
+      { label: "Contact", value: "Formulaire", icon: "Star" },
       { label: "Réponse", value: "24h", icon: "Clock" },
     ],
     technologies: ["Site Vitrine", "UX Premium", "Conversion"],
@@ -161,8 +161,8 @@ export const caseStudies: CaseStudy[] = [
     description: "Site professionnel avec structuration des services techniques, génération de leads et mise en avant de l'expertise.",
     image: "/images/portfolio/portfolio-asi-hero.webp",
     metrics: [
-      { label: "Copropriétés", value: "150+", icon: "Users" },
-      { label: "Conformité", value: "98%", icon: "Star" },
+      { label: "Audit", value: "Gratuit", icon: "Users" },
+      { label: "Réglementation", value: "Expliquée", icon: "Star" },
       { label: "Intervention", value: "24h", icon: "Clock" },
     ],
     technologies: ["Site Vitrine", "UX B2B", "Génération Leads"],
@@ -225,7 +225,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/portfolio/portfolio-institut-nomad-hero.webp",
     metrics: [
       { label: "Pôles", value: "3", icon: "Star" },
-      { label: "Satisfaction", value: "95%", icon: "TrendingUp" },
+      { label: "Inscription", value: "En ligne", icon: "TrendingUp" },
       { label: "Autonomie", value: "Admin", icon: "Users" },
     ],
     technologies: ["Site Vitrine", "Design Institutionnel", "UX Contact"],
@@ -266,8 +266,8 @@ export const caseStudies: CaseStudy[] = [
     description: "Landing page haut de gamme avec design immersif, copywriting émotionnel et optimisation UX pour la réservation.",
     image: "/images/portfolio/portfolio-vinoboat-hero.webp",
     metrics: [
-      { label: "Note", value: "4.9/5", icon: "Star" },
-      { label: "Clients", value: "500+", icon: "Users" },
+      { label: "Offres", value: "Détaillées", icon: "Star" },
+      { label: "Contact", value: "Direct", icon: "Users" },
       { label: "Réservation", value: "En ligne", icon: "Clock" },
     ],
     technologies: ["Landing Page", "Design Luxe", "UX Booking"],
@@ -308,7 +308,7 @@ export const caseStudies: CaseStudy[] = [
     description: "Site immersif avec design cinématographique, showreel vidéo et portfolio créatif premium.",
     image: "/images/portfolio/portfolio-filmreel-hero.webp",
     metrics: [
-      { label: "Impact", value: "Wow", icon: "Star" },
+      { label: "Design", value: "Sur mesure", icon: "Star" },
       { label: "Projets", value: "Portfolio", icon: "TrendingUp" },
       { label: "Booking", value: "En ligne", icon: "Clock" },
     ],
@@ -325,8 +325,8 @@ export const caseStudies: CaseStudy[] = [
     iconColor: "text-rose-700",
     sector: "E-commerce / Art",
     client: "Art des Roses",
-    title: "E-commerce artistique pour vente d'oeuvres",
-    description: "Site e-commerce avec design artistique immersif, catalogue d'oeuvres et parcours d'achat optimisé.",
+    title: "E-commerce artistique pour vente d'œuvres",
+    description: "Site e-commerce avec design artistique immersif, catalogue d'œuvres et parcours d'achat optimisé.",
     image: "/images/portfolio/portfolio-artdesroses-hero.webp",
     metrics: [
       { label: "Galerie", value: "24/7", icon: "Clock" },
@@ -371,7 +371,7 @@ export const caseStudies: CaseStudy[] = [
     description: "Landing page immersive avec design dynamique, présentation du spectacle et optimisation pour la réservation.",
     image: "/images/portfolio/portfolio-spectacle-hero.webp",
     metrics: [
-      { label: "Impact", value: "Immersif", icon: "Star" },
+      { label: "Dates", value: "En ligne", icon: "Star" },
       { label: "Réservation", value: "En ligne", icon: "TrendingUp" },
       { label: "Promotion", value: "Digital", icon: "Clock" },
     ],
@@ -414,7 +414,7 @@ export const caseStudies: CaseStudy[] = [
       "Site vitrine avec demande de devis guidée en 4 étapes, mise en avant de l'aide d'État 50% et couverture Paris & Île-de-France.",
     image: "/images/portfolio/portfolio-jsm-hero.webp",
     metrics: [
-      { label: "Avis clients", value: "4,9/5", icon: "Star" },
+      { label: "Aide d'État", value: "50 %", icon: "Star" },
       { label: "Devis", value: "Sous 24h", icon: "Clock" },
       { label: "Zone", value: "Paris & IDF", icon: "Globe" },
     ],
@@ -529,7 +529,7 @@ export const fullCaseStudies: Record<string, FullCaseStudy> = {
     chartData: [{ name: "Visibilite", before: 15, after: 85 }, { name: "Commandes", before: 0, after: 100 }, { name: "Temps gagne", before: 20, after: 80 }],
     challenge: "Funestore operait uniquement en B2B traditionnel sans aucune presence digitale.",
     solution: "Nous avons concu une plateforme e-commerce B2B complete avec un design professionnel adapte a ce secteur sensible, un catalogue structure pour l'achat rapide, un espace client reserve aux professionnels avec tarifs degressifs.",
-    metrics: [{ label: "Digitalisation", value: "100%", description: "Passage complet au digital" }, { label: "Catalogue", value: "24/7", description: "Accessible en permanence" }, { label: "Reductions", value: "-30%", description: "Tarifs competitifs pour pros" }, { label: "Commandes", value: "En ligne", description: "Gain de temps operationnel" }],
+    metrics: [{ label: "Catalogue", value: "En ligne", description: "Consultable par les professionnels" }, { label: "Catalogue", value: "24/7", description: "Accessible en permanence" }, { label: "Espace pro", value: "Réservé", description: "Accès professionnel avec compte" }, { label: "Commandes", value: "En ligne", description: "Gain de temps operationnel" }],
     timeline: [{ phase: "Analyse", duration: "2 semaines", description: "Comprehension de l'ecosysteme funeraire" }, { phase: "Design", duration: "3 semaines", description: "Design professionnel adapte" }, { phase: "Developpement", duration: "5 semaines", description: "Plateforme e-commerce avec espace pro" }, { phase: "Lancement", duration: "1 semaine", description: "Mise en ligne et formation" }],
     results: "Funestore a reussi sa digitalisation complete, offrant un catalogue accessible 24/7 aux professionnels.",
     testimonial: "Reactivite, competence, flexibilite. J'ai adore travailler avec ConvertiLab. Billel a pris le temps de bien comprendre notre ecosysteme.",
@@ -543,7 +543,7 @@ export const fullCaseStudies: Record<string, FullCaseStudy> = {
     chartData: [{ name: "Engagement", before: 15, after: 75 }, { name: "Conversion", before: 2, after: 12 }, { name: "Credibilite", before: 30, after: 95 }],
     challenge: "PapaPret proposait une formation unique pour les futurs papas mais manquait d'un support digital impactant pour convertir les visiteurs en inscrits.",
     solution: "Nous avons cree une landing page haute conversion avec une structure marketing eprouvee, un copywriting oriente vente, des sections persuasives avec preuves sociales.",
-    metrics: [{ label: "Papas formes", value: "15K+", description: "Communaute grandissante" }, { label: "Satisfaction", value: "4.9/5", description: "Note moyenne" }, { label: "Livraison", value: "24h", description: "Projet livre en un temps record" }, { label: "Prix", value: "150eur", description: "Formation accessible" }],
+    metrics: [{ label: "Programme", value: "En ligne", description: "Parcours présenté étape par étape" }, { label: "Paiement", value: "Sécurisé", description: "Inscription et règlement en ligne" }, { label: "Livraison", value: "24h", description: "Projet livre en un temps record" }, { label: "Prix", value: "150eur", description: "Formation accessible" }],
     timeline: [{ phase: "Strategie", duration: "1 jour", description: "Comprehension du marche" }, { phase: "Copywriting", duration: "1 jour", description: "Redaction persuasive" }, { phase: "Design & Dev", duration: "1 jour", description: "Creation et integration" }, { phase: "Optimisation", duration: "En continu", description: "Tests et optimisation" }],
     results: "PapaPret dispose d'un tunnel de vente structure et impactant.",
     testimonial: "Bilel est un pro qui comprend votre projet. Il a realise mon projet en 24 heures, un resultat qui correspond a 100% a mes attentes.",
@@ -600,9 +600,9 @@ export const fullCaseStudies: Record<string, FullCaseStudy> = {
     challenge: "Eleva Conciergerie avait besoin d'un site à la hauteur de son positionnement premium pour convaincre les propriétaires de lui confier la gestion de leurs biens en location courte durée. Le marché étant très concurrentiel, il fallait se démarquer visuellement et inspirer confiance.",
     solution: "Nous avons créé un site au design luxueux avec un tunnel de conversion optimisé : estimation gratuite des revenus, preuves sociales (+50 propriétaires accompagnés, 4.9/5), copywriting persuasif et CTAs stratégiques. Le tout avec une expérience mobile impeccable.",
     metrics: [
-      { label: "Propriétaires", value: "+50", description: "Accompagnés avec succès" },
-      { label: "Satisfaction", value: "4.9/5", description: "Sur +50 avis clients" },
-      { label: "Réponse", value: "24h", description: "Délai de réponse garanti" },
+      { label: "Gestion", value: "Clé en main", description: "Offre présentée de bout en bout" },
+      { label: "Contact", value: "Formulaire", description: "Demande en quelques champs" },
+      { label: "Réponse", value: "24h", description: "Délai de réponse annoncé" },
       { label: "Engagement", value: "0", description: "Sans engagement" },
     ],
     timeline: [
@@ -664,9 +664,9 @@ export const fullCaseStudies: Record<string, FullCaseStudy> = {
     challenge: "Alliance Sécurité Incendie, spécialiste de la sécurité incendie pour copropriétés en Île-de-France, avait besoin d'un site professionnel pour présenter son expertise technique et générer des demandes d'audit auprès des syndics et copropriétés.",
     solution: "Nous avons créé un site vitrine B2B avec un design professionnel, une structuration claire des services (inspection, conformité, ingénierie), des CTAs optimisés (audit gratuit, appel direct), et une mise en avant des chiffres clés : 150+ copropriétés accompagnées, 98% de conformité, intervention en 24h.",
     metrics: [
-      { label: "Copropriétés", value: "150+", description: "Accompagnées avec succès" },
-      { label: "Conformité", value: "98%", description: "Taux de conformité atteint" },
-      { label: "Intervention", value: "24h", description: "Délai d'intervention garanti" },
+      { label: "Audit", value: "Gratuit", description: "Demande d'audit en ligne" },
+      { label: "Réglementation", value: "Expliquée", description: "Obligations détaillées par type de bâtiment" },
+      { label: "Intervention", value: "24h", description: "Délai d'intervention annoncé" },
       { label: "Devis", value: "Gratuit", description: "Audit sans engagement" },
     ],
     timeline: [
@@ -761,7 +761,7 @@ export const fullCaseStudies: Record<string, FullCaseStudy> = {
     solution: "Nous avons créé un site institutionnel moderne avec une structuration claire des pôles éducatifs, une mise en avant de la pédagogie alternative, des CTAs optimisés pour la prise de contact (parents/élèves) et un back-office permettant une grande autonomie dans la gestion des contenus.",
     metrics: [
       { label: "Pôles éducatifs", value: "3", description: "Accompagnement structuré" },
-      { label: "Satisfaction", value: "95%", description: "Parents et jeunes satisfaits" },
+      { label: "Inscription", value: "En ligne", description: "Demande d'inscription simplifiée" },
       { label: "Intervenants", value: "10+", description: "Experts mobilisés" },
       { label: "Autonomie", value: "100%", description: "Gestion admin autonome" },
     ],

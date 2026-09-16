@@ -25,22 +25,22 @@ const PortfolioHeader = () => {
           <div className="flex items-center justify-center gap-1 mb-0.5">
             <Users className="w-4 h-4 text-primary" />
           </div>
-          <div className="text-2xl font-black text-foreground">+50</div>
-          <div className="text-xs text-muted-foreground">Clients</div>
+          <div className="text-2xl font-black text-foreground">150+</div>
+          <div className="text-xs text-muted-foreground">Clients accompagnés</div>
         </div>
         <div className="text-center">
           <div className="flex items-center justify-center gap-1 mb-0.5">
             <TrendingUp className="w-4 h-4 text-green-500" />
           </div>
-          <div className="text-2xl font-black text-foreground">+280%</div>
-          <div className="text-xs text-muted-foreground">CA moyen</div>
+          <div className="text-2xl font-black text-foreground">2 semaines</div>
+          <div className="text-xs text-muted-foreground">Site livré</div>
         </div>
         <div className="text-center">
           <div className="flex items-center justify-center gap-1 mb-0.5">
             <Star className="w-4 h-4 text-yellow-500" />
           </div>
-          <div className="text-2xl font-black text-foreground">4.9/5</div>
-          <div className="text-xs text-muted-foreground">Satisfaction</div>
+          <div className="text-2xl font-black text-foreground">4,9/5</div>
+          <div className="text-xs text-muted-foreground">sur 15 avis</div>
         </div>
       </div>
     </div>

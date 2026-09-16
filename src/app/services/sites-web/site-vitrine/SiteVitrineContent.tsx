@@ -1,207 +1,840 @@
-"use client";
-
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, CheckCircle, Clock, Search, Palette, Globe, Users, Star, Shield, RotateCcw, Lock, Headphones, Phone, Award } from "lucide-react";
-import ServiceCaseStudies from "@/components/services/ServiceCaseStudies";
-import { SITE, PRICING } from "@/lib/constants";
+import {
+  BarChart3,
+  Briefcase,
+  CalendarCheck,
+  Check,
+  CircleHelp,
+  ClipboardCheck,
+  FileText,
+  Globe,
+  GraduationCap,
+  Hourglass,
+  Inbox,
+  KeyRound,
+  LayoutTemplate,
+  MessageSquareOff,
+  PenLine,
+  PhoneCall,
+  RefreshCw,
+  Rocket,
+  Search,
+  Server,
+  Smartphone,
+  Store,
+  Timer,
+  UserRound,
+  Users,
+  Wrench,
+} from "lucide-react";
+import { PRICING, SITE } from "@/lib/constants";
+import type { FaqItem } from "@/lib/faq-schema";
+import { caseStudies, fullCaseStudies, LIVE_SITES } from "@/data/case-studies";
+import { getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { cn } from "@/lib/utils";
+import { BorderBeam, CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import {
+  BoutonLien,
+  Comparatif,
+  CtaIntermediaire,
+  Engagements,
+  FilAriane,
+  FormulaireFinal,
+  SectionOutil,
+  DiagnosticInteractif,
+  LienDiscret,
+  PainPoints,
+  PoleAutresPoles,
+  PoleCTA,
+  PoleFAQ,
+  PolePreuve,
+  PolePrix,
+  PoleSection,
+  SectionSombre,
+  StickyCtaBar,
+  Timeline,
+  type FilArianeElement,
+  type PoleCas,
+  type TimelineEtape,
+} from "@/components/pole";
+import { getDiagnostic } from "@/lib/diagnostics/configs";
+import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
+import { CaptureSite } from "../_illustrations/CaptureSite";
 
-const features = [
-  { icon: <Palette className="w-6 h-6" />, title: "Design Sur-Mesure", description: "Un design unique qui reflete votre identite et vous differencie de la concurrence" },
-  { icon: <Search className="w-6 h-6" />, title: "SEO Optimisé", description: "Référencement naturel pour apparaitre en premiere page Google sur vos mots-cles" },
-  { icon: <Globe className="w-6 h-6" />, title: "Jusqu'a 5 Pages", description: "Accueil, services, a propos, contact, blog -- tout pour presenter votre activité" },
-  { icon: <Users className="w-6 h-6" />, title: "UX Conversion", description: "Navigation pensee pour guider vos visiteurs vers la prise de contact" },
+/**
+ * Sous-page « Site vitrine professionnel » (/services/sites-web/site-vitrine).
+ * Composant serveur : le H1, les textes, la FAQ et le maillage sont dans le
+ * HTML. Les prix viennent de PRICING, les cas réels de src/data/case-studies.ts,
+ * les liens de poles.ts. Aucun chiffre de résultat client, aucune garantie.
+ */
+
+const pole = getPole("sites-web");
+
+/** URL de la page, conservée : mot-clé principal « création site vitrine Paris ». */
+export const URL_SITE_VITRINE = "/services/sites-web/site-vitrine";
+
+/** Pages sœurs du pôle (e-commerce, landing page, refonte, application), la page courante exclue. */
+const PAGES_SOEURS = pole.sousPages.filter((p) => p.href !== URL_SITE_VITRINE);
+const [outilEstimation, outilDesign] = pole.outils;
+
+/** Ancre du formulaire final : cible des CTA de la page et de la barre collante. */
+const ANCRE_FORMULAIRE = "#formulaire";
+
+export const FIL_ARIANE_SITE_VITRINE: FilArianeElement[] = [
+  { label: "Accueil", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: pole.nomCourt, href: pole.href },
+  { label: "Site vitrine" },
 ];
 
-const includes = ["Jusqu'a 5 pages personnalisées", "Design sur-mesure unique", "Optimisation SEO complète", "Responsive mobile, tablette, desktop", "Formulaire de contact + Google Maps", "Blog intégré (optionnel)", "Hebergement 1 an inclus", "Support technique 3 mois"];
+/* ── Prix : une seule source, PRICING ───────────────────────────────────── */
 
-const processSteps = [
-  { num: "01", title: "Consultation gratuite", desc: "On echange sur vos objectifs, votre cible et votre identite. Devis detaille sous 24h." },
-  { num: "02", title: "Maquette & validation", desc: "Vous validez le design page par page. Modifications illimitees a cette étape." },
-  { num: "03", title: "Développement", desc: "Integration pixel-perfect, contenu, SEO technique et optimisation performances." },
-  { num: "04", title: "Livraison & formation", desc: "Mise en ligne, formation a l'administration, support technique inclus." },
+const euros = (montant: number) => `${montant.toLocaleString("fr-FR")}\u00a0€`;
+/** « ou 39€/mois » devient « ou 39 €/mois », sans changer le chiffre. */
+const mensualite = (texte: string) => texte.replace(/(\d)€/g, "$1\u00a0€");
+const ETALE = "paiement étalé, pas d'abonnement";
+
+export const PRIX_VITRINE = euros(PRICING.vitrine.from);
+const PRIX_VITRINE_DETAIL = `${mensualite(PRICING.vitrine.monthly)}, ${ETALE}`;
+const PRIX_REFONTE = euros(PRICING.refonte.from);
+const PRIX_LANDING = euros(PRICING.landing.from);
+
+/* ── Hero : chips de réassurance, toutes vraies ─────────────────────────── */
+
+const CHIPS_HERO = [
+  { icon: Timer, label: "Devis sous 24 h" },
+  { icon: Rocket, label: "Livré en 2 semaines" },
+  { icon: CalendarCheck, label: "Paiement étalé, pas d'abonnement" },
+  { icon: KeyRound, label: "Vous êtes propriétaire du site" },
+] as const;
+
+/* ── Pour qui : quatre profils ──────────────────────────────────────────── */
+
+const PROFILS = [
+  {
+    icon: Wrench,
+    titre: "Artisans du bâtiment et dépannage",
+    texte:
+      "Plombier, électricien, paysagiste, couvreur : vos clients tapent votre métier et leur ville. Une page par prestation, un bouton devis et vos chantiers en photo.",
+  },
+  {
+    icon: Store,
+    titre: "Commerces et restaurants",
+    texte:
+      "Restaurant, salon, boutique, institut : horaires, adresse, carte ou prestations, avis Google, réservation ou itinéraire en un clic depuis le téléphone.",
+  },
+  {
+    icon: Briefcase,
+    titre: "Cabinets et professions libérales",
+    texte:
+      "Avocat, expert-comptable, ostéopathe, architecte : une présentation sobre, des domaines d'intervention clairs et une prise de rendez-vous en ligne.",
+  },
+  {
+    icon: UserRound,
+    titre: "Indépendants, coachs et associations",
+    texte:
+      "Consultant, formateur, photographe, association : un site qui explique votre offre, montre vos réalisations et inspire confiance avant le premier contact.",
+  },
 ];
 
-const testimonials = [
-  { quote: "Notre site vitrine nous apporte 80% de nos nouveaux clients. Les prospects nous trouvent sur Google et nous contactent directement.", result: "80% des nouveaux clients", name: "Pierre D.", role: "Artisan menuisier", initial: "P" },
-  { quote: "En 3 mois, notre trafic organique a ete multiplie par 5. Le site nous a permis de nous positionner comme reference dans notre secteur.", result: "Trafic x5 en 3 mois", name: "Caroline M.", role: "Avocate, Cabinet juridique", initial: "C" },
-  { quote: "Le design professionnel a completement change la perception de notre cabinet. Les clients nous prennent au serieux des le premier contact.", result: "+60% de demandes de devis", name: "Olivier B.", role: "Architecte d'interieur", initial: "O" },
+/* ── Les cinq pages d'un site vitrine ───────────────────────────────────── */
+
+const PAGES = [
+  {
+    titre: "Accueil",
+    texte:
+      "Ce que vous faites, pour qui, où, et le bouton pour vous contacter, visibles sans faire défiler. Vos avis et vos réalisations juste en dessous.",
+  },
+  {
+    titre: "Prestations",
+    texte:
+      "Une section ou une page par prestation, avec les questions que vos clients posent vraiment et un appel à l'action à chaque fois.",
+  },
+  {
+    titre: "À propos",
+    texte:
+      "Votre parcours, votre équipe, vos certifications, votre zone d'intervention : tout ce qui rassure avant le premier appel.",
+  },
+  {
+    titre: "Avis et réalisations",
+    texte:
+      "Vos avis Google reliés à votre fiche, vos chantiers, vos plats ou vos créations en photo. La preuve avant la promesse.",
+  },
+  {
+    titre: "Contact",
+    texte:
+      "Formulaire relié à votre email ou à votre CRM, numéro cliquable, carte, horaires et, si vous le souhaitez, prise de rendez-vous en ligne.",
+  },
 ];
 
-const guarantees = [
-  { icon: <RotateCcw className="w-5 h-5" />, title: "Satisfait ou retravaille", desc: "On retravaille gratuitement si le résultat ne correspond pas au brief valide." },
-  { icon: <Lock className="w-5 h-5" />, title: "Prix fixe garanti", desc: "Le devis signe est le prix final. Aucun coût cache, aucune surprise." },
-  { icon: <Shield className="w-5 h-5" />, title: "Livraison 10-15 jours", desc: "Délai garanti. 10% de remise en cas de retard de notre fait." },
-  { icon: <Headphones className="w-5 h-5" />, title: "Support 3 mois", desc: "Support technique inclus pendant 3 mois. Reponse sous 24h." },
+/* ── Tout est compris dans le prix : huit items vrais ───────────────────── */
+
+const INCLUS = [
+  {
+    icon: Smartphone,
+    titre: "Design sur mesure, mobile d'abord",
+    texte: "Pas de gabarit acheté : une mise en page dessinée pour votre activité et lisible sur téléphone.",
+  },
+  {
+    icon: PenLine,
+    titre: "Textes écrits avec vos mots",
+    texte: "Vos pages rédigées à partir du diagnostic et des questions de vos clients. Vous relisez, vous validez.",
+  },
+  {
+    icon: Search,
+    titre: "Référencement de base",
+    texte: "Titres, balises, vitesse, plan du site, données structurées, fiche Google reliée : les bases pour être trouvé sur votre ville.",
+  },
+  {
+    icon: Inbox,
+    titre: "Formulaire relié à votre email ou à votre CRM",
+    texte: "Les demandes arrivent au bon endroit, avec prise de rendez-vous en ligne et relances automatiques si vous le souhaitez.",
+  },
+  {
+    icon: Server,
+    titre: "Hébergement et nom de domaine configurés",
+    texte: "Mise en ligne sur un hébergement et un nom de domaine à votre nom, prêts le jour de la livraison.",
+  },
+  {
+    icon: BarChart3,
+    titre: "La mesure de ce qui compte",
+    texte: "Google Analytics et Search Console installés : vous savez combien de demandes le site vous apporte.",
+  },
+  {
+    icon: GraduationCap,
+    titre: "Formation pour modifier vos contenus",
+    texte: "Une courte formation à la livraison : vous changez vos textes et vos photos vous-même.",
+  },
+  {
+    icon: ClipboardCheck,
+    titre: "Propriété et corrections après la mise en ligne",
+    texte: "Le site, le nom de domaine et les contenus sont à vous. Les corrections après la mise en ligne sont comprises.",
+  },
+] as const;
+
+/* ── Méthode : quatre étapes avec repère temporel ───────────────────────── */
+
+const METHODE: TimelineEtape[] = [
+  {
+    repere: "Jour 1",
+    titre: "Appel de 30 minutes",
+    icon: PhoneCall,
+    texte:
+      "Votre métier, vos clients, vos prestations phares et ce que le site doit déclencher : appels, devis ou rendez-vous. Vous recevez un devis écrit sous 24 h.",
+  },
+  {
+    repere: "Sous 48 h",
+    titre: "Maquette gratuite, validée avant le code",
+    icon: LayoutTemplate,
+    texte:
+      "Vous recevez la maquette de votre page d'accueil. Vous demandez des ajustements, vous validez : rien n'est construit avant votre accord.",
+  },
+  {
+    repere: "Semaines 1 et 2",
+    titre: "Réalisation et contenus",
+    icon: Wrench,
+    texte:
+      "Les cinq pages, les textes, vos photos, le formulaire, la fiche Google reliée, le référencement technique. Vous validez page par page.",
+  },
+  {
+    repere: "Mise en ligne",
+    titre: "Formation et suivi",
+    icon: Rocket,
+    texte:
+      "Nom de domaine, mise en ligne, formation pour modifier vos textes, puis suivi des demandes reçues pour ajuster ce qui doit l'être.",
+  },
 ];
 
-const faqs = [
-  { q: "Quelle est la différence entre un site vitrine et une landing page ?", a: "Un site vitrine comporte plusieurs pages (accueil, services, a propos, contact, blog) pour presenter votre activité complète. Une landing page est une page unique optimisée pour convertir sur un objectif précis (campagne pub, lancement). Le site vitrine renforce votre credibilite globale." },
-  { q: "Combien de temps faut-il pour créer mon site vitrine ?", a: "10 a 15 jours ouvres entre le brief valide et la mise en ligne. Ce délai inclut la maquette, le développement et la mise en ligne. Nous nous engageons contractuellement sur ce délai." },
-  { q: "Mon site sera-t-il bien positionne sur Google ?", a: "Oui. Nous optimisons chaque page pour le SEO : balises meta, structure semantique, vitesse, sitemap, robots.txt. Nos clients constatent en moyenne une apparition en premiere page Google sur leurs mots-cles locaux sous 2-3 mois." },
-  { q: "Puis-je modifier le contenu moi-meme ?", a: "Absolument. Nous vous formons a l'administration de votre site et vous fournissons une documentation. Pour les modifications complexes, notre support technique est disponible pendant 3 mois." },
-  { q: "Y a-t-il des frais recurrents après la livraison ?", a: "L'hebergement de la premiere annee est inclus. Ensuite, le renouvellement coûte environ 10 euros/mois. Il n'y a aucun autre frais obligatoire." },
-  { q: "Proposez-vous le paiement en plusieurs fois ?", a: "Oui, paiement en 2 ou 3 fois sans frais : un acompte au demarrage, le solde a la livraison (ou reparti sur 2 echeances)." },
+/* ── Preuve : cas réels depuis case-studies.ts uniquement ───────────────── */
+
+const casVitrine = (slug: string): PoleCas[] => {
+  const cs = caseStudies.find((c) => c.slug === slug);
+  if (!cs || cs.category !== "site-vitrine" || !cs.testimonial) return [];
+  return [
+    {
+      nom: cs.client,
+      prestation: cs.title,
+      fait: `« ${cs.testimonial} »`,
+      // L'étude de cas n'existe que si fullCaseStudies la décrit (sinon 404).
+      href: slug in fullCaseStudies ? `/etude-de-cas/${slug}` : undefined,
+      siteHref: LIVE_SITES[slug],
+      ancre: `Lire l'étude de cas ${cs.client}`,
+    },
+  ];
+};
+
+/** Trois sites vitrines livrés, consultables, avec les mots exacts de leurs propriétaires. */
+const CAS_VITRINE: PoleCas[] = ["jsm-jardinage", "acb-renovation", "monsieur-arancini"].flatMap(casVitrine);
+
+/* ── Formulaire final : question d'étape 1 propre à cette page ──────────── */
+
+const OPTIONS_SITUATION = [
+  { value: "pas-de-site", label: "Je n'ai pas encore de site", desc: "Je pars de zéro", icon: <Globe /> },
+  { value: "page-reseaux", label: "J'ai seulement une page Facebook ou Instagram", desc: "Je veux une vraie adresse en ligne", icon: <Users /> },
+  { value: "site-a-refaire", label: "J'ai un site à refaire", desc: "Il a vieilli ou se lit mal sur téléphone", icon: <RefreshCw /> },
+  { value: "site-sans-demande", label: "J'ai un site, mais aucune demande", desc: "Je veux qu'il serve à quelque chose", icon: <Inbox /> },
+  { value: "je-ne-sais-pas", label: "Je ne sais pas encore", desc: "Nous verrons ensemble", icon: <CircleHelp /> },
 ];
+
+/* ── FAQ : la même liste alimente le JSON-LD dans page.tsx ──────────────── */
+
+export const FAQ_SITE_VITRINE: FaqItem[] = [
+  {
+    q: "Combien coûte un site vitrine professionnel ?",
+    a: `Un site vitrine professionnel coûte ${PRIX_VITRINE}, prix fixe écrit sur le devis avant de commencer, ou ${mensualite(PRICING.vitrine.monthly)} en paiement étalé. Une refonte de site existant coûte ${PRIX_REFONTE} et une landing page d'une seule page ${PRIX_LANDING}. Notre estimateur gratuit vous donne un ordre de prix en 2 minutes.`,
+  },
+  {
+    q: "En combien de temps mon site vitrine est-il livré ?",
+    a: "En 2 semaines après validation de la maquette. Le premier appel a lieu dès que vous le souhaitez, la maquette de votre page d'accueil arrive sous 48 h, puis la réalisation prend deux semaines, contenus compris. Le délai est écrit sur le devis.",
+  },
+  {
+    q: "Le paiement mensuel est-il un abonnement ?",
+    a: "Non. Le mensuel affiché est un paiement étalé du prix du site sur 24 mois. La dernière mensualité réglée, vous ne nous devez plus rien et le site reste à vous. Vous pouvez aussi régler la totalité au départ.",
+  },
+  {
+    q: "À qui appartient le site une fois livré ?",
+    a: "À vous. Le site, le nom de domaine, les textes et les images sont votre propriété. Vous recevez tous les accès à la livraison et vous restez libre de changer de prestataire quand vous le souhaitez.",
+  },
+  {
+    q: "Et si je n'ai ni textes ni photos ?",
+    a: "Ce n'est pas un problème. Nous rédigeons les textes à partir du diagnostic et de quelques questions sur votre activité, puis vous les relisez. Pour les images, nous utilisons vos photos si vous en avez, sinon des visuels choisis pour votre secteur.",
+  },
+  {
+    q: "Puis-je modifier le contenu de mon site moi-même ?",
+    a: "Oui. À la livraison, une courte formation vous montre comment changer vos textes, vos photos et vos horaires. Pour une modification plus lourde, vous nous écrivez et nous vous répondons sous 24 h.",
+  },
+  {
+    q: "Mon site vitrine sera-t-il trouvé sur Google ?",
+    a: "Chaque site vitrine est livré avec les bases du référencement : titres, balises, vitesse, plan du site, données structurées et fiche Google reliée. C'est suffisant pour votre nom et des requêtes locales peu disputées. Personne ne peut promettre une position. Pour aller plus loin, notre pôle SEO propose un forfait mensuel et un audit.",
+  },
+  {
+    q: "Quelle est la différence entre un site vitrine et une landing page ?",
+    a: "Un site vitrine comporte plusieurs pages (accueil, prestations, à propos, avis, contact) pour présenter toute votre activité et être trouvé sur Google. Une landing page est une page unique, conçue pour une campagne publicitaire et un seul objectif : la demande de contact. Beaucoup de nos clients ont les deux.",
+  },
+];
+
+/* ── Briques d'affichage ────────────────────────────────────────────────── */
+
+const LIEN_TEXTE =
+  "rounded-sm font-semibold text-primary-texte underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+
+const CARTE =
+  "rounded-2xl border border-border bg-card shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-[0_16px_32px_-20px_rgba(76,29,149,0.35)] motion-reduce:transition-none";
+
+function Chiffre({ libelle, children }: { libelle: string; children: React.ReactNode }) {
+  return (
+    <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
+      <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{libelle}</dt>
+      <dd className="text-xl font-bold tabular-nums text-foreground sm:text-2xl">{children}</dd>
+    </div>
+  );
+}
+
+/** Un site vitrine livré (artisan du bâtiment), vu dans son navigateur : vraie capture, domaine réel, deux repères de l'offre. */
+function MockupVitrine() {
+  return (
+    <CardContainer intensite={60} containerClassName="w-full" className="w-full">
+      <CardBody className="relative w-full max-w-md">
+        <CardItem translateZ={20} className="w-full">
+          <CaptureSite
+            domaine="acb-renovation.fr"
+            src="/images/portfolio/gallery-acb-fullpage-1.webp"
+            alt="Page d'accueil du site vitrine d'ACB Rénovation, entreprise de couverture et rénovation, livré par l'agence"
+            width={1000}
+            height={1295}
+            rogner
+            priority
+            legende="acb-renovation.fr : site vitrine livré par l'agence, consultable en ligne"
+            className="aspect-[16/12] rounded-xl shadow-[0_32px_64px_-32px_rgba(76,29,149,0.35)]"
+          />
+        </CardItem>
+        <CardItem
+          translateZ={60}
+          className="absolute -left-8 top-12 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg"
+        >
+          <span className="flex items-center gap-2">
+            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-100 text-purple-700">
+              <LayoutTemplate className="h-4 w-4" strokeWidth={2} />
+            </span>
+            Maquette gratuite en 48 h
+          </span>
+        </CardItem>
+        <CardItem
+          translateZ={50}
+          className="absolute -right-4 bottom-10 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg"
+        >
+          <span className="flex items-center gap-2">
+            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+              <Check className="h-4 w-4" strokeWidth={2.5} />
+            </span>
+            {PRIX_VITRINE}, prix fixe
+          </span>
+        </CardItem>
+      </CardBody>
+    </CardContainer>
+  );
+}
+
+/* ── Hero ───────────────────────────────────────────────────────────────── */
+
+function Hero() {
+  const note = Number(SITE.reviews.rating);
+  return (
+    <section className="relative isolate overflow-hidden bg-background py-14 sm:py-20 lg:py-24">
+      <HeroMesh intensite={0.9} />
+      <Spotlight />
+      <Conteneur>
+        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <div className="flex max-w-2xl flex-col">
+            <Surtitre>{SURTITRE_ZONE}</Surtitre>
+            <h1 className="text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+              Création de site vitrine à Paris et Rueil-Malmaison :{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                un site professionnel qui apporte des demandes
+              </span>
+            </h1>
+            <div className="mt-6 space-y-3 text-lg">
+              <p className="leading-relaxed text-slate-600">
+                Un site vitrine professionnel présente votre activité, vos prestations, vos avis et vos coordonnées aux
+                personnes qui vous cherchent sur Google. Nous le concevons pour les artisans, les commerces, les cabinets
+                et les indépendants, avec un seul objectif : que le visiteur vous appelle ou vous écrive.
+              </p>
+              {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
+              <p className="hidden leading-relaxed text-slate-600 sm:block">
+                {/* {" "} explicite : JSX supprime l'espace de tête d'une ligne, « 24 moisen paiement » s'affichait collé. */}
+                Prix fixe de {PRIX_VITRINE}, écrit avant de commencer, ou {mensualite(PRICING.vitrine.monthly)}{" "}
+                en paiement étalé, pas d&apos;abonnement. Maquette gratuite sous 48 h, livraison en 2 semaines.
+              </p>
+            </div>
+
+            {/* Mobile : boutons juste après le texte (order), chips ensuite ; desktop : ordre du DOM. */}
+            <ul className="order-1 mt-6 flex flex-wrap gap-2 sm:order-none sm:mt-8" aria-label="Nos engagements">
+              {CHIPS_HERO.map((chip) => {
+                const Icon = chip.icon;
+                return (
+                  <li
+                    key={chip.label}
+                    className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-border bg-white/80 px-3 py-1.5 text-sm font-medium text-foreground backdrop-blur"
+                  >
+                    <Icon className="h-4 w-4 text-purple-700" strokeWidth={2} aria-hidden="true" />
+                    {chip.label}
+                  </li>
+                );
+              })}
+            </ul>
+
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+              <BoutonLien href="/demande-maquette" label="Ma maquette gratuite en 48 h" variante="primaire" />
+              <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
+            </div>
+            <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
+              Vous hésitez sur le budget ?{" "}
+              <Link href={outilEstimation.href} className={LIEN_TEXTE}>
+                Estimez le prix de votre site en 2 minutes
+              </Link>{" "}
+              avec notre outil gratuit.
+            </p>
+          </div>
+
+          {/* Illustration : un site vitrine client réel dans son navigateur, en perspective légère (masquée sous lg). */}
+          <div className="hidden lg:block">
+            <MockupVitrine />
+          </div>
+        </div>
+
+        {/* Trois chiffres, rendus côté serveur, animés à l'entrée. */}
+        <dl className="mt-10 grid max-w-3xl grid-cols-3 gap-2 sm:mt-12 sm:gap-4">
+          <Chiffre libelle="clients accompagnés">
+            <NumberTicker value={150} />+
+          </Chiffre>
+          <Chiffre libelle={`sur ${SITE.reviews.count} avis`}>
+            <NumberTicker value={note} decimalPlaces={1} delay={0.15} />
+            <span className="text-lg font-semibold text-muted-foreground">/5</span>
+          </Chiffre>
+          <Chiffre libelle="pour livrer votre site vitrine">
+            <NumberTicker value={2} delay={0.3} /> semaines
+          </Chiffre>
+        </dl>
+      </Conteneur>
+    </section>
+  );
+}
+
+/* ── Grilles ────────────────────────────────────────────────────────────── */
+
+function GrilleProfils() {
+  return (
+    <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {PROFILS.map((p, i) => {
+        const Icon = p.icon;
+        return (
+          <li key={p.titre} className="h-full">
+            <Reveal delay={i * 0.06} y={16} className={cn("flex h-full flex-col p-5", CARTE)}>
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary" aria-hidden="true">
+                <Icon className="h-5 w-5" strokeWidth={1.75} />
+              </span>
+              <h3 className="mt-4 font-semibold text-foreground">{p.titre}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.texte}</p>
+            </Reveal>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function ListePages() {
+  return (
+    <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      {PAGES.map((p, i) => (
+        <li key={p.titre} className={cn("h-full", i === 0 && "sm:col-span-2 lg:col-span-1")}>
+          <Reveal delay={i * 0.06} y={16} className={cn("relative flex h-full flex-col overflow-hidden p-5", CARTE, i === 0 && "border-primary/40")}>
+            {i === 0 && <BorderBeam size={80} duration={10} />}
+            <span className="text-xs font-semibold uppercase tracking-wide text-purple-700">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <h3 className="mt-2 text-lg font-semibold text-foreground">{p.titre}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.texte}</p>
+          </Reveal>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+function GrilleInclus() {
+  return (
+    <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {INCLUS.map((item, i) => {
+        const Icon = item.icon;
+        return (
+          <li key={item.titre} className="h-full">
+            <Reveal delay={i * 0.05} y={16} className={cn("group flex h-full flex-col p-5", CARTE)}>
+              <span
+                className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white motion-reduce:transition-none"
+                aria-hidden="true"
+              >
+                <Icon className="h-5 w-5" strokeWidth={1.75} />
+              </span>
+              <h3 className="mt-4 font-semibold text-foreground">{item.titre}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.texte}</p>
+            </Reveal>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function PagesSoeurs() {
+  return (
+    <div className="grid gap-4 sm:grid-cols-2">
+      {PAGES_SOEURS.map((p, i) => (
+        <Reveal key={p.href} delay={i * 0.06} y={16} className={cn("flex items-center justify-between gap-4 p-5", CARTE)}>
+          <LienDiscret href={p.href} label={p.label} className="text-base" />
+        </Reveal>
+      ))}
+    </div>
+  );
+}
+
+/* ── Page ───────────────────────────────────────────────────────────────── */
+
+const DIAGNOSTIC = getDiagnostic("sites-web-site-vitrine")!;
 
 export default function SiteVitrineContent() {
   return (
-    <main className="pt-16">
-      <div className="container mx-auto px-4 sm:px-6 py-4">
-        <Breadcrumb><BreadcrumbList>
-          <BreadcrumbItem><BreadcrumbLink asChild><Link href="/">Accueil</Link></BreadcrumbLink></BreadcrumbItem><BreadcrumbSeparator />
-          <BreadcrumbItem><BreadcrumbLink asChild><Link href="/services">Services</Link></BreadcrumbLink></BreadcrumbItem><BreadcrumbSeparator />
-          <BreadcrumbItem><BreadcrumbLink asChild><Link href="/services/sites-web">Sites Web</Link></BreadcrumbLink></BreadcrumbItem><BreadcrumbSeparator />
-          <BreadcrumbItem><BreadcrumbPage>Site Vitrine</BreadcrumbPage></BreadcrumbItem>
-        </BreadcrumbList></Breadcrumb>
-      </div>
+    <div className="pt-16">
+      <FilAriane elements={FIL_ARIANE_SITE_VITRINE} />
 
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto px-4 sm:px-6"><div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6 animate-pulse"><span className="w-2 h-2 rounded-full bg-accent" /><span className="text-sm font-semibold text-accent">3 creneaux disponibles ce mois-ci</span></div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">Un Site Vitrine Qui <span className="text-primary">Attire Vos Clients Ideaux</span></h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Nos clients recoivent en moyenne <strong className="text-foreground">3x plus de demandes de contact</strong> après la mise en ligne. Design sur-mesure, SEO inclus.</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-lg"><Link href="/contact">Obtenir mon devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link></Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6"><Link href="/portfolio">Voir nos realisations</Link></Button>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2"><div className="flex -space-x-1">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div><span className="font-medium text-foreground">4.9/5</span><span>sur 15 avis</span></div>
-            <div className="flex items-center gap-2"><Users className="w-4 h-4 text-primary" /><span><strong className="text-foreground">+50</strong> clients satisfaits</span></div>
-            <div className="flex items-center gap-2"><Award className="w-4 h-4 text-primary" /><span>Satisfaction <strong className="text-foreground">garantie</strong></span></div>
-          </div>
-        </div></div>
-      </section>
+      <Hero />
 
-      <section className="py-10 bg-primary"><div className="container mx-auto px-4 sm:px-6"><div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-        {[{ value: "10-15j", label: "Délai de livraison" }, { value: "5 pages", label: "Personnalisees" }, { value: "Top Google", label: "SEO optimisé" }, { value: "3 mois", label: "Support inclus" }].map((m, i) => (
-          <div key={i}><p className="text-3xl sm:text-4xl font-black text-primary-foreground">{m.value}</p><p className="text-sm text-primary-foreground/70 mt-1">{m.label}</p></div>
-        ))}
-      </div></div></section>
+      {/* Diagnostic gratuit de la page, juste après le hero (fond gris : la section « pour qui » est blanche). */}
+      <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez} fond="gris">
+        <DiagnosticInteractif diagnostic={DIAGNOSTIC} page={URL_SITE_VITRINE} />
+      </SectionOutil>
 
-      <section className="py-20"><div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-14"><h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Pourquoi un site vitrine professionnel change tout ?</h2><p className="text-muted-foreground max-w-2xl mx-auto">80% des consommateurs recherchent une entreprise en ligne avant de la contacter. Sans site, vous perdez des clients chaque jour.</p></div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((f, i) => (
-          <div key={i} className="p-6 rounded-2xl border border-border bg-card hover:shadow-md transition-shadow text-center"><div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">{f.icon}</div><h3 className="font-bold text-foreground mb-2">{f.title}</h3><p className="text-sm text-muted-foreground">{f.description}</p></div>
-        ))}</div>
-      </div></section>
+      <PoleSection
+        id="pour-qui"
+        surtitre="Pour qui"
+        titre="À qui s'adresse un site vitrine professionnel ?"
+        intro="À toute entreprise dont les clients cherchent un prestataire sur Google avant d'appeler. Quatre profils reviennent le plus souvent."
+      >
+        <GrilleProfils />
+        <Reveal className="mx-auto mt-10 max-w-3xl text-center">
+          <p className="leading-relaxed text-muted-foreground">
+            Nous recevons à Rueil-Malmaison (92) et nous travaillons en rendez-vous ou en visio avec les entreprises de
+            Paris et de toute l&apos;Île-de-France, ainsi que partout en France. Voir notre{" "}
+            <Link href={pole.pageVille.href} className={LIEN_TEXTE}>
+              agence web à Rueil-Malmaison
+            </Link>{" "}
+            et notre{" "}
+            <Link href="/agence-web/paris" className={LIEN_TEXTE}>
+              agence web à Paris
+            </Link>
+            .
+          </p>
+        </Reveal>
+      </PoleSection>
 
-      <section className="py-20 bg-muted/30"><div className="container mx-auto px-4 sm:px-6"><div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-        <div><h2 className="text-3xl font-bold text-foreground mb-6">Tout est inclus, sans surprise</h2><p className="text-muted-foreground mb-8">Design, développement, SEO, hebergement et support : tout est compris dans le prix.</p>
-          <div className="grid sm:grid-cols-2 gap-3">{includes.map((item, i) => (<div key={i} className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-1" /><span className="text-sm text-foreground">{item}</span></div>))}</div></div>
-        <div className="w-full max-w-md mx-auto"><div className="p-8 rounded-2xl border-2 border-primary bg-card shadow-xl relative">
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2"><span className="px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wide">Le plus populaire</span></div>
-          <div className="text-center mb-6"><p className="text-4xl font-black text-foreground">{PRICING.vitrine.label}</p><p className="text-sm text-muted-foreground mt-1">Prix fixe, sans surprise</p></div>
-          <div className="flex items-center justify-center gap-2 mb-4"><Clock className="w-4 h-4 text-primary" /><span className="text-sm font-medium text-foreground">Livraison : 10-15 jours</span></div>
-          <div className="flex flex-wrap gap-2 justify-center mb-6">{["PME & artisans", "Professions liberales", "Restaurants"].map((tag, i) => (<span key={i} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">{tag}</span>))}</div>
-          <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-base"><Link href="/contact">Demander mon devis gratuit <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
-          <p className="text-center text-xs text-muted-foreground mt-3">Paiement en 2-3x sans frais</p>
-        </div></div>
-      </div></div></section>
+      <Reveal y={16}>
+        <PainPoints
+          id="constat"
+          surtitre="Le constat"
+          titre="Pourquoi votre activité a-t-elle besoin d'un site vitrine professionnel ?"
+          intro="Trois situations que nous rencontrons le plus souvent au premier appel."
+          points={[
+            {
+              icon: MessageSquareOff,
+              titre: "Une page Facebook à la place d'un site",
+              texte:
+                "Vos clients tombent sur une page peu mise à jour, sans vos prestations ni vos tarifs, et vous dépendez d'un réseau qui décide qui voit vos publications.",
+            },
+            {
+              icon: Hourglass,
+              titre: "Un site fait il y a des années",
+              texte:
+                "Il se lit mal sur téléphone, charge lentement et affiche des textes datés. Le visiteur repart avant d'avoir trouvé votre numéro.",
+            },
+            {
+              icon: Inbox,
+              titre: "Un site qui n'apporte aucune demande",
+              texte:
+                "Il existe, mais sans formulaire clair, sans avis, sans preuve de votre travail. Le téléphone ne sonne jamais grâce à lui.",
+            },
+          ]}
+        />
+      </Reveal>
 
-      {/* POURQUOI SITE VITRINE PRO */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <h2 className="text-3xl font-bold text-foreground mb-6 text-center">Qu&apos;est-ce qu&apos;un site vitrine professionnel en 2026 ?</h2>
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>Un site vitrine est votre vitrine digitale permanente : disponible <strong>24h/24, 7j/7</strong>, il présente votre activité, vos services, vos réalisations et vos coordonnées aux prospects qui vous cherchent en ligne. Contrairement à un profil sur les réseaux sociaux, il vous appartient entièrement.</p>
-              <p>En 2026, <strong>87% des consommateurs</strong> consultent internet avant de contacter une entreprise locale. Si vous n&apos;avez pas de site web professionnel — ou si le vôtre est daté, lent ou non-responsive — vous perdez des clients chaque jour au profit de vos concurrents qui ont fait ce choix.</p>
-              <p>Chez ConvertiLab, nous créons des sites vitrines avec <strong>Next.js</strong>, la technologie utilisée par les plus grandes marques mondiales. Résultat : des sites ultra-rapides (score PageSpeed 90+), parfaitement optimisés pour Google, et dont vous êtes propriétaire à 100%.</p>
-              <p>Un site vitrine bien conçu génère en moyenne <strong>3 à 8 demandes de devis par mois</strong> pour nos clients artisans, commerçants et professions libérales. C&apos;est un commercial qui travaille pour vous sans jamais prendre de vacances.</p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-foreground">Site vitrine vs autres solutions</h3>
-              <div className="space-y-2">
-                {[
-                  { label: "Vous appartient à 100%", vitrine: "✅ Oui", rs: "❌ Non" },
-                  { label: "Visible sur Google", vitrine: "✅ SEO natif", rs: "⚠️ Limité" },
-                  { label: "Image professionnelle", vitrine: "✅ Premium", rs: "❌ Générique" },
-                  { label: "Indépendant des algorithmes", vitrine: "✅ Oui", rs: "❌ Non" },
-                  { label: "Performance & vitesse", vitrine: "✅ 90+ PageSpeed", rs: "⚠️ Variable" },
-                  { label: "Données visiteurs", vitrine: "✅ Analytics complet", rs: "⚠️ Partiel" },
-                ].map((row, i) => (
-                  <div key={i} className="grid grid-cols-3 text-sm p-3 bg-gray-50 rounded-lg">
-                    <span className="text-gray-700">{row.label}</span>
-                    <span className="text-green-600 font-medium">{row.vitrine}</span>
-                    <span className="text-gray-400">{row.rs}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs text-gray-400">Comparaison : site vitrine pro vs présence uniquement sur réseaux sociaux</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PoleSection
+        id="pages"
+        surtitre="Ce que nous créons"
+        titre="Que contient un site vitrine professionnel livré par ConvertiLab ?"
+        intro="Jusqu'à cinq pages, chacune avec un rôle précis, écrites avec vos mots et conçues pour que le visiteur passe à l'action."
+      >
+        <ListePages />
+        <Reveal className="mx-auto mt-10 max-w-3xl text-center">
+          <p className="leading-relaxed text-muted-foreground">
+            Besoin d&apos;un blog, d&apos;une page par ville ou d&apos;une galerie plus large ? Nous l&apos;ajoutons au devis, à
+            prix écrit. Vous avez déjà un site ?{" "}
+            <Link href={outilDesign.href} className={LIEN_TEXTE}>
+              {outilDesign.label}
+            </Link>{" "}
+            en 60 secondes : vous saurez s&apos;il faut le retoucher ou le refaire.
+          </p>
+        </Reveal>
+      </PoleSection>
 
-      {/* TECHNOLOGIES */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-4">Les technologies qui font la différence</h2>
-          <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">Tous nos sites vitrines sont développés avec les technologies les plus performantes du marché, utilisées par Vercel, Notion et les licornes de la tech.</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { tech: "Next.js 15", role: "Framework React dernière génération", benefit: "Vitesse de chargement × 4 vs WordPress" },
-              { tech: "Tailwind CSS", role: "Design system moderne", benefit: "Cohérence visuelle parfaite sur tous les écrans" },
-              { tech: "Vercel CDN", role: "Hébergement mondial", benefit: "Latence < 100ms depuis n'importe où en France" },
-              { tech: "Framer Motion", role: "Animations fluides", benefit: "Expérience premium qui inspire confiance" },
-            ].map((t, i) => (
-              <div key={i} className="bg-white rounded-xl p-5 border border-gray-200 text-left">
-                <div className="font-black text-purple-600 text-lg mb-1">{t.tech}</div>
-                <div className="text-sm text-gray-500 mb-2">{t.role}</div>
-                <div className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded font-medium">{t.benefit}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PoleSection
+        id="inclus"
+        fond="gris"
+        surtitre="Tout est compris dans le prix"
+        titre={`Qu'est-ce qui est inclus dans les ${PRIX_VITRINE} d'un site vitrine ?`}
+        intro="Un site vitrine qui convertit ne se résume pas à un joli design. Voici ce qui est compris dans le prix, sans supplément en cours de route."
+      >
+        <GrilleInclus />
+      </PoleSection>
 
-      <section className="py-20"><div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Votre site vitrine en 4 étapes</h2><p className="text-muted-foreground">Un processus clair et prévisible, du premier échange à la mise en ligne.</p></div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">{processSteps.map((s, i) => (
-          <div key={i} className="relative text-center"><div className="text-5xl font-black text-primary/15 mb-2">{s.num}</div><h3 className="text-lg font-bold text-foreground mb-2">{s.title}</h3><p className="text-sm text-muted-foreground">{s.desc}</p>{i < processSteps.length - 1 && <div className="hidden lg:block absolute top-8 -right-4 w-8 text-primary/30 text-2xl">&rarr;</div>}</div>
-        ))}</div>
-      </div></section>
+      <CtaIntermediaire
+        id="cta-maquette"
+        titre="Vous voulez voir votre site vitrine avant de vous engager ?"
+        texte="Demandez une maquette gratuite de votre page d'accueil : vous la recevez sous 48 h et vous validez le design avant la moindre ligne de code."
+        bouton={{ href: "/demande-maquette", label: "Ma maquette gratuite en 48 h" }}
+        alternativeLabel="ou appelez-nous au"
+      />
 
-      <section className="py-20 bg-muted/30"><div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12"><div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 mb-4"><Shield className="w-4 h-4 text-green-600" /><span className="text-sm font-semibold text-green-700 dark:text-green-300">Zero risque</span></div><h2 className="text-3xl font-bold text-foreground mb-4">Nos garanties</h2><p className="text-muted-foreground">Vous ne prenez aucun risque en travaillant avec nous.</p></div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">{guarantees.map((g, i) => (
-          <div key={i} className="text-center p-6 rounded-2xl border border-border bg-card hover:shadow-md transition-shadow"><div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-4 text-green-600">{g.icon}</div><h3 className="font-bold text-foreground mb-2">{g.title}</h3><p className="text-sm text-muted-foreground">{g.desc}</p></div>
-        ))}</div>
-      </div></section>
+      <SectionSombre
+        id="methode"
+        surtitre="Notre méthode"
+        titre="Comment créons-nous votre site vitrine en 2 semaines ?"
+        intro="Quatre étapes, toujours les mêmes, un seul interlocuteur du premier appel à la mise en ligne, et une maquette validée avant le code."
+      >
+        <Reveal y={16}>
+          <Timeline etapes={METHODE} sombre />
+        </Reveal>
+      </SectionSombre>
 
-      <ServiceCaseStudies category="site-vitrine" title="Nos sites vitrines realises" subtitle="Decouvrez les sites vitrines que nous avons créés pour nos clients" max={6} />
+      <PolePreuve
+        id="preuve"
+        surtitre="Preuve"
+        titre="Des sites vitrines que vous pouvez consulter, des clients que vous pouvez lire"
+        texte={[
+          "Nous ne publions pas de chiffres que nous ne pouvons pas prouver. Voici trois sites vitrines livrés, que vous pouvez ouvrir maintenant, avec les mots exacts de leurs propriétaires.",
+          "ADSB Wissembourg, en Alsace, en fait aussi partie : nous travaillons partout en France, en visio.",
+        ]}
+        cas={CAS_VITRINE}
+        lien={{ href: "/portfolio", label: "Voir toutes nos réalisations de sites vitrines" }}
+        note="Citations reprises mot pour mot de nos études de cas. Aucun chiffre d'affaires n'est publié sans l'accord écrit du client."
+      />
 
-      <section className="py-20"><div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Résultats concrets de nos clients</h2><p className="text-muted-foreground">Des sites vitrines qui ont transforme leur visibilité</p></div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">{testimonials.map((t, i) => (
-          <div key={i} className="p-6 rounded-2xl bg-card border border-border">
-            <div className="inline-block px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-bold mb-4">{t.result}</div>
-            <div className="flex items-center gap-1 mb-3">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
-            <p className="text-muted-foreground mb-4 italic text-sm">&quot;{t.quote}&quot;</p>
-            <div className="flex items-center gap-3"><div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">{t.initial}</div><div><p className="font-medium text-foreground text-sm">{t.name}</p><p className="text-xs text-muted-foreground">{t.role}</p></div></div>
-          </div>
-        ))}</div>
-      </div></section>
+      <Reveal y={16}>
+        <Comparatif
+          id="comparatif"
+          surtitre="Site vitrine ou page Facebook"
+          titre="Site vitrine professionnel ou simple page sur les réseaux sociaux : qu'est-ce qui change ?"
+          fond="blanc"
+          gauche={{
+            titre: "Une page Facebook ou Instagram seule",
+            items: [
+              "La page appartient au réseau, pas à vous.",
+              "Vos publications sont vues par une partie de vos abonnés, selon l'algorithme.",
+              "Pas de page par prestation ni de tarifs : le visiteur pose la question en message.",
+              "Peu de chances d'apparaître sur Google pour votre métier et votre ville.",
+              "Aucune mesure des demandes reçues.",
+            ],
+          }}
+          droite={{
+            titre: "Un site vitrine professionnel",
+            items: [
+              "Le site, le nom de domaine et les contenus sont à vous.",
+              "Visible à toute heure par toute personne qui vous cherche.",
+              "Une page par prestation, avec les réponses aux questions de vos clients.",
+              "Les bases du référencement local pour être trouvé sur votre ville.",
+              "Chaque demande comptée : vous savez ce que le site vous apporte.",
+            ],
+          }}
+          note="Les réseaux sociaux restent utiles : nous les relions au site, et notre pôle publicité s'en sert pour vous faire connaître."
+        />
+      </Reveal>
 
-      <section className="py-20 bg-muted/30"><div className="container mx-auto px-4 sm:px-6"><div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12"><h2 className="text-3xl font-bold text-foreground mb-4">Questions fréquentes</h2><p className="text-muted-foreground">Tout ce que vous devez savoir avant de vous lancer</p></div>
-        <Accordion type="single" collapsible className="space-y-3">{faqs.map((faq, i) => (
-          <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-xl px-6 bg-card"><AccordionTrigger className="text-left text-foreground font-medium hover:no-underline">{faq.q}</AccordionTrigger><AccordionContent className="text-muted-foreground leading-relaxed">{faq.a}</AccordionContent></AccordionItem>
-        ))}</Accordion>
-      </div></div></section>
+      <Reveal y={16}>
+        <Engagements
+          id="engagements"
+          surtitre="Nos engagements"
+          titre="Ce que nous nous engageons à faire, écrit sur le devis"
+          items={[
+            {
+              icon: FileText,
+              titre: "Un prix fixe écrit avant de commencer",
+              texte: `${PRIX_VITRINE} ou ${mensualite(PRICING.vitrine.monthly)}, sans supplément en cours de route.`,
+            },
+            {
+              icon: LayoutTemplate,
+              titre: "Une maquette validée avant le code",
+              texte: "Vous voyez votre page d'accueil sous 48 h et vous décidez avant que nous construisions.",
+            },
+            {
+              icon: Timer,
+              titre: "Livré en 2 semaines",
+              texte: "Après validation de la maquette, votre site vitrine est en ligne deux semaines plus tard.",
+            },
+            {
+              icon: PhoneCall,
+              titre: "Un seul interlocuteur",
+              texte: "Le fondateur, du premier appel à la mise en ligne, joignable par téléphone et par email.",
+            },
+            {
+              icon: KeyRound,
+              titre: "Vous êtes propriétaire",
+              texte: "Site, nom de domaine, textes et photos vous appartiennent, accès remis à la livraison.",
+            },
+            {
+              icon: ClipboardCheck,
+              titre: "Corrections comprises",
+              texte: "Les corrections après la mise en ligne sont incluses dans le prix.",
+            },
+          ]}
+        />
+      </Reveal>
 
-      <section className="py-20 bg-primary"><div className="container mx-auto px-4 sm:px-6 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">Prêt à créer votre site vitrine professionnel ?</h2>
-        <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto text-lg">Recevez un devis personnalisé sous 24h. Consultation gratuite, sans engagement.</p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-8 py-6"><Link href="/contact">Obtenir mon devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link></Button>
-          <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6"><a href={`tel:${SITE.phone}`}><Phone className="mr-2 w-4 h-4" />Nous appeler</a></Button>
-        </div>
-        <p className="text-primary-foreground/60 text-sm mt-6">Reponse sous 24h - Prix fixe garanti - Paiement en 3x sans frais</p>
-      </div></section>
-    </main>
+      <Reveal y={16}>
+        <PolePrix
+          id="prix"
+          surtitre="Prix et engagement"
+          titre="Combien coûte un site vitrine professionnel ?"
+          intro="Le prix ci-dessous est celui de nos devis. Le mensuel est un paiement étalé, pas un abonnement : la dernière mensualité réglée, vous ne nous devez plus rien."
+          lignes={[
+            { libelle: "Site vitrine professionnel", valeur: PRIX_VITRINE, detail: PRIX_VITRINE_DETAIL },
+            {
+              libelle: "Refonte de site internet",
+              valeur: PRIX_REFONTE,
+              detail: `${mensualite(PRICING.refonte.monthly)}, ${ETALE}. Si vous avez déjà un site à moderniser.`,
+            },
+            {
+              libelle: "Landing page",
+              valeur: PRIX_LANDING,
+              detail: `${mensualite(PRICING.landing.monthly)}, ${ETALE}. Une seule page, pour une campagne.`,
+            },
+          ]}
+          lien={{ href: ANCRE_FORMULAIRE, label: "Recevoir mon devis sous 24 h" }}
+          note="TVA non applicable, art. 293 B du CGI. Le devis est écrit et validé avant tout démarrage."
+        />
+      </Reveal>
+
+      <PoleFAQ
+        id="faq"
+        surtitre="FAQ"
+        titre="Vos questions sur la création d'un site vitrine"
+        items={FAQ_SITE_VITRINE}
+        lien={{ href: "/contact", label: "Poser une autre question" }}
+      />
+
+      <PoleSection
+        id="autres-formules"
+        fond="gris"
+        surtitre="Nos autres formules"
+        titre="Site vitrine, e-commerce, landing page, refonte ou application : quelle formule pour votre projet ?"
+        intro="Les quatre autres formules ont leur propre page, avec leur prix et leur délai."
+      >
+        <PagesSoeurs />
+        <Reveal className="mx-auto mt-8 max-w-3xl text-center">
+          <p className="leading-relaxed text-muted-foreground">
+            Toutes les formules sont comparées sur la page{" "}
+            <Link href={pole.href} className={LIEN_TEXTE}>
+              {pole.ancre}
+            </Link>
+            , et notre{" "}
+            <Link href="/services" className={LIEN_TEXTE}>
+              page des services
+            </Link>{" "}
+            présente nos quatre pôles.
+          </p>
+        </Reveal>
+      </PoleSection>
+
+      <PoleAutresPoles
+        id="autres-poles"
+        slug="sites-web"
+        surtitre="Et ensuite"
+        titre="Un site vitrine, et après ? Nos trois autres pôles"
+        intro="Selon votre situation, nous ajoutons publicité, référencement ou automatisation, avec le même interlocuteur."
+      />
+
+      <FormulaireFinal
+        id="formulaire"
+        pole="site"
+        page={URL_SITE_VITRINE}
+        surtitre="Devis gratuit"
+        titre="Votre site vitrine, chiffré sous 24 h"
+        intro="Une question, puis vos coordonnées. Vous recevez une réponse écrite sous 24 h, sans engagement."
+        question={{
+          libelle: "Où en êtes-vous aujourd'hui ?",
+          aide: "Aucune coordonnée demandée à cette étape.",
+          options: OPTIONS_SITUATION,
+        }}
+        titreEtape2="Où vous répondre ?"
+        boutonLabel="Recevoir ma réponse sous 24 h"
+        calendlyLabel="ou réservez 30 min avec le fondateur"
+        confirmation={{
+          titre: "Merci, votre demande est bien reçue.",
+          texte: "Nous vous répondons sous 24 h, par email ou par téléphone. Si vous préférez en parler de vive voix, réservez directement un créneau.",
+        }}
+      />
+
+      <PoleCTA
+        titre="Un projet de site vitrine, une question ?"
+        texte="Réservez 30 minutes, c'est gratuit et vous parlez au fondateur."
+        calendlyLabel={LABEL_CALENDLY}
+        contactLabel="Écrire à l'agence"
+        afficherTelephone
+      />
+
+      <StickyCtaBar
+        label="Devis gratuit sous 24 h"
+        href={ANCRE_FORMULAIRE}
+        mentions={["Gratuit", "Sans engagement", "Réponse sous 24 h"]}
+        formulaireId="formulaire"
+      />
+    </div>
   );
 }

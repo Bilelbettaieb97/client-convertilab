@@ -131,7 +131,7 @@ const PromoSiteWeb = () => {
     sessionIdRef.current = sid;
     void promoApi({ action: "track", session_id: sid, step: "visit", lead_id: null, metadata: {} });
 
-    const w = window as any;
+    const w = window as Window & { fbq?: (...args: unknown[]) => void; _fbqInitialized?: boolean; dataLayer?: unknown[] };
     if (typeof w.fbq === "function" && !w._fbqInitialized) {
       w._fbqInitialized = true;
       w.fbq("init", PIXEL_ID);
@@ -294,7 +294,7 @@ const PromoSiteWeb = () => {
         }
       });
       if (typeof window !== "undefined") {
-        const w = window as any;
+        const w = window as Window & { fbq?: (...args: unknown[]) => void; _fbqInitialized?: boolean; dataLayer?: unknown[] };
         if (w.dataLayer) w.dataLayer.push({ event: "promo_lead_submit" });
         if (typeof w.fbq === "function" && w._fbqInitialized) {
           w.fbq("track", "Lead", { content_name: "Promo Site Web 890€", currency: "EUR", value: 890 });
@@ -477,7 +477,7 @@ const PromoSiteWeb = () => {
                       <span className="w-1 h-1 rounded-full bg-white/30" aria-hidden="true" />
                       <span className="inline-flex items-center gap-1">
                         <ShieldCheck className="w-3 h-3 text-[#a78bfa]" aria-hidden="true" />
-                        Satisfait ou remboursé
+                        Maquette validée avant paiement
                       </span>
                     </div>
                   </header>
@@ -745,7 +745,7 @@ const PromoSiteWeb = () => {
                           Devis personnalisé sous 24h · Appel de 15 min optionnel
                         </p>
                         <p className="text-[11px] text-white/40">
-                          Sans engagement · Pas de carte bancaire requise · Réponse garantie sous 2h
+                          Sans engagement · Pas de carte bancaire requise · Réponse sous 24h
                         </p>
                       </div>
 

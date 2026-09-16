@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { supabase } from "@/lib/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Palette, CheckCircle, ArrowRight, ArrowLeft, Sparkles, User, Mail, Phone, Globe, Briefcase, FileText, Clock, Shield, Zap, Rocket, Store, Code, RefreshCw, UtensilsCrossed, Building2, Heart, ShoppingBag, Handshake, Hammer, GraduationCap, Shirt, Cpu, Users, PenTool, MousePointer2, Layers, Monitor, Layout, Type } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -81,6 +80,8 @@ export default function DemandeMaquetteClient({ children }: { children?: React.R
     }
     setIsSubmitting(true);
     try {
+      // Import à la demande : le chunk supabase-js (56 Ko gz) ne part plus avec le prefetch des liens vers cette page.
+      const { supabase } = await import("@/lib/supabase/client");
       const { error } = await supabase.from("mockup_requests" as string).insert({ name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), current_site_url: form.current_site_url.trim() || null, sector: form.sector, site_type: form.site_type, style: form.design_style || null, message: form.description.trim() || null });
       // Non-bloquant : Pipedrive est la source de verite pour le lead. Une panne
       // d'enregistrement en base ne doit pas faire perdre la demande.

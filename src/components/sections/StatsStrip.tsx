@@ -21,7 +21,7 @@ const stats = [
     value: 4.9,
     suffix: "/5",
     label: "Note Trustpilot",
-    sublabel: "15 avis vérifiés ★★★★★",
+    sublabel: "15 avis Trustpilot",
     gradient: "from-amber-400 to-orange-500",
     bg: "bg-amber-50",
     border: "border-amber-100",

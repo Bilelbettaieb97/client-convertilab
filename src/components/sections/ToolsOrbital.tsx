@@ -121,9 +121,9 @@ export default function ToolsOrbital() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight">
-              Audit gratuit : votre site web peut-il{" "}
+              Testez votre site et votre visibilité{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400">
-                faire mieux ?
+                en 60 secondes
               </span>
             </h2>
 
@@ -139,7 +139,7 @@ export default function ToolsOrbital() {
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-2xl lg:text-3xl font-black text-white">60+</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wider">Points verifies</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wider">Points de contrôle</div>
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-2xl lg:text-3xl font-black text-white">60s</div>

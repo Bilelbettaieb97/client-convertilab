@@ -1,40 +1,68 @@
 import type { Metadata } from "next";
-import { SITE, PRICING } from "@/lib/constants";
+import { PRICING, SITE, STRUCTURED_DATA, PROVIDER_ORGANISATION } from "@/lib/constants";
+import { faqPageSchema } from "@/lib/faq-schema";
+import { getPole } from "@/data/poles";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
-import SiteVitrineContent from "./SiteVitrineContent";
-import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
+import { filArianeSchema } from "@/components/pole";
+import SiteVitrineContent, { FAQ_SITE_VITRINE, FIL_ARIANE_SITE_VITRINE, URL_SITE_VITRINE } from "./SiteVitrineContent";
+
+const pole = getPole("sites-web");
+const URL = URL_SITE_VITRINE;
+
+/** ≤ 60 caractères avec le suffixe « | ConvertiLab » du gabarit. Mot-clé principal conservé : « création site vitrine Paris ». */
+const TITLE = "Création de site vitrine à Paris dès 890 €";
+const DESCRIPTION =
+  "Site vitrine professionnel à Paris et Rueil-Malmaison : 890 € ou 39 €/mois en paiement étalé, maquette gratuite sous 48 h, livré en 2 semaines. Devis 24 h.";
 
 export const metadata: Metadata = {
-  title: "Création Site Vitrine Paris | Livraison 2 semaines dès 890€",
-  description: "Création de site vitrine professionnel à Paris en 2 semaines. Design sur-mesure, SEO optimisé, prix fixe garanti. +150 clients, 4.9★. Devis gratuit sous 24h.",
-  alternates: { canonical: `${SITE.url}/services/sites-web/site-vitrine` },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: `${SITE.url}${URL}` },
   openGraph: {
-    title: "Création Site Vitrine Paris | Livraison 2 semaines dès 890€ | ConvertiLab",
-    description: "Création de site vitrine professionnel à Paris en 2 semaines. Design sur-mesure, SEO optimisé, prix fixe garanti. +150 clients, 4.9★. Devis gratuit sous 24h.",
-    url: `${SITE.url}/services/sites-web/site-vitrine`,
+    title: `${TITLE} | ${SITE.name}`,
+    description: DESCRIPTION,
+    url: `${SITE.url}${URL}`,
     type: "website",
+    locale: "fr_FR",
+    siteName: SITE.name,
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
   },
 };
 
-const schemas = [
-  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE.url },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE.url}/services` },
-    { "@type": "ListItem", "position": 3, "name": "Sites Web", "item": `${SITE.url}/services/sites-web` },
-    { "@type": "ListItem", "position": 4, "name": "Site Vitrine", "item": `${SITE.url}/services/sites-web/site-vitrine` },
-  ]},
-  { "@context": "https://schema.org", "@type": "Service", "name": "Creation Site Vitrine", "description": "Site vitrine professionnel sur-mesure, responsive et optimise SEO. Livraison en 10-15 jours.", "url": `${SITE.url}/services/sites-web/site-vitrine`, "provider": { "@type": "Organization", "name": SITE.name }, "offers": { "@type": "Offer", "price": PRICING.vitrine.from, "priceCurrency": "EUR", "availability": "https://schema.org/InStock" } },
-];
-
 export default function SiteVitrinePage() {
+  const jsonLd = [
+    filArianeSchema(FIL_ARIANE_SITE_VITRINE, URL),
+    faqPageSchema(FAQ_SITE_VITRINE),
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${SITE.url}${URL}#service`,
+      name: "Création de site vitrine professionnel",
+      serviceType: "Création de site internet",
+      description: DESCRIPTION,
+      url: `${SITE.url}${URL}`,
+      provider: PROVIDER_ORGANISATION,
+      areaServed: STRUCTURED_DATA.localBusiness.areaServed,
+      isRelatedTo: { "@type": "Service", "@id": `${SITE.url}${pole.href}#service`, name: pole.nomCourt, url: `${SITE.url}${pole.href}` },
+      // Prix affiché sur la page (hero, section prix, FAQ) : le JSON-LD reflète ce que le visiteur lit.
+      offers: {
+        "@type": "Offer",
+        price: String(PRICING.vitrine.from),
+        priceCurrency: "EUR",
+        url: `${SITE.url}${URL}#prix`,
+        description: `Site vitrine professionnel jusqu'à cinq pages, ${PRICING.vitrine.monthly.replace(/(\d)€/g, "$1 €")}, paiement étalé, pas d'abonnement. Livré en 2 semaines.`,
+      },
+    },
+  ];
+
   return (
     <div className="min-h-screen">
-      {schemas.map((s, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />)}
+      {jsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <Navigation />
       <SiteVitrineContent />
-      <RelatedServicesSection exclude={["/services/sites-web/site-vitrine"]} />
       <Footer />
     </div>
   );

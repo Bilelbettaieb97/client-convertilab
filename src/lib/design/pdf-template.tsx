@@ -164,7 +164,7 @@ export function DesignAuditPdf({ audit }: { audit: DesignAuditResult }) {
           <Text style={base.tlt}>Mois 2+ : Amelioration continue</Text>
           {recommended.length > 0
             ? recommended.slice(0, 3).map((issue, idx) => <Text key={idx} style={base.tlp}>{"\u2022"} {issue.title}</Text>)
-            : <Text style={base.tlp}>{"\u2022"} Optimiser les images et l'accessibilite</Text>
+            : <Text style={base.tlp}>{"\u2022"} Optimiser les images et l&apos;accessibilite</Text>
           }
           <Text style={base.tlp}>{"\u2022"} Realiser des tests A/B sur les CTA</Text>
           <Text style={base.tlp}>{"\u2022"} Analyser les heatmaps pour optimiser le parcours utilisateur</Text>

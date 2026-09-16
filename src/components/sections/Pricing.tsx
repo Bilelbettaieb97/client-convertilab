@@ -223,7 +223,7 @@ export default function Pricing() {
         <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600">
           <div className="flex items-center gap-2">
             <Shield className="w-4 h-4 text-green-600" />
-            <span className="font-semibold">Garantie satisfait ou remboursé</span>
+            <span className="font-semibold">Prix fixe écrit dans le devis</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-gray-300" />
           <div className="flex items-center gap-2">

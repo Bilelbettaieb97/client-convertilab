@@ -136,11 +136,11 @@ const STYLES = `
 `;
 
 type MagneticProps = React.HTMLAttributes<HTMLElement> & {
-  as?: React.ElementType;
+  as?: "a" | "button";
   href?: string;
   target?: string;
   rel?: string;
-  type?: string;
+  type?: "button" | "submit" | "reset";
   onClick?: React.MouseEventHandler<HTMLElement>;
 };
 
@@ -192,7 +192,7 @@ const Magnetic = React.forwardRef<HTMLElement, MagneticProps>(
 
     return (
       <Component
-        ref={(node: HTMLElement) => {
+        ref={(node: HTMLElement | null) => {
           (localRef as React.MutableRefObject<HTMLElement | null>).current = node;
           if (typeof forwardedRef === "function") forwardedRef(node);
           else if (forwardedRef)
@@ -213,13 +213,13 @@ const MarqueeBlock = () => (
   <div className="flex items-center space-x-10 px-4 whitespace-nowrap">
     <span>Sites livrés en 2 semaines</span>
     <span className="text-purple-400">✦</span>
-    <span>+280% de CA moyen</span>
+    <span>Paiement étalé, pas d&apos;abonnement</span>
     <span className="text-pink-400">✦</span>
     <span>SEO premium inclus</span>
     <span className="text-orange-400">✦</span>
     <span>150+ clients accompagnés</span>
     <span className="text-purple-400">✦</span>
-    <span>Garantie satisfait remboursé</span>
+    <span>Prix fixe écrit dans le devis</span>
     <span className="text-pink-400">✦</span>
     <span>Design sur-mesure</span>
     <span className="text-orange-400">✦</span>
@@ -256,9 +256,7 @@ export function CinematicFooter() {
         );
       }
 
-      const reveals = [headingRef.current, linksRef.current].filter(
-        (el): el is HTMLElement => el !== null
-      );
+      const reveals = [headingRef.current, linksRef.current].filter((el) => el !== null);
       if (reveals.length > 0) {
         gsap.fromTo(
           reveals,
@@ -327,7 +325,7 @@ export function CinematicFooter() {
           <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 mt-24 w-full max-w-5xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm text-xs font-semibold text-white/80 uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-yellow-300" />
-              3 places restantes ce mois-ci
+              Devis gratuit sous 24 h
             </div>
 
             <h2

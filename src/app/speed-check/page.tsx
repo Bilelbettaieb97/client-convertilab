@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
     locale: "fr_FR",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Audit Vitesse Gratuit — ConvertiLab",
+  name: "Audit Vitesse Gratuit : ConvertiLab",
   description: "Outil gratuit pour tester la vitesse de chargement de votre site web avec rapport PDF detaille.",
   url: `${SITE.url}/speed-check`,
   applicationCategory: "Performance Tool",
@@ -63,7 +62,7 @@ const faqItems = [
   { question: "Pourquoi mon site est-il lent ?",
     answer: "Les causes les plus fréquentes : images trop lourdes ou mal compressées, hébergement bas de gamme, thème WordPress surchargé de plugins, scripts tiers bloquants (chats, trackers), absence de cache et de CDN. Notre rapport identifie précisément lesquelles concernent votre site." },
   { question: "La vitesse influence-t-elle vraiment mon référencement Google ?",
-    answer: "Oui, doublement. Directement : les Core Web Vitals sont un critère de classement officiel. Indirectement : un site lent augmente le taux de rebond, et Google interprète ces retours utilisateurs négatifs comme un signal de faible qualité. Vitesse et SEO sont indissociables — testez les deux avec notre audit SEO gratuit." },
+    answer: "Oui, doublement. Directement : les Core Web Vitals sont un critère de classement officiel. Indirectement : un site lent augmente le taux de rebond, et Google interprète ces retours utilisateurs négatifs comme un signal de faible qualité. Vitesse et SEO sont indissociables : testez les deux avec notre audit SEO gratuit." },
   { question: "Testez-vous la version mobile ou desktop ?",
     answer: "L'analyse porte en priorité sur l'expérience mobile, car Google indexe d'abord la version mobile de votre site (mobile-first indexing) et plus de 60% du trafic est mobile. Un site rapide sur ordinateur mais lent sur smartphone perd l'essentiel de ses visiteurs." },
   { question: "Que faire si mon score de vitesse est mauvais ?",
@@ -219,7 +218,7 @@ export default function SpeedCheckPage() {
                 <strong className="text-white/80">53% des visiteurs mobiles quittent
                 un site qui met plus de 3 secondes à charger</strong>, et chaque seconde
                 supplémentaire fait chuter les conversions d&apos;environ 7%. Un site lent
-                ne fait pas fuir que vos visiteurs — il fait fuir Google : les Core Web
+                ne fait pas fuir que vos visiteurs, il fait fuir Google : les Core Web
                 Vitals sont un critère de classement officiel depuis 2021.
               </p>
               <p>
@@ -227,7 +226,7 @@ export default function SpeedCheckPage() {
                 analyse votre site comme Google le fait : temps de réponse serveur, poids
                 des pages, compression, images, scripts bloquants. En 60 secondes, vous
                 savez exactement ce qui ralentit votre site et par quoi commencer pour le
-                corriger — le détail complet arrive en PDF dans votre boîte mail.
+                corriger. Le détail complet arrive en PDF dans votre boîte mail.
               </p>
               <p>
                 Pour comprendre les leviers d&apos;optimisation, lisez notre guide{" "}
@@ -279,8 +278,8 @@ export default function SpeedCheckPage() {
                 <span className="text-yellow-400">{"\u2605\u2605\u2605\u2605\u2605"}</span>
                 <span>4.9/5 sur 15 avis</span>
               </div>
-              <div>+150 sites crees</div>
-              <div>+50 clients actifs</div>
+              <div>150+ clients accompagnés</div>
+              <div>Rueil-Malmaison (92)</div>
               <div>Certifie Google</div>
             </div>
           </div>

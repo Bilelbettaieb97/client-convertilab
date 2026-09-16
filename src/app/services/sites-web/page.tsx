@@ -1,91 +1,68 @@
 import type { Metadata } from "next";
-import { SITE, STRUCTURED_DATA } from "@/lib/constants";
+import { PRICING, SITE, STRUCTURED_DATA, PROVIDER_ORGANISATION } from "@/lib/constants";
+import { faqPageSchema } from "@/lib/faq-schema";
+import { filArianeSchema } from "@/components/pole";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
-import Link from "next/link";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import SitesWebHero from "@/components/sites-web/SitesWebHero";
-import SitesWebServices from "@/components/sites-web/SitesWebServices";
-import SitesWebProcess from "@/components/sites-web/SitesWebProcess";
-import SitesWebComparison from "@/components/sites-web/SitesWebComparison";
-import SitesWebGuarantee from "@/components/sites-web/SitesWebGuarantee";
-import SitesWebTestimonials from "@/components/sites-web/SitesWebTestimonials";
-import SitesWebFAQ from "@/components/sites-web/SitesWebFAQ";
-import SitesWebCTA from "@/components/sites-web/SitesWebCTA";
+import SitesWebContent from "./SitesWebContent";
+import { SITES_WEB_FAQ, SITES_WEB_FIL, SITES_WEB_URL, pole } from "./donnees";
+
+const URL_PAGE = `${SITE.url}${SITES_WEB_URL}`;
+
+const DESCRIPTION = `Création de site internet à Rueil-Malmaison et Paris : site vitrine ${PRICING.vitrine.from} €, landing page ${PRICING.landing.from} €, refonte, e-commerce. Livré en 2 semaines, paiement étalé.`;
 
 export const metadata: Metadata = {
-  title: "Création de Site Internet Paris : dès 490€",
-  description: "Agence web Paris & Île-de-France : landing page dès 490€, site vitrine, e-commerce. Prix fixes, livraison rapide. Devis gratuit sous 24h.",
-  alternates: { canonical: `${SITE.url}/services/sites-web` },
+  title: "Création site internet Rueil-Malmaison, Paris",
+  description: DESCRIPTION,
+  alternates: { canonical: URL_PAGE },
   openGraph: {
-    title: "Création de Site Internet Paris : dès 490€ | ConvertiLab",
-    description: "Agence web Paris & Île-de-France : landing page dès 490€, site vitrine, e-commerce. Prix fixes, livraison rapide. Devis gratuit sous 24h.",
-    url: `${SITE.url}/services/sites-web`,
+    title: `Création de site internet à Rueil-Malmaison et Paris | ${SITE.name}`,
+    description: DESCRIPTION,
+    url: URL_PAGE,
     type: "website",
+    locale: "fr_FR",
+    siteName: SITE.name,
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
   },
 };
 
-const breadcrumbSchema = {
+const offre = (name: string, url: string, price: number) => ({
+  "@type": "Offer",
+  name,
+  url: `${SITE.url}${url}`,
+  price,
+  priceCurrency: "EUR",
+  availability: "https://schema.org/InStock",
+});
+
+const serviceSchema = {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE.url },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE.url}/services` },
-    { "@type": "ListItem", "position": 3, "name": "Sites Web", "item": `${SITE.url}/services/sites-web` },
+  "@type": "Service",
+  "@id": `${URL_PAGE}#service`,
+  name: pole.nomCourt,
+  serviceType: "Création de site internet",
+  description: DESCRIPTION,
+  url: URL_PAGE,
+  provider: PROVIDER_ORGANISATION,
+  areaServed: STRUCTURED_DATA.localBusiness.areaServed,
+  offers: [
+    offre("Landing page", "/services/sites-web/landing-page", PRICING.landing.from),
+    offre("Site vitrine professionnel", "/services/sites-web/site-vitrine", PRICING.vitrine.from),
+    offre("Refonte de site internet", "/services/sites-web/refonte-site", PRICING.refonte.from),
+    offre("Site e-commerce", "/services/sites-web/site-ecommerce", PRICING.ecommerce.from),
   ],
 };
 
 export default function SitesWebPage() {
+  const jsonLd = [filArianeSchema(SITES_WEB_FIL, SITES_WEB_URL), serviceSchema, faqPageSchema(SITES_WEB_FAQ)];
+
   return (
     <div className="min-h-screen">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {jsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <Navigation />
-      <main className="pt-16">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild><Link href="/">Accueil</Link></BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild><Link href="/services">Services</Link></BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Sites Web</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
-
-        <SitesWebHero />
-        <SitesWebServices />
-        <SitesWebProcess />
-        <SitesWebComparison />
-        <SitesWebGuarantee />
-        <SitesWebTestimonials />
-        <SitesWebFAQ />
-
-        {/* Outil gratuit */}
-        <div className="container mx-auto px-4 sm:px-6 my-8">
-          <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-100">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div>
-                <p className="font-bold text-gray-900">Testez la vitesse de votre site gratuitement</p>
-                <p className="text-sm text-gray-600">Analysez les performances et obtenez des recommandations</p>
-              </div>
-              <Link href="/speed-check" className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold hover:bg-purple-700 whitespace-nowrap">
-                Tester mon site
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <SitesWebCTA />
-      </main>
+      <SitesWebContent />
       <Footer />
     </div>
   );

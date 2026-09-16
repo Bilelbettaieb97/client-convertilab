@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Devis Gratuit pour votre projet digital | ConvertiLab",
     description:
-      "Site vitrine, e-commerce, SEO, Google Ads, Meta Ads : recevez un devis détaillé et gratuit sous 24h. +150 clients accompagnés, 4.9★ Trustpilot.",
+      "Site vitrine, e-commerce, SEO, Google Ads, Meta Ads : recevez un devis détaillé et gratuit sous 24h. 150+ clients accompagnés, 4,9/5 sur 15 avis Trustpilot.",
     url: `${SITE.url}/devis`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -65,7 +65,7 @@ export default function DevisHubPage() {
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
               <span className="inline-flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-600" /> Réponse sous 24h</span>
               <span className="inline-flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-600" /> Sans engagement</span>
-              <span className="inline-flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-600" /> +150 clients accompagnés</span>
+              <span className="inline-flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-600" /> 150+ clients accompagnés</span>
             </div>
           </div>
         </section>

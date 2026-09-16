@@ -1,50 +1,59 @@
 import type { Metadata } from "next";
-import { SITE } from "@/lib/constants";
+import { SITE, STRUCTURED_DATA, PROVIDER_ORGANISATION } from "@/lib/constants";
+import { faqPageSchema } from "@/lib/faq-schema";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
-import MetaAdsContent from "./MetaAdsContent";
-import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
+import { filArianeSchema } from "@/components/pole";
+import MetaAdsContent, { FAQ_META_ADS, FIL_ARIANE_META_ADS, URL_META_ADS } from "./MetaAdsContent";
+
+const URL = URL_META_ADS;
+
+/** Title ≤ 60 caractères (le gabarit du layout ajoute « | ConvertiLab »). */
+const TITLE = "Agence Meta Ads Paris : Facebook et Instagram";
+/** Description ≤ 155 caractères. */
+const DESCRIPTION =
+  "Agence Meta Ads à Paris et Rueil-Malmaison : publicités Facebook et Instagram pilotées au coût par demande, compte et pixel à votre nom. Audit gratuit.";
 
 export const metadata: Metadata = {
-  title: "Agence Meta Ads Paris | Facebook & Instagram Ads",
-  description: "Publicités Facebook et Instagram : ciblage précis, créatifs optimisés, ROI maximisé. +150 clients, 4.9★. Audit de compte gratuit.",
-  alternates: { canonical: `${SITE.url}/services/sea/meta-ads` },
-  openGraph: { title: "Agence Meta Ads Paris | Facebook & Instagram Ads | ConvertiLab", description: "Publicités Facebook et Instagram : ciblage précis, créatifs optimisés, ROI maximisé. Audit de compte gratuit.", url: `${SITE.url}/services/sea/meta-ads`,
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: `${SITE.url}${URL}` },
+  openGraph: {
+    title: `${TITLE} | ${SITE.name}`,
+    description: DESCRIPTION,
+    url: `${SITE.url}${URL}`,
     type: "website",
-    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }] },
-};
-
-const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-  { "@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE.url },
-  { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE.url}/services` },
-  { "@type": "ListItem", "position": 3, "name": "Publicite", "item": `${SITE.url}/services/sea` },
-  { "@type": "ListItem", "position": 4, "name": "Meta Ads", "item": `${SITE.url}/services/sea/meta-ads` },
-]};
-
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Publicités Meta Ads",
-  description: "Campagnes Facebook et Instagram Ads ciblées pour générer des leads et des ventes.",
-  url: `${SITE.url}/services/sea/meta-ads`,
-  provider: {
-    "@type": "Organization",
-    name: SITE.name,
-    url: SITE.url,
-    telephone: SITE.phone,
-  },
-  areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "EUR",
-    price: "400",
-    availability: "https://schema.org/InStock",
+    locale: "fr_FR",
+    siteName: SITE.name,
+    images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
   },
 };
 
 export default function MetaAdsPage() {
-  return (<div className="min-h-screen"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><Navigation /><MetaAdsContent /><RelatedServicesSection exclude={["/services/sea/meta-ads"]} />
-      <Footer /></div>);
+  const jsonLd = [
+    filArianeSchema(FIL_ARIANE_META_ADS, URL),
+    faqPageSchema(FAQ_META_ADS),
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${SITE.url}${URL}#service`,
+      name: "Meta Ads : publicité Facebook et Instagram",
+      serviceType: "Gestion de campagnes publicitaires Facebook et Instagram",
+      description: DESCRIPTION,
+      url: `${SITE.url}${URL}`,
+      provider: PROVIDER_ORGANISATION,
+      areaServed: STRUCTURED_DATA.localBusiness.areaServed,
+    },
+  ];
+
+  return (
+    <div className="min-h-screen">
+      {jsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
+      <Navigation />
+      <MetaAdsContent />
+      <Footer />
+    </div>
+  );
 }

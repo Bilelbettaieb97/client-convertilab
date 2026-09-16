@@ -26,7 +26,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Combien coûte la création d'un site web ?",
         answer:
-          "Nos tarifs démarrent à 490€ pour un site vitrine ou une landing page. Un site e-commerce démarre à 1490€. Le prix dépend du nombre de pages, des fonctionnalités (réservation en ligne, boutique, espace client) et du niveau de personnalisation du design. Nous fournissons un devis détaillé et fixe sous 24h — aucune surprise en cours de projet.",
+          "Nos tarifs démarrent à 490€ pour un site vitrine ou une landing page. Un site e-commerce démarre à 1490€. Le prix dépend du nombre de pages, des fonctionnalités (réservation en ligne, boutique, espace client) et du niveau de personnalisation du design. Nous fournissons un devis détaillé et fixe sous 24h, aucune surprise en cours de projet.",
       },
       {
         question: "Peut-on payer en plusieurs fois ?",
@@ -41,7 +41,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Proposez-vous des offres pour les budgets limités ?",
         answer:
-          "Oui. Notre offre mensuelle à 39€/mois permet de démarrer sans apport initial. Elle inclut la création du site, l'hébergement et le support. Nous proposons également des devis adaptés pour les créateurs d'entreprise et les micro-entrepreneurs — n'hésitez pas à nous contacter pour en discuter.",
+          "Oui. Notre offre mensuelle à 39€/mois permet de démarrer sans apport initial. Elle inclut la création du site, l'hébergement et le support. Nous proposons également des devis adaptés pour les créateurs d'entreprise et les micro-entrepreneurs : n'hésitez pas à nous contacter pour en discuter.",
       },
       {
         question: "La refonte d'un site existant coûte-t-elle moins cher ?",
@@ -58,7 +58,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "En combien de temps mon site sera-t-il livré ?",
         answer:
-          "Un site vitrine est livré en 2 semaines, une landing page en 5 jours, un site e-commerce en 10 à 14 jours. Ces délais incluent le design (validé par vous avant développement), le développement, l'intégration du contenu et la mise en ligne. Nous respectons toujours les délais annoncés — c'est notre garantie contractuelle.",
+          "Un site vitrine est livré en 2 semaines, une landing page en 5 à 7 jours. Pour un site e-commerce ou une application, le délai est écrit dans le devis. Ces délais incluent le design (validé par vous avant développement), le développement, l'intégration du contenu et la mise en ligne. Le délai annoncé figure dans le devis.",
       },
       {
         question: "Comment se déroule le projet, étape par étape ?",
@@ -90,7 +90,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Quelle technologie utilisez-vous pour créer les sites ?",
         answer:
-          "Nous développons avec Next.js (React) pour les sites vitrines et landing pages — c'est la même technologie utilisée par Nike, TikTok et Netflix. Cette stack moderne garantit des scores PageSpeed de 90+ sur mobile, un SEO excellent et une sécurité robuste. Pour les e-commerces, nous intégrons Stripe pour les paiements et Supabase pour la base de données.",
+          "Nous développons avec Next.js (React) pour les sites vitrines et landing pages : c'est la même technologie utilisée par Nike, TikTok et Netflix. Cette stack moderne permet de bons scores PageSpeed sur mobile, un SEO solide et une sécurité robuste. Pour les e-commerces, nous intégrons Stripe pour les paiements et Supabase pour la base de données.",
       },
       {
         question: "Mon site sera-t-il rapide sur mobile ?",
@@ -110,7 +110,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Mon site sera-t-il sécurisé (HTTPS) ?",
         answer:
-          "Oui. Tous nos sites sont livrés avec un certificat SSL (cadenas HTTPS) inclus. Votre connexion et celle de vos visiteurs est chiffrée. Google pénalise les sites sans HTTPS dans ses résultats — c'est un prérequis que nous intégrons systématiquement.",
+          "Oui. Tous nos sites sont livrés avec un certificat SSL (cadenas HTTPS) inclus. Votre connexion et celle de vos visiteurs est chiffrée. Google pénalise les sites sans HTTPS dans ses résultats : c'est un prérequis que nous intégrons systématiquement.",
       },
     ],
   },
@@ -132,7 +132,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Faites-vous aussi du référencement payant (Google Ads) ?",
         answer:
-          "Oui. Nous gérons des campagnes Google Ads et Meta Ads (Facebook/Instagram) pour accélérer l'acquisition de clients en parallèle du SEO naturel. Le SEO prend du temps mais dure — la pub donne des résultats immédiats mais s'arrête dès que vous coupez le budget. Les deux se complètent idéalement.",
+          "Oui. Nous gérons des campagnes Google Ads et Meta Ads (Facebook/Instagram) pour accélérer l'acquisition de clients en parallèle du SEO naturel. Le SEO prend du temps mais dure, la pub donne des résultats rapides mais s'arrête dès que vous coupez le budget. Les deux se complètent idéalement.",
       },
       {
         question: "Créez-vous des pages optimisées pour ma ville ?",
@@ -148,17 +148,17 @@ const FAQ_CATEGORIES: FaqCategory[] = [
   },
   {
     id: "garanties",
-    label: "Garanties & Confiance",
+    label: "Engagements & Confiance",
     emoji: "🛡️",
     questions: [
       {
-        question: "Que comprend votre garantie satisfait ou remboursé ?",
+        question: "Que se passe-t-il si le site livré ne correspond pas à ce que nous avons validé ?",
         answer:
-          "Si le site livré ne correspond pas au brief validé ensemble, nous le modifions gratuitement jusqu'à ce qu'il corresponde. Si après 2 tours de révisions vous n'êtes toujours pas satisfait, nous vous remboursons intégralement le montant versé. Cette garantie s'applique uniquement si les modifications demandées respectent le brief initial.",
+          "Nous le corrigeons sans frais jusqu'à ce qu'il corresponde au brief validé ensemble. Vous validez chaque étape (maquette, contenus, mise en ligne), ce qui évite les mauvaises surprises à la livraison. Les demandes qui sortent du brief initial font l'objet d'un devis séparé.",
       },
       {
-        question: "Avez-vous des avis clients vérifiés ?",
-        answer: `Oui. Nous avons ${SITE.reviews.count} avis sur Trustpilot avec une note de ${SITE.reviews.rating}★. Chaque avis est vérifié par Trustpilot et provient d'un client ayant effectivement commandé chez nous. Vous pouvez les consulter directement sur notre page Trustpilot.`,
+        question: "Avez-vous des avis clients consultables ?",
+        answer: `Oui. Nous avons ${SITE.reviews.count} avis sur Trustpilot avec une note de ${SITE.reviews.rating.replace(".", ",")}/5, laissés par des clients qui ont commandé chez nous. Vous pouvez les lire directement sur notre page Trustpilot, et consulter les sites livrés dans notre portfolio.`,
       },
       {
         question: "Avez-vous des exemples de sites réalisés ?",
@@ -166,7 +166,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
           "Oui. Notre portfolio présente plus de 20 réalisations dans différents secteurs : restaurant, coiffeur, artisan, coach, consultant, immobilier. Chaque réalisation inclut le secteur d'activité, les fonctionnalités intégrées et les résultats obtenus par le client.",
       },
       {
-        question: "Qui crée le site — une IA ou un humain ?",
+        question: "Qui crée le site : une IA ou un humain ?",
         answer:
           "Un humain. Bilel Bettaieb (fondateur de ConvertiLab) et notre équipe créent chaque site manuellement. Nous utilisons des outils de productivité modernes pour travailler vite, mais chaque design est créé spécifiquement pour votre activité, validé avec vous, et développé avec soin. Pas de template générique copié-collé.",
       },
