@@ -61,17 +61,17 @@ Une application web sur mesure est un outil accessible depuis un navigateur, san
 
 ## Quelle différence entre un site internet et une application web ?
 
-Un site internet présente votre activité et amène des demandes, une application web fait travailler vos données. Le site vitrine, c'est un ensemble de pages : prestations, photos, horaires, formulaire de contact. Son rôle est de vous faire trouver et de déclencher un appel ou un message, comme l'explique notre article sur [ce qu'est un site vitrine](/blog/qu-est-ce-qu-un-site-vitrine).
+Un site internet présente votre activité et amène des demandes, une application web fait travailler vos données. Le site vitrine, c'est un ensemble de pages : prestations, photos, horaires, formulaire de contact. Son rôle : vous faire trouver et déclencher un appel ou un message, comme l'explique notre article sur [ce qu'est un site vitrine](/blog/qu-est-ce-qu-un-site-vitrine).
 
 L'application, elle, possède des comptes utilisateurs, une base de données et des écrans qui lisent et écrivent dans cette base. Un salon de coiffure à Rueil-Malmaison : le site indique l'adresse et les tarifs, l'application prend la réservation, vérifie le planning réel et envoie la confirmation. Un menuisier des Hauts-de-Seine : le site montre les réalisations, l'application fait choisir dimensions et finitions, puis produit une estimation.
 
-Le plus souvent, l'application est un module ajouté à un [site vitrine professionnel](/services/sites-web/site-vitrine) déjà en place, et le visiteur ne voit pas la frontière.
+Le plus souvent, elle est un module ajouté à un [site vitrine professionnel](/services/sites-web/site-vitrine) déjà en place.
 
 ## Quand une petite entreprise a-t-elle besoin d'une application web ?
 
 Le moment est venu quand votre équipe ressaisit les mêmes informations dans plusieurs outils, ou quand vos clients vous appellent pour des informations qu'ils pourraient consulter seuls. Trois signes reviennent au diagnostic :
 
-- **Vos tableurs font office de logiciel.** Un fichier partagé, des versions qui se croisent, une formule cassée un vendredi soir. Au-delà de deux ou trois personnes, chacun vérifie le travail des autres.
+- **Vos tableurs font office de logiciel.** Un fichier partagé, des versions qui se croisent, une formule cassée un vendredi soir, et chacun vérifie le travail des autres.
 - **Le logiciel du marché ne colle pas à votre métier.** Plusieurs abonnements, chacun fait une partie du travail, vous ressaisissez le reste.
 - **Les demandes se perdent entre le site et vos outils.** Devis demandé le soir, rendez-vous pris par message, acompte à réclamer : des clients attendent.
 
@@ -79,7 +79,7 @@ Quatrième critère : quelqu'un chez vous peut tester les écrans chaque semaine
 
 ## Quelles formes prend une application web sur mesure ?
 
-Six formes reviennent le plus souvent chez les artisans, les commerces, les cabinets et les PME :
+Six formes reviennent le plus souvent :
 
 1. **Le portail client** : vos clients suivent leur dossier, déposent leurs documents et consultent leurs factures sans vous appeler. Cabinets, agences, prestataires B2B.
 2. **La prise de rendez-vous** : un agenda en ligne relié à votre planning réel, avec confirmation, rappel et acompte. Salons, praticiens, restaurants.
@@ -88,7 +88,7 @@ Six formes reviennent le plus souvent chez les artisans, les commerces, les cabi
 5. **Le tableau de bord métier** : planning, stock, fiches clients, relances, sur un seul écran, au bureau comme sur le chantier.
 6. **L'outil interne relié à vos logiciels** : l'application lit et écrit dans votre agenda, votre facturation, votre CRM ou vos emails.
 
-Un exemple testable : le site de JSM Jardinage comporte une demande de devis guidée en quatre étapes, un module greffé sur un site vitrine. Une boutique professionnelle avec espace réservé relève de la même logique, côté [site e-commerce](/services/sites-web/site-ecommerce). Notre [vérification SEO gratuite](/seo-check) est elle aussi une application web, pas une page.
+Exemple testable : le site de JSM Jardinage comporte une demande de devis guidée en quatre étapes, greffée sur un site vitrine. Une boutique avec espace réservé relève de la même logique, côté [site e-commerce](/services/sites-web/site-ecommerce). Notre [vérification SEO gratuite](/seo-check) est elle aussi une application web.
 
 ## Combien coûte une application web sur mesure ?
 
@@ -99,13 +99,13 @@ Il n'existe pas de tarif unique : une application web sur mesure se chiffre sur 
 - les automatisations : confirmations, rappels, relances ;
 - l'existence d'un site sur lequel greffer le module.
 
-Notre façon de faire : un diagnostic gratuit de 30 minutes, en visio ou à Rueil-Malmaison, puis un devis écrit avec un prix fixe par phase et un délai. Vous ne payez que les phases validées, sans supplément en cours de route. Le suivi mensuel est optionnel, chiffré à part, sans engagement de durée.
+Concrètement : un diagnostic gratuit de 30 minutes, en visio ou à Rueil-Malmaison, puis un devis écrit, prix fixe par phase et délai compris. Vous ne payez que les phases validées, sans supplément en cours de route ; le suivi mensuel est optionnel et chiffré à part.
 
 Pour situer l'application dans le pôle : site vitrine 890 €, [landing page](/services/sites-web/landing-page) 490 €, refonte 690 €, site e-commerce à partir de 1 490 €.
 
 ## Combien de temps faut-il pour développer une application web ?
 
-Le délai est écrit dans le devis, phase par phase, et vous utilisez la première version sans attendre la dernière. Deux ordres de grandeur, pas une promesse : un module intégré à votre site, comme un devis guidé ou une réservation en ligne, se livre en général en quelques semaines ; un portail avec plusieurs rôles et des connexions à vos logiciels se construit le plus souvent par phases utilisables, sur plusieurs mois. À titre de comparaison, un site vitrine est livré en 2 semaines et une landing page en 5 à 7 jours.
+Le délai est écrit dans le devis, phase par phase, et vous utilisez la première version sans attendre la dernière. Deux repères, pas une promesse : un module intégré à votre site, comme un devis guidé ou une réservation en ligne, se livre en général en quelques semaines ; un portail avec plusieurs rôles et des connexions à vos logiciels se construit le plus souvent par phases utilisables, sur plusieurs mois.
 
 Ce qui allonge un projet :
 
@@ -117,7 +117,7 @@ Ce qui le raccourcit : démarrer par le seul flux qui vous coûte le plus de tem
 
 ## Par quoi commencer : les cinq étapes d'un projet d'application web
 
-Commencez par montrer comment vous travaillez aujourd'hui, pas par une liste de fonctions. Nos projets suivent cinq repères, toujours dans le même ordre :
+Commencez par montrer comment vous travaillez aujourd'hui, pas par une liste de fonctions. Nos projets suivent cinq repères, dans cet ordre :
 
 1. **Le diagnostic gratuit.** Vous nous montrez fichiers, emails et ressaisies ; nous listons ce que l'application doit faire. Si un logiciel existant suffit, nous vous le disons.
 2. **Le cahier des charges court, les maquettes et le devis.** Écrans principaux dessinés, prix fixe par phase, délai écrit. Rien ne se code avant votre validation.
@@ -129,17 +129,17 @@ Sans site existant, commencez par lui : notre [guide de la création de site int
 
 ## Quelles erreurs éviter avant de lancer le développement ?
 
-L'erreur la plus fréquente est de vouloir cinquante fonctions dès la première version. Celles que nous voyons revenir :
+L'erreur la plus fréquente est de vouloir cinquante fonctions dès la première version. Les autres :
 
 - **Tout vouloir d'un coup.** Une première version qui couvre un seul flux, testée par votre équipe, vaut mieux qu'un outil complet livré tard et jamais adopté.
-- **Refaire ce qu'un logiciel du marché fait déjà bien.** Un agenda ou une facturation existants ne se réécrivent pas, on s'y connecte. Nous préférons vous dire non que développer un outil inutile.
-- **Confondre application web et application mobile.** Une application web s'ouvre dans un navigateur, sur téléphone comme sur ordinateur, sans App Store ni Google Play. Cela couvre la plupart des besoins d'une TPE.
+- **Refaire ce qu'un logiciel du marché fait déjà bien.** Un agenda ou une facturation existants ne se réécrivent pas, on s'y connecte.
+- **Confondre application web et application mobile.** Une application web s'ouvre dans un navigateur, sur téléphone comme sur ordinateur, sans App Store ni Google Play.
 - **Oublier le RGPD.** Consentement, conservation, export et suppression se prévoient dès le cahier des charges : notre [guide de conformité RGPD](/blog/rgpd-site-web-conformite-guide) en fait le tour.
-- **Greffer un module sur un site trop ancien.** Une [refonte de site internet](/services/sites-web/refonte-site) menée en même temps, avec un devis séparé pour chaque partie, évite de construire sur du sable ; notre article sur la [refonte sans perdre son référencement](/blog/refonte-site-internet-sans-perdre-referencement) explique comment garder vos positions.
+- **Greffer un module sur un site trop ancien.** Une [refonte de site internet](/services/sites-web/refonte-site) menée en même temps, avec un devis séparé pour chaque partie, évite de construire sur du sable : voir notre article sur la [refonte sans perdre son référencement](/blog/refonte-site-internet-sans-perdre-referencement).
 
 ## Ce que fait ConvertiLab
 
-Nous concevons des [applications web sur mesure](/services/sites-web/application-web) pour les artisans, les commerces, les cabinets et les PME de Rueil-Malmaison, de Paris, des Hauts-de-Seine et de toute l'Île-de-France : portail client, rendez-vous, devis en ligne, espace membre, tableau de bord, outil interne relié à vos logiciels. Le prix est sur devis, fixe par phase, communiqué après un diagnostic gratuit. Les écrans sont construits avec React, Next.js et TypeScript ([pourquoi Next.js plutôt que WordPress](/blog/pourquoi-nextjs-meilleur-wordpress)), la base PostgreSQL est hébergée en Europe, et le code, les données et les accès sont à votre nom dès la mise en ligne. Notre [intégration IA avec Claude](/services/integration-ia) lit les emails et rédige quand c'est utile. L'application fait partie de notre [pôle création de site internet](/services/sites-web). Si vous partez de zéro, [estimez d'abord le prix de votre site](/estimation-prix-site-web).
+Nous concevons des [applications web sur mesure](/services/sites-web/application-web) pour les artisans, les commerces, les cabinets et les PME de Rueil-Malmaison, de Paris et d'Île-de-France : portail client, rendez-vous, devis en ligne, espace membre, tableau de bord, outil interne relié à vos logiciels. Le prix est sur devis, fixe par phase, communiqué après un diagnostic gratuit. Les écrans sont construits avec React, Next.js et TypeScript ([pourquoi Next.js plutôt que WordPress](/blog/pourquoi-nextjs-meilleur-wordpress)), la base PostgreSQL est hébergée en Europe, et le code, les données et les accès sont à votre nom dès la mise en ligne. Notre [intégration IA avec Claude](/services/integration-ia) lit les emails et rédige quand c'est utile. Elle fait partie de notre [pôle création de site internet](/services/sites-web). Si vous partez de zéro, [estimez d'abord le prix de votre site](/estimation-prix-site-web).
 
 ## Questions fréquentes
 

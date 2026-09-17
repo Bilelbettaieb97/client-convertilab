@@ -45,7 +45,7 @@ export const article: FullBlogArticle = {
         "À vous. La page, le nom de domaine ou le sous-domaine, les textes et les images sont votre propriété. Vous recevez les accès à la livraison, avec une courte formation pour modifier vous-même les textes, et vous restez libre de confier la page à quelqu'un d'autre. Aucun abonnement ne vous lie à l'agence.",
     },
   ],
-  content: `Vous êtes artisan, commerçant, coach ou dirigeant d'une petite entreprise à Rueil-Malmaison, à Paris ou ailleurs en Île-de-France. Vous préparez une campagne Google Ads ou Meta Ads, et une question revient : où envoyer les personnes qui cliquent, et à quoi doit ressembler la page d'arrivée pour que le clic devienne une demande ?
+  content: `Vous êtes artisan, commerçant, coach ou dirigeant d'une petite entreprise à Rueil-Malmaison, à Paris ou ailleurs en Île-de-France. Vous préparez une campagne Google Ads ou Meta Ads, un emailing ou un flyer, et une question revient : où envoyer les personnes qui cliquent, et à quoi doit ressembler la page d'arrivée pour que le clic devienne une demande ?
 
 Une landing page est une page web unique, sans menu ni lien sortant, construite pour une seule action : appeler, demander un devis, réserver ou s'inscrire. Dans ce guide, vous verrez ce qu'elle contient, en quoi elle diffère d'un site vitrine, comment la créer, combien elle coûte, comment la relier à vos annonces et quelles erreurs font perdre des demandes déjà payées.
 
@@ -123,7 +123,7 @@ Trois règles rendent la liaison efficace :
 - Une page par offre ou par ville, si les campagnes sont distinctes.
 - Une relance derrière le formulaire : chaque demande arrive dans votre CRM, avec accusé de réception et relance automatique par email si vous le souhaitez.
 
-Sur Google, la page reçoit des personnes qui cherchent déjà votre métier : c'est le travail de notre [agence Google Ads à Paris](/services/sea/google-ads). Sur Facebook et Instagram, elle convertit une offre poussée à un quartier ou à une ville, avec notre [agence Meta Ads](/services/sea/meta-ads). Budget média conseillé dès 500 €/mois par plateforme, frais de gestion en plus.
+Sur Google, la page reçoit des personnes qui cherchent déjà votre métier : c'est le travail de notre [agence Google Ads à Paris](/services/sea/google-ads). Sur Facebook et Instagram, elle convertit une offre poussée à un quartier ou à une ville, avec notre [agence Meta Ads](/services/sea/meta-ads). Budget média conseillé dès 500 €/mois par plateforme, frais de gestion sur devis.
 
 ## Quelles erreurs font perdre des demandes ?
 
@@ -136,7 +136,7 @@ L'erreur la plus fréquente est d'envoyer les clics vers la page d'accueil ; les
 
 ## Ce que fait ConvertiLab
 
-Nous concevons, écrivons et mettons en ligne votre [landing page orientée conversion](/services/sites-web/landing-page) pour 490 €, prix fixe écrit sur le devis, livrée en 5 à 7 jours après validation de la maquette. Formulaire relié à votre email ou à votre CRM, suivi des demandes testé avant le lancement, corrections comprises après la mise en ligne : vous êtes propriétaire de la page, de l'adresse et des contenus. La landing page est l'une des cinq formules de notre pôle [création de site internet à Rueil-Malmaison et Paris](/services/sites-web), fort de 150+ clients accompagnés. Vous avez déjà une page ? Notre [score de conversion gratuit](/design-score) liste ce qui freine la conversion et les corrections à faire, dans l'ordre.
+Nous concevons, écrivons et mettons en ligne votre [landing page orientée conversion](/services/sites-web/landing-page) pour 490 €, prix fixe écrit sur le devis, livrée en 5 à 7 jours après validation de la maquette. Formulaire relié à votre email ou à votre CRM, suivi des demandes testé avant le lancement, corrections comprises après la mise en ligne : vous êtes propriétaire de la page, de l'adresse et des contenus. La landing page est l'une des cinq formules de notre pôle [création de site internet à Rueil-Malmaison et Paris](/services/sites-web) ; l'agence compte 150+ clients accompagnés. Vous avez déjà une page ? Notre [score de conversion gratuit](/design-score) liste ce qui freine la conversion et les corrections, dans l'ordre.
 
 ## Questions fréquentes
 
