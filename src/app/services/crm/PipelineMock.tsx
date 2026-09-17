@@ -81,13 +81,15 @@ export default function PipelineMock({ className }: { className?: string }) {
           </span>
         </div>
 
-        {/* Quatre colonnes en pleine largeur (sm, md) et dès xl ; deux par deux sur mobile et en lg, où la colonne du hero fait moins de 400 px. */}
-        <ol className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4" aria-label="Étapes du pipeline d'exemple">
+        {/* Deux colonnes par rangée à toutes les largeurs : dans PoleHero, la maquette est plafonnée à 448 px (max-w-md),
+            où quatre colonnes de 96 px feraient déborder les pastilles de source et replier les textes sur cinq lignes.
+            Hauteur visée entre 340 et 520 px à 448 px de large. */}
+        <ol className="mt-4 grid grid-cols-2 gap-2" aria-label="Étapes du pipeline d'exemple">
           {COLONNES.map((colonne) => (
             <li
               key={colonne.nom}
               className={cn(
-                "flex min-h-[9.5rem] flex-col rounded-xl border p-2",
+                "flex min-h-32 flex-col rounded-xl border p-2",
                 colonne.accent ? "border-primary/25 bg-gradient-to-b from-purple-50 to-pink-50" : "border-border bg-muted/40"
               )}
             >

@@ -27,10 +27,9 @@ import {
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import type { FaqItem } from "@/lib/faq-schema";
-import { getPole, getSousPage, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
-import { BorderBeam, CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { CHIFFRES_COMMUNS, getPole, getSousPage, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { BorderBeam, Reveal } from "@/components/motion";
 import {
-  BoutonLien,
   Comparatif,
   CtaIntermediaire,
   DashboardMock,
@@ -42,6 +41,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleLivrables,
   PolePreuve,
   PolePrix,
@@ -241,114 +241,52 @@ export const FAQ_PUBLICITE: FaqItem[] = [
   },
 ];
 
-const NOTE_AVIS = Number(SITE.reviews.rating);
-
 export default function SeaPageContent() {
   return (
     <div className="pt-16">
       <FilAriane elements={FIL_ARIANE_PUBLICITE} />
 
-      {/* Hero : H1 et texte rendus côté serveur, fond mesh + projecteur (seuls décors animés de l'écran). */}
-      <section className="relative isolate overflow-hidden py-14 sm:py-20">
-        <HeroMesh />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Agence Google Ads et Meta Ads à Paris : des demandes, pas seulement des clics
-              </h1>
-              <div className="mt-5 max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600">
-                <p>
-                  Google Ads, Facebook Ads, Instagram Ads, TikTok, Pinterest, LinkedIn : nous mettons en place et
-                  pilotons votre publicité en ligne pour qu&apos;elle vous coûte moins qu&apos;elle ne rapporte. Vous
-                  suivez un seul chiffre chaque mois : le coût par demande.
-                </p>
-                {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
-                <p className="hidden sm:block">
-                  Vous parlez au fondateur, qui gère lui-même vos comptes et teste d&apos;abord nos méthodes sur nos
-                  propres campagnes.
-                </p>
-              </div>
-
-              {/* Mobile : boutons juste après le texte (order), coches et chiffres ensuite ; desktop : ordre du DOM. */}
-              <ul className="order-1 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-foreground sm:order-none">
-                {REASSURANCE_HERO.map((r) => (
-                  <li key={r} className="inline-flex items-center gap-2">
-                    <span
-                      className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-                      aria-hidden="true"
-                    >
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander mon audit de compte gratuit" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-                Pas encore de compte publicitaire ? Commencez par{" "}
-                <Link href={estimateur.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
-                  estimer votre budget publicitaire
-                </Link>{" "}
-                avec notre outil gratuit.
-              </p>
-
-              {/* Trois chiffres, valeur finale dans le HTML (NumberTicker n'anime qu'au montage). */}
-              <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">clients accompagnés</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={150} />+
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">sur {SITE.reviews.count} avis</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={NOTE_AVIS} decimalPlaces={1} delay={0.1} />
-                    /5
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">pour un plan et un devis écrits</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={24} delay={0.2} /> h
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            {/* Tableau de bord d'exemple, en perspective légère (aucun mouvement au tactile ni en animations réduites). */}
-            <div className="lg:col-span-5">
-              <CardContainer intensite={60} containerClassName="w-full" className="w-full max-w-md">
-                <CardBody className="w-full">
-                  <CardItem translateZ={24} className="w-full">
-                    <DashboardMock
-                      titre="Vos demandes, 30 derniers jours"
-                      mention="Exemple"
-                      indicateurs={[
-                        { libelle: "Demandes reçues", valeur: "38", detail: "appels, formulaires, messages" },
-                        { libelle: "Coût par demande", valeur: "27 €", detail: "budget dépensé ÷ demandes" },
-                        { libelle: "Budget dépensé", valeur: "1 026 €", detail: "réglé à la plateforme" },
-                        { libelle: "Annonces testées", valeur: "6", detail: "3 coupées, 3 conservées" },
-                      ]}
-                      ligne={{ libelle: "Meilleure annonce", valeur: "Vidéo « devis sous 24 h »" }}
-                      serie={[28, 42, 36, 58, 52, 70, 66, 84]}
-                      note="Exemple de tableau de bord : ce que vous verrez chaque mois, pas des résultats clients."
-                      className="mx-auto"
-                    />
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            </div>
-          </div>
-        </Conteneur>
-      </section>
+      {/* Hero commun aux pages de service (PoleHero) : H1 et texte rendus côté serveur, tableau de bord d'exemple en aside. */}
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Agence Google Ads et Meta Ads à Paris : des demandes, pas seulement des clics"
+        motsCles={["Google Ads", "Meta Ads", "demandes"]}
+        texte={[
+          "Google Ads, Facebook Ads, Instagram Ads, TikTok, Pinterest, LinkedIn : nous mettons en place et pilotons votre publicité en ligne pour qu'elle vous coûte moins qu'elle ne rapporte. Vous suivez un seul chiffre chaque mois : le coût par demande.",
+          "Vous parlez au fondateur, qui gère lui-même vos comptes et teste d'abord nos méthodes sur nos propres campagnes.",
+        ]}
+        reassurance={REASSURANCE_HERO.slice(0, 3)}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Demander mon audit de compte gratuit" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Pas encore de compte publicitaire ? Commencez par{" "}
+            <Link href={estimateur.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+              estimer votre budget publicitaire
+            </Link>{" "}
+            avec notre outil gratuit.
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "24 h", libelle: "pour un plan et un devis écrits" }]}
+        aside={
+          <DashboardMock
+            titre="Vos demandes, 30 derniers jours"
+            mention="Exemple"
+            indicateurs={[
+              { libelle: "Demandes reçues", valeur: "38", detail: "appels, formulaires, messages" },
+              { libelle: "Coût par demande", valeur: "27 €", detail: "budget dépensé ÷ demandes" },
+              { libelle: "Budget dépensé", valeur: "1 026 €", detail: "réglé à la plateforme" },
+              { libelle: "Annonces testées", valeur: "6", detail: "3 coupées, 3 conservées" },
+            ]}
+            ligne={{ libelle: "Meilleure annonce", valeur: "Vidéo « devis sous 24 h »" }}
+            serie={[28, 42, 36, 58, 52, 70, 66, 84]}
+            note="Exemple de tableau de bord : ce que vous verrez chaque mois, pas des résultats clients."
+            className="mx-auto"
+          />
+        }
+        asideRelief
+        asideMobile
+      />
 
       {/* Outil gratuit du pôle, juste après le hero : simulateur de budget et de demandes (src/components/estimateur-ads). */}
       <SectionOutil

@@ -13,10 +13,9 @@ import {
   Truck,
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
-import { LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { CHIFFRES_COMMUNS, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
 import { cn } from "@/lib/utils";
 import {
-  BoutonLien,
   Comparatif,
   CtaIntermediaire,
   Engagements,
@@ -29,6 +28,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PolePrix,
   PoleSection,
   SectionSombre,
@@ -37,7 +37,7 @@ import {
 } from "@/components/pole";
 import { getDiagnostic } from "@/lib/diagnostics/configs";
 import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
-import { BorderBeam, CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { BorderBeam, Reveal } from "@/components/motion";
 import { CaptureSite } from "../_illustrations/CaptureSite";
 import {
   CAS_REELS,
@@ -63,9 +63,10 @@ import {
 /**
  * Sous-page « Site e-commerce » (/services/sites-web/site-ecommerce).
  * Composant serveur : le H1, les textes, la FAQ et le maillage sont dans le
- * HTML. Les composants animés (Reveal, NumberTicker, 3d-card, BorderBeam,
- * HeroMesh, Spotlight, FormulaireFinal, StickyCtaBar) sont des enfants
- * "use client" ; aucun composant WebGL ni mesure du DOM sur cette page.
+ * HTML. Le hero est le composant partagé PoleHero (H1, coches, boutons,
+ * chiffres, illustration en perspective). Les composants animés (Reveal,
+ * BorderBeam, FormulaireFinal, StickyCtaBar) sont des enfants "use client" ;
+ * aucun composant WebGL ni mesure du DOM sur cette page.
  */
 
 /** Ancre du formulaire final : cible des CTA de la page et de la barre collante. */
@@ -88,140 +89,69 @@ const ICONES_PROJET: Record<(typeof OPTIONS_PROJET)[number]["value"], React.Reac
 
 const domaine = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/.*$/, "");
 
-/* ── Hero ───────────────────────────────────────────────────────────────── */
+/* ── Hero : illustration ────────────────────────────────────────────────── */
 
-function Hero() {
-  const note = Number(SITE.reviews.rating);
-  return (
-    <section className="relative isolate overflow-hidden bg-background py-14 sm:py-20 lg:py-24">
-      <HeroMesh intensite={0.9} />
-      <Spotlight />
-      <Conteneur>
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <div className="flex max-w-2xl flex-col">
-            <Surtitre>{SURTITRE_ZONE}</Surtitre>
-            <h1 className="text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              Création de boutique en ligne à Paris et Rueil-Malmaison :{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                un site e-commerce qui vous appartient, {PRIX_ECOMMERCE.valeur}
-              </span>
-            </h1>
-            <div className="mt-6 space-y-3 text-lg">
-              <p className="leading-relaxed text-slate-600">
-                Catalogue, paiement sécurisé, commandes et stock suivis : nous créons des sites e-commerce pour les
-                artisans, les commerces et les marques qui veulent vendre en ligne sans dépendre d&apos;une marketplace.
-              </p>
-              {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
-              <p className="hidden leading-relaxed text-slate-600 sm:block">
-                Prix fixe et délai écrits dans le devis, aucune commission sur vos ventes. Vous parlez au fondateur,
-                qui conçoit et construit lui-même votre boutique.
-              </p>
-            </div>
+/** Trois étapes du parcours d'achat, toutes livrées (voir LIVRABLES) : aucun chiffre, des libellés. */
+const ETAPES_ACHAT = ["Catalogue et fiches produits", "Panier sans créer de compte", "Livraison ou retrait en magasin"] as const;
 
-            {/* Mobile : boutons juste après le texte (order), chips ensuite ; desktop : ordre du DOM (même gabarit que site-vitrine). */}
-            <ul className="order-1 mt-6 flex flex-wrap gap-2 sm:order-none sm:mt-8" aria-label="Nos engagements">
-              {CHIPS_HERO.map((chip) => {
-                const Icon = chip.icon;
-                return (
-                  <li
-                    key={chip.label}
-                    className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-border bg-white/80 px-3 py-1.5 text-sm font-medium text-foreground backdrop-blur"
-                  >
-                    <Icon className="h-4 w-4 text-purple-700" strokeWidth={2} aria-hidden="true" />
-                    {chip.label}
-                  </li>
-                );
-              })}
-            </ul>
-
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
-              <BoutonLien href={ANCRE_FORMULAIRE} label="Mon devis boutique sous 24 h" variante="primaire" />
-              <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-            </div>
-            <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-              Vous voulez d&apos;abord un ordre de prix ?{" "}
-              <Link href={OUTIL_ESTIMATION.href} className={LIEN_TEXTE}>
-                Estimer le prix de votre boutique en 2 minutes
-              </Link>{" "}
-              avec notre outil gratuit.
-            </p>
-
-            {/* Trois chiffres, rendus côté serveur, animés à l'entrée. */}
-            <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
-              <Chiffre libelle="clients accompagnés">
-                <NumberTicker value={150} />+
-              </Chiffre>
-              <Chiffre libelle={`sur ${SITE.reviews.count} avis`}>
-                <NumberTicker value={note} decimalPlaces={1} delay={0.15} />
-                <span className="text-lg font-semibold text-muted-foreground">/5</span>
-              </Chiffre>
-              <Chiffre libelle="pour un devis écrit">
-                <NumberTicker value={24} delay={0.3} /> h
-              </Chiffre>
-            </dl>
-          </div>
-
-          {/* Illustration : une boutique client réelle dans son navigateur, en perspective légère (masquée sous lg). */}
-          <div className="hidden lg:block">
-            <MockupBoutique />
-          </div>
-        </div>
-      </Conteneur>
-    </section>
-  );
-}
-
-function Chiffre({ libelle, children }: { libelle: string; children: React.ReactNode }) {
-  return (
-    <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur sm:px-5 sm:py-4">
-      <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{libelle}</dt>
-      <dd className="text-xl font-bold tabular-nums text-foreground sm:text-2xl">{children}</dd>
-    </div>
-  );
-}
-
-/** Une boutique livrée (catalogue professionnel), vue dans son navigateur : vraie capture, domaine réel, deux repères de l'offre. */
+/**
+ * Une boutique livrée (catalogue professionnel), vue dans son navigateur : vraie
+ * capture, domaine réel, deux repères de l'offre posés sur le cadre, puis les
+ * trois étapes du parcours d'achat. La perspective est apportée par PoleHero
+ * (asideRelief) : aucune carte 3D ici. Environ 430 px de haut à 448 px de large
+ * (cadre 4/3 de 336 px, puis une rangée de trois étapes).
+ */
 function MockupBoutique() {
   return (
-    <CardContainer intensite={60} containerClassName="w-full" className="w-full">
-      <CardBody className="relative w-full max-w-md">
-        <CardItem translateZ={20} className="w-full">
-          <CaptureSite
-            domaine="funestore.fr"
-            src="/images/portfolio/gallery-funestore-catalogue.webp"
-            alt="Catalogue de la boutique en ligne Funestore, articles funéraires pour les professionnels, livrée par l'agence"
-            width={800}
-            height={545}
-            mode="couvrir"
-            priority
-            legende="funestore.fr : boutique en ligne livrée par l'agence, consultable en ligne"
-            className="aspect-[16/11] rounded-xl shadow-[0_32px_64px_-32px_rgba(76,29,149,0.35)]"
-          />
-        </CardItem>
-        <CardItem
-          translateZ={60}
-          className="absolute -left-8 top-14 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg"
-        >
+    <div className="w-full">
+      {/* Les deux repères sont positionnés par rapport au cadre, pas aux étapes du dessous. */}
+      <div className="relative">
+        <CaptureSite
+          domaine="lecrindeseoul.fr"
+          src="/images/portfolio/gallery-ecrindeseoul-boutique.webp"
+          alt="Catalogue de la boutique en ligne L'Écrin de Séoul, cosmétiques coréens, avec filtres par catégorie et prix affichés, livrée par l'agence"
+          width={800}
+          height={480}
+          mode="couvrir"
+          priority
+          className="aspect-[4/3] rounded-xl shadow-[0_32px_64px_-32px_rgba(76,29,149,0.35)]"
+        />
+        {/* Repères à cheval sur les bords du cadre : ils ne recouvrent ni le menu ni les produits de la boutique montrée. */}
+        <div className="absolute -top-4 right-3 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg lg:-right-4">
           <span className="flex items-center gap-2">
             <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-100 text-purple-700">
-              <CreditCard className="h-4 w-4" strokeWidth={2} />
+              <CreditCard className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
             </span>
             Paiement Stripe ou PayPal
           </span>
-        </CardItem>
-        <CardItem
-          translateZ={50}
-          className="absolute -right-4 bottom-10 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg"
-        >
+        </div>
+        <div className="absolute -bottom-4 left-3 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg lg:-left-8">
           <span className="flex items-center gap-2">
             <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-pink-100 text-pink-600">
-              <Truck className="h-4 w-4" strokeWidth={2} />
+              <Truck className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
             </span>
             Commandes et stock suivis
           </span>
-        </CardItem>
-      </CardBody>
-    </CardContainer>
+        </div>
+      </div>
+      <ol className="mt-7 grid grid-cols-3 gap-2" aria-label="Les trois étapes du parcours d'achat sur la boutique">
+        {ETAPES_ACHAT.map((etape, i) => (
+          <li
+            key={etape}
+            className="flex flex-col gap-1.5 rounded-xl border border-border/80 bg-white/85 px-3 py-2.5 text-xs font-medium leading-snug text-foreground"
+          >
+            <span
+              className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-[11px] font-bold text-white"
+              aria-hidden="true"
+            >
+              {i + 1}
+            </span>
+            {etape}
+          </li>
+        ))}
+      </ol>
+      <p className="mt-2 text-center text-xs text-muted-foreground">lecrindeseoul.fr : boutique en ligne livrée par l&apos;agence, consultable en ligne</p>
+    </div>
   );
 }
 
@@ -456,7 +386,31 @@ export default function SiteEcommerceContent() {
     <div className="pt-16">
       <FilAriane elements={FIL_ARIANE_ECOMMERCE} />
 
-      <Hero />
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre={`Création de boutique en ligne à Paris et Rueil-Malmaison : un site e-commerce qui vous appartient, ${PRIX_ECOMMERCE.valeur}`}
+        motsCles={["boutique en ligne", "e-commerce"]}
+        texte={[
+          "Catalogue, paiement sécurisé, commandes et stock suivis : nous créons des sites e-commerce pour les artisans, les commerces et les marques qui veulent vendre en ligne sans dépendre d'une marketplace.",
+          "Prix fixe et délai écrits dans le devis, aucune commission sur vos ventes. Vous parlez au fondateur, qui conçoit et construit lui-même votre boutique.",
+        ]}
+        reassurance={CHIPS_HERO.slice(0, 3).map((chip) => chip.label)}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Mon devis boutique sous 24 h" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Vous voulez d&apos;abord un ordre de prix ?{" "}
+            <Link href={OUTIL_ESTIMATION.href} className={LIEN_TEXTE}>
+              Estimer le prix de votre boutique en 2 minutes
+            </Link>{" "}
+            avec notre outil gratuit.
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "24 h", libelle: "pour un devis écrit" }]}
+        aside={<MockupBoutique />}
+        asideRelief
+        asideMobile
+      />
 
       {/* Diagnostic gratuit de la page, juste après le hero (fond gris : la section « pour qui » est blanche). */}
       <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez} fond="gris">

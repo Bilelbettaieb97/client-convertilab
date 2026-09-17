@@ -36,6 +36,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PolePreuve,
   PolePrix,
   PoleSection,
@@ -47,15 +48,16 @@ import {
 } from "@/components/pole";
 import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
 import { getDiagnostic } from "@/lib/diagnostics/configs";
-import { CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { Reveal } from "@/components/motion";
 import MockPackLocal from "../maquettes/MockPackLocal";
 
 /**
  * Sous-page « Référencement local » du pôle SEO : fiche d'établissement Google,
  * avis clients (MerciAvis, notre outil), citations locales et pages villes.
  * Composant serveur : le H1, tout le texte et la FAQ sont dans le HTML rendu.
- * Les animations (mesh, compteurs, apparitions, carte en perspective) sont des
- * enfants "use client" importés depuis src/components/motion.
+ * Le hero est le composant partagé PoleHero (src/components/pole) ; les
+ * apparitions (Reveal) sont des enfants "use client" importés depuis
+ * src/components/motion.
  */
 
 export const pole = getPole("seo");
@@ -307,84 +309,32 @@ export default function SeoLocalContent() {
       <FilAriane elements={FIL} />
 
       {/* ---------------------------------------------------------- Hero */}
-      <section className="relative isolate overflow-hidden bg-background pb-16 pt-10 sm:pb-20 sm:pt-14">
-        <HeroMesh intensite={0.7} />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Référencement local : fiche Google et avis clients pour être trouvé à{" "}
-                <span className="whitespace-nowrap">Rueil-Malmaison</span>, à Paris et dans votre ville
-              </h1>
-              <div className="mt-5 max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600">
-                <p>
-                  Quand un client cherche votre métier avec sa ville, Google affiche trois fiches d&apos;établissement
-                  avant tout le reste. Nous travaillons votre fiche Google, vos avis, vos coordonnées et les pages
-                  villes de votre site pour que vous y figuriez.
-                </p>
-                <p className="hidden sm:block">
-                  Agence SEO local à Rueil-Malmaison (92), pour les commerces, artisans, cabinets et restaurants de
-                  Paris, du 92 et de toute la France.
-                </p>
-              </div>
-
-              <ul className="order-1 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-foreground sm:order-none">
-                {REASSURANCE_HERO.map((r) => (
-                  <li key={r} className="inline-flex items-center gap-2">
-                    <span
-                      className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-                      aria-hidden="true"
-                    >
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander le diagnostic de ma fiche Google" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-
-              <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[0].libelle}</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={150} />+
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[1].libelle}</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={Number(SITE.reviews.rating)} decimalPlaces={1} delay={0.15} />
-                    /5
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">fiches affichées par Google avant les autres résultats</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={3} delay={0.3} />
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            {/* Pack local d'exemple (les trois fiches de Google) en perspective légère (aucun mouvement au tactile ni en animations réduites). */}
-            <div className="lg:col-span-5">
-              <CardContainer intensite={60} containerClassName="w-full" className="w-full max-w-md">
-                <CardBody className="w-full">
-                  <CardItem translateZ={24} className="w-full">
-                    <MockPackLocal className="mx-auto" />
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            </div>
-          </div>
-        </Conteneur>
-      </section>
+      {/* Hero commun aux pages de service (PoleHero) : H1 et texte rendus côté serveur, pack local d'exemple (les trois fiches de Google, entreprises fictives) en aside. */}
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Référencement local : fiche Google et avis clients pour être trouvé à Rueil-Malmaison, à Paris et dans votre ville"
+        motsCles={["Référencement local", "fiche Google", "avis clients"]}
+        texte={[
+          "Quand un client cherche votre métier avec sa ville, Google affiche trois fiches d'établissement avant tout le reste. Nous travaillons votre fiche Google, vos avis, vos coordonnées et les pages villes de votre site pour que vous y figuriez.",
+          "Agence SEO local à Rueil-Malmaison (92), pour les commerces, artisans, cabinets et restaurants de Paris, du 92 et de toute la France.",
+        ]}
+        reassurance={REASSURANCE_HERO.slice(0, 3)}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Diagnostiquer ma fiche Google" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Vous voulez d&apos;abord un état des lieux ?{" "}
+            <Link href={OUTIL.href} className={lienClasse}>
+              Vérifiez le SEO de votre site en 60 secondes
+            </Link>
+            , gratuitement.
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "3", libelle: "fiches affichées par Google avant les autres résultats" }]}
+        aside={<MockPackLocal compact />}
+        asideRelief
+        asideMobile
+      />
 
       {/* ------------------------------------------------------ Diagnostic */}
       <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez}>

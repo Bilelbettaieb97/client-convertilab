@@ -10,11 +10,10 @@ import {
   Timer,
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
-import { LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { CHIFFRES_COMMUNS, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
 import { cn } from "@/lib/utils";
-import { CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { Reveal } from "@/components/motion";
 import {
-  BoutonLien,
   CtaIntermediaire,
   Engagements,
   FilAriane,
@@ -26,6 +25,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleLivrables,
   PolePrix,
   PoleSection,
@@ -37,6 +37,7 @@ import { getDiagnostic } from "@/lib/diagnostics/configs";
 import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
 import { AvantApres } from "../_illustrations/AvantApres";
 import {
+  AUDIT_POINTS,
   CAS_REELS,
   CONSTAT,
   ENGAGEMENTS,
@@ -63,8 +64,6 @@ import {
 /** Ancre du formulaire final : cible des CTA de la page et de la barre collante. */
 const ANCRE_FORMULAIRE = "#formulaire";
 
-const NOTE_AVIS = Number(SITE.reviews.rating);
-
 const LIEN_TEXTE =
   "rounded-sm font-semibold text-primary-texte underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
 
@@ -81,19 +80,40 @@ const ICONES_GENE: Record<(typeof OPTIONS_GENE)[number]["value"], React.ReactNod
 
 const domaine = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/.*$/, "");
 
-/* ── Hero : avant / après d'une refonte, en perspective légère ──────────── */
+/* ── Hero : avant / après d'une refonte + ce que nous passons en revue ────── */
 
+/**
+ * Aside du hero, rendu par PoleHero dans sa carte en perspective (`asideRelief`) :
+ * l'avant / après (deux cadres de même hauteur, voir AvantApres), puis les six
+ * points de l'audit offert (AUDIT_POINTS, aucune donnée chiffrée) pour que la
+ * carte reste entre 340 et 520 px de haut à 448 px de large, centrée sur la
+ * colonne de texte. Le bloc d'audit est masqué sous sm : sur mobile, l'avant /
+ * après empilé suffit et le hero reste court.
+ */
 function IllustrationRefonte() {
   return (
-    <CardContainer intensite={60} containerClassName="w-full" className="w-full max-w-lg">
-      <CardBody className="w-full">
-        <CardItem translateZ={24} className="w-full">
-          <div className={cn("p-4 sm:p-5", CARTE)}>
-            <AvantApres />
-          </div>
-        </CardItem>
-      </CardBody>
-    </CardContainer>
+    <div className={cn("w-full p-4 sm:p-5", CARTE)}>
+      <AvantApres />
+      <div className="mt-4 hidden border-t border-border/70 pt-4 sm:block">
+        <p className="text-xs font-semibold uppercase tracking-wide text-purple-700">Ce que nous passons en revue, gratuitement</p>
+        <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2.5">
+          {AUDIT_POINTS.map(({ icon: Icon, libelle, detail }) => (
+            <li key={libelle} className="flex items-start gap-2">
+              <span
+                className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-purple-50 text-purple-700"
+                aria-hidden="true"
+              >
+                <Icon className="h-3.5 w-3.5" />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-xs font-semibold leading-tight text-foreground">{libelle}</span>
+                <span className="block text-[11px] leading-snug text-muted-foreground">{detail}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }
 
@@ -339,87 +359,31 @@ export default function RefonteSiteContent() {
     <div className="pt-16">
       <FilAriane elements={REFONTE_FIL} />
 
-      {/* Hero : H1 et texte rendus côté serveur, fond mesh + projecteur (seuls décors animés de l'écran). */}
-      <section className="relative isolate overflow-hidden py-14 sm:py-20">
-        <HeroMesh />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Refonte de site internet à Paris et Rueil-Malmaison : un site moderne, sans perdre votre référencement
-              </h1>
-              <div className="mt-5 max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600">
-                <p>
-                  Votre site a vieilli : il se lit mal sur téléphone, il est lent, il ne vous ressemble plus et
-                  n&apos;apporte pas de demandes. Nous le reconstruisons en gardant ce qui a de la valeur : votre nom de
-                  domaine, vos pages référencées, vos contenus et vos avis.
-                </p>
-                {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
-                <p className="hidden sm:block">
-                  Prix fixe de {PRIX.refonte.valeur} pour un site vitrine, {PRIX.refonte.detail}. Vous parlez au fondateur.
-                </p>
-              </div>
-
-              {/* Mobile : boutons juste après le texte (order), coches et chiffres ensuite ; desktop : ordre du DOM. */}
-              <ul className="order-1 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-foreground sm:order-none">
-                {REASSURANCE_HERO.map((r) => (
-                  <li key={r} className="inline-flex items-center gap-2">
-                    <span
-                      className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-                      aria-hidden="true"
-                    >
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander mon audit de refonte gratuit" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-                Envie d&apos;un premier avis tout de suite ?{" "}
-                <Link href={OUTIL_DESIGN.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
-                  Testez le design de votre site actuel
-                </Link>{" "}
-                avec notre outil gratuit.
-              </p>
-
-              {/* Trois chiffres, valeur finale dans le HTML (NumberTicker n'anime qu'au montage). */}
-              <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">clients accompagnés</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={150} />+
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">sur {SITE.reviews.count} avis</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={NOTE_AVIS} decimalPlaces={1} delay={0.1} />
-                    /5
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">pour livrer la refonte</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={2} delay={0.2} /> semaines
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            {/* Avant / après d'une refonte en perspective légère (aucun mouvement au tactile ni en animations réduites). Empilé sous lg. */}
-            <div className="lg:col-span-5">
-              <IllustrationRefonte />
-            </div>
-          </div>
-        </Conteneur>
-      </section>
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Refonte de site internet à Paris et Rueil-Malmaison : un site moderne, sans perdre votre référencement"
+        motsCles={["Refonte de site internet", "référencement"]}
+        texte={[
+          "Votre site a vieilli : il se lit mal sur téléphone, il est lent, il ne vous ressemble plus et n'apporte pas de demandes. Nous le reconstruisons en gardant ce qui a de la valeur : votre nom de domaine, vos pages référencées, vos contenus et vos avis.",
+          `Prix fixe de ${PRIX.refonte.valeur} pour un site vitrine, ${PRIX.refonte.detail}. Vous parlez au fondateur.`,
+        ]}
+        reassurance={REASSURANCE_HERO.slice(0, 3)}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Demander mon audit de refonte gratuit" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Envie d&apos;un premier avis tout de suite ?{" "}
+            <Link href={OUTIL_DESIGN.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+              Testez le design de votre site actuel
+            </Link>{" "}
+            avec notre outil gratuit.
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "2 semaines", libelle: "pour livrer la refonte" }]}
+        aside={<IllustrationRefonte />}
+        asideRelief
+        asideMobile
+      />
 
       {/* Diagnostic gratuit de la page, juste après le hero (fond blanc, le constat est gris). */}
       <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez}>

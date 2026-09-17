@@ -49,6 +49,9 @@ export async function GET(request: NextRequest) {
       "Rapport Sectoriel": { icon: "📈", leads: d.sector_reports || [] },
       "Mentions Légales":  { icon: "📄", leads: d.mentions_legales || [] },
       "Chatbot Audit":     { icon: "🤖", leads: d.chatbot_leads || [] },
+      // Pages de service (16/09/2026) : ressource PDF après le hero, diagnostic interactif avec score.
+      "Lead magnet":       { icon: "📘", leads: d.lead_magnet_requests || [] },
+      "Diagnostic":        { icon: "🩺", leads: d.diagnostic_requests || [] },
     },
     formulaires: {
       // Trafic payant : garde sa propre entrée, sinon les leads Google Ads se

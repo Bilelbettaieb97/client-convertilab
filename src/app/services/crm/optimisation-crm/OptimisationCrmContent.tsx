@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   BellRing,
   CalendarClock,
-  Check,
   CircleHelp,
   Columns3,
   FileCheck,
@@ -22,7 +21,6 @@ import type { FaqItem } from "@/lib/faq-schema";
 import { CHIFFRES_COMMUNS, getPole, getSousPage, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
 import { getDiagnostic } from "@/lib/diagnostics/configs";
 import {
-  BoutonLien,
   FilAriane,
   type FilArianeElement,
   FormulaireFinal,
@@ -31,6 +29,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleLivrables,
   PolePrix,
   PoleSection,
@@ -39,15 +38,15 @@ import {
   StickyCtaBar,
   Timeline,
 } from "@/components/pole";
-import { Conteneur, Paragraphes, Surtitre } from "@/components/pole/pole-ui";
-import { CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { Reveal } from "@/components/motion";
 import TableauRelancesMock from "./TableauRelancesMock";
 
 /**
  * Sous-page « Optimisation de CRM » (/services/crm/optimisation-crm) du pôle
  * 04 « CRM et relances automatiques » : un CRM déjà en place mais sous-utilisé.
- * Composant serveur : le H1, les textes et la FAQ sont dans le HTML. Mesh,
- * compteurs, carte en perspective, formulaire et barre collante sont des
+ * Composant serveur : le H1, les textes et la FAQ sont dans le HTML. Le hero
+ * est le composant partagé PoleHero (fond, coches, boutons, chiffres,
+ * illustration en perspective) ; formulaire et barre collante sont des
  * enfants « use client ».
  * Aucun prix chiffré : « sur devis », « diagnostic d'une journée », « prix
  * fixe communiqué sous 24 h ». Relances par email et rappels uniquement :
@@ -156,99 +155,24 @@ export default function OptimisationCrmContent() {
     <div className="pt-16">
       <FilAriane elements={FIL_ARIANE} />
 
-      {/* Hero : H1 et textes rendus côté serveur ; mesh et spotlight en fond (clients). */}
-      <section className="relative isolate overflow-hidden bg-background py-14 sm:py-20 lg:py-24">
-        <HeroMesh intensite={0.9} />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-            {/* Mobile : boutons juste après le premier paragraphe (order), coches ensuite ; desktop : ordre du DOM. */}
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Optimisation de CRM pour TPE et PME à Paris&nbsp;:{" "}
-                <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text pb-1 text-transparent">
-                  chaque devis relancé, chaque rendez-vous rappelé
-                </span>
-              </h1>
-              <p className="order-3 mt-4 text-sm text-muted-foreground sm:order-none">
-                Cette prestation fait partie de notre pôle{" "}
-                <Link href={pole.href} className={lienClasse}>
-                  {pole.nomCourt}
-                </Link>
-                .
-              </p>
-              <div className="mt-6 max-w-2xl space-y-3 text-lg">
-                <Paragraphes
-                  className="text-slate-600"
-                  texte="Votre CRM existe, mais il sert de carnet d'adresses : les devis partent sans être relancés, les fiches s'arrêtent à la première étape, et personne ne regarde le tableau de bord. Nous revoyons les étapes, nous écrivons les relances automatiques par email et les rappels de rendez-vous, et nous posons un tableau de bord lisible en une minute."
-                />
-                {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
-                <Paragraphes
-                  className="hidden text-slate-600 sm:block"
-                  texte="Sur votre outil actuel, quel qu'il soit : HubSpot, Salesforce, Pipedrive, Zoho CRM, Brevo, Sellsy, Axonaut ou monday CRM. Notre agence est à Rueil-Malmaison et Paris. Diagnostic d'une journée, plan écrit, prix fixe communiqué sous 24 h."
-                />
-              </div>
-
-              <ul className="order-1 mt-6 flex flex-col gap-2.5 sm:order-none sm:mt-7 sm:flex-row sm:flex-wrap sm:gap-x-6">
-                {CHECKMARKS_HERO.map((c) => (
-                  <li key={c} className="inline-flex items-center gap-2 text-sm font-medium text-foreground">
-                    <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <Check className="h-3 w-3" strokeWidth={3} aria-hidden="true" />
-                    </span>
-                    {c}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander un diagnostic CRM" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-                {MENTIONS.map((m, i) => (
-                  <span key={m}>
-                    {i > 0 && <span aria-hidden="true"> · </span>}
-                    {m}
-                  </span>
-                ))}
-              </p>
-            </div>
-
-            {/* Tableau de bord des relances, en perspective légère (aucun mouvement au tactile ni en animations réduites). */}
-            <div className="lg:col-span-5">
-              <CardContainer intensite={60} containerClassName="w-full" className="w-full">
-                <CardBody className="w-full">
-                  <CardItem translateZ={24} className="w-full">
-                    <TableauRelancesMock />
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            </div>
-          </div>
-
-          {/* Trois chiffres, valeur finale dans le HTML (NumberTicker n'anime qu'au montage). */}
-          <dl className="mt-10 grid max-w-3xl grid-cols-3 gap-2 sm:mt-12 sm:gap-4">
-            <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 sm:px-5 sm:py-4">
-              <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[0].libelle}</dt>
-              <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                <NumberTicker value={150} />+
-              </dd>
-            </div>
-            <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 sm:px-5 sm:py-4">
-              <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[1].libelle}</dt>
-              <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                <NumberTicker value={Number(SITE.reviews.rating)} decimalPlaces={1} delay={0.15} />
-                /5
-              </dd>
-            </div>
-            <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 sm:px-5 sm:py-4">
-              <dt className="order-2 text-xs text-muted-foreground sm:text-sm">de diagnostic sur votre vrai compte CRM</dt>
-              <dd className="text-xl font-bold text-foreground sm:text-2xl">1 journée</dd>
-            </div>
-          </dl>
-        </Conteneur>
-      </section>
+      {/* Hero commun aux pages de service (PoleHero) : H1 et textes rendus côté serveur. À droite, le tableau de bord des relances (valeurs d'exemple) en perspective légère, affiché sous la colonne de texte sur mobile. */}
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Optimisation de CRM pour TPE et PME à Paris : chaque devis relancé, chaque rendez-vous rappelé"
+        motsCles={["Optimisation de CRM", "relancé", "rappelé"]}
+        texte={[
+          "Votre CRM existe, mais il sert de carnet d'adresses : les devis partent sans être relancés, les fiches s'arrêtent à la première étape, et personne ne regarde le tableau de bord. Nous revoyons les étapes, nous écrivons les relances automatiques par email et les rappels de rendez-vous, et nous posons un tableau de bord lisible en une minute.",
+          "Sur votre outil actuel, quel qu'il soit : HubSpot, Salesforce, Pipedrive, Zoho CRM, Brevo, Sellsy, Axonaut ou monday CRM. Notre agence est à Rueil-Malmaison et Paris. Diagnostic d'une journée, plan écrit, prix fixe communiqué sous 24 h.",
+        ]}
+        reassurance={CHECKMARKS_HERO}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Demander un diagnostic CRM" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={MENTIONS.join(" · ")}
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "1 journée", libelle: "de diagnostic sur votre vrai compte CRM" }]}
+        aside={<TableauRelancesMock compact />}
+        asideRelief
+        asideMobile
+      />
 
       {/* Outil gratuit, juste après le hero (fond gris : le hero est clair) : calcul immédiat sur les chiffres de la personne, rapport complet par email. */}
       <SectionOutil

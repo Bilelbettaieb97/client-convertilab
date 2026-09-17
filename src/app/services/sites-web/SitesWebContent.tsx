@@ -12,10 +12,11 @@ import {
   Workflow,
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
-import { LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { CHIFFRES_COMMUNS, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
 import { cn } from "@/lib/utils";
 import {
   FilAriane,
+  PoleHero,
   PoleSection,
   PolePrix,
   PoleFAQ,
@@ -32,8 +33,7 @@ import {
   LienDiscret,
 } from "@/components/pole";
 import DesignScoreForm from "@/components/design-score/DesignScoreForm";
-import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
-import { BorderBeam, CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { BorderBeam, CardBody, CardContainer, CardItem, Reveal } from "@/components/motion";
 import {
   AUTRES_SITES,
   CAS_REELS,
@@ -56,9 +56,10 @@ import { MiniatureOffre, typeOffre } from "./_illustrations/MiniatureOffre";
 /**
  * Page pôle « Création de site internet » (/services/sites-web), phase 2.
  * Composant serveur : le H1, les textes, la FAQ et le maillage sont dans le
- * HTML. Les composants animés (Reveal, NumberTicker, 3d-card, BorderBeam,
- * HeroMesh, Spotlight, FormulaireFinal, StickyCtaBar) sont des enfants
- * "use client" ; aucun composant WebGL ni mesure du DOM sur cette page.
+ * HTML. Le hero est le composant partagé PoleHero (même fond, coches, boutons
+ * et chiffres que le hub /services). Les composants animés (Reveal, 3d-card,
+ * BorderBeam, FormulaireFinal, StickyCtaBar) sont des enfants "use client" ;
+ * aucun composant WebGL ni mesure du DOM sur cette page.
  */
 
 const LIEN_TEXTE =
@@ -78,133 +79,52 @@ const ICONES_PROJET: Record<(typeof OPTIONS_PROJET)[number]["value"], React.Reac
 
 const domaine = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/.*$/, "");
 
-/* ── Hero ───────────────────────────────────────────────────────────────── */
+/* ── Hero : illustration ────────────────────────────────────────────────── */
 
-function Hero() {
-  const note = Number(SITE.reviews.rating);
-  return (
-    <section className="relative isolate overflow-hidden bg-background py-14 sm:py-20 lg:py-24">
-      <HeroMesh intensite={0.9} />
-      <Spotlight />
-      <Conteneur>
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <div className="max-w-2xl">
-            <Surtitre>{SURTITRE_ZONE}</Surtitre>
-            <h1 className="text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              Création de site internet à Rueil-Malmaison et Paris :{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                un site qui convertit vos visiteurs en clients
-              </span>
-            </h1>
-            <div className="mt-6 space-y-3 text-lg">
-              <p className="leading-relaxed text-slate-600">
-                Nous créons des sites internet pour les artisans, les commerces, les indépendants et les petites
-                équipes : site vitrine professionnel, e-commerce, landing page, refonte ou application web sur mesure.
-                Chaque site est conçu pour vous apporter des demandes.
-              </p>
-              {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
-              <p className="hidden leading-relaxed text-slate-600 sm:block">
-                Prix fixe écrit avant de commencer, paiement étalé, pas d&apos;abonnement, livraison en 2 semaines.
-                Prise de rendez-vous, devis en ligne et relances automatiques s&apos;intègrent dès le départ.
-              </p>
-            </div>
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-              <BoutonLien href="/demande-maquette" label="Ma maquette gratuite en 48 h" variante="primaire" />
-              <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-            </div>
+/** Trois coches du hero : les trois premiers engagements des chips, texte inchangé. */
+const REASSURANCE_HERO = CHIPS_HERO.slice(0, 3).map((chip) => chip.label);
 
-            {/* Quatre chips de réassurance, toutes vraies. */}
-            <ul className="mt-8 flex flex-wrap gap-2" aria-label="Nos engagements">
-              {CHIPS_HERO.map((chip) => {
-                const Icon = chip.icon;
-                return (
-                  <li
-                    key={chip.label}
-                    className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-border bg-white/80 px-3 py-1.5 text-sm font-medium text-foreground backdrop-blur"
-                  >
-                    <Icon className="h-4 w-4 text-purple-700" strokeWidth={2} aria-hidden="true" />
-                    {chip.label}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
-          {/* Illustration : un site client réel dans son navigateur, en perspective légère (masquée sous lg). */}
-          <div className="hidden lg:block">
-            <MockupSite />
-          </div>
-        </div>
-
-        {/* Trois chiffres, rendus côté serveur, animés à l'entrée. */}
-        <dl className="mt-10 grid max-w-3xl grid-cols-3 gap-2 sm:mt-12 sm:gap-4">
-          <Chiffre libelle="clients accompagnés">
-            <NumberTicker value={150} />+
-          </Chiffre>
-          <Chiffre libelle={`sur ${SITE.reviews.count} avis`}>
-            <NumberTicker value={note} decimalPlaces={1} delay={0.15} />
-            <span className="text-lg font-semibold text-muted-foreground">/5</span>
-          </Chiffre>
-          <Chiffre libelle="pour livrer votre site">
-            <NumberTicker value={2} delay={0.3} /> semaines
-          </Chiffre>
-        </dl>
-      </Conteneur>
-    </section>
-  );
-}
-
-function Chiffre({ libelle, children }: { libelle: string; children: React.ReactNode }) {
-  return (
-    <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur sm:px-5 sm:py-4">
-      <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{libelle}</dt>
-      <dd className="text-xl font-bold tabular-nums text-foreground sm:text-2xl">{children}</dd>
-    </div>
-  );
-}
-
-/** Un site vitrine livré, vu dans son navigateur (vraie capture, domaine réel), avec deux repères de l'offre. */
+/**
+ * Un site vitrine livré, vu dans son navigateur (vraie capture, domaine réel),
+ * avec deux repères de l'offre. La perspective vient de PoleHero (asideRelief) :
+ * aucun composant client ici. Cadre 5/4 : environ 360 px de haut pour 448 px de
+ * large, la capture (1200 × 750) remplit le cadre sans être rognée.
+ */
 function MockupSite() {
   return (
-    <CardContainer intensite={60} containerClassName="w-full" className="w-full">
-      <CardBody className="relative w-full max-w-md">
-        <CardItem translateZ={20} className="w-full">
-          <CaptureSite
-            domaine="jsmjardinage.com"
-            src="/images/portfolio/portfolio-jsm-hero-cadre.webp"
-            alt="Page d'accueil du site vitrine de JSM Jardinage, paysagiste, livré par l'agence"
-            width={1200}
-            height={655}
-            mode="couvrir"
-            priority
-            legende="jsmjardinage.com : site vitrine livré par l'agence, consultable en ligne"
-            className="aspect-[16/11] rounded-xl shadow-[0_32px_64px_-32px_rgba(76,29,149,0.35)]"
-          />
-        </CardItem>
-        <CardItem
-          translateZ={60}
-          className="absolute -left-8 top-12 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg"
-        >
-          <span className="flex items-center gap-2">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-100 text-purple-700">
-              <LayoutTemplate className="h-4 w-4" strokeWidth={2} />
-            </span>
-            Maquette gratuite en 48 h
+    <div className="w-full">
+      <div className="relative">
+      <CaptureSite
+        domaine="jsmjardinage.com"
+        src="/images/portfolio/portfolio-jsm-hero.webp"
+        alt="Page d'accueil du site vitrine de JSM Jardinage, paysagiste, livré par l'agence"
+        width={1200}
+        height={750}
+        mode="couvrir"
+        priority
+        className="aspect-[5/4] rounded-xl shadow-[0_32px_64px_-32px_rgba(76,29,149,0.35)]"
+      />
+      {/* Repères à cheval sur les bords du cadre (barre d'adresse en haut, bord bas) : ils ne recouvrent
+          jamais le menu ni le titre du site montré. Légère sortie du cadre à partir de lg. */}
+      <div className="absolute -top-4 right-3 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg lg:-right-4">
+        <span className="flex items-center gap-2">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-100 text-purple-700">
+            <LayoutTemplate className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
           </span>
-        </CardItem>
-        <CardItem
-          translateZ={50}
-          className="absolute -right-4 bottom-10 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg"
-        >
-          <span className="flex items-center gap-2">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-pink-100 text-pink-600">
-              <Check className="h-4 w-4" strokeWidth={2.5} />
-            </span>
-            Livré en 2 semaines
+          Maquette gratuite en 48 h
+        </span>
+      </div>
+      <div className="absolute -bottom-4 left-3 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg lg:-left-8">
+        <span className="flex items-center gap-2">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+            <Check className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />
           </span>
-        </CardItem>
-      </CardBody>
-    </CardContainer>
+          Livré en 2 semaines
+        </span>
+      </div>
+      </div>
+      <p className="mt-7 text-center text-xs text-muted-foreground">jsmjardinage.com : site vitrine livré par l&apos;agence, consultable en ligne</p>
+    </div>
   );
 }
 
@@ -440,7 +360,31 @@ export default function SitesWebContent() {
     <div className="pt-16">
       <FilAriane elements={SITES_WEB_FIL} />
 
-      <Hero />
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Création de site internet à Rueil-Malmaison et Paris : un site qui convertit vos visiteurs en clients"
+        motsCles={["site internet", "clients"]}
+        texte={[
+          "Nous créons des sites internet pour les artisans, les commerces, les indépendants et les petites équipes : site vitrine professionnel, e-commerce, landing page, refonte ou application web sur mesure. Chaque site est conçu pour vous apporter des demandes.",
+          "Prix fixe écrit avant de commencer, paiement étalé, pas d'abonnement, livraison en 2 semaines. Prise de rendez-vous, devis en ligne et relances automatiques s'intègrent dès le départ.",
+        ]}
+        reassurance={REASSURANCE_HERO}
+        boutonPrimaire={{ href: "/demande-maquette", label: "Ma maquette gratuite en 48 h" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Vous voulez d&apos;abord un ordre de prix ?{" "}
+            <Link href={outilEstimation.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+              Estimez le prix de votre site en 2 minutes
+            </Link>{" "}
+            avec notre outil gratuit.
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "2 semaines", libelle: "pour livrer votre site" }]}
+        aside={<MockupSite />}
+        asideRelief
+        asideMobile
+      />
 
       {/* Outil gratuit du pôle, juste après le hero (fond blanc, le constat est gris) : score design, confiance et mobile d'un site existant. */}
       <SectionOutil

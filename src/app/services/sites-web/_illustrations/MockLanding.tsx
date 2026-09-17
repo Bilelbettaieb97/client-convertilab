@@ -11,6 +11,12 @@ import { cn } from "@/lib/utils";
 export interface MockLandingProps {
   /** Version réduite pour une miniature (hero, preuve, formulaire). */
   compact?: boolean;
+  /**
+   * Trois blocs seulement (promesse, preuve, formulaire), à taille normale et
+   * sans légende : environ 470 px de haut à 448 px de large, pour l'aside du
+   * hero de la page. Sans effet si `compact`.
+   */
+  reduit?: boolean;
   className?: string;
 }
 
@@ -30,7 +36,9 @@ function Repere({ n, label, compact }: { n: number; label: string; compact?: boo
   );
 }
 
-export function MockLanding({ compact = false, className }: MockLandingProps) {
+export function MockLanding({ compact = false, reduit = false, className }: MockLandingProps) {
+  /** Blocs offre et objections masqués, légende retirée : miniature ou aside du hero. */
+  const essentiel = compact || reduit;
   const OFFRE = ["Visite gratuite", "Prix fixe écrit", "Chantier en 1 jour"];
   const OBJECTIONS = ["Combien ça coûte ?", "Suis-je éligible à l'aide de l'État ?", "Et si je ne suis pas satisfait ?"];
 
@@ -96,7 +104,7 @@ export function MockLanding({ compact = false, className }: MockLandingProps) {
             </ul>
           </div>
 
-          {!compact && (
+          {!essentiel && (
             <>
               {/* 3. L'offre en trois blocs. */}
               <div className="relative rounded-xl border border-border px-4 pb-3 pt-8">
@@ -128,7 +136,7 @@ export function MockLanding({ compact = false, className }: MockLandingProps) {
 
           {/* 5. Formulaire : trois champs, téléphone en alternative. */}
           <div className={cn("relative rounded-xl border border-primary/30 bg-primary/5", compact ? "px-3 pb-3 pt-7" : "px-4 pb-4 pt-8")}>
-            <Repere n={compact ? 3 : 5} label="Formulaire" compact={compact} />
+            <Repere n={essentiel ? 3 : 5} label="Formulaire" compact={compact} />
             <div className={cn("grid gap-1.5", compact ? "grid-cols-2" : "grid-cols-2")}>
               <span className={cn("rounded-md border border-border bg-white px-2 text-slate-400", compact ? "py-1 text-[9px]" : "py-1.5 text-[11px]")}>Prénom</span>
               <span className={cn("rounded-md border border-border bg-white px-2 text-slate-400", compact ? "py-1 text-[9px]" : "py-1.5 text-[11px]")}>Téléphone</span>
@@ -150,7 +158,7 @@ export function MockLanding({ compact = false, className }: MockLandingProps) {
           </div>
         </div>
       </div>
-      {!compact && (
+      {!essentiel && (
         <figcaption className="mt-3 text-center text-xs text-muted-foreground">
           Exemple de structure : pas de menu, pas de lien sortant, une seule action possible. Textes fictifs, à réécrire avec votre offre.
         </figcaption>

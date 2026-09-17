@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {
   Cake,
-  Check,
   CircleHelp,
   Gem,
   Heart,
@@ -16,10 +15,9 @@ import {
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import type { FaqItem } from "@/lib/faq-schema";
-import { getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
-import { CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { CHIFFRES_COMMUNS, getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { Reveal } from "@/components/motion";
 import {
-  BoutonLien,
   CtaIntermediaire,
   DiagnosticInteractif,
   FilAriane,
@@ -28,6 +26,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleLivrables,
   PoleOffres,
   PolePreuve,
@@ -41,7 +40,6 @@ import {
   type FilArianeElement,
   type PoleOffre,
 } from "@/components/pole";
-import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
 import { getDiagnostic } from "@/lib/diagnostics/configs";
 import MockGrilleEpingles from "./MockGrilleEpingles";
 
@@ -233,97 +231,34 @@ export const FAQ_PINTEREST: FaqItem[] = [
   },
 ];
 
-const NOTE_AVIS = Number(SITE.reviews.rating);
-
 export default function PinterestAdsContent() {
   return (
     <div className="pt-16">
       <FilAriane elements={FIL_ARIANE_PINTEREST} />
 
-      {/* Hero : H1 et texte rendus côté serveur, fond mesh + projecteur (seuls décors animés de l'écran). */}
-      <section className="relative isolate overflow-hidden py-14 sm:py-20">
-        <HeroMesh />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Agence Pinterest Ads : des épingles sponsorisées qui entrent dans le projet d&apos;achat de vos clients
-              </h1>
-              <div className="mt-5 max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600">
-                <p>
-                  Décoration, mariage, mode, artisanat, alimentaire, e-commerce visuel : sur Pinterest, vos clients
-                  cherchent des idées des semaines avant d&apos;acheter. Nous plaçons vos produits à ce moment-là, avec
-                  un catalogue relié, un tag installé et un seul chiffre à suivre : le coût par commande. Vous parlez
-                  au fondateur, qui règle lui-même vos campagnes.
-                </p>
-              </div>
-
-              {/* Mobile : boutons juste après le texte (order), coches et chiffres ensuite ; desktop : ordre du DOM. */}
-              <ul className="order-1 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-foreground sm:order-none">
-                {REASSURANCE_HERO.map((r) => (
-                  <li key={r} className="inline-flex items-center gap-2">
-                    <span
-                      className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-                      aria-hidden="true"
-                    >
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander mon audit Pinterest gratuit" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-                Pas encore de budget en tête ? Commencez par{" "}
-                <Link href={estimateur.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
-                  estimer votre budget publicitaire
-                </Link>{" "}
-                avec notre outil gratuit.
-              </p>
-
-              {/* Trois chiffres, valeur finale dans le HTML (NumberTicker n'anime qu'au montage). */}
-              <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">clients accompagnés</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={150} />+
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">sur {SITE.reviews.count} avis</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={NOTE_AVIS} decimalPlaces={1} delay={0.1} />
-                    /5
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">pour un plan et un devis écrits</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={24} delay={0.2} /> h
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            {/* Grille d'épingles d'exemple (épingle sponsorisée d'une boutique fictive), en perspective légère (aucun mouvement au tactile ni en animations réduites). */}
-            <div className="lg:col-span-5">
-              <CardContainer intensite={60} containerClassName="w-full" className="w-full max-w-md">
-                <CardBody className="w-full">
-                  <CardItem translateZ={24} className="w-full">
-                    <MockGrilleEpingles className="mx-auto" />
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            </div>
-          </div>
-        </Conteneur>
-      </section>
+      {/* Hero commun aux pages de service (src/components/pole/PoleHero.tsx) : H1 dans le HTML, grille d'épingles en aside. */}
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Agence Pinterest Ads : des épingles sponsorisées qui entrent dans le projet d'achat de vos clients"
+        motsCles={["Pinterest Ads", "épingles sponsorisées"]}
+        texte="Décoration, mariage, mode, artisanat, alimentaire, e-commerce visuel : sur Pinterest, vos clients cherchent des idées des semaines avant d'acheter. Nous plaçons vos produits à ce moment-là, avec un catalogue relié, un tag installé et un seul chiffre à suivre : le coût par commande. Vous parlez au fondateur, qui règle lui-même vos campagnes."
+        reassurance={REASSURANCE_HERO}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Demander mon audit Pinterest gratuit" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Pas encore de budget en tête ? Commencez par{" "}
+            <Link href={estimateur.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+              estimer votre budget publicitaire
+            </Link>{" "}
+            avec notre outil gratuit.
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "24 h", libelle: "pour un plan et un devis écrits" }]}
+        aside={<MockGrilleEpingles compact />}
+        asideRelief
+        asideMobile
+      />
 
       {/* Diagnostic interactif du pôle, juste après le hero (contenu : src/lib/diagnostics/configs/publicite.ts). */}
       <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez} fond="blanc">

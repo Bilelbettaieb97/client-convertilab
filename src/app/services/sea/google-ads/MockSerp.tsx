@@ -8,6 +8,12 @@ import { cn } from "@/lib/utils";
  * l'annonce. CSS pur, rendu côté serveur, entreprise fictive : le badge
  * « Exemple » et la légende sont obligatoires, aucun chiffre de résultat,
  * aucun logo reproduit (le nom du moteur est écrit en texte).
+ *
+ * `compact` (aside du hero, colonne de 448 px à côté d'un texte de 700 à
+ * 780 px) : mêmes textes, moins de lignes. Onglets et résultats naturels
+ * masqués, description sur deux lignes (Google coupe aussi les siennes),
+ * deux liens annexes et trois réglages sur une ligne, pour tenir entre 340
+ * et 520 px de haut.
  */
 
 const LIENS_ANNEXES = [
@@ -19,7 +25,9 @@ const LIENS_ANNEXES = [
 
 const REGLAGES = ["Mot clé exact", "Extension d'appel", "Zone : 15 km", "Horaires d'ouverture"];
 
-export default function MockSerp({ className }: { className?: string }) {
+export default function MockSerp({ className, compact = false }: { className?: string; compact?: boolean }) {
+  const liensAnnexes = compact ? LIENS_ANNEXES.slice(0, 2) : LIENS_ANNEXES;
+  const reglages = compact ? REGLAGES.slice(0, 3) : REGLAGES;
   return (
     <figure className={cn("w-full max-w-md", className)}>
       <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_48px_-24px_rgba(15,23,42,0.2)]">
@@ -35,15 +43,17 @@ export default function MockSerp({ className }: { className?: string }) {
             <Search className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
             <span>plombier rueil-malmaison</span>
           </div>
-          <ul className="mt-3 flex gap-4 text-xs text-muted-foreground" aria-hidden="true">
-            <li className="border-b-2 border-primary pb-1 font-medium text-foreground">Tous</li>
-            <li>Maps</li>
-            <li>Images</li>
-            <li>Actualités</li>
-          </ul>
+          {!compact && (
+            <ul className="mt-3 flex gap-4 text-xs text-muted-foreground" aria-hidden="true">
+              <li className="border-b-2 border-primary pb-1 font-medium text-foreground">Tous</li>
+              <li>Maps</li>
+              <li>Images</li>
+              <li>Actualités</li>
+            </ul>
+          )}
         </div>
 
-        <div className="p-4 sm:p-5">
+        <div className={cn("p-4", !compact && "sm:p-5")}>
           {/* Annonce sponsorisée en première position */}
           <div className="rounded-xl border border-primary/25 bg-gradient-to-br from-purple-50/70 to-pink-50/40 p-4">
             <p className="text-xs font-semibold text-foreground">Sponsorisé</p>
@@ -62,7 +72,7 @@ export default function MockSerp({ className }: { className?: string }) {
             <p className="mt-2 text-base font-semibold leading-snug text-primary-texte">
               Plombier à Rueil-Malmaison : devis écrit avant travaux
             </p>
-            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+            <p className={cn("mt-1 text-sm leading-relaxed text-muted-foreground", compact && "line-clamp-2")}>
               Fuite, chauffe-eau, débouchage. Artisan local, devis gratuit, rappel dans l&apos;heure. Appelez ou demandez un
               rappel en ligne.
             </p>
@@ -81,7 +91,7 @@ export default function MockSerp({ className }: { className?: string }) {
               </li>
             </ul>
             <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 border-t border-primary/15 pt-3" aria-label="Liens annexes de l'annonce">
-              {LIENS_ANNEXES.map((l) => (
+              {liensAnnexes.map((l) => (
                 <li key={l.titre} className="min-w-0">
                   <p className="truncate text-xs font-medium text-primary-texte">{l.titre}</p>
                   <p className="truncate text-[11px] text-muted-foreground">{l.texte}</p>
@@ -91,23 +101,27 @@ export default function MockSerp({ className }: { className?: string }) {
           </div>
 
           {/* Résultats naturels, grisés : l'annonce s'affiche au-dessus */}
-          <p className="mt-4 text-[11px] font-medium uppercase tracking-wide text-muted-foreground">Résultats naturels, en dessous</p>
-          <ul className="mt-2 space-y-3" aria-hidden="true">
-            {[0, 1].map((i) => (
-              <li key={i} className="space-y-1.5">
-                <div className="flex items-center gap-2">
-                  <span className="h-5 w-5 rounded-full bg-muted" />
-                  <span className="h-2 w-28 rounded-full bg-muted" />
-                </div>
-                <span className="block h-2.5 w-4/5 rounded-full bg-muted" />
-                <span className="block h-2 w-full rounded-full bg-muted/70" />
-              </li>
-            ))}
-          </ul>
+          {!compact && (
+            <>
+              <p className="mt-4 text-[11px] font-medium uppercase tracking-wide text-muted-foreground">Résultats naturels, en dessous</p>
+              <ul className="mt-2 space-y-3" aria-hidden="true">
+                {[0, 1].map((i) => (
+                  <li key={i} className="space-y-1.5">
+                    <div className="flex items-center gap-2">
+                      <span className="h-5 w-5 rounded-full bg-muted" />
+                      <span className="h-2 w-28 rounded-full bg-muted" />
+                    </div>
+                    <span className="block h-2.5 w-4/5 rounded-full bg-muted" />
+                    <span className="block h-2 w-full rounded-full bg-muted/70" />
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
 
           {/* Ce que nous réglons derrière l'annonce */}
-          <ul className="mt-4 flex flex-wrap gap-2" aria-label="Réglages derrière l'annonce">
-            {REGLAGES.map((r) => (
+          <ul className={cn("flex flex-wrap gap-2", compact ? "mt-3" : "mt-4")} aria-label="Réglages derrière l'annonce">
+            {reglages.map((r) => (
               <li key={r} className="rounded-full border border-border bg-background px-2.5 py-1 text-xs font-medium text-foreground">
                 {r}
               </li>

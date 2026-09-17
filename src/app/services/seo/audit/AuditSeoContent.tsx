@@ -38,6 +38,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleLivrables,
   PolePreuve,
   PolePrix,
@@ -48,16 +49,15 @@ import {
   Timeline,
   type FilArianeElement,
 } from "@/components/pole";
-import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
 import CarteSeoCheck from "../CarteSeoCheck";
-import { CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { Reveal } from "@/components/motion";
 import MockJaugeAudit from "../maquettes/MockJaugeAudit";
 
 /**
  * Sous-page « Audit SEO complet » du pôle SEO. Composant serveur : le H1, tout
- * le texte et la FAQ sont dans le HTML rendu. Les animations (mesh, compteurs,
- * apparitions, carte en perspective) sont des enfants "use client" importés
- * depuis src/components/motion.
+ * le texte et la FAQ sont dans le HTML rendu. Le hero est le composant partagé
+ * PoleHero (src/components/pole) ; les apparitions sont des enfants "use client"
+ * importés depuis src/components/motion.
  *
  * Faits tenus sur la page : l'audit seul est sur devis (aucun montant), il est
  * compris au démarrage du forfait SEO (à partir de 500 €/mois, 6 mois minimum),
@@ -276,8 +276,6 @@ const lienClasse =
 const carteClasse =
   "rounded-2xl border border-border bg-card shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-[0_18px_36px_-18px_rgba(124,58,237,0.28)] motion-reduce:transition-none";
 
-const NOTE_AVIS = Number(SITE.reviews.rating);
-
 /* ------------------------------------------------------------------ */
 /* Page                                                                */
 /* ------------------------------------------------------------------ */
@@ -288,93 +286,32 @@ export default function AuditSeoContent() {
       <FilAriane elements={FIL} />
 
       {/* ------------------------------------------------------------ Hero */}
-      {/* H1 et texte rendus côté serveur ; mesh et projecteur sont les seuls décors animés de l'écran. */}
-      <section className="relative isolate overflow-hidden py-14 sm:py-20">
-        <HeroMesh />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Audit SEO à Paris et Rueil-Malmaison : ce qui bloque votre site, et par quoi commencer
-              </h1>
-              <div className="mt-5 max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600">
-                <p>
-                  Un audit SEO complet passe tout votre site au crible : technique, contenu, positions réelles,
-                  concurrents, fiche Google et accès des robots d&apos;IA. Vous recevez un rapport écrit et un plan
-                  d&apos;action priorisé, à suivre vous-même ou avec nous.
-                </p>
-                {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
-                <p className="hidden sm:block">
-                  Vous parlez au fondateur, qui réalise l&apos;audit lui-même et vous le restitue en une heure.
-                </p>
-              </div>
-
-              {/* Mobile : boutons juste après le texte (order), coches et chiffres ensuite ; desktop : ordre du DOM. */}
-              <ul className="order-1 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-foreground sm:order-none">
-                {REASSURANCE_HERO.map((r) => (
-                  <li key={r} className="inline-flex items-center gap-2">
-                    <span
-                      className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-                      aria-hidden="true"
-                    >
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander mon audit SEO" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-                Pas sûr d&apos;avoir besoin d&apos;un audit complet ? Commencez par la{" "}
-                <Link href={OUTIL.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
-                  vérification SEO gratuite de votre site en 60 secondes
-                </Link>
-                .
-              </p>
-
-              {/* Trois chiffres, valeur finale dans le HTML (NumberTicker n'anime qu'au montage). */}
-              <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[0].libelle}</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={150} />+
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[1].libelle}</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={NOTE_AVIS} decimalPlaces={1} delay={0.1} />
-                    /5
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">pour le rapport et le plan d&apos;action</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={2} delay={0.2} /> semaines
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            {/* Jauge de score et points bloquants d'exemple, en perspective légère (aucun mouvement au tactile ni en animations réduites). */}
-            <div className="lg:col-span-5">
-              <CardContainer intensite={60} containerClassName="w-full" className="w-full max-w-md">
-                <CardBody className="w-full">
-                  <CardItem translateZ={24} className="w-full">
-                    <MockJaugeAudit className="mx-auto" />
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            </div>
-          </div>
-        </Conteneur>
-      </section>
+      {/* Hero partagé : H1 et texte rendus côté serveur, jauge d'exemple en perspective légère à droite (affichée sous le texte sur mobile). */}
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Audit SEO à Paris et Rueil-Malmaison : ce qui bloque votre site, et par quoi commencer"
+        motsCles={["Audit SEO", "votre site"]}
+        texte={[
+          "Un audit SEO complet passe tout votre site au crible : technique, contenu, positions réelles, concurrents, fiche Google et accès des robots d'IA. Vous recevez un rapport écrit et un plan d'action priorisé, à suivre vous-même ou avec nous.",
+          "Vous parlez au fondateur, qui réalise l'audit lui-même et vous le restitue en une heure.",
+        ]}
+        reassurance={REASSURANCE_HERO}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Demander mon audit SEO" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Pas sûr d&apos;avoir besoin d&apos;un audit complet ? Commencez par la{" "}
+            <Link href={OUTIL.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+              vérification SEO gratuite de votre site en 60 secondes
+            </Link>
+            .
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "2 semaines", libelle: "pour le rapport et le plan d'action" }]}
+        aside={<MockJaugeAudit />}
+        asideRelief
+        asideMobile
+      />
 
       {/* ----------------------------------------------------- Audit gratuit */}
       <SectionOutil

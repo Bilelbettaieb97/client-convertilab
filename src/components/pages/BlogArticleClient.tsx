@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Calendar, Clock, Share2, ExternalLink, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Share2, ArrowRight, Sparkles } from "lucide-react";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import BlogCard from "@/components/blog/BlogCard";
@@ -20,25 +20,91 @@ interface Props {
   relatedArticles: BlogArticle[];
 }
 
+/** Ancre d'un titre : « Combien coûte un CRM ? » → « combien-coute-un-crm ». */
+function ancre(titre: string): string {
+  return titre
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
+}
+
 /** Safe markdown-like renderer -- no dangerouslySetInnerHTML for user content */
 function formatContent(content: string): React.ReactNode[] {
-  return content.split("\n").map((line, index) => {
-    // Headers
+  const lignes = content.split("\n");
+  // Sommaire : les H2 de l'article (une ligne « [[sommaire]] » dans le contenu l'affiche à cet endroit).
+  const titresH2 = lignes.filter((l) => l.startsWith("## ")).map((l) => l.replace("## ", "").trim());
+  return lignes.map((line, index) => {
+    // Headers (avec ancre, pour le sommaire et les liens profonds)
     if (line.startsWith("## ")) {
+      const texte = line.replace("## ", "").trim();
       return (
         <h2
           key={index}
-          className="text-2xl sm:text-3xl font-bold text-foreground mt-10 mb-4"
+          id={ancre(texte)}
+          className="text-2xl sm:text-3xl font-bold text-foreground mt-10 mb-4 scroll-mt-24"
         >
-          {line.replace("## ", "")}
+          {texte}
         </h2>
       );
     }
     if (line.startsWith("### ")) {
+      const texte = line.replace("### ", "").trim();
       return (
-        <h3 key={index} className="text-xl font-bold text-foreground mt-8 mb-3">
-          {line.replace("### ", "")}
+        <h3 key={index} id={ancre(texte)} className="text-xl font-bold text-foreground mt-8 mb-3 scroll-mt-24">
+          {texte}
         </h3>
+      );
+    }
+    // Sommaire
+    if (line.trim() === "[[sommaire]]") {
+      if (titresH2.length === 0) return null;
+      return (
+        <nav
+          key={index}
+          aria-label="Sommaire"
+          className="my-8 rounded-2xl border border-purple-100 bg-purple-50/60 p-5 sm:p-6 dark:border-purple-900/40 dark:bg-purple-950/20"
+        >
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-700 dark:text-purple-300">Sommaire</p>
+          <ol className="mt-3 space-y-1.5 text-sm sm:text-base">
+            {titresH2.map((titre, i) => (
+              <li key={i} className="flex gap-2">
+                <span className="w-5 shrink-0 tabular-nums text-muted-foreground">{i + 1}.</span>
+                <a href={`#${ancre(titre)}`} className="text-foreground hover:text-primary hover:underline">
+                  {titre}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      );
+    }
+    // Illustration : ![légende](/images/blog/….png)
+    const image = line.match(/^!\[(.*?)\]\((\S+)\)$/);
+    if (image) {
+      return (
+        <figure key={index} className="my-8">
+          <Image
+            src={image[2]}
+            alt={image[1]}
+            width={1200}
+            height={630}
+            sizes="(max-width: 896px) 100vw, 896px"
+            className="w-full rounded-2xl border border-border"
+          />
+          {image[1] && <figcaption className="mt-2 text-center text-sm text-muted-foreground">{image[1]}</figcaption>}
+        </figure>
+      );
+    }
+    // Liste numérotée : « 1. … »
+    const numerote = line.match(/^(\d+)\. (.*)$/);
+    if (numerote) {
+      return (
+        <li key={index} value={Number(numerote[1])} className="ml-6 mb-2 text-muted-foreground list-decimal">
+          {renderInline(numerote[2])}
+        </li>
       );
     }
     // Blockquote

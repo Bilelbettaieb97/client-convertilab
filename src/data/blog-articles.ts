@@ -1,3 +1,5 @@
+import { articlesServices } from "./blog/services";
+
 export interface BlogArticleAuthor {
   name: string;
   avatar?: string;
@@ -29,6 +31,8 @@ export interface FullBlogArticle extends BlogArticle {
 
 
 export const blogArticles: FullBlogArticle[] = [
+  // Articles liés aux pages de service (septembre 2026), un fichier par article dans ./blog/services/.
+  ...articlesServices,
   {
     slug: "pourquoi-site-web-indispensable-2024",
     title: "Pourquoi avoir un site web pour son entreprise en 2026 ?",
@@ -8565,7 +8569,16 @@ export const getArticleBySlug = (slug: string): FullBlogArticle | undefined => {
 };
 
 export const getRelatedArticles = (currentSlug: string, limit: number = 3): BlogArticle[] => {
+  const courant = blogArticles.find((a) => a.slug === currentSlug);
+  const tags = new Set(courant?.tags ?? []);
+  // Même catégorie d'abord, puis nombre de tags en commun, puis date : le maillage
+  // reste dans le même pôle au lieu de renvoyer toujours les trois premiers articles.
+  const score = (a: FullBlogArticle) =>
+    (courant && a.category === courant.category ? 10 : 0) + a.tags.filter((tag) => tags.has(tag)).length;
   return blogArticles
-    .filter(article => article.slug !== currentSlug)
-    .slice(0, limit);
+    .filter((article) => article.slug !== currentSlug)
+    .map((a, i) => ({ a, i, s: score(a) }))
+    .sort((x, y) => y.s - x.s || x.i - y.i)
+    .slice(0, limit)
+    .map(({ a }) => a);
 };

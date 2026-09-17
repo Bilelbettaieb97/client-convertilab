@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   BarChart3,
   Briefcase,
-  CalendarCheck,
   Check,
   CircleHelp,
   ClipboardCheck,
@@ -30,11 +29,10 @@ import {
 import { PRICING, SITE } from "@/lib/constants";
 import type { FaqItem } from "@/lib/faq-schema";
 import { caseStudies, fullCaseStudies, LIVE_SITES } from "@/data/case-studies";
-import { getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { CHIFFRES_COMMUNS, getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
 import { cn } from "@/lib/utils";
-import { BorderBeam, CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { BorderBeam, Reveal } from "@/components/motion";
 import {
-  BoutonLien,
   Comparatif,
   CtaIntermediaire,
   Engagements,
@@ -47,6 +45,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PolePreuve,
   PolePrix,
   PoleSection,
@@ -58,7 +57,6 @@ import {
   type TimelineEtape,
 } from "@/components/pole";
 import { getDiagnostic } from "@/lib/diagnostics/configs";
-import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
 import { CaptureSite } from "../_illustrations/CaptureSite";
 
 /**
@@ -99,14 +97,9 @@ const PRIX_VITRINE_DETAIL = `${mensualite(PRICING.vitrine.monthly)}, ${ETALE}`;
 const PRIX_REFONTE = euros(PRICING.refonte.from);
 const PRIX_LANDING = euros(PRICING.landing.from);
 
-/* ── Hero : chips de réassurance, toutes vraies ─────────────────────────── */
+/* ── Hero : trois coches de réassurance, toutes vraies ──────────────────── */
 
-const CHIPS_HERO = [
-  { icon: Timer, label: "Devis sous 24 h" },
-  { icon: Rocket, label: "Livré en 2 semaines" },
-  { icon: CalendarCheck, label: "Paiement étalé, pas d'abonnement" },
-  { icon: KeyRound, label: "Vous êtes propriétaire du site" },
-] as const;
+const REASSURANCE_HERO = ["Devis sous 24 h", "Livré en 2 semaines", "Paiement étalé, pas d'abonnement"] as const;
 
 /* ── Pour qui : quatre profils ──────────────────────────────────────────── */
 
@@ -321,142 +314,48 @@ const LIEN_TEXTE =
 const CARTE =
   "rounded-2xl border border-border bg-card shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-[0_16px_32px_-20px_rgba(76,29,149,0.35)] motion-reduce:transition-none";
 
-function Chiffre({ libelle, children }: { libelle: string; children: React.ReactNode }) {
-  return (
-    <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-      <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{libelle}</dt>
-      <dd className="text-xl font-bold tabular-nums text-foreground sm:text-2xl">{children}</dd>
-    </div>
-  );
-}
-
-/** Un site vitrine livré (artisan du bâtiment), vu dans son navigateur : vraie capture, domaine réel, deux repères de l'offre. */
+/**
+ * Illustration du hero : un site vitrine livré (artisan du bâtiment), vu dans
+ * son navigateur. Vraie capture, domaine réel, deux repères de l'offre. Le
+ * relief en perspective est donné par PoleHero (asideRelief) : ici, aucune
+ * carte 3D. Cadre 10/9 : à 448 px de large, environ 400 px de haut, la
+ * colonne de texte en face en fait 700 à 780. Les repères débordent moins
+ * sous sm : la section coupe ce qui dépasse et le conteneur n'a que 16 px de marge.
+ */
 function MockupVitrine() {
   return (
-    <CardContainer intensite={60} containerClassName="w-full" className="w-full">
-      <CardBody className="relative w-full max-w-md">
-        <CardItem translateZ={20} className="w-full">
-          <CaptureSite
-            domaine="acb-renovation.fr"
-            src="/images/portfolio/gallery-acb-fullpage-1.webp"
-            alt="Page d'accueil du site vitrine d'ACB Rénovation, entreprise de couverture et rénovation, livré par l'agence"
-            width={1000}
-            height={1295}
-            rogner
-            priority
-            legende="acb-renovation.fr : site vitrine livré par l'agence, consultable en ligne"
-            className="aspect-[16/12] rounded-xl shadow-[0_32px_64px_-32px_rgba(76,29,149,0.35)]"
-          />
-        </CardItem>
-        <CardItem
-          translateZ={60}
-          className="absolute -left-8 top-12 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg"
-        >
-          <span className="flex items-center gap-2">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-100 text-purple-700">
-              <LayoutTemplate className="h-4 w-4" strokeWidth={2} />
-            </span>
-            Maquette gratuite en 48 h
+    <div className="w-full">
+      <div className="relative">
+      <CaptureSite
+        domaine="acb-renovation.fr"
+        src="/images/portfolio/gallery-acb-fullpage-1.webp"
+        alt="Page d'accueil du site vitrine d'ACB Rénovation, entreprise de couverture et rénovation, livré par l'agence"
+        width={1000}
+        height={1295}
+        rogner
+        priority
+        className="aspect-[10/9] rounded-xl shadow-[0_32px_64px_-32px_rgba(76,29,149,0.35)]"
+      />
+      {/* Repères à cheval sur les bords du cadre : ils ne recouvrent ni le menu ni le titre du site montré. */}
+      <div className="absolute -top-4 right-3 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg lg:-right-4">
+        <span className="flex items-center gap-2">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-100 text-purple-700">
+            <LayoutTemplate className="h-4 w-4" strokeWidth={2} />
           </span>
-        </CardItem>
-        <CardItem
-          translateZ={50}
-          className="absolute -right-4 bottom-10 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg"
-        >
-          <span className="flex items-center gap-2">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-pink-100 text-pink-600">
-              <Check className="h-4 w-4" strokeWidth={2.5} />
-            </span>
-            {PRIX_VITRINE}, prix fixe
+          Maquette gratuite en 48 h
+        </span>
+      </div>
+      <div className="absolute -bottom-4 left-3 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg lg:-left-8">
+        <span className="flex items-center gap-2">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+            <Check className="h-4 w-4" strokeWidth={2.5} />
           </span>
-        </CardItem>
-      </CardBody>
-    </CardContainer>
-  );
-}
-
-/* ── Hero ───────────────────────────────────────────────────────────────── */
-
-function Hero() {
-  const note = Number(SITE.reviews.rating);
-  return (
-    <section className="relative isolate overflow-hidden bg-background py-14 sm:py-20 lg:py-24">
-      <HeroMesh intensite={0.9} />
-      <Spotlight />
-      <Conteneur>
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <div className="flex max-w-2xl flex-col">
-            <Surtitre>{SURTITRE_ZONE}</Surtitre>
-            <h1 className="text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              Création de site vitrine à Paris et Rueil-Malmaison :{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                un site professionnel qui apporte des demandes
-              </span>
-            </h1>
-            <div className="mt-6 space-y-3 text-lg">
-              <p className="leading-relaxed text-slate-600">
-                Un site vitrine professionnel présente votre activité, vos prestations, vos avis et vos coordonnées aux
-                personnes qui vous cherchent sur Google. Nous le concevons pour les artisans, les commerces, les cabinets
-                et les indépendants, avec un seul objectif : que le visiteur vous appelle ou vous écrive.
-              </p>
-              {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
-              <p className="hidden leading-relaxed text-slate-600 sm:block">
-                {/* {" "} explicite : JSX supprime l'espace de tête d'une ligne, « 24 moisen paiement » s'affichait collé. */}
-                Prix fixe de {PRIX_VITRINE}, écrit avant de commencer, ou {mensualite(PRICING.vitrine.monthly)}{" "}
-                en paiement étalé, pas d&apos;abonnement. Maquette gratuite sous 48 h, livraison en 2 semaines.
-              </p>
-            </div>
-
-            {/* Mobile : boutons juste après le texte (order), chips ensuite ; desktop : ordre du DOM. */}
-            <ul className="order-1 mt-6 flex flex-wrap gap-2 sm:order-none sm:mt-8" aria-label="Nos engagements">
-              {CHIPS_HERO.map((chip) => {
-                const Icon = chip.icon;
-                return (
-                  <li
-                    key={chip.label}
-                    className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-border bg-white/80 px-3 py-1.5 text-sm font-medium text-foreground backdrop-blur"
-                  >
-                    <Icon className="h-4 w-4 text-purple-700" strokeWidth={2} aria-hidden="true" />
-                    {chip.label}
-                  </li>
-                );
-              })}
-            </ul>
-
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-              <BoutonLien href="/demande-maquette" label="Ma maquette gratuite en 48 h" variante="primaire" />
-              <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-            </div>
-            <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-              Vous hésitez sur le budget ?{" "}
-              <Link href={outilEstimation.href} className={LIEN_TEXTE}>
-                Estimez le prix de votre site en 2 minutes
-              </Link>{" "}
-              avec notre outil gratuit.
-            </p>
-          </div>
-
-          {/* Illustration : un site vitrine client réel dans son navigateur, en perspective légère (masquée sous lg). */}
-          <div className="hidden lg:block">
-            <MockupVitrine />
-          </div>
-        </div>
-
-        {/* Trois chiffres, rendus côté serveur, animés à l'entrée. */}
-        <dl className="mt-10 grid max-w-3xl grid-cols-3 gap-2 sm:mt-12 sm:gap-4">
-          <Chiffre libelle="clients accompagnés">
-            <NumberTicker value={150} />+
-          </Chiffre>
-          <Chiffre libelle={`sur ${SITE.reviews.count} avis`}>
-            <NumberTicker value={note} decimalPlaces={1} delay={0.15} />
-            <span className="text-lg font-semibold text-muted-foreground">/5</span>
-          </Chiffre>
-          <Chiffre libelle="pour livrer votre site vitrine">
-            <NumberTicker value={2} delay={0.3} /> semaines
-          </Chiffre>
-        </dl>
-      </Conteneur>
-    </section>
+          {PRIX_VITRINE}, prix fixe
+        </span>
+      </div>
+      </div>
+      <p className="mt-7 text-center text-xs text-muted-foreground">acb-renovation.fr : site vitrine livré par l&apos;agence, consultable en ligne</p>
+    </div>
   );
 }
 
@@ -547,7 +446,31 @@ export default function SiteVitrineContent() {
     <div className="pt-16">
       <FilAriane elements={FIL_ARIANE_SITE_VITRINE} />
 
-      <Hero />
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre={"Création de site vitrine à Paris et Rueil-Malmaison\u00a0: un site professionnel qui apporte des demandes"}
+        motsCles={["site vitrine", "demandes"]}
+        texte={[
+          "Un site vitrine professionnel présente votre activité, vos prestations, vos avis et vos coordonnées aux personnes qui vous cherchent sur Google. Nous le concevons pour les artisans, les commerces, les cabinets et les indépendants, avec un seul objectif : que le visiteur vous appelle ou vous écrive.",
+          `Prix fixe de ${PRIX_VITRINE}, écrit avant de commencer, ou ${mensualite(PRICING.vitrine.monthly)} en paiement étalé, pas d'abonnement. Maquette gratuite sous 48 h, livraison en 2 semaines.`,
+        ]}
+        reassurance={REASSURANCE_HERO}
+        boutonPrimaire={{ href: "/demande-maquette", label: "Ma maquette gratuite en 48 h" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Vous hésitez sur le budget ?{" "}
+            <Link href={outilEstimation.href} className={LIEN_TEXTE}>
+              Estimez le prix de votre site en 2 minutes
+            </Link>{" "}
+            avec notre outil gratuit.
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "2 semaines", libelle: "pour livrer votre site vitrine" }]}
+        aside={<MockupVitrine />}
+        asideRelief
+        asideMobile
+      />
 
       {/* Diagnostic gratuit de la page, juste après le hero (fond gris : la section « pour qui » est blanche). */}
       <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez} fond="gris">

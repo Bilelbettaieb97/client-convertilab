@@ -27,7 +27,6 @@ import { SITE } from "@/lib/constants";
 import type { FaqItem } from "@/lib/faq-schema";
 import { CHIFFRES_COMMUNS, getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
 import {
-  BoutonLien,
   Comparatif,
   CtaIntermediaire,
   Engagements,
@@ -39,6 +38,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleLivrables,
   PolePreuve,
   PolePrix,
@@ -48,18 +48,17 @@ import {
   Timeline,
   type FilArianeElement,
 } from "@/components/pole";
-import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
 import CarteSeoCheck from "../CarteSeoCheck";
-import { BorderBeam, CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { BorderBeam, Reveal } from "@/components/motion";
 import MockCourbePositions from "../maquettes/MockCourbePositions";
 
 /**
  * Sous-page « Référencement naturel » du pôle SEO : le forfait mensuel
  * (audit, technique, contenus, maillage, liens, SEO local et visibilité IA
  * inclus). Composant serveur : le H1, tout le texte et la FAQ sont dans le
- * HTML rendu. Les animations (mesh, compteurs, apparitions, carte en
- * perspective) sont des enfants "use client" importés depuis
- * src/components/motion.
+ * HTML rendu. Le hero est le composant partagé PoleHero (mesh, mots clés en
+ * dégradé, carte en perspective) ; les autres animations (apparitions,
+ * faisceau) sont des enfants "use client" importés depuis src/components/motion.
  */
 
 export const pole = getPole("seo");
@@ -345,89 +344,31 @@ export default function ReferencementContent() {
       <FilAriane elements={FIL} />
 
       {/* ---------------------------------------------------------- Hero */}
-      <section className="relative isolate overflow-hidden bg-background pb-16 pt-10 sm:pb-20 sm:pt-14">
-        <HeroMesh intensite={0.7} />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Référencement SEO à Paris et <span className="whitespace-nowrap">Rueil-Malmaison</span> : un forfait
-                mensuel pour être trouvé sur Google, durablement
-              </h1>
-              <div className="mt-5 max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600">
-                <p>
-                  Le référencement naturel, c&apos;est le travail qui fait apparaître votre site quand vos clients tapent
-                  votre métier dans Google, sans payer chaque clic. Technique, contenus, maillage, liens entrants, fiche
-                  Google et visibilité dans les IA : tout est compris dans un forfait à partir de 500 € par mois.
-                </p>
-                <p className="hidden sm:block">
-                  Premiers effets en 3 à 6 mois, un rapport d&apos;une page chaque mois, et aucune position promise :
-                  nous vous le disons dès le premier appel.
-                </p>
-              </div>
-
-              <ul className="order-1 mt-6 grid max-w-2xl gap-x-6 gap-y-2.5 text-sm font-medium text-foreground sm:order-none sm:grid-cols-2">
-                {REASSURANCE_HERO.map((r) => (
-                  <li key={r} className="flex items-start gap-2">
-                    <span
-                      className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-                      aria-hidden="true"
-                    >
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander mon devis SEO écrit" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-                Vous voulez d&apos;abord un état des lieux ?{" "}
-                <Link href={OUTIL.href} className={lienClasse}>
-                  Vérifiez le SEO de votre site en 60 secondes
-                </Link>
-                , gratuitement.
-              </p>
-
-              <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[0].libelle}</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={150} />+
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[1].libelle}</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={Number(SITE.reviews.rating)} decimalPlaces={1} delay={0.15} />
-                    /5
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">avant les premiers effets SEO</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">3 à 6 mois</dd>
-                </div>
-              </dl>
-            </div>
-
-            {/* Courbe d'exemple (positions et visites sur 6 mois), en perspective légère (aucun mouvement au tactile ni en animations réduites). */}
-            <div className="lg:col-span-5">
-              <CardContainer intensite={60} containerClassName="w-full" className="w-full max-w-md">
-                <CardBody className="w-full">
-                  <CardItem translateZ={24} className="w-full">
-                    <MockCourbePositions className="mx-auto" />
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            </div>
-          </div>
-        </Conteneur>
-      </section>
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Référencement SEO à Paris et Rueil-Malmaison : un forfait mensuel pour être trouvé sur Google, durablement"
+        motsCles={["Référencement SEO", "Google"]}
+        texte={[
+          "Le référencement naturel, c'est le travail qui fait apparaître votre site quand vos clients tapent votre métier dans Google, sans payer chaque clic. Technique, contenus, maillage, liens entrants, fiche Google et visibilité dans les IA : tout est compris dans un forfait à partir de 500 € par mois.",
+          "Premiers effets en 3 à 6 mois, un rapport d'une page chaque mois, et aucune position promise : nous vous le disons dès le premier appel.",
+        ]}
+        reassurance={REASSURANCE_HERO.slice(0, 3)}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Demander mon devis SEO écrit" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Vous voulez d&apos;abord un état des lieux ?{" "}
+            <Link href={OUTIL.href} className={lienClasse}>
+              Vérifiez le SEO de votre site en 60 secondes
+            </Link>
+            , gratuitement.
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "3 à 6 mois", libelle: "avant les premiers effets SEO" }]}
+        aside={<MockCourbePositions />}
+        asideRelief
+        asideMobile
+      />
 
       {/* ----------------------------------------------------- Audit gratuit */}
       <SectionOutil

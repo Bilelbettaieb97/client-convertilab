@@ -20,10 +20,9 @@ import {
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import type { FaqItem } from "@/lib/faq-schema";
-import { getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
-import { CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { CHIFFRES_COMMUNS, getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { Reveal } from "@/components/motion";
 import {
-  BoutonLien,
   CtaIntermediaire,
   DiagnosticInteractif,
   FilAriane,
@@ -33,6 +32,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PolePreuve,
   PolePrix,
   PoleSection,
@@ -43,7 +43,6 @@ import {
   Timeline,
   type FilArianeElement,
 } from "@/components/pole";
-import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
 import { getDiagnostic } from "@/lib/diagnostics/configs";
 import MockVideoTikTok from "./MockVideoTikTok";
 
@@ -175,97 +174,34 @@ export const FAQ_TIKTOK: FaqItem[] = [
   },
 ];
 
-const NOTE_AVIS = Number(SITE.reviews.rating);
-
 export default function TikTokAdsContent() {
   return (
     <div className="pt-16">
       <FilAriane elements={FIL_ARIANE_TIKTOK} />
 
-      {/* Hero : H1 et texte rendus côté serveur, fond mesh + projecteur (seuls décors animés de l'écran). */}
-      <section className="relative isolate overflow-hidden py-14 sm:py-20">
-        <HeroMesh />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Agence TikTok Ads à Paris : des vidéos verticales qui font venir vos clients de moins de 35 ans
-              </h1>
-              <div className="mt-5 max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600">
-                <p>
-                  Vidéos verticales écrites pour le fil et testées par petites vagues, Spark Ads depuis votre compte,
-                  pixel et événements installés avant le premier euro dépensé. Vous suivez un seul chiffre chaque
-                  mois : le coût par demande ou par commande. Et si TikTok n&apos;est pas fait pour vous, nous vous le
-                  disons dès le diagnostic.
-                </p>
-              </div>
-
-              {/* Mobile : boutons juste après le texte (order), coches et chiffres ensuite ; desktop : ordre du DOM. */}
-              <ul className="order-1 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-foreground sm:order-none">
-                {REASSURANCE_HERO.map((r) => (
-                  <li key={r} className="inline-flex items-center gap-2">
-                    <span
-                      className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-                      aria-hidden="true"
-                    >
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander mon diagnostic TikTok gratuit" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-                Vous hésitez entre plusieurs plateformes ? Commencez par{" "}
-                <Link href={estimateur.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
-                  estimer votre budget publicitaire
-                </Link>{" "}
-                avec notre outil gratuit.
-              </p>
-
-              {/* Trois chiffres, valeur finale dans le HTML (NumberTicker n'anime qu'au montage). */}
-              <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">clients accompagnés</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={150} />+
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">sur {SITE.reviews.count} avis</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={NOTE_AVIS} decimalPlaces={1} delay={0.1} />
-                    /5
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">de budget média conseillé par mois</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={500} delay={0.2} /> €
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            {/* Vidéo verticale d'exemple (accroche, sous-titres, bouton) et son anatomie, en perspective légère : ce que nous construisons, pas un résultat. */}
-            <div className="lg:col-span-5">
-              <CardContainer intensite={60} containerClassName="w-full" className="w-full max-w-md">
-                <CardBody className="w-full">
-                  <CardItem translateZ={24} className="w-full">
-                    <MockVideoTikTok className="mx-auto" />
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            </div>
-          </div>
-        </Conteneur>
-      </section>
+      {/* Hero commun aux pages de service (src/components/pole/PoleHero.tsx) : H1 dans le HTML, vidéo verticale d'exemple et son anatomie en aside (version compacte pour tenir dans la colonne). */}
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Agence TikTok Ads à Paris : des vidéos verticales qui font venir vos clients de moins de 35 ans"
+        motsCles={["TikTok Ads", "vidéos verticales"]}
+        texte="Vidéos verticales écrites pour le fil et testées par petites vagues, Spark Ads depuis votre compte, pixel et événements installés avant le premier euro dépensé. Vous suivez un seul chiffre chaque mois : le coût par demande ou par commande. Et si TikTok n'est pas fait pour vous, nous vous le disons dès le diagnostic."
+        reassurance={REASSURANCE_HERO}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Demander mon diagnostic TikTok gratuit" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Vous hésitez entre plusieurs plateformes ? Commencez par{" "}
+            <Link href={estimateur.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+              estimer votre budget publicitaire
+            </Link>{" "}
+            avec notre outil gratuit.
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "500 €", libelle: "de budget média conseillé par mois" }]}
+        aside={<MockVideoTikTok compact />}
+        asideRelief
+        asideMobile
+      />
 
       {/* Diagnostic interactif du pôle, juste après le hero (contenu : src/lib/diagnostics/configs/publicite.ts). */}
       <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez} fond="blanc">

@@ -11,10 +11,9 @@ import {
   Table2,
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
-import { LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { CHIFFRES_COMMUNS, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
 import { cn } from "@/lib/utils";
 import {
-  BoutonLien,
   CtaIntermediaire,
   FilAriane,
   FormulaireFinal,
@@ -25,6 +24,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleLivrables,
   PolePreuve,
   PolePrix,
@@ -35,8 +35,7 @@ import {
   Timeline,
 } from "@/components/pole";
 import { getDiagnostic } from "@/lib/diagnostics/configs";
-import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
-import { CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { Reveal } from "@/components/motion";
 import { MockEspaceClient } from "../_illustrations/MockEspaceClient";
 import {
   ANCRE_FORMULAIRE,
@@ -63,9 +62,11 @@ import {
 /**
  * Sous-page « Application web sur mesure » (/services/sites-web/application-web).
  * Composant serveur : le H1, les textes, la FAQ et le maillage sont dans le
- * HTML. Les composants animés (Reveal, NumberTicker, 3d-card, HeroMesh,
- * Spotlight, FormulaireFinal, StickyCtaBar) sont des enfants "use client" ;
- * aucun composant WebGL ni mesure du DOM sur cette page.
+ * HTML. Le hero est le composant partagé PoleHero (fond, H1 à mots clés en
+ * dégradé, coches, boutons, chiffres, illustration en perspective). Les
+ * composants animés (Reveal, la carte 3d de PoleHero, FormulaireFinal,
+ * StickyCtaBar) sont des enfants "use client" ; aucun composant WebGL ni
+ * mesure du DOM sur cette page.
  */
 
 const LIEN_TEXTE =
@@ -83,127 +84,45 @@ const ICONES_APPLICATION: Record<(typeof OPTIONS_APPLICATION)[number]["value"], 
   "je-ne-sais-pas": <HelpCircle className="h-5 w-5" />,
 };
 
-/* ── Hero ───────────────────────────────────────────────────────────────── */
+/* ── Hero : mentions sous les boutons, reprises par la barre collante ───── */
 
-function Hero() {
-  const note = Number(SITE.reviews.rating);
-  return (
-    <section className="relative isolate overflow-hidden bg-background py-14 sm:py-20 lg:py-24">
-      <HeroMesh intensite={0.9} />
-      <Spotlight />
-      <Conteneur>
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <div className="flex max-w-2xl flex-col">
-            <Surtitre>{SURTITRE_ZONE}</Surtitre>
-            <h1 className="text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              Application web sur mesure à Paris et Rueil-Malmaison :{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                l&apos;outil métier qui remplace vos tableurs et vos ressaisies
-              </span>
-            </h1>
-            <div className="mt-6 space-y-3 text-lg">
-              <p className="leading-relaxed text-slate-600">
-                Portail client, prise de rendez-vous, devis en ligne, espace membre, tableau de bord : nous concevons
-                des applications web sur mesure pour les artisans, les commerces, les cabinets et les PME de 3 à 30
-                personnes, reliées aux outils que vous utilisez déjà.
-              </p>
-              {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
-              <p className="hidden leading-relaxed text-slate-600 sm:block">
-                Diagnostic gratuit de 30 minutes, puis devis à prix fixe par phase avec le délai écrit. Le code et les
-                données vous appartiennent.
-              </p>
-            </div>
-            {/* Quatre chips de réassurance, toutes vraies et tenues sur la page prix. Mobile : boutons juste après le texte (order), chips ensuite ; desktop : ordre du DOM (même gabarit que site-vitrine). */}
-            <ul className="order-1 mt-6 flex flex-wrap gap-2 sm:order-none sm:mt-8" aria-label="Nos engagements">
-              {CHIPS_HERO.map((chip) => {
-                const Icon = chip.icon;
-                return (
-                  <li
-                    key={chip.label}
-                    className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-border bg-white/80 px-3 py-1.5 text-sm font-medium text-foreground backdrop-blur"
-                  >
-                    <Icon className="h-4 w-4 text-purple-700" strokeWidth={2} aria-hidden="true" />
-                    {chip.label}
-                  </li>
-                );
-              })}
-            </ul>
+/** Trois mentions vraies, sous les boutons du hero et dans la barre collante. */
+const MENTIONS = ["Gratuit", "Sans engagement", "Réponse sous 24 h"];
 
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-              <BoutonLien href={ANCRE_FORMULAIRE} label="Décrire mon projet, réponse sous 24 h" variante="primaire" />
-              <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-            </div>
-          </div>
-
-          {/* Illustration : un espace client d'exemple en perspective légère, badge « Exemple », aucune donnée réelle (masquée sous lg). */}
-          <div className="hidden lg:block">
-            <MockupApplication />
-          </div>
-        </div>
-
-        {/* Trois repères, rendus côté serveur, animés à l'entrée. */}
-        <dl className="mt-10 grid max-w-3xl grid-cols-3 gap-2 sm:mt-12 sm:gap-4">
-          <Chiffre libelle="clients accompagnés">
-            <NumberTicker value={150} />+
-          </Chiffre>
-          <Chiffre libelle={`sur ${SITE.reviews.count} avis`}>
-            <NumberTicker value={note} decimalPlaces={1} delay={0.15} />
-            <span className="text-lg font-semibold text-muted-foreground">/5</span>
-          </Chiffre>
-          <Chiffre libelle="pour une réponse écrite">
-            <NumberTicker value={24} delay={0.3} /> h
-          </Chiffre>
-        </dl>
-      </Conteneur>
-    </section>
-  );
-}
-
-function Chiffre({ libelle, children }: { libelle: string; children: React.ReactNode }) {
-  return (
-    <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur sm:px-5 sm:py-4">
-      <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{libelle}</dt>
-      <dd className="text-xl font-bold tabular-nums text-foreground sm:text-2xl">{children}</dd>
-    </div>
-  );
-}
+/* ── Illustration du hero ───────────────────────────────────────────────── */
 
 /**
  * Espace client d'exemple (barre latérale, indicateurs, dossiers et statuts),
  * badge « Exemple » : la forme d'un outil métier livré, aucune donnée réelle.
+ * PoleHero l'enveloppe lui-même dans la carte en perspective (asideRelief) :
+ * aucun CardContainer ici. À 448 px de large, la maquette fait environ 470 px
+ * de haut, dans la fourchette du hero. Les deux repères flottants sont posés
+ * sur la barre de recherche et la ligne de pied de la maquette (aucun texte
+ * utile couvert) ; sous sm, ils restent dans la largeur de l'écran. Le premier
+ * est à top-10 (40 px) : à top-12 il descendait sur l'entrée de menu
+ * « Accueil » et coupait ses lettres en deux, sur bureau comme sur mobile.
  */
 function MockupApplication() {
   return (
-    <CardContainer intensite={60} containerClassName="w-full" className="w-full">
-      <CardBody className="relative w-full max-w-md">
-        <CardItem translateZ={20} className="w-full">
-          <MockEspaceClient />
-        </CardItem>
-        {/* Repères flottants posés sur la barre de recherche et la ligne de pied de la maquette : aucun texte utile couvert. */}
-        <CardItem
-          translateZ={60}
-          className="absolute -left-8 top-12 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg"
-        >
-          <span className="flex items-center gap-2">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-100 text-purple-700">
-              <CalendarCheck className="h-4 w-4" strokeWidth={2} />
-            </span>
-            Rendez-vous confirmé
+    <div className="relative w-full">
+      <MockEspaceClient />
+      <div className="absolute -left-2 top-10 rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg sm:-left-8">
+        <span className="flex items-center gap-2">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-100 text-purple-700">
+            <CalendarCheck className="h-4 w-4" strokeWidth={2} />
           </span>
-        </CardItem>
-        <CardItem
-          translateZ={50}
-          className="absolute -right-4 bottom-[3.75rem] rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg"
-        >
-          <span className="flex items-center gap-2">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-pink-100 text-pink-600">
-              <Check className="h-4 w-4" strokeWidth={2.5} />
-            </span>
-            Devis envoyé
+          Rendez-vous confirmé
+        </span>
+      </div>
+      <div className="absolute -right-2 bottom-[3.75rem] rounded-2xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground shadow-lg sm:-right-4">
+        <span className="flex items-center gap-2">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+            <Check className="h-4 w-4" strokeWidth={2.5} />
           </span>
-        </CardItem>
-      </CardBody>
-    </CardContainer>
+          Devis envoyé
+        </span>
+      </div>
+    </div>
   );
 }
 
@@ -341,7 +260,23 @@ export default function ApplicationWebContent() {
     <div className="pt-16">
       <FilAriane elements={APPLICATION_WEB_FIL} />
 
-      <Hero />
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Application web sur mesure à Paris et Rueil-Malmaison : l'outil métier qui remplace vos tableurs et vos ressaisies"
+        motsCles={["Application web sur mesure", "outil métier"]}
+        texte={[
+          "Portail client, prise de rendez-vous, devis en ligne, espace membre, tableau de bord : nous concevons des applications web sur mesure pour les artisans, les commerces, les cabinets et les PME de 3 à 30 personnes, reliées aux outils que vous utilisez déjà.",
+          "Diagnostic gratuit de 30 minutes, puis devis à prix fixe par phase avec le délai écrit. Le code et les données vous appartiennent.",
+        ]}
+        reassurance={CHIPS_HERO.slice(0, 3).map((chip) => chip.label)}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Décrire mon projet, réponse sous 24 h" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={MENTIONS.join(" · ")}
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "24 h", libelle: "pour une réponse écrite" }]}
+        aside={<MockupApplication />}
+        asideRelief
+        asideMobile
+      />
 
       {/* Diagnostic gratuit de la page, juste après le hero (fond gris : la section des cas d'usage est blanche). */}
       <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez} fond="gris">
@@ -524,7 +459,7 @@ export default function ApplicationWebContent() {
       <StickyCtaBar
         label="Décrire mon projet"
         href={ANCRE_FORMULAIRE}
-        mentions={["Gratuit", "Sans engagement", "Réponse sous 24 h"]}
+        mentions={MENTIONS}
         formulaireId="formulaire"
       />
     </div>

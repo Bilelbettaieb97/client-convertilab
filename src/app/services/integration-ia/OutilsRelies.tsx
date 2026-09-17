@@ -90,7 +90,9 @@ export default function OutilsRelies({ className }: { className?: string }) {
           curvature={(2 - i) * 18}
           duration={4.5 + i * 0.4}
           delay={i * 0.35}
-          pathWidth={1.5}
+          pathWidth={2}
+          pathColor="hsl(270 70% 82%)"
+          pathOpacity={0.95}
         />
       ))}
       <AnimatedBeam
@@ -99,7 +101,9 @@ export default function OutilsRelies({ className }: { className?: string }) {
         toRef={equipeRef}
         duration={4}
         delay={1.2}
-        pathWidth={1.5}
+        pathWidth={2}
+          pathColor="hsl(270 70% 82%)"
+          pathOpacity={0.95}
       />
     </div>
   );

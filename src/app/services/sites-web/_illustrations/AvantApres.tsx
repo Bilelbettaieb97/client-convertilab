@@ -9,6 +9,11 @@ import { cn } from "@/lib/utils";
  * clairement marqué « exemple » ; à droite, une vraie capture d'un site livré
  * par l'agence, dans un cadre de navigateur avec son domaine réel. Composant
  * serveur, aucune donnée chiffrée.
+ *
+ * Hors `compact`, les deux cadres ont toujours la même hauteur (ratio fixe,
+ * `min-h-0` + `overflow-hidden`) : côte à côte, le site « avant », plus haut que
+ * son cadre, est tronqué en bas comme dans une vraie fenêtre, à l'image de la
+ * capture « après ». Sa colonne de menu prend la largeur de ses libellés.
  */
 export interface AvantApresProps {
   /** Version réduite pour une miniature (sans légendes hors des cadres). */
@@ -42,7 +47,7 @@ function SiteAvant({ compact }: { compact?: boolean }) {
           <div className={cn("border-b border-slate-400 bg-[#c9c3ad] text-center font-bold", compact ? "py-1" : "py-2")}>
             Bienvenue sur notre site !
           </div>
-          <div className="grid grid-cols-[30%_70%]">
+          <div className={cn("grid", compact ? "grid-cols-[30%_70%]" : "grid-cols-[auto_minmax(0,1fr)]")}>
             <ul className={cn("space-y-1 border-r border-slate-400 bg-[#dfdbcd] text-blue-800 underline", compact ? "p-1" : "p-2")}>
               <li>Accueil</li>
               <li>Nos prestations</li>
@@ -77,7 +82,7 @@ export function AvantApres({ compact = false, className }: AvantApresProps) {
             <span className="rounded-full border border-border bg-white px-2 py-0.5 uppercase tracking-wide">Avant</span>
             <span className="truncate font-normal text-muted-foreground">exemple daté</span>
           </p>
-          <div className={cn("w-full", compact ? "aspect-[16/11]" : "aspect-[16/12]")}>
+          <div className={cn("w-full", compact ? "aspect-[16/11]" : "h-44 min-h-0 overflow-hidden sm:h-52")}>
             <SiteAvant compact={compact} />
           </div>
         </div>
@@ -95,7 +100,7 @@ export function AvantApres({ compact = false, className }: AvantApresProps) {
             <span className="rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-2 py-0.5 uppercase tracking-wide text-white">Après</span>
             <span className="truncate font-normal text-muted-foreground">{APRES.domaine}</span>
           </p>
-          <div className={cn("w-full", compact ? "aspect-[16/11]" : "aspect-[16/12]")}>
+          <div className={cn("w-full", compact ? "aspect-[16/11]" : "h-44 min-h-0 overflow-hidden sm:h-52")}>
             <CadreNavigateur domaine={APRES.domaine} className="h-full">
               <Image
                 src={APRES.src}

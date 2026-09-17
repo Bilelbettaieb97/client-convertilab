@@ -5,7 +5,6 @@ import {
   Bot,
   Braces,
   Building2,
-  Check,
   CircleHelp,
   ClipboardList,
   EyeOff,
@@ -27,9 +26,8 @@ import {
 import { SITE } from "@/lib/constants";
 import type { FaqItem } from "@/lib/faq-schema";
 import { CHIFFRES_COMMUNS, getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
-import { CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { Reveal } from "@/components/motion";
 import {
-  BoutonLien,
   CtaIntermediaire,
   FilAriane,
   FormulaireFinal,
@@ -39,6 +37,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleLivrables,
   PolePreuve,
   PolePrix,
@@ -49,7 +48,6 @@ import {
   Timeline,
   type FilArianeElement,
 } from "@/components/pole";
-import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
 import CarteSeoCheck from "../CarteSeoCheck";
 import SeoOrbite from "../SeoOrbite";
 import MockReponseIa from "../maquettes/MockReponseIa";
@@ -331,105 +329,31 @@ export default function VisibiliteIaContent() {
       <FilAriane elements={FIL_ARIANE_VISIBILITE_IA} />
 
       {/* ---------------------------------------------------------- Hero */}
-      {/* Texte à gauche, réponse d'IA d'exemple à droite (empilée sous lg), même grille que les autres sous-pages. */}
-      <section className="relative isolate overflow-hidden bg-background pb-16 pt-10 sm:pb-20 sm:pt-14">
-        <HeroMesh intensite={0.7} />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Visibilité IA : être cité par ChatGPT, Perplexity et Google AI Overviews
-              </h1>
-              <div className="mt-5 max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600">
-                <p>
-                  De plus en plus de vos clients posent leur question à un assistant plutôt qu&apos;à Google. Ces
-                  outils répondent en citant quelques sites. Nous rendons le vôtre lisible et citable par eux :
-                  c&apos;est le GEO, ou référencement IA, inclus dans notre méthode SEO.
-                </p>
-              </div>
-
-              {/* Mobile : boutons juste après le texte (order), coches, lien outil et chiffres ensuite ; desktop : ordre du DOM. */}
-              <ul className="order-1 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-foreground sm:order-none">
-                {REASSURANCE_HERO.map((r) => (
-                  <li key={r} className="inline-flex items-center gap-2">
-                    <span
-                      className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-                      aria-hidden="true"
-                    >
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Faire le point sur ma visibilité IA" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-                Vos robots d&apos;IA sont-ils autorisés ?{" "}
-                <Link href={OUTIL.href} className={lienClasse}>
-                  Testez-les gratuitement en 60 secondes
-                </Link>
-                , rapport PDF par email.
-              </p>
-
-              {/* Trois repères, rendus côté serveur, animés à l'entrée (même rangée que les autres sous-pages). */}
-              <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[0].libelle}</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={150} />+
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[1].libelle}</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={Number(SITE.reviews.rating)} decimalPlaces={1} delay={0.15} />
-                    /5
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">secondes pour tester vos robots d&apos;IA</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={60} delay={0.3} />
-                  </dd>
-                </div>
-              </dl>
-
-              <p className="order-4 mt-6 text-sm text-muted-foreground sm:order-none">
-                Une page de notre{" "}
-                <Link href={pole.href} className={lienClasse}>
-                  pôle SEO à Rueil-Malmaison et Paris
-                </Link>
-                , avec le{" "}
-                <Link href={referencement.href} className={lienClasse}>
-                  forfait référencement naturel
-                </Link>{" "}
-                et l&apos;
-                <Link href={audit.href} className={lienClasse}>
-                  audit SEO complet
-                </Link>
-                .
-              </p>
-            </div>
-
-            {/* Réponse d'IA d'exemple qui cite une entreprise locale et ses sources, en perspective légère (aucun mouvement au tactile ni en animations réduites). */}
-            <div className="lg:col-span-5">
-              <CardContainer intensite={60} containerClassName="w-full" className="w-full max-w-md">
-                <CardBody className="w-full">
-                  <CardItem translateZ={24} className="w-full">
-                    <MockReponseIa className="mx-auto" />
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            </div>
-          </div>
-        </Conteneur>
-      </section>
+      {/* Hero commun aux sous-pages : réponse d'IA d'exemple qui cite une entreprise locale et ses sources, à droite à partir de lg, sous la colonne de texte en dessous. */}
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Visibilité IA : être cité par ChatGPT, Perplexity et Google AI Overviews"
+        motsCles={["Visibilité IA", "ChatGPT", "Google AI Overviews"]}
+        texte={[
+          "De plus en plus de vos clients posent leur question à un assistant plutôt qu'à Google. Ces outils répondent en citant quelques sites. Nous rendons le vôtre lisible et citable par eux : c'est le GEO, ou référencement IA, inclus dans notre méthode SEO.",
+        ]}
+        reassurance={REASSURANCE_HERO}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Faire le point sur ma visibilité IA" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Vos robots d&apos;IA sont-ils autorisés ?{" "}
+            <Link href={OUTIL.href} className={lienClasse}>
+              Testez-les gratuitement en 60 secondes
+            </Link>
+            , rapport PDF par email.
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "60", libelle: "secondes pour tester vos robots d'IA" }]}
+        aside={<MockReponseIa />}
+        asideRelief
+        asideMobile
+      />
 
       {/* ------------------------------------------------------ Test gratuit */}
       <SectionOutil

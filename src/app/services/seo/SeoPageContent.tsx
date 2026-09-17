@@ -35,6 +35,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleSection,
   PourQui,
   StickyCtaBar,
@@ -42,7 +43,7 @@ import {
 } from "@/components/pole";
 import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
 import { getDiagnostic } from "@/lib/diagnostics/configs";
-import { BorderBeam, CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { BorderBeam, CardBody, CardContainer, CardItem, Reveal } from "@/components/motion";
 import SeoOrbite from "./SeoOrbite";
 import MockCourbePositions from "./maquettes/MockCourbePositions";
 import MockJaugeAudit from "./maquettes/MockJaugeAudit";
@@ -52,8 +53,8 @@ import MockReponseIa from "./maquettes/MockReponseIa";
 /**
  * Page pôle « SEO et visibilité IA » : référencement naturel, SEO local et
  * visibilité dans les IA. Composant serveur : le H1, tout le texte et la FAQ
- * sont présents dans le HTML rendu. Les animations (mesh, compteurs,
- * apparitions, cartes en perspective, orbite) sont des enfants "use client".
+ * sont présents dans le HTML rendu. Les animations (mesh, apparitions,
+ * cartes en perspective, orbite) sont des enfants "use client".
  */
 
 export const pole = getPole("seo");
@@ -115,11 +116,11 @@ export const FAQ: FaqItem[] = [
 /* Données de la page                                                  */
 /* ------------------------------------------------------------------ */
 
+/** Trois coches du hero partagé (PoleHero n'en affiche jamais plus de trois). */
 const REASSURANCE_HERO = [
   "Vérification gratuite en 60 secondes",
   "Devis écrit avant tout engagement",
   "6 mois minimum, puis libre mois par mois",
-  "Un seul interlocuteur : le fondateur",
 ];
 
 const CONSTAT = [
@@ -377,6 +378,93 @@ const carteClasse =
   "rounded-2xl border border-border bg-card shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-[0_18px_36px_-18px_rgba(124,58,237,0.28)] motion-reduce:transition-none";
 
 /* ------------------------------------------------------------------ */
+/* Carte de vérification SEO (aside du hero)                           */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Carte « Votre site, analysé en 60 secondes » : formulaire natif vers
+ * /seo-check?url= (aucun JavaScript requis), posée à plat dans l'aside du
+ * hero partagé (c'est un formulaire, pas une maquette en perspective).
+ * Largeur alignée sur les maquettes des sous-pages (max-w-md, 448 px) : à
+ * cette largeur, la carte fait environ 370 px de haut. Fond blanc à 85 %
+ * sans backdrop-blur, comme les cartes de chiffres de PoleHero : un filtre
+ * posé sur le mesh animé se recalculerait à chaque image.
+ */
+function CarteVerificationSeo() {
+  return (
+    <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-border bg-white/85 p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_48px_-24px_rgba(124,58,237,0.25)] sm:p-8">
+      <BorderBeam size={90} duration={10} />
+      <div className="flex items-center gap-3">
+        <span
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 text-white shadow-md"
+          aria-hidden="true"
+        >
+          <Search className="h-5 w-5" strokeWidth={2} />
+        </span>
+        <div>
+          <p className="text-lg font-semibold leading-tight text-foreground">Votre site, analysé en 60 secondes</p>
+          <p className="text-sm text-muted-foreground">Gratuit, sans engagement, rapport PDF par email.</p>
+        </div>
+      </div>
+
+      <form action={OUTIL.href} method="get" className="mt-6">
+        <label htmlFor="seo-url" className="block text-sm font-medium text-foreground">
+          L&apos;adresse de votre site
+        </label>
+        <div className="mt-1.5 flex flex-col gap-2 sm:flex-row">
+          <input
+            id="seo-url"
+            name="url"
+            type="text"
+            inputMode="url"
+            autoComplete="url"
+            placeholder="www.votre-site.fr"
+            required
+            maxLength={200}
+            className="block min-h-11 w-full min-w-0 flex-1 rounded-full border border-border bg-background px-5 text-base text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          />
+          <button
+            type="submit"
+            className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-6 text-sm font-semibold text-white shadow-md transition-colors hover:from-purple-700 hover:to-pink-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          >
+            Analyser mon site
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </button>
+        </div>
+      </form>
+
+      <ul className="mt-5 flex flex-wrap gap-2" aria-label="Ce que la vérification analyse">
+        {["Balises et titres", "Vitesse", "Mobile", "Données structurées", "Robots d'IA"].map((item) => (
+          <li key={item} className="rounded-full border border-border bg-muted/40 px-3 py-1 text-xs font-medium text-slate-700">
+            {item}
+          </li>
+        ))}
+      </ul>
+      {/* Ce que renvoie l'outil : un score, des priorités classées, un rapport. Aucun chiffre de résultat. */}
+      <dl className="mt-5 grid grid-cols-3 gap-2" aria-label="Ce que vous recevez">
+        {[
+          { valeur: "/100", libelle: "un score global" },
+          { valeur: "1, 2, 3", libelle: "vos priorités classées" },
+          { valeur: "PDF", libelle: "le rapport par email" },
+        ].map((c) => (
+          <div key={c.libelle} className="rounded-xl border border-border/80 bg-white px-3 py-2.5">
+            <dd className="text-base font-bold leading-none tracking-tight text-foreground">{c.valeur}</dd>
+            <dt className="mt-1 text-[11px] leading-snug text-muted-foreground">{c.libelle}</dt>
+          </div>
+        ))}
+      </dl>
+      <p className="mt-4 text-xs text-muted-foreground">
+        Vous préférez une lecture humaine ?{" "}
+        <Link href="#formulaire" className={lienClasse}>
+          Décrivez votre objectif
+        </Link>
+        , nous vous répondons sous 24 h.
+      </p>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
 /* Page                                                                */
 /* ------------------------------------------------------------------ */
 
@@ -386,140 +474,24 @@ export default function SeoPageContent() {
       <FilAriane elements={FIL} />
 
       {/* ---------------------------------------------------------- Hero */}
-      <section className="relative isolate overflow-hidden bg-background pb-16 pt-10 sm:pb-20 sm:pt-14">
-        <HeroMesh intensite={0.7} />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-start gap-8 lg:grid-cols-12 lg:gap-x-12 lg:gap-y-0">
-            {/* Grille en 3 blocs : H1 / carte d'analyse / texte + réassurance + boutons + chiffres.
-                Mobile : la carte (mécanique de conversion principale) vient juste sous le H1 et
-                son bouton reste visible sans défilement en 390 × 844.
-                Desktop : la carte occupe la colonne de droite sur les deux rangées. */}
-            <div className="lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Agence SEO à <span className="whitespace-nowrap">Rueil-Malmaison</span> et Paris : référencement naturel, SEO local et visibilité dans les IA
-              </h1>
-            </div>
-
-            {/* Carte : vérification SEO gratuite, formulaire natif vers /seo-check?url= (aucun JavaScript requis). */}
-            <div className="lg:col-span-5 lg:row-span-2 lg:pt-8">
-              <div className="relative overflow-hidden rounded-3xl border border-border bg-white/85 p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_48px_-24px_rgba(124,58,237,0.25)] backdrop-blur-md sm:p-8">
-                <BorderBeam size={90} duration={10} />
-                <div className="flex items-center gap-3">
-                  <span
-                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 text-white shadow-md"
-                    aria-hidden="true"
-                  >
-                    <Search className="h-5 w-5" strokeWidth={2} />
-                  </span>
-                  <div>
-                    <p className="text-lg font-semibold leading-tight text-foreground">Votre site, analysé en 60 secondes</p>
-                    <p className="text-sm text-muted-foreground">Gratuit, sans engagement, rapport PDF par email.</p>
-                  </div>
-                </div>
-
-                <form action={OUTIL.href} method="get" className="mt-6">
-                  <label htmlFor="seo-url" className="block text-sm font-medium text-foreground">
-                    L&apos;adresse de votre site
-                  </label>
-                  <div className="mt-1.5 flex flex-col gap-2 sm:flex-row">
-                    <input
-                      id="seo-url"
-                      name="url"
-                      type="text"
-                      inputMode="url"
-                      autoComplete="url"
-                      placeholder="www.votre-site.fr"
-                      required
-                      maxLength={200}
-                      className="block min-h-11 w-full min-w-0 flex-1 rounded-full border border-border bg-background px-5 text-base text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                    />
-                    <button
-                      type="submit"
-                      className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-6 text-sm font-semibold text-white shadow-md transition-colors hover:from-purple-700 hover:to-pink-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                    >
-                      Analyser mon site
-                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                    </button>
-                  </div>
-                </form>
-
-                <ul className="mt-5 flex flex-wrap gap-2" aria-label="Ce que la vérification analyse">
-                  {["Balises et titres", "Vitesse", "Mobile", "Données structurées", "Robots d'IA"].map((item) => (
-                    <li
-                      key={item}
-                      className="rounded-full border border-border bg-muted/40 px-3 py-1 text-xs font-medium text-slate-700"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 text-xs text-muted-foreground">
-                  Vous préférez une lecture humaine ?{" "}
-                  <Link href="#formulaire" className={lienClasse}>
-                    Décrivez votre objectif
-                  </Link>
-                  , nous vous répondons sous 24 h.
-                </p>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7">
-              <div className="max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600 lg:mt-5">
-                <p>
-                  Nous travaillons votre site pour Google, votre fiche pour les résultats locaux et votre contenu pour les
-                  réponses de ChatGPT, Perplexity et Google AI Overviews. Un forfait clair à partir de 500 € par mois, un
-                  audit complet, des rapports que vous pouvez vérifier vous-même.
-                </p>
-                <p>
-                  Premiers effets en 3 à 6 mois, et aucune position promise : nous vous le disons dès le premier
-                  rendez-vous.
-                </p>
-              </div>
-
-              <ul className="mt-6 grid max-w-2xl gap-x-6 gap-y-2.5 text-sm text-foreground sm:grid-cols-2">
-                {REASSURANCE_HERO.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <span
-                      className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"
-                      aria-hidden="true"
-                    >
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <BoutonLien href="#formulaire" label="Demander un devis SEO écrit" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-
-              <dl className="mt-10 grid max-w-2xl grid-cols-3 gap-2 sm:gap-3">
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[0].libelle}</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={150} />+
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">{CHIFFRES_COMMUNS[1].libelle}</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={Number(SITE.reviews.rating)} decimalPlaces={1} delay={0.15} />
-                    /5
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">avant les premiers effets SEO</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">3 à 6 mois</dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-        </Conteneur>
-      </section>
+      {/* Hero partagé : H1 et texte rendus côté serveur ; à droite, la carte de vérification SEO gratuite,
+          à plat (pas de perspective : c'est un formulaire), affichée sous la colonne de texte sur mobile. */}
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Agence SEO à Rueil-Malmaison et Paris : référencement naturel, SEO local et visibilité dans les IA"
+        motsCles={["référencement naturel", "SEO local", "SEO", "IA"]}
+        texte={[
+          "Nous travaillons votre site pour Google, votre fiche pour les résultats locaux et votre contenu pour les réponses de ChatGPT, Perplexity et Google AI Overviews. Un forfait clair à partir de 500 € par mois, un audit complet, des rapports que vous pouvez vérifier vous-même.",
+          "Premiers effets en 3 à 6 mois, et aucune position promise : nous vous le disons dès le premier rendez-vous.",
+        ]}
+        reassurance={REASSURANCE_HERO}
+        boutonPrimaire={{ href: "#formulaire", label: "Demander un devis SEO écrit" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "3 à 6 mois", libelle: "avant les premiers effets SEO" }]}
+        aside={<CarteVerificationSeo />}
+        asideRelief={false}
+        asideMobile
+      />
 
       {/* ------------------------------------------------------ Diagnostic */}
       <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez}>

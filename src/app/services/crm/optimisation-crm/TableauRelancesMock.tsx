@@ -7,6 +7,10 @@ import { cn } from "@/lib/utils";
  * réponse, relances parties) et la séquence en cours sur un devis. Serveur,
  * CSS pur. Le badge « Exemple » et la légende disent que les valeurs sont
  * fictives : ce ne sont pas des résultats clients.
+ *
+ * `compact` : version du hero (colonne de 448 px, hauteur visée entre 340 et
+ * 520 px) : marges resserrées et note de bas de séquence masquée (l'arrêt à
+ * la première réponse est déjà dans les coches du hero).
  */
 
 const INDICATEURS = [
@@ -24,10 +28,15 @@ const SEQUENCE = [
   { repere: "J+30", libelle: "Clôture", etat: "prévue" },
 ] as const;
 
-export default function TableauRelancesMock({ className }: { className?: string }) {
+export default function TableauRelancesMock({ className, compact = false }: { className?: string; compact?: boolean }) {
   return (
     <figure className={cn("w-full", className)}>
-      <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-4 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_48px_-24px_rgba(15,23,42,0.2)] sm:p-5">
+      <div
+        className={cn(
+          "relative overflow-hidden rounded-2xl border border-border bg-card shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_48px_-24px_rgba(15,23,42,0.2)]",
+          compact ? "p-4" : "p-4 sm:p-5"
+        )}
+      >
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-sm font-semibold text-foreground">Vos relances, cette semaine</p>
@@ -38,7 +47,7 @@ export default function TableauRelancesMock({ className }: { className?: string 
           </span>
         </div>
 
-        <dl className="mt-4 grid grid-cols-2 gap-2">
+        <dl className={cn("grid grid-cols-2 gap-2", compact ? "mt-3" : "mt-4")}>
           {INDICATEURS.map((ind, i) => (
             <div
               key={ind.libelle}
@@ -55,7 +64,7 @@ export default function TableauRelancesMock({ className }: { className?: string 
         </dl>
 
         {/* Séquence en cours sur un devis : cinq repères, deux passés, un aujourd'hui, deux à venir. */}
-        <div className="mt-4 rounded-xl border border-border bg-muted/40 p-3">
+        <div className={cn("rounded-xl border border-border bg-muted/40 p-3", compact ? "mt-3" : "mt-4")}>
           <div className="flex items-center justify-between gap-2">
             <p className="text-[11px] font-semibold text-foreground">Séquence en cours : devis d&apos;exemple</p>
             <span className="rounded bg-amber-50 px-1 py-px text-[9px] font-bold uppercase tracking-wide text-amber-700 ring-1 ring-amber-200">
@@ -85,10 +94,12 @@ export default function TableauRelancesMock({ className }: { className?: string 
               </li>
             ))}
           </ol>
-          <p className="mt-3 flex items-start gap-1.5 text-[10px] leading-snug text-muted-foreground">
-            <MailCheck className="mt-px h-3 w-3 shrink-0 text-primary" aria-hidden="true" />
-            Séquence par email, arrêtée dès que la personne répond ; chaque email propose un moyen de demander l&apos;arrêt.
-          </p>
+          {!compact && (
+            <p className="mt-3 flex items-start gap-1.5 text-[10px] leading-snug text-muted-foreground">
+              <MailCheck className="mt-px h-3 w-3 shrink-0 text-primary" aria-hidden="true" />
+              Séquence par email, arrêtée dès que la personne répond ; chaque email propose un moyen de demander l&apos;arrêt.
+            </p>
+          )}
         </div>
 
         <p className="mt-3 flex items-center justify-between gap-3 rounded-xl border border-border bg-background px-3 py-2 text-[11px]">

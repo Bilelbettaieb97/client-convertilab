@@ -25,7 +25,7 @@ const FEATURED_SLUGS = [
   "landing-page-convertir-visiteurs",
 ];
 
-const categories = ["Tous", "Business", "Web Design", "SEO", "Technique", "Performance", "Design", "Publicité", "Juridique", "Stratégie", "Analyse"];
+const categories = ["Tous", "Création de sites web", "Publicité", "SEO", "CRM", "Business", "Web Design", "E-commerce", "Design", "Technique", "Performance", "Juridique", "Stratégie", "Analyse"];
 
 export default function BlogPageClient() {
   const [selectedCategory, setSelectedCategory] = useState("Tous");

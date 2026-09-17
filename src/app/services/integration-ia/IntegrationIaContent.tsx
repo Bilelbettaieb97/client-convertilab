@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import type { FaqItem } from "@/lib/faq-schema";
-import { getPole, getSousPage, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { CHIFFRES_COMMUNS, getPole, getSousPage, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
 import { getDiagnostic } from "@/lib/diagnostics/configs";
 import {
   BoutonLien,
@@ -41,6 +41,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleLivrables,
   PoleSection,
   SectionOutil,
@@ -49,7 +50,7 @@ import {
   Timeline,
 } from "@/components/pole";
 import { Conteneur, Paragraphes, Surtitre } from "@/components/pole/pole-ui";
-import { BorderBeam, CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { BorderBeam, CardBody, CardContainer, CardItem, Reveal } from "@/components/motion";
 import CasPratiques from "./CasPratiques";
 import OutilsReliesLazy from "./OutilsReliesLazy";
 
@@ -58,7 +59,7 @@ import OutilsReliesLazy from "./OutilsReliesLazy";
  * « CRM et relances automatiques » (/services/crm) : l'URL et les textes
  * propres à l'IA sont conservés, seul le rattachement change.
  * Composant serveur : le H1, les textes et la FAQ sont dans le HTML. Les
- * composants animés (mesh, compteurs, schéma, filtres, formulaire, barre
+ * composants animés (mesh du hero, schéma, filtres, formulaire, barre
  * collante) sont des enfants « use client ».
  * Aucun prix chiffré pour cette prestation : « sur devis » et « prix fixe communiqué sous 24 h ».
  */
@@ -209,101 +210,47 @@ export default function IntegrationIaContent() {
     <div className="pt-16">
       <FilAriane elements={FIL_ARIANE} />
 
-      {/* Hero : H1 et textes rendus côté serveur ; mesh et spotlight en fond (clients). */}
-      <section className="relative isolate overflow-hidden bg-background py-14 sm:py-20 lg:py-24">
-        <HeroMesh intensite={0.9} />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-            {/* Mobile : boutons juste après le premier paragraphe (order), coches ensuite ; desktop : ordre du DOM. */}
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Intégration IA pour PME et TPE&nbsp;:{" "}
-                <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text pb-1 text-transparent">
-                  automatisez le travail répétitif avec Claude
-                </span>
-              </h1>
-              {/* Rattachement au pôle parent : sous le H1 en desktop ; en mobile, après les mentions (order-3) pour que le bouton principal reste visible sans défilement. */}
-              <p className="order-3 mt-4 text-sm text-muted-foreground sm:order-none">
-                Cette prestation fait partie de notre pôle{" "}
-                <Link href={pole.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
-                  {pole.nomCourt}
-                </Link>
-                .
-              </p>
-              <div className="mt-6 max-w-2xl space-y-3 text-lg">
-                <Paragraphes
-                  className="text-slate-600"
-                  texte="Devis reçus la nuit, avis Google sans réponse, relances oubliées, comptes rendus repoussés : une IA branchée sur vos outils peut faire ce travail à votre place, avec vos règles et votre ton."
-                />
-                {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
-                <Paragraphes
-                  className="hidden text-slate-600 sm:block"
-                  texte="Notre agence IA, à Rueil-Malmaison et Paris, commence par un diagnostic d'une journée, puis intègre Claude, l'intelligence artificielle d'Anthropic, sur mesure dans vos outils. Prix fixe communiqué sous 24 h."
-                />
-              </div>
-
-              <ul className="order-1 mt-6 flex flex-col gap-2.5 sm:order-none sm:mt-7 sm:flex-row sm:flex-wrap sm:gap-x-6">
-                {CHECKMARKS_HERO.map((c) => (
-                  <li key={c} className="inline-flex items-center gap-2 text-sm font-medium text-foreground">
-                    <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <Check className="h-3 w-3" strokeWidth={3} aria-hidden="true" />
-                    </span>
-                    {c}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander un diagnostic IA d'une journée" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-                {MENTIONS.map((m, i) => (
-                  <span key={m}>
-                    {i > 0 && <span aria-hidden="true"> · </span>}
-                    {m}
-                  </span>
-                ))}
-              </p>
-            </div>
-
-            <div className="lg:col-span-5">
-              <div className="relative rounded-3xl border border-border bg-white/70 p-4 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_48px_-24px_rgba(15,23,42,0.18)] backdrop-blur-sm sm:p-6">
-                <BorderBeam size={80} duration={10} />
-                <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Vos outils, reliés par Claude
-                </p>
-                <OutilsReliesLazy />
-                <p className="text-center text-xs text-muted-foreground">
-                  L&apos;IA lit, prépare, relance ; vous validez ce qui engage votre entreprise.
-                </p>
-              </div>
-            </div>
+      {/* Hero commun aux pages de service (H1, textes et chiffres dans le HTML ; fond animé côté client dans PoleHero). */}
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Intégration IA pour PME et TPE : automatisez le travail répétitif avec Claude"
+        motsCles={["Intégration IA", "Claude"]}
+        texte={[
+          "Devis reçus la nuit, avis Google sans réponse, relances oubliées, comptes rendus repoussés : une IA branchée sur vos outils peut faire ce travail à votre place, avec vos règles et votre ton.",
+          "Notre agence IA, à Rueil-Malmaison et Paris, commence par un diagnostic d'une journée, puis intègre Claude, l'intelligence artificielle d'Anthropic, sur mesure dans vos outils. Prix fixe communiqué sous 24 h.",
+        ]}
+        reassurance={CHECKMARKS_HERO}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Demander un diagnostic IA d'une journée" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            {MENTIONS.join(" · ")}
+            <span aria-hidden="true"> · </span>
+            Cette prestation fait partie de notre pôle{" "}
+            <Link href={pole.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+              {pole.nomCourt}
+            </Link>
+            .
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "1 journée", libelle: "de diagnostic pour chiffrer votre temps" }]}
+        aside={
+          /* Carte du schéma « vos outils reliés par Claude » : 380 px de schéma + légendes, soit environ 470 px à 448 px de large.
+             Fond blanc à 85 % sans backdrop-blur (un filtre posé sur le mesh animé se recalculerait à chaque image). */
+          <div className="relative rounded-3xl border border-border bg-white/85 p-4 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_48px_-24px_rgba(15,23,42,0.18)] sm:p-6">
+            <BorderBeam size={80} duration={10} />
+            <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Vos outils, reliés par Claude
+            </p>
+            <OutilsReliesLazy />
+            <p className="text-center text-xs text-muted-foreground">
+              L&apos;IA lit, prépare, relance ; vous validez ce qui engage votre entreprise.
+            </p>
           </div>
-
-          <dl className="mt-10 grid max-w-3xl grid-cols-3 gap-2 sm:mt-12 sm:gap-4">
-            <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 sm:px-5 sm:py-4">
-              <dt className="order-2 text-xs text-muted-foreground sm:text-sm">clients accompagnés</dt>
-              <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                <NumberTicker value={150} />+
-              </dd>
-            </div>
-            <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 sm:px-5 sm:py-4">
-              <dt className="order-2 text-xs text-muted-foreground sm:text-sm">sur {SITE.reviews.count} avis</dt>
-              <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                <NumberTicker value={Number(SITE.reviews.rating)} decimalPlaces={1} />
-                /5
-              </dd>
-            </div>
-            <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 sm:px-5 sm:py-4">
-              <dt className="order-2 text-xs text-muted-foreground sm:text-sm">de diagnostic pour chiffrer votre temps</dt>
-              <dd className="text-xl font-bold text-foreground sm:text-2xl">1 journée</dd>
-            </div>
-          </dl>
-        </Conteneur>
-      </section>
+        }
+        asideRelief
+        asideMobile
+      />
 
       {/* Outil gratuit de la sous-page, juste après le hero (fond gris : le hero est clair) : résultat immédiat, rapport complet par email. */}
       <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez} fond="gris">

@@ -25,7 +25,9 @@
 | `/api/chatbot-audit` | `chatbot-audit/route.ts` | Audit chatbot site web |
 | `/api/pricing-calculator` | `pricing-calculator/route.ts` | Calculateur de prix site web |
 | `/api/cron/send-emails` | `cron/send-emails/route.ts` | Cron Vercel horaire — traite la `email_queue` (status=pending, send_at <= now) |
-| `/api/admin/outils` | `admin/outils/route.ts` | Dashboard admin outils |
+| `/api/lead-magnet` | `lead-magnet/route.ts` | Ressource PDF des pages de service (`src/lib/lead-magnets/`) → email + Supabase `lead_magnet_requests` + Pipedrive (Outils) |
+| `/api/diagnostic` | `diagnostic/route.ts` | Diagnostic interactif des pages de service (`src/lib/diagnostics/`) → rapport PDF + ressource bonus + Supabase `diagnostic_requests` + Pipedrive (Outils) |
+| `/api/admin/outils` | `admin/outils/route.ts` | Dashboard admin outils (RPC Supabase `get_outils_dashboard`, inclut lead magnets et diagnostics depuis le 16/09/2026) |
 
 ---
 
@@ -121,6 +123,8 @@ Les séries email utilisent une table Supabase `email_queue` :
 | `ads_estimations` | Résultats estimations ads |
 | `robots_generations` | Fichiers robots/sitemap générés |
 | `sector_reports` | Rapports sectoriels |
+| `lead_magnet_requests` | Demandes de ressource PDF depuis les pages de service (ressource, page, pole) |
+| `diagnostic_requests` | Diagnostics interactifs des pages de service (slug, page, pole, score, reponses, resume) |
 
 **Tables des formulaires** (écrites depuis le navigateur, relues par `/api/cron/reconcile-leads`) : `contact_submissions`, `devis_submissions` (Devis **et** Offre Mensuelle), `price_estimations`, `offer_reservations`, `mockup_requests`, `newsletter_subscriptions`.
 
@@ -203,3 +207,10 @@ RESEND_API_KEY=
 PIPEDRIVE_API_TOKEN=
 CRON_SECRET=
 ```
+
+---
+
+## Dashboard des outils (HTML, hors repo)
+
+Fichier vivant : `~/Desktop/Onboarding-Bras-Droit/04-Marketing-et-Systeme/dashboard-outils.html` (lecture directe de la RPC Supabase `get_outils_dashboard` avec la clé anon + jeton admin) ; copie « API » : `~/Desktop/Outils/notion doc/dashboard-outils.html` (passe par `/api/admin/outils`). Les deux ont été mis à jour le 16/09/2026 avec les onglets « Lead magnet » et « Diagnostic » (colonnes ressource, diagnostic, page, pôle, score) et la description de leur email immédiat. Toute nouvelle table d'outil doit être ajoutée aux trois endroits : RPC, `route.ts`, HTML.
+

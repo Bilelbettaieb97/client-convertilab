@@ -4,7 +4,6 @@ import {
   BarChart3,
   Briefcase,
   Building2,
-  Check,
   CircleHelp,
   ClipboardList,
   Coins,
@@ -25,10 +24,9 @@ import {
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import type { FaqItem } from "@/lib/faq-schema";
-import { getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
-import { CardBody, CardContainer, CardItem, HeroMesh, NumberTicker, Reveal, Spotlight } from "@/components/motion";
+import { CHIFFRES_COMMUNS, getPole, LABEL_CALENDLY, SURTITRE_ZONE } from "@/data/poles";
+import { Reveal } from "@/components/motion";
 import {
-  BoutonLien,
   CtaIntermediaire,
   DiagnosticInteractif,
   FilAriane,
@@ -38,6 +36,7 @@ import {
   PoleAutresPoles,
   PoleCTA,
   PoleFAQ,
+  PoleHero,
   PoleLivrables,
   PolePreuve,
   PolePrix,
@@ -182,101 +181,37 @@ export const FAQ_LINKEDIN_ADS: FaqItem[] = [
   },
 ];
 
-const NOTE_AVIS = Number(SITE.reviews.rating);
-
 export default function LinkedinAdsContent() {
   return (
     <div className="pt-16">
       <FilAriane elements={FIL_ARIANE_LINKEDIN_ADS} />
 
-      {/* Hero : H1 et texte rendus côté serveur, fond mesh + projecteur (seuls décors animés de l'écran). */}
-      <section className="relative isolate overflow-hidden py-14 sm:py-20">
-        <HeroMesh />
-        <Spotlight />
-        <Conteneur>
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-            <div className="flex flex-col lg:col-span-7">
-              <Surtitre>{SURTITRE_ZONE}</Surtitre>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Agence LinkedIn Ads à Paris : toucher les décideurs, par poste, secteur et taille d&apos;entreprise
-              </h1>
-              <div className="mt-5 max-w-2xl space-y-3 text-lg leading-relaxed text-slate-600">
-                <p>
-                  LinkedIn Ads est la seule plateforme qui vous laisse choisir qui voit votre annonce dans une
-                  entreprise. Le clic y coûte plus cher : nous la réservons aux activités B2B dont un client rapporte
-                  assez pour le justifier, et nous vous le disons avant le premier euro dépensé.
-                </p>
-                {/* Masqué sur mobile : le bouton principal doit rester visible sans défilement (390 × 844). */}
-                <p className="hidden sm:block">
-                  Vous parlez au fondateur, qui règle lui-même vos campagnes et suit un seul chiffre chaque mois : le
-                  coût par demande.
-                </p>
-              </div>
-
-              {/* Mobile : boutons juste après le texte (order), coches et chiffres ensuite ; desktop : ordre du DOM. */}
-              <ul className="order-1 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-foreground sm:order-none">
-                {REASSURANCE_HERO.map((r) => (
-                  <li key={r} className="inline-flex items-center gap-2">
-                    <span
-                      className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-                      aria-hidden="true"
-                    >
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                <BoutonLien href={ANCRE_FORMULAIRE} label="Demander mon avis honnête sur LinkedIn Ads" variante="primaire" />
-                <BoutonLien href={SITE.calendly} label={LABEL_CALENDLY} external variante="secondaire" />
-              </div>
-              <p className="order-2 mt-4 text-sm text-muted-foreground sm:order-none">
-                Vous hésitez entre plusieurs plateformes ? Revenez à notre page{" "}
-                <Link href={pole.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
-                  {pole.ancre}
-                </Link>
-                .
-              </p>
-
-              {/* Trois chiffres, valeur finale dans le HTML (NumberTicker n'anime qu'au montage). */}
-              <dl className="order-3 mt-8 grid max-w-2xl grid-cols-3 gap-2 sm:order-none sm:mt-10 sm:gap-3">
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">clients accompagnés</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={150} />+
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">sur {SITE.reviews.count} avis</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={NOTE_AVIS} decimalPlaces={1} delay={0.1} />
-                    /5
-                  </dd>
-                </div>
-                <div className="flex flex-col rounded-2xl border border-border bg-white/70 px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
-                  <dt className="order-2 text-xs text-muted-foreground sm:text-sm">pour un avis et un devis écrits</dt>
-                  <dd className="text-xl font-bold text-foreground sm:text-2xl">
-                    <NumberTicker value={24} delay={0.2} /> h
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            {/* Post sponsorisé d'exemple et réglage d'audience, en perspective légère : ce que LinkedIn permet de choisir, aucun résultat. */}
-            <div className="lg:col-span-5">
-              <CardContainer intensite={60} containerClassName="w-full" className="w-full max-w-md">
-                <CardBody className="w-full">
-                  <CardItem translateZ={24} className="w-full">
-                    <MockPostLinkedin ciblage={CIBLAGE_EXEMPLE} className="mx-auto" />
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            </div>
-          </div>
-        </Conteneur>
-      </section>
+      {/* Hero commun (PoleHero) : post sponsorisé d'exemple et réglage d'audience en aside, aucun résultat chiffré. */}
+      <PoleHero
+        surtitre={SURTITRE_ZONE}
+        titre="Agence LinkedIn Ads à Paris : toucher les décideurs, par poste, secteur et taille d'entreprise"
+        motsCles={["LinkedIn Ads", "décideurs"]}
+        texte={[
+          "LinkedIn Ads est la seule plateforme qui vous laisse choisir qui voit votre annonce dans une entreprise. Le clic y coûte plus cher : nous la réservons aux activités B2B dont un client rapporte assez pour le justifier, et nous vous le disons avant le premier euro dépensé.",
+          "Vous parlez au fondateur, qui règle lui-même vos campagnes et suit un seul chiffre chaque mois : le coût par demande.",
+        ]}
+        reassurance={REASSURANCE_HERO.slice(0, 3)}
+        boutonPrimaire={{ href: ANCRE_FORMULAIRE, label: "Demander mon avis LinkedIn Ads" }}
+        boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
+        mention={
+          <>
+            Vous hésitez entre plusieurs plateformes ? Revenez à notre page{" "}
+            <Link href={pole.href} className="font-medium text-primary-texte underline-offset-4 hover:underline">
+              {pole.ancre}
+            </Link>
+            .
+          </>
+        }
+        chiffres={[...CHIFFRES_COMMUNS, { valeur: "24 h", libelle: "pour un avis et un devis écrits" }]}
+        aside={<MockPostLinkedin ciblage={CIBLAGE_EXEMPLE} compact />}
+        asideRelief
+        asideMobile
+      />
 
       {/* Diagnostic interactif du pôle, juste après le hero (contenu : src/lib/diagnostics/configs/publicite.ts). */}
       <SectionOutil badge="Diagnostic gratuit" titre={DIAGNOSTIC.titre} accroche={DIAGNOSTIC.accroche} obtenez={DIAGNOSTIC.obtenez} fond="gris">

@@ -13,6 +13,21 @@ interface ServiceLink {
 }
 
 const servicesByCategory: Record<string, ServiceLink[]> = {
+  "Création de sites web": [
+    { icon: <FileText className="w-5 h-5" />, title: "Site vitrine", description: "Site professionnel 890 €, livré en 2 semaines", href: "/services/sites-web/site-vitrine" },
+    { icon: <Rocket className="w-5 h-5" />, title: "Landing page", description: "Une page, un objectif, 490 €", href: "/services/sites-web/landing-page" },
+    { icon: <Store className="w-5 h-5" />, title: "Site e-commerce", description: "Boutique en ligne à partir de 1 490 €", href: "/services/sites-web/site-ecommerce" },
+  ],
+  "Publicité": [
+    { icon: <Megaphone className="w-5 h-5" />, title: "Google Ads", description: "Search, Shopping, compte à votre nom", href: "/services/sea/google-ads" },
+    { icon: <Megaphone className="w-5 h-5" />, title: "Meta Ads", description: "Facebook et Instagram au coût par demande", href: "/services/sea/meta-ads" },
+    { icon: <Rocket className="w-5 h-5" />, title: "Landing page", description: "La page qui reçoit vos clics, 490 €", href: "/services/sites-web/landing-page" },
+  ],
+  CRM: [
+    { icon: <FileText className="w-5 h-5" />, title: "Création de CRM", description: "Pipeline en place, contacts importés", href: "/services/crm/creation-crm" },
+    { icon: <Rocket className="w-5 h-5" />, title: "Optimisation du CRM", description: "Relances automatiques, rendez-vous rappelés", href: "/services/crm/optimisation-crm" },
+    { icon: <Search className="w-5 h-5" />, title: "Intégration IA", description: "Le travail répétitif confié à Claude", href: "/services/integration-ia" },
+  ],
   Business: [
     { icon: <FileText className="w-5 h-5" />, title: "Site Vitrine", description: "Présentez votre activité dès 490€", href: "/services/sites-web/site-vitrine" },
     { icon: <Rocket className="w-5 h-5" />, title: "Landing Page", description: "Convertissez vos visiteurs à partir de 490€", href: "/services/sites-web/landing-page" },

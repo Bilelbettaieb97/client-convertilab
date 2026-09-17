@@ -142,6 +142,7 @@ export default function ServicesPageContent() {
         boutonSecondaire={{ href: SITE.calendly, label: LABEL_CALENDLY, external: true }}
         chiffres={[...CHIFFRES_COMMUNS, { valeur: "2 semaines", libelle: "pour livrer un site" }]}
         aside={<AsideQuatrePoles />}
+        asideMobile
       />
 
       <SectionPolesDefilants
