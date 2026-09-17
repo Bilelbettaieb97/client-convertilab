@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import SuggestedArticles from "@/components/internal-links/SuggestedArticles";
 import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
+import { maillageSecteur } from "@/lib/maillage-poles";
 
 export const dynamicParams = false;
 
@@ -741,8 +742,8 @@ export default async function SectorPage({ params }: Props) {
         </div>
       </section>
 
-      <SuggestedArticles title="Ressources pour votre secteur" max={3} />
-      <RelatedServicesSection title="Nos services pour votre secteur" max={4} />
+      <SuggestedArticles title="Ressources pour votre secteur" max={3} themes={maillageSecteur(sector.slug).themes} />
+      <RelatedServicesSection title="Nos services pour votre secteur" max={4} poles={maillageSecteur(sector.slug).poles} />
       <Footer />
     </div>
   );

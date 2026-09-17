@@ -6,6 +6,9 @@ import { glossaryTerms, getTermBySlug } from "@/data/glossary";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
+import SuggestedArticles from "@/components/internal-links/SuggestedArticles";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
+import { maillageGlossaire } from "@/lib/maillage-poles";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -356,6 +359,9 @@ export default async function GlossaryTermPage({ params }: Props) {
           </div>
         </div>
       </article>
+
+      <SuggestedArticles title={`Pour aller plus loin sur ${term.term}`} max={3} themes={maillageGlossaire(terme).themes} />
+      <RelatedServicesSection title="Les services liés" max={4} poles={maillageGlossaire(terme).poles} />
 
       {SEO_GLOSSARY_TERMS.includes(terme) && (
         <SeoCheckCta title="Passez de la théorie à la pratique : auditez votre site" />

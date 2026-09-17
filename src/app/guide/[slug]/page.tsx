@@ -6,6 +6,9 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import PrixSiteCta from "@/components/internal-links/PrixSiteCta";
 import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
+import SuggestedArticles from "@/components/internal-links/SuggestedArticles";
+import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
+import { maillageGuide } from "@/lib/maillage-poles";
 import { guides, getGuideBySlug, getAllGuideSlugs } from "@/data/guides";
 import {
   Breadcrumb,
@@ -314,6 +317,9 @@ export default async function GuidePage({ params }: PageProps) {
           </div>
         </section>
       </main>
+
+      <SuggestedArticles title="Les articles qui complètent ce guide" max={3} themes={maillageGuide(slug).themes} />
+      <RelatedServicesSection title="Passer à l'action avec nous" max={4} poles={maillageGuide(slug).poles} />
 
       {slug === "ameliorer-seo" && (
         <SeoCheckCta title="Première étape du guide : auditez votre site" />

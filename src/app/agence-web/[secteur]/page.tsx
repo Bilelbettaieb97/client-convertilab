@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { SITE, PRICING } from "@/lib/constants";
 import { cities, getCityBySlug } from "@/data/cities";
 import { getSectorBySlug } from "@/data/sectors";
+import { POLES } from "@/data/poles";
+import { MAILLAGE_VILLE } from "@/lib/maillage-poles";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
@@ -758,6 +760,36 @@ export default async function CityPage({ params }: Props) {
       </section>
 
       {/* ============================================
+          8 bis. LES QUATRE PÔLES (MAILLAGE VERS LES PAGES DE SERVICE)
+          ============================================ */}
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
+            Quatre pôles pour trouver vos clients à {city.name}
+          </h2>
+          <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+            Un site internet, la publicité en ligne, le référencement et le CRM : chaque pôle se commande seul, avec un
+            prix et un délai écrits avant de commencer. Nous travaillons à distance pour {city.name} comme pour toute la
+            France, en visioconférence.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {POLES.map((pole, i) => (
+              <Link
+                key={pole.slug}
+                href={pole.href}
+                className="group flex flex-col p-5 rounded-2xl border border-gray-200 bg-white hover:border-purple-300 hover:shadow-md transition-all"
+              >
+                <span className="text-xs font-semibold tracking-wide text-purple-600">0{i + 1}</span>
+                <h3 className="mt-1 font-bold text-gray-900 group-hover:text-purple-700 transition-colors">{pole.nomCourt}</h3>
+                <p className="mt-2 text-sm text-gray-600 flex-grow">{pole.titre}</p>
+                <span className="mt-3 text-xs font-medium text-purple-600">{pole.prix}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================
           9. AUTRES VILLES (MAILLAGE INTERNE)
           ============================================ */}
       <section className="py-16 bg-gray-50">
@@ -809,8 +841,8 @@ export default async function CityPage({ params }: Props) {
         </section>
       )}
 
-      <SuggestedArticles title="Conseils pour développer votre business en ligne" max={3} />
-      <RelatedServicesSection title="Nos services pour votre ville" max={4} />
+      <SuggestedArticles title="Conseils pour développer votre business en ligne" max={3} themes={MAILLAGE_VILLE.themes} />
+      <RelatedServicesSection title={`Nos services à ${city.name}`} max={4} poles={MAILLAGE_VILLE.poles} />
       <Footer />
     </div>
   );

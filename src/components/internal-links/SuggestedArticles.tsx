@@ -9,12 +9,32 @@ interface SuggestedArticlesProps {
   exclude?: string[];
   max?: number;
   title?: string;
+  /**
+   * Thèmes de la page (mots ou expressions en minuscules, ex. « référencement local »,
+   * « boutique en ligne ») : les articles dont les tags, le titre ou la catégorie
+   * contiennent le plus de thèmes passent devant. Sans thèmes : les plus récents.
+   */
+  themes?: string[];
 }
 
-const SuggestedArticles = ({ exclude = [], max = 3, title = "Articles suggérés" }: SuggestedArticlesProps) => {
+const normaliser = (s: string) =>
+  s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+const SuggestedArticles = ({ exclude = [], max = 3, title = "Articles suggérés", themes = [] }: SuggestedArticlesProps) => {
+  const cles = themes.map(normaliser).filter(Boolean);
   const articles = blogArticles
-    .filter(a => !exclude.includes(a.slug))
-    .slice(0, max);
+    .filter((a) => !exclude.includes(a.slug))
+    .map((a, i) => {
+      const texte = normaliser([a.title, a.category, ...(a.tags ?? [])].join(" "));
+      const score = cles.reduce((n, cle) => n + (texte.includes(cle) ? 1 : 0), 0);
+      return { a, i, score };
+    })
+    .sort((x, y) => y.score - x.score || x.i - y.i)
+    .slice(0, max)
+    .map(({ a }) => a);
 
   if (articles.length === 0) return null;
 
