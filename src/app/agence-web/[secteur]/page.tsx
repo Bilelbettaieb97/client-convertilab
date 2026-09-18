@@ -83,6 +83,14 @@ const CITY_PAGES_UPDATED_ISO = "2026-09-18";
 function deVille(nom: string): string {
   return /^[aeiouyàâéèêëîïôöûüh]/i.test(nom) ? `d'${nom}` : `de ${nom}`;
 }
+/** Rueil et sa couronne : rendez-vous possible ; ailleurs, à distance. Le texte ne prétend jamais des locaux dans la ville. */
+function modeAccompagnement(city: { slug: string; department: string }): string {
+  if (city.slug === "rueil-malmaison") return "depuis ses bureaux de Rueil-Malmaison, en rendez-vous ou en visio";
+  const couronne = ["Hauts-de-Seine", "Yvelines", "Val-d'Oise", "Val-de-Marne", "Seine-Saint-Denis", "Paris", "Essonne", "Seine-et-Marne"];
+  return couronne.includes(city.department)
+    ? "à quelques minutes de Rueil-Malmaison, en rendez-vous ou en visio"
+    : "à distance, en visio";
+}
 /** Même élision quand le nom de la ville est dans un <span> séparé : « d'Amiens », « de Lyon ». */
 function de(nom: string): string {
   return /^[aeiouyàâéèêëîïôöûüh]/i.test(nom) ? "d'" : "de ";
@@ -287,7 +295,7 @@ export default async function CityPage({ params }: Props) {
 
           <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl leading-relaxed">
             {city.description} ConvertiLab accompagne les entreprises{" "}
-            {deVille(city.name)} à distance, en visio, avec un interlocuteur unique :
+            {deVille(city.name)} {modeAccompagnement(city)}, avec un interlocuteur unique :
             création de site internet, référencement local et publicité en
             ligne, à prix publics, avec une maquette gratuite sous 48 h.
           </p>

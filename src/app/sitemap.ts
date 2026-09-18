@@ -76,8 +76,10 @@ const staticRoutes = [
 // CITY_PAGES_UPDATED = pages villes (carte + tel ajoutés le 07/07),
 // TEMPLATES_CREATED = templates non retouchés depuis leur création.
 const SITE_LAST_UPDATED = new Date("2026-07-07");
-const CITY_PAGES_UPDATED = new Date("2026-07-07");
-const TEMPLATES_CREATED = new Date("2026-07-05");
+// 18/09/2026 : contenu local propre à chaque ville, schémas refaits, chiffres estimés retirés
+const CITY_PAGES_UPDATED = new Date("2026-09-18");
+// 18/09/2026 : gabarits secteurs (cas clients réels, prix), glossaire (voisins), comparatifs (liens croisés)
+const TEMPLATES_CREATED = new Date("2026-09-18");
 // Refonte de septembre 2026 : accueil, /services, les quatre pôles et leurs sous-pages (dont les cinq nouvelles et les trois sous-pages CRM du 16/09).
 const REFONTE_POLES_UPDATED = new Date("2026-09-16");
 const ROUTES_REFONTE_POLES = new Set([
