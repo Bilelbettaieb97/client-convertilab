@@ -64,7 +64,7 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
     secondary: { title: "Audit SEO complet", description: "Score global et plan d'action pour dépasser vos concurrents.", href: "/seo-check", cta: "Auditer mon site" },
   },
   "comment-choisir-agence-web-2026": {
-    primary: { title: "Pourquoi choisir ConvertiLab ?", description: "+150 clients, 4.9★ Trustpilot, livraison en 2 semaines.", href: "/a-propos", cta: "Découvrir ConvertiLab" },
+    primary: { title: "Pourquoi choisir ConvertiLab ?", description: "+150 clients, 4,5★ sur 14 avis Trustpilot, livraison en 7 à 14 jours.", href: "/a-propos", cta: "Découvrir ConvertiLab" },
     secondary: { title: "Voir nos réalisations", description: "Portfolio de sites créés pour nos clients.", href: "/portfolio", cta: "Voir le portfolio" },
   },
   "site-vitrine-vs-site-ecommerce": {
@@ -245,7 +245,7 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
   },
   "freelance-ou-agence-web-comparaison": {
     primary: { title: "Pourquoi choisir ConvertiLab ?", description: "L'expertise d'une agence au prix d'un freelance.", href: "/a-propos", cta: "Découvrir ConvertiLab" },
-    secondary: { title: "Nos réalisations clients", description: "+150 sites créés, 4.9★ Trustpilot.", href: "/portfolio", cta: "Voir le portfolio" },
+    secondary: { title: "Nos réalisations clients", description: "+150 sites créés, 4,5★ sur 14 avis Trustpilot.", href: "/portfolio", cta: "Voir le portfolio" },
   },
   "presence-en-ligne-entreprise-2026": {
     primary: { title: "Pack présence en ligne complète", description: "Site + SEO + Google Ads — tout en un.", href: "/services", cta: "Voir nos offres" },

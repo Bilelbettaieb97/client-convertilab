@@ -1750,7 +1750,7 @@ Votre site vivra des années après la livraison. Vérifiez les conditions de ma
 
 ### 6. Les avis clients vérifiables
 
-Consultez les avis Google et Trustpilot. Méfiez-vous des agences sans avis ou avec uniquement des avis génériques. ConvertiLab affiche 4,9★ sur Trustpilot avec des avis nominatifs et détaillés.
+Consultez les avis Google et Trustpilot. Méfiez-vous des agences sans avis ou avec uniquement des avis génériques. ConvertiLab affiche 4,5★ sur 14 avis Trustpilot, nominatifs et détaillés.
 
 ### 7. La réactivité dès le premier contact
 
@@ -6039,7 +6039,7 @@ L'email transactionnel de suivi est le message le plus ouvert en e-commerce (tau
     ],
     content: `92% des consommateurs consultent les avis en ligne avant un achat, et 88% leur font autant confiance qu'à une recommandation personnelle. Les avis clients ne sont pas un "nice to have", c'est un levier de conversion massif. Un produit avec au moins 5 avis a 270% de probabilité d'achat en plus qu'un produit sans avis. Les avis augmentent le chiffre d'affaires moyen de 18%.
 
-Chez ConvertiLab, nous affichons 15 avis 4.9★ sur notre profil Trustpilot, chaque avis génère de nouveaux clients.
+Chez ConvertiLab, nous affichons 14 avis (4,5★) sur notre profil Trustpilot, et chaque avis génère de nouveaux clients.
 
 ![Avis clients e-commerce conversion preuve sociale Trustpilot Google 2026 - UGC témoignages](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80)
 
@@ -8762,7 +8762,7 @@ Un site vitrine pour coiffeur est réalisé en 2 semaines chez ConvertiLab. Ce d
   {
     slug: "obtenir-avis-google-entreprise",
     title: "Comment obtenir plus d'avis Google pour son entreprise ?",
-    excerpt: "Les méthodes concrètes pour collecter des avis Google authentiques, répondre aux avis négatifs et améliorer votre note. Ce que ConvertiLab fait pour ses 4.9★ sur 47 avis.",
+    excerpt: "Les méthodes concrètes pour collecter des avis Google authentiques, répondre aux avis négatifs et améliorer votre note. Ce que ConvertiLab fait pour ses avis Trustpilot (4,5★ sur 14 avis).",
     metaDescription: "Comment obtenir plus d'avis Google pour son entreprise ? Méthodes concrètes, modèles de messages, comment répondre aux avis négatifs et atteindre 4.8★+.",
     image: "/images/blog/obtenir-avis-google-entreprise.png",
     category: "Business",
@@ -8794,7 +8794,7 @@ Les avis Google sont le premier signal que regardent vos prospects avant de vous
 - Une note de 4.5+ avec 30 avis génère **2,7× plus de clics** qu'une fiche sans avis (Google Internal Data)
 - Les avis récents comptent plus que les anciens (un avis de la semaine dernière vaut plus qu'un avis d'il y a 2 ans)
 
-Chez ConvertiLab, nous sommes à 4.9★ sur plus de 15 avis sans jamais avoir demandé un seul avis en échange d'une remise, voici exactement ce que nous faisons.
+Chez ConvertiLab, nous sommes à 4,5★ sur 14 avis Trustpilot sans jamais avoir demandé un seul avis en échange d'une remise, voici exactement ce que nous faisons.
 
 ## Comment créer le lien direct vers votre page d'avis Google ?
 
