@@ -47,13 +47,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Titles et descriptions différenciés par ville (pattern unique + données
   // locales) pour éviter 53 pages au title identique, signal de contenu dupliqué.
   const titleVariants = [
-    `Agence Web ${city.name} : Création de Site Internet à 890 €`,
-    `Création de Site Internet à ${city.name} (${city.department}) : Agence Web`,
-    `Agence Web à ${city.name} : Site Vitrine Pro à 890 €, Livré en 7 à 14 Jours`,
+    `Agence web ${city.name} : site internet à 890 €`,
+    `Création de site internet à ${city.name} : agence web`,
+    `Agence web à ${city.name} : site vitrine à 890 €`,
   ];
   const title = titleVariants[city.slug.length % titleVariants.length];
   const industries = city.keyIndustries.slice(0, 2).join(", ").toLowerCase();
-  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine 890 €, livré en 7 à 14 jours, prix fixe. 150+ clients accompagnés, 4,5/5 sur 14 avis. Devis gratuit sous 24h.`;
+  const description = `Agence web à ${city.name} (${city.department}) : site internet pour ${industries} et PME. Site vitrine 890 €, livré en 7 à 14 jours, prix fixe, maquette gratuite sous 48 h.`;
 
   return {
     title,
@@ -78,6 +78,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /** Villes sans aucune impression Google en 90 jours (audit du 18/09/2026) : redirigées vers /agence-web par next.config, plus générées ni listées. */
 /** Dernière modification du gabarit des pages villes (prix, délais, références réelles). */
 const CITY_PAGES_UPDATED_ISO = "2026-09-18";
+
+/** « de Aix-en-Provence » devient « d'Aix-en-Provence ». */
+function deVille(nom: string): string {
+  return /^[aeiouyàâéèêëîïôöûüh]/i.test(nom) ? `d'${nom}` : `de ${nom}`;
+}
 
 export const VILLES_RETIREES = ["neuilly-sur-seine", "versailles", "toulon", "perpignan", "saint-denis", "asnieres-sur-seine"];
 
@@ -358,7 +363,7 @@ export default async function CityPage({ params }: Props) {
             <div className="flex flex-col justify-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-purple-100 shadow-sm">
               <div className="flex items-center gap-2 text-gray-900 font-semibold mb-2">
                 <MapPin className="w-5 h-5 text-purple-600" />
-                Votre agence web près de {city.name}
+                Votre agence web près {deVille(city.name)}
               </div>
               <p className="text-sm text-gray-600 mb-3">
                 ConvertiLab est basée à Rueil-Malmaison (92500) et intervient
@@ -448,7 +453,7 @@ export default async function CityPage({ params }: Props) {
             </p>
             <p>
               ConvertiLab est une agence web spécialisée dans l&apos;accompagnement
-              des entreprises de {city.name} et de tout le département{" "}
+              des entreprises {deVille(city.name)} et de tout le département{" "}
               {city.department}. Nous ne nous contentons pas de créer de beaux
               sites : nous concevons des{" "}
               <strong>outils de conversion</strong> qui transforment vos
@@ -488,7 +493,7 @@ export default async function CityPage({ params }: Props) {
 
             <div className="grid lg:grid-cols-5 gap-10">
               <div className="lg:col-span-2">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Où nous intervenons autour de {city.name}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Où nous intervenons autour {deVille(city.name)}</h3>
                 <p className="text-gray-600 mb-5">
                   Les quartiers, zones d&apos;activité et communes d&apos;où viennent le plus souvent les demandes.
                 </p>
@@ -501,7 +506,7 @@ export default async function CityPage({ params }: Props) {
                 </ul>
               </div>
               <div className="lg:col-span-3">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Les secteurs qui font l&apos;économie de {city.name}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Les secteurs qui font l&apos;économie {deVille(city.name)}</h3>
                 <ul className="space-y-4">
                   {local.secteurs.map((s) => (
                     <li key={s.nom} className="bg-white rounded-xl border border-gray-200 p-5">
@@ -798,7 +803,7 @@ export default async function CityPage({ params }: Props) {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl font-bold text-gray-900 mb-3 text-center">
-            ConvertiLab intervient aussi dans ces villes proches de {city.name}
+            ConvertiLab intervient aussi dans ces villes proches {deVille(city.name)}
           </h2>
           <p className="text-gray-600 text-center mb-8">
             Agence web en {city.department} et dans toute la {city.region}

@@ -9,6 +9,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "optimiser-son-crm-relances-rendez-vous",
   title: "Optimiser son CRM : relances de devis et rappels de rendez-vous",
+  seoTitle: "Optimiser son CRM : relances et rendez-vous",
   excerpt:
     "Un CRM en place mais sous-utilisé se répare sans changer d'outil : pipeline allégé, relances de devis par email, rappels de rendez-vous et tableau de bord lu en une minute. Le guide, étape par étape.",
   metaDescription:

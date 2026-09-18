@@ -247,6 +247,294 @@ export const CONTENU_LOCAL: Record<string, ContenuLocal> = {
       { question: "Comment sortir sur « agence web Annecy », « hôtel Annecy » ou « chalet Talloires » ?", answer: "Pour une entreprise locale, les résultats se jouent sur la fiche d'établissement Google, la régularité des avis et des pages de site dédiées à chaque service et chaque commune. Nous travaillons ces trois points dans notre offre de référencement local et suivons les positions chaque mois." },
     ],
   },
+
+  "caen": {
+    accroche: [
+      "Caen vit de son CHU et de ses professions de santé, d'une industrie agroalimentaire dense (cidre, produits laitiers, conserverie), du tourisme mémoriel qui amène chaque année des visiteurs du monde entier sur les plages du Débarquement, et d'un tissu de commerces et d'artisans qui va du centre à Hérouville-Saint-Clair et Mondeville. Les recherches « agence web Caen » et « création site internet Caen » sont nombreuses, et une bonne part des sites locaux n'ont pas été refaits depuis des années.",
+      "Nous accompagnons les entreprises caennaises et du Calvados à distance, en visio, avec un interlocuteur unique. Prix publics, maquette gratuite sous 48 heures, site vitrine livré en 7 à 14 jours.",
+    ],
+    demandes: [
+      { titre: "Créer un site internet à Caen à prix fixe", texte: "Site vitrine de cinq pages à 890 €, refonte à 690 €, landing page à 490 €. Hébergement première année inclus, le site vous appartient.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Un site pour un hébergement ou une activité touristique", texte: "Chambres d'hôtes du Bessin, visites guidées, locations près des plages : site bilingue, calendrier de disponibilités, fiche Google qui remonte auprès des visiteurs de passage.", href: "/demande-maquette", lien: "Demander une maquette gratuite" },
+      { titre: "Être trouvé sur « votre métier + Caen »", texte: "Fiche Google optimisée, avis collectés chaque semaine, pages par service et par commune (Hérouville, Mondeville, Ifs) : le référencement local qui fait entrer dans le pack local.", href: "/services/seo/seo-local", lien: "Découvrir le référencement local" },
+      { titre: "Vendre des produits normands en ligne", texte: "Cidre, produits laitiers, épicerie fine, artisanat : boutique Stripe avec expédition et retrait en boutique, à partir de 1 490 €.", href: "/services/sites-web/site-ecommerce", lien: "Voir l'offre e-commerce" },
+    ],
+    zones: [
+      "Centre-ville et Château",
+      "Vaucelles et Venoix",
+      "Hérouville-Saint-Clair",
+      "Mondeville et Colombelles",
+      "Ifs et Fleury-sur-Orne",
+      "Ouistreham et Courseulles",
+      "Bayeux et Lisieux",
+      "Falaise et Vire",
+    ],
+    secteurs: [
+      { nom: "Santé et paramédical", texte: "Autour du CHU et dans l'agglomération : pages par soin, prise de rendez-vous, avis, fiche Google exacte. Les patients cherchent « kiné Hérouville », pas un cabinet en général." },
+      { nom: "Agroalimentaire et producteurs", texte: "Cidreries, fromageries, conserveries : vente en ligne, visite d'exploitation à réserver, présence sur la carte pour les touristes qui cherchent « cidre Pays d'Auge »." },
+      { nom: "Tourisme mémoriel et hébergement", texte: "Une clientèle internationale qui réserve sur mobile : site bilingue, calendrier, itinéraires depuis les plages et le Mémorial." },
+      { nom: "Artisans et rénovation du Calvados", texte: "Une page par prestation et par commune, photos de chantiers réels, avis Google : ce qui fait remonter un couvreur ou un menuisier caennais." },
+    ],
+    faq: [
+      { question: "Combien coûte un site internet à Caen ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Prix fixes et publics, identiques partout en France, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou étalé sur 24 mois." },
+      { question: "Quel délai pour un site vitrine à Caen ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite de votre page d'accueil arrive sous 48 heures, avant tout engagement." },
+      { question: "Êtes-vous une agence web installée à Caen ?", answer: "Non, ConvertiLab est basé à Rueil-Malmaison, près de Paris, et travaille à distance avec ses clients de Caen et du Calvados, en visio, avec un interlocuteur unique. Le référencement local se travaille sur votre fiche Google et vos pages, pas depuis un bureau en ville." },
+      { question: "Faites-vous des sites bilingues pour le tourisme ?", answer: "Oui. Le site français-anglais est courant pour les hébergements et les visites du Calvados. Le supplément dépend du nombre de pages à traduire et figure dans le devis." },
+      { question: "Comment sortir sur « agence web Caen » ou « plombier Caen » ?", answer: "Pour une recherche locale, Google affiche d'abord le pack local. Nous optimisons votre fiche Google, alignons vos coordonnées partout, collectons des avis régulièrement et créons une page par service et par commune sur votre site." },
+    ],
+  },
+
+  "marseille": {
+    accroche: [
+      "Marseille est la deuxième ville de France et l'un des marchés les plus disputés sur Google : port et logistique, santé (les hôpitaux de l'AP-HM), tourisme du Vieux-Port aux calanques, BTP et rénovation dans une ville qui se transforme quartier par quartier, et des milliers de commerces et de restaurants. Les recherches « agence web Marseille » et « création site internet Marseille » renvoient à des dizaines d'agences ; la différence se fait sur la clarté de l'offre, la vitesse du site et les avis.",
+      "Nous accompagnons les entreprises marseillaises et des Bouches-du-Rhône à distance, en visio, avec un interlocuteur unique. Prix publics, maquette gratuite sous 48 heures, site vitrine livré en 7 à 14 jours.",
+    ],
+    demandes: [
+      { titre: "Un site internet à Marseille à prix connu d'avance", texte: "Site vitrine de cinq pages à 890 €, refonte à 690 €, landing page à 490 €. Hébergement première année inclus, paiement étalé possible.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Un site pour un artisan ou une entreprise du bâtiment", texte: "Rénovation, plomberie, climatisation, électricité : une page par prestation et par arrondissement, photos de chantiers réels, devis en un clic, avis Google.", href: "/services/seo/seo-local", lien: "Découvrir le référencement local" },
+      { titre: "Un site pour un restaurant ou un commerce", texte: "Carte lisible sur mobile, réservation, horaires, itinéraire depuis le métro : la clientèle décide en trente secondes sur son téléphone.", href: "/demande-maquette", lien: "Demander une maquette gratuite" },
+      { titre: "Des campagnes publicitaires ciblées par quartier", texte: "Google Ads sur vos requêtes exactes, Meta Ads sur les arrondissements et communes qui vous intéressent, un coût par demande suivi, un compte à votre nom.", href: "/services/sea/google-ads", lien: "Découvrir Google Ads" },
+    ],
+    zones: [
+      "Vieux-Port et Le Panier",
+      "La Joliette et Euroméditerranée",
+      "Castellane, Prado et Périer",
+      "La Valentine et Saint-Barnabé",
+      "Aubagne et La Ciotat",
+      "Allauch et Plan-de-Cuques",
+      "Vitrolles et Marignane",
+      "Cassis et Aix-en-Provence",
+    ],
+    secteurs: [
+      { nom: "BTP, rénovation et artisans", texte: "La ville se rénove sans arrêt : une page par prestation et par arrondissement, des photos réelles et un formulaire de devis font remonter un artisan devant les plateformes de mise en relation." },
+      { nom: "Santé et bien-être", texte: "Cabinets, cliniques, thérapeutes : pages par soin, prise de rendez-vous en ligne, avis vérifiés, fiche Google exacte, sur un marché très dense." },
+      { nom: "Restauration et commerces", texte: "Du Vieux-Port au Prado, la clientèle décide sur mobile : horaires, carte, réservation, itinéraire. Un site lent perd la table." },
+      { nom: "Port, logistique et services B2B", texte: "Transitaires, sous-traitants, prestataires : un site qui présente vos capacités et vos références, avec un contact direct pour les acheteurs." },
+    ],
+    faq: [
+      { question: "Combien coûte un site internet à Marseille ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Prix fixes et publics, identiques partout en France, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou étalé sur 24 mois." },
+      { question: "Quel délai pour un site vitrine à Marseille ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite de votre page d'accueil arrive sous 48 heures, avant tout engagement." },
+      { question: "Êtes-vous une agence web marseillaise ?", answer: "Non, nous sommes basés à Rueil-Malmaison, près de Paris, et nous travaillons à distance avec nos clients de Marseille et des Bouches-du-Rhône, en visio, avec un interlocuteur unique. La qualité du site et le référencement local ne dépendent pas de l'adresse de l'agence." },
+      { question: "Pouvez-vous faire un site pour un artisan à Marseille ?", answer: "Oui, c'est l'un de nos cas les plus fréquents : site vitrine à 890 € avec une page par prestation, des photos de vos chantiers, un formulaire de devis, et le référencement local pour apparaître sur « votre métier + Marseille » ou « + votre arrondissement »." },
+      { question: "Comment sortir dans le pack local Google à Marseille ?", answer: "Google classe les fiches sur la pertinence, la distance et la notoriété. Nous choisissons la bonne catégorie, alignons vos coordonnées partout, mettons en place la collecte d'avis chaque semaine et relions la fiche à une page de votre site dédiée à ce service et à ce quartier." },
+    ],
+  },
+
+  "aix-en-provence": {
+    accroche: [
+      "Aix-en-Provence concentre des professions libérales (avocats, notaires, experts autour du palais de justice), un immobilier haut de gamme, une économie du savoir et de la technologie sur le pôle d'activités des Milles, un tourisme culturel porté par le festival et Cézanne, et un commerce de centre-ville exigeant. La clientèle aixoise compare, lit les avis et attend un site à la hauteur de la ville.",
+      "Nous accompagnons les entreprises aixoises à distance, en visio, avec un interlocuteur unique. Prix publics, maquette gratuite sous 48 heures, site vitrine livré en 7 à 14 jours.",
+    ],
+    demandes: [
+      { titre: "Un site vitrine à la hauteur d'une clientèle exigeante", texte: "Design sur mesure, photos réelles, avis intégrés, formulaire court : cinq pages à 890 €, livrées en 7 à 14 jours.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Un site pour un cabinet ou une profession libérale", texte: "Avocats, notaires, experts-comptables, thérapeutes : une page par domaine d'intervention, une prise de rendez-vous, une présentation qui rassure sans jargon.", href: "/demande-maquette", lien: "Demander une maquette gratuite" },
+      { titre: "Un site pour une agence immobilière ou une conciergerie", texte: "Pages par quartier et par commune (Venelles, Le Tholonet, Bouc-Bel-Air), biens présentés proprement, formulaire d'estimation relié à votre CRM.", href: "/services/crm", lien: "Découvrir l'offre CRM" },
+      { titre: "Être trouvé sur « votre métier + Aix »", texte: "Fiche Google, avis réguliers, pages par service et par commune : le référencement local qui fait entrer dans le pack local.", href: "/services/seo/seo-local", lien: "Découvrir le référencement local" },
+    ],
+    zones: [
+      "Cours Mirabeau et centre historique",
+      "Jas de Bouffan et Encagnane",
+      "Les Milles (pôle d'activités)",
+      "Venelles et Le Tholonet",
+      "Bouc-Bel-Air et Cabriès",
+      "Gardanne et Meyreuil",
+      "Pertuis et Lambesc",
+      "Marseille et Salon-de-Provence",
+    ],
+    secteurs: [
+      { nom: "Professions libérales et conseil", texte: "Un site sobre et précis, une page par domaine, des preuves plutôt que des adjectifs, une prise de rendez-vous : ce qui décide un client qui compare trois cabinets." },
+      { nom: "Immobilier et gestion locative", texte: "Agences, conciergeries, promoteurs : pages par quartier, biens présentés proprement, estimation en ligne reliée au CRM." },
+      { nom: "Tourisme, culture et gastronomie", texte: "Hébergements, restaurants, caves, événements : réservation, site bilingue, présence sur la carte pour les visiteurs du festival et de la Sainte-Victoire." },
+      { nom: "Technologie et services B2B des Milles", texte: "Startups, cabinets, sous-traitants : une offre complexe expliquée en une page, des études de cas, un contact sans friction." },
+    ],
+    faq: [
+      { question: "Combien coûte un site internet à Aix-en-Provence ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Prix fixes et publics, identiques partout en France, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou étalé sur 24 mois." },
+      { question: "Quel délai pour un site vitrine à Aix-en-Provence ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite de votre page d'accueil arrive sous 48 heures, avant tout engagement." },
+      { question: "Êtes-vous installés à Aix-en-Provence ?", answer: "Non, ConvertiLab est basé à Rueil-Malmaison, en région parisienne. Nous travaillons à distance avec nos clients d'Aix et des Bouches-du-Rhône, en visio et par écrans partagés, avec un interlocuteur unique du devis à la mise en ligne." },
+      { question: "Pouvez-vous créer un site pour un cabinet d'avocats ou un notaire ?", answer: "Oui. Ces sites demandent de la précision : une page par domaine d'intervention, les mentions obligatoires de la profession, une prise de rendez-vous, un ton sobre. Nous construisons la structure avec vous à partir de ce que vos clients vérifient réellement." },
+      { question: "Comment apparaître sur « agence web Aix-en-Provence » ou « ostéopathe Aix » ?", answer: "Les résultats locaux se jouent sur la fiche d'établissement Google, la régularité des avis et des pages de site dédiées à chaque service et chaque commune. Nous travaillons ces trois points dans notre offre de référencement local." },
+    ],
+  },
+
+  "grenoble": {
+    accroche: [
+      "Grenoble est une ville d'ingénieurs et de montagne : microélectronique et deep tech entre le Polygone scientifique, Inovallée à Meylan et Crolles, université et laboratoires à Saint-Martin-d'Hères, économie de l'outdoor et des stations toutes proches, santé autour du CHU. Vos clients grenoblois lisent un site avec un œil technique : un site lent, approximatif ou daté est éliminé, même quand le savoir-faire est excellent.",
+      "Nous accompagnons les entreprises grenobloises et de l'Isère à distance, en visio, avec un interlocuteur unique. Prix publics, maquette gratuite sous 48 heures, site vitrine livré en 7 à 14 jours.",
+    ],
+    demandes: [
+      { titre: "Un site B2B pour une entreprise technique", texte: "Sous-traitants, bureaux d'études, startups : capacités, certifications, références, contact direct. Un site clair fait gagner des consultations auprès des acheteurs de la vallée.", href: "/demande-maquette", lien: "Demander une maquette gratuite" },
+      { titre: "Créer un site internet à Grenoble à prix fixe", texte: "Site vitrine de cinq pages à 890 €, refonte à 690 €, landing page à 490 €. Hébergement première année inclus, le site vous appartient.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Un site pour une activité de montagne ou d'outdoor", texte: "Moniteurs, loueurs, guides, hébergements : réservation, site bilingue, présence sur la carte pour les visiteurs des stations et de la Chartreuse.", href: "/services/sites-web/landing-page", lien: "Voir l'offre landing page" },
+      { titre: "Être trouvé sur « votre métier + Grenoble »", texte: "Fiche Google, avis réguliers, pages par service et par commune (Meylan, Échirolles, Saint-Égrève) : le référencement local qui fait entrer dans le pack local.", href: "/services/seo/seo-local", lien: "Découvrir le référencement local" },
+    ],
+    zones: [
+      "Hyper-centre et Île Verte",
+      "Championnet et Berriat",
+      "Saint-Martin-d'Hères (campus)",
+      "Meylan (Inovallée) et Montbonnot",
+      "Échirolles et Eybens",
+      "Fontaine et Seyssinet-Pariset",
+      "Saint-Égrève et Voiron",
+      "Crolles et Chambéry",
+    ],
+    secteurs: [
+      { nom: "Microélectronique, deep tech et sous-traitance", texte: "Un site B2B précis : capacités, moyens, certifications, références, contact direct. Les donneurs d'ordres vérifient un fournisseur sur Google avant de le rappeler." },
+      { nom: "Montagne, outdoor et tourisme", texte: "Une clientèle qui réserve sur mobile, souvent la veille : site bilingue, calendrier, itinéraires depuis les stations." },
+      { nom: "Santé et recherche", texte: "Autour du CHU et des laboratoires : pages par soin, prise de rendez-vous, avis, fiche Google exacte." },
+      { nom: "Artisans et rénovation de l'Isère", texte: "Une page par prestation et par commune, photos de chantiers réels, avis Google : ce qui fait remonter un artisan de l'agglomération." },
+    ],
+    faq: [
+      { question: "Combien coûte un site internet à Grenoble ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Prix fixes et publics, identiques partout en France, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou étalé sur 24 mois." },
+      { question: "Quel délai pour un site vitrine à Grenoble ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite de votre page d'accueil arrive sous 48 heures, avant tout engagement." },
+      { question: "Êtes-vous une agence web grenobloise ?", answer: "Non, nous sommes basés à Rueil-Malmaison, près de Paris, et nous travaillons à distance avec nos clients de Grenoble et de l'Isère, en visio, avec un interlocuteur unique. Le référencement local d'une entreprise grenobloise se travaille sur sa fiche Google et ses pages." },
+      { question: "Pouvez-vous créer un site pour une entreprise technique ou industrielle ?", answer: "Oui. Ce type de site demande de la précision plus que des effets : capacités, certifications, moyens, références, contact direct. Nous construisons la structure avec vous à partir de ce que vos donneurs d'ordres vérifient." },
+      { question: "Comment sortir sur « agence web Grenoble » ou « plombier Grenoble » ?", answer: "Pour une recherche locale, Google affiche d'abord le pack local. Nous optimisons votre fiche Google, alignons vos coordonnées partout, collectons des avis régulièrement et créons une page par service et par commune sur votre site." },
+    ],
+  },
+
+  "rouen": {
+    accroche: [
+      "Rouen vit de son port et de l'industrie de la vallée de la Seine, de son CHU et de ses professions de santé, d'un tourisme culturel dense entre la cathédrale et les impressionnistes, et d'un centre commerçant qui s'étend du Vieux-Marché à Saint-Sever. Les recherches « agence web Rouen » et « création site internet Rouen » sont régulières, et l'offre locale reste inégale : beaucoup de sites d'artisans et de commerces normands datent.",
+      "Nous accompagnons les entreprises rouennaises et de Seine-Maritime à distance, en visio, avec un interlocuteur unique. Prix publics, maquette gratuite sous 48 heures, site vitrine livré en 7 à 14 jours.",
+    ],
+    demandes: [
+      { titre: "Créer un site internet à Rouen à prix fixe", texte: "Site vitrine de cinq pages à 890 €, refonte à 690 €, landing page à 490 €. Hébergement première année inclus, le site vous appartient.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Un site pour un cabinet ou un professionnel de santé", texte: "Autour du CHU et dans l'agglomération : pages par soin, prise de rendez-vous, avis, fiche Google exacte.", href: "/demande-maquette", lien: "Demander une maquette gratuite" },
+      { titre: "Un site B2B pour une entreprise industrielle ou logistique", texte: "Sous-traitants, transporteurs, prestataires de la vallée de la Seine : capacités, certifications, références, contact direct pour les acheteurs.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Être trouvé sur « votre métier + Rouen »", texte: "Fiche Google, avis réguliers, pages par service et par commune (Mont-Saint-Aignan, Sotteville, Grand-Quevilly) : le référencement local qui fait entrer dans le pack local.", href: "/services/seo/seo-local", lien: "Découvrir le référencement local" },
+    ],
+    zones: [
+      "Centre et Vieux-Marché",
+      "Saint-Sever et Jardin des Plantes",
+      "Mont-Saint-Aignan et Bois-Guillaume",
+      "Sotteville-lès-Rouen",
+      "Le Grand-Quevilly et Le Petit-Quevilly",
+      "Barentin et Maromme",
+      "Elbeuf et Louviers",
+      "Le Havre et Évreux",
+    ],
+    secteurs: [
+      { nom: "Industrie, port et logistique", texte: "Un site B2B qui présente vos capacités et vos références, avec une page par prestation et un contact direct : ce que consultent les acheteurs avant de vous inscrire dans un panel." },
+      { nom: "Santé et paramédical", texte: "Cabinets, cliniques, thérapeutes : pages par soin, prise de rendez-vous en ligne, avis, fiche Google exacte." },
+      { nom: "Commerces, restauration et tourisme", texte: "Du Vieux-Marché à la cathédrale, la clientèle décide sur mobile : horaires, carte, réservation, itinéraire. Site bilingue utile pour les visiteurs." },
+      { nom: "Artisans et rénovation de Seine-Maritime", texte: "Une page par prestation et par commune, photos de chantiers réels, avis Google : ce qui fait remonter un artisan rouennais." },
+    ],
+    faq: [
+      { question: "Combien coûte un site internet à Rouen ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Prix fixes et publics, identiques partout en France, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou étalé sur 24 mois." },
+      { question: "Quel délai pour un site vitrine à Rouen ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite de votre page d'accueil arrive sous 48 heures, avant tout engagement." },
+      { question: "Êtes-vous installés à Rouen ?", answer: "Non, ConvertiLab est basé à Rueil-Malmaison, en région parisienne, à une heure de Rouen. Nous travaillons à distance avec nos clients de Seine-Maritime, en visio et par écrans partagés, avec un interlocuteur unique." },
+      { question: "Pouvez-vous reprendre un site existant ?", answer: "Oui. Nous récupérons vos contenus et votre nom de domaine, posons les redirections pour ne pas perdre vos positions, et livrons un site moderne à 690 €. Vous restez propriétaire de tout." },
+      { question: "Comment apparaître sur « agence web Rouen » ou « électricien Rouen » ?", answer: "Les résultats locaux se jouent sur la fiche d'établissement Google, la régularité des avis et des pages de site dédiées à chaque service et chaque commune. Nous travaillons ces trois points dans notre offre de référencement local." },
+    ],
+  },
+
+  "paris": {
+    accroche: [
+      "Paris est le marché le plus concurrentiel de France pour une agence web : des centaines d'agences, des comparateurs et des annuaires occupent la première page sur « agence web Paris ». Ce qui distingue une TPE parisienne sur Google, ce n'est pas le nom de l'agence qui a fait son site, c'est la précision de ses pages, la vitesse sur mobile, ses avis et sa fiche d'établissement, arrondissement par arrondissement.",
+      "ConvertiLab est à Rueil-Malmaison, à vingt minutes de La Défense et du 16e : les rendez-vous en personne sont possibles pour les entreprises de Paris et de l'ouest parisien, le reste se fait en visio, avec un interlocuteur unique. Prix publics, maquette gratuite sous 48 heures.",
+    ],
+    demandes: [
+      { titre: "Un site vitrine parisien à prix fixe", texte: "Cinq pages à 890 €, design sur mesure, hébergement première année inclus, livré en 7 à 14 jours. Refonte à 690 €, landing page à 490 €.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Un site pour un cabinet, un consultant ou une agence", texte: "Une offre complexe expliquée en une page, des études de cas, un formulaire court relié à votre CRM : le site qui transforme les visites en rendez-vous.", href: "/services/crm", lien: "Découvrir l'offre CRM" },
+      { titre: "Être trouvé par arrondissement", texte: "« Ostéopathe Paris 17 », « plombier Paris 15 » : fiche Google, avis réguliers, une page par service et par arrondissement, coordonnées identiques partout.", href: "/services/seo/seo-local", lien: "Découvrir le référencement local" },
+      { titre: "Des campagnes Google Ads et Meta Ads pilotées", texte: "Compte à votre nom, requêtes exactes, coût par demande suivi chaque semaine, audit offert avant de commencer.", href: "/services/sea/google-ads", lien: "Découvrir Google Ads" },
+    ],
+    zones: [
+      "Paris 8e, 9e et 17e",
+      "Paris 15e et 16e",
+      "Paris 11e et 12e",
+      "La Défense, Courbevoie et Puteaux",
+      "Boulogne-Billancourt et Issy-les-Moulineaux",
+      "Neuilly-sur-Seine et Levallois-Perret",
+      "Saint-Cloud, Suresnes et Rueil-Malmaison",
+      "Versailles et Saint-Germain-en-Laye",
+    ],
+    secteurs: [
+      { nom: "Conseil, cabinets et services B2B", texte: "Un site qui rend une offre complexe lisible et amène à un rendez-vous, avec des preuves plutôt que des adjectifs et un formulaire relié au CRM." },
+      { nom: "Santé et professions libérales", texte: "Cabinets, thérapeutes, praticiens : une page par soin, prise de rendez-vous, avis, fiche Google exacte, par arrondissement." },
+      { nom: "Restauration et commerces", texte: "La clientèle décide sur mobile, souvent en marchant : horaires, carte, réservation, itinéraire depuis le métro. Un site lent perd la table." },
+      { nom: "Artisans de Paris et de la petite couronne", texte: "Une page par prestation et par arrondissement ou commune, photos de chantiers réels, avis Google : ce qui fait remonter un artisan devant les plateformes." },
+    ],
+    faq: [
+      { question: "Combien coûte un site internet à Paris ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Prix fixes et publics, identiques partout en France, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou étalé sur 24 mois." },
+      { question: "Quel délai pour un site vitrine à Paris ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite de votre page d'accueil arrive sous 48 heures, avant tout engagement." },
+      { question: "Pouvons-nous nous rencontrer en personne ?", answer: "Oui. ConvertiLab est à Rueil-Malmaison, dans les Hauts-de-Seine, à vingt minutes de La Défense. Un premier rendez-vous en personne est possible pour les entreprises de Paris et de l'ouest parisien ; le suivi du projet se fait ensuite en visio, ce qui va plus vite pour tout le monde." },
+      { question: "Comment sortir sur « agence web Paris » ?", answer: "Honnêtement, cette requête est tenue par des annuaires et de très grandes agences ; nous ne la promettons à personne, pas même à nous. Ce qui rapporte des clients à une TPE parisienne, ce sont les recherches « votre métier + votre arrondissement » : c'est là que nous travaillons votre fiche Google et vos pages." },
+      { question: "Travaillez-vous avec des entreprises hors de Paris ?", answer: "Oui, partout en France, à distance. La majorité de nos clients ne sont pas en Île-de-France." },
+    ],
+  },
+
+  "besancon": {
+    accroche: [
+      "Besançon est la capitale des microtechniques et de l'horlogerie : des ateliers et des sous-traitants de précision autour de Temis, des dispositifs médicaux, un CHU, une université, et un centre historique classé qui fait vivre commerces, restaurants et tourisme. Vos clients bisontins ont l'habitude de la précision ; un site approximatif ou lent les fait partir.",
+      "Nous accompagnons les entreprises bisontines et du Doubs à distance, en visio, avec un interlocuteur unique. Prix publics, maquette gratuite sous 48 heures, site vitrine livré en 7 à 14 jours.",
+    ],
+    demandes: [
+      { titre: "Un site B2B pour un atelier ou un sous-traitant", texte: "Microtechniques, décolletage, dispositifs médicaux : capacités, certifications, moyens, références, contact direct. Ce que vérifient les donneurs d'ordres avant de vous consulter.", href: "/demande-maquette", lien: "Demander une maquette gratuite" },
+      { titre: "Créer un site internet à Besançon à prix fixe", texte: "Site vitrine de cinq pages à 890 €, refonte à 690 €, landing page à 490 €. Hébergement première année inclus, le site vous appartient.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Un site pour un commerce ou un restaurant du centre", texte: "Horaires, carte, réservation, itinéraire depuis la Boucle : la clientèle décide sur mobile. Un site lent perd la table.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Être trouvé sur « votre métier + Besançon »", texte: "Fiche Google, avis réguliers, pages par service et par commune (Planoise, École-Valentin, Saint-Vit) : le référencement local qui fait entrer dans le pack local.", href: "/services/seo/seo-local", lien: "Découvrir le référencement local" },
+    ],
+    zones: [
+      "La Boucle et Battant",
+      "Planoise et Châteaufarine",
+      "Temis et Palente",
+      "École-Valentin et Miserey-Salines",
+      "Chalezeule et Thise",
+      "Saint-Vit et Ornans",
+      "Pontarlier et Morteau",
+      "Dole et Vesoul",
+    ],
+    secteurs: [
+      { nom: "Microtechniques, horlogerie et dispositifs médicaux", texte: "Un site B2B précis : capacités, certifications, parc machines, références, contact direct. Les acheteurs vérifient un fournisseur sur Google avant de le rappeler." },
+      { nom: "Santé et paramédical", texte: "Autour du CHU et dans l'agglomération : pages par soin, prise de rendez-vous, avis, fiche Google exacte." },
+      { nom: "Commerces, restauration et tourisme", texte: "Centre classé, citadelle, Doubs : la clientèle décide sur mobile ; site bilingue utile pour les visiteurs suisses et allemands." },
+      { nom: "Artisans et rénovation du Doubs", texte: "Une page par prestation et par commune, photos de chantiers réels, avis Google : ce qui fait remonter un artisan bisontin." },
+    ],
+    faq: [
+      { question: "Combien coûte un site internet à Besançon ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Prix fixes et publics, identiques partout en France, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou étalé sur 24 mois." },
+      { question: "Quel délai pour un site vitrine à Besançon ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite de votre page d'accueil arrive sous 48 heures, avant tout engagement." },
+      { question: "Êtes-vous une agence web bisontine ?", answer: "Non, ConvertiLab est basé à Rueil-Malmaison, près de Paris, et travaille à distance avec ses clients de Besançon et du Doubs, en visio, avec un interlocuteur unique. Le référencement local se travaille sur votre fiche Google et vos pages, pas depuis un bureau en ville." },
+      { question: "Pouvez-vous créer un site pour un sous-traitant industriel ?", answer: "Oui. Ce type de site demande de la précision plus que des effets : capacités, certifications, moyens, références, contact direct. Nous construisons la structure avec vous à partir de ce que vos donneurs d'ordres vérifient réellement." },
+      { question: "Comment sortir sur « agence web Besançon » ou « plombier Besançon » ?", answer: "Pour une recherche locale, Google affiche d'abord le pack local. Nous optimisons votre fiche Google, alignons vos coordonnées partout, collectons des avis régulièrement et créons une page par service et par commune sur votre site." },
+    ],
+  },
+
+  "nancy": {
+    accroche: [
+      "Nancy vit de son CHRU et du technopôle de Brabois, de son université, d'un artisanat d'art hérité de l'École de Nancy (verre, cristal, ferronnerie), d'un centre commerçant autour de la place Stanislas et de professions libérales nombreuses. Les recherches « agence web Nancy » et « création site internet Nancy » sont régulières ; beaucoup de sites lorrains restent techniquement faibles, et un site rapide et bien structuré permet encore de les dépasser.",
+      "Nous accompagnons les entreprises nancéiennes et de Meurthe-et-Moselle à distance, en visio, avec un interlocuteur unique. Prix publics, maquette gratuite sous 48 heures, site vitrine livré en 7 à 14 jours.",
+    ],
+    demandes: [
+      { titre: "Créer un site internet à Nancy à prix fixe", texte: "Site vitrine de cinq pages à 890 €, refonte à 690 €, landing page à 490 €. Hébergement première année inclus, le site vous appartient.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Un site pour un cabinet ou un professionnel de santé", texte: "Autour de Brabois et dans l'agglomération : pages par soin, prise de rendez-vous, avis, fiche Google exacte.", href: "/demande-maquette", lien: "Demander une maquette gratuite" },
+      { titre: "Vendre un artisanat d'art ou des produits lorrains en ligne", texte: "Verre, cristal, mirabelle, bergamote, créateurs : boutique Stripe avec expédition et retrait en atelier, à partir de 1 490 €.", href: "/services/sites-web/site-ecommerce", lien: "Voir l'offre e-commerce" },
+      { titre: "Être trouvé sur « votre métier + Nancy »", texte: "Fiche Google, avis réguliers, pages par service et par commune (Vandœuvre, Laxou, Villers) : le référencement local qui fait entrer dans le pack local.", href: "/services/seo/seo-local", lien: "Découvrir le référencement local" },
+    ],
+    zones: [
+      "Centre et place Stanislas",
+      "Saint-Sébastien et Rives de Meurthe",
+      "Vandœuvre-lès-Nancy (Brabois)",
+      "Laxou et Villers-lès-Nancy",
+      "Essey-lès-Nancy et Saint-Max",
+      "Jarville et Tomblaine",
+      "Lunéville et Toul",
+      "Metz et Épinal",
+    ],
+    secteurs: [
+      { nom: "Santé et recherche", texte: "Autour du CHRU de Brabois et du technopôle : pages par soin, prise de rendez-vous, avis, fiche Google exacte, sur un marché dense en cabinets." },
+      { nom: "Artisanat d'art et produits lorrains", texte: "Verriers, ferronniers, créateurs, épiceries fines : vente en ligne avec expédition, réservation d'ateliers, photos qui font la différence." },
+      { nom: "Professions libérales et conseil", texte: "Avocats, experts-comptables, cabinets : une page par domaine, des preuves, une prise de rendez-vous, un ton sobre." },
+      { nom: "Artisans et rénovation de Meurthe-et-Moselle", texte: "Une page par prestation et par commune, photos de chantiers réels, avis Google : ce qui fait remonter un artisan nancéien." },
+    ],
+    faq: [
+      { question: "Combien coûte un site internet à Nancy ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Prix fixes et publics, identiques partout en France, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou étalé sur 24 mois." },
+      { question: "Quel délai pour un site vitrine à Nancy ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite de votre page d'accueil arrive sous 48 heures, avant tout engagement." },
+      { question: "Êtes-vous installés à Nancy ?", answer: "Non, ConvertiLab est basé à Rueil-Malmaison, en région parisienne, et travaille à distance avec ses clients de Nancy et de Meurthe-et-Moselle, en visio, avec un interlocuteur unique. Rien ne nécessite un déplacement : maquettes partagées, retours en ligne, formation à la prise en main." },
+      { question: "Pouvez-vous vendre en ligne des objets d'artisanat ?", answer: "Oui. La boutique gère les pièces uniques ou en petite série, les frais de port au poids et par zone, le retrait à l'atelier, et présente vos créations avec de vraies photos. À partir de 1 490 €, livrée en 14 à 21 jours." },
+      { question: "Comment apparaître sur « agence web Nancy » ou « kiné Nancy » ?", answer: "Les résultats locaux se jouent sur la fiche d'établissement Google, la régularité des avis et des pages de site dédiées à chaque service et chaque commune. Nous travaillons ces trois points dans notre offre de référencement local." },
+    ],
+  },
 };
 
 export function getContenuLocal(slug: string): ContenuLocal | null {

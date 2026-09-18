@@ -8,6 +8,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "forfait-seo-mensuel-que-comprend-il",
   title: "Forfait SEO mensuel : que comprend-il et combien coûte-t-il ?",
+  seoTitle: "Forfait SEO mensuel : que comprend-il ?",
   excerpt:
     "Cinq leviers, un prix dès 500 €/mois, 6 mois minimum, un rapport d'une page : ce qu'un forfait SEO mensuel doit comprendre, ce qu'il coûte et à quoi reconnaître une offre à éviter.",
   metaDescription:

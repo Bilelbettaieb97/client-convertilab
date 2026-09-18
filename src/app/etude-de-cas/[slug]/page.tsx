@@ -13,11 +13,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!cs) return { title: "Étude de cas introuvable" };
 
   return {
-    title: `${cs.client} - ${cs.title}`,
+    title: `${cs.client} : étude de cas`,
     description: cs.subtitle,
     alternates: { canonical: `${SITE.url}/etude-de-cas/${slug}` },
     openGraph: {
-      title: `${cs.client} - ${cs.title} | ConvertiLab`,
+      title: `${cs.client} : étude de cas | ConvertiLab`,
       description: cs.subtitle,
       type: "article",
       url: `${SITE.url}/etude-de-cas/${slug}`,
@@ -58,9 +58,16 @@ export default async function CaseStudyPage({ params }: Props) {
   const caseStudyJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${caseStudy.client} - ${caseStudy.title}`,
+    "@id": `${SITE.url}/etude-de-cas/${slug}`,
+    mainEntityOfPage: `${SITE.url}/etude-de-cas/${slug}`,
+    headline: `${caseStudy.client} : ${caseStudy.title}`,
     description: caseStudy.subtitle,
-    image: caseStudy.image || `${SITE.url}/favicon.png`,
+    image: caseStudy.image ? (caseStudy.image.startsWith("http") ? caseStudy.image : `${SITE.url}${caseStudy.image}`) : `${SITE.url}/og-image.png`,
+    author: { "@type": "Person", "@id": `${SITE.url}/#bilel-bettaieb`, name: "Bilel Bettaieb", url: `${SITE.url}/a-propos` },
+    publisher: { "@id": `${SITE.url}/#organization` },
+    datePublished: "2026-03-01",
+    dateModified: "2026-09-18",
+    inLanguage: "fr-FR",
   };
 
   const breadcrumbJsonLd = {

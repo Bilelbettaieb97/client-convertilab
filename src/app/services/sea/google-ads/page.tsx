@@ -11,7 +11,7 @@ const pole = getPole("publicite");
 const URL = URL_GOOGLE_ADS;
 
 /** ≤ 60 caractères avec le suffixe « | ConvertiLab » du gabarit. Mot-clé principal conservé : « agence Google Ads Paris ». */
-const TITLE = "Agence Google Ads Paris : Search et Shopping";
+const TITLE = "Agence Google Ads Paris : compte à votre nom, audit offert";
 const DESCRIPTION =
   "Agence Google Ads à Paris et Rueil-Malmaison : Search, Shopping, remarketing, compte à votre nom, suivi des conversions. Audit offert, devis sous 24 h.";
 
@@ -43,6 +43,7 @@ export default function GoogleAdsPage() {
       description: DESCRIPTION,
       url: `${SITE.url}${URL}`,
       provider: PROVIDER_ORGANISATION,
+      dateModified: "2026-09-16",
       areaServed: STRUCTURED_DATA.localBusiness.areaServed,
       isRelatedTo: { "@type": "Service", "@id": `${SITE.url}${pole.href}#service`, name: pole.nomCourt, url: `${SITE.url}${pole.href}` },
       hasOfferCatalog: {

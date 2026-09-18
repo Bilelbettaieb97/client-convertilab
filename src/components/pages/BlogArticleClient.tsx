@@ -335,7 +335,11 @@ export default function BlogArticleClient({ article, relatedArticles }: Props) {
                   {article.readTime} de lecture
                 </span>
                 <span className="flex items-center gap-2">
-                  Par {article.author.name}
+                  Par{" "}
+                  <Link href="/a-propos" className="underline underline-offset-4 hover:text-white">
+                    Bilel Bettaieb
+                  </Link>
+                  , fondateur
                 </span>
               </div>
             </div>

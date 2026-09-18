@@ -8,6 +8,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "pinterest-ads-guide-e-commerce",
   title: "Pinterest Ads pour un e-commerce : le guide des épingles sponsorisées",
+  seoTitle: "Pinterest Ads pour l'e-commerce : le guide",
   excerpt:
     "Décoration, mariage, mode, artisanat : Pinterest Ads place vos produits dans le projet d'achat de vos clients, des semaines avant la commande. Budget, catalogue, tag, épingles : le guide.",
   metaDescription:

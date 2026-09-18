@@ -42,6 +42,7 @@ export default function LandingPagePage() {
       description: DESCRIPTION,
       url: `${SITE.url}${URL}`,
       provider: PROVIDER_ORGANISATION,
+      dateModified: "2026-09-16",
       areaServed: STRUCTURED_DATA.localBusiness.areaServed,
       // Prix affiché tel quel sur la page (section « Combien coûte une landing page ? »).
       offers: {

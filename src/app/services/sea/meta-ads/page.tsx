@@ -9,7 +9,7 @@ import MetaAdsContent, { FAQ_META_ADS, FIL_ARIANE_META_ADS, URL_META_ADS } from 
 const URL = URL_META_ADS;
 
 /** Title ≤ 60 caractères (le gabarit du layout ajoute « | ConvertiLab »). */
-const TITLE = "Agence Meta Ads Paris : Facebook et Instagram";
+const TITLE = "Agence Meta Ads Paris : compte à votre nom, audit offert";
 /** Description ≤ 155 caractères. */
 const DESCRIPTION =
   "Agence Meta Ads à Paris et Rueil-Malmaison : publicités Facebook et Instagram pilotées au coût par demande, compte et pixel à votre nom. Audit gratuit.";
@@ -42,6 +42,7 @@ export default function MetaAdsPage() {
       description: DESCRIPTION,
       url: `${SITE.url}${URL}`,
       provider: PROVIDER_ORGANISATION,
+      dateModified: "2026-09-16",
       areaServed: STRUCTURED_DATA.localBusiness.areaServed,
     },
   ];

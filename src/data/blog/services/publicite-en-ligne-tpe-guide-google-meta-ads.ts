@@ -4,6 +4,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "publicite-en-ligne-tpe-guide-google-meta-ads",
   title: "Publicité en ligne pour TPE : le guide Google Ads et Meta Ads",
+  seoTitle: "Publicité en ligne pour TPE : Google ou Meta ?",
   excerpt:
     "Quelle plateforme choisir, quel budget prévoir, quel chiffre suivre et quelles erreurs éviter : le guide de la publicité en ligne pour un artisan, un commerce ou une petite entreprise.",
   metaDescription:

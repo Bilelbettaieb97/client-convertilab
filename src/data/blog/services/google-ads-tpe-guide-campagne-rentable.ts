@@ -7,6 +7,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "google-ads-tpe-guide-campagne-rentable",
   title: "Google Ads pour une TPE : comment monter une campagne rentable ?",
+  seoTitle: "Google Ads pour TPE : une campagne rentable",
   excerpt:
     "Google Ads apporte des demandes dès les premières semaines à un artisan, un cabinet ou un commerce, à condition de suivre le coût par demande plutôt que le clic. Budget, page, suivi : le guide.",
   metaDescription:

@@ -8,6 +8,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "landing-page-definition-creation-conversion",
   title: "Landing page : définition, création et conversion pour une TPE",
+  seoTitle: "Landing page : définition, création, conversion",
   excerpt:
     "Une landing page est une page unique, sans menu, conçue pour une seule action. Ce guide explique ce qu'elle contient, comment la créer en 5 à 7 jours, son prix et comment la relier à vos annonces.",
   metaDescription:

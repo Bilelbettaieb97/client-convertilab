@@ -47,6 +47,7 @@ export default function VisibiliteIaPage() {
       description: DESCRIPTION,
       url: `${SITE.url}${URL}`,
       provider: PROVIDER_ORGANISATION,
+      dateModified: "2026-09-16",
       areaServed: STRUCTURED_DATA.localBusiness.areaServed,
       isPartOf: { "@type": "Service", "@id": `${SITE.url}${pole.href}#service`, name: pole.nomCourt, url: `${SITE.url}${pole.href}` },
       offers: {

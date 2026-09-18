@@ -7,6 +7,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "referencement-naturel-tpe-guide-agence-seo",
   title: "Référencement naturel pour une TPE : le guide de l'agence SEO",
+  seoTitle: "Référencement naturel pour TPE : le guide",
   excerpt:
     "Pourquoi votre site reste invisible, par quoi commencer, ce qu'une agence SEO fait chaque mois, combien cela coûte et combien de temps il faut : le guide du référencement naturel pour une TPE.",
   metaDescription:

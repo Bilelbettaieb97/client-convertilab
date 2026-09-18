@@ -42,6 +42,7 @@ export default function LinkedinAdsPage() {
       description: DESCRIPTION,
       url: `${SITE.url}${URL}`,
       provider: PROVIDER_ORGANISATION,
+      dateModified: "2026-09-16",
       areaServed: STRUCTURED_DATA.localBusiness.areaServed,
       isPartOf: { "@id": `${SITE.url}/services/sea#service` },
       audience: {

@@ -8,6 +8,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "integration-ia-tpe-pme-claude-automatisation",
   title: "Intégration IA pour TPE et PME : que peut automatiser Claude ?",
+  seoTitle: "Intégrer l'IA dans sa TPE : par où commencer",
   excerpt:
     "Devis reçus la nuit, avis Google, relances, tri des emails : ce qu'une IA comme Claude peut reprendre dans une TPE ou une PME, comment se passe l'intégration, à quel prix et avec quelles règles.",
   metaDescription:

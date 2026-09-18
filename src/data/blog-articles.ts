@@ -23,6 +23,8 @@ export interface BlogFaqItem {
 }
 
 export interface FullBlogArticle extends BlogArticle {
+  /** Titre court (≤ 60 caractères) pour la balise <title> et Open Graph ; le H1 garde `title`. */
+  seoTitle?: string;
   content: string;
   tags: string[];
   metaDescription: string;
@@ -171,6 +173,7 @@ Le meilleur moment pour créer son site web est maintenant. Chaque mois sans sit
   {
     slug: "erreurs-site-web-eviter",
     title: "Pourquoi mon site web ne convertit pas : les 10 erreurs à corriger en 2026",
+    seoTitle: "Les 10 erreurs qui empêchent votre site de convertir",
     excerpt: "Votre site reçoit des visiteurs mais ne génère pas de contacts ? Ces 10 erreurs précises sont responsables de 80% des sites qui ne convertissent pas. Diagnostic complet + solutions concrètes.",
     metaDescription: "Pourquoi mon site web ne convertit pas en 2026 ? Les 10 erreurs les plus fréquentes diagnostiquées sur 150+ sites, avec les solutions concrètes pour chacune.",
     image: "/images/blog/erreurs-site-web-eviter.png",
@@ -338,6 +341,7 @@ Dans la majorité des cas, il est possible de corriger un site existant à la ma
   {
     slug: "seo-local-guide-complet",
     title: "Comment apparaître sur Google Maps pour son entreprise en 2026 ?",
+    seoTitle: "Apparaître sur Google Maps en 2026",
     excerpt: "46% des recherches Google ont une intention locale. Fiche Google Business Profile, avis clients, pages locales, citations : le guide complet pour apparaître dans le Local Pack en 2026.",
     metaDescription: "Comment apparaître sur Google Maps pour son entreprise en 2026 ? Fiche GBP, avis, NAP, pages locales : guide complet du SEO local pour artisans et commerçants.",
     image: "/images/blog/seo-local-guide-complet.png",
@@ -474,6 +478,7 @@ Avoir plus d'avis aide, mais ce n'est pas le seul facteur. La récence des avis 
   {
     slug: "combien-coute-site-web",
     title: "Combien coûte un site web professionnel pour une petite entreprise en 2026 ?",
+    seoTitle: "Combien coûte un site web professionnel ?",
     excerpt: "De 300€ à 30 000€ : les prix d'un site web varient énormément selon le type, le prestataire et les fonctionnalités. Grille tarifaire complète et transparente pour artisans, commerçants et PME.",
     metaDescription: "Combien coûte un site web professionnel en 2026 ? Quel budget prévoir pour un site vitrine, e-commerce ou sur-mesure : grille tarifaire complète et tarifs réels ConvertiLab inclus.",
     image: "/images/blog/combien-coute-site-web.png",
@@ -611,6 +616,7 @@ La durée de vie moyenne d'un site web est de 3 à 5 ans avant qu'une refonte so
   {
     slug: "tendances-web-design-2024",
     title: "Quelles tendances web design adopter pour son site d'entreprise en 2026 ?",
+    seoTitle: "Tendances web design pour son site d'entreprise",
     excerpt: "Minimalisme, micro-interactions, accessibilité, IA générative : les 8 tendances web design 2026 qui convertissent vraiment, avec le verdict pour chaque profil d'entreprise.",
     metaDescription: "Tendances web design 2026 pour PME et artisans : minimalisme, accessibilité, typographie variable, micro-interactions. Quelles adopter selon votre secteur ?",
     image: "/images/blog/tendances-web-design-2024.png",
@@ -752,6 +758,7 @@ Non. Le design attire et retient l'attention, mais c'est le contenu qui convainc
   {
     slug: "optimiser-vitesse-site-web",
     title: "Comment accélérer son site web et améliorer son score Google PageSpeed ?",
+    seoTitle: "Accélérer son site et son score PageSpeed",
     excerpt: "Un site qui charge en 5 secondes perd 50% de ses visiteurs. Images, cache, CDN, hébergement : les 10 optimisations concrètes qui font passer un site de 35 à 90/100 sur PageSpeed.",
     metaDescription: "Comment accélérer son site web et améliorer son score Google PageSpeed en 2026 ? Les 10 optimisations concrètes classées par impact, avec outils gratuits.",
     image: "/images/blog/optimiser-vitesse-site-web.png",
@@ -885,6 +892,7 @@ Le seuil minimum est 70/100 sur mobile selon les recommandations Google. En dess
   {
     slug: "audit-seo-gratuit-guide",
     title: "Comment faire un audit SEO gratuit de son site web en 60 secondes ?",
+    seoTitle: "Faire un audit SEO gratuit en 60 secondes",
     excerpt: "68% des expériences en ligne commencent sur Google. Pourtant la plupart des sites ont des erreurs techniques invisibles qui bloquent leur référencement. Découvrez comment analyser votre site gratuitement en 60 secondes.",
     metaDescription: "Comment faire un audit SEO gratuit de son site web en 60 secondes ? Analyse sur 60+ critères : balises, vitesse, mobile, robots.txt. Score SEO immédiat.",
     image: "/images/blog/audit-seo-gratuit-guide.png",
@@ -1004,6 +1012,7 @@ Le score SEO sur 100 est un indicateur global de la santé de votre page. Voici 
   {
     slug: "tester-vitesse-site-web",
     title: "Comment tester la vitesse de son site web et mesurer ses Core Web Vitals ?",
+    seoTitle: "Tester la vitesse de son site web",
     excerpt: "53% des visiteurs mobiles quittent un site qui charge en plus de 3 secondes. LCP, CLS, INP : comment tester vos Core Web Vitals gratuitement et savoir exactement quoi corriger pour accélérer votre site.",
     metaDescription: "Comment tester la vitesse de son site web et mesurer ses Core Web Vitals gratuitement ? LCP, CLS, INP expliqués + outil gratuit + recommandations concrètes.",
     image: "/images/blog/tester-vitesse-site-web.png",
@@ -1116,6 +1125,7 @@ Le LCP (Largest Contentful Paint) est la métrique qui représente le mieux l'ex
   {
     slug: "audit-design-ux-site-web",
     title: "Comment évaluer le design et l'UX de son site web pour améliorer ses conversions ?",
+    seoTitle: "Évaluer le design et l'UX de son site",
     excerpt: "94% des premières impressions en ligne sont liées au design. Responsive, accessibilité, ergonomie, cohérence visuelle : comment auditer l'UX de votre site gratuitement et identifier ce qui fait fuir vos visiteurs.",
     metaDescription: "Comment évaluer le design et l'UX de son site web pour améliorer ses conversions ? Audit design gratuit : score responsive, accessibilité, ergonomie, CTA.",
     image: "/images/blog/audit-design-ux-site-web.png",
@@ -1230,6 +1240,7 @@ Les corrections design impactent les conversions quasi immédiatement. Rendre le
   {
     slug: "estimer-roi-google-ads-meta-ads",
     title: "Comment estimer le ROI de ses campagnes Google Ads et Meta Ads avant de dépenser ?",
+    seoTitle: "Estimer le ROI de ses campagnes Google et Meta Ads",
     excerpt: "63% des entreprises lancent des campagnes publicitaires sans estimer leur ROI au préalable. CPC moyen, taux de conversion, ROAS : comment calculer la rentabilité de Google Ads et Meta Ads avant d'investir.",
     metaDescription: "Comment estimer le ROI de Google Ads et Meta Ads avant de dépenser ? CPC moyen, taux de conversion, ROAS par secteur. Simulateur gratuit sans inscription.",
     image: "/images/blog/estimer-roi-google-ads-meta-ads.png",
@@ -1352,6 +1363,7 @@ Un artisan peut rentabiliser Google Ads avec 300 à 500€/mois en ciblant exclu
   {
     slug: "generateur-mentions-legales-gratuit",
     title: "Comment générer ses mentions légales RGPD gratuitement pour son site web ?",
+    seoTitle: "Générer ses mentions légales gratuitement",
     excerpt: "40% des sites web français n'ont pas de mentions légales conformes. Amendes jusqu'à 75 000€ et sanctions CNIL : comment générer gratuitement mentions légales, politique de confidentialité, CGU et CGV conformes RGPD en 2 minutes.",
     metaDescription: "Comment générer ses mentions légales RGPD gratuitement pour son site web ? Générateur mentions légales, politique de confidentialité, CGU, CGV conforme LCEN.",
     image: "/images/blog/generateur-mentions-legales-gratuit.png",
@@ -1474,6 +1486,7 @@ Non, les CGU (conditions générales d'utilisation) ne sont pas légalement obli
   {
     slug: "generateur-robots-txt-sitemap-xml",
     title: "Comment créer un fichier robots.txt et un sitemap XML optimisés pour Google ?",
+    seoTitle: "Créer un robots.txt et un sitemap XML",
     excerpt: "25% des sites web ont un robots.txt mal configuré ou un sitemap absent. Ces deux fichiers sont les fondations du SEO technique : comment les créer correctement et les soumettre à Google Search Console.",
     metaDescription: "Comment créer un fichier robots.txt et un sitemap XML optimisés pour Google ? Générateur gratuit, syntaxe expliquée, bonnes pratiques SEO technique 2026.",
     image: "/images/blog/generateur-robots-txt-sitemap-xml.png",
@@ -1592,6 +1605,7 @@ Pour vérifier l'indexation, tapez "site:domain.com" dans Google et comptez les 
   {
     slug: "rapport-sectoriel-analyse-concurrence",
     title: "Comment analyser la concurrence de son marché et connaître ses benchmarks sectoriels ?",
+    seoTitle: "Analyser la concurrence de son marché",
     excerpt: "72% des entreprises qui échouent dans leur développement citent une mauvaise connaissance de leur marché. Benchmark concurrentiel, KPIs sectoriels, veille concurrentielle : comment obtenir une analyse gratuite de votre marché.",
     metaDescription: "Comment analyser la concurrence de son marché et obtenir ses benchmarks sectoriels gratuitement ? Rapport sectoriel personnalisé, KPIs, veille concurrentielle.",
     image: "/images/blog/rapport-sectoriel-analyse-concurrence.png",
@@ -1695,6 +1709,7 @@ Oui, le rapport inclut des benchmarks tarifaires sectoriels, fourchettes de prix
   {
     slug: "comparateur-sites-web-concurrent",
     title: "Comment comparer son site web avec ses concurrents sur le SEO, la vitesse et le design ?",
+    seoTitle: "Comparer son site à ses concurrents",
     excerpt: "80% des entreprises n'ont aucune visibilité objective sur leur positionnement web face à la concurrence. SEO, Core Web Vitals, design, contenu : comment comparer son site avec ses concurrents en 1 clic et savoir où concentrer ses efforts.",
     metaDescription: "Comment comparer son site web avec ses concurrents sur le SEO, la vitesse et le design ? Comparateur gratuit, benchmark site, audit concurrent côte à côte.",
     image: "/images/blog/comparateur-sites-web-concurrent.png",
@@ -1810,6 +1825,7 @@ Oui, le rapport est conçu pour être lu par des dirigeants et entrepreneurs, pa
   {
     slug: "comment-choisir-agence-web-2026",
     title: "Comment choisir son agence web en 2026 : les 7 critères essentiels ?",
+    seoTitle: "Comment choisir son agence web en 2026",
     excerpt: "Freelance, studio créatif ou agence full-service : comment choisir la bonne agence web pour son projet en 2026 ? Les 7 critères qui séparent une agence sérieuse d'une agence qui va vous faire perdre du temps et de l'argent.",
     metaDescription: "Comment choisir son agence web en 2026 ? Portfolio, stack technique, devis, propriété du code : les 7 critères essentiels et les pièges à éviter absolument.",
     image: "/images/blog/comment-choisir-agence-web-2026.png",
@@ -1947,6 +1963,7 @@ Comptez 2 à 4 semaines pour un site vitrine, 1 à 3 mois pour un e-commerce et 
   {
     slug: "site-vitrine-vs-site-ecommerce",
     title: "Site vitrine ou site e-commerce : comment choisir pour son entreprise en 2026 ?",
+    seoTitle: "Site vitrine ou e-commerce : comment choisir ?",
     excerpt: "Site vitrine ou e-commerce : la réponse dépend de votre modèle commercial, pas de votre secteur. Fonctionnalités, coûts, délais et ROI comparés, avec le critère décisif pour faire le bon choix sans regretter.",
     metaDescription: "Site vitrine ou site e-commerce : comment choisir pour son entreprise en 2026 ? Comparatif complet : budget, délais, complexité technique, ROI et cas pratiques.",
     image: "/images/blog/site-vitrine-vs-site-ecommerce.png",
@@ -2073,6 +2090,7 @@ Oui, c'est même souvent la meilleure approche. On appelle cela une architecture
     slug: "pourquoi-nextjs-meilleur-wordpress",
     title:
       "Pourquoi Next.js est Meilleur que WordPress en 2026 : Performance, SEO et Sécurité",
+    seoTitle: "Next.js ou WordPress : lequel choisir en 2026 ?",
     excerpt:
       "Next.js surpasse WordPress en performance, sécurité et SEO. Découvrez pourquoi les entreprises ambitieuses migrent vers ce framework React moderne.",
     metaDescription:
@@ -2219,6 +2237,7 @@ Ces résultats ne sont pas des cas exceptionnels, ils sont la norme quand on pas
   {
     slug: "landing-page-convertir-visiteurs",
     title: "Comment créer une landing page qui convertit vraiment ses visiteurs en clients ?",
+    seoTitle: "Une landing page qui convertit vraiment",
     excerpt: "La plupart des landing pages convertissent moins de 3% de leurs visiteurs. CTA, copywriting, preuve sociale, vitesse : les 4 leviers qui font passer une page de 2% à 10-15% de conversion, avec des exemples concrets.",
     metaDescription: "Comment créer une landing page qui convertit vraiment ses visiteurs en clients ? CTA, copywriting PAS, preuve sociale, mobile first : guide complet 2026.",
     image: "/images/blog/landing-page-convertir-visiteurs.png",
@@ -2337,6 +2356,7 @@ Idéalement oui. Une landing page dédiée à chaque campagne (avec le même mes
   {
     slug: "refonte-site-web-quand-comment",
     title: "Quand refaire son site web et comment réussir sa refonte sans perdre son SEO ?",
+    seoTitle: "Réussir sa refonte sans perdre son SEO",
     excerpt: "Un site lent, mal conçu ou trop vieux freine votre croissance en silence. 7 signaux concrets pour savoir si c'est le moment de refaire son site, et la méthode étape par étape pour préserver son référencement pendant la refonte.",
     metaDescription: "Quand refaire son site web et comment réussir sa refonte sans perdre son SEO ? 7 signes + méthodologie complète : redirections 301, audit existant, choix techno.",
     image: "/images/blog/refonte-site-web-quand-comment.png",
@@ -2437,6 +2457,7 @@ Non, sauf si votre domaine actuel est pénalisé par Google ou associé à une m
   {
     slug: "site-web-responsive-mobile-first",
     title: "Pourquoi un site web doit être responsive et mobile first en 2026 ?",
+    seoTitle: "Un site responsive et mobile first",
     excerpt: "65% du trafic web est mobile. Google indexe les sites en mobile first. Un site non responsive perd des visiteurs, des positions et des clients chaque jour. Ce guide explique les principes, les erreurs à éviter et comment tester l'adaptabilité de votre site.",
     metaDescription: "Pourquoi un site web doit être responsive et mobile first en 2026 ? Principes, erreurs courantes, outils de test et impact SEO expliqués clairement.",
     image:
@@ -2545,6 +2566,7 @@ Pour 95% des PME et indépendants, non. Une application mobile native (iOS/Andro
   {
     slug: "cout-creation-site-internet-2026",
     title: "Combien coûte la création d'un site internet en 2026 : tarifs réels par type de site ?",
+    seoTitle: "Création de site internet : les tarifs réels 2026",
     excerpt: "Le prix d'un site web varie de 300€ à 50 000€ selon le type de projet. Tarifs réels par type de site (vitrine, landing page, e-commerce), facteurs qui font monter le prix et coûts cachés à anticiper, avec les tarifs ConvertiLab en transparence.",
     metaDescription: "Combien coûte la création d'un site internet en 2026 ? Tarifs réels par type de site : vitrine, e-commerce, landing page. Facteurs prix + coûts cachés expliqués.",
     image: "/images/blog/cout-creation-site-internet-2026.png",
@@ -2666,6 +2688,7 @@ Chez ConvertiLab, le SEO technique (structure, balises title/meta, vitesse, plan
   {
     slug: "site-web-rapide-importance-performance",
     title: "Pourquoi la vitesse d'un site web impacte directement les ventes et le référencement ?",
+    seoTitle: "Pourquoi la vitesse fait vendre",
     excerpt: "Chaque seconde de chargement supplémentaire coûte 7% de conversions. Un site lent est pénalisé par Google et fuit les clients. Core Web Vitals, causes de lenteur, solutions concrètes, ce qu'il faut savoir pour agir.",
     metaDescription: "Pourquoi la vitesse d'un site web impacte directement les ventes et le référencement ? Core Web Vitals, -7% conversion/seconde, causes et solutions expliqués.",
     image: "/images/blog/site-web-rapide-importance-performance.png",
@@ -2776,6 +2799,7 @@ Non, PageSpeed mesure les performances techniques, pas la qualité du contenu, d
   {
     slug: "hebergement-web-guide-debutant",
     title: "Comment choisir son hébergement web en 2026 : mutualisé, VPS ou Vercel ?",
+    seoTitle: "Choisir son hébergement web en 2026",
     excerpt: "Hébergement mutualisé, VPS, cloud, Vercel : comprendre les différences et choisir le bon hébergeur en 2026 selon son type de site et son budget. Comparatif complet avec les prix réels et les cas d'usage de chaque option.",
     metaDescription: "Comment choisir son hébergement web en 2026 : mutualisé, VPS ou Vercel ? Comparatif complet avec prix, avantages, inconvénients et cas d'usage pour chaque type.",
     image: "/images/blog/hebergement-web-guide-debutant.png",
@@ -2890,6 +2914,7 @@ L'hébergement impacte le SEO principalement via le TTFB (Time To First Byte), l
   {
     slug: "formulaire-contact-efficace-conversions",
     title: "Comment optimiser son formulaire de contact pour générer plus de leads qualifiés ?",
+    seoTitle: "Un formulaire de contact qui génère des leads",
     excerpt: "70% des visiteurs abandonnent les formulaires de contact trop longs ou mal conçus. 5 règles UX + CTA qui poussent à l'action + éléments de réassurance : les leviers concrets pour doubler le taux de complétion de son formulaire.",
     metaDescription: "Comment optimiser son formulaire de contact pour générer plus de leads qualifiés ? Nombre de champs, CTA, réassurance, mobile, 10 règles UX avec exemples.",
     image: "/images/blog/formulaire-contact-efficace-conversions.png",
@@ -3018,6 +3043,7 @@ Le taux de complétion est la métrique clé : combien de visiteurs qui voient l
   {
     slug: "guide-seo-debutant-2026",
     title: "Guide SEO débutant 2026 : comment optimiser son site pour apparaître sur Google ?",
+    seoTitle: "Guide SEO débutant 2026",
     excerpt: "93% des expériences en ligne commencent par un moteur de recherche. Les bases du SEO en 10 étapes claires : mots-clés, balises, contenu, backlinks et mesure des résultats, expliqués simplement pour les débutants.",
     metaDescription: "Guide SEO débutant 2026 : comment optimiser son site pour apparaître sur Google ? Les 10 étapes essentielles du référencement naturel expliquées simplement.",
     image: "/images/blog/guide-seo-debutant-2026.png",
@@ -3131,6 +3157,7 @@ Oui, mais avec des délais et des stratégies différents selon la compétitivit
   {
     slug: "seo-local-google-business-profile",
     title: "Comment optimiser son Google Business Profile pour apparaître dans le pack local Google ?",
+    seoTitle: "Entrer dans le pack local Google",
     excerpt: "76% des personnes qui font une recherche locale visitent un commerce dans les 24h. Google Business Profile gratuit + 8 optimisations + avis clients : le guide complet pour apparaître dans les 3 premiers résultats locaux.",
     metaDescription: "Comment optimiser son Google Business Profile pour apparaître dans le pack local Google ? 8 optimisations clés, avis, NAP, photos et citations locales.",
     image: "/images/blog/seo-local-google-business-profile.png",
@@ -3275,6 +3302,7 @@ Il n'y a pas de maximum, plus il y en a, mieux c'est. Les fiches avec plus de 10
   {
     slug: "backlinks-strategie-netlinking-2026",
     title: "Comment obtenir des backlinks de qualité et construire une stratégie de netlinking en 2026 ?",
+    seoTitle: "Obtenir des backlinks de qualité en 2026",
     excerpt: "Découvrez comment construire une stratégie de netlinking efficace pour obtenir des backlinks de qualité et booster l'autorité de votre domaine.",
     metaDescription: "Stratégie netlinking 2026 : comment obtenir des backlinks de qualité pour améliorer votre autorité de domaine et votre positionnement Google.",
     image: "/images/blog/backlinks-strategie-netlinking-2026.png",
@@ -3383,6 +3411,7 @@ La méthode la plus simple : recherchez dans Google "votre-secteur + articles in
   {
     slug: "balises-meta-optimiser-seo",
     title: "Comment optimiser ses balises meta title et meta description pour améliorer son référencement ?",
+    seoTitle: "Optimiser ses balises meta pour le SEO",
     excerpt: "Maîtrisez l'art des balises meta title et meta description pour améliorer votre taux de clic dans Google et votre positionnement SEO.",
     metaDescription: "Guide complet sur les balises meta : comment optimiser vos meta title et meta description pour un SEO on-page performant. Exemples et bonnes pratiques.",
     image: "/images/blog/balises-meta-optimiser-seo.png",
@@ -3500,6 +3529,7 @@ Oui. Google réécrit la meta description dans environ 62% des cas, selon les do
   {
     slug: "comment-apparaitre-premier-google",
     title: "Comment être premier sur Google en 2026 : les étapes concrètes pour atteindre la position 1 ?",
+    seoTitle: "Comment être premier sur Google en 2026",
     excerpt: "Toutes les techniques pour atteindre la position 1 sur Google en 2026. De l'analyse de mots-clés a l'optimisation technique, le guide complet.",
     metaDescription: "Comment etre premier sur Google en 2026 ? Stratégies complètes de référencement Google pour atteindre la position 1 dans les SERP. Guide étape par étape.",
     image: "/images/blog/comment-apparaitre-premier-google.png",
@@ -3607,6 +3637,7 @@ Oui. Les mises à jour majeures (Core Update, Helpful Content, SpamBrain) peuven
   {
     slug: "audit-seo-site-web-etapes",
     title: "Comment réaliser un audit SEO complet de son site web en 2026 : guide étape par étape ?",
+    seoTitle: "Réaliser un audit SEO complet de son site",
     excerpt: "Apprenez a réaliser un audit SEO complet de votre site web. Analyse technique, contenu, backlinks : toutes les étapes détaillées pour diagnostiquer votre site.",
     metaDescription: "Comment réaliser un audit SEO complet ? Guide étape par étape : analyse technique, crawl, contenu et backlinks. Diagnostic gratuit inclus.",
     image: "/images/blog/audit-seo-site-web-etapes.png",
@@ -3727,6 +3758,7 @@ Un audit SEO gratuit (comme notre outil sur convertilab.com) analyse automatique
   {
     slug: "indexation-google-accelerer",
     title: "Comment accélérer l'indexation de ses pages sur Google et éviter le statut not indexed ?",
+    seoTitle: "Accélérer l'indexation de ses pages sur Google",
     excerpt: "Découvrez les techniques pour soumettre vos pages a Google et accélérer leur indexation. Sitemap, Search Console, robots.txt : tout ce qu'il faut savoir.",
     metaDescription: "Accélérer l'indexation Google : soumettre vos pages via Search Console, optimiser votre sitemap et robots.txt. Guide pratique complet 2026.",
     image: "/images/blog/indexation-google-accelerer.png",
@@ -3834,6 +3866,7 @@ Le budget de crawl est le nombre de pages que Googlebot explore sur votre site d
   {
     slug: "contenu-seo-redaction-optimisee",
     title: "Comment rédiger du contenu SEO qui se positionne sur Google et convertit ses lecteurs ?",
+    seoTitle: "Rédiger du contenu SEO qui se positionne",
     excerpt: "Apprenez a rédiger du contenu SEO qui plait a Google et a vos lecteurs. Techniques de copywriting, placement des mots-clés et structure d'article optimisé.",
     metaDescription: "Guide complet de redaction web SEO : comment ecrire des articlés optimisés qui se positionnent sur Google. Mots-clés, structure, copywriting SEO.",
     image: "/images/blog/contenu-seo-redaction-optimisee.png",
@@ -3937,6 +3970,7 @@ La mise à jour de contenu existant est l'une des actions SEO les plus sous-esti
   {
     slug: "erreurs-seo-courantes-eviter",
     title: "Quelles sont les erreurs SEO les plus fréquentes qui bloquent le référencement d'un site ?",
+    seoTitle: "Les erreurs SEO qui bloquent votre référencement",
     excerpt: "Découvrez les erreurs SEO qui sabotent votre référencement : pénalités Google, contenu dupliqué, vitesse, SEO technique. Solutions concrètes incluses.",
     metaDescription: "15 erreurs SEO fatales qui plombent votre référencement. Contenu dupliqué, pénalité Google, vitesse lente : diagnostic et solutions pour chaque erreur.",
     image: "/images/blog/erreurs-seo-courantes-eviter.png",
@@ -4053,6 +4087,7 @@ La meilleure approche est préventive : configurez des alertes Google Search Con
   {
     slug: "seo-vs-sea-lequel-choisir",
     title: "SEO ou SEA : quelle stratégie de référencement choisir pour son budget en 2026 ?",
+    seoTitle: "SEO ou SEA : quelle stratégie choisir ?",
     excerpt: "SEO ou SEA ? Référencement naturel ou Google Ads ? Comparez les avantages, inconvénients et coûts de chaque approche pour faire le bon choix.",
     metaDescription: "SEO vs SEA : comparatif complet 2026. Référencement naturel ou payant ? Avantages, coûts, ROI. Découvrez quelle stratégie choisir pour votre business.",
     image: "/images/blog/seo-vs-sea-lequel-choisir.png",
@@ -4169,6 +4204,7 @@ Indirectement, oui. Le trafic généré par le SEA augmente la notoriété de vo
   {
     slug: "google-ads-guide-debutant-2026",
     title: "Comment créer sa première campagne Google Ads rentable en 2026 sans gaspiller son budget ?",
+    seoTitle: "Sa première campagne Google Ads rentable",
     excerpt: "Apprenez a créer et optimiser vos campagnes Google Ads de A a Z. Budget, CPC, mots-clés, annonces : tout ce qu'il faut savoir pour générer vos premiers clients.",
     metaDescription: "Guide complet Google Ads 2026 pour débutants. Apprenez a configurer vos campagnes, maîtriser le CPC, definir votre budget et rédiger des annonces qui convertissent.",
     image: "/images/blog/google-ads-guide-debutant-2026.png",
@@ -4291,6 +4327,7 @@ Pour des budgets inférieurs à 500€/mois, gérer soi-même avec ce guide est 
   {
     slug: "meta-ads-facebook-instagram-guide",
     title: "Comment créer des publicités Facebook et Instagram rentables avec Meta Ads en 2026 ?",
+    seoTitle: "Des publicités Meta Ads rentables en 2026",
     excerpt: "Maîtrisez la publicité sur Facebook et Instagram. Ciblage, formats, budget et optimisation : tout pour créer des campagnes Meta Ads performantes.",
     metaDescription: "Guide complet Meta Ads 2026. Apprenez a créer des campagnes Facebook Ads et Instagram Ads rentables. Ciblage, formats, budget et stratégies d'optimisation.",
     image: "/images/blog/meta-ads-facebook-instagram-guide.png",
@@ -4409,6 +4446,7 @@ Utilisez la fonction "Creative Testing" de Meta Business Suite ou testez manuell
   {
     slug: "community-management-reseaux-sociaux",
     title: "Comment gérer ses réseaux sociaux comme un pro et transformer ses abonnés en clients ?",
+    seoTitle: "Gérer ses réseaux sociaux comme un pro",
     excerpt: "Découvrez les stratégies de community management qui transforment vos abonnés en clients fidèles. Calendrier editorial, outils et bonnes pratiques.",
     metaDescription: "Guide complet du community management en 2026. Stratégies, outils et bonnes pratiques pour gérer vos réseaux sociaux et engager votre communauté efficacement.",
     image: "/images/blog/community-management-reseaux-sociaux.png",
@@ -4530,6 +4568,7 @@ La règle du "1 sur 5" : pour chaque contenu promotionnel, publiez 4 contenus à
   {
     slug: "email-marketing-newsletter-strategies",
     title: "Comment créer une newsletter qui génère des ventes et maximiser son taux d'ouverture en 2026 ?",
+    seoTitle: "Une newsletter qui génère des ventes",
     excerpt: "Maîtrisez l'email marketing pour booster vos ventes. Taux d'ouverture, automation, segmentation : les techniques des experts pour des campagnes email rentables.",
     metaDescription: "Guide complet email marketing 2026. Stratégies de newsletter, automation, segmentation et copywriting pour maximiser vos taux d'ouverture et conversions.",
     image: "/images/blog/email-marketing-newsletter-strategies.png",
@@ -4640,6 +4679,7 @@ Pour les débutants avec une liste < 1 000 contacts, Brevo (ex-Sendinblue) et Ma
   {
     slug: "tunnel-conversion-optimiser-ventes",
     title: "Comment optimiser son tunnel de conversion pour transformer plus de visiteurs en clients ?",
+    seoTitle: "Optimiser son tunnel de conversion",
     excerpt: "Maîtrisez l'art du tunnel de conversion pour transformer vos visiteurs en clients. Stratégies CRO, funnel marketing et optimisation du parcours d'achat.",
     metaDescription: "Guide complet pour créer et optimiser votre tunnel de conversion. Stratégies CRO, analyse du parcours client et techniques pour booster vos ventes en ligne.",
     image: "/images/blog/tunnel-conversion-optimiser-ventes.png",
@@ -4755,6 +4795,7 @@ Mesurez toujours en comparant la même période : la semaine avant vs la semaine
   {
     slug: "strategie-marketing-digital-pme",
     title: "Comment construire une stratégie marketing digital efficace pour sa PME en 2026 ?",
+    seoTitle: "Stratégie marketing digital pour sa PME",
     excerpt: "Construisez une stratégie marketing digital efficace pour votre PME. Acquisition, fidelisation, canaux et budget : le guide pratique pour les dirigeants.",
     metaDescription: "Guide complet de stratégie marketing digital pour PME en 2026. Plan d'action, canaux d'acquisition, budget et KPIs pour développer votre entreprise en ligne.",
     image: "/images/blog/strategie-marketing-digital-pme.png",
@@ -4879,6 +4920,7 @@ La métrique ultime est le retour sur investissement global (ROI) : combien de c
   {
     slug: "retargeting-remarketing-guide",
     title: "Comment utiliser le retargeting pour reconvertir les visiteurs qui n'ont pas acheté ?",
+    seoTitle: "Retargeting : reconvertir les visiteurs perdus",
     excerpt: "Apprenez a utiliser le retargeting pour reconvertir les visiteurs de votre site. Pixel, audiences personnalisees et stratégies avancees pour maximiser votre ROI.",
     metaDescription: "Guide complet du retargeting et remarketing en 2026. Stratégies, configuration du pixel, audiences personnalisees et techniques pour convertir vos visiteurs en clients.",
     image: "/images/blog/retargeting-remarketing-guide.png",
@@ -4996,6 +5038,7 @@ La fenêtre standard est de 30 jours pour la majorité des business. Pour les pr
   {
     slug: "budget-publicite-en-ligne-combien",
     title: "Combien faut-il investir en publicité en ligne pour obtenir des résultats concrets ?",
+    seoTitle: "Quel budget pour la publicité en ligne ?",
     excerpt: "Combien faut-il investir en publicité digitale pour obtenir des résultats ? Guide complet pour definir votre budget Ads selon votre secteur et vos objectifs.",
     metaDescription: "Découvrez combien investir en publicité en ligne en 2026. Budget Google Ads, Meta Ads, ROI, coût d'acquisition : le guide pour planifier vos dépenses publicitaires.",
     image: "/images/blog/budget-publicite-en-ligne-combien.png",
@@ -5109,6 +5152,7 @@ Vous dépensez trop peu si votre CPC est élevé mais que vous avez peu de conve
   {
     slug: "instagram-entreprise-guide-complet",
     title: "Comment utiliser Instagram pour son entreprise et transformer ses abonnés en clients en 2026 ?",
+    seoTitle: "Instagram pour son entreprise : le guide",
     excerpt: "Transformez votre compte Instagram en machine a clients. Profil professionnel, stratégie de contenu, Reels et techniques de croissance pour les entreprises.",
     metaDescription: "Guide complet Instagram entreprise 2026. Optimisez votre profil professionnel, créez du contenu engageant et développez votre audience pour générer des clients.",
     image: "/images/blog/instagram-entreprise-guide-complet.png",
@@ -5207,6 +5251,7 @@ La technique des DMs proactifs : repérez les personnes qui regardent vos Storie
   {
     slug: "google-analytics-4-guide-debutant",
     title: "Comment utiliser Google Analytics 4 pour comprendre le trafic de son site web en 2026 ?",
+    seoTitle: "Google Analytics 4 : le guide du débutant",
     excerpt: "Maîtrisez Google Analytics 4 pour comprendre le comportement de vos visiteurs. Installation, rapports, conversions : tout ce qu'il faut savoir pour piloter votre site.",
     metaDescription: "Guide complet Google Analytics 4 pour débutants en 2026. Installation, interface, rapports clés, suivi des conversions et analyse des données de votre site web.",
     image: "/images/blog/google-analytics-4-guide-debutant.png",
@@ -5301,6 +5346,7 @@ Connectez GA4 à Google Search Console (Admin > Liens > Propriété Search Conso
   {
     slug: "creer-boutique-en-ligne-guide-2026",
     title: "Comment créer une boutique en ligne qui génère des ventes dès le lancement en 2026 ?",
+    seoTitle: "Créer une boutique en ligne qui vend",
     excerpt: "Vous souhaitez lancer votre boutique en ligne ? Découvrez toutes les étapes pour créer un site e-commerce performant, choisir la bonne plateforme et générer vos premières ventes des 2026.",
     metaDescription: "Guide complet pour créer une boutique en ligne en 2026. Choix de plateforme, design, paiement, livraison et stratégies pour vendre en ligne avec succes.",
     image: "/images/blog/creer-boutique-en-ligne-guide-2026.png",
@@ -5401,6 +5447,7 @@ La technique la plus efficace pour les 30 premiers jours : vendre à votre rése
   {
     slug: "fiche-produit-optimisee-vendre",
     title: "Comment rédiger une fiche produit optimisée qui convertit les visiteurs en acheteurs ?",
+    seoTitle: "Rédiger une fiche produit qui convertit",
     excerpt: "Une fiche produit bien redigee peut tripler vos ventes. Découvrez les techniques de copywriting, de SEO et de design pour créer des pages produits irrésistibles.",
     metaDescription: "Guide complet pour créer des fiches produits optimisées qui convertissent. Copywriting, SEO, visuels et UX pour vendre plus sur votre boutique en ligne.",
     image: "/images/blog/fiche-produit-optimisee-vendre.png",
@@ -5495,6 +5542,7 @@ Si votre fiche reçoit des visites mais peu d'achats, analysez dans Google Analy
   {
     slug: "panier-abandonne-solutions-ecommerce",
     title: "Comment récupérer les paniers abandonnés sur sa boutique en ligne et augmenter ses ventes ?",
+    seoTitle: "Récupérer les paniers abandonnés",
     excerpt: "70% des paniers sont abandonnes en e-commerce. Découvrez les stratégies concrètes pour réduire ce taux et récupérer des milliers d'euros de ventes chaque mois.",
     metaDescription: "10 solutions concrètes pour réduire l'abandon de panier sur votre boutique en ligne. Relance email, checkout optimisé et stratégies de recuperation efficaces.",
     image: "/images/blog/panier-abandonne-solutions-ecommerce.png",
@@ -5591,6 +5639,7 @@ Le meilleur indicateur est le "taux de récupération" : nombre de commandes pro
   {
     slug: "stripe-paiement-en-ligne-guide",
     title: "Comment intégrer Stripe sur sa boutique en ligne et optimiser son checkout pour vendre plus ?",
+    seoTitle: "Intégrer Stripe sur sa boutique en ligne",
     excerpt: "Stripe est devenu la référence du paiement en ligne. Découvrez comment l'intégrer a votre boutique, les frais, les fonctionnalites et les meilleures pratiques pour un checkout optimal.",
     metaDescription: "Guide complet Stripe pour e-commerce. Intégration, frais, sécurité, checkout optimisé et meilleures pratiques pour accepter les paiements en ligne.",
     image: "/images/blog/stripe-paiement-en-ligne-guide.png",
@@ -5699,6 +5748,7 @@ Stripe Billing est le module dédié à la gestion des abonnements et paiements 
   {
     slug: "seo-ecommerce-referencer-produits",
     title: "Comment référencer ses produits e-commerce en première page de Google en 2026 ?",
+    seoTitle: "Référencer ses produits sur Google",
     excerpt: "Le référencement naturel est le levier d'acquisition le plus rentable pour un e-commerce. Découvrez les stratégies SEO spécifiques pour positionner vos produits et catégories sur Google.",
     metaDescription: "Guide SEO e-commerce complet. Stratégies pour référencer vos produits sur Google, optimiser vos catégories et apparaître sur Google Shopping.",
     image: "/images/blog/seo-ecommerce-referencer-produits.png",
@@ -5793,6 +5843,7 @@ Pour les fondamentaux (titres uniques, descriptions de 300 mots, données struct
   {
     slug: "taux-conversion-ameliorer-site",
     title: "Comment améliorer le taux de conversion de son site pour transformer plus de visiteurs en clients ?",
+    seoTitle: "Améliorer le taux de conversion de son site",
     excerpt: "Votre site recoit du trafic mais ne convertit pas ? Découvrez les techniques CRO (Conversion Rate Optimization) utilisées par les meilleurs sites pour transformer les visiteurs en acheteurs.",
     metaDescription: "12 techniques pour améliorer votre taux de conversion. CRO, A/B testing, UX et psychologie pour convertir plus de visiteurs en clients sur votre site web.",
     image: "/images/blog/taux-conversion-ameliorer-site.png",
@@ -5903,6 +5954,7 @@ Identifiez vos pages à fort trafic avec un faible taux de conversion : ce sont 
   {
     slug: "photos-produits-ecommerce-conseils",
     title: "Comment réaliser des photos produits professionnelles qui font vendre sur une boutique en ligne ?",
+    seoTitle: "Des photos produits qui font vendre",
     excerpt: "Les images représentent 75% de la décision d'achat en ligne. Découvrez comment réaliser des photos produits professionnelles qui boostent vos conversions, même avec un petit budget.",
     metaDescription: "Guide complet pour créer des photos produits e-commerce professionnelles. Equipement, techniques, retouche et astuces pour des visuels qui convertissent.",
     image: "/images/blog/photos-produits-ecommerce-conseils.png",
@@ -5992,6 +6044,7 @@ Les fiches avec vidéo convertissent 80% de plus que celles sans. Pour débuter,
   {
     slug: "livraison-ecommerce-strategie",
     title: "Comment structurer sa politique de livraison e-commerce pour augmenter les conversions et fidéliser ses clients ?",
+    seoTitle: "Politique de livraison e-commerce : le guide",
     excerpt: "La livraison est le deuxième critère d'achat en ligne après le prix. Découvrez comment structurer votre politique de livraison pour maximiser les conversions et fidéliser vos clients.",
     metaDescription: "Guide complet sur la livraison e-commerce. Stratégies de frais de port, choix des transporteurs, politique de livraison et optimisation logistique.",
     image: "/images/blog/livraison-ecommerce-strategie.png",
@@ -6106,6 +6159,7 @@ L'email transactionnel de suivi est le message le plus ouvert en e-commerce (tau
   {
     slug: "avis-clients-ecommerce-importance",
     title: "Comment collecter et afficher les avis clients pour augmenter les conversions de sa boutique en ligne ?",
+    seoTitle: "Collecter et afficher ses avis clients",
     excerpt: "92% des consommateurs lisent les avis avant d'acheter. Découvrez comment collecter, gérer et mettre en valeur les avis clients pour booster la confiance et les conversions de votre site.",
     metaDescription: "Guide complet sur les avis clients en e-commerce. Collecte, gestion, affichage et stratégies pour exploiter la preuve sociale et augmenter vos ventes.",
     image: "/images/blog/avis-clients-ecommerce-importance.png",
@@ -6196,6 +6250,7 @@ L'UGC (User Generated Content) est la forme la plus puissante de preuve sociale 
   {
     slug: "vendre-sur-instagram-social-commerce",
     title: "Comment vendre sur Instagram en 2026 : Instagram Shopping, Reels et stratégie social commerce ?",
+    seoTitle: "Vendre sur Instagram en 2026",
     excerpt: "Instagram est devenu un canal de vente incontournable. Découvrez comment configurer Instagram Shopping, créer du contenu qui vend et transformer vos abonnés en clients fidèles.",
     metaDescription: "Guide complet pour vendre sur Instagram en 2026. Instagram Shopping, Reels, stratégies de contenu et social commerce pour booster vos ventes en ligne.",
     image: "/images/blog/vendre-sur-instagram-social-commerce.png",
@@ -6280,6 +6335,7 @@ Dans Google Analytics 4, créez un paramètre UTM spécifique pour chaque lien I
   {
     slug: "design-web-tendances-2026",
     title: "Quelles sont les tendances du design web en 2026 et comment les appliquer à son site ?",
+    seoTitle: "Design web : les tendances 2026",
     excerpt: "Découvrez les tendances design web de 2026 : IA générative, micro-interactions, glassmorphisme évolué et design immersif. Guide complet pour moderniser votre site.",
     metaDescription: "Tendances design web 2026 : découvrez les styles UI qui dominent, du glassmorphisme a l'IA générative. Guide complet avec exemples et conseils d'implémentation.",
     image: "/images/blog/design-web-tendances-2026.png",
@@ -6409,6 +6465,7 @@ Non si elles sont bien implémentées. Les animations CSS scroll-driven n'ont pa
   {
     slug: "identite-visuelle-entreprise-guide",
     title: "Comment créer une identité visuelle d'entreprise mémorable et cohérente sur tous les supports ?",
+    seoTitle: "Créer une identité visuelle mémorable",
     excerpt: "Logo, charte graphique, typographie, couleurs : tout ce qu'il faut savoir pour construire une identité visuelle professionnelle qui marque les esprits.",
     metaDescription: "Guide complet pour créer l'identité visuelle de votre entreprise : logo, charte graphique, branding. Étapes, exemples et conseils d'experts pour une marque forte.",
     image: "/images/blog/identite-visuelle-entreprise-guide.png",
@@ -6563,6 +6620,7 @@ Absolument. Votre logo doit être lisible à 32x32 pixels (favicon), votre palet
   {
     slug: "ux-design-ameliorer-experience-utilisateur",
     title: "Comment améliorer l'expérience utilisateur de son site web pour réduire le taux de rebond et augmenter les conversions ?",
+    seoTitle: "Améliorer l'expérience utilisateur de son site",
     excerpt: "Parcours utilisateur, ergonomie, tests UX : toutes les méthodes pour transformer vos visiteurs en clients grâce à une expérience utilisateur optimale.",
     metaDescription: "Guide complet UX design : améliorez l'expérience utilisateur de votre site web. Méthodes, outils et bonnes pratiques pour augmenter vos conversions.",
     image: "/images/blog/ux-design-ameliorer-experience-utilisateur.png",
@@ -6700,6 +6758,7 @@ Les principes fondamentaux sont universels, mais leur application varie. Un rest
   {
     slug: "accessibilite-web-guide-wcag",
     title: "Comment rendre son site web accessible WCAG 2.2 et respecter les obligations légales européennes en 2026 ?",
+    seoTitle: "Rendre son site accessible WCAG 2.2",
     excerpt: "Conformité WCAG, handicap, obligations légales : tout comprendre sur l'accessibilité web et comment rendre votre site utilisable par tous.",
     metaDescription: "Guide complet accessibilité web et normes WCAG. Comment rendre votre site accessible aux personnes en situation de handicap. Obligations, outils et bonnes pratiques.",
     image: "/images/blog/accessibilite-web-guide-wcag.png",
@@ -6850,6 +6909,7 @@ Les secteurs les plus exposés aux plaintes et poursuites sont : e-commerce (ach
   {
     slug: "typographie-web-choisir-polices",
     title: "Comment choisir et combiner les polices de son site web pour améliorer la lisibilité et l'image de marque ?",
+    seoTitle: "Choisir les polices de son site web",
     excerpt: "Google Fonts, lisibilité, hiérarchie visuelle : le guide complet pour choisir et associer les polices de votre site web comme un professionnel.",
     metaDescription: "Guide complet typographie web : comment choisir les bonnes polices Google Fonts, créer une hiérarchie visuelle efficace et améliorer la lisibilité de votre site.",
     image: "/images/blog/typographie-web-choisir-polices.png",
@@ -7005,6 +7065,7 @@ Oui. Adobe Fonts (inclus dans Creative Cloud), Fontshare (gratuit), Fonts In Use
   {
     slug: "psychologie-couleurs-web-design",
     title: "Comment choisir les couleurs de son site web pour influencer les émotions et augmenter les conversions ?",
+    seoTitle: "Choisir les couleurs de son site web",
     excerpt: "Comment les couleurs influencent les émotions et les décisions de vos visiteurs. Guide complet pour créer une palette de couleurs qui convertit.",
     metaDescription: "Psychologie des couleurs en web design : comment choisir une palette qui influence les émotions, renforce votre branding et améliore les conversions de votre site.",
     image: "/images/blog/psychologie-couleurs-web-design.png",
@@ -7157,6 +7218,7 @@ Plusieurs méthodes complémentaires : (1) utilisez Realtime Colors pour prévis
   {
     slug: "freelance-ou-agence-web-comparaison",
     title: "Freelance ou agence web : comment choisir le bon prestataire pour son site internet selon son budget et son projet ?",
+    seoTitle: "Freelance ou agence web : comment choisir ?",
     excerpt: "Avantages, inconvénients, prix, délais : comparaison détaillée entre freelance et agence web pour faire le bon choix selon votre projet.",
     metaDescription: "Freelance vs agence web : comparaison complète pour choisir le bon prestataire. Avantages, inconvénients, prix et critères de sélection pour votre projet web.",
     image: "/images/blog/freelance-ou-agence-web-comparaison.png",
@@ -7304,6 +7366,7 @@ Oui, et c'est souvent le parcours naturel des entreprises en croissance. Beaucou
   {
     slug: "presence-en-ligne-entreprise-2026",
     title: "Comment développer sa présence en ligne en 2026 : les 5 piliers d'une stratégie digitale efficace pour les PME ?",
+    seoTitle: "Développer sa présence en ligne en 2026",
     excerpt: "Site web, SEO, réseaux sociaux, publicité : comment construire une stratégie digitale complète pour rendre votre entreprise visible sur internet en 2026.",
     metaDescription: "Guide complet pour développer votre présence en ligne en 2026. Stratégie digitale, SEO, réseaux sociaux et marketing digital pour les entreprises.",
     image: "/images/blog/presence-en-ligne-entreprise-2026.png",
@@ -7434,6 +7497,7 @@ C'est une question de compétences et de temps, pas d'argent. Vous pouvez gérer
   {
     slug: "rgpd-site-web-conformite-guide",
     title: "Comment mettre son site web en conformité RGPD en 2026 : bandeau cookies, politique de confidentialité et mentions légales ?",
+    seoTitle: "Mettre son site en conformité RGPD",
     excerpt: "Cookies, données personnelles, mentions légales, politique de confidentialité : tout ce que vous devez savoir pour mettre votre site en conformité RGPD.",
     metaDescription: "Guide complet conformité RGPD pour votre site web en 2026. Cookies, politique de confidentialité, mentions légales, droits des utilisateurs et outils pratiques.",
     image: "/images/blog/rgpd-site-web-conformite-guide.png",
@@ -7561,6 +7625,7 @@ Avec précaution. Les templates génériques ne tiennent pas compte de vos trait
   {
     slug: "ssl-https-securite-site-web",
     title: "Pourquoi passer son site web en HTTPS et comment installer un certificat SSL gratuitement en 2026 ?",
+    seoTitle: "Passer son site en HTTPS",
     excerpt: "Certificat SSL, protocole HTTPS, protection des données : tout comprendre sur la sécurité de votre site web et comment la mettre en place facilement.",
     metaDescription: "Guide complet SSL et HTTPS : pourquoi sécuriser votre site web, comment installer un certificat SSL, et l'impact sur le SEO et la confiance des visiteurs.",
     image: "/images/blog/ssl-https-securite-site-web.png",
@@ -9206,6 +9271,7 @@ Oui, un site vitrine bien optimisé est suffisant pour apparaître sur Google et
   {
     slug: "ameliorer-referencement-google-soi-meme",
     title: "Comment améliorer le référencement Google de son site soi-même ?",
+    seoTitle: "Améliorer son référencement Google soi-même",
     excerpt: "8 actions SEO concrètes que vous pouvez faire vous-même sans agence, classées par impact. Avec les outils gratuits pour mesurer vos progrès et éviter les erreurs courantes.",
     metaDescription: "Comment améliorer le référencement Google de son site soi-même ? 8 actions SEO concrètes par impact, outils gratuits inclus et erreurs à éviter en 2026.",
     image: "/images/blog/ameliorer-referencement-google-soi-meme.png",

@@ -7,6 +7,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "visibilite-ia-chatgpt-perplexity-geo",
   title: "Visibilité IA (GEO) : comment être cité par ChatGPT et Perplexity",
+  seoTitle: "Être cité par ChatGPT et Perplexity : le GEO",
   excerpt:
     "Robots d'IA autorisés, fichier llms.txt, pages qui répondent en deux phrases, données structurées : ce qu'il faut changer sur votre site pour être cité par ChatGPT, Perplexity et Google.",
   metaDescription:

@@ -43,6 +43,7 @@ export default function SiteEcommercePage() {
       description: DESCRIPTION,
       url: `${SITE.url}${URL}`,
       provider: PROVIDER_ORGANISATION,
+      dateModified: "2026-09-16",
       areaServed: STRUCTURED_DATA.localBusiness.areaServed,
       // Le prix affiché sur la page (« à partir de 1 490 € ») : Offer aligné sur ce que le visiteur lit.
       offers: {

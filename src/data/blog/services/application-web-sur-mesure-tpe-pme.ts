@@ -8,6 +8,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "application-web-sur-mesure-tpe-pme",
   title: "Application web sur mesure pour TPE et PME : prix, délais, étapes",
+  seoTitle: "Application web sur mesure pour TPE et PME",
   excerpt:
     "Portail client, réservation, devis en ligne, outil interne : quand une application web sur mesure se justifie pour une petite entreprise, comment elle se chiffre et par quoi commencer.",
   metaDescription:

@@ -9,6 +9,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "refonte-site-internet-sans-perdre-referencement",
   title: "Refonte de site internet : la méthode sans perdre son référencement",
+  seoTitle: "Refonte de site sans perdre son référencement",
   excerpt:
     "Inventaire des pages, redirections, contenus à garder, migration depuis Wix ou WordPress, prix et contrôles après la mise en ligne : la méthode pour refaire votre site sans perdre vos pages Google.",
   metaDescription:

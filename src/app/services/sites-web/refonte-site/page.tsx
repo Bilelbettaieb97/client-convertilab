@@ -39,6 +39,7 @@ export default function RefonteSitePage() {
       description: DESCRIPTION,
       url: `${SITE.url}${REFONTE_URL}`,
       provider: PROVIDER_ORGANISATION,
+      dateModified: "2026-09-16",
       areaServed: STRUCTURED_DATA.localBusiness.areaServed,
       // Le prix affiché sur la page (PRICING.refonte), pas un autre.
       offers: {

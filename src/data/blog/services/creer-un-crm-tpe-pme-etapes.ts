@@ -8,6 +8,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "creer-un-crm-tpe-pme-etapes",
   title: "Créer un CRM pour une TPE ou une PME : les étapes dans l'ordre",
+  seoTitle: "Créer un CRM pour sa TPE : les étapes",
   excerpt:
     "Quand un tableur ne suffit plus, quel CRM choisir, comment dessiner le pipeline, importer des contacts propres et relier le site : les étapes pour créer le CRM d'une TPE ou d'une PME.",
   metaDescription:

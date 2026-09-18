@@ -54,7 +54,7 @@ const FAQ = [
   },
   {
     q: "Le simulateur donne-t-il un prix immédiat ?",
-    a: "Le simulateur recueille votre type de site, vos options et vos coordonnées, puis nous vous envoyons sous 24 h une estimation personnalisée et détaillée. La grille ci-dessus vous donne déjà un ordre de prix fiable, car nos tarifs sont publics et fixes.",
+    a: "Oui. Dès que vous avez choisi le type de site et vos options, le simulateur affiche une fourchette calculée sur notre grille publique, avant même de vous demander vos coordonnées. Le devis écrit et détaillé, poste par poste, vous parvient ensuite sous 24 h.",
   },
   {
     q: "L'estimation engage-t-elle à quelque chose ?",
@@ -208,7 +208,7 @@ export default function EstimationPrixContenu() {
                 {
                   n: "2",
                   t: "Nous chiffrons précisément",
-                  d: "Nous partons de la grille publique ci-dessus et ajoutons uniquement ce que vous avez demandé. Vous recevez un chiffrage écrit sous 24 h, poste par poste.",
+                  d: "Le simulateur affiche aussitôt une fourchette calculée sur la grille publique ci-dessus. Vous recevez ensuite un chiffrage écrit sous 24 h, poste par poste.",
                 },
                 {
                   n: "3",

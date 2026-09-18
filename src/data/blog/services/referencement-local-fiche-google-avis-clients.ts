@@ -7,6 +7,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "referencement-local-fiche-google-avis-clients",
   title: "Référencement local : fiche Google, avis clients et pages villes",
+  seoTitle: "Référencement local : fiche Google et avis clients",
   excerpt:
     "Fiche Google à votre nom, avis réguliers, coordonnées identiques partout, pages villes : les quatre leviers du référencement local pour être trouvé dans votre ville, dans l'ordre où les mener.",
   metaDescription:

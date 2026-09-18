@@ -8,6 +8,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "meta-ads-facebook-instagram-guide-tpe",
   title: "Meta Ads pour une TPE : le guide publicité Facebook et Instagram",
+  seoTitle: "Meta Ads pour TPE : Facebook et Instagram",
   excerpt:
     "Meta Ads est-il fait pour votre activité, quel budget prévoir, formulaire instantané ou page du site, quels visuels préparer et comment se passent les trois premiers mois : le guide.",
   metaDescription:

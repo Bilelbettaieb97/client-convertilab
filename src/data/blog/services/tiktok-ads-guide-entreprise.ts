@@ -8,6 +8,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "tiktok-ads-guide-entreprise",
   title: "TikTok Ads pour une entreprise : le guide de la première campagne",
+  seoTitle: "TikTok Ads pour les entreprises : le guide",
   excerpt:
     "TikTok Ads apporte des demandes à un restaurant, un salon ou une boutique dont les clients ont moins de 35 ans, à condition de tester les vidéos et de suivre le coût par demande. Le guide.",
   metaDescription:

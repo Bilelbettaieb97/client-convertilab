@@ -43,6 +43,7 @@ export default function SiteVitrinePage() {
       description: DESCRIPTION,
       url: `${SITE.url}${URL}`,
       provider: PROVIDER_ORGANISATION,
+      dateModified: "2026-09-16",
       areaServed: STRUCTURED_DATA.localBusiness.areaServed,
       isRelatedTo: { "@type": "Service", "@id": `${SITE.url}${pole.href}#service`, name: pole.nomCourt, url: `${SITE.url}${pole.href}` },
       // Prix affiché sur la page (hero, section prix, FAQ) : le JSON-LD reflète ce que le visiteur lit.

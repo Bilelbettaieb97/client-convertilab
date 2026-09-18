@@ -46,6 +46,7 @@ const servicesSchema = {
         name: pole.nomCourt,
         url: `${SITE.url}${pole.href}`,
         provider: PROVIDER_ORGANISATION,
+      dateModified: "2026-09-16",
       },
     })),
   },

@@ -60,15 +60,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: article.title,
+    title: article.seoTitle ?? article.title,
     description: article.metaDescription,
     keywords: article.tags,
     openGraph: {
-      title: article.title,
+      title: article.seoTitle ?? article.title,
       description: article.metaDescription,
       url: `${SITE.url}/blog/${article.slug}`,
       type: "article",
-      images: [{ url: article.image, width: 1200, height: 630 }],
+      images: [{ url: article.image.startsWith("http") ? article.image : `${SITE.url}${article.image}`, width: 1200, height: 630 }],
       publishedTime: article.publishedAt,
       authors: [article.author.name],
     },
@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: article.title,
       description: article.metaDescription,
-      images: [article.image],
+      images: [article.image.startsWith("http") ? article.image : `${SITE.url}${article.image}`],
     },
     alternates: {
       canonical: `${SITE.url}/blog/${article.slug}`,
@@ -97,6 +97,7 @@ export default async function BlogArticlePage({ params }: Props) {
   const wordCount = article.content.split(/\s+/).length;
   const readTimeMinutes = Math.max(1, Math.ceil(wordCount / 200));
 
+  const imageAbsolue = article.image.startsWith("http") ? article.image : `${SITE.url}${article.image}`;
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -105,7 +106,7 @@ export default async function BlogArticlePage({ params }: Props) {
     description: article.metaDescription,
     image: {
       "@type": "ImageObject",
-      url: article.image,
+      url: imageAbsolue,
       width: 1200,
       height: 630,
     },

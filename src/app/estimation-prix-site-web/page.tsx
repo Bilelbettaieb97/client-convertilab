@@ -29,8 +29,21 @@ export default function EstimationPrixPage() {
     ],
   };
 
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Simulateur de prix de site internet",
+    url: `${SITE.url}/estimation-prix-site-web`,
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+    provider: { "@id": `${SITE.url}/#organization` },
+    dateModified: "2026-09-18",
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

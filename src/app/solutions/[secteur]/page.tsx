@@ -33,6 +33,14 @@ export const dynamicParams = false;
 
 type Props = { params: Promise<{ secteur: string }> };
 
+/** Pluriel simple d'un nom de secteur : « restaurant » → « restaurants », « institut de beauté » → « instituts de beauté ». */
+function pluriel(nom: string): string {
+  const [tete, ...reste] = nom.split(" ");
+  if (/(s|x|z)$/.test(tete)) return nom;
+  const p = /eau$/.test(tete) ? tete + "x" : /al$/.test(tete) ? tete.replace(/al$/, "aux") : tete + "s";
+  return [p, ...reste].join(" ");
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { secteur } = await params;
   const sector = getSectorBySlug(secteur);
@@ -40,11 +48,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: [
-      `Création de Site Internet pour ${sector.name} : dès 490€ en 2 semaines`,
-      `Site Web ${sector.name} : Création Professionnelle dès 490€`,
-      `Site Internet ${sector.name} : Conçu pour Attirer vos Clients`,
+      `Site internet ${sector.name} : création à 890 €`,
+      `Création de site web ${sector.name} : 890 €`,
+      `Site internet ${sector.name} : attirer vos clients`,
     ][sector.slug.length % 3],
-    description: `Création de site internet pour ${sector.name.toLowerCase()} : site professionnel dès 490€, livré en 2 semaines, optimisé Google. ${sector.description.slice(0, 100)}`,
+    description: `Création de site internet pour ${sector.name.toLowerCase()} : 890 € tout compris, livré en 7 à 14 jours, référencement local inclus, maquette gratuite sous 48 h.`,
     keywords: `site web ${sector.name.toLowerCase()}, création site internet ${sector.name.toLowerCase()}, site vitrine ${sector.name.toLowerCase()}`,
     alternates: { canonical: `${SITE.url}/solutions/${sector.slug}` },
     openGraph: {
@@ -67,7 +75,7 @@ export default async function SectorPage({ params }: Props) {
   if (!sector) notFound();
 
   const isEcommerce = sector.slug === "ecommerce";
-  const price = isEcommerce ? "800" : "500";
+  const price = String(isEcommerce ? PRICING.ecommerce.from : PRICING.vitrine.from);
 
   const PRIORITY_SECTORS_SOLUTIONS = [
     "restaurant", "coiffeur", "artisan", "coach",
@@ -104,19 +112,9 @@ export default async function SectorPage({ params }: Props) {
     name: `Création Site Web ${sector.name}`,
     description: sector.description,
     url: `${SITE.url}/solutions/${sector.slug}`,
-    provider: {
-      "@type": "Organization",
-      name: SITE.name,
-      url: SITE.url,
-      telephone: SITE.phone,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Rueil-Malmaison",
-        postalCode: "92500",
-        addressCountry: "FR",
-      },
-    },
-    areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
+    provider: { "@id": `${SITE.url}/#localbusiness` },
+    areaServed: { "@type": "Country", name: "France" },
+    dateModified: "2026-09-18",
     // Pas d'aggregateRating ici : Google ne supporte pas les Review snippets
     // sur le type Service (erreur "Invalid object type for field parent_node").
     // Les avis 4,5★ sont portés par le LocalBusiness/Organization de la home.
@@ -223,7 +221,7 @@ export default async function SectorPage({ params }: Props) {
           {/* Badges confiance */}
           <div className="flex flex-wrap gap-3 justify-center mt-8">
             <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border">
-              <Zap className="w-4 h-4 text-purple-500" /> Livré en 2 semaines
+              <Zap className="w-4 h-4 text-purple-500" /> Livré en 7 à 14 jours
             </span>
             <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border">
               <Shield className="w-4 h-4 text-green-500" /> {priceLabel}
@@ -245,7 +243,7 @@ export default async function SectorPage({ params }: Props) {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
               Le web pour les{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                {sector.name.toLowerCase()}s
+                {pluriel(sector.name.toLowerCase())}
               </span>{" "}
               : ce qui compte vraiment
             </h2>
@@ -266,7 +264,7 @@ export default async function SectorPage({ params }: Props) {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
             Les défis des{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-              {sector.name.toLowerCase()}s
+              {pluriel(sector.name.toLowerCase())}
             </span>{" "}
             en ligne
           </h2>
@@ -305,7 +303,7 @@ export default async function SectorPage({ params }: Props) {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
             Notre solution pour les{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-              {sector.name.toLowerCase()}s
+              {pluriel(sector.name.toLowerCase())}
             </span>
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
@@ -437,7 +435,7 @@ export default async function SectorPage({ params }: Props) {
             ))}
           </div>
           <p className="text-center text-sm text-gray-500 mt-10">
-            Délai moyen : 2 semaines de la signature au lancement.
+            Délai moyen : 7 à 14 jours de la réception de vos contenus à la mise en ligne.
           </p>
         </div>
       </section>
@@ -588,7 +586,7 @@ export default async function SectorPage({ params }: Props) {
                 Devis gratuit et personnalisé sous 24h.
               </p>
               <p className="text-white/70 mb-8">
-                {priceLabel} &middot; Livraison en 2 semaines &middot; Paiement étalé, pas d&apos;abonnement
+                {priceLabel} &middot; Livraison en 7 à 14 jours &middot; Paiement étalé, pas d&apos;abonnement
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button

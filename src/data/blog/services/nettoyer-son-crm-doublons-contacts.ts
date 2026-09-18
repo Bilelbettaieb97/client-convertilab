@@ -8,6 +8,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "nettoyer-son-crm-doublons-contacts",
   title: "Nettoyer son CRM : doublons, contacts inactifs et champs à jour",
+  seoTitle: "Nettoyer son CRM : doublons et contacts morts",
   excerpt:
     "Les signes d'un CRM encombré, l'export à faire avant tout, les règles pour fusionner les doublons, le sort des contacts inactifs, la durée, le coût et les habitudes qui gardent la base propre.",
   metaDescription:

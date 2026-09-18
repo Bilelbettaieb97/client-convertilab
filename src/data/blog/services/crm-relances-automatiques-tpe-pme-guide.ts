@@ -9,6 +9,7 @@ import type { FullBlogArticle } from "@/data/blog-articles";
 export const article: FullBlogArticle = {
   slug: "crm-relances-automatiques-tpe-pme-guide",
   title: "CRM et relances automatiques pour TPE et PME : le guide complet",
+  seoTitle: "Relances automatiques avec un CRM : guide TPE",
   excerpt:
     "Pourquoi les devis restent sans réponse, quel CRM choisir, comment relier votre site et vos campagnes, quelles relances automatiser par email et à quel prix : le guide CRM pour TPE et PME.",
   metaDescription:

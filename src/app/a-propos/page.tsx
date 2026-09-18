@@ -38,8 +38,10 @@ export default function AboutPage() {
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${SITE.url}/#bilel-bettaieb`,
     name: "Bilel Bettaieb",
-    jobTitle: "Fondateur & Directeur",
+    image: `${SITE.url}/images/fondateur-carre.webp`,
+    jobTitle: "Fondateur",
     worksFor: { "@type": "Organization", name: SITE.name },
     url: `${SITE.url}/a-propos`,
     sameAs: [SITE.social.linkedin],
@@ -51,7 +53,7 @@ export default function AboutPage() {
   const organizationJsonLd = {
     "@context": "https://schema.org",
     ...STRUCTURED_DATA.organization,
-    founder: { "@type": "Person", name: "Bilel Bettaieb" },
+    founder: { "@id": `${SITE.url}/#bilel-bettaieb` },
     numberOfEmployees: { "@type": "QuantitativeValue", value: "1" },
     areaServed: [
       { "@type": "City", name: "Rueil-Malmaison" },
