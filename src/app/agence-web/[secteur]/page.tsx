@@ -96,6 +96,37 @@ const CITY_PAGES_UPDATED_ISO = "2026-09-18";
 function deVille(nom: string): string {
   return /^[aeiouyàâéèêëîïôöûüh]/i.test(nom) ? `d'${nom}` : `de ${nom}`;
 }
+/** Thèmes d'articles suggérés d'après les demandes locales (liens choisis pour la ville), puis les thèmes communs :
+ *  les trois articles changent ainsi d'une ville à l'autre au lieu d'être identiques sur les 44 pages. */
+const THEMES_PAR_LIEN: Record<string, string[]> = {
+  "/estimation-prix-site-web": ["prix", "devis", "combien"],
+  "/devis/site-vitrine": ["devis", "site vitrine"],
+  "/devis/seo": ["referencement local", "seo"],
+  "/devis/site-ecommerce": ["e-commerce", "boutique"],
+  "/devis/google-ads": ["google ads"],
+  "/devis/refonte-site": ["refonte"],
+  "/services/sites-web/site-vitrine": ["site vitrine"],
+  "/services/sites-web/site-ecommerce": ["e-commerce", "boutique"],
+  "/services/sites-web/refonte-site": ["refonte"],
+  "/services/sites-web/landing-page": ["landing page"],
+  "/services/sites-web/application-web": ["application web", "sur mesure"],
+  "/services/seo/seo-local": ["referencement local", "google maps", "avis"],
+  "/services/seo/referencement": ["referencement naturel", "seo"],
+  "/services/seo/audit": ["audit seo"],
+  "/services/seo/visibilite-ia": ["ia", "chatgpt"],
+  "/services/sea/google-ads": ["google ads", "publicite"],
+  "/services/sea/meta-ads": ["meta ads", "facebook", "instagram"],
+  "/services/crm": ["crm", "relance"],
+  "/demande-maquette": ["maquette", "design"],
+  "/seo-check": ["audit seo"],
+  "/prix": ["prix", "tarif"],
+  "/offre-mensuelle": ["abonnement", "mensuel"],
+};
+function themesVille(local: ReturnType<typeof getContenuLocal>): string[] {
+  const propres = (local?.demandes ?? []).flatMap((d) => THEMES_PAR_LIEN[d.href] ?? []);
+  return [...new Set([...propres, ...MAILLAGE_VILLE.themes])];
+}
+
 /** Rueil et sa couronne : rendez-vous possible ; ailleurs, à distance. Le texte ne prétend jamais des locaux dans la ville. */
 function modeAccompagnement(city: { slug: string; department: string }): string {
   if (city.slug === "rueil-malmaison") return "depuis ses bureaux de Rueil-Malmaison, en rendez-vous ou en visio";
@@ -543,49 +574,50 @@ export default async function CityPage({ params }: Props) {
         </section>
       )}
 
-      {/* ============================================
-          3. SERVICES
-          ============================================ */}
-      <section className="py-16 sm:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Quels services propose ConvertiLab pour les entreprises {de(city.name)}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-              {city.name}
-            </span>{" "}?
-          </h2>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Création de site, SEO local et publicité digitale : tout ce qu&apos;il faut pour être visible à {city.name} et en {city.department}
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((s, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
-                  <s.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {s.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed text-sm">
-                  {s.desc}
-                </p>
-                <p className="text-sm font-bold text-purple-600 mb-4">
-                  {s.price}
-                </p>
-                <Link
-                  href={s.link}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-purple-600 hover:text-purple-800 transition-colors"
+      {/* 3. SERVICES : uniquement sans contenu local (les « demandes » locales couvrent déjà
+          les services, et ce bloc était identique sur les 44 villes). */}
+      {!local && (
+        <section className="py-16 sm:py-24 bg-gray-50">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
+              Quels services propose ConvertiLab pour les entreprises {de(city.name)}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                {city.name}
+              </span>{" "}?
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              Création de site, SEO local et publicité digitale : tout ce qu&apos;il faut pour être visible à {city.name} et en {city.department}
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {services.map((s, i) => (
+                <div
+                  key={i}
+                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
                 >
-                  En savoir plus <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            ))}
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+                    <s.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {s.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                    {s.desc}
+                  </p>
+                  <p className="text-sm font-bold text-purple-600 mb-4">
+                    {s.price}
+                  </p>
+                  <Link
+                    href={s.link}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-purple-600 hover:text-purple-800 transition-colors"
+                  >
+                    En savoir plus <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ============================================
           4. PROCESS
@@ -845,7 +877,7 @@ export default async function CityPage({ params }: Props) {
       </section>
 
       {/* Maillage secteur×ville */}
-      <SuggestedArticles title="Conseils pour développer votre business en ligne" max={3} themes={MAILLAGE_VILLE.themes} />
+      <SuggestedArticles title="Conseils pour développer votre business en ligne" max={3} themes={themesVille(local)} />
       <RelatedServicesSection title={`Nos services à ${city.name}`} max={4} poles={MAILLAGE_VILLE.poles} />
       <Footer />
     </div>

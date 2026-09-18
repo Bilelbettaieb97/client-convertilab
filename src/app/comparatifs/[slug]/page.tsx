@@ -53,6 +53,22 @@ export default async function ComparisonDetailPage({ params }: Props) {
     ],
   };
 
+  // Article : les moteurs et les IA lisent l'auteur et les dates (les comparatifs n'en avaient pas).
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: comp.title,
+    description: comp.optionA.description.slice(0, 160),
+    url: `${SITE.url}/comparatifs/${slug}`,
+    mainEntityOfPage: `${SITE.url}/comparatifs/${slug}`,
+    inLanguage: "fr-FR",
+    datePublished: "2026-07-05",
+    dateModified: "2026-09-18",
+    author: { "@type": "Person", "@id": `${SITE.url}/#bilel-bettaieb`, name: "Bilel Bettaieb", url: `${SITE.url}/a-propos` },
+    publisher: { "@id": `${SITE.url}/#organization` },
+    image: `${SITE.url}/og-image.png`,
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -72,6 +88,10 @@ export default async function ComparisonDetailPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <Navigation />
 
