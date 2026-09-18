@@ -83,6 +83,10 @@ const CITY_PAGES_UPDATED_ISO = "2026-09-18";
 function deVille(nom: string): string {
   return /^[aeiouyàâéèêëîïôöûüh]/i.test(nom) ? `d'${nom}` : `de ${nom}`;
 }
+/** Même élision quand le nom de la ville est dans un <span> séparé : « d'Amiens », « de Lyon ». */
+function de(nom: string): string {
+  return /^[aeiouyàâéèêëîïôöûüh]/i.test(nom) ? "d'" : "de ";
+}
 
 export const VILLES_RETIREES = ["neuilly-sur-seine", "versailles", "toulon", "perpignan", "saint-denis", "asnieres-sur-seine"];
 
@@ -282,8 +286,8 @@ export default async function CityPage({ params }: Props) {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl leading-relaxed">
-            {city.description} ConvertiLab accompagne les entreprises de{" "}
-            {city.name} à distance, en visio, avec un interlocuteur unique :
+            {city.description} ConvertiLab accompagne les entreprises{" "}
+            {deVille(city.name)} à distance, en visio, avec un interlocuteur unique :
             création de site internet, référencement local et publicité en
             ligne, à prix publics, avec une maquette gratuite sous 48 h.
           </p>
@@ -396,7 +400,7 @@ export default async function CityPage({ params }: Props) {
       <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
-            Pourquoi les entreprises de{" "}
+            Pourquoi les entreprises {de(city.name)}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               {city.name}
             </span>{" "}
@@ -469,7 +473,7 @@ export default async function CityPage({ params }: Props) {
         <section className="py-16 sm:py-24 bg-gray-50">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-              Ce que les entreprises de{" "}
+              Ce que les entreprises {de(city.name)}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
                 {city.name}
               </span>{" "}
@@ -527,7 +531,7 @@ export default async function CityPage({ params }: Props) {
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Quels services propose ConvertiLab pour les entreprises de{" "}
+            Quels services propose ConvertiLab pour les entreprises {de(city.name)}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               {city.name}
             </span>{" "}?

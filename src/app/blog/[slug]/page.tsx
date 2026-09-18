@@ -63,6 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: article.seoTitle ?? article.title,
     description: article.metaDescription,
     keywords: article.tags,
+    authors: [{ name: "Bilel Bettaieb", url: `${SITE.url}/a-propos` }],
     openGraph: {
       title: article.seoTitle ?? article.title,
       description: article.metaDescription,
@@ -70,7 +71,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       images: [{ url: article.image.startsWith("http") ? article.image : `${SITE.url}${article.image}`, width: 1200, height: 630 }],
       publishedTime: article.publishedAt,
-      authors: [article.author.name],
+      // Même auteur que la byline et le schéma : le fondateur, pas la marque.
+      authors: ["Bilel Bettaieb"],
     },
     twitter: {
       card: "summary_large_image",

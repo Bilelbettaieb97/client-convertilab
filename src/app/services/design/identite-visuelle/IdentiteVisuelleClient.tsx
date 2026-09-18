@@ -52,7 +52,7 @@ export default function IdentiteVisuelleClient() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbPage>Identite Visuelle</BreadcrumbPage>
+              <BreadcrumbPage>Identité visuelle</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
@@ -67,7 +67,7 @@ export default function IdentiteVisuelleClient() {
               </div>
               <span className="px-4 py-1 bg-white/20 rounded-full text-sm font-medium">Design</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Identite Visuelle</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Identité visuelle</h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
               Logo et charte graphique pour une image de marque coherente et memorable.
             </p>

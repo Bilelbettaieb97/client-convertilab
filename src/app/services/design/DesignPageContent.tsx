@@ -16,7 +16,7 @@ const services = [
     deliveryTime: "10-20 jours"
   },
   {
-    id: "identite-visuelle", icon: <Fingerprint className="w-8 h-8" />, title: "Identite Visuelle", subtitle: "Logo et charte graphique complète",
+    id: "identite-visuelle", icon: <Fingerprint className="w-8 h-8" />, title: "Identité visuelle", subtitle: "Logo et charte graphique complète",
     description: "Votre identite visuelle est le premier contact avec vos clients. Nous creons des logos memorables et des chartes graphiques coherentes qui refletent vos valeurs et vous differencient de la concurrence.",
     features: ["Création de logo (3 propositions)", "Charte graphique complète", "Palette de couleurs", "Typographies définies", "Declinaisons tous supports", "Guide d'utilisation", "Fichiers vectoriels (AI, SVG, PDF)"],
     process: [{ step: "Brief", desc: "Comprehension de votre univers" }, { step: "Recherche", desc: "Benchmark et inspiration" }, { step: "Concepts", desc: "3 directions créatives" }, { step: "Selection", desc: "Choix et affinage" }, { step: "Finalisation", desc: "Declinaisons et charte" }, { step: "Livraison", desc: "Fichiers et documentation" }],
