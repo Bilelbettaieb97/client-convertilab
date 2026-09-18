@@ -8,6 +8,8 @@ interface Props { testimonial: string; author: string; role: string; client: str
 
 export default function CaseStudyTestimonial({ testimonial, author, role, client }: Props) {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 });
+  // Pas de citation inventée : sans témoignage, la section n'apparaît pas.
+  if (!testimonial) return null;
   return (
     <section className="py-16 bg-gradient-to-br from-primary/5 via-accent/5 to-background">
       <div className="container mx-auto px-4 max-w-4xl">

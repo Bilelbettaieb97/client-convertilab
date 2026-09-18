@@ -505,6 +505,60 @@ function getSimple(slug: string): CaseStudy {
 }
 
 export const fullCaseStudies: Record<string, FullCaseStudy> = {
+  // Les deux fiches ci-dessous existaient en carte (portfolio, pages villes, secteurs) sans page
+  // de détail : chaque lien vers /etude-de-cas/<slug> tombait en 404 (crawl du 18/09/2026).
+  "jsm-jardinage": buildFullStudy(getSimple("jsm-jardinage"), {
+    subtitle: "Site vitrine avec demande de devis guidée pour un paysagiste d'Île-de-France",
+    image: "/images/portfolio/portfolio-jsm-hero.webp",
+    gallery: [
+      { src: "/images/portfolio/portfolio-jsm-hero.webp", alt: "Site vitrine JSM Jardinage, paysagiste en Île-de-France", caption: "Page d'accueil : prestations, zone d'intervention et demande de devis en quatre étapes" },
+    ],
+    chartData: [],
+    challenge: "JSM Jardinage intervient chez les particuliers de Paris et d'Île-de-France : entretien de jardin, taille, élagage, création. Les demandes arrivaient par téléphone, souvent incomplètes, et l'avantage fiscal de 50 % sur les services à la personne n'était expliqué nulle part. Il fallait un site qui qualifie la demande avant le premier appel.",
+    solution: "Un site vitrine clair, une page par prestation, la zone d'intervention affichée, et un tunnel de devis en quatre étapes (prestation, surface, adresse, coordonnées) qui envoie une demande complète avec le rappel du crédit d'impôt de 50 %. Le site est relié à la fiche Google de l'entreprise et à un suivi des demandes.",
+    metrics: [
+      { label: "Devis", value: "4 étapes", description: "Demande guidée, complète dès le premier contact" },
+      { label: "Aide d'État", value: "50 %", description: "Crédit d'impôt services à la personne mis en avant" },
+      { label: "Zone", value: "Paris et IDF", description: "Communes couvertes affichées sur le site" },
+      { label: "Réponse", value: "Sous 24 h", description: "Engagement de rappel après chaque demande" },
+    ],
+    timeline: [
+      { phase: "Cadrage", duration: "2 jours", description: "Prestations, zone, parcours de devis et contenu fiscal" },
+      { phase: "Maquette", duration: "48 h", description: "Page d'accueil et tunnel de devis validés par le client" },
+      { phase: "Développement", duration: "1 semaine", description: "Site, formulaire en quatre étapes, envoi des demandes" },
+      { phase: "Mise en ligne", duration: "1 jour", description: "Domaine jsmjardinage.com, fiche Google reliée" },
+    ],
+    results: "Le site est en ligne sur jsmjardinage.com. Les demandes arrivent complètes, avec la prestation et l'adresse, et le client a agrandi son équipe pour absorber la demande.",
+    testimonial: "Depuis que j'ai lancé mon site avec ConvertiLab, j'ai embauché d'autres salariés pour pouvoir satisfaire la demande.",
+    author: "JSM Jardinage",
+    role: "Gérant",
+  }),
+  "la-chasseuse-demotions": buildFullStudy(getSimple("la-chasseuse-demotions"), {
+    subtitle: "Site portfolio pour une photographe, avec déroulement des séances, tarifs et réservation",
+    image: "/images/portfolio/portfolio-chasseuse-hero.webp",
+    gallery: [
+      { src: "/images/portfolio/portfolio-chasseuse-hero.webp", alt: "Site portfolio de la photographe La Chasseuse d'Émotions", caption: "Page d'accueil : galeries, déroulement d'une séance et réservation" },
+    ],
+    chartData: [],
+    challenge: "Une photographe de portrait dont le travail se présentait sur les réseaux sociaux uniquement : pas de galeries organisées, des tarifs communiqués en message privé, et des séances calées par échanges successifs. Les clientes hésitaient faute de comprendre le déroulement et le prix.",
+    solution: "Un site portfolio sobre qui laisse la place aux images : galeries par type de séance, page qui explique le déroulement du premier contact à la remise des photos, tarifs détaillés et réservation en ligne. Le site est relié à la fiche Google de la photographe.",
+    metrics: [
+      { label: "Galeries", value: "Par séance", description: "Le travail se découvre par thème" },
+      { label: "Tarifs", value: "Publics", description: "Plus de question de prix en message privé" },
+      { label: "Réservation", value: "En ligne", description: "Créneau choisi directement sur le site" },
+      { label: "Mobile", value: "100 %", description: "Galeries pensées pour le téléphone" },
+    ],
+    timeline: [
+      { phase: "Cadrage", duration: "2 jours", description: "Sélection des séries, structure des séances et grille tarifaire" },
+      { phase: "Maquette", duration: "48 h", description: "Direction visuelle et page d'accueil validées" },
+      { phase: "Développement", duration: "1 semaine", description: "Galeries, pages séances, réservation en ligne" },
+      { phase: "Mise en ligne", duration: "1 jour", description: "Domaine lachasseusedemotions.fr, fiche Google reliée" },
+    ],
+    results: "Le site est en ligne sur lachasseusedemotions.fr : les clientes voient les galeries, comprennent le déroulement et réservent sans échange préalable.",
+    testimonial: "",
+    author: "La Chasseuse d'Émotions",
+    role: "Photographe",
+  }),
   "monsieur-arancini": buildFullStudy(getSimple("monsieur-arancini"), {
     subtitle: "Creation d'un site web vitrine haut de gamme pour une marque d'arancini artisanaux",
     image: "/images/portfolio/portfolio-arancini-hero.webp",
