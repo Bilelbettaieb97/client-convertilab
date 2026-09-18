@@ -69,6 +69,7 @@ export const STRUCTURED_DATA = {
     email: SITE.email,
     address: {
       "@type": "PostalAddress",
+      streetAddress: "1 rue du Quatre Septembre",
       addressLocality: "Rueil-Malmaison",
       postalCode: "92500",
       addressRegion: "Île-de-France",
