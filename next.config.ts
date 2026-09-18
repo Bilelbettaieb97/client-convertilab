@@ -136,16 +136,22 @@ const nextConfig: NextConfig = {
             value: [
               "default-src 'self'",
               // GTM/GA4, Meta Pixel, AdSense, Vercel Analytics/Speed Insights
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://pagead2.googlesyndication.com https://va.vercel-scripts.com",
+              // googleads.g.doubleclick.net : script de conversion Google Ads chargé par gtag
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://va.vercel-scripts.com",
               // Google Fonts : uniquement le deck statique /presentation
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "img-src 'self' data: blob: https:",
               "font-src 'self' data: https://fonts.gstatic.com",
               // Supabase (formulaires), GA4 (collecte UE sur region1.google-analytics.com), Google Ads
               // (ccm/collect sur pagead2.googlesyndication.com), GTM, Meta (tracking), Vercel (vitals)
-              "connect-src 'self' https://*.supabase.co https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.facebook.com https://vitals.vercel-insights.com",
+              // Mesuré en production le 18/09/2026 avec cookies acceptés : GA4 collecte sur
+              // region1.analytics.google.com, Google Ads sur www.google.com/ccm et /rmkt,
+              // ad.doubleclick.net et googleads.g.doubleclick.net. Les deux passerelles Meta
+              // (*.on.aws, *.run.app, « events?cee=no ») restent volontairement bloquées :
+              // trop larges, et le pixel fonctionne sans elles.
+              "connect-src 'self' https://*.supabase.co https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://stats.g.doubleclick.net https://ad.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://www.google.fr https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.facebook.com https://vitals.vercel-insights.com",
               // Google Maps embed (pages villes), GTM preview, Calendly
-              "frame-src 'self' https://www.google.com https://www.googletagmanager.com https://calendly.com https://td.doubleclick.net https://googleads.g.doubleclick.net",
+              "frame-src 'self' https://www.google.com https://www.googletagmanager.com https://calendly.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.facebook.com",
               "object-src 'none'",
               "base-uri 'self'",
               "frame-ancestors 'none'",

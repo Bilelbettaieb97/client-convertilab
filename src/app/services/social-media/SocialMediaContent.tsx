@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Users, BarChart3, Mail, Share2, ArrowRight, CheckCircle2,
-  Calendar, Sparkles
+  Calendar, Sparkles, Camera, MessageSquare, Star, Megaphone,
+  Store, Hammer, Briefcase, ShieldCheck
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
+import { Conteneur, Surtitre } from "@/components/pole/pole-ui";
 
 const services = [
   {
@@ -41,10 +43,119 @@ const platforms = [
   { name: "TikTok", description: "Vidéos courtes, tendances" },
 ];
 
+// Repères factuels du hero : délais et périmètre réels, aucune statistique.
 const stats = [
-  { value: "+200%", label: "Engagement moyen" },
-  { value: "50+", label: "Clients accompagnés" },
-  { value: "4,5/5", label: "Satisfaction client" },
+  { value: "24 h", label: "Devis envoyé après un échange de 30 minutes" },
+  { value: "4 réseaux", label: "Instagram, Facebook, LinkedIn, TikTok" },
+  { value: "1 rapport", label: "Chaque mois, lisible en une page" },
+];
+
+/* Déroulé d'un mois d'accompagnement : le « quand » distingue cette section
+   de la liste des inclusions de la page community-management. */
+const moisType = [
+  {
+    icon: Calendar,
+    quand: "Début de mois",
+    title: "Le calendrier éditorial, validé par vous",
+    description:
+      "Nous vous envoyons le planning des publications : sujets, formats, dates, réseau concerné. Vous corrigez, vous validez, rien ne part sans votre accord.",
+  },
+  {
+    icon: Camera,
+    quand: "Au fil du mois",
+    title: "Les visuels et les textes prêts à publier",
+    description:
+      "Photos retouchées, carrousels, Stories et vidéos courtes, dans votre ton, avec vos couleurs et votre logo. Vous relisez, nous publions.",
+  },
+  {
+    icon: MessageSquare,
+    quand: "Les jours ouvrés",
+    title: "Les réponses aux commentaires et aux messages",
+    description:
+      "Questions pratiques, horaires, tarifs, disponibilités : nous répondons à votre place et vous transférons ce qui demande votre décision.",
+  },
+  {
+    icon: Star,
+    quand: "À chaque avis reçu",
+    title: "Les réponses aux avis Google",
+    description:
+      "Chaque avis reçoit une réponse signée de votre établissement, y compris les avis négatifs, avec un ton posé et factuel.",
+  },
+  {
+    icon: Megaphone,
+    quand: "Quand vous avez une actualité",
+    title: "Vos nouveautés relayées",
+    description:
+      "Nouveau produit, promotion, fermeture exceptionnelle, événement : vous nous prévenez, nous l'intégrons au planning ou nous le publions en priorité.",
+  },
+  {
+    icon: BarChart3,
+    quand: "Fin de mois",
+    title: "Le rapport mensuel",
+    description:
+      "Une page, pas trente : ce qui a été publié, ce qui a fait réagir, les messages reçus, les clics vers votre site, et ce que nous changeons le mois suivant.",
+  },
+];
+
+/* Trois profils de clients et ce qui change concrètement pour chacun. */
+const profils = [
+  {
+    icon: Store,
+    title: "Commerce et restauration",
+    intro:
+      "Boutique, restaurant, salon de coiffure, institut : vos clients habitent à quelques rues et regardent Instagram et Facebook avant de pousser la porte.",
+    changements: [
+      "Photos de la vitrine, des plats ou des prestations prises sur place",
+      "Horaires, nouveautés et offres du moment relayés sans délai",
+      "Réponses aux avis Google comprises dans le forfait",
+    ],
+  },
+  {
+    icon: Hammer,
+    title: "Artisan et entreprise du bâtiment",
+    intro:
+      "Plombier, électricien, paysagiste, menuisier : vos chantiers sont votre meilleure preuve, encore faut-il les montrer.",
+    changements: [
+      "Avant et après de vos réalisations, avec l'accord du client",
+      "Zone d'intervention rappelée dans chaque publication",
+      "Facebook et fiche Google en priorité, là où vos clients cherchent",
+    ],
+  },
+  {
+    icon: Briefcase,
+    title: "Indépendant, coach ou cabinet",
+    intro:
+      "Consultant, thérapeute, avocat, expert-comptable : on vous choisit pour votre expertise et pour votre façon de l'expliquer.",
+    changements: [
+      "Publications LinkedIn qui vulgarisent votre métier",
+      "Votre visage et votre voix au premier plan, pas un logo",
+      "Un lien de prise de rendez-vous dans chaque profil",
+    ],
+  },
+];
+
+/* Pages liées : toutes ces routes existent dans src/app. */
+const pagesLiees = [
+  {
+    href: "/services/social-media/community-management",
+    title: "Community management",
+    description: "Le détail de la gestion mensuelle : ce qui est inclus, les plateformes gérées et le processus.",
+  },
+  {
+    href: "/services/social-media/strategie",
+    title: "Stratégie social media",
+    description: "Audit, ligne éditoriale et calendrier sur trois mois, avant de publier quoi que ce soit.",
+  },
+  {
+    href: "/services/sea/meta-ads",
+    title: "Publicité Meta Ads",
+    description: "Quand les publications ne suffisent plus : campagnes sponsorisées sur Facebook et Instagram.",
+  },
+  {
+    href: "/prix/community-management",
+    title: "Tarifs du community management",
+    description: "Nos formules, ce qu'elles comprennent et la façon dont le devis est établi.",
+  },
 ];
 
 export default function SocialMediaContent() {
@@ -148,8 +259,46 @@ export default function SocialMediaContent() {
         </div>
       </section>
 
+      {/* Ce que nous faisons chaque mois */}
+      <section id="chaque-mois" className="scroll-mt-24 py-20 bg-gray-50">
+        <Conteneur>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <Surtitre>Le déroulé d&apos;un mois</Surtitre>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Ce que nous faisons chaque mois
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Un accompagnement social media n&apos;est pas une suite de publications lancées au hasard.
+              Chaque mois suit le même déroulé, que vous validez avant toute mise en ligne. Le détail
+              de la gestion au quotidien est décrit sur notre page{" "}
+              <Link href="/services/social-media/community-management" className="font-semibold text-purple-700 underline underline-offset-4 hover:text-purple-900">
+                community management
+              </Link>
+              .
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {moisType.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div key={i} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white flex-shrink-0">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs font-semibold uppercase tracking-wide text-pink-700">{item.quand}</span>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </Conteneur>
+      </section>
+
       {/* Platforms */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -165,6 +314,124 @@ export default function SocialMediaContent() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Pour qui */}
+      <section id="pour-qui" className="scroll-mt-24 py-20 bg-gray-50">
+        <Conteneur>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <Surtitre>Trois situations courantes</Surtitre>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Pour qui ce service est-il fait ?
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Nous travaillons avec des petites structures, à Rueil-Malmaison, en Île-de-France et
+              ailleurs en France. Le contenu change selon votre métier, la méthode reste la même,
+              et le community management est chiffré{" "}
+              <Link href="/prix/community-management" className="font-semibold text-purple-700 underline underline-offset-4 hover:text-purple-900">
+                sur devis
+              </Link>
+              , avec un nombre de publications fixé à l&apos;avance.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {profils.map((profil, i) => {
+              const Icon = profil.icon;
+              return (
+                <Card key={i} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+                  <CardContent className="p-8">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white mb-5">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{profil.title}</h3>
+                    <p className="text-gray-600 leading-relaxed mb-5">{profil.intro}</p>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-pink-700 mb-3">Ce qui change pour vous</p>
+                    <ul className="space-y-2.5">
+                      {profil.changements.map((c, ci) => (
+                        <li key={ci} className="flex items-start gap-2 text-sm text-gray-700">
+                          <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </Conteneur>
+      </section>
+
+      {/* Ce que nous ne promettons pas */}
+      <section id="engagements" className="scroll-mt-24 py-20">
+        <Conteneur>
+          <div className="max-w-3xl mx-auto rounded-3xl border border-pink-100 bg-gradient-to-br from-pink-50 via-white to-purple-50 p-8 sm:p-12">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-11 h-11 rounded-xl bg-white shadow-sm flex items-center justify-center text-purple-700 flex-shrink-0">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <Surtitre className="mb-0">Pour être clairs dès le départ</Surtitre>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              Ce que nous ne promettons pas
+            </h2>
+            <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                <strong className="text-gray-900">Aucun nombre d&apos;abonnés garanti.</strong>{" "}Les abonnés
+                s&apos;achètent, et ceux-là ne deviennent jamais clients : nous ne le faisons pas et nous
+                vous déconseillons de le faire. Une communauté utile grandit au rythme de votre activité
+                et de la régularité de vos publications, pas à celui d&apos;un compteur.
+              </p>
+              <p>
+                <strong className="text-gray-900">Aucune viralité promise.</strong>{" "}Une publication qui fait
+                le tour de la France arrive parfois, mais elle ne se commande pas et elle ne remplit pas un
+                carnet de commandes. Nous cherchons des publications qui parlent à vos clients d&apos;à côté,
+                pas à des inconnus à l&apos;autre bout du pays. Si vous avez besoin d&apos;une portée rapide
+                et mesurable, la bonne réponse est souvent une campagne{" "}
+                <Link href="/services/sea/meta-ads" className="font-semibold text-purple-700 underline underline-offset-4 hover:text-purple-900">
+                  Meta Ads
+                </Link>{" "}
+                en complément, avec un budget décidé ensemble.
+              </p>
+              <p>
+                <strong className="text-gray-900">Ce que nous promettons en revanche :</strong>{" "}une présence
+                régulière, une réponse à chaque message et à chaque avis, un rapport chaque mois, et des
+                indicateurs qui comptent pour votre chiffre d&apos;affaires, comme les messages reçus, les clics
+                vers votre site et les demandes de devis. Et si, après un premier échange, les réseaux sociaux
+                ne nous semblent pas la priorité pour votre activité, nous vous le disons.
+              </p>
+            </div>
+          </div>
+        </Conteneur>
+      </section>
+
+      {/* Pages liées */}
+      <section id="aller-plus-loin" className="scroll-mt-24 py-20 bg-gray-50">
+        <Conteneur>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <Surtitre>Pour aller plus loin</Surtitre>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Les pages liées à ce service
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {pagesLiees.map((page) => (
+              <Link
+                key={page.href}
+                href={page.href}
+                className="group block bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow border border-transparent hover:border-pink-100"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1 group-hover:text-purple-700 transition-colors">{page.title}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">{page.description}</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Conteneur>
       </section>
 
       {/* CTA */}

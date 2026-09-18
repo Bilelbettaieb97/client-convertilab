@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE, DEFAULT_OG_IMAGE } from "@/lib/constants";
-import { GoogleAnalytics, MetaPixel, MetaPixelNoscript } from "@/components/Analytics";
+import { GoogleAnalytics, MetaPixel } from "@/components/Analytics";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -139,7 +139,8 @@ export default function RootLayout({
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg focus:text-purple-600 focus:font-semibold">
           Aller au contenu principal
         </a>
-        <MetaPixelNoscript />
+        {/* Le pixel Meta <noscript> est retiré : sans JavaScript le consentement ne peut pas être
+            donné, et son <img> vide comptait comme une image sans alt sur chaque page. */}
         <main id="main-content">
           {children}
         </main>

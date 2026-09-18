@@ -489,4 +489,52 @@ export const comparisons: Comparison[] = [
     ],
     relatedService: "/services/sites-web/refonte-site",
   },
+  {
+    slug: "crm-vs-tableur",
+    title: "CRM vs tableur Excel",
+    optionA: {
+      name: "Tableur (Excel, Google Sheets)",
+      description: "Une feuille de calcul où chaque prospect occupe une ligne : nom, téléphone, dernier échange, devis envoyé, date de relance prévue. L'outil que la plupart des artisans, commerçants et indépendants utilisent déjà, souvent sans l'avoir choisi.",
+      pros: [
+        "Gratuit ou déjà payé avec votre suite bureautique, aucun abonnement de plus",
+        "Prise en main immédiate : vous savez déjà vous en servir",
+        "Souplesse totale : une colonne de plus en un clic, aucun paramétrage",
+        "Suffisant quand une seule personne relance et connaît chaque dossier",
+      ],
+      cons: [
+        "Aucun rappel : si vous n'ouvrez pas le fichier, la relance n'existe pas",
+        "Les demandes du site, du téléphone et des réseaux sont ressaisies à la main",
+        "Impossible de savoir quel canal a amené chaque client sans saisie disciplinée",
+        "Le fichier vieillit vite : doublons, lignes oubliées, colonnes vides",
+        "Dès que deux personnes relancent, on ne sait plus qui a appelé qui",
+      ],
+    },
+    optionB: {
+      name: "CRM simple avec relances automatiques",
+      description: "Un outil qui range chaque demande dans un pipeline par étapes (demande reçue, devis envoyé, à relancer, gagné, perdu), vous rappelle chaque matin qui relancer et envoie lui-même les emails de relance rédigés une fois pour toutes. Le formulaire du site y crée les fiches, avec leur source.",
+      pros: [
+        "Les relances partent même quand vous êtes sur un chantier ou en rendez-vous",
+        "Un rappel chaque matin : les fiches à traiter aujourd'hui, rien d'autre",
+        "Chaque demande arrive avec sa source, quel que soit le canal",
+        "L'historique complet par contact : emails, appels, devis, au même endroit",
+        "Plusieurs personnes peuvent relancer sans se marcher dessus",
+      ],
+      cons: [
+        "Un abonnement mensuel, même modeste, et un temps de mise en place",
+        "Il faut dessiner son pipeline et écrire ses emails de relance avant d'en profiter",
+        "Un CRM que personne n'ouvre est abandonné en quelques semaines",
+        "Les gros CRM (Salesforce, HubSpot complet) sont surdimensionnés pour une TPE",
+      ],
+    },
+    verdict: "Si vous relancez seul, si votre liste de prospects tient sur un écran et si vous la relisez chaque semaine sans rien oublier, gardez votre tableur : il fait le travail et ne coûte rien. Le CRM devient utile quand le tableur commence à vous faire perdre des clients. Trois signaux ne trompent pas : des devis restent sans relance parce que personne n'a rouvert le fichier ; les demandes arrivent par plusieurs canaux (formulaire du site, téléphone, fiche Google, Meta Ads) et certaines se perdent avant d'être saisies ; vous ne savez plus d'où vient chaque client, donc où mettre votre budget. À ce stade, un CRM simple avec pipeline par étapes, rappels quotidiens et emails de relance automatiques se rentabilise généralement vite, à condition d'être relié au formulaire du site. C'est ce que nous mettons en place pour les TPE, artisans, commerces et indépendants, sur devis. Notre guide « Mettre en place un CRM dans une petite entreprise » détaille les étapes avant de vous lancer.",
+    faqItems: [
+      { question: "À partir de combien de contacts faut-il passer du tableur au CRM ?", answer: "Il n'existe pas de seuil universel. Le bon critère n'est pas le nombre de lignes mais le nombre d'oublis. Tant que vous relisez toute votre liste d'un coup et que chaque devis en attente reçoit sa relance, le tableur suffit. Le jour où vous découvrez un prospect chaud oublié depuis des semaines, la limite est dépassée, quel que soit le nombre de contacts. Un tableur bien tenu vaut mieux qu'un CRM ouvert une fois par mois." },
+      { question: "Un CRM est-il compliqué à utiliser pour un artisan ou un commerçant ?", answer: "Pas s'il est choisi à votre taille. Un CRM simple se résume à quelques colonnes où vous déplacez des cartes, et à une liste de rappels le matin. Ce qui le rend compliqué, c'est un outil surdimensionné ou un pipeline à quinze étapes que personne ne suit. Nous le paramétrons sur vos vraies étapes." },
+      { question: "Que deviennent mes contacts Excel si je passe à un CRM ?", answer: "Ils sont importés, mais pas tels quels. Avant l'import, nous nettoyons le fichier : doublons, contacts sans email ni téléphone, prospects sans échange depuis longtemps. Nous gardons les colonnes utiles aux relances (prénom, email, dernier devis, montant, source) et laissons le reste. Votre tableur reste en archive." },
+      { question: "Comment le formulaire de mon site se relie-t-il au CRM ?", answer: "Chaque envoi du formulaire crée une fiche avec le nom, le message et la source (page précise, campagne publicitaire si le visiteur en vient). La fiche entre dans la première étape du pipeline et déclenche le premier email de relance si vous ne répondez pas dans le délai choisi. C'est ce branchement qui vous dit, en fin de mois, d'où viennent vos clients." },
+      { question: "Les emails de relance automatiques ne font-ils pas robot ?", answer: "Ils font robot quand ils sont écrits comme des notifications. Nous les rédigeons dans votre ton, courts, avec le prénom du contact, le rappel du devis concerné et une question simple. L'automatisation ne remplace pas votre appel : elle fait partir la relance le bon jour, même les semaines où vous n'avez pas une minute pour y penser. Vous validez chaque modèle avant activation." },
+      { question: "Combien coûte la mise en place d'un CRM avec ConvertiLab ?", answer: "Sur devis, envoyé sous 24 h, avec un prix fixe écrit avant de commencer. Le montant dépend de ce qu'il faut relier : nombre de sources de demandes à brancher, emails de relance à écrire, nettoyage du fichier existant. Si votre tableur suffit encore, nous vous le dirons plutôt que de vous vendre un outil inutile." },
+    ],
+    relatedService: "/services/crm",
+  },
 ];

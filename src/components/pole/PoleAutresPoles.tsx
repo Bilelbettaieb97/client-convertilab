@@ -57,6 +57,7 @@ const RESSOURCES_PAR_POLE: Record<PoleSlug, { guides: { href: string; label: str
     pages: [
       { href: "/prix/crm", label: "Prix du CRM et des relances" },
       { href: "/devis/crm", label: "Devis CRM" },
+      { href: "/comparatifs/crm-vs-tableur", label: "Comparatif CRM ou tableur" },
       { href: "/glossaire/crm", label: "Glossaire : CRM" },
       { href: "/glossaire/relance-automatique", label: "Glossaire : relance automatique" },
     ],
