@@ -341,6 +341,11 @@ const Portfolio = ({ activeCategory: externalCategory, hideOffer = false, forAds
     return base.filter((c) => c.category === activeCategory);
   }, [activeCategory, isFiltered, forAds]);
 
+  // Sur l'accueil, le carrousel ne monte que les 9 premières réalisations (mises en avant
+  // puis sites en ligne) : les 24 cartes représentaient 1 233 éléments, 41 % du DOM de la page.
+  // Le lien « Voir toutes les réalisations » renvoie vers /portfolio pour le reste.
+  const carouselCases = isHomepage ? filteredCases.slice(0, 9) : filteredCases;
+
   // Keep dedicated filtered grid behavior only on /portfolio page
   if (isFiltered && !isHomepage) {
     return (
@@ -435,7 +440,7 @@ const Portfolio = ({ activeCategory: externalCategory, hideOffer = false, forAds
                 className="-ml-2 md:-ml-4 items-stretch"
                 style={{ willChange: "transform" }}
               >
-                {filteredCases.map((caseStudy, index) => (
+                {carouselCases.map((caseStudy, index) => (
                   <CarouselItem
                     key={index}
                     className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3"
@@ -452,6 +457,13 @@ const Portfolio = ({ activeCategory: externalCategory, hideOffer = false, forAds
                 <ChevronRight className="h-6 w-6" />
               </CarouselNext>
             </Carousel>
+            {isHomepage && filteredCases.length > carouselCases.length && (
+              <p className="text-center mt-6">
+                <Link href="/portfolio" className="text-sm font-semibold text-purple-700 hover:underline">
+                  Voir les {filteredCases.length} réalisations
+                </Link>
+              </p>
+            )}
           </div>
         ) : (
           <>

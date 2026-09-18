@@ -117,6 +117,15 @@ export default async function GlossaryTermPage({ params }: Props) {
     .map((slug) => glossaryTerms.find((t) => t.slug === slug))
     .filter(Boolean);
 
+  // Voisins dans l'ordre du glossaire (3 avant, 3 après, en boucle) : chaque définition reçoit
+  // ainsi au moins six liens entrants, y compris celles qu'aucun relatedTerms ne cite
+  // (11 fiches n'avaient qu'un lien entrant, depuis /glossaire).
+  const index = glossaryTerms.findIndex((t) => t.slug === term.slug);
+  const dejaLies = new Set([term.slug, ...term.relatedTerms]);
+  const voisins = [-3, -2, -1, 1, 2, 3]
+    .map((d) => glossaryTerms[(index + d + glossaryTerms.length) % glossaryTerms.length])
+    .filter((t) => !dejaLies.has(t.slug));
+
   const definedTermSchema = {
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
@@ -337,6 +346,23 @@ export default async function GlossaryTermPage({ params }: Props) {
                       )
                   )}
                 </div>
+              </div>
+            )}
+
+            {voisins.length > 0 && (
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                  Autres définitions
+                </h3>
+                <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                  {voisins.map((t) => (
+                    <li key={t.slug}>
+                      <Link href={`/glossaire/${t.slug}`} className="text-gray-700 hover:text-purple-600 hover:underline">
+                        {t.term}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
 

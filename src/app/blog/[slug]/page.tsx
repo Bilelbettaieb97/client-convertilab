@@ -93,6 +93,12 @@ export default async function BlogArticlePage({ params }: Props) {
   }
 
   const relatedArticles = getRelatedArticles(slug, 3);
+  // Voisins dans l'ordre du fichier (du plus récent au plus ancien) : 31 articles
+  // n'avaient que un ou deux liens entrants ; précédent/suivant en garantit deux de plus.
+  const position = blogArticles.findIndex((a) => a.slug === slug);
+  const voisin = (i: number) => (blogArticles[i] ? { slug: blogArticles[i].slug, title: blogArticles[i].title } : null);
+  const precedent = voisin(position - 1);
+  const suivant = voisin(position + 1);
 
   const wordCount = article.content.split(/\s+/).length;
   const readTimeMinutes = Math.max(1, Math.ceil(wordCount / 200));
@@ -168,7 +174,7 @@ export default async function BlogArticlePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
-      <BlogArticleClient article={article} relatedArticles={relatedArticles} />
+      <BlogArticleClient article={article} relatedArticles={relatedArticles} precedent={precedent} suivant={suivant} />
     </>
   );
 }

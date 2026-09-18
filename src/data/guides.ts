@@ -498,8 +498,8 @@ export const guides: Guide[] = [
   },
   {
     slug: "devis-site-web",
-    title: "Obtenir un Devis Site Web Juste",
-    description: "Comment obtenir un devis site web réaliste et comparer les offres. Comprendre les tarifs, les postes de coûts et éviter les pièges des devis trop bas.",
+    title: "Lire et comparer un devis de site web",
+    description: "Comment lire un devis de site web, comparer les offres poste par poste et repérer les pièges des devis trop bas. Pour un chiffre immédiat, le simulateur de prix donne une fourchette.",
     steps: [
       {
         title: "Préparer votre demande de devis",

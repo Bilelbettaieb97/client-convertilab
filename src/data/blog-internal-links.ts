@@ -27,10 +27,6 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
     primary: { title: "Estimation de prix personnalisée", description: "Obtenez une estimation précise selon votre projet.", href: "/estimation-prix-site-web", cta: "Calculer mon budget" },
     secondary: { title: "Devis gratuit en 24h", description: "Un devis détaillé sans engagement sous 24h.", href: "/contact", cta: "Demander un devis" },
   },
-  "tendances-web-design-2024": {
-    primary: { title: "Design UI/UX professionnel", description: "Interfaces modernes qui convertissent et impressionnent.", href: "/services/design/ui-ux", cta: "Voir nos designs" },
-    secondary: { title: "Score design gratuit", description: "Notez la qualité visuelle de votre site en 1 minute.", href: "/design-score", cta: "Tester mon design" },
-  },
   "optimiser-vitesse-site-web": {
     primary: { title: "Analyse de vitesse gratuite", description: "Core Web Vitals, PageSpeed, LCP — diagnostic complet.", href: "/speed-check", cta: "Tester ma vitesse" },
     secondary: { title: "Création de site rapide (Next.js)", description: "Sites optimisés 90+ PageSpeed dès la livraison.", href: "/services/sites-web/site-vitrine", cta: "Créer mon site" },

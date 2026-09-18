@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
 import BlogPageClient from "@/components/pages/BlogPageClient";
+import { blogArticles } from "@/data/blog-articles";
+import type { BlogArticle } from "@/data/blog-articles";
 
 export const metadata: Metadata = {
   title: "Blog : Conseils Web, SEO et Business",
@@ -27,5 +29,18 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  return <BlogPageClient />;
+  // Seuls les champs de carte partent au client : le contenu complet des articles
+  // (1 Mo) n'a rien à faire dans le JavaScript de la page de liste.
+  const cartes: BlogArticle[] = blogArticles.map((a) => ({
+    slug: a.slug,
+    title: a.title,
+    excerpt: a.excerpt,
+    image: a.image,
+    category: a.category,
+    readTime: a.readTime,
+    publishedAt: a.publishedAt,
+    updatedAt: a.updatedAt,
+    author: a.author,
+  }));
+  return <BlogPageClient articles={cartes} />;
 }

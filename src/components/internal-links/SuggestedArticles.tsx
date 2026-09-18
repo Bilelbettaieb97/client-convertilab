@@ -1,8 +1,9 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar } from "lucide-react";
+// Composant serveur volontairement : importé depuis un composant client, le fichier
+// blog-articles.ts (1 Mo, contenu complet des articles) partait dans le JavaScript de
+// chaque page du site (374 Ko compressés par visite, mesuré le 18/09/2026).
 import { blogArticles } from "@/data/blog-articles";
 
 interface SuggestedArticlesProps {

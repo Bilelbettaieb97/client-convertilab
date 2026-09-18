@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import PrixSiteCta from "@/components/internal-links/PrixSiteCta";
 import SeoCheckCta from "@/components/internal-links/SeoCheckCta";
 import { pricingPages } from "@/data/pricing-pages";
+import { devisServices } from "@/data/devis-pages";
 
 interface Props {
   params: Promise<{ service: string }>;
@@ -206,7 +207,7 @@ export default async function PricingDetailPage({ params }: Props) {
                     </svg>
                   </Link>
                   <Link
-                    href="/contact"
+                    href={devisServices.some((d) => d.slug === page.slug) ? `/devis/${page.slug}` : "/contact"}
                     className="text-purple-600 hover:text-purple-700 text-sm font-medium flex items-center gap-1"
                   >
                     Demander un devis gratuit
@@ -214,7 +215,32 @@ export default async function PricingDetailPage({ params }: Props) {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
+                  <Link
+                    href="/estimation-prix-site-web"
+                    className="text-purple-600 hover:text-purple-700 text-sm font-medium flex items-center gap-1"
+                  >
+                    Simuler le prix de votre projet
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
                 </div>
+              </div>
+
+              {/* Autres tarifs : chaque page /prix n'avait qu'un seul lien entrant (depuis /prix). */}
+              <div className="mt-6">
+                <p className="text-sm text-gray-600 mb-2">Nos autres tarifs :</p>
+                <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                  {pricingPages
+                    .filter((p) => p.slug !== page.slug)
+                    .map((p) => (
+                      <li key={p.slug}>
+                        <Link href={`/prix/${p.slug}`} className="text-purple-600 hover:underline">
+                          {p.name}
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
               </div>
             </div>
           </div>

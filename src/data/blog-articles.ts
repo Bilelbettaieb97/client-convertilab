@@ -614,148 +614,6 @@ La durée de vie moyenne d'un site web est de 3 à 5 ans avant qu'une refonte so
 `
   },
   {
-    slug: "tendances-web-design-2024",
-    title: "Quelles tendances web design adopter pour son site d'entreprise en 2026 ?",
-    seoTitle: "Tendances web design pour son site d'entreprise",
-    excerpt: "Minimalisme, micro-interactions, accessibilité, IA générative : les 8 tendances web design 2026 qui convertissent vraiment, avec le verdict pour chaque profil d'entreprise.",
-    metaDescription: "Tendances web design 2026 pour PME et artisans : minimalisme, accessibilité, typographie variable, micro-interactions. Quelles adopter selon votre secteur ?",
-    image: "/images/blog/tendances-web-design-2024.png",
-    category: "Web Design",
-    readTime: "6 min",
-    publishedAt: "2026-02-05",
-    updatedAt: "2026-09-18",
-    author: { name: "ConvertiLab" },
-    tags: ["tendances web design 2026", "design site web entreprise", "moderniser son site web", "UX design PME", "web design qui convertit"],
-    faqItems: [
-      { question: "Faut-il refaire son site pour suivre les tendances design ?", answer: "Non, il n'est pas nécessaire de refaire entièrement son site pour suivre les tendances. La plupart des améliorations (contraste, photos, micro-interactions, accessibilité) peuvent être appliquées à un site existant. Une refonte complète se justifie uniquement si le site a plus de 4 ans, utilise des technologies obsolètes ou a un taux de rebond supérieur à 70%." },
-      { question: "Le design d'un site a-t-il un impact sur le référencement Google ?", answer: "Oui, le design impacte indirectement le référencement Google via les signaux comportementaux : temps passé sur le site, taux de rebond, pages par session. Un site au design moderne et accessible génère plus d'engagement, ce qui améliore ces signaux. La vitesse de chargement (liée aux choix de design) est, elle, un facteur SEO direct confirmé par Google." },
-      { question: "Combien coûte une modernisation du design d'un site existant ?", answer: "Une modernisation partielle du design (couleurs, typographie, CTA, photos) coûte entre 300€ et 1 000€ chez un prestataire qualifié. Une refonte complète de l'interface avec recodage complet coûte entre 1 490€ et 4 000€ pour un site vitrine. Chez ConvertiLab, nous proposons des audits design gratuits avant tout devis." },
-      { question: "Un beau design compense-t-il un mauvais contenu ou un mauvais SEO ?", answer: "Non. Le design attire et retient l'attention, mais c'est le contenu qui convainc et le SEO qui amène les visiteurs. Un site magnifique sans trafic et sans contenu utile ne génère aucun client. L'ordre de priorité : SEO local d'abord, contenu de qualité ensuite, design soigné pour convertir. Les trois ensemble font un site performant." },
-    ],
-    content: `Les tendances web design à adopter pour son site d'entreprise en 2026 sont le minimalisme, les micro-interactions significatives et l'accessibilité. Ces trois tendances ont le meilleur ratio impact/durabilité pour les PME et donnent un avantage immédiat sur des concurrents aux sites datés. Les effets visuels spectaculaires (brutalisme, glassmorphisme) restent réservés aux marques créatives.
-
-Sur les 150+ sites que j'ai créés chez ConvertiLab, les sites les plus performants en termes de conversion partagent tous le même ADN : clarté du message, animations légères et preuves de crédibilité visibles. Voici les 8 tendances, avec un verdict clair pour chaque type d'entreprise.
-
-[Évaluez gratuitement le design actuel de votre site](/design-score)
-
-[[sommaire]]
-
-## Le minimalisme radical est-il adapté aux sites de petites entreprises ?
-
-Le minimalisme radical est adapté aux sites de petites entreprises parce qu'il force la clarté du message et élimine tout ce qui distrait le visiteur de l'action principale. Un site minimaliste bien exécuté est perçu comme premium, professionnel et facile à naviguer, trois qualités qui augmentent la confiance et le taux de conversion.
-
-Caractéristiques du minimalisme en 2026 :
-- Espaces négatifs généreux (parfois 50% de blanc)
-- Une seule police de caractère déclinée en poids différents
-- 2 couleurs maximum d'accentuation
-- Navigation simplifiée (4 à 5 liens)
-
-Marques qui l'ont adopté avec succès : Apple, Stripe, Notion, Linear. **Verdict pour les PME : recommandé quel que soit le secteur.**
-
-## Le glassmorphisme et les interfaces 3D valent-ils le coup en 2026 ?
-
-Le glassmorphisme et les effets 3D en 2026 sont pertinents uniquement pour les secteurs créatifs et technologiques. Pour un artisan, un médecin ou un restaurant, ces effets ralentissent le site et créent une dissonance entre l'image de la marque et l'attente du prospect. Le ratio performance/complexité ne justifie pas leur usage systématique.
-
-Quand les adopter :
-- Glassmorphisme : fintech, SaaS, startups, donne une impression de modernité technologique
-- Effets 3D : agences créatives, studios, marques premium
-- Animations complexes : secteurs où le "wow effect" est un argument commercial
-
-**Verdict pour les PME : à éviter sauf secteur créatif. Préférez des ombres douces et des dégradés subtils.**
-
-## Quelles palettes de couleurs convertissent le mieux en 2026 ?
-
-Les palettes de couleurs qui convertissent le mieux en 2026 sont celles qui créent une hiérarchie visuelle claire entre le fond, le contenu et les appels à l'action. Un fort contraste entre le CTA et le reste de la page augmente le taux de clic de 20 à 35%. Les dégradés complexes sont tendance mais doivent rester au service de la lisibilité.
-
-Palettes recommandées par secteur en 2026 :
-- Artisanat, services locaux : tons neutres (beige, blanc cassé) + une couleur d'accentuation chaude
-- Tech, SaaS, fintech : violet + rose + orange ou bleu électrique + violet
-- Bien-être, santé : vert sauge + terracotta + beige
-- Restauration, food : rouge, orange ou vert selon la cuisine
-
-La règle fondamentale : votre CTA principal doit toujours être la couleur la plus visible de la page.
-
-## Les variable fonts améliorent-elles vraiment les performances d'un site ?
-
-Les variable fonts améliorent les performances d'un site parce qu'une seule police variable remplace 6 à 8 fichiers de fonte distincts, ce qui réduit le nombre de requêtes HTTP et accélère le chargement. En 2026, elles sont supportées par 98% des navigateurs et ont des centaines d'axes de personnalisation contrôlables en CSS.
-
-Polices variables populaires à utiliser en 2026 :
-- Roboto Flex, Inter (neutralité, lisibilité, idéal pour tous)
-- Fraunces, Recursive (personnalité, secteurs créatifs)
-- Plus Jakarta Sans, Outfit (modernité, tech)
-
-**Verdict : adoptez une variable font sur votre prochain site. Aucun inconvénient, gain de performance garanti.**
-
-## L'accessibilité web est-elle obligatoire pour une petite entreprise ?
-
-L'accessibilité web devient obligatoire pour toutes les entreprises depuis la mise en application progressive de l'European Accessibility Act (EAA) en 2025-2026. Au-delà de l'obligation légale, un site accessible a un meilleur SEO, charge plus vite et est utilisable par une plus grande population, y compris les personnes âgées.
-
-Minimum à respecter en 2026 :
-- Ratio de contraste texte/fond minimum 4,5:1
-- Zones cliquables minimum 44×44px sur mobile
-- Textes alternatifs sur toutes les images
-- Navigation clavier fonctionnelle
-- Pas de contenu qui clignote plus de 3 fois par seconde
-
-**Verdict : non négociable en 2026. L'accessibilité améliore aussi votre SEO.**
-
-## Les photos de stock sont-elles encore acceptables en 2026 ?
-
-Les photos de stock génériques ne sont plus acceptables en 2026 parce que les visiteurs les reconnaissent instantanément et les associent à un manque d'authenticité. Google mesure depuis 2023 les signaux E-E-A-T (Experience, Expertise, Authoritativeness, Trust), les vraies photos de votre équipe et de vos réalisations sont un signal de crédibilité que les stock photos ne peuvent pas remplacer.
-
-Alternatives aux stock photos classiques :
-- Vraies photos de vos réalisations récentes (smartphone suffit pour commencer)
-- Photos authentiques de votre équipe et de votre lieu de travail
-- Illustrations vectorielles sur-mesure dans votre identité visuelle
-- Images générées par IA (Midjourney) pour des ambiances spécifiques
-
-**Verdict : remplacez au minimum les photos de stock sur votre page d'accueil par de vraies photos. Impact direct sur la confiance.**
-
-## Les micro-interactions ont-elles un impact mesurable sur les conversions ?
-
-Les micro-interactions ont un impact mesurable sur les conversions parce qu'elles guident le visiteur, réduisent l'anxiété au moment de l'action et confirment que quelque chose s'est bien passé. Un bouton qui change de couleur après un clic, un compteur qui s'anime, une validation de formulaire en temps réel : ces petits détails réduisent le taux d'abandon de 10 à 20%.
-
-Micro-interactions à priorité haute pour une PME :
-- Confirmation visuelle immédiate après envoi d'un formulaire
-- Animation au survol des boutons CTA (+15% de clics en moyenne)
-- Compteurs animés sur les chiffres clés de votre page d'accueil
-- État de chargement clair pendant les actions asynchrones
-
-La règle : chaque animation doit informer ou guider, jamais juste décorer.
-
-## Synthèse : quelles tendances adopter selon votre type d'entreprise ?
-
-| Tendance | Artisan / Commerce | PME B2B | Startup / Tech | Durabilité |
-|----------|--------------------|---------|----------------|-----------|
-| Minimalisme | ✅ Recommandé | ✅ Recommandé | ✅ Recommandé | Très élevée |
-| Variable fonts | ✅ Toujours | ✅ Toujours | ✅ Toujours | Élevée |
-| Accessibilité | ✅ Obligatoire | ✅ Obligatoire | ✅ Obligatoire | Permanente |
-| Micro-interactions légères | ✅ Oui | ✅ Oui | ✅ Oui | Élevée |
-| Glassmorphisme / 3D | ❌ Non | ⚠️ Partiel | ✅ Oui | Moyenne |
-| Couleurs saturées | ⚠️ Selon charte | ⚠️ Selon charte | ✅ Oui | Moyenne |
-| Photos authentiques | ✅ Priorité | ✅ Priorité | ✅ Priorité | Permanente |
-| Brutalisme | ❌ Non | ❌ Non | ⚠️ Si créatif | Faible |
-
-## Questions fréquentes sur le design web pour les entreprises
-
-### Faut-il refaire son site pour suivre les tendances design ?
-
-Non, il n'est pas nécessaire de refaire entièrement son site pour suivre les tendances. La plupart des améliorations (contraste, photos, micro-interactions, accessibilité) peuvent être appliquées à un site existant. Une refonte complète se justifie uniquement si le site a plus de 4 ans, utilise des technologies obsolètes ou a un taux de rebond supérieur à 70%.
-
-### Le design d'un site a-t-il un impact sur le référencement Google ?
-
-Oui, le design impacte indirectement le référencement Google via les signaux comportementaux : temps passé sur le site, taux de rebond, pages par session. Un site au design moderne et accessible génère plus d'engagement, ce qui améliore ces signaux. La vitesse de chargement (liée aux choix de design) est, elle, un facteur SEO direct confirmé par Google.
-
-### Combien coûte une modernisation du design d'un site existant ?
-
-Une modernisation partielle du design (couleurs, typographie, CTA, photos) coûte entre 300€ et 1 000€ chez un prestataire qualifié. Une refonte complète de l'interface avec recodage complet coûte entre 1 490€ et 4 000€ pour un site vitrine. Chez ConvertiLab, nous proposons des audits design gratuits avant tout devis.
-
-### Un beau design compense-t-il un mauvais contenu ou un mauvais SEO ?
-
-Non. Le design attire et retient l'attention, mais c'est le contenu qui convainc et le SEO qui amène les visiteurs. Un site magnifique sans trafic et sans contenu utile ne génère aucun client. L'ordre de priorité : SEO local d'abord, contenu de qualité ensuite, design soigné pour convertir. Les trois ensemble font un site performant.
-`
-  },
-  {
     slug: "optimiser-vitesse-site-web",
     title: "Comment accélérer son site web et améliorer son score Google PageSpeed ?",
     seoTitle: "Accélérer son site et son score PageSpeed",
@@ -2359,8 +2217,8 @@ Idéalement oui. Une landing page dédiée à chaque campagne (avec le même mes
   },
   {
     slug: "refonte-site-web-quand-comment",
-    title: "Quand refaire son site web et comment réussir sa refonte sans perdre son SEO ?",
-    seoTitle: "Réussir sa refonte sans perdre son SEO",
+    title: "Quand refaire son site web ? Les signes qui ne trompent pas",
+    seoTitle: "Quand refaire son site web : les signes",
     excerpt: "Un site lent, mal conçu ou trop vieux freine votre croissance en silence. 7 signaux concrets pour savoir si c'est le moment de refaire son site, et la méthode étape par étape pour préserver son référencement pendant la refonte.",
     metaDescription: "Quand refaire son site web et comment réussir sa refonte sans perdre son SEO ? 7 signes + méthodologie complète : redirections 301, audit existant, choix techno.",
     image: "/images/blog/refonte-site-web-quand-comment.png",
@@ -5846,8 +5704,8 @@ Pour les fondamentaux (titres uniques, descriptions de 300 mots, données struct
   },
   {
     slug: "taux-conversion-ameliorer-site",
-    title: "Comment améliorer le taux de conversion de son site pour transformer plus de visiteurs en clients ?",
-    seoTitle: "Améliorer le taux de conversion de son site",
+    title: "Comment améliorer le taux de conversion de son site : les leviers page par page ?",
+    seoTitle: "Taux de conversion : les leviers page par page",
     excerpt: "Votre site recoit du trafic mais ne convertit pas ? Découvrez les techniques CRO (Conversion Rate Optimization) utilisées par les meilleurs sites pour transformer les visiteurs en acheteurs.",
     metaDescription: "12 techniques pour améliorer votre taux de conversion. CRO, A/B testing, UX et psychologie pour convertir plus de visiteurs en clients sur votre site web.",
     image: "/images/blog/taux-conversion-ameliorer-site.png",

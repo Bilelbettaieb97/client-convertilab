@@ -220,6 +220,22 @@ export default async function ComparisonDetailPage({ params }: Props) {
             </div>
           </div>
 
+          {/* Autres comparatifs : chaque comparatif n'avait qu'un lien entrant (depuis /comparatifs). */}
+          <div className="mt-8">
+            <p className="text-sm text-gray-600 mb-2">Nos autres comparatifs :</p>
+            <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              {comparisons
+                .filter((c) => c.slug !== comp.slug)
+                .map((c) => (
+                  <li key={c.slug}>
+                    <Link href={`/comparatifs/${c.slug}`} className="text-purple-600 hover:underline">
+                      {c.title}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
+
           {/* Outil gratuit */}
           <div className="mt-8 p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-100">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">

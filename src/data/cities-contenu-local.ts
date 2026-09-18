@@ -535,6 +535,110 @@ export const CONTENU_LOCAL: Record<string, ContenuLocal> = {
       { question: "Comment apparaître sur « agence web Nancy » ou « kiné Nancy » ?", answer: "Les résultats locaux se jouent sur la fiche d'établissement Google, la régularité des avis et des pages de site dédiées à chaque service et chaque commune. Nous travaillons ces trois points dans notre offre de référencement local." },
     ],
   },
+  strasbourg: {
+    accroche: [
+      "Strasbourg est la ville où l'on nous demande le plus souvent une « création de site web professionnel » : capitale européenne, siège du Parlement et du Conseil de l'Europe, elle concentre des institutions, des associations, des cabinets et des commerces qui ont chacun un public exigeant et souvent bilingue. De la Krutenau à Neudorf, de l'Orangerie au Port du Rhin, les entreprises alsaciennes cherchent un site sur mesure, livré vite, et qui apparaisse sur Google Maps quand un client tape leur métier.",
+      "Nous accompagnons les entreprises de Strasbourg et de l'Eurométropole à distance, en visio, avec un interlocuteur unique et des prix publics. La maquette de votre page d'accueil est offerte sous 48 heures.",
+    ],
+    demandes: [
+      { titre: "Création de site web professionnel à Strasbourg", texte: "Site vitrine de cinq pages à 890 €, design sur mesure, textes relus, hébergement première année inclus. Livré en 7 à 14 jours, maquette gratuite avant tout engagement.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Création et référencement en une seule prestation", texte: "Chaque site est livré avec ses balises, ses pages par service et sa fiche Google reliée. Le référencement local sur « Strasbourg », « Schiltigheim » ou « Illkirch » se construit ensuite, mois après mois, à partir de 500 € par mois.", href: "/services/seo/seo-local", lien: "Découvrir le référencement local" },
+      { titre: "Un site sur mesure, en français et en allemand", texte: "Frontaliers de Kehl, clientèle allemande du centre : une version allemande ajoute 300 € à un site vitrine et double souvent les demandes. Le devis écrit arrive sous 24 heures.", href: "/devis/site-vitrine", lien: "Demander un devis" },
+      { titre: "Refondre un site strasbourgeois sans perdre Google", texte: "Redirections page par page, structure conservée, contenus réécrits avec vous : la refonte à 690 € modernise le site sans repartir de zéro.", href: "/services/sites-web/refonte-site", lien: "Voir l'offre refonte" },
+    ],
+    zones: ["Grande Île, Krutenau et Petite France", "Neudorf, Esplanade et Port du Rhin", "Orangerie, Robertsau et Wacken", "Cronenbourg, Hautepierre et Koenigshoffen", "Schiltigheim et Bischheim", "Illkirch-Graffenstaden et Ostwald", "Lingolsheim, Eckbolsheim et Oberhausbergen", "Haguenau, Sélestat, Obernai et Kehl"],
+    secteurs: [
+      { nom: "Institutions, associations et cabinets", texte: "Le quartier européen et le Wacken font vivre des cabinets de conseil, d'avocats et de traduction, des associations et des ONG : un site sobre, bilingue, avec une page par expertise et un formulaire de contact qui arrive vraiment." },
+      { nom: "Restaurants, winstubs et commerces du centre", texte: "Marché de Noël, touristes toute l'année, clientèle allemande : carte à jour, horaires, réservation, itinéraire depuis le tram. Un site lent ou sans version mobile perd la table." },
+      { nom: "Artisans et bâtiment de l'Eurométropole", texte: "Menuisiers, chauffagistes, couvreurs de Schiltigheim à Illkirch : une page par prestation et par commune, des photos de chantier réelles, un numéro cliquable en haut de page." },
+      { nom: "Santé et bien-être", texte: "Cabinets, ostéopathes, psychologues autour de l'hôpital civil et de Hautepierre : prise de rendez-vous en ligne, pages par soin, avis, fiche Google exacte." },
+    ],
+    faq: [
+      { question: "Combien coûte la création d'un site web professionnel à Strasbourg ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Une version allemande ajoute 300 €. Prix fixes et publics, hébergement première année inclus, paiement en 2 ou 3 fois sans frais ou 39 € par mois sur 24 mois pour un site vitrine." },
+      { question: "Êtes-vous une agence web strasbourgeoise ?", answer: "Non, nous sommes basés à Rueil-Malmaison, près de Paris, et nous travaillons à distance avec nos clients de Strasbourg et du Bas-Rhin, en visio, avec un interlocuteur unique. Le référencement local sur Strasbourg dépend de votre fiche Google et de vos pages, pas de l'adresse de l'agence." },
+      { question: "Quel délai pour un site vitrine à Strasbourg ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite est livrée sous 48 heures." },
+      { question: "Le référencement est-il compris dans la création du site ?", answer: "Le socle oui : balises, structure, vitesse, sitemap, données structurées, fiche Google reliée. Le référencement continu (contenus, avis, liens, pages par commune) est un forfait mensuel séparé, à partir de 500 € par mois sur six mois minimum." },
+      { question: "Pouvez-vous faire un site bilingue français-allemand ?", answer: "Oui. Le site est construit en français puis dupliqué en allemand avec vos traductions ou celles d'un traducteur que nous coordonnons ; chaque langue a ses propres URL et balises pour être trouvée des deux côtés du Rhin." },
+    ],
+  },
+  lyon: {
+    accroche: [
+      "Lyon est le deuxième marché de France pour la création de sites internet, et l'un des plus disputés : des centaines d'agences web y sont installées, de la Part-Dieu à Confluence, et les entreprises lyonnaises comparent avant de signer. Les recherches que nous voyons parlent de « création site internet Lyon », de boutique en ligne et de site vitrine, souvent avec un budget précis en tête et l'envie d'être livré vite.",
+      "Nous travaillons avec les entreprises de Lyon, de Villeurbanne et de la métropole à distance, en visio, avec un interlocuteur unique et des prix publics affichés avant le premier appel. La maquette de votre page d'accueil est offerte sous 48 heures.",
+    ],
+    demandes: [
+      { titre: "Création de site internet à Lyon, prix affichés", texte: "Site vitrine de cinq pages à 890 €, refonte à 690 €, landing page à 490 € : le prix est le même pour tout le monde et il est écrit avant le devis. Design sur mesure, hébergement première année inclus.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+      { titre: "Une boutique en ligne pour vendre au-delà de la Presqu'île", texte: "Créateurs, épiceries fines, ateliers : boutique à partir de 1 490 € avec paiement, livraison, fiches produits optimisées et relances automatiques des paniers abandonnés.", href: "/services/sites-web/site-ecommerce", lien: "Voir l'offre e-commerce" },
+      { titre: "Une agence de création de site web qui suit les résultats", texte: "Tableau de bord partagé, formulaire relié à votre CRM, fiche Google reliée au site : vous savez d'où vient chaque demande. Compte publicitaire à votre nom si vous lancez Google Ads.", href: "/services/crm", lien: "Découvrir le suivi des demandes" },
+      { titre: "Référencer un site lyonnais sur ses quartiers", texte: "Pages par arrondissement et par commune (Villeurbanne, Vénissieux, Caluire), fiche Google, avis, contenus mensuels : le forfait SEO local démarre à 500 € par mois.", href: "/services/seo/seo-local", lien: "Découvrir le référencement local" },
+    ],
+    zones: ["Presqu'île, Terreaux et Bellecour", "Part-Dieu, Brotteaux et Villette", "Confluence et Perrache", "Croix-Rousse et Vaise", "Gerland et Monplaisir", "Villeurbanne et Caluire-et-Cuire", "Vénissieux, Bron et Saint-Priest", "Écully, Tassin et l'Ouest lyonnais"],
+    secteurs: [
+      { nom: "Restauration et bouchons", texte: "La clientèle décide sur mobile entre deux adresses : carte, horaires, réservation, photos réelles, itinéraire depuis le métro. Un site à jour et une fiche Google soignée remplissent la salle en semaine." },
+      { nom: "Industrie, chimie et sous-traitance", texte: "De la Vallée de la chimie à Saint-Priest, les acheteurs consultent le site d'un fournisseur avant de le rappeler : capacités, certifications, références, contact direct, sans effets inutiles." },
+      { nom: "Santé, biotech et cabinets", texte: "Gerland, Lyon-Sud, les cliniques de la métropole : prise de rendez-vous, pages par soin, mentions obligatoires, fiche Google exacte." },
+      { nom: "Immobilier et bâtiment", texte: "Agences, promoteurs, artisans : pages par quartier et par prestation, formulaire d'estimation, photos de chantier, avis clients relayés." },
+    ],
+    faq: [
+      { question: "Combien coûte la création d'un site internet à Lyon ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Prix fixes, publics, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou 39 € par mois sur 24 mois pour un site vitrine." },
+      { question: "Êtes-vous une agence web lyonnaise ?", answer: "Non, nous sommes basés à Rueil-Malmaison, près de Paris, et nous travaillons à distance avec nos clients de Lyon et du Rhône, en visio, avec un interlocuteur unique. Le référencement de votre site sur Lyon dépend de vos pages et de votre fiche Google, pas de l'adresse de l'agence." },
+      { question: "Quel délai pour un site vitrine à Lyon ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite est livrée sous 48 heures." },
+      { question: "Pouvez-vous créer une boutique en ligne pour un commerce lyonnais ?", answer: "Oui, à partir de 1 490 € : catalogue, paiement sécurisé, livraison ou retrait en boutique, fiches produits rédigées pour Google et relances automatiques des paniers abandonnés. Vous gérez ensuite vos produits vous-même." },
+      { question: "Comment se passe le suivi à distance ?", answer: "Un appel de cadrage en visio, une maquette sous 48 heures, puis des points courts par visio ou par email à chaque étape. Vous avez un seul interlocuteur du premier appel à la mise en ligne, et après." },
+    ],
+  },
+  bordeaux: {
+    accroche: [
+      "À Bordeaux, les recherches qui nous parviennent ne demandent pas seulement un site : elles demandent un audit. « Audit site vitrine Bordeaux », « audit site marchand », « agence web SEM Bordeaux » : les entreprises girondines ont déjà un site, souvent depuis des années, et veulent savoir ce qu'il vaut avant de dépenser. Négoce et vin, tourisme, commerces des Chartrons à Saint-Michel, PME de Mérignac et de Pessac : chacun a un site à faire travailler.",
+      "Nous accompagnons les entreprises de Bordeaux et de Gironde à distance, en visio, avec un interlocuteur unique et des prix publics. L'audit de votre site est gratuit et immédiat, la maquette d'une nouvelle page d'accueil est offerte sous 48 heures.",
+    ],
+    demandes: [
+      { titre: "Un audit gratuit de votre site vitrine ou marchand", texte: "Vitesse, mobile, balises, données structurées, positions : un rapport en 60 secondes, puis un échange en visio pour décider ce qui vaut la peine d'être corrigé. Sans engagement.", href: "/seo-check", lien: "Lancer l'audit gratuit" },
+      { titre: "Une agence web SEM : Google Ads et référencement ensemble", texte: "Campagnes Google Ads sur vos requêtes exactes, compte à votre nom, tableau de bord partagé, et un socle SEO pour que les clics deviennent moins chers avec le temps.", href: "/services/sea/google-ads", lien: "Découvrir Google Ads" },
+      { titre: "Refondre un site bordelais qui a vieilli", texte: "Redirections, structure conservée, contenus réécrits avec vous : la refonte à 690 € remet le site au niveau sans perdre les positions acquises.", href: "/services/sites-web/refonte-site", lien: "Voir l'offre refonte" },
+      { titre: "Un site vitrine pour une PME de Gironde", texte: "Cinq pages à 890 €, design sur mesure, hébergement première année inclus, livré en 7 à 14 jours. Formulaire relié à votre CRM pour ne perdre aucune demande.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+    ],
+    zones: ["Chartrons, Jardin public et Bacalan", "Saint-Pierre, Saint-Michel et Victoire", "Bastide et Euratlantique", "Caudéran et Mériadeck", "Mérignac et Pessac", "Talence, Bègles et Villenave-d'Ornon", "Le Bouscat, Bruges et Eysines", "Libourne, Arcachon et le Bassin"],
+    secteurs: [
+      { nom: "Vin, négoce et œnotourisme", texte: "Châteaux, négociants, cavistes : un site qui présente les cuvées, prend les réservations de visite et vend en ligne aux particuliers, avec les mentions légales propres à l'alcool." },
+      { nom: "Tourisme, hébergement et restauration", texte: "Du centre classé au Bassin d'Arcachon, la clientèle réserve sur mobile : disponibilités, photos réelles, avis, itinéraire. Un site lent perd la réservation." },
+      { nom: "Commerces et e-commerce", texte: "Boutiques des Chartrons, concept stores, marques nées à Bordeaux : catalogue, paiement, livraison, fiches produits rédigées pour Google, relances de paniers." },
+      { nom: "PME, services et bâtiment", texte: "Mérignac, Pessac, Bègles : bureaux d'études, artisans, services aux entreprises. Une page par prestation, des références, un formulaire qui arrive vraiment." },
+    ],
+    faq: [
+      { question: "L'audit de site est-il vraiment gratuit ?", answer: "Oui. L'outil analyse votre site en 60 secondes (vitesse, mobile, balises, données structurées) et vous envoie le rapport. Si vous souhaitez ensuite un audit approfondi avec vos positions et vos concurrents, il est chiffré à part et déduit du devis si vous nous confiez les corrections." },
+      { question: "Combien coûte un site internet à Bordeaux ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Prix fixes, publics, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou 39 € par mois sur 24 mois pour un site vitrine." },
+      { question: "Êtes-vous une agence web bordelaise ?", answer: "Non, nous sommes basés à Rueil-Malmaison, près de Paris, et nous travaillons à distance avec nos clients de Bordeaux et de Gironde, en visio, avec un interlocuteur unique. Les résultats sur Google dépendent de votre site et de votre fiche, pas de l'adresse de l'agence." },
+      { question: "Que veut dire « agence SEM » chez vous ?", answer: "Le SEM regroupe la publicité sur les moteurs (Google Ads) et le référencement naturel. Nous faisons les deux, avec un compte publicitaire à votre nom, un tableau de bord partagé et un coût par demande suivi chaque mois." },
+      { question: "Quel délai pour un site vitrine à Bordeaux ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite est livrée sous 48 heures." },
+    ],
+  },
+  nice: {
+    accroche: [
+      "À Nice et dans les Alpes-Maritimes, on nous demande d'abord un devis : « devis site internet Nice », « devis référencement », « devis site e-commerce ». Le marché est saisonnier et concurrentiel, du Vieux-Nice à Cimiez, de l'Arénas à Saint-Laurent-du-Var, et les entreprises veulent un chiffre clair avant de s'engager. C'est pour cela que nos prix sont publics et que le devis écrit arrive sous 24 heures.",
+      "Nous accompagnons les entreprises de Nice, de la Côte d'Azur et de Monaco à distance, en visio, avec un interlocuteur unique. La maquette de votre page d'accueil est offerte sous 48 heures.",
+    ],
+    demandes: [
+      { titre: "Un devis de site internet à Nice sous 24 heures", texte: "Décrivez votre projet en trois étapes : une fourchette s'affiche immédiatement, le devis écrit suit sous 24 heures. Site vitrine 890 €, refonte 690 €, landing page 490 €.", href: "/estimation-prix-site-web", lien: "Estimer mon prix" },
+      { titre: "Un devis référencement pour être trouvé sur la Côte", texte: "Fiche Google, pages par quartier et par commune (Cagnes, Antibes, Menton), avis, contenus mensuels : le forfait SEO local démarre à 500 € par mois, six mois minimum, et le devis détaille chaque poste.", href: "/devis/seo", lien: "Demander un devis SEO" },
+      { titre: "Une boutique en ligne pour vendre hors saison", texte: "Créateurs, produits du terroir, cosmétiques : boutique à partir de 1 490 € avec paiement, livraison et fiches produits rédigées pour Google. Le devis e-commerce arrive sous 24 heures.", href: "/devis/site-ecommerce", lien: "Demander un devis e-commerce" },
+      { titre: "Un site pour un professionnel des Alpes-Maritimes", texte: "Site vitrine de cinq pages à 890 €, design sur mesure, version anglaise possible pour la clientèle internationale, hébergement première année inclus.", href: "/services/sites-web/site-vitrine", lien: "Voir l'offre site vitrine" },
+    ],
+    zones: ["Vieux-Nice, Port et Garibaldi", "Carré d'Or, Jean-Médecin et Libération", "Cimiez, Riquier et Pasteur", "Arénas, Saint-Isidore et Nice Ouest", "Saint-Laurent-du-Var et Cagnes-sur-Mer", "Antibes, Sophia Antipolis et Cannes", "Villefranche, Beaulieu et Monaco", "Grasse, Menton et l'arrière-pays"],
+    secteurs: [
+      { nom: "Tourisme, hôtellerie et location saisonnière", texte: "La réservation se fait sur mobile, souvent en anglais : disponibilités, photos réelles, avis, itinéraire depuis l'aéroport. Un site bilingue et rapide remplit la basse saison." },
+      { nom: "Restaurants et commerces du centre", texte: "Vieux-Nice, Libération, le Port : carte, horaires, réservation, fiche Google exacte. La clientèle de passage décide en quelques secondes." },
+      { nom: "Immobilier et conciergerie", texte: "Agences, gestionnaires, conciergeries de Nice à Menton : pages par quartier, biens à jour, formulaire d'estimation, version anglaise." },
+      { nom: "Santé, bien-être et esthétique", texte: "Cabinets, instituts, cliniques de Cimiez et de Saint-Laurent : prise de rendez-vous en ligne, pages par soin, avis, mentions obligatoires." },
+    ],
+    faq: [
+      { question: "Comment obtenir un devis de site internet à Nice ?", answer: "Le simulateur donne une fourchette immédiate à partir de nos prix publics ; le devis écrit et détaillé arrive sous 24 heures après un échange de quelques minutes. Il est gratuit et sans engagement." },
+      { question: "Combien coûte un site internet à Nice ?", answer: "Landing page 490 €, site vitrine 890 €, refonte 690 €, boutique en ligne à partir de 1 490 €. Une version anglaise ajoute 300 €. Prix fixes, publics, hébergement première année inclus. Paiement en 2 ou 3 fois sans frais, ou 39 € par mois sur 24 mois pour un site vitrine." },
+      { question: "Êtes-vous une agence web niçoise ?", answer: "Non, nous sommes basés à Rueil-Malmaison, près de Paris, et nous travaillons à distance avec nos clients de Nice, des Alpes-Maritimes et de Monaco, en visio, avec un interlocuteur unique. Les résultats sur Google dépendent de votre site et de votre fiche, pas de l'adresse de l'agence." },
+      { question: "Que comprend un devis référencement ?", answer: "L'audit de départ, les pages à créer par service et par commune, la fiche Google, la collecte d'avis, les contenus mensuels et le suivi des positions. Le forfait démarre à 500 € par mois sur six mois minimum, et chaque poste est écrit dans le devis." },
+      { question: "Quel délai pour un site vitrine à Nice ?", answer: "7 à 14 jours après réception de vos textes et photos. Une landing page prend 5 à 10 jours, une boutique en ligne 14 à 21 jours. La maquette gratuite est livrée sous 48 heures." },
+    ],
+  },
 };
 
 export function getContenuLocal(slug: string): ContenuLocal | null {

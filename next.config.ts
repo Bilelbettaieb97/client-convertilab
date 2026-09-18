@@ -34,6 +34,13 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Doublon de /blog/design-web-tendances-2026 (même sujet, 0 impression en 90 jours) :
+      // l'article de 2024 est retiré et fusionné, l'URL redirige vers celui qui se positionne.
+      {
+        source: "/blog/tendances-web-design-2024",
+        destination: "/blog/design-web-tendances-2026",
+        permanent: true,
+      },
       // Le hub /etude-de-cas renvoyait un 404 alors que le sitemap le référence :
       // on le redirige vers /portfolio (le vrai hub des réalisations) pour aligner
       // sitemap et architecture, et éviter les "Découverte, non indexée" en amont.

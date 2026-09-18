@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 import ReferencementContent, { FAQ, FIL, URL_PAGE, pole } from "./ReferencementContent";
 
 // Le gabarit du layout ajoute « | ConvertiLab » : 44 + 14 = 58 caractères.
-const TITRE = "Référencement SEO Paris : le forfait mensuel";
+const TITRE = "Agence de référencement naturel : forfait mensuel";
 const DESCRIPTION =
   "Référencement naturel à Paris et Rueil-Malmaison : audit, technique, contenus, liens, fiche Google, visibilité IA. Forfait dès 500 €/mois, 6 mois minimum.";
 

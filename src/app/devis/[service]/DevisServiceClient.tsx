@@ -7,7 +7,8 @@ import { supabase } from "@/lib/supabase/client";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
-import { getDevisServiceBySlug, getAllDevisServiceSlugs } from "@/data/devis-pages";
+import { getDevisServiceBySlug, getAllDevisServiceSlugs, devisServices } from "@/data/devis-pages";
+import { pricingPages } from "@/data/pricing-pages";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -590,6 +591,30 @@ export default function DevisServicePage() {
                     </div>
                   </details>
                 ))}
+              </div>
+
+              {/* Maillage : la page prix jumelle et les autres devis (chaque page /devis
+                  n'avait qu'un ou deux liens entrants). */}
+              <div className="mt-10 text-sm">
+                {pricingPages.some((p) => p.slug === devisService.slug) && (
+                  <p className="mb-3">
+                    <Link href={`/prix/${devisService.slug}`} className="text-purple-600 hover:underline font-medium">
+                      Voir la grille de prix détaillée : {devisService.name}
+                    </Link>
+                  </p>
+                )}
+                <p className="text-slate-600 dark:text-slate-400 mb-2">Nos autres devis :</p>
+                <ul className="flex flex-wrap gap-x-4 gap-y-1">
+                  {devisServices
+                    .filter((d) => d.slug !== devisService.slug)
+                    .map((d) => (
+                      <li key={d.slug}>
+                        <Link href={`/devis/${d.slug}`} className="text-purple-600 hover:underline">
+                          {d.name}
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
               </div>
             </div>
           </div>

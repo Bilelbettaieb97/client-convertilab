@@ -208,7 +208,7 @@ export default function CookieBanner() {
                     <p className="text-xs sm:text-sm text-gray-600 leading-snug sm:leading-relaxed">
                       <span className="hidden sm:inline">Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu. </span>
                       <span className="sm:hidden">Mesure d&apos;audience et publicité, rien d&apos;autre. </span>
-                      <Link href="/politique-de-cookies" className="text-purple-600 font-medium hover:underline">
+                      <Link href="/politique-de-cookies" prefetch={false} className="text-purple-600 font-medium hover:underline">
                         Politique de cookies
                       </Link>
                     </p>

@@ -182,6 +182,29 @@ const features = [
   },
 ];
 
+/** Résultat réel de src/lib/seo/analyzer.ts sur le site d'un chauffagiste (18/09/2026), nom masqué. */
+const EXEMPLE_RAPPORT = {
+  score: 62,
+  grade: "C",
+  categories: [
+    { nom: "SEO technique", score: 85 },
+    { nom: "SEO on-page", score: 65 },
+    { nom: "Données structurées", score: 5 },
+    { nom: "Compatibilité mobile", score: 80 },
+    { nom: "Qualité du contenu", score: 40 },
+    { nom: "Visibilité IA (GEO)", score: 30 },
+    { nom: "Performance", score: 90 },
+    { nom: "Sécurité", score: 100 },
+  ],
+  problemes: [
+    { titre: "Aucune balise H1 détectée sur la page d'accueil", priorite: "critique" },
+    { titre: "Aucun schéma JSON-LD : Google ne sait pas qu'il s'agit d'une entreprise locale", priorite: "critique" },
+    { titre: "Balise canonical manquante", priorite: "important" },
+    { titre: "Contenu insuffisant : moins de 300 mots sur la page d'accueil", priorite: "important" },
+    { titre: "4 robots IA non configurés dans robots.txt", priorite: "recommandé" },
+  ],
+};
+
 export default function SeoCheckPage() {
   return (
     <>
@@ -252,6 +275,55 @@ export default function SeoCheckPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Exemple réel de rapport : ce que l'outil renvoie, avant même de le lancer.
+            Résultat de l'analyseur du site sur le site d'un chauffagiste, le 18/09/2026. */}
+        <section className="py-20 px-4 border-t border-white/5">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-white text-center mb-3">
+              À quoi ressemble le rapport
+            </h2>
+            <p className="text-white/40 text-center mb-10 text-sm">
+              Exemple réel : le site d&apos;un chauffagiste analysé le 18 septembre 2026 (nom masqué).
+            </p>
+            <div className="grid md:grid-cols-[200px_1fr] gap-6 items-start">
+              <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 text-center">
+                <p className="text-white/40 text-xs uppercase tracking-wide mb-2">Score global</p>
+                <p className="text-5xl font-black text-white">{EXEMPLE_RAPPORT.score}<span className="text-lg text-white/40">/100</span></p>
+                <p className="mt-2 inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-sm font-semibold">Note {EXEMPLE_RAPPORT.grade}</p>
+                <p className="text-white/40 text-xs mt-3">{EXEMPLE_RAPPORT.problemes.length} problèmes détectés</p>
+              </div>
+              <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6">
+                <ul className="space-y-2.5 mb-6">
+                  {EXEMPLE_RAPPORT.categories.map((c) => (
+                    <li key={c.nom} className="flex items-center gap-3 text-sm">
+                      <span className="w-40 shrink-0 text-white/70">{c.nom}</span>
+                      <span className="flex-1 h-2 rounded-full bg-white/10 overflow-hidden">
+                        <span
+                          className={`block h-full rounded-full ${c.score >= 80 ? "bg-emerald-400" : c.score >= 50 ? "bg-amber-400" : "bg-red-400"}`}
+                          style={{ width: `${c.score}%` }}
+                        />
+                      </span>
+                      <span className="w-10 text-right text-white/60 tabular-nums">{c.score}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-white/40 text-xs uppercase tracking-wide mb-2">Problèmes à corriger en priorité</p>
+                <ul className="space-y-1.5 text-sm">
+                  {EXEMPLE_RAPPORT.problemes.map((pb) => (
+                    <li key={pb.titre} className="flex items-start gap-2 text-white/70">
+                      <span className={`mt-1.5 w-2 h-2 rounded-full shrink-0 ${pb.priorite === "critique" ? "bg-red-400" : pb.priorite === "important" ? "bg-amber-400" : "bg-sky-400"}`} />
+                      <span>{pb.titre}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p className="text-white/40 text-xs text-center mt-6">
+              Le rapport PDF ajoute, pour chaque problème, une explication et la correction à appliquer.
+            </p>
           </div>
         </section>
 

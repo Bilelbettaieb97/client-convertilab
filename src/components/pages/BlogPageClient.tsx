@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, ArrowRight, Rocket, CheckCircle, Clock, Flame } from "lucide-react";
 import { supabase } from "@/lib/supabase/client";
-import { blogArticles as staticArticles } from "@/data/blog-articles";
 import type { BlogArticle } from "@/data/blog-articles";
 
 // Articles mis en avant manuellement — les plus stratégiques pour la conversion et le SEO
@@ -25,9 +24,11 @@ const FEATURED_SLUGS = [
   "landing-page-convertir-visiteurs",
 ];
 
+const CARTES_MAX = 24;
+
 const categories = ["Tous", "Création de sites web", "Publicité", "SEO", "CRM", "Business", "Web Design", "E-commerce", "Design", "Technique", "Performance", "Juridique", "Stratégie", "Analyse"];
 
-export default function BlogPageClient() {
+export default function BlogPageClient({ articles: staticArticles }: { articles: BlogArticle[] }) {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
   const [searchQuery, setSearchQuery] = useState("");
   const [newsletterEmail, setNewsletterEmail] = useState("");
@@ -327,7 +328,7 @@ export default function BlogPageClient() {
               {/* Articles Grid */}
               {otherArticles.length > 0 && (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {otherArticles.map((article, index) => (
+                  {otherArticles.slice(0, CARTES_MAX).map((article, index) => (
                     <div key={article.slug}>
                       <BlogCard article={article} />
                       {/* Lead magnet after 3rd article */}
@@ -375,6 +376,24 @@ export default function BlogPageClient() {
                       )}
                     </div>
                   ))}
+                </div>
+              )}
+
+              {/* Au-delà des vignettes : liste compacte, tous les articles restent liés dans le HTML
+                  sans tripler le DOM de la page (3 440 éléments mesurés avec 96 vignettes). */}
+              {otherArticles.length > CARTES_MAX && (
+                <div className="mt-12">
+                  <h2 className="text-xl font-bold text-foreground mb-4">Tous les autres articles</h2>
+                  <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2">
+                    {otherArticles.slice(CARTES_MAX).map((article) => (
+                      <li key={article.slug} className="text-sm">
+                        <Link href={`/blog/${article.slug}`} className="text-foreground hover:text-primary hover:underline">
+                          {article.title}
+                        </Link>
+                        <span className="text-muted-foreground"> · {article.category}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
             </>

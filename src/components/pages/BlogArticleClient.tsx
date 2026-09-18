@@ -18,6 +18,9 @@ import React from "react";
 interface Props {
   article: FullBlogArticle;
   relatedArticles: BlogArticle[];
+  /** Voisins dans l'ordre de publication : deux liens entrants garantis par article. */
+  precedent?: { slug: string; title: string } | null;
+  suivant?: { slug: string; title: string } | null;
 }
 
 /** Ancre d'un titre : « Combien coûte un CRM ? » → « combien-coute-un-crm ». */
@@ -253,7 +256,7 @@ function renderInline(text: string): React.ReactNode {
   return parts.length === 1 ? parts[0] : <>{parts}</>;
 }
 
-export default function BlogArticleClient({ article, relatedArticles }: Props) {
+export default function BlogArticleClient({ article, relatedArticles, precedent = null, suivant = null }: Props) {
   const router = useRouter();
 
   const shareUrl = `https://www.convertilab.com/blog/${article.slug}`;
@@ -541,6 +544,20 @@ export default function BlogArticleClient({ article, relatedArticles }: Props) {
                   <BlogCard key={relatedArticle.slug} article={relatedArticle} />
                 ))}
               </div>
+              {(precedent || suivant) && (
+                <nav aria-label="Autres articles" className="max-w-6xl mx-auto mt-10 flex flex-col sm:flex-row justify-between gap-4 text-sm">
+                  {precedent ? (
+                    <Link href={`/blog/${precedent.slug}`} className="text-primary hover:underline max-w-md">
+                      ← {precedent.title}
+                    </Link>
+                  ) : <span />}
+                  {suivant && (
+                    <Link href={`/blog/${suivant.slug}`} className="text-primary hover:underline max-w-md sm:text-right">
+                      {suivant.title} →
+                    </Link>
+                  )}
+                </nav>
+              )}
             </div>
           </div>
         )}

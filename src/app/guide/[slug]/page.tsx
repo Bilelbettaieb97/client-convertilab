@@ -278,6 +278,22 @@ export default async function GuidePage({ params }: PageProps) {
                 </div>
               )}
 
+              {/* Simulateur de prix : le guide « devis » explique comment lire un devis, l'outil donne le chiffre.
+                  Une seule page cible pour « prix / devis site web » (cannibalisation mesurée sur 10 requêtes). */}
+              {(slug === "devis-site-web" || slug === "creer-site-internet" || slug === "refonte-site-web") && (
+                <div className="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-100">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                      <p className="font-bold text-slate-900">Estimez le prix de votre site en 2 minutes</p>
+                      <p className="text-sm text-slate-600">Une fourchette affichée immédiatement, à partir de la grille publique</p>
+                    </div>
+                    <Link href="/estimation-prix-site-web" className="inline-flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 whitespace-nowrap">
+                      Simuler mon prix <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+
               {/* Mentions legales — guides contenant "site-internet" */}
               {slug.includes("site-internet") && (
                 <div className="p-6 bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl border border-gray-200">
