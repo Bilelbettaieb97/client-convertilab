@@ -32,11 +32,73 @@ function ancre(titre: string): string {
 }
 
 /** Safe markdown-like renderer -- no dangerouslySetInnerHTML for user content */
+/** Cellules d'une ligne de tableau markdown « | a | b | » (pipes de bordure retirés). */
+function cellules(ligne: string): string[] {
+  return ligne.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((c) => c.trim());
+}
+
+/** Tableau markdown : une ligne d'en-tête, une ligne de séparation « |---|---| », puis les lignes. */
+function renderTable(lignes: string[], key: number): React.ReactNode {
+  const corps = lignes.filter((l) => !/^\|?\s*:?-{2,}/.test(l.trim()));
+  if (corps.length === 0) return null;
+  const [entete, ...rangs] = corps.map(cellules);
+  return (
+    <div key={key} className="my-8 overflow-x-auto rounded-2xl border border-border">
+      <table className="w-full text-sm sm:text-base border-collapse">
+        <thead className="bg-muted/60">
+          <tr>
+            {entete.map((c, i) => (
+              <th key={i} className="px-4 py-3 text-left font-semibold text-foreground align-top">
+                {renderInline(c)}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rangs.map((r, i) => (
+            <tr key={i} className="border-t border-border align-top">
+              {entete.map((_, j) => (
+                <td key={j} className="px-4 py-3 text-muted-foreground leading-relaxed">
+                  {renderInline(r[j] ?? "")}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function formatContent(content: string): React.ReactNode[] {
   const lignes = content.split("\n");
   // Sommaire : les H2 de l'article (une ligne « [[sommaire]] » dans le contenu l'affiche à cet endroit).
   const titresH2 = lignes.filter((l) => l.startsWith("## ")).map((l) => l.replace("## ", "").trim());
-  return lignes.map((line, index) => {
+  const sortie: React.ReactNode[] = [];
+  let index = 0;
+  while (index < lignes.length) {
+    const line = lignes[index];
+    // Tableau : lignes consécutives qui commencent par « | »
+    if (line.trim().startsWith("|")) {
+      const debut = index;
+      while (index < lignes.length && lignes[index].trim().startsWith("|")) index++;
+      sortie.push(renderTable(lignes.slice(debut, index), debut));
+      continue;
+    }
+    // Filet horizontal
+    if (/^-{3,}$/.test(line.trim())) {
+      sortie.push(<hr key={index} className="my-10 border-border" />);
+      index++;
+      continue;
+    }
+    sortie.push(formatLine(line, index, titresH2));
+    index++;
+  }
+  return sortie;
+}
+
+function formatLine(line: string, index: number, titresH2: string[]): React.ReactNode {
+  {
     // Headers (avec ancre, pour le sommaire et les liens profonds)
     if (line.startsWith("## ")) {
       const texte = line.replace("## ", "").trim();
@@ -136,7 +198,7 @@ function formatContent(content: string): React.ReactNode[] {
         {renderInline(line)}
       </p>
     );
-  });
+  }
 }
 
 /** Render bold and links safely without dangerouslySetInnerHTML */
@@ -220,18 +282,21 @@ export default function BlogArticleClient({ article, relatedArticles }: Props) {
         </div>
 
         {/* Hero */}
-        <div className="relative h-[50vh] min-h-[400px] overflow-hidden">
-          <Image
-            src={article.image}
-            alt={`${article.title}`}
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
+        <div className="relative overflow-hidden bg-[#0b0714]">
+          {/* Fond de marque : la couverture (carte-titre) sert aux partages et à la liste du blog, pas ici, sinon le titre apparaît deux fois */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#2a1350] via-[#0b0714] to-[#0b0714]" />
+          <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-violet-600/30 blur-3xl" />
+          <div className="absolute -bottom-32 right-0 h-[28rem] w-[28rem] rounded-full bg-pink-600/20 blur-3xl" />
+          <div
+            className="absolute inset-0 opacity-[0.07]"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
+              backgroundSize: "48px 48px",
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-12">
+          <div className="relative p-6 sm:p-12 pt-10 sm:pt-14">
             <div className="container mx-auto max-w-4xl">
               <Button
                 variant="ghost"
@@ -259,6 +324,12 @@ export default function BlogArticleClient({ article, relatedArticles }: Props) {
                     year: "numeric",
                   })}
                 </span>
+                {article.updatedAt && article.updatedAt.slice(0, 10) !== article.publishedAt.slice(0, 10) && (
+                  <span className="flex items-center gap-2">
+                    Mis à jour le{" "}
+                    {new Date(article.updatedAt).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
+                  </span>
+                )}
                 <span className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
                   {article.readTime} de lecture

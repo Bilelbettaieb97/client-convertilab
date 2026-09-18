@@ -29,7 +29,7 @@ const servicesByCategory: Record<string, ServiceLink[]> = {
     { icon: <Search className="w-5 h-5" />, title: "Intégration IA", description: "Le travail répétitif confié à Claude", href: "/services/integration-ia" },
   ],
   Business: [
-    { icon: <FileText className="w-5 h-5" />, title: "Site Vitrine", description: "Présentez votre activité dès 490€", href: "/services/sites-web/site-vitrine" },
+    { icon: <FileText className="w-5 h-5" />, title: "Site Vitrine", description: "Présentez votre activité, 890 €", href: "/services/sites-web/site-vitrine" },
     { icon: <Rocket className="w-5 h-5" />, title: "Landing Page", description: "Convertissez vos visiteurs à partir de 490€", href: "/services/sites-web/landing-page" },
   ],
   "Web Design": [

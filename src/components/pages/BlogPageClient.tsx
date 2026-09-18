@@ -129,36 +129,37 @@ export default function BlogPageClient() {
               </div>
 
               <div className="grid lg:grid-cols-5 gap-6">
-                {/* Hero article — colonne gauche 3/5 */}
+                {/* Hero article : couverture en haut, texte en dessous (les couvertures portent déjà le titre) */}
                 {featuredArticles[0] && (
                   <Link
                     href={`/blog/${featuredArticles[0].slug}`}
-                    className="lg:col-span-3 group relative rounded-2xl overflow-hidden shadow-lg border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col min-h-[360px]"
+                    className="lg:col-span-3 group flex flex-col rounded-2xl overflow-hidden shadow-lg border border-border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
                   >
-                    <Image
-                      src={featuredArticles[0].image}
-                      alt={featuredArticles[0].title}
-                      fill
-                      priority
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 1024px) 100vw, 60vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                    <div className="relative mt-auto p-6 text-white">
+                    <div className="relative aspect-[1200/630] overflow-hidden bg-[#0b0714]">
+                      <Image
+                        src={featuredArticles[0].image}
+                        alt={featuredArticles[0].title}
+                        fill
+                        priority
+                        className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                        sizes="(max-width: 1024px) 100vw, 60vw"
+                      />
+                    </div>
+                    <div className="p-6">
                       <Badge className="mb-3 bg-purple-600 text-white border-0 text-xs">
                         {featuredArticles[0].category}
                       </Badge>
-                      <h3 className="text-xl sm:text-2xl font-bold leading-tight mb-2 group-hover:text-purple-300 transition-colors">
+                      <h3 className="text-xl sm:text-2xl font-bold leading-tight mb-2 text-foreground group-hover:text-primary transition-colors">
                         {featuredArticles[0].title}
                       </h3>
-                      <p className="text-sm text-white/70 line-clamp-2 mb-3">
+                      <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
                         {featuredArticles[0].excerpt}
                       </p>
-                      <div className="flex items-center gap-3 text-xs text-white/60">
+                      <div className="flex items-center gap-3 text-xs text-muted-foreground">
                         <span className="flex items-center gap-1">
                           <Clock className="w-3 h-3" /> {featuredArticles[0].readTime}
                         </span>
-                        <span className="inline-flex items-center gap-1 text-purple-300 font-semibold">
+                        <span className="inline-flex items-center gap-1 text-primary font-semibold">
                           Lire l&apos;article <ArrowRight className="w-3 h-3" />
                         </span>
                       </div>
@@ -166,32 +167,33 @@ export default function BlogPageClient() {
                   </Link>
                 )}
 
-                {/* Colonne droite 2/5 — 2 articles empilés */}
+                {/* Colonne droite 2/5 : 2 articles empilés, même principe */}
                 <div className="lg:col-span-2 flex flex-col gap-6">
                   {featuredArticles.slice(1, 3).map((article) => (
                     <Link
                       key={article.slug}
                       href={`/blog/${article.slug}`}
-                      className="group relative rounded-2xl overflow-hidden shadow-md border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col flex-1 min-h-[160px]"
+                      className="group flex flex-col rounded-2xl overflow-hidden shadow-md border border-border bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
                     >
-                      <Image
-                        src={article.image}
-                        alt={article.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        sizes="(max-width: 1024px) 100vw, 40vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                      <div className="relative mt-auto p-4 text-white">
-                        <Badge className="mb-2 bg-white/20 text-white border-0 text-xs backdrop-blur-sm">
+                      <div className="relative aspect-[1200/630] overflow-hidden bg-[#0b0714]">
+                        <Image
+                          src={article.image}
+                          alt={article.title}
+                          fill
+                          className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                          sizes="(max-width: 1024px) 100vw, 40vw"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <Badge className="mb-2 bg-muted text-foreground border-0 text-xs">
                           {article.category}
                         </Badge>
-                        <h3 className="text-sm sm:text-base font-bold leading-tight group-hover:text-purple-300 transition-colors line-clamp-2">
+                        <h3 className="text-sm sm:text-base font-bold leading-tight text-foreground group-hover:text-primary transition-colors line-clamp-2">
                           {article.title}
                         </h3>
-                        <div className="flex items-center gap-2 mt-2 text-xs text-white/60">
+                        <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
                           <Clock className="w-3 h-3" /> {article.readTime}
-                          <span className="ml-auto text-purple-300 font-semibold flex items-center gap-1">
+                          <span className="ml-auto text-primary font-semibold flex items-center gap-1">
                             Lire <ArrowRight className="w-3 h-3" />
                           </span>
                         </div>

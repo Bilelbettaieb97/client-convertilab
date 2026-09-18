@@ -12,7 +12,7 @@ export interface ArticleInternalLinks {
 
 export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
   "pourquoi-site-web-indispensable-2024": {
-    primary: { title: "Création de site vitrine", description: "Site professionnel en 2 semaines dès 490€, satisfait ou remboursé.", href: "/services/sites-web/site-vitrine", cta: "Voir nos offres" },
+    primary: { title: "Création de site vitrine", description: "Site professionnel en 7 à 14 jours, 890 €, maquette gratuite avant engagement.", href: "/services/sites-web/site-vitrine", cta: "Voir nos offres" },
     secondary: { title: "Estimation de prix", description: "Calculez le coût de votre site en 2 minutes.", href: "/estimation-prix-site-web", cta: "Estimer mon projet" },
   },
   "erreurs-site-web-eviter": {
@@ -72,7 +72,7 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
     secondary: { title: "Voir nos réalisations", description: "Portfolio de sites créés pour nos clients.", href: "/portfolio", cta: "Voir le portfolio" },
   },
   "site-vitrine-vs-site-ecommerce": {
-    primary: { title: "Création site vitrine dès 490€", description: "5 pages pro, SEO inclus, livré en 2 semaines.", href: "/services/sites-web/site-vitrine", cta: "Créer mon site vitrine" },
+    primary: { title: "Création site vitrine à 890 €", description: "5 pages pro, SEO de base inclus, livré en 7 à 14 jours.", href: "/services/sites-web/site-vitrine", cta: "Créer mon site vitrine" },
     secondary: { title: "Création boutique en ligne dès 1490€", description: "Catalogue, paiement Stripe, espace client.", href: "/services/sites-web/site-ecommerce", cta: "Créer ma boutique" },
   },
   "pourquoi-nextjs-meilleur-wordpress": {
@@ -282,6 +282,26 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
   "obtenir-avis-google-entreprise": {
     primary: { title: "Référencement SEO local", description: "Les avis Google sont un pilier du SEO local : optimisez le reste.", href: "/services/seo/referencement", cta: "Booster mon SEO local" },
     secondary: { title: "Audit SEO gratuit en ligne", description: "Vérifiez votre visibilité locale en 60 secondes.", href: "/seo-check", cta: "Lancer mon audit SEO" },
+  },
+  "combien-coute-site-internet-restaurant": {
+    primary: { title: "Site vitrine restaurant à 890 €", description: "Carte lisible sur mobile, réservation, fiche Google reliée, livré en 7 à 14 jours.", href: "/services/sites-web/site-vitrine", cta: "Voir l'offre site vitrine" },
+    secondary: { title: "Simulateur de prix", description: "Un chiffrage écrit sous 24 h pour votre restaurant.", href: "/estimation-prix-site-web", cta: "Estimer mon site" },
+  },
+  "combien-coute-site-web-coiffeur": {
+    primary: { title: "Site vitrine coiffeur à 890 €", description: "Prise de rendez-vous, galerie, avis Google, paiement possible en 24 mensualités.", href: "/services/sites-web/site-vitrine", cta: "Voir l'offre site vitrine" },
+    secondary: { title: "Référencement local", description: "Apparaître dans le pack local Google sur « coiffeur + votre ville ».", href: "/services/seo/seo-local", cta: "Découvrir le SEO local" },
+  },
+  "creer-site-web-professionnel-sans-coder": {
+    primary: { title: "Maquette gratuite sous 48 h", description: "Comparez avec ce que vous obtiendriez seul : une maquette de votre accueil, sans engagement.", href: "/demande-maquette", cta: "Demander ma maquette" },
+    secondary: { title: "Site vitrine à 890 €", description: "Un site professionnel livré en 7 à 14 jours, qui vous appartient.", href: "/services/sites-web/site-vitrine", cta: "Voir l'offre" },
+  },
+  "qu-est-ce-qu-un-site-vitrine": {
+    primary: { title: "Site vitrine à 890 €", description: "Cinq pages, design sur mesure, hébergement première année inclus.", href: "/services/sites-web/site-vitrine", cta: "Voir l'offre site vitrine" },
+    secondary: { title: "Simulateur de prix", description: "Estimez le coût de votre site vitrine en 2 minutes.", href: "/estimation-prix-site-web", cta: "Estimer mon site" },
+  },
+  "trouver-clients-artisan": {
+    primary: { title: "Référencement local pour artisans", description: "Fiche Google, avis, pages par ville : les demandes arrivent depuis Google Maps.", href: "/services/seo/seo-local", cta: "Découvrir le SEO local" },
+    secondary: { title: "Site vitrine artisan à 890 €", description: "Photos de vos réalisations, devis en un clic, livré en 7 à 14 jours.", href: "/services/sites-web/site-vitrine", cta: "Voir l'offre" },
   },
 };
 

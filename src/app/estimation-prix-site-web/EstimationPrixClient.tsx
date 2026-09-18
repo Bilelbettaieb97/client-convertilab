@@ -82,7 +82,7 @@ const refonteImprovements = [
   { value: "ajout-pages", label: "Ajout de pages", icon: Plus },
 ];
 
-export default function EstimationPrixClient() {
+export default function EstimationPrixClient({ children }: { children?: React.ReactNode }) {
   const { toast } = useToast();
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -182,8 +182,8 @@ export default function EstimationPrixClient() {
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-12">
             <div className="inline-flex items-center bg-gradient-to-r from-violet-500/10 to-pink-500/10 backdrop-blur-sm border border-violet-500/20 text-violet-300 px-6 py-3 rounded-full text-sm font-semibold mb-8 shadow-lg shadow-violet-500/10"><Calculator className="w-5 h-5 mr-2" />Gratuit - Sans engagement - Reponse sous 24h</div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Estimez le prix de{" "}<span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400">votre site web</span></h1>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">En 3 etapes, decrivez votre projet et recevez une estimation de prix personnalisee pour votre site internet.</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Simulateur de prix :{" "}<span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400">estimez votre site internet</span></h1>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">Décrivez votre projet en 3 étapes et recevez sous 24 h une estimation de prix personnalisée. Nos tarifs sont publics : landing page 490 €, site vitrine 890 €, e-commerce dès 1 490 €.</p>
           </div>
 
           <div className="max-w-xl mx-auto mb-10">
@@ -212,6 +212,7 @@ export default function EstimationPrixClient() {
           </div>
         </div>
       </section>
+      {children}
     </main><Footer /></>
   );
 }
