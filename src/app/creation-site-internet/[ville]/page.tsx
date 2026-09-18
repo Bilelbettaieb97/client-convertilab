@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SITE, PRICING } from "@/lib/constants";
 import { cities, getCityBySlug } from "@/data/cities";
+import { caseStudies } from "@/data/case-studies";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
@@ -44,8 +45,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(ville);
   if (!city) return { title: "Page introuvable" };
 
-  const title = `Création Site Internet ${city.name} : Site Web Pro dès 490€ en 2 semaines`;
-  const description = `Besoin d'un site web à ${city.name} ? ConvertiLab crée votre site internet professionnel dès 490€, livré en 2 semaines, prix fixe. 150+ clients accompagnés, 4,9/5 sur 15 avis. Devis gratuit sous 24h.`;
+  const title = `Création Site Internet ${city.name} : Site Web Pro à 890 €, livré en 7 à 14 jours`;
+  const description = `Besoin d'un site web à ${city.name} ? ConvertiLab crée votre site internet professionnel à 890 €, livré en 7 à 14 jours, prix fixe. 150+ clients accompagnés, 4,9/5 sur 15 avis. Devis gratuit sous 24h.`;
 
   return {
     title,
@@ -86,7 +87,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
     {
       icon: Globe,
       name: "Site Vitrine",
-      price: "490€",
+      price: "890 €",
       features: [
         "Design sur-mesure responsive",
         "5 pages optimisées SEO",
@@ -100,7 +101,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
     {
       icon: Store,
       name: "Site E-commerce",
-      price: "1490€",
+      price: "dès 1 490 €",
       features: [
         "Catalogue produits illimité",
         "Paiement sécurisé Stripe",
@@ -114,7 +115,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
     {
       icon: Rocket,
       name: "Landing Page",
-      price: "490€",
+      price: "490 €",
       features: [
         "Page de conversion optimisée",
         "A/B testing",
@@ -128,7 +129,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
   ];
 
   const avantages = [
-    { icon: Clock, title: "Livré en 2 semaines", desc: "Votre site est en ligne rapidement, sans compromis sur la qualité." },
+    { icon: Clock, title: "Livré en 7 à 14 jours", desc: "Votre site est en ligne rapidement, sans compromis sur la qualité." },
     { icon: BadgeCheck, title: "Vous êtes propriétaire", desc: "Le code source et le nom de domaine vous appartiennent à 100%." },
     { icon: Search, title: "SEO intégré", desc: "Chaque site est optimisé pour apparaître sur Google dès le lancement." },
     { icon: Headphones, title: "Support réactif", desc: "Une équipe disponible pour répondre à vos questions sous 24h." },
@@ -235,7 +236,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-purple-100 max-w-2xl mb-4">
-              Votre site web professionnel, livré en 2 semaines.{" "}
+              Votre site web professionnel, livré en 7 à 14 jours.{" "}
               <span className="font-semibold text-white">À partir de {PRICING.vitrine.label}.</span>
             </p>
             <p className="text-purple-200 max-w-2xl mb-8">
@@ -256,7 +257,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
             <div className="flex items-center gap-6 mt-8 text-sm text-purple-200">
               <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-green-400" /> 150+ clients accompagnés</span>
               <span className="flex items-center gap-1.5"><Star className="w-4 h-4 text-amber-400" /> 4.9/5 avis</span>
-              <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-blue-400" /> 2 semaines</span>
+              <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-blue-400" /> 7 à 14 jours</span>
             </div>
           </div>
         </section>
@@ -399,42 +400,44 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
           </div>
         </section>
 
-        {/* TEMOIGNAGES */}
-        {city.testimonials && city.testimonials.length > 0 && (
-          <section className="py-16 sm:py-20 bg-white">
-            <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-              <div className="text-center mb-12">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                  Ce que disent nos clients à {city.name}
-                </h2>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {city.testimonials.map((t, i) => (
-                  <div key={i} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                    <div className="flex items-center gap-1 mb-4">
-                      {[...Array(5)].map((_, j) => (
-                        <Star key={j} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                      ))}
-                    </div>
-                    <p className="text-gray-700 text-sm mb-4 italic">&ldquo;{t.text}&rdquo;</p>
-                    <div className="flex items-center gap-3">
-                      <Image src={t.photo} alt={t.author} width={40} height={40} className="w-10 h-10 rounded-full object-cover" />
-                      <div>
-                        <p className="text-sm font-semibold text-gray-900">{t.author}</p>
-                        <p className="text-xs text-gray-500">{t.role}, {t.company}</p>
-                      </div>
-                    </div>
-                    {t.metric && (
-                      <div className="mt-3 bg-green-50 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-lg inline-block">
-                        {t.metric}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+        {/* RÉFÉRENCES RÉELLES : trois études de cas, différentes selon la ville */}
+        <section className="py-16 sm:py-20 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Des résultats réels, chez de vrais clients
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Trois projets livrés, avec leurs chiffres. Le détail de chacun est dans nos études de cas.
+              </p>
             </div>
-          </section>
-        )}
+            <div className="grid md:grid-cols-3 gap-6">
+              {[0, 1, 2]
+                .map((i) => caseStudies[([...city.slug].reduce((acc, ch) => acc + ch.charCodeAt(0), 0) + i * 7) % caseStudies.length])
+                .map((cs) => (
+                  <Link
+                    key={cs.slug}
+                    href={`/etude-de-cas/${cs.slug}`}
+                    className="group bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                  >
+                    <div className="relative aspect-[16/10] bg-gray-100">
+                      <Image src={cs.image} alt={`${cs.client} : ${cs.title}`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-purple-700 mb-2">{cs.sector}</p>
+                      <h3 className="font-bold text-gray-900 text-lg leading-snug mb-2 group-hover:text-purple-700 transition-colors">{cs.client}</h3>
+                      <p className="text-sm text-gray-600 mb-4 flex-1">{cs.title}</p>
+                      {(cs.metrics.find((m) => /^[\d+]/.test(m.value)) ?? cs.metrics[0]) && (
+                        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 text-green-700 text-sm font-semibold self-start">
+                          {(cs.metrics.find((m) => /^[\d+]/.test(m.value)) ?? cs.metrics[0]).value} {(cs.metrics.find((m) => /^[\d+]/.test(m.value)) ?? cs.metrics[0]).label}
+                        </span>
+                      )}
+                    </div>
+                  </Link>
+                ))}
+            </div>
+          </div>
+        </section>
 
         {/* PROCESS */}
         <section className="py-16 sm:py-20 bg-gray-50">

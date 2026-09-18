@@ -5,6 +5,8 @@ import { cities, getCityBySlug } from "@/data/cities";
 import { getSectorBySlug } from "@/data/sectors";
 import { POLES } from "@/data/poles";
 import { MAILLAGE_VILLE } from "@/lib/maillage-poles";
+import { getContenuLocal } from "@/data/cities-contenu-local";
+import { caseStudies } from "@/data/case-studies";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
@@ -46,13 +48,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Titles et descriptions différenciés par ville (pattern unique + données
   // locales) pour éviter 53 pages au title identique, signal de contenu dupliqué.
   const titleVariants = [
-    `Agence Web ${city.name} : Création Site Internet en 2 semaines dès 490€`,
-    `Création de Site Internet à ${city.name} (${city.department}) : Agence Web dès 490€`,
-    `Agence Web à ${city.name} : Site Vitrine Pro Livré en 2 semaines dès 490€`,
+    `Agence Web ${city.name} : Création de Site Internet à 890 €`,
+    `Création de Site Internet à ${city.name} (${city.department}) : Agence Web`,
+    `Agence Web à ${city.name} : Site Vitrine Pro à 890 €, Livré en 7 à 14 Jours`,
   ];
   const title = titleVariants[city.slug.length % titleVariants.length];
   const industries = city.keyIndustries.slice(0, 2).join(", ").toLowerCase();
-  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine livré en 2 semaines dès 490€, prix fixe. 150+ clients accompagnés, 4,9/5 sur 15 avis. Devis gratuit sous 24h.`;
+  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine 890 €, livré en 7 à 14 jours, prix fixe. 150+ clients accompagnés, 4,9/5 sur 15 avis. Devis gratuit sous 24h.`;
 
   return {
     title,
@@ -82,6 +84,11 @@ export default async function CityPage({ params }: Props) {
   const { secteur: ville } = await params;
   const city = getCityBySlug(ville);
   if (!city) notFound();
+  const local = getContenuLocal(city.slug);
+  const faqAffichee = local ? local.faq : city.faqItems;
+  // Trois études de cas réelles, différentes d'une ville à l'autre (pas de témoignages inventés).
+  const decalage = [...city.slug].reduce((acc, ch) => acc + ch.charCodeAt(0), 0) % caseStudies.length;
+  const references = [0, 1, 2].map((i) => caseStudies[(decalage + i * 7) % caseStudies.length]);
 
   const services = [
     {
@@ -147,8 +154,8 @@ export default async function CityPage({ params }: Props) {
     },
     {
       icon: CalendarCheck,
-      title: "Livré en 2 semaines",
-      desc: "Votre site vitrine est livré en 2 semaines, le délai est écrit dans le devis. Pour un e-commerce ou une application, le délai est fixé au devis.",
+      title: "Livré en 7 à 14 jours",
+      desc: "Votre site vitrine est livré en 7 à 14 jours, le délai est écrit dans le devis. Pour un e-commerce ou une application, le délai est fixé au devis.",
     },
     {
       icon: Headphones,
@@ -187,12 +194,6 @@ export default async function CityPage({ params }: Props) {
       reviewCount: SITE.reviews.count,
       bestRating: "5",
     },
-    review: city.testimonials.map((t) => ({
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: t.author },
-      reviewBody: t.text,
-    })),
   };
 
   const breadcrumbSchema = {
@@ -212,7 +213,7 @@ export default async function CityPage({ params }: Props) {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: city.faqItems.map((faq) => ({
+    mainEntity: faqAffichee.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
@@ -315,10 +316,10 @@ export default async function CityPage({ params }: Props) {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl leading-relaxed">
-            {city.description} ConvertiLab, votre agence web locale, vous
-            accompagne dans la création de votre site internet professionnel, le
-            référencement SEO et la publicité en ligne. Plus de 150 entreprises
-            nous font déjà confiance en Île-de-France.
+            {city.description} ConvertiLab accompagne les entreprises de{" "}
+            {city.name} à distance, en visio, avec un interlocuteur unique :
+            création de site internet, référencement local et publicité en
+            ligne, à prix publics, avec une maquette gratuite sous 48 h.
           </p>
 
           {/* Stats locales */}
@@ -375,7 +376,7 @@ export default async function CityPage({ params }: Props) {
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />
-              Livraison en 2 semaines
+              Livraison en 7 à 14 jours
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -433,7 +434,7 @@ export default async function CityPage({ params }: Props) {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               {city.name}
             </span>{" "}
-            ont-elles besoin d&apos;une agence web locale ?
+            ont-elles besoin d&apos;un site qui travaille pour elles ?
           </h2>
 
           {/* Secteurs clés */}
@@ -463,6 +464,9 @@ export default async function CityPage({ params }: Props) {
                 ))}
               </>
             )}
+            {local && local.accroche.map((p, i) => (
+              <p key={`local-${i}`}>{p}</p>
+            ))}
             <p>
               Avec <strong>{city.stats.entreprises}</strong> recensées,{" "}
               {city.name} est un bassin économique dynamique au sein du
@@ -494,6 +498,62 @@ export default async function CityPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {local && (
+        <section className="py-16 sm:py-24 bg-gray-50">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
+              Ce que les entreprises de{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                {city.name}
+              </span>{" "}
+              nous demandent
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              Les quatre demandes qui reviennent le plus souvent, et la réponse concrète à chacune.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-16">
+              {local.demandes.map((d) => (
+                <div key={d.titre} className="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm flex flex-col">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{d.titre}</h3>
+                  <p className="text-gray-600 leading-relaxed flex-1">{d.texte}</p>
+                  <Link href={d.href} className="inline-flex items-center gap-2 text-purple-700 font-semibold mt-5 hover:underline underline-offset-4">
+                    {d.lien}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid lg:grid-cols-5 gap-10">
+              <div className="lg:col-span-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Où nous intervenons autour de {city.name}</h3>
+                <p className="text-gray-600 mb-5">
+                  Les quartiers, zones d&apos;activité et communes d&apos;où viennent le plus souvent les demandes.
+                </p>
+                <ul className="flex flex-wrap gap-2">
+                  {local.zones.map((z) => (
+                    <li key={z} className="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-700">
+                      {z}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="lg:col-span-3">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Les secteurs qui font l&apos;économie de {city.name}</h3>
+                <ul className="space-y-4">
+                  {local.secteurs.map((s) => (
+                    <li key={s.nom} className="bg-white rounded-xl border border-gray-200 p-5">
+                      <p className="font-semibold text-gray-900 mb-1">{s.nom}</p>
+                      <p className="text-gray-600 text-sm leading-relaxed">{s.texte}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ============================================
           3. SERVICES
@@ -580,61 +640,43 @@ export default async function CityPage({ params }: Props) {
       </section>
 
       {/* ============================================
-          5. TEMOIGNAGES
+          5. RÉFÉRENCES RÉELLES (études de cas)
           ============================================ */}
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Que disent nos clients à{" "}
+            Des résultats réels, chez de{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-              {city.name}
-            </span>{" "}
-            de leur site web ?
+              vrais clients
+            </span>
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Résultats concrets obtenus par nos clients dans votre ville
+            Trois projets livrés, avec leurs chiffres. Le détail de chacun est consultable dans nos études de cas.
           </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            {city.testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          <div className="grid md:grid-cols-3 gap-6">
+            {references.map((cs) => (
+              <Link
+                key={cs.slug}
+                href={`/etude-de-cas/${cs.slug}`}
+                className="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-lg hover:-translate-y-0.5 transition-all"
               >
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, j) => (
-                    <Star
-                      key={j}
-                      className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
+                <div className="relative aspect-[16/10] bg-gray-100">
+                  <Image src={cs.image} alt={`${cs.client} : ${cs.title}`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
-                {/* Quote */}
-                <p className="text-gray-700 leading-relaxed mb-6 italic">
-                  &ldquo;{t.text}&rdquo;
-                </p>
-                {/* Metric badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 text-green-700 text-sm font-semibold mb-6">
-                  <CheckCircle2 className="w-4 h-4" />
-                  {t.metric}
+                <div className="p-6 flex flex-col flex-1">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-purple-700 mb-2">{cs.sector}</p>
+                  <h3 className="font-bold text-gray-900 text-lg leading-snug mb-2 group-hover:text-purple-700 transition-colors">
+                    {cs.client}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4 flex-1">{cs.title}</p>
+                  {(cs.metrics.find((m) => /^[\d+]/.test(m.value)) ?? cs.metrics[0]) && (
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 text-green-700 text-sm font-semibold self-start">
+                      <CheckCircle2 className="w-4 h-4" />
+                      {(cs.metrics.find((m) => /^[\d+]/.test(m.value)) ?? cs.metrics[0]).value} {(cs.metrics.find((m) => /^[\d+]/.test(m.value)) ?? cs.metrics[0]).label}
+                    </div>
+                  )}
                 </div>
-                {/* Author */}
-                <div className="flex items-center gap-4">
-                  <Image
-                    src={t.photo}
-                    alt={t.author}
-                    width={48}
-                    height={48}
-                    className="rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-bold text-gray-900">{t.author}</p>
-                    <p className="text-sm text-gray-500">
-                      {t.role}, {t.company}
-                    </p>
-                  </div>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -690,7 +732,7 @@ export default async function CityPage({ params }: Props) {
             Tout ce que vous devez savoir avant de lancer votre projet web
           </p>
           <div className="space-y-4">
-            {city.faqItems.map((faq, i) => (
+            {faqAffichee.map((faq, i) => (
               <details
                 key={i}
                 className="group bg-white rounded-xl border border-gray-200 overflow-hidden"
