@@ -229,7 +229,10 @@ export default async function PricingDetailPage({ params }: Props) {
 
               {/* Autres tarifs : chaque page /prix n'avait qu'un seul lien entrant (depuis /prix). */}
               <div className="mt-6">
-                <p className="text-sm text-gray-600 mb-2">Nos autres tarifs :</p>
+                <p className="text-sm text-gray-600 mb-2">
+                  <Link href="/prix" className="text-purple-600 hover:underline">Tous nos tarifs</Link> et{" "}
+                  <Link href="/devis" className="text-purple-600 hover:underline">nos devis</Link> :
+                </p>
                 <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
                   {pricingPages
                     .filter((p) => p.slug !== page.slug)

@@ -181,7 +181,7 @@ export default function DevisServicePage() {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/contact">Devis</Link>
+                  <Link href="/devis">Devis</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
@@ -603,7 +603,9 @@ export default function DevisServicePage() {
                     </Link>
                   </p>
                 )}
-                <p className="text-slate-600 dark:text-slate-400 mb-2">Nos autres devis :</p>
+                <p className="text-slate-600 dark:text-slate-400 mb-2">
+                  <Link href="/devis" className="text-purple-600 hover:underline font-medium">Tous nos devis</Link> :
+                </p>
                 <ul className="flex flex-wrap gap-x-4 gap-y-1">
                   {devisServices
                     .filter((d) => d.slug !== devisService.slug)
