@@ -1,15 +1,15 @@
 # ConvertiLab
 
-> Agence marketing digital française basée à Rueil-Malmaison (Hauts-de-Seine, Île-de-France), qui aide les TPE, artisans, commerçants, coachs, consultants et restaurants à trouver des clients avec quatre pôles : site internet, publicité en ligne, SEO et CRM. Site vitrine 890 € (ou 39 €/mois en paiement étalé), landing page 490 €, livrés en 2 semaines, prix fixe écrit avant de commencer. Plus de 150 clients accompagnés, note de 4,9/5 sur Trustpilot.
+> Agence marketing digital française basée à Rueil-Malmaison (Hauts-de-Seine, Île-de-France), qui aide les TPE, artisans, commerçants, coachs, consultants et restaurants à trouver des clients avec quatre pôles : site internet, publicité en ligne, SEO et CRM. Site vitrine 890 € (ou 39 €/mois en paiement étalé), landing page 490 €, livrés en 7 à 14 jours, prix fixe écrit avant de commencer. Plus de 150 clients accompagnés, note de 4,5/5 sur Trustpilot (14 avis).
 
 ConvertiLab est fondée et dirigée par Bilel Bettaieb. L'agence couvre la création de sites web (vitrine, e-commerce, landing pages), la publicité en ligne (Google Ads, Meta Ads, TikTok, Pinterest, LinkedIn Ads), le référencement naturel (SEO, dont la visibilité dans les IA) et le CRM (mise en place, optimisation, nettoyage, relances automatiques, intégration IA). Particularité : une maquette gratuite du site est offerte sous 48h avant tout engagement, et le paiement n'intervient qu'après validation du design.
 
 ## Services
 
 - [Tous les services](https://www.convertilab.com/services) : les quatre pôles de l'agence, prix fixes, réponse sous 24 h
-- [Création de site internet](https://www.convertilab.com/services/sites-web) : pôle site (vitrine, e-commerce, landing page, refonte, application web), livré en 2 semaines, paiement étalé possible
+- [Création de site internet](https://www.convertilab.com/services/sites-web) : pôle site (vitrine, e-commerce, landing page, refonte, application web), livré en 7 à 14 jours, paiement étalé possible
 - [Référencement naturel et visibilité IA](https://www.convertilab.com/services/seo) : pôle SEO (référencement, audit, SEO local, visibilité dans ChatGPT et les AI Overviews), forfait dès 500 €/mois
-- [Création de site vitrine](https://www.convertilab.com/services/sites-web/site-vitrine) : site professionnel 890 € ou 39 €/mois sur 24 mois, maquette gratuite sous 48 h, livré en 2 semaines
+- [Création de site vitrine](https://www.convertilab.com/services/sites-web/site-vitrine) : site professionnel 890 € ou 39 €/mois sur 24 mois, maquette gratuite sous 48 h, livré en 7 à 14 jours
 - [Création de site e-commerce](https://www.convertilab.com/services/sites-web/site-ecommerce) : boutique en ligne avec paiement Stripe ou PayPal, catalogue, commandes et stock suivis, à partir de 1 490 €
 - [Création de landing page](https://www.convertilab.com/services/sites-web/landing-page) : une page, un objectif, des demandes comptées, 490 €, livrée en 5 à 7 jours
 - [Refonte de site internet](https://www.convertilab.com/services/sites-web/refonte-site) : design, mobile, vitesse, redirections posées pour conserver les positions Google, 690 €
@@ -63,3 +63,7 @@ ConvertiLab est fondée et dirigée par Bilel Bettaieb. L'agence couvre la créa
 - Email : contact@convertilab.com — Téléphone : 06 16 47 72 45
 - Adresse : 1 Rue du 4 Septembre, 92500 Rueil-Malmaison, France
 - [Avis clients Trustpilot](https://fr.trustpilot.com/review/convertilab.com) : 4,9/5
+
+## Version complète
+
+- [llms-full.txt](https://www.convertilab.com/llms-full.txt) : la même présentation avec la liste de tous les guides, fiches de glossaire, articles et pages villes

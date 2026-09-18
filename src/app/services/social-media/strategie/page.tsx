@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import ServiceFAQ from "@/components/services/ServiceFAQ";
 import StrategieContent from "./StrategieContent";
 import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
@@ -44,6 +45,15 @@ export default function StrategiePage() {
       <Navigation />
       <StrategieContent />
       <RelatedServicesSection exclude={["/services/social-media/strategie"]} />
+      <ServiceFAQ
+        title="Questions fréquentes sur la stratégie social media"
+        faqs={[
+        { q: "Que contient une stratégie social media ?", a: "Le choix des réseaux, la cible, le ton, les formats, le calendrier, les objectifs chiffrés (messages, clics, demandes) et la façon de les mesurer. Livrée en un document court et un calendrier de trois mois, que vous pouvez appliquer seul ou nous confier." },
+        { q: "Est-ce utile si je publie déjà ?", a: "C'est souvent là que la stratégie rapporte le plus : vous publiez, mais sans objectif ni mesure. Un audit de vos comptes montre en général deux ou trois réglages qui changent les résultats à effort égal." },
+        { q: "Combien coûte une stratégie social media ?", a: "Un forfait fixe pour l'audit, la stratégie et le calendrier de trois mois, chiffré après un échange de 30 minutes. La mise en œuvre mensuelle est facultative." },
+        { q: "La publicité fait-elle partie de la stratégie ?", a: "Elle y est prévue quand elle a un sens : un budget test de 10 à 20 € par jour sur les publications qui fonctionnent déjà, avec un coût par demande suivi. Voir notre offre Meta Ads." },
+      ]}
+      />
       <Footer />
     </div>
   );

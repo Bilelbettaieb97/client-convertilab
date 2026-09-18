@@ -2601,6 +2601,138 @@ Chez ConvertiLab, tous nos sites sont sécurisés en HTTPS dès le premier jour 
     relatedTerms: ["hebergement-web", "seo", "nom-de-domaine"],
     relatedService: "/services/sites-web",
   },
+  {
+    slug: "crm",
+    term: "CRM (gestion de la relation client)",
+    definition:
+      "Un CRM est un outil qui centralise vos contacts, vos demandes et vos devis, et qui vous rappelle quoi faire et quand : relancer un devis, confirmer un rendez-vous, recontacter un ancien client. Pour une petite entreprise, c'est d'abord une machine à ne plus rien oublier.",
+    content: `## À quoi sert un CRM dans une petite entreprise
+
+Le sigle vient de l'anglais customer relationship management, la gestion de la relation client. Derrière le nom, l'usage est simple : une fiche par contact, un pipeline qui montre où en est chaque demande (reçue, devis envoyé, relancée, gagnée, perdue), et des rappels automatiques. Un artisan qui envoie quinze devis par mois et en relance trois perd les douze autres par oubli, pas par manque de compétence. Le CRM relance à sa place.
+
+## Ce qu'il contient vraiment
+
+Trois choses suffisent : les contacts (nom, email, téléphone, source de la demande), le pipeline (les étapes de votre vente, cinq à sept au maximum) et les automatisations (un email de relance à trois jours, une confirmation de rendez-vous la veille, un message aux anciens clients tous les six mois). Le reste, tableaux de bord, prévisions, intégrations, vient après, quand les trois premiers fonctionnent.
+
+## Choisir un CRM à sa taille
+
+Un indépendant ou une équipe de deux personnes se contente d'un outil simple, souvent gratuit jusqu'à quelques utilisateurs. Pipedrive ou HubSpot deviennent utiles quand plusieurs personnes vendent ou quand les demandes dépassent quelques dizaines par mois. Le bon critère n'est pas la longueur de la liste de fonctionnalités, c'est l'outil que vous ouvrirez chaque matin.
+
+## Le lien avec le site internet
+
+Un CRM prend toute sa valeur quand les formulaires du site, la fiche Google et les publicités y créent une fiche automatiquement, avec leur source. Vous ne ressaisissez plus rien et vous savez enfin quel canal rapporte des clients. C'est le principe de notre offre [CRM et relances automatiques](/services/crm).`,
+    importance: "Le CRM est le seul outil qui transforme une demande reçue en client suivi. Sans lui, la moitié des devis d'une petite entreprise restent sans relance.",
+    examples: [
+      "Un plombier reçoit une demande depuis son site : le CRM crée la fiche, lui rappelle d'appeler dans l'heure, puis relance le devis à trois et dix jours.",
+      "Une ostéopathe voit ses rendez-vous confirmés automatiquement la veille par email : les absences baissent.",
+      "Un consultant recontacte tous les six mois ses anciens clients avec un message personnalisé : deux missions par an viennent de là.",
+    ],
+    faqItems: [
+      {
+        question: "Un CRM est-il utile avec peu de clients ?",
+        answer: "Oui, dès que vous envoyez plus de cinq devis par mois. Ce qui compte, c'est le nombre de devis que vous oubliez de relancer, pas la taille de l'entreprise.",
+      },
+      {
+        question: "Combien coûte un CRM ?",
+        answer: "L'outil lui-même est souvent gratuit pour un ou deux utilisateurs, puis de 15 à 60 € par utilisateur et par mois. La mise en place (pipeline, import, relances, formulaires reliés) est un travail à part, chiffré à prix fixe chez ConvertiLab.",
+      },
+      {
+        question: "Quelle différence entre un CRM et un fichier Excel ?",
+        answer: "Le fichier ne relance personne, ne confirme aucun rendez-vous et ne reçoit pas les demandes du site. Le CRM fait les trois automatiquement.",
+      },
+    ],
+    lastUpdated: "18 septembre 2026",
+    relatedTerms: ["lead-nurturing", "relance-automatique", "landing-page"],
+    relatedService: "/services/crm",
+  },
+  {
+    slug: "lead-nurturing",
+    term: "Lead nurturing (maturation des prospects)",
+    definition:
+      "Le lead nurturing consiste à entretenir la relation avec une personne qui vous a contactée mais n'a pas encore acheté : messages utiles, espacés, personnalisés, jusqu'à ce qu'elle soit prête. Ce n'est pas de la relance commerciale, c'est de l'accompagnement dans la durée.",
+    content: `## Pourquoi un prospect n'achète pas tout de suite
+
+La plupart des demandes de devis n'aboutissent pas le jour même : le prospect compare, attend un budget, hésite, ou n'a tout simplement pas le temps. Le lead nurturing part de ce constat : plutôt que de relancer trois fois puis d'abandonner, on reste présent avec des messages qui apportent quelque chose (un conseil, un exemple, une réponse à une objection fréquente) jusqu'à ce que le moment soit venu.
+
+## À quoi ressemble une séquence de nurturing
+
+Pour une petite entreprise, quatre à six messages sur trois mois suffisent : un premier qui répond à la question que tout le monde se pose (« combien de temps ça prend ? »), un exemple de client dans une situation proche, une réponse à l'objection principale (le prix, souvent), une proposition de rendez-vous sans pression, puis un message tous les mois ou deux. Chaque message est court et signé d'une vraie personne.
+
+## Ce qu'il faut pour le faire
+
+Un CRM ou un outil d'emailing capable d'enchaîner des emails dans le temps, des contacts qui vous ont sollicité (le nurturing ne s'applique pas à des inconnus), et des messages écrits une bonne fois. Une fois en place, la séquence tourne seule ; vous n'intervenez que quand le prospect répond.
+
+## Le résultat que l'on mesure
+
+Le taux de réponse aux messages et surtout la part des devis gagnés plus de trente jours après l'envoi : c'est là que le nurturing rapporte. Nos clients qui l'ont mis en place via l'offre [CRM et relances automatiques](/services/crm) voient en général ces devis tardifs passer de presque rien à un devis sur six.`,
+    importance: "Un devis non signé le jour même n'est pas perdu. Le nurturing est ce qui le transforme en client quelques semaines plus tard, sans effort quotidien.",
+    examples: [
+      "Une agence immobilière envoie chaque mois un point sur les prix du quartier aux propriétaires qui ont demandé une estimation.",
+      "Un centre de formation répond en quatre emails aux questions que se posent les candidats avant de s'inscrire.",
+      "Un artisan envoie un exemple de chantier terminé aux prospects dont le devis date de plus d'un mois.",
+    ],
+    faqItems: [
+      {
+        question: "Quelle différence avec une relance ?",
+        answer: "La relance demande une réponse (« avez-vous pris une décision ? »). Le nurturing apporte quelque chose sans rien demander, et laisse le prospect revenir quand il est prêt.",
+      },
+      {
+        question: "Combien de messages faut-il ?",
+        answer: "Quatre à six sur trois mois pour une petite entreprise. Au-delà, on lasse ; en dessous, on est oublié.",
+      },
+      {
+        question: "Faut-il un outil spécial ?",
+        answer: "Un CRM avec emails automatiques suffit. Un outil d'emailing (Brevo, Mailchimp) convient aussi si vos contacts y sont.",
+      },
+    ],
+    lastUpdated: "18 septembre 2026",
+    relatedTerms: ["crm", "relance-automatique", "taux-de-conversion"],
+    relatedService: "/services/crm",
+  },
+  {
+    slug: "relance-automatique",
+    term: "Relance automatique",
+    definition:
+      "Une relance automatique est un message envoyé sans intervention humaine, à un moment défini à l'avance, à un contact qui n'a pas répondu : devis sans retour à trois jours, rendez-vous à confirmer la veille, panier abandonné une heure après. Elle est réglée une fois et tourne ensuite toute seule.",
+    content: `## Pourquoi automatiser la relance
+
+Relancer est le geste commercial le plus rentable et le moins fait : on oublie, on n'ose pas, on n'a pas le temps. L'automatisation retire ces trois obstacles. Le message part au bon moment, avec le prénom du contact et le sujet exact, que vous soyez en chantier, en rendez-vous ou en vacances.
+
+## Les trois relances qui rapportent le plus
+
+Le devis sans réponse : un rappel court à trois jours, une relance à dix jours qui propose un créneau, un dernier message à trente jours qui laisse la porte ouverte. Le rendez-vous : une confirmation la veille, avec l'adresse et un moyen d'annuler. Le client passé : un message six mois après la prestation, pour prendre des nouvelles et proposer la suite. Ces trois scénarios couvrent la majorité des pertes d'une petite entreprise.
+
+## Comment écrire une relance qui ne fait pas fuir
+
+Courte (trois phrases), personnalisée (prénom, devis, montant), utile (une réponse, un créneau, un exemple), signée d'une personne, et espacée : jamais deux messages la même semaine. La relance n'insiste pas, elle rappelle que vous êtes disponible.
+
+## Le cadre à respecter
+
+Une relance s'adresse à quelqu'un qui vous a contacté : le cadre est celui de sa demande. Chaque email comporte un lien de désinscription et une adresse de contact. Par SMS ou WhatsApp, le consentement explicite est requis ; nous recommandons l'email pour les relances commerciales. La mise en place fait partie de notre offre [CRM et relances automatiques](/services/crm).`,
+    importance: "La relance automatique est ce qui sépare une entreprise qui gagne un devis sur deux d'une entreprise qui en gagne un sur quatre, à travail égal.",
+    examples: [
+      "Un devis de cuisine envoyé lundi : rappel jeudi, proposition de rendez-vous le lundi suivant, dernier message un mois plus tard.",
+      "Une réservation de massage : confirmation la veille à 18 h avec l'adresse et un lien pour décaler.",
+      "Un client livré en mars reçoit en septembre un message pour la maintenance ou une nouvelle prestation.",
+    ],
+    faqItems: [
+      {
+        question: "Combien de relances avant d'arrêter ?",
+        answer: "Trois pour un devis, espacées de trois, dix et trente jours. Au-delà, le silence est une réponse.",
+      },
+      {
+        question: "La relance automatique paraît-elle impersonnelle ?",
+        answer: "Pas si elle est courte, nominative et signée. Le client ne sait pas qu'elle est automatique, il voit un message attentionné arrivé au bon moment.",
+      },
+      {
+        question: "Par quel canal relancer ?",
+        answer: "L'email, pour des raisons de coût et de consentement. Le téléphone pour les devis importants, en complément.",
+      },
+    ],
+    lastUpdated: "18 septembre 2026",
+    relatedTerms: ["crm", "lead-nurturing", "taux-de-conversion"],
+    relatedService: "/services/crm",
+  },
 ];
 
 export const getTermBySlug = (slug: string) =>

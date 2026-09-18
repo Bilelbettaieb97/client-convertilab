@@ -547,6 +547,72 @@ export const guides: Guide[] = [
     ],
     relatedService: "sites-web",
     relatedDevis: "site-vitrine"
+  },
+  {
+    slug: "mettre-en-place-un-crm",
+    title: "Mettre en Place un CRM dans une Petite Entreprise",
+    description: "Comment choisir, installer et faire vivre un CRM quand on est artisan, commerçant, indépendant ou dirigeant de PME : les étapes, les relances qui rapportent, les pièges qui font abandonner l'outil au bout d'un mois.",
+    steps: [
+      {
+        title: "Partir de vos oublis, pas des fonctionnalités",
+        content: "Avant de comparer des outils, listez ce que vous perdez aujourd'hui : les devis envoyés sans réponse que personne ne relance, les rendez-vous non confirmés qui tombent, les anciens clients jamais recontactés, les demandes du site qui restent dans une boîte mail. Chaque oubli est un scénario que le CRM devra couvrir. Un CRM qui ne règle pas au moins deux de ces oublis ne sera pas utilisé."
+      },
+      {
+        title: "Dessiner votre pipeline sur une feuille",
+        content: "Un pipeline, c'est la suite des étapes par lesquelles passe une demande : demande reçue, premier contact, devis envoyé, relance, gagné, perdu. Cinq à sept étapes suffisent. Chaque étape doit correspondre à une action que vous faites vraiment. Si vous ne savez pas quoi faire quand une fiche entre dans une étape, l'étape est inutile."
+      },
+      {
+        title: "Choisir un outil à votre taille",
+        content: "Un indépendant ou une équipe de deux personnes n'a pas besoin de Salesforce. Un CRM simple, souvent gratuit jusqu'à quelques utilisateurs, avec un pipeline visuel et des emails automatiques, suffit. Pipedrive ou HubSpot deviennent pertinents quand plusieurs personnes vendent ou quand vous dépassez quelques dizaines de demandes par mois. Le bon critère : l'outil que vous ouvrirez chaque matin."
+      },
+      {
+        title: "Importer et nettoyer vos contacts",
+        content: "Rassemblez vos contacts depuis votre boîte mail, vos devis, votre téléphone, votre fichier Excel. Supprimez les doublons, marquez les contacts morts (aucun échange depuis deux ans), complétez les champs qui servent aux relances : prénom, email, dernier devis, montant. Un CRM rempli de contacts faux ou périmés est abandonné en quelques semaines."
+      },
+      {
+        title: "Relier vos formulaires",
+        content: "Chaque demande venue de votre site, de votre fiche Google ou de vos publicités doit créer une fiche automatiquement, avec sa source. Sans cela, vous ressaisissez, vous oubliez, et vous ne savez jamais quel canal rapporte. C'est aussi ce qui permet de mesurer le coût d'une demande par canal."
+      },
+      {
+        title: "Écrire trois relances, pas dix",
+        content: "Devis sans réponse : un rappel court à trois jours (« avez-vous pu regarder le devis ? »), une relance à dix jours qui propose un rendez-vous, un dernier message à trente jours qui laisse la porte ouverte. Rendez-vous : une confirmation la veille. Anciens clients : un message tous les six mois. Courtes, personnalisées avec le prénom et le sujet, jamais agressives."
+      },
+      {
+        title: "Regarder trois chiffres chaque lundi",
+        content: "Le nombre de demandes reçues, le nombre de devis en attente de réponse, le taux de transformation (devis gagnés sur devis envoyés). Dix minutes le lundi matin. Si le taux baisse, ce sont les relances ou les prix qu'il faut regarder ; si les demandes baissent, c'est l'acquisition."
+      }
+    ],
+    tips: [
+      "Commencez avec un seul pipeline et trois relances ; ajoutez le reste quand les premières fonctionnent",
+      "Ne relancez jamais par SMS sans consentement explicite : l'email suffit et coûte moins cher",
+      "Notez chaque appel dans la fiche, même en deux mots : c'est ce qui rend le CRM utile six mois plus tard",
+      "Demandez l'avis Google dans la relance de fin de chantier : c'est le moment où le client est content",
+      "Une demande non traitée sous 24 heures est perdue dans la moitié des cas : réglez une alerte"
+    ],
+    faqItems: [
+      {
+        question: "Un CRM est-il utile pour un artisan seul ?",
+        answer: "Oui, dès que vous envoyez plus de cinq devis par mois. Ce n'est pas la taille de l'entreprise qui compte, c'est le nombre de devis que vous oubliez de relancer. Un artisan qui relance systématiquement gagne en général deux ou trois chantiers de plus par trimestre."
+      },
+      {
+        question: "Combien de temps prend la mise en place ?",
+        answer: "Une journée pour un indépendant qui part de zéro avec un outil simple, une semaine avec l'import de plusieurs centaines de contacts et des formulaires à relier. Chez ConvertiLab, la mise en place est livrée en 5 à 10 jours, formation comprise."
+      },
+      {
+        question: "Quel CRM gratuit pour commencer ?",
+        answer: "Les versions gratuites de HubSpot ou de Brevo couvrent un pipeline et des emails automatiques pour un ou deux utilisateurs. Elles suffisent tant que vous restez sous quelques dizaines de demandes par mois. Le passage à un outil payant se justifie quand plusieurs personnes vendent."
+      },
+      {
+        question: "Les relances automatiques sont-elles légales ?",
+        answer: "Oui pour des contacts qui vous ont sollicité (demande de devis, formulaire), dans le cadre de cette demande. Pour de la prospection à froid par email vers des particuliers, il faut leur consentement. Dans tous les cas, un lien de désinscription et une adresse de contact sont obligatoires."
+      },
+      {
+        question: "Que fait ConvertiLab exactement ?",
+        answer: "Nous choisissons l'outil avec vous, configurons le pipeline, importons et nettoyons vos contacts, écrivons et réglons les relances, relions vos formulaires et vous formons en une heure. La mise en place est chiffrée à prix fixe après un échange de 30 minutes."
+      }
+    ],
+    relatedService: "crm",
+    relatedDevis: "crm"
   }
 ];
 

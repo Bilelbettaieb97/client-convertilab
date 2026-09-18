@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import ServiceFAQ from "@/components/services/ServiceFAQ";
 import CommunityManagementContent from "./CommunityManagementContent";
 import RelatedServicesSection from "@/components/internal-links/RelatedServicesSection";
 
@@ -44,6 +45,15 @@ export default function CommunityManagementPage() {
       <Navigation />
       <CommunityManagementContent />
       <RelatedServicesSection exclude={["/services/social-media/community-management"]} />
+      <ServiceFAQ
+        title="Questions fréquentes sur le community management"
+        faqs={[
+        { q: "Qui rédige les publications ?", a: "Nous, à partir d'un entretien sur votre activité, vos clients et votre ton, puis d'un calendrier validé ensemble chaque mois. Vous relisez avant publication si vous le souhaitez ; vous fournissez les photos de terrain, nous nous chargeons du reste." },
+        { q: "Répondez-vous aux messages et aux commentaires ?", a: "Oui, pendant les heures ouvrées, avec des réponses validées avec vous pour les questions fréquentes (prix, horaires, disponibilités). Les demandes de devis sont transmises immédiatement, et enregistrées dans votre CRM si vous en avez un." },
+        { q: "Combien de publications par mois ?", a: "Pour une TPE, huit à douze publications par mois sur un réseau principal suffisent, avec des stories régulières. Le nombre exact est fixé dans le forfait ; la régularité compte plus que le volume." },
+        { q: "Peut-on arrêter quand on veut ?", a: "Oui. Nos forfaits sont mensuels, sans engagement au-delà du mois en cours. Vous gardez les accès, les visuels et le calendrier." },
+      ]}
+      />
       <Footer />
     </div>
   );

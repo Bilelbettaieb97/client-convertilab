@@ -892,7 +892,7 @@ Le seuil minimum est 70/100 sur mobile selon les recommandations Google. En dess
   {
     slug: "audit-seo-gratuit-guide",
     title: "Comment faire un audit SEO gratuit de son site web en 60 secondes ?",
-    seoTitle: "Faire un audit SEO gratuit en 60 secondes",
+    seoTitle: "Audit SEO gratuit : lire et exploiter ses résultats",
     excerpt: "68% des expériences en ligne commencent sur Google. Pourtant la plupart des sites ont des erreurs techniques invisibles qui bloquent leur référencement. Découvrez comment analyser votre site gratuitement en 60 secondes.",
     metaDescription: "Comment faire un audit SEO gratuit de son site web en 60 secondes ? Analyse sur 60+ critères : balises, vitesse, mobile, robots.txt. Score SEO immédiat.",
     image: "/images/blog/audit-seo-gratuit-guide.png",
@@ -917,6 +917,8 @@ La bonne nouvelle : la plupart de ces erreurs sont corrigibles en quelques heure
 ![Audit SEO - analyse technique site web score et erreurs](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)
 
 [Essayez l'audit SEO gratuit maintenant →](/seo-check)
+
+> L'outil lui-même est ici : [lancer l'audit SEO gratuit de votre site](/seo-check). Cet article explique ce qu'il mesure, comment lire le score et par quoi commencer une fois le rapport reçu.
 
 [[sommaire]]
 
@@ -1825,7 +1827,7 @@ Oui, le rapport est conçu pour être lu par des dirigeants et entrepreneurs, pa
   {
     slug: "comment-choisir-agence-web-2026",
     title: "Comment choisir son agence web en 2026 : les 7 critères essentiels ?",
-    seoTitle: "Comment choisir son agence web en 2026",
+    seoTitle: "Comment choisir son agence web : 7 critères",
     excerpt: "Freelance, studio créatif ou agence full-service : comment choisir la bonne agence web pour son projet en 2026 ? Les 7 critères qui séparent une agence sérieuse d'une agence qui va vous faire perdre du temps et de l'argent.",
     metaDescription: "Comment choisir son agence web en 2026 ? Portfolio, stack technique, devis, propriété du code : les 7 critères essentiels et les pièges à éviter absolument.",
     image: "/images/blog/comment-choisir-agence-web-2026.png",
@@ -1840,7 +1842,9 @@ Oui, le rapport est conçu pour être lu par des dirigeants et entrepreneurs, pa
       { question: "Faut-il choisir une agence locale ou une agence en remote ?", answer: "Les deux fonctionnent très bien en 2026. L'essentiel est la réactivité et la qualité de communication. Une agence en remote peut être plus réactive qu'une agence locale si elle a de bonnes pratiques de gestion de projet. L'avantage d'une agence locale est la possibilité de se rencontrer physiquement, utile pour les projets complexes ou si vous préférez travailler en face à face. En 2026, la grande majorité des projets web se déroulent entièrement à distance avec succès : maquettes partagées via Figma, suivi de projet via Notion ou ClickUp, et appels vidéo pour les points importants. Le critère géographique est beaucoup moins important que la compétence technique et la qualité de la relation client." },
       { question: "Quel est le délai réaliste pour créer un site web avec une agence ?", answer: "Comptez 2 à 4 semaines pour un site vitrine, 1 à 3 mois pour un e-commerce et 1 à 2 semaines pour une landing page simple. Ces délais incluent le brief, les maquettes, le développement et les tests. Méfiez-vous des agences qui promettent un site complet en 48h, soit c'est un template, soit les tests seront expédiés. Notez que votre disponibilité influence aussi les délais : les agences les plus rapides bloquent leur agenda sur votre projet mais ont besoin que vous répondiez rapidement aux demandes de validation. Un projet qui traîne est souvent un projet où le client met 2 semaines à valider chaque maquette. Anticipez votre propre disponibilité quand vous planifiez le projet. ![Délais livraison site web - processus agence, maquettes, tests, mise en ligne](https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80)" },
     ],
-    content: `Pour choisir son agence web en 2026, il faut évaluer 7 critères : la qualité du portfolio, l'expertise technique (stack), la méthodologie de travail, le rapport qualité-prix, la maintenance post-livraison, les avis clients et la réactivité. Ces critères permettent de distinguer une agence sérieuse d'un prestataire qui va livrer un site médiocre et disparaître.
+    content: `**En bref :** pour choisir une agence web, vérifiez sept choses avant de signer : la propriété du site, le prix total sur deux ans, le délai écrit, des réalisations vérifiables, une maquette avant développement, la possibilité de modifier vous-même, et le suivi après la mise en ligne. Ce guide donne les questions à poser et les signaux qui doivent vous faire fuir.
+
+Pour choisir son agence web en 2026, il faut évaluer 7 critères : la qualité du portfolio, l'expertise technique (stack), la méthodologie de travail, le rapport qualité-prix, la maintenance post-livraison, les avis clients et la réactivité. Ces critères permettent de distinguer une agence sérieuse d'un prestataire qui va livrer un site médiocre et disparaître.
 
 En 2026, le marché regorge d'agences digitales aux offres très variées : freelances, studios créatifs, agences full-service, usines à sites à bas prix. Le prix le plus bas n'est jamais le bon critère. Un site à 300€ livré par un revendeur offshore ne génère pas de clients, un site à 990€ bien conçu peut rentabiliser l'investissement en 6 semaines.
 
@@ -7241,6 +7245,8 @@ Chez ConvertiLab, nous occupons une position singulière : nous avons accompagn�
 
 ![Freelance vs agence web, équipe de travail](https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80)
 
+> Pour un face-à-face point par point (prix, délais, garanties, suivi), voir notre [comparatif agence contre freelance](/comparatifs/agence-vs-freelance). Cet article se concentre sur la décision : quel prestataire pour quel projet et quel budget.
+
 [[sommaire]]
 
 ## Quels sont les avantages et inconvénients du freelance web par rapport à une agence ?
@@ -7906,6 +7912,7 @@ Oui, un audit SEO identifie précisément pourquoi votre site n’apparaît pas 
   },
   {
     slug: "combien-coute-site-internet-restaurant",
+    seoTitle: "Devis site web restaurant : combien ça coûte en 2026",
     title: "Combien coûte un site internet pour un restaurant ?",
     excerpt: "Prix réels, ce qui est inclus, différence entre offres à 890 € et 2 000€, et ROI attendu : tout ce qu'un restaurateur doit savoir avant de commander son site web.",
     metaDescription: "Combien coûte un site internet pour un restaurant en 2026 ? Prix détaillés, comparatif des offres et retour sur investissement réel. Dès 890 €, livré en 2 semaines.",
@@ -7922,7 +7929,9 @@ Oui, un audit SEO identifie précisément pourquoi votre site n’apparaît pas 
       { question: "En combien de temps peut-on créer un site pour un restaurant ?", answer: "Chez ConvertiLab, un site vitrine restaurant est livré en 2 semaines. Ce délai inclut le design sur-mesure validé par vous, le développement, l'intégration du menu et des photos, l'optimisation SEO locale et la mise en ligne." },
       { question: "Un site restaurant à 890 € est-il suffisant pour attirer des clients ?", answer: "Oui, un site vitrine à 890 € bien conçu suffit pour attirer des clients locaux si le SEO local est correctement optimisé. Monsieur Arancini, restaurateur parisien accompagné par ConvertiLab, a rempli ses soirées du vendredi et samedi dès le premier mois après la mise en ligne, sans publicité payante." },
     ],
-    content: `Un site internet pour un restaurant coûte entre **890 € et 3 000 €** selon les fonctionnalités. Un site vitrine avec menu en ligne, galerie photos, horaires et formulaire de réservation est réalisable à partir de 890 €. Les systèmes de commande en ligne ou de réservation avancée font monter le budget. Dans tous les cas, un seul client supplémentaire par semaine suffit à rentabiliser l'investissement.
+    content: `**En bref :** un site internet pour un restaurant coûte 890 € pour un site vitrine complet (carte, horaires, réservation, fiche Google reliée), et à partir de 1 490 € avec la commande en ligne. Ce guide détaille ce qu'un devis sérieux doit contenir, les pièges des abonnements, et ce qu'un site rapporte à une table de quartier.
+
+Un site internet pour un restaurant coûte entre **890 € et 3 000 €** selon les fonctionnalités. Un site vitrine avec menu en ligne, galerie photos, horaires et formulaire de réservation est réalisable à partir de 890 €. Les systèmes de commande en ligne ou de réservation avancée font monter le budget. Dans tous les cas, un seul client supplémentaire par semaine suffit à rentabiliser l'investissement.
 
 **Chiffres clés :** 81% des consommateurs consultent le menu d'un restaurant en ligne avant de décider d'y aller. 67% choisissent en fonction de la qualité des photos vues sur internet. Un restaurant sans site web perd en moyenne 30% de ses clients potentiels qui partent chez un concurrent visible sur Google.
 
@@ -8239,6 +8248,7 @@ Les artisans qui se démarquent localement cumulent trois éléments : un site p
   },
   {
     slug: "concurrents-avant-moi-sur-google",
+    seoTitle: "Pourquoi mon concurrent sort avant moi sur Google",
     title: "Pourquoi mes concurrents apparaissent avant moi sur Google ?",
     excerpt: "Vos concurrents monopolisent la première page et vous restez invisible ? Voici les 7 raisons précises et ce que vous pouvez faire pour les dépasser, étape par étape.",
     metaDescription: "Pourquoi vos concurrents apparaissent avant vous sur Google ? Les 7 causes réelles et les actions concrètes pour les dépasser en 3 à 6 mois.",
@@ -8255,7 +8265,9 @@ Les artisans qui se démarquent localement cumulent trois éléments : un site p
       { question: "Peut-on dépasser ses concurrents sur Google sans agence SEO ?", answer: "Oui, sur des requêtes locales peu concurrentielles, vous pouvez dépasser vos concurrents vous-même en optimisant votre Google Business Profile, en créant du contenu ciblé par requête, et en collectant des avis clients. Pour des requêtes compétitives ou nationales, l'aide d'un professionnel SEO accélère significativement les résultats." },
       { question: "Comment savoir pourquoi mes concurrents sont mieux classés que moi ?", answer: "Pour comprendre pourquoi vos concurrents se classent mieux, analysez leur site : regardez combien de pages ils ont, la longueur de leur contenu, leurs backlinks (avec un outil comme Ubersuggest), et leur fiche Google Business. Un audit SEO gratuit de votre propre site identifie également les failles à corriger en priorité." },
     ],
-    content: `Vos concurrents apparaissent avant vous sur Google parce que leurs pages répondent mieux aux critères que Google utilise pour classer les sites : autorité du domaine, qualité du contenu, optimisation technique et signaux locaux. La bonne nouvelle : ces critères sont tous améliorables, et sur des requêtes locales, 3 à 6 mois suffisent pour inverser la tendance.
+    content: `**En bref :** un concurrent passe devant vous sur Google pour trois raisons qui reviennent presque toujours : son domaine est plus ancien et reçoit plus de liens, ses pages ciblent la requête mot pour mot, et sa fiche Google est mieux nourrie en avis. Ce guide vous montre comment vérifier laquelle joue dans votre cas, en dix minutes, et par quoi commencer.
+
+Vos concurrents apparaissent avant vous sur Google parce que leurs pages répondent mieux aux critères que Google utilise pour classer les sites : autorité du domaine, qualité du contenu, optimisation technique et signaux locaux. La bonne nouvelle : ces critères sont tous améliorables, et sur des requêtes locales, 3 à 6 mois suffisent pour inverser la tendance.
 
 Avant de chercher à dépasser vos concurrents, vous devez comprendre **pourquoi** ils sont devant vous. Ce guide identifie les 7 raisons les plus fréquentes, avec une action concrète pour chacune. Pas de théorie, des leviers actionnables cette semaine.
 

@@ -32,14 +32,14 @@ export const devisServices: DevisService[] = [
     slug: "site-vitrine",
     name: "Site Vitrine",
     description: "Présentez votre activité avec un site vitrine professionnel, moderne et optimisé pour le référencement. Design sur-mesure, responsive et rapide.",
-    intro: "Un site vitrine est votre carte de visite en ligne, disponible 24h sur 24. Chez ConvertiLab, nous concevons des sites vitrine sur-mesure à partir de 490€, livrés en 2 semaines, pensés pour rassurer vos visiteurs et les transformer en clients. Vous restez propriétaire de votre site, sans abonnement obligatoire ni frais caché. Voici précisément ce que vous obtenez, et comment se décompose le prix.",
-    priceFrom: "490€",
+    intro: "Un site vitrine est votre carte de visite en ligne, disponible 24h sur 24. Chez ConvertiLab, nous concevons des sites vitrine sur-mesure à 890 €, livrés en 7 à 14 jours, pensés pour rassurer vos visiteurs et les transformer en clients. Vous restez propriétaire de votre site, sans abonnement obligatoire ni frais caché. Voici précisément ce que vous obtenez, et comment se décompose le prix.",
+    priceFrom: "890 €",
     priceBreakdown: [
-      { poste: "Design sur-mesure", prix: "200€", detail: "Maquette personnalisée validée avant tout développement, alignée sur votre identité de marque. Révisions incluses." },
-      { poste: "Développement (5 pages)", prix: "200€", detail: "Intégration en Next.js : accueil, à propos, services, contact et une page libre. Site rapide, responsive et sécurisé." },
-      { poste: "SEO de base + formulaire", prix: "100€", detail: "Balises title et meta optimisées, structure Hn propre, formulaire de contact connecté et intégration Google Maps." },
+      { poste: "Design sur-mesure", prix: "350€", detail: "Maquette personnalisée validée avant tout développement, alignée sur votre identité de marque. Révisions incluses." },
+      { poste: "Développement (5 pages)", prix: "400€", detail: "Intégration en Next.js : accueil, à propos, services, contact et une page libre. Site rapide, responsive et sécurisé." },
+      { poste: "SEO de base + formulaire", prix: "140€", detail: "Balises title et meta optimisées, structure Hn propre, formulaire de contact connecté et intégration Google Maps." },
     ],
-    breakdownNote: "Soit 490€ tout compris, hébergement de la première année inclus. Aucune commission, aucun abonnement obligatoire. Paiement en 2 ou 3 fois sans frais possible, ou formule mensuelle à partir de 39€/mois.",
+    breakdownNote: "Soit 890 € tout compris, hébergement de la première année inclus. Aucune commission, aucun abonnement obligatoire. Paiement en 2 ou 3 fois sans frais possible, ou formule mensuelle à partir de 39€/mois.",
     included: [
       "5 pages sur-mesure (accueil, à propos, services, contact, page libre)",
       "Hébergement de la première année offert",
@@ -58,7 +58,7 @@ export const devisServices: DevisService[] = [
       { title: "Échange et devis", desc: "Un appel de 30 minutes pour comprendre votre activité et vos objectifs. Vous recevez un devis détaillé sous 24h." },
       { title: "Maquette", desc: "Nous concevons la maquette de votre site. Vous la validez avant tout développement, avec révisions incluses." },
       { title: "Développement", desc: "Nous développons votre site en Next.js. Vous suivez l'avancement et testez le résultat." },
-      { title: "Mise en ligne", desc: "Livraison en 2 semaines, formation à l'administration et 30 jours de support inclus." },
+      { title: "Mise en ligne", desc: "Livraison en 7 à 14 jours, formation à l'administration et 30 jours de support inclus." },
     ],
     benefits: [
       "Design personnalisé qui reflète votre identité de marque",
@@ -69,15 +69,15 @@ export const devisServices: DevisService[] = [
     faqItems: [
       {
         question: "Combien coûte un site vitrine ?",
-        answer: "Nos sites vitrine démarrent à 490€ tout compris, hébergement de la première année inclus. Le prix varie selon le nombre de pages et les fonctionnalités souhaitées. Vous recevez un devis détaillé sous 24h."
+        answer: "Nos sites vitrine démarrent à 890 € tout compris, hébergement de la première année inclus. Le prix varie selon le nombre de pages et les fonctionnalités souhaitées. Vous recevez un devis détaillé sous 24h."
       },
       {
-        question: "Y a-t-il des frais cachés après les 490€ ?",
+        question: "Y a-t-il des frais cachés après les 890 € ?",
         answer: "Non. Le prix inclut la création complète et l'hébergement de la première année. Ensuite, l'hébergement revient à environ 39€/mois, ou vous optez pour notre formule mensuelle tout inclus. Aucune commission n'est prélevée."
       },
       {
         question: "En combien de temps mon site sera-t-il en ligne ?",
-        answer: "Un site vitrine est livré en 2 semaines après validation de la maquette. Si nous dépassons ce délai, un mois de maintenance vous est offert."
+        answer: "Un site vitrine est livré en 7 à 14 jours après validation de la maquette. Si nous dépassons ce délai, un mois de maintenance vous est offert."
       },
       {
         question: "Pourrai-je modifier le contenu moi-même ?",
@@ -211,14 +211,14 @@ export const devisServices: DevisService[] = [
     slug: "refonte-site",
     name: "Refonte de Site",
     description: "Modernisez votre site web avec une refonte complète. Nouveau design, meilleures performances et migration SEO sécurisée pour ne perdre aucun trafic.",
-    intro: "Refaire son site fait peur pour une raison : la crainte de perdre son référencement Google durement acquis. Chez ConvertiLab, la refonte démarre à 400€ et la préservation du SEO est notre priorité absolue. Nous migrons votre site avec des redirections 301 sur chaque URL pour conserver, voire améliorer, votre positionnement. Voici le détail.",
-    priceFrom: "400€",
+    intro: "Refaire son site fait peur pour une raison : la crainte de perdre son référencement Google durement acquis. Chez ConvertiLab, la refonte démarre à 690 € et la préservation du SEO est notre priorité absolue. Nous migrons votre site avec des redirections 301 sur chaque URL pour conserver, voire améliorer, votre positionnement. Voici le détail.",
+    priceFrom: "690 €",
     priceBreakdown: [
-      { poste: "Audit de l'existant", prix: "100€", detail: "Analyse de vos pages qui rankent, de vos contenus performants et des points techniques à corriger avant migration." },
-      { poste: "Migration SEO sécurisée", prix: "150€", detail: "Redirections 301 de chaque ancienne URL, conservation des balises title performantes, re-soumission du sitemap à Google." },
+      { poste: "Audit de l'existant", prix: "250€", detail: "Analyse de vos pages qui rankent, de vos contenus performants et des points techniques à corriger avant migration." },
+      { poste: "Migration SEO sécurisée", prix: "290€", detail: "Redirections 301 de chaque ancienne URL, conservation des balises title performantes, re-soumission du sitemap à Google." },
       { poste: "Nouveau design responsive", prix: "150€", detail: "Design moderne, rapide et orienté conversion, avec un score de performance visé à 90+." },
     ],
-    breakdownNote: "Soit 400€ pour une refonte de site vitrine. Vous conservez votre nom de domaine et toute votre autorité SEO. Le budget augmente avec le nombre de pages et la complexité des fonctionnalités à reprendre.",
+    breakdownNote: "Soit 690 € pour une refonte de site vitrine. Vous conservez votre nom de domaine et toute votre autorité SEO. Le budget augmente avec le nombre de pages et la complexité des fonctionnalités à reprendre.",
     included: [
       "Audit complet de votre site actuel",
       "Redirections 301 pour préserver le référencement",
@@ -248,7 +248,7 @@ export const devisServices: DevisService[] = [
     faqItems: [
       {
         question: "Combien coûte une refonte de site ?",
-        answer: "Une refonte de site vitrine démarre à 400€. Le prix dépend du nombre de pages à reprendre, du type de site et du travail de migration SEO nécessaire. Devis détaillé sous 24h."
+        answer: "Une refonte de site vitrine démarre à 690 €. Le prix dépend du nombre de pages à reprendre, du type de site et du travail de migration SEO nécessaire. Devis détaillé sous 24h."
       },
       {
         question: "Vais-je perdre mon référencement Google ?",
@@ -256,7 +256,7 @@ export const devisServices: DevisService[] = [
       },
       {
         question: "Combien de temps dure une refonte ?",
-        answer: "Comptez 1 à 2 semaines pour un site vitrine et 3 à 6 semaines pour un site e-commerce, en incluant l'audit, le design, le développement et la migration."
+        answer: "Comptez 1 à 10 à 15 jours pour un site vitrine et 3 à 6 semaines pour un site e-commerce, en incluant l'audit, le design, le développement et la migration."
       },
       {
         question: "Puis-je conserver mon nom de domaine et mes contenus ?",
@@ -602,7 +602,66 @@ export const devisServices: DevisService[] = [
     ],
     relatedService: "sites-web",
     relatedPricing: "application"
-  }
+  },
+  {
+    slug: "crm",
+    name: "CRM et relances",
+    description: "Mise en place d'un CRM avec relances automatiques : pipeline sur vos étapes réelles, contacts importés, formulaires reliés, formation incluse.",
+    intro: "Un devis sans réponse n'est pas un devis perdu, c'est un devis pas relancé. Un CRM bien réglé rappelle à votre place, au bon moment, sans que vous y pensiez. Chez ConvertiLab, la mise en place est chiffrée à prix fixe après un échange de 30 minutes ; le suivi mensuel est facultatif. Voici comment se construit le devis.",
+    priceFrom: "Sur devis",
+    priceBreakdown: [
+      { poste: "Choix de l'outil et configuration du pipeline", prix: "Selon périmètre", detail: "Étapes de vente, champs utiles, vues par personne. Un outil que vous utiliserez, pas le plus cher." },
+      { poste: "Import et nettoyage des contacts", prix: "Selon volume", detail: "Reprise de vos fichiers et boîtes mail, suppression des doublons et des contacts morts." },
+      { poste: "Relances automatiques", prix: "Selon nombre de scénarios", detail: "Devis sans réponse, rendez-vous à confirmer, clients à réactiver : emails courts, espacés, personnalisés." },
+      { poste: "Formulaires reliés et formation", prix: "Inclus", detail: "Chaque demande du site crée une fiche ; une heure de formation en visio." },
+    ],
+    breakdownNote: "Le devis dépend du nombre de contacts, d'étapes et de scénarios de relance. Il est écrit, détaillé, et envoyé sous 24 heures après notre échange.",
+    included: [
+      "Pipeline de vente configuré sur vos étapes réelles",
+      "Contacts importés et nettoyés",
+      "Relances automatiques par email",
+      "Formulaires du site reliés au CRM",
+      "Formation d'une heure et tableau de bord",
+    ],
+    priceFactors: [
+      "Le nombre de contacts à importer et à nettoyer",
+      "Le nombre d'étapes de vente et de scénarios de relance",
+      "Le nombre de formulaires et d'outils à relier",
+      "Le suivi mensuel souhaité ou non",
+    ],
+    steps: [
+      { title: "Échange de 30 minutes", desc: "Vos étapes de vente, vos demandes, vos oublis les plus fréquents. Devis écrit sous 24 h." },
+      { title: "Configuration", desc: "Pipeline, champs, relances, formulaires reliés, sur l'outil retenu." },
+      { title: "Import et tests", desc: "Vos contacts importés et nettoyés, chaque scénario de relance testé avec vous." },
+      { title: "Formation et suivi", desc: "Une heure de prise en main, puis un point mensuel si vous le souhaitez." },
+    ],
+    benefits: [
+      "Plus aucun devis oublié : chaque demande est relancée automatiquement",
+      "Un pipeline lisible : ce qui est en cours, ce qui bloque, ce qui est gagné",
+      "Des formulaires reliés : zéro ressaisie",
+      "Un outil adapté à votre taille, pas le plus cher du marché",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte la mise en place d'un CRM ?",
+        answer: "Le prix dépend du nombre de contacts, d'étapes et de relances à automatiser. Nous chiffrons la mise en place à prix fixe après un échange de 30 minutes, sans engagement.",
+      },
+      {
+        question: "Quel délai ?",
+        answer: "5 à 10 jours entre la validation du devis et la formation, selon le volume de contacts à reprendre.",
+      },
+      {
+        question: "Faut-il changer d'outil si j'ai déjà un CRM ?",
+        answer: "Non. Si votre outil actuel convient, nous le configurons et l'automatisons. Nous ne changeons d'outil que si le vôtre bloque les relances ou coûte trop cher pour votre usage.",
+      },
+      {
+        question: "Les relances partent-elles aussi par SMS ?",
+        answer: "Non, uniquement par email. Le SMS et WhatsApp posent des questions de consentement et de coût que nous ne recommandons pas pour des relances commerciales."
+      },
+    ],
+    relatedService: "crm",
+    relatedPricing: "crm",
+  },
 ];
 
 export function getDevisServiceBySlug(slug: string): DevisService | undefined {

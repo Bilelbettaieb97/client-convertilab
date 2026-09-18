@@ -204,7 +204,7 @@ export const pricingPages: PricingPage[] = [
     faqItems: [
       {
         question: "Combien coûte une prestation SEO ?",
-        answer: "Le prix dépend de la concurrence dans votre secteur, du nombre de mots-clés ciblés et de l'état actuel de votre site. Nous proposons des forfaits à partir de 300€/mois après un audit initial gratuit.",
+        answer: "Le prix dépend de la concurrence dans votre secteur, du nombre de mots-clés ciblés et de l'état actuel de votre site. Notre référencement local démarre à 500 € par mois, avec un engagement de 6 mois, après un audit initial gratuit.",
       },
       {
         question: "En combien de temps vais-je voir des résultats ?",
@@ -305,5 +305,46 @@ export const pricingPages: PricingPage[] = [
     ],
     deliveryTime: "Démarrage sous 2 semaines",
     relatedService: "/services/social-media",
+  },
+  {
+    slug: "crm",
+    name: "CRM et relances automatiques",
+    description: "Un CRM simple, mis en place pour vous, avec des relances automatiques par email : plus aucun devis oublié, plus aucun rendez-vous sans rappel.",
+    price: "Sur devis",
+    priceLabel: "Mise en place à prix fixe, sur devis",
+    includes: [
+      "Choix de l'outil adapté à votre taille (Pipedrive, HubSpot ou un CRM simple)",
+      "Pipeline de vente configuré sur vos étapes réelles (demande, devis, relance, gagné, perdu)",
+      "Import et nettoyage de vos contacts existants (doublons, contacts morts)",
+      "Relances automatiques par email : devis sans réponse, rendez-vous à confirmer, clients à réactiver",
+      "Formulaires du site reliés au CRM : chaque demande crée une fiche",
+      "Formation d'une heure à la prise en main, en visio",
+      "Tableau de bord : demandes, devis en cours, taux de transformation",
+    ],
+    notIncludes: [
+      "L'abonnement de l'outil CRM (facturé par l'éditeur, souvent gratuit jusqu'à quelques utilisateurs)",
+      "L'envoi de SMS ou de WhatsApp (canaux non inclus)",
+      "La rédaction de vos séquences commerciales complètes (option)",
+    ],
+    faqItems: [
+      {
+        question: "Combien coûte la mise en place d'un CRM ?",
+        answer: "Le prix dépend du nombre de contacts à importer, du nombre d'étapes et de relances à automatiser, et des formulaires à relier. Nous chiffrons la mise en place à prix fixe après un échange de 30 minutes, sans engagement. Le suivi mensuel est facultatif.",
+      },
+      {
+        question: "Ai-je besoin d'un CRM avec dix demandes par mois ?",
+        answer: "Dès que vous oubliez de relancer un devis, oui. Un CRM ne sert pas à stocker des contacts, il sert à ne plus laisser une demande sans réponse. À dix demandes par mois, une relance automatique bien réglée rapporte souvent deux ou trois clients de plus par trimestre.",
+      },
+      {
+        question: "Quel outil choisissez-vous ?",
+        answer: "Celui que vous utiliserez vraiment. Pour un indépendant ou une petite équipe, un CRM simple et gratuit suffit souvent ; Pipedrive ou HubSpot quand plusieurs personnes vendent. Nous n'avons pas de partenariat qui influence le choix.",
+      },
+      {
+        question: "Les relances automatiques ne font-elles pas fuir les clients ?",
+        answer: "Pas quand elles sont espacées, courtes et personnalisées : un rappel à trois jours, un autre à dix jours, une proposition de rendez-vous. Ce sont les silences qui font perdre les devis, pas les rappels polis.",
+      },
+    ],
+    deliveryTime: "5 à 10 jours",
+    relatedService: "/services/crm",
   },
 ];
