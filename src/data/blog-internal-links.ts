@@ -303,6 +303,10 @@ export const articleInternalLinks: Record<string, ArticleInternalLinks> = {
     primary: { title: "Référencement local pour artisans", description: "Fiche Google, avis, pages par ville : les demandes arrivent depuis Google Maps.", href: "/services/seo/seo-local", cta: "Découvrir le SEO local" },
     secondary: { title: "Site vitrine artisan à 890 €", description: "Photos de vos réalisations, devis en un clic, livré en 7 à 14 jours.", href: "/services/sites-web/site-vitrine", cta: "Voir l'offre" },
   },
+  "site-web-lent-fait-fuir-clients": {
+    primary: { title: "Test de vitesse gratuit", description: "Mesurez le temps de chargement réel de votre site et recevez le rapport.", href: "/speed-check", cta: "Tester ma vitesse" },
+    secondary: { title: "Refonte de site à 690 €", description: "Un site rapide, redirections posées pour garder vos positions.", href: "/services/sites-web/refonte-site", cta: "Voir l'offre refonte" },
+  },
 };
 
 export function getArticleLinks(slug: string): ArticleInternalLinks | null {
