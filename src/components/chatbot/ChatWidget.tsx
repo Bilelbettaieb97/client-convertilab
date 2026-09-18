@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -458,23 +457,23 @@ export default function ChatWidget() {
 
   return (
     <>
-      <AnimatePresence>
-        {open && (
-          <ChatWindow
-            messages={messages}
-            currentStep={step}
-            onSendMessage={handleSendMessage}
-            onButtonClick={handleButtonClick}
-            onClose={handleClose}
-          />
-        )}
-      </AnimatePresence>
+      {/* framer-motion n'est plus chargé pour la bulle (35 Ko compressés sur chaque page) :
+          la fenêtre l'importe elle-même à l'ouverture, la bulle s'anime en CSS (tw-animate-css). */}
+      {open && (
+        <ChatWindow
+          messages={messages}
+          currentStep={step}
+          onSendMessage={handleSendMessage}
+          onButtonClick={handleButtonClick}
+          onClose={handleClose}
+        />
+      )}
 
       {/*
         --barre-cta : hauteur de la StickyCtaBar (pages pôles, accueil) posée sur
         <html> quand elle est visible ; la bulle remonte d'autant par un
         transform (pas de `bottom` animé : un transform n'entre pas dans le CLS).
-        L'enveloppe porte le transform car framer-motion pilote celui du bouton.
+        L'enveloppe porte le transform ; le bouton garde le sien pour l'appui (active:scale-95).
       */}
       <div
         // Collé au bord (right-0, bottom-0) avec les marges en padding. pl-40 réserve
@@ -484,43 +483,27 @@ export default function ChatWidget() {
       >
       {/* Bulle : violet uni au repos, le rose glisse au survol ; aucun mouvement permanent
           (plus de « ping »). Voir motion/ff/c-bulle-chat. */}
-      <motion.button
+      <button
+        type="button"
         onClick={open ? handleClose : handleOpen}
-        className={cn(BULLE_CHAT, "pointer-events-auto")}
-        whileTap={{ scale: 0.95 }}
+        className={cn(BULLE_CHAT, "pointer-events-auto active:scale-95")}
         aria-label={open ? "Fermer le chat" : "Ouvrir le chat"}
       >
-        <AnimatePresence mode="wait">
-          {open ? (
-            <motion.span
-              key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="flex items-center justify-center"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </motion.span>
-          ) : (
-            <motion.span
-              key="chat"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.5, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="flex items-center justify-center"
-            >
-              <MessageCircle className="h-6 w-6" />
-            </motion.span>
-          )}
-        </AnimatePresence>
+        {open ? (
+          <span key="close" className="flex items-center justify-center animate-in fade-in zoom-in-50 duration-200 motion-reduce:animate-none">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </span>
+        ) : (
+          <span key="chat" className="flex items-center justify-center animate-in fade-in zoom-in-50 duration-200 motion-reduce:animate-none">
+            <MessageCircle className="h-6 w-6" />
+          </span>
+        )}
 
         {!open && <EtiquetteBulle>Une question ?</EtiquetteBulle>}
-      </motion.button>
+      </button>
       </div>
     </>
   );

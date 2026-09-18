@@ -126,7 +126,7 @@ export default function CreationSiteInternetPage() {
                 </div>
                 <p className="text-sm text-gray-600 mb-3 leading-relaxed line-clamp-2">{city.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-500">{city.stats.entreprises}</span>
+                  <span className="text-xs text-gray-500">{city.department}</span>
                   <span className="inline-flex items-center gap-1 text-sm font-semibold text-purple-600 group-hover:gap-2 transition-all">
                     Voir <ArrowRight className="w-4 h-4" />
                   </span>

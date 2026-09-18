@@ -12,9 +12,9 @@
  * de la bulle (elle est collée au bord droit), sombre, et n'existe que sur les
  * écrans à survol (`hover: hover`) : rien ne se déclenche au toucher. Ombre
  * violette douce au lieu de l'ombre noire, aucune animation permanente (le
- * `ping` de l'ancienne bulle est retiré). Le bouton reste piloté par
- * framer-motion dans `ChatWidget` (échange d'icônes, `whileTap`) : ce module
- * fournit ses classes et l'étiquette.
+ * `ping` de l'ancienne bulle est retiré). Le bouton est en CSS pur dans
+ * `ChatWidget` (échange d'icônes par tw-animate-css, appui par active:scale) :
+ * ce module fournit ses classes et l'étiquette.
  */
 import { cn } from "@/lib/utils";
 

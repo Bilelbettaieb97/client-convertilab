@@ -292,23 +292,6 @@ export default async function CityPage({ params }: Props) {
             ligne, à prix publics, avec une maquette gratuite sous 48 h.
           </p>
 
-          {/* Stats locales */}
-          <div className="flex flex-wrap gap-6 mb-8">
-            <div className="flex items-center gap-2 text-gray-700">
-              <Users className="w-5 h-5 text-purple-600" />
-              <span className="font-semibold">{city.stats.entreprises}</span>{" "}
-              à {city.name}
-            </div>
-            <div className="flex items-center gap-2 text-gray-700">
-              <Search className="w-5 h-5 text-purple-600" />
-              <span className="font-semibold">{city.stats.searches}</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-700">
-              <Star className="w-5 h-5 text-yellow-500" />
-              <span className="font-semibold">4,5/5</span> (14 avis)
-            </div>
-          </div>
-
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Button
@@ -341,6 +324,24 @@ export default async function CityPage({ params }: Props) {
               </a>
             </Button>
           </div>
+
+          {/* Repères vérifiables (les anciens « X entreprises » et « recherches/mois »
+              étaient des estimations invérifiables) */}
+          <div className="flex flex-wrap gap-x-6 gap-y-2 mb-8 text-sm sm:text-base">
+            <div className="flex items-center gap-2 text-gray-700">
+              <Users className="w-5 h-5 text-purple-600" />
+              <span className="font-semibold">Réponse sous 24 h</span>, par le fondateur
+            </div>
+            <div className="flex items-center gap-2 text-gray-700">
+              <Search className="w-5 h-5 text-purple-600" />
+              <span className="font-semibold">Maquette gratuite</span> sous 48 h
+            </div>
+            <div className="flex items-center gap-2 text-gray-700">
+              <Star className="w-5 h-5 text-yellow-500" />
+              <span className="font-semibold">4,5/5</span> (14 avis Trustpilot)
+            </div>
+          </div>
+
 
           {/* Badges confiance */}
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
@@ -437,24 +438,18 @@ export default async function CityPage({ params }: Props) {
             {local && local.accroche.map((p, i) => (
               <p key={`local-${i}`}>{p}</p>
             ))}
-            <p>
-              Avec <strong>{city.stats.entreprises}</strong> recensées,{" "}
-              {city.name} est un bassin économique dynamique au sein du
-              département {city.department} en {city.region}. Chaque mois, ce
-              sont{" "}
-              <strong>{city.stats.searches}</strong> qui sont effectuées par des
-              internautes cherchant des services locaux. Si votre entreprise
-              n&apos;est pas visible en ligne, vous perdez des clients au profit de
-              vos concurrents.
-            </p>
-            <p>
-              Aujourd&apos;hui, <strong>87% des consommateurs</strong> recherchent
-              en ligne avant d&apos;acheter localement. Un site web professionnel
-              n&apos;est plus un luxe, c&apos;est une nécessité absolue pour toute
-              entreprise à {city.name}. Que vous soyez commerçant, artisan,
-              profession libérale ou dirigeant de PME, votre site internet est
-              votre vitrine digitale 24h/24, 7j/7.
-            </p>
+            {/* Sans contenu local : un paragraphe factuel, sans chiffre invérifiable
+                (les anciens « X recherches/mois » et « 87 % des consommateurs » sont retirés). */}
+            {!local && (
+              <p>
+                {city.name}, dans le département {city.department} en {city.region},
+                réunit des commerces, des artisans, des professions libérales et des PME
+                dont les clients commencent presque toujours par une recherche Google ou
+                Google Maps. Une entreprise sans site, ou avec un site lent et dépassé,
+                laisse ces demandes à ses concurrents. Un site professionnel, relié à
+                une fiche Google exacte, répond à ces recherches à toute heure.
+              </p>
+            )}
             <p>
               ConvertiLab est une agence web spécialisée dans l&apos;accompagnement
               des entreprises {deVille(city.name)} et de tout le département{" "}
