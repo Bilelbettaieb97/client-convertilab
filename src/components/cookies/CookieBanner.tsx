@@ -192,39 +192,39 @@ export default function CookieBanner() {
         </div>
       )}
 
-      {/* Bandeau principal */}
-      <div className="fixed bottom-0 left-0 right-0 z-[90] p-4 sm:p-6 animate-slide-up">
+      {/* Bandeau principal : compact sur mobile pour laisser le bouton principal de la page visible */}
+      <div className="fixed bottom-0 left-0 right-0 z-[90] p-2 sm:p-6 animate-slide-up">
         <div className="container mx-auto max-w-5xl">
-          <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
-            <div className="p-5 sm:p-6">
-              <div className="flex flex-col lg:flex-row items-start lg:items-center gap-5">
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+            <div className="px-3 py-3 sm:p-6">
+              <div className="flex flex-col lg:flex-row items-start lg:items-center gap-3 sm:gap-5">
                 {/* Icon + texte */}
-                <div className="flex items-start gap-4 flex-1">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3 sm:gap-4 flex-1">
+                  <div className="hidden sm:flex w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl items-center justify-center flex-shrink-0">
                     <Cookie className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-gray-900 mb-1">Nous utilisons des cookies</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu.
-                      En savoir plus dans notre{" "}
+                    <h3 className="font-bold text-gray-900 text-sm sm:text-base sm:mb-1">Nous utilisons des cookies</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 leading-snug sm:leading-relaxed">
+                      <span className="hidden sm:inline">Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu. </span>
+                      <span className="sm:hidden">Mesure d&apos;audience et publicité, rien d&apos;autre. </span>
                       <Link href="/politique-de-cookies" className="text-purple-600 font-medium hover:underline">
-                        politique de cookies
-                      </Link>.
+                        Politique de cookies
+                      </Link>
                     </p>
                   </div>
                 </div>
 
-                {/* Boutons */}
-                <div className="flex flex-col sm:flex-row gap-2 w-full lg:w-auto flex-shrink-0">
-                  <Button onClick={() => setShowPreferences(true)} variant="outline" size="sm" className="text-xs">
-                    <Settings className="w-3.5 h-3.5 mr-1.5" />
+                {/* Boutons : toujours sur une ligne */}
+                <div className="flex flex-row gap-2 w-full lg:w-auto flex-shrink-0">
+                  <Button onClick={() => setShowPreferences(true)} variant="outline" size="sm" className="text-xs flex-1 lg:flex-none px-2 sm:px-3">
+                    <Settings className="w-3.5 h-3.5 mr-1.5 hidden sm:inline" />
                     Personnaliser
                   </Button>
-                  <Button onClick={handleRejectAll} variant="outline" size="sm" className="text-xs">
+                  <Button onClick={handleRejectAll} variant="outline" size="sm" className="text-xs flex-1 lg:flex-none px-2 sm:px-3">
                     Refuser
                   </Button>
-                  <Button onClick={handleAcceptAll} size="sm" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs">
+                  <Button onClick={handleAcceptAll} size="sm" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs flex-1 lg:flex-none px-2 sm:px-3">
                     Tout accepter
                   </Button>
                 </div>

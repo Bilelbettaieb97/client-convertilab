@@ -83,8 +83,8 @@ export default function PortfolioClient() {
                   />
                 ))}
               </div>
-              <span className="font-medium text-foreground">4,9/5</span>
-              <span>sur 15 avis</span>
+              <span className="font-medium text-foreground">4,5/5</span>
+              <span>sur 14 avis</span>
             </div>
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-primary" />

@@ -135,7 +135,7 @@ Ce qui fait reculer une fiche : un avis négatif sans réponse, une catégorie t
 
 ## Ce que fait ConvertiLab
 
-Notre prestation de [référencement local à Rueil-Malmaison et Paris](/services/seo/seo-local) couvre les quatre leviers décrits ici : fiche Google reprise à votre nom et complétée, avis collectés avec MerciAvis et réponses à votre ton, coordonnées harmonisées, pages villes rédigées et reliées à la fiche. Elle est incluse dans notre forfait SEO, dès 500 €/mois, 6 mois minimum, au sein du [pôle SEO](/services/seo). Pour la fiche et les avis seuls, une mission ponctuelle est chiffrée sur devis. Dans les deux cas : diagnostic écrit sous 24 h avant tout devis, aucun faux avis, suivi mensuel, et fiche, accès et contenus qui restent à vous. Plus de 150 clients accompagnés, 4,9/5 sur 15 avis. Pour commencer, [testez gratuitement le SEO de votre site](/seo-check).
+Notre prestation de [référencement local à Rueil-Malmaison et Paris](/services/seo/seo-local) couvre les quatre leviers décrits ici : fiche Google reprise à votre nom et complétée, avis collectés avec MerciAvis et réponses à votre ton, coordonnées harmonisées, pages villes rédigées et reliées à la fiche. Elle est incluse dans notre forfait SEO, dès 500 €/mois, 6 mois minimum, au sein du [pôle SEO](/services/seo). Pour la fiche et les avis seuls, une mission ponctuelle est chiffrée sur devis. Dans les deux cas : diagnostic écrit sous 24 h avant tout devis, aucun faux avis, suivi mensuel, et fiche, accès et contenus qui restent à vous. Plus de 150 clients accompagnés, 4,5/5 sur 14 avis. Pour commencer, [testez gratuitement le SEO de votre site](/seo-check).
 
 ## Questions fréquentes
 

@@ -144,7 +144,7 @@ Le référencement naturel n'exclut pas la publicité : une campagne [Google Ads
 
 ## Ce que fait ConvertiLab
 
-Notre [agence SEO à Rueil-Malmaison et Paris](/services/seo) prend en charge votre référencement naturel dans un forfait mensuel dès 500 €/mois, 6 mois minimum, puis libre mois par mois : audit complet et plan d'action au démarrage, corrections techniques, contenus rédigés et publiés chaque mois, fiche Google et avis clients collectés avec MerciAvis, visibilité dans les IA incluse sans supplément, rapport mensuel tiré de votre Search Console. Audit seul et missions sur mesure : sur devis, à prix fixe écrit. Accès, contenus, audit et fiche Google restent à vous si vous arrêtez. Plus de 150 clients accompagnés, une note de 4,9/5 sur 15 avis. Pour connaître votre point de départ, [vérifiez gratuitement le SEO de votre site en 60 secondes](/seo-check).
+Notre [agence SEO à Rueil-Malmaison et Paris](/services/seo) prend en charge votre référencement naturel dans un forfait mensuel dès 500 €/mois, 6 mois minimum, puis libre mois par mois : audit complet et plan d'action au démarrage, corrections techniques, contenus rédigés et publiés chaque mois, fiche Google et avis clients collectés avec MerciAvis, visibilité dans les IA incluse sans supplément, rapport mensuel tiré de votre Search Console. Audit seul et missions sur mesure : sur devis, à prix fixe écrit. Accès, contenus, audit et fiche Google restent à vous si vous arrêtez. Plus de 150 clients accompagnés, une note de 4,5/5 sur 14 avis. Pour connaître votre point de départ, [vérifiez gratuitement le SEO de votre site en 60 secondes](/seo-check).
 
 ## Questions fréquentes
 

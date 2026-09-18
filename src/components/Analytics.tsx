@@ -48,6 +48,7 @@ export function GoogleAnalytics() {
   );
 }
 
+/** Non monté depuis le 18/09/2026 : le conteneur GTM-5TDHTDHP est vide (aucune balise), il coûtait 330 Ko de JS. GA4 et Google Ads passent par gtag ci-dessus. */
 export function GoogleTagManager() {
   return (
     <Script id="gtm" strategy="lazyOnload">

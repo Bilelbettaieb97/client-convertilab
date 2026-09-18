@@ -113,7 +113,7 @@ export default function AppelFinal() {
           <div className="flex items-center gap-3">
             <Image
               src="/images/fondateur-carre.webp"
-              alt=""
+              alt="Le fondateur de ConvertiLab"
               width={44}
               height={44}
               className="h-11 w-11 rounded-full border border-border object-cover"

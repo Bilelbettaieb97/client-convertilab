@@ -150,7 +150,7 @@ Il n'existe pas de tarif public, parce qu'aucun CRM n'est réglé de la même fa
 
 ## Ce que fait ConvertiLab
 
-Notre prestation d'[optimisation de CRM pour TPE et PME](/services/crm/optimisation-crm) s'adresse aux entreprises de Rueil-Malmaison, des Hauts-de-Seine, de Paris et d'Île-de-France dont le CRM est en place mais sous-utilisé. Sur votre outil actuel, sans en changer : pipeline allégé, relances de devis par email, rappels de rendez-vous, alertes internes, tableau de bord du matin, règles écrites et journal. Diagnostic d'une journée à prix fixe communiqué sous 24 h, suivi mensuel facultatif. La page propose un calculateur gratuit des demandes perdues. Ce service fait partie de notre pôle [CRM et relances automatiques](/services/crm). Plus de 150 clients accompagnés, 4,9/5 sur 15 avis.
+Notre prestation d'[optimisation de CRM pour TPE et PME](/services/crm/optimisation-crm) s'adresse aux entreprises de Rueil-Malmaison, des Hauts-de-Seine, de Paris et d'Île-de-France dont le CRM est en place mais sous-utilisé. Sur votre outil actuel, sans en changer : pipeline allégé, relances de devis par email, rappels de rendez-vous, alertes internes, tableau de bord du matin, règles écrites et journal. Diagnostic d'une journée à prix fixe communiqué sous 24 h, suivi mensuel facultatif. La page propose un calculateur gratuit des demandes perdues. Ce service fait partie de notre pôle [CRM et relances automatiques](/services/crm). Plus de 150 clients accompagnés, 4,5/5 sur 14 avis.
 
 ## Questions fréquentes
 

@@ -72,7 +72,7 @@ export default function AboutPage() {
     { year: "2020", title: "Spécialisation Marketing Digital", desc: "Approfondissement en SEO, Google Ads et stratégie d'acquisition. Premières campagnes performantes pour des clients." },
     { year: "2022", title: "Expert Full-Stack & Growth", desc: "Maîtrise de React, Next.js, Node.js. Combinaison unique de compétences techniques et marketing." },
     { year: "2024", title: "Création de ConvertiLab", desc: "Lancement de l'agence avec une mission claire : aider les PME et entrepreneurs à développer leur business grâce au digital." },
-    { year: "2025-26", title: "150+ clients accompagnés", desc: "Artisans, commerces, indépendants et petites équipes, en Île-de-France et partout en France, avec une note de 4,9/5 sur Trustpilot." },
+    { year: "2025-26", title: "150+ clients accompagnés", desc: "Artisans, commerces, indépendants et petites équipes, en Île-de-France et partout en France, avec une note de 4,5/5 sur Trustpilot." },
   ];
 
   const chiffres = [

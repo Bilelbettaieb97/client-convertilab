@@ -44,7 +44,7 @@ const platforms = [
 const stats = [
   { value: "+200%", label: "Engagement moyen" },
   { value: "50+", label: "Clients accompagnés" },
-  { value: "4.9/5", label: "Satisfaction client" },
+  { value: "4,5/5", label: "Satisfaction client" },
 ];
 
 export default function SocialMediaContent() {

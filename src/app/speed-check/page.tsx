@@ -276,7 +276,7 @@ export default function SpeedCheckPage() {
             <div className="flex flex-wrap items-center justify-center gap-8 text-white/30 text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-yellow-400">{"\u2605\u2605\u2605\u2605\u2605"}</span>
-                <span>4.9/5 sur 15 avis</span>
+                <span>4,5/5 sur 14 avis</span>
               </div>
               <div>150+ clients accompagnés</div>
               <div>Rueil-Malmaison (92)</div>

@@ -144,7 +144,7 @@ Vous avez déjà un site ? [Testez son design](/design-score) : vous saurez s'il
 
 ## Ce que fait ConvertiLab
 
-Notre agence de [création de site internet à Rueil-Malmaison et Paris](/services/sites-web) conçoit des sites vitrine (890 €), des landing pages (490 €), des refontes (690 €), des sites e-commerce (à partir de 1 490 €) et des applications web sur devis. Prix fixe écrit avant de commencer, paiement étalé sans abonnement, maquette de votre page d'accueil offerte sous 48 h, site vitrine livré en 2 semaines. Un seul interlocuteur du premier appel à la mise en ligne, et vous restez propriétaire du site, du nom de domaine et des contenus. Plus de 150 clients accompagnés, une note de 4,9/5 sur 15 avis. [Estimez le prix de votre site en 2 minutes](/estimation-prix-site-web), gratuitement.
+Notre agence de [création de site internet à Rueil-Malmaison et Paris](/services/sites-web) conçoit des sites vitrine (890 €), des landing pages (490 €), des refontes (690 €), des sites e-commerce (à partir de 1 490 €) et des applications web sur devis. Prix fixe écrit avant de commencer, paiement étalé sans abonnement, maquette de votre page d'accueil offerte sous 48 h, site vitrine livré en 2 semaines. Un seul interlocuteur du premier appel à la mise en ligne, et vous restez propriétaire du site, du nom de domaine et des contenus. Plus de 150 clients accompagnés, une note de 4,5/5 sur 14 avis. [Estimez le prix de votre site en 2 minutes](/estimation-prix-site-web), gratuitement.
 
 ## Questions fréquentes
 

@@ -2,7 +2,7 @@ import { Star, Users, TrendingUp, Award } from "lucide-react";
 
 const stats = [
   { icon: Users, value: "150+", label: "clients accompagnés" },
-  { icon: Star, value: "4,9/5", label: "15 avis Trustpilot" },
+  { icon: Star, value: "4,5/5", label: "14 avis Trustpilot" },
   { icon: TrendingUp, value: "1", label: "interlocuteur : le fondateur" },
   { icon: Award, value: "2 semaines", label: "délai de livraison" },
 ];

@@ -33,7 +33,7 @@ export interface PoleHeroProps {
   reassurance?: readonly string[];
   /** Ligne discrète sous les boutons : lien vers l'outil gratuit de la page, ou vers le pôle parent. */
   mention?: ReactNode;
-  /** Trois chiffres, jamais plus (150+ clients accompagnés, 4,9/5 sur 15 avis, puis un chiffre propre à la page). */
+  /** Trois chiffres, jamais plus (150+ clients accompagnés, 4,5/5 sur 14 avis, puis un chiffre propre à la page). */
   chiffres: readonly PoleChiffre[];
   /** Visuel à droite du texte à partir de lg : maquette propre à la page (composant Mock…), carte des pôles sur le hub. */
   aside?: ReactNode;

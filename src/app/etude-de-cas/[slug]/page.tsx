@@ -39,11 +39,14 @@ export default async function CaseStudyPage({ params }: Props) {
   }
 
   // Get navigation (previous/next)
-  const currentIndex = caseStudies.findIndex((cs) => cs.slug === slug);
-  const previousIndex = currentIndex === 0 ? caseStudies.length - 1 : currentIndex - 1;
-  const nextIndex = currentIndex === caseStudies.length - 1 ? 0 : currentIndex + 1;
-  const previousCase = caseStudies[previousIndex];
-  const nextCase = caseStudies[nextIndex];
+  // Navigation limitée aux études réellement générées (fullCaseStudies), sinon les
+  // boutons précédent/suivant pointaient vers des pages en 404.
+  const navigables = caseStudies.filter((cs) => cs.slug in fullCaseStudies);
+  const currentIndex = navigables.findIndex((cs) => cs.slug === slug);
+  const previousIndex = currentIndex === 0 ? navigables.length - 1 : currentIndex - 1;
+  const nextIndex = currentIndex === navigables.length - 1 ? 0 : currentIndex + 1;
+  const previousCase = navigables[previousIndex];
+  const nextCase = navigables[nextIndex];
 
   const previous = previousCase
     ? { slug: previousCase.slug, title: previousCase.title, client: previousCase.client, image: previousCase.image, sector: previousCase.sector }

@@ -143,7 +143,7 @@ Vous avez déjà un CRM que personne ne remplit ? C'est le terrain de l'[optimis
 
 ## Ce que fait ConvertiLab
 
-Notre prestation de [création de CRM pour TPE et PME](/services/crm/creation-crm) commence par un diagnostic d'une journée : d'où viennent vos demandes, où vivent vos contacts, qui traite quoi. Sous 24 h, vous recevez un plan écrit et un prix fixe ; vous pouvez vous arrêter là, le plan reste à vous. Puis nous créons le compte à votre nom sur l'outil retenu, importons vos contacts nettoyés, relions le site et les campagnes, écrivons les premières relances par email et formons votre équipe avec un guide de deux pages. Création sur devis, suivi mensuel facultatif, abonnement réglé à l'éditeur. Plus de 150 clients accompagnés, 4,9/5 sur 15 avis.
+Notre prestation de [création de CRM pour TPE et PME](/services/crm/creation-crm) commence par un diagnostic d'une journée : d'où viennent vos demandes, où vivent vos contacts, qui traite quoi. Sous 24 h, vous recevez un plan écrit et un prix fixe ; vous pouvez vous arrêter là, le plan reste à vous. Puis nous créons le compte à votre nom sur l'outil retenu, importons vos contacts nettoyés, relions le site et les campagnes, écrivons les premières relances par email et formons votre équipe avec un guide de deux pages. Création sur devis, suivi mensuel facultatif, abonnement réglé à l'éditeur. Plus de 150 clients accompagnés, 4,5/5 sur 14 avis.
 
 ## Questions fréquentes
 

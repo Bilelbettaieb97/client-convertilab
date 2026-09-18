@@ -719,7 +719,7 @@ export default function PresentationClient() {
           <AnimatedSection>
             <SectionTitle eyebrow="La preuve">150+ entrepreneurs nous font <span className={gradText}>déjà confiance.</span></SectionTitle>
             <div className="grid md:grid-cols-3 gap-6 mb-10">
-              {[{ n: 150, s: "+", l: "entrepreneurs accompagnés" }, { n: 4.9, s: "★", l: `note Trustpilot (${SITE.reviews.count} avis)`, dec: 1 }, { n: 100, s: "%", l: "artisans, coachs, restaurants & consultants" }].map((st, i) => (
+              {[{ n: 150, s: "+", l: "entrepreneurs accompagnés" }, { n: 4.5, s: "★", l: `note Trustpilot (${SITE.reviews.count} avis)`, dec: 1 }, { n: 100, s: "%", l: "artisans, coachs, restaurants & consultants" }].map((st, i) => (
                 <div key={i} className={`${card} text-center`}>
                   <div className={`text-5xl font-black ${gradText}`}><CountUp to={st.n} suffix={st.s} dec={st.dec ?? 0} /></div>
                   <p className="mt-2 text-white/60">{st.l}</p>

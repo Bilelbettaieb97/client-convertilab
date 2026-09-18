@@ -2,7 +2,7 @@ import { CHIFFRES_COMMUNS } from "@/data/poles";
 import { SITE } from "@/lib/constants";
 
 export interface ChiffreAccueil {
-  /** Valeur affichée telle quelle (« 150+ », « 4,9/5 », « 2 semaines »). */
+  /** Valeur affichée telle quelle (« 150+ », « 4,5/5 », « 2 semaines »). */
   valeur: string;
   libelle: string;
   /** Partie numérique, pour le compteur animé (NumberTicker). */

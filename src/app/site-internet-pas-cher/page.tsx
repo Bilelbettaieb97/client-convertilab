@@ -234,7 +234,7 @@ export default function SiteInternetPasCherPage() {
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-green-500" />
-              150+ clients accompagnés, 4,9/5
+              150+ clients accompagnés, 4,5/5
             </span>
           </div>
         </div>
@@ -372,7 +372,7 @@ export default function SiteInternetPasCherPage() {
             </p>
             <p>
               Résultat : plus de 150 entrepreneurs, artisans et commerçants ont
-              choisi cette formule, avec une note de 4.9/5. Un site web pas cher
+              choisi cette formule, avec une note de 4,5/5. Un site web pas cher
               peut être votre meilleur investissement, à condition qu&apos;il soit
               fait pour durer et pour être trouvé sur Google. Pour savoir combien
               coûterait le vôtre, utilisez notre{" "}

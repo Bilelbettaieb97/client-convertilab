@@ -26,7 +26,7 @@ const Portfolio = dynamic(() => import("@/components/sections/Portfolio"));
 // 59 caractères, identique au TITLE_DEFAUT du layout (règle du brief : 60 maximum).
 const TITLE = "Agence marketing digital Rueil-Malmaison (92) | ConvertiLab";
 const DESCRIPTION =
-  "Agence marketing digital à Rueil-Malmaison : site internet, publicité, SEO et CRM. 150+ clients accompagnés, 4,9/5 sur 15 avis. Paris et Île-de-France.";
+  "Agence marketing digital à Rueil-Malmaison : site internet, publicité, SEO et CRM. 150+ clients accompagnés, 4,5/5 sur 14 avis. Paris et Île-de-France.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },

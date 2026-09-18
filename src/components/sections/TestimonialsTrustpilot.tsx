@@ -13,7 +13,7 @@
  * avant déjà défini dans case-studies), puis les clients dont le site est en
  * ligne — un avis qu'on peut vérifier en un clic vaut plus qu'un avis isolé.
  *
- * ⚠️ Aucune note chiffrée : le site annonce 4,9/5 alors que Trustpilot affiche
+ * ⚠️ Aucune note chiffrée : le site annonce 4,5/5 alors que Trustpilot affiche
  * 4,4/5 sur 12 avis (relevé le 05/09/2026). Tant que les deux divergent, on ne
  * répète pas le chiffre ici, sous peine de l'afficher deux fois différemment sur
  * la même page. Le mot « Excellent » est en revanche celui que Trustpilot

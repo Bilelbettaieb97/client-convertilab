@@ -49,8 +49,8 @@ export default function Image() {
               <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>clients accompagnés</span>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", background: "rgba(255,255,255,0.15)", borderRadius: "16px", padding: "16px 24px" }}>
-              <span style={{ fontSize: "32px", fontWeight: 800, color: "white" }}>4,9/5</span>
-              <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>sur 15 avis</span>
+              <span style={{ fontSize: "32px", fontWeight: 800, color: "white" }}>4,5/5</span>
+              <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>sur 14 avis</span>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", background: "rgba(255,255,255,0.15)", borderRadius: "16px", padding: "16px 24px" }}>
               <span style={{ fontSize: "32px", fontWeight: 800, color: "white" }}>2 semaines</span>

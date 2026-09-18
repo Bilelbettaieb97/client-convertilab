@@ -156,7 +156,7 @@ Avant tout contact, [vérifiez le SEO de votre site en 60 secondes](/seo-check) 
 
 ## Ce que fait ConvertiLab
 
-Notre [forfait de référencement naturel à Paris et Rueil-Malmaison](/services/seo/referencement) démarre à 500 € par mois, 6 mois minimum puis libre mois par mois. Il comprend l'audit complet au démarrage, les corrections techniques, les contenus rédigés chaque mois, le maillage interne, les liens entrants obtenus proprement, le [référencement local](/services/seo/seo-local) avec la fiche Google et les avis, et la [visibilité dans les IA](/services/seo/visibilite-ia), sans supplément. Devis écrit avant tout engagement, aucune position promise, un rapport d'une page chaque mois, et tout reste à votre nom. Il s'inscrit dans notre [pôle SEO et visibilité IA](/services/seo). Plus de 150 clients accompagnés, une note de 4,9/5 sur 15 avis. Pour commencer, [testez gratuitement le SEO de votre site](/seo-check).
+Notre [forfait de référencement naturel à Paris et Rueil-Malmaison](/services/seo/referencement) démarre à 500 € par mois, 6 mois minimum puis libre mois par mois. Il comprend l'audit complet au démarrage, les corrections techniques, les contenus rédigés chaque mois, le maillage interne, les liens entrants obtenus proprement, le [référencement local](/services/seo/seo-local) avec la fiche Google et les avis, et la [visibilité dans les IA](/services/seo/visibilite-ia), sans supplément. Devis écrit avant tout engagement, aucune position promise, un rapport d'une page chaque mois, et tout reste à votre nom. Il s'inscrit dans notre [pôle SEO et visibilité IA](/services/seo). Plus de 150 clients accompagnés, une note de 4,5/5 sur 14 avis. Pour commencer, [testez gratuitement le SEO de votre site](/seo-check).
 
 ## Questions fréquentes
 

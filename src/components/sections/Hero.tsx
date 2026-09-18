@@ -122,7 +122,7 @@ const Hero = () => {
               <div className="group text-center p-3 sm:p-4 xl:p-5 2xl:p-7 glass rounded-xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent mb-1">4.9&#9733;</div>
                 <div className="text-xs sm:text-sm xl:text-base text-gray-700 font-semibold">Avis Clients</div>
-                <div className="text-[11px] sm:text-xs xl:text-sm text-gray-500 mt-0.5">15 avis Trustpilot</div>
+                <div className="text-[11px] sm:text-xs xl:text-sm text-gray-500 mt-0.5">14 avis Trustpilot</div>
               </div>
             </div>
 

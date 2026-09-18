@@ -147,7 +147,7 @@ Dans notre agence, chaque demande sans réponse reçoit une séquence d'emails s
 
 ## Ce que fait ConvertiLab
 
-Notre prestation d'[intégration IA pour PME et TPE](/services/integration-ia), à Rueil-Malmaison et Paris, commence par un diagnostic IA d'une journée, à prix fixe communiqué sous 24 h : inventaire des tâches, temps chiffré, plan écrit classé par gain. L'intégration sur mesure est ensuite chiffrée sur devis : Claude (Anthropic) branché sur votre boîte mail, votre agenda, votre site, votre CRM et votre facturation, tests sur vos vrais cas, validation humaine, journal et prise en main de l'équipe. Le suivi mensuel reste optionnel. Nous ne sommes ni partenaire ni revendeur d'Anthropic, seulement un client, avec plus de 150 clients accompagnés et une note de 4,9/5 sur 15 avis. Pour savoir si un diagnostic a du sens chez vous, [décrivez-nous votre cas](/contact).
+Notre prestation d'[intégration IA pour PME et TPE](/services/integration-ia), à Rueil-Malmaison et Paris, commence par un diagnostic IA d'une journée, à prix fixe communiqué sous 24 h : inventaire des tâches, temps chiffré, plan écrit classé par gain. L'intégration sur mesure est ensuite chiffrée sur devis : Claude (Anthropic) branché sur votre boîte mail, votre agenda, votre site, votre CRM et votre facturation, tests sur vos vrais cas, validation humaine, journal et prise en main de l'équipe. Le suivi mensuel reste optionnel. Nous ne sommes ni partenaire ni revendeur d'Anthropic, seulement un client, avec plus de 150 clients accompagnés et une note de 4,5/5 sur 14 avis. Pour savoir si un diagnostic a du sens chez vous, [décrivez-nous votre cas](/contact).
 
 ## Questions fréquentes
 

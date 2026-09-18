@@ -64,6 +64,20 @@ const nextConfig: NextConfig = {
         destination: "/agence-web",
         permanent: true,
       },
+      // Audit du 18/09/2026 : les 80 pages /agence-web/[secteur]/[ville] (gabarit à
+      // deux variables, 13 clics en 90 jours, cas client inventé) sont consolidées
+      // sur la page ville ; les 6 villes sans aucune impression en 90 jours sont
+      // renvoyées vers le hub. Les données restent dans cities.ts et sectors.ts.
+      {
+        source: "/agence-web/:secteur(artisan|boulangerie|coach|coiffeur|electricien|immobilier|plombier|restaurant)/:ville",
+        destination: "/agence-web/:ville",
+        permanent: true,
+      },
+      {
+        source: "/agence-web/:ville(neuilly-sur-seine|versailles|toulon|perpignan|saint-denis|asnieres-sur-seine)",
+        destination: "/agence-web",
+        permanent: true,
+      },
       // convertilab.fr sert le même site que .com sans redirection :
       // Google crawle et indexe les deux domaines en doublon.
       // 301 vers .com pour consolider tous les signaux SEO sur un seul domaine.

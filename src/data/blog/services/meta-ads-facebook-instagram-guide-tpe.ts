@@ -146,7 +146,7 @@ L'audit de compte offert commence par ces cinq points (voir aussi notre [guide d
 
 ## Ce que fait ConvertiLab
 
-Notre [agence Meta Ads à Paris et Rueil-Malmaison](/services/sea/meta-ads) monte et pilote vos campagnes Facebook et Instagram : demandes, ventes en ligne ou notoriété locale. Nous préparons les visuels à partir de vos photos, installons le pixel et le formulaire relié à votre CRM, et suivons un seul chiffre chaque mois : le coût par demande. Le devis sépare le budget média, réglé à Meta et conseillé dès 500 €/mois, et nos frais de gestion, fixés sur devis après un diagnostic gratuit, sans commission. Audit de compte offert, compte et pixel à votre nom, sans engagement de durée. Plus de 150 clients accompagnés, 4,9/5 sur 15 avis. Avant tout engagement, [simulez votre budget et vos demandes](/estimateur-ads) gratuitement.
+Notre [agence Meta Ads à Paris et Rueil-Malmaison](/services/sea/meta-ads) monte et pilote vos campagnes Facebook et Instagram : demandes, ventes en ligne ou notoriété locale. Nous préparons les visuels à partir de vos photos, installons le pixel et le formulaire relié à votre CRM, et suivons un seul chiffre chaque mois : le coût par demande. Le devis sépare le budget média, réglé à Meta et conseillé dès 500 €/mois, et nos frais de gestion, fixés sur devis après un diagnostic gratuit, sans commission. Audit de compte offert, compte et pixel à votre nom, sans engagement de durée. Plus de 150 clients accompagnés, 4,5/5 sur 14 avis. Avant tout engagement, [simulez votre budget et vos demandes](/estimateur-ads) gratuitement.
 
 ## Questions fréquentes
 

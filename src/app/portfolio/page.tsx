@@ -19,13 +19,13 @@ import {
 export const metadata: Metadata = {
   title: "Portfolio Agence Web : sites livrés et études de cas",
   description:
-    "150+ clients accompagnés, 4,9/5 sur 15 avis. Sites vitrines, e-commerce, landing pages et études de cas : restaurants, artisans, B2B. Des sites consultables et les mots de leurs propriétaires.",
+    "150+ clients accompagnés, 4,5/5 sur 14 avis. Sites vitrines, e-commerce, landing pages et études de cas : restaurants, artisans, B2B. Des sites consultables et les mots de leurs propriétaires.",
   keywords:
     "portfolio agence web, réalisations sites web, études de cas, résultats clients, création site web Paris",
   alternates: { canonical: `${SITE.url}/portfolio` },
   openGraph: {
     title: "Portfolio ConvertiLab : sites livrés et études de cas",
-    description: "150+ clients accompagnés, 4,9/5 sur 15 avis. Réalisations e-commerce, restaurants, artisans, B2B, consultables en ligne.",
+    description: "150+ clients accompagnés, 4,5/5 sur 14 avis. Réalisations e-commerce, restaurants, artisans, B2B, consultables en ligne.",
     url: `${SITE.url}/portfolio`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],

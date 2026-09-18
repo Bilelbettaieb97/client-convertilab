@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE.url}/solutions` },
   openGraph: {
     title: "Création Site Web par Métier : Restaurant, Artisan, Coach | ConvertiLab",
-    description: "Site web sur-mesure adapté à votre secteur : restaurant, avocat, artisan, immobilier, coach. Livré en 2 semaines dès 490€. 150+ clients accompagnés, 4,9/5 sur 15 avis.",
+    description: "Site web sur-mesure adapté à votre secteur : restaurant, avocat, artisan, immobilier, coach. Livré en 2 semaines dès 490€. 150+ clients accompagnés, 4,5/5 sur 14 avis.",
     url: `${SITE.url}/solutions`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -67,7 +67,7 @@ export default function SolutionsPage() {
           <div className="flex flex-wrap gap-3 justify-center">
             <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border"><Zap className="w-4 h-4 text-purple-500" /> Livré en 2 semaines</span>
             <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border"><Shield className="w-4 h-4 text-green-500" /> {PRICING.vitrine.label}</span>
-            <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border"><Star className="w-4 h-4 text-yellow-500" /> 4.9/5 satisfaction</span>
+            <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border"><Star className="w-4 h-4 text-yellow-500" /> 4,5/5 satisfaction</span>
           </div>
         </div>
       </section>

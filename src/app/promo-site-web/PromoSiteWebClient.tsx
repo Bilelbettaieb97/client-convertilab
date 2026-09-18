@@ -472,7 +472,7 @@ const PromoSiteWeb = () => {
                     <div className="flex items-center justify-center gap-2.5 mt-1.5 text-[10px] font-medium text-white/75">
                       <span className="inline-flex items-center gap-1">
                         <Star className="w-3 h-3 text-[#a78bfa] fill-[#a78bfa]" aria-hidden="true" />
-                        4,9/5 <span className="text-white/50">(120+ avis)</span>
+                        4,5/5 <span className="text-white/50">(14 avis)</span>
                       </span>
                       <span className="w-1 h-1 rounded-full bg-white/30" aria-hidden="true" />
                       <span className="inline-flex items-center gap-1">

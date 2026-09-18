@@ -119,7 +119,7 @@ export default async function SectorPage({ params }: Props) {
     areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
     // Pas d'aggregateRating ici : Google ne supporte pas les Review snippets
     // sur le type Service (erreur "Invalid object type for field parent_node").
-    // Les avis 4.9★ sont portés par le LocalBusiness/Organization de la home.
+    // Les avis 4,5★ sont portés par le LocalBusiness/Organization de la home.
     offers: {
       "@type": "Offer",
       priceCurrency: "EUR",
@@ -229,7 +229,7 @@ export default async function SectorPage({ params }: Props) {
               <Shield className="w-4 h-4 text-green-500" /> {priceLabel}
             </span>
             <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border">
-              <Star className="w-4 h-4 text-yellow-500" /> 4.9/5 satisfaction
+              <Star className="w-4 h-4 text-yellow-500" /> 4,5/5 satisfaction
             </span>
             <span className="flex items-center gap-1.5 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg shadow-sm border">
               <Clock className="w-4 h-4 text-blue-500" /> Devis sous 24h
@@ -388,85 +388,6 @@ export default async function SectorPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* 5. ETUDE DE CAS */}
-      {/* ============================================================ */}
-      <section className="py-16 sm:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Étude de cas :{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-              {sector.caseStudy.client}
-            </span>
-          </h2>
-          <p className="text-center text-gray-500 mb-12">{sector.caseStudy.sector}</p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Challenge & Solution */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-red-500" />
-                  Le défi
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {sector.caseStudy.challenge}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  Notre solution
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {sector.caseStudy.solution}
-                </p>
-              </div>
-            </div>
-
-            {/* Résultats */}
-            <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-purple-600" />
-                Résultats obtenus
-              </h3>
-              <div className="space-y-3">
-                {sector.caseStudy.results.map((result, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-3 p-3 bg-white rounded-xl border border-green-100"
-                  >
-                    <span className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-sm flex-shrink-0">
-                      {i + 1}
-                    </span>
-                    <span className="text-gray-700 font-medium text-sm">{result}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Témoignage */}
-          <div className="mt-10 bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm">
-            <Quote className="w-8 h-8 text-purple-200 mb-4" />
-            <blockquote className="text-lg text-gray-700 italic leading-relaxed mb-6">
-              &ldquo;{sector.caseStudy.testimonial}&rdquo;
-            </blockquote>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                {sector.caseStudy.author.charAt(0)}
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">
-                  {sector.caseStudy.author}
-                </p>
-                <p className="text-sm text-gray-500">{sector.caseStudy.role}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Outil gratuit */}
       <section className="py-8">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -595,21 +516,26 @@ export default async function SectorPage({ params }: Props) {
       {/* 8b. NOS REALISATIONS DANS CE SECTEUR */}
       {/* ============================================================ */}
       {(() => {
-        const relatedStudies = caseStudies.filter(
-          (cs) => cs.relatedSector === sector.slug
-        );
-        if (relatedStudies.length === 0) return null;
+        // Études de cas réelles : celles du secteur si elles existent, sinon trois projets
+        // livrés, différents d'un secteur à l'autre (plus aucun cas client inventé).
+        const duSecteur = caseStudies.filter((cs) => cs.relatedSector === sector.slug);
+        const decalage = [...sector.slug].reduce((acc, ch) => acc + ch.charCodeAt(0), 0) % caseStudies.length;
+        const relatedStudies = duSecteur.length > 0 ? duSecteur : [0, 1, 2].map((i) => caseStudies[(decalage + i * 5) % caseStudies.length]);
+        const titre = duSecteur.length > 0 ? "Nos réalisations dans le secteur" : "Des résultats réels, chez de";
+        const accent = duSecteur.length > 0 ? sector.name.toLowerCase() : "vrais clients";
         return (
           <section className="py-16 sm:py-24 bg-gray-50">
             <div className="container mx-auto px-4 max-w-4xl">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-                Nos réalisations dans le secteur{" "}
+                {titre}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                  {sector.name.toLowerCase()}
+                  {accent}
                 </span>
               </h2>
               <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                Découvrez les projets que nous avons réalisés pour des professionnels de votre secteur.
+                {duSecteur.length > 0
+                  ? "Découvrez les projets que nous avons réalisés pour des professionnels de votre secteur."
+                  : "Trois projets livrés, avec leurs chiffres. Le détail de chacun est dans nos études de cas."}
               </p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {relatedStudies.map((cs) => (

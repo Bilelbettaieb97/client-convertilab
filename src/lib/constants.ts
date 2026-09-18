@@ -17,8 +17,8 @@ export const SITE = {
   trustpilot: "https://fr.trustpilot.com/review/convertilab.com",
   googleMaps: "https://share.google/zUu6ZIAu3MyOCgPNa",
   reviews: {
-    count: "15",
-    rating: "4.9",
+    count: "14",
+    rating: "4.5",
   },
   analytics: {
     ga: "G-N9NTVTE0R6",

@@ -15,7 +15,7 @@ import { BoutonCercle } from "@/components/motion/ff/b-bouton-cercle";
 /**
  * Hub /services : les quatre pôles à égalité, rien de plus.
  * Composant serveur : tout le texte est dans le HTML, FAQ comprise.
- * Aucun chiffre en dehors de « 150+ clients accompagnés », « 4,9/5 sur 15 avis »
+ * Aucun chiffre en dehors de « 150+ clients accompagnés », « 4,5/5 sur 14 avis »
  * et « livré en 2 semaines » ; les prix viennent de poles.ts (donc de PRICING).
  * Même signature visuelle que l'accueil : mots clés du H1 en dégradé défilant,
  * cartes qui s'élèvent au survol, étapes datées, formulaire final sombre puis
@@ -110,7 +110,7 @@ function AsideQuatrePoles() {
         <div className="mt-3 flex items-center gap-3 rounded-2xl border border-border bg-card px-4 py-3">
           <Image
             src="/images/fondateur-carre.webp"
-            alt=""
+            alt="Le fondateur de ConvertiLab"
             width={40}
             height={40}
             className="h-10 w-10 rounded-full border border-border object-cover"

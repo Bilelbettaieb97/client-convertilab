@@ -214,10 +214,10 @@ export default function OffreMensuelleClient() {
             <div className="flex flex-col items-center gap-1">
               <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
               <p className="text-lg sm:text-2xl font-bold text-primary">
-                4,9/5
+                4,5/5
               </p>
               <p className="text-[10px] sm:text-xs text-muted-foreground">
-                sur 15 avis
+                sur 14 avis
               </p>
             </div>
           </div>

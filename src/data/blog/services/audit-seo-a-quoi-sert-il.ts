@@ -143,7 +143,7 @@ Les effets se voient en général en 3 à 6 mois ; la Search Console vous dit, c
 
 ## Ce que fait ConvertiLab
 
-Notre [audit SEO complet à Paris et Rueil-Malmaison](/services/seo/audit) passe tout votre site au crible : technique, contenu, positions réelles, concurrents, fiche Google et accès des robots d'IA. Vous recevez sous 2 semaines un rapport écrit en français clair, un plan d'action en trois horizons et une heure de restitution en visio. Commandé seul, l'audit est sur devis, avec un prix fixe écrit sous 24 h ; il est compris au démarrage du forfait SEO de notre [pôle SEO et visibilité IA](/services/seo), dès 500 €/mois. Le rapport reste à vous. Plus de 150 clients accompagnés, 4,9/5 sur 15 avis. Pour savoir d'où vous partez, [vérifiez le SEO de votre site en 60 secondes](/seo-check), gratuitement.
+Notre [audit SEO complet à Paris et Rueil-Malmaison](/services/seo/audit) passe tout votre site au crible : technique, contenu, positions réelles, concurrents, fiche Google et accès des robots d'IA. Vous recevez sous 2 semaines un rapport écrit en français clair, un plan d'action en trois horizons et une heure de restitution en visio. Commandé seul, l'audit est sur devis, avec un prix fixe écrit sous 24 h ; il est compris au démarrage du forfait SEO de notre [pôle SEO et visibilité IA](/services/seo), dès 500 €/mois. Le rapport reste à vous. Plus de 150 clients accompagnés, 4,5/5 sur 14 avis. Pour savoir d'où vous partez, [vérifiez le SEO de votre site en 60 secondes](/seo-check), gratuitement.
 
 ## Questions fréquentes
 

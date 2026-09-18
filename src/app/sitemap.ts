@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
 import { cities } from "@/data/cities";
+import { VILLES_RETIREES } from "@/app/agence-web/[secteur]/page";
 import { sectors } from "@/data/sectors";
 import { glossaryTerms } from "@/data/glossary";
 import { blogArticles } from "@/data/blog-articles";
@@ -57,6 +58,7 @@ const staticRoutes = [
   "/design-score",
   "/estimateur-ads",
   "/generateur-mentions-legales",
+  "/mentions-legales",
   "/generateur-robots-sitemap",
   "/rapport-sectoriel",
   "/comparateur-sites",
@@ -115,16 +117,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${SITE.url}${route}`,
     lastModified: ROUTES_REFONTE_POLES.has(route) ? REFONTE_POLES_UPDATED : SITE_LAST_UPDATED,
-    changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1.0 : highPriorityRoutes.has(route) ? 0.9 : route.startsWith("/services") ? 0.8 : 0.7,
   }));
 
   // Blog articles — static + Supabase (merged, no duplicates)
   const staticBlogEntries: MetadataRoute.Sitemap = blogArticles.map((a) => ({
     url: `${SITE.url}/blog/${a.slug}`,
-    lastModified: new Date(a.publishedAt),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
+    lastModified: new Date(a.updatedAt ?? a.publishedAt),
   }));
   const staticBlogSlugs = new Set(blogArticles.map((a) => a.slug));
 
@@ -148,8 +146,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           .map((a) => ({
             url: `${SITE.url}/blog/${a.slug}`,
             lastModified: new Date(a.updated_at),
-            changeFrequency: "monthly" as const,
-            priority: 0.6,
           }));
       }
     } catch (err) {
@@ -159,27 +155,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.warn("[sitemap] Supabase env vars missing — skipping dynamic blog entries");
   }
 
-  const cityEntries: MetadataRoute.Sitemap = cities.map((city) => ({
+  const cityEntries: MetadataRoute.Sitemap = cities.filter((city) => !VILLES_RETIREES.includes(city.slug)).map((city) => ({
     url: `${SITE.url}/agence-web/${city.slug}`,
     lastModified: CITY_PAGES_UPDATED,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
   }));
 
   const sectorEntries: MetadataRoute.Sitemap = sectors.map((s) => ({
     url: `${SITE.url}/solutions/${s.slug}`,
     lastModified: TEMPLATES_CREATED,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
   }));
 
   const glossaryEntries: MetadataRoute.Sitemap = [
-    { url: `${SITE.url}/glossaire`, lastModified: TEMPLATES_CREATED, changeFrequency: "monthly" as const, priority: 0.5 },
+    { url: `${SITE.url}/guide`, lastModified: new Date("2026-09-18") },
+    { url: `${SITE.url}/glossaire`, lastModified: TEMPLATES_CREATED, },
     ...glossaryTerms.map((t) => ({
       url: `${SITE.url}/glossaire/${t.slug}`,
       lastModified: TEMPLATES_CREATED,
-      changeFrequency: "monthly" as const,
-      priority: 0.3,
     })),
   ];
 
@@ -191,37 +182,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const guideEntries: MetadataRoute.Sitemap = guides.map((g) => ({
     url: `${SITE.url}/guide/${g.slug}`,
     lastModified: TEMPLATES_CREATED,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
   }));
 
   const comparatifEntries: MetadataRoute.Sitemap = comparisons.map((c) => ({
     url: `${SITE.url}/comparatifs/${c.slug}`,
     lastModified: TEMPLATES_CREATED,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
   }));
 
   const prixEntries: MetadataRoute.Sitemap = pricingPages.map((p) => ({
     url: `${SITE.url}/prix/${p.slug}`,
     lastModified: TEMPLATES_CREATED,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
   }));
 
   // Seules les études de cas décrites dans fullCaseStudies ont une page (sinon 404).
   const caseStudyEntries: MetadataRoute.Sitemap = caseStudies.filter((cs) => cs.slug in fullCaseStudies).map((cs) => ({
     url: `${SITE.url}/etude-de-cas/${cs.slug}`,
     lastModified: TEMPLATES_CREATED,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
   }));
 
   const devisEntries: MetadataRoute.Sitemap = devisServices.map((d) => ({
     url: `${SITE.url}/devis/${d.slug}`,
     lastModified: TEMPLATES_CREATED,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
   }));
 
   return [

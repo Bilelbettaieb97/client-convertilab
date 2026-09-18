@@ -131,7 +131,7 @@ Côté délai, nous ne pouvons pas en donner. Les assistants qui cherchent en di
 
 ## Ce que fait ConvertiLab
 
-Notre prestation de [visibilité IA à Rueil-Malmaison et Paris](/services/seo/visibilite-ia) comprend un audit de lisibilité IA (robots, données structurées, indexation, premières questions aux assistants), la liste des questions à couvrir et la page qui répond à chacune, la réécriture de ces pages pour les rendre citables, avec une FAQ par service et des fiches mises en cohérence, puis un relevé mensuel des citations observées. Tout est inclus dans le forfait SEO dès 500 €/mois, sans supplément ; l'audit et la mission ponctuelle sont sur devis. Vous validez chaque contenu. Elle s'inscrit dans notre [pôle SEO](/services/seo). Plus de 150 clients accompagnés, une note de 4,9/5 sur 15 avis. Pour commencer, [testez gratuitement les robots d'IA de votre site](/seo-check).
+Notre prestation de [visibilité IA à Rueil-Malmaison et Paris](/services/seo/visibilite-ia) comprend un audit de lisibilité IA (robots, données structurées, indexation, premières questions aux assistants), la liste des questions à couvrir et la page qui répond à chacune, la réécriture de ces pages pour les rendre citables, avec une FAQ par service et des fiches mises en cohérence, puis un relevé mensuel des citations observées. Tout est inclus dans le forfait SEO dès 500 €/mois, sans supplément ; l'audit et la mission ponctuelle sont sur devis. Vous validez chaque contenu. Elle s'inscrit dans notre [pôle SEO](/services/seo). Plus de 150 clients accompagnés, une note de 4,5/5 sur 14 avis. Pour commencer, [testez gratuitement les robots d'IA de votre site](/seo-check).
 
 ## Questions fréquentes
 

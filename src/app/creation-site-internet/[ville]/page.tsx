@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!city) return { title: "Page introuvable" };
 
   const title = `Création Site Internet ${city.name} : Site Web Pro à 890 €, livré en 7 à 14 jours`;
-  const description = `Besoin d'un site web à ${city.name} ? ConvertiLab crée votre site internet professionnel à 890 €, livré en 7 à 14 jours, prix fixe. 150+ clients accompagnés, 4,9/5 sur 15 avis. Devis gratuit sous 24h.`;
+  const description = `Besoin d'un site web à ${city.name} ? ConvertiLab crée votre site internet professionnel à 890 €, livré en 7 à 14 jours, prix fixe. 150+ clients accompagnés, 4,5/5 sur 14 avis. Devis gratuit sous 24h.`;
 
   return {
     title,
@@ -256,7 +256,7 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
             </div>
             <div className="flex items-center gap-6 mt-8 text-sm text-purple-200">
               <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-green-400" /> 150+ clients accompagnés</span>
-              <span className="flex items-center gap-1.5"><Star className="w-4 h-4 text-amber-400" /> 4.9/5 avis</span>
+              <span className="flex items-center gap-1.5"><Star className="w-4 h-4 text-amber-400" /> 4,5/5 avis</span>
               <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-blue-400" /> 7 à 14 jours</span>
             </div>
           </div>
@@ -365,8 +365,8 @@ export default async function CreationSiteInternetVillePage({ params }: Props) {
                       <div className="text-xs text-gray-500 mt-1">site livré</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-amber-600">4,9/5</div>
-                      <div className="text-xs text-gray-500 mt-1">sur 15 avis</div>
+                      <div className="text-2xl font-bold text-amber-600">4,5/5</div>
+                      <div className="text-xs text-gray-500 mt-1">sur 14 avis</div>
                     </div>
                   </div>
                 </div>

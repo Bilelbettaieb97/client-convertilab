@@ -9,12 +9,12 @@ import { ArrowRight, MapPin, Star, Users, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Création de Site Internet par Ville : Site Web Pro dès 490€",
-  description: "Création de site internet professionnel dans les grandes villes de France : Paris, Lyon, Marseille, Bordeaux, Toulouse… Site web livré en 2 semaines dès 490€. 150+ clients accompagnés, 4,9/5 sur 15 avis.",
+  description: "Création de site internet professionnel dans les grandes villes de France : Paris, Lyon, Marseille, Bordeaux, Toulouse… Site web livré en 2 semaines dès 490€. 150+ clients accompagnés, 4,5/5 sur 14 avis.",
   keywords: "création site internet par ville, création site web Paris Lyon Marseille Bordeaux, site internet professionnel 490€, création site vitrine France",
   alternates: { canonical: `${SITE.url}/creation-site-internet` },
   openGraph: {
     title: "Création de Site Internet par Ville | ConvertiLab",
-    description: "Création de site internet professionnel à Paris, Lyon, Marseille, Bordeaux, Toulouse et plus. Site web livré en 2 semaines dès 490€. 150+ clients accompagnés, 4,9/5 sur 15 avis.",
+    description: "Création de site internet professionnel à Paris, Lyon, Marseille, Bordeaux, Toulouse et plus. Site web livré en 2 semaines dès 490€. 150+ clients accompagnés, 4,5/5 sur 14 avis.",
     url: `${SITE.url}/creation-site-internet`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -78,7 +78,7 @@ export default function CreationSiteInternetPage() {
             ConvertiLab crée des sites internet professionnels pour les entrepreneurs et PME dans les grandes villes de France. Site vitrine livré en 2 semaines dès 490€, avec référencement local et support 30 jours inclus. Basés à Rueil-Malmaison, nous intervenons en présentiel en Île-de-France et à distance partout en France.
           </p>
           <p className="text-base text-gray-500 mb-8 max-w-2xl mx-auto">
-            150+ clients accompagnés · 4,9/5 sur 15 avis · Paiement étalé, pas d&apos;abonnement
+            150+ clients accompagnés · 4,5/5 sur 14 avis · Paiement étalé, pas d&apos;abonnement
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <div className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-sm border">
@@ -88,7 +88,7 @@ export default function CreationSiteInternetPage() {
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-sm border">
               <Star className="w-5 h-5 text-yellow-500" />
-              <span className="font-bold text-gray-900">4.9/5</span>
+              <span className="font-bold text-gray-900">4,5/5</span>
               <span className="text-gray-600 text-sm">satisfaction client</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-sm border">

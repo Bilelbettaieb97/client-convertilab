@@ -598,7 +598,7 @@ export const fullCaseStudies: Record<string, FullCaseStudy> = {
       { name: "Conversion", before: 2, after: 15 },
     ],
     challenge: "Eleva Conciergerie avait besoin d'un site à la hauteur de son positionnement premium pour convaincre les propriétaires de lui confier la gestion de leurs biens en location courte durée. Le marché étant très concurrentiel, il fallait se démarquer visuellement et inspirer confiance.",
-    solution: "Nous avons créé un site au design luxueux avec un tunnel de conversion optimisé : estimation gratuite des revenus, preuves sociales (+50 propriétaires accompagnés, 4.9/5), copywriting persuasif et CTAs stratégiques. Le tout avec une expérience mobile impeccable.",
+    solution: "Nous avons créé un site au design luxueux avec un tunnel de conversion optimisé : estimation gratuite des revenus, preuves sociales (+50 propriétaires accompagnés, 4,5/5), copywriting persuasif et CTAs stratégiques. Le tout avec une expérience mobile impeccable.",
     metrics: [
       { label: "Gestion", value: "Clé en main", description: "Offre présentée de bout en bout" },
       { label: "Contact", value: "Formulaire", description: "Demande en quelques champs" },
@@ -822,9 +822,9 @@ export const fullCaseStudies: Record<string, FullCaseStudy> = {
       { name: "Réservations", before: 15, after: 65 },
     ],
     challenge: "Vinoboat Prestige proposait une expérience nautique haut de gamme mais manquait d'un support digital à la hauteur de son positionnement. L'offre n'était pas clairement présentée et le potentiel de réservation en ligne était sous-exploité.",
-    solution: "Nous avons créé une landing page immersive avec un design premium, un copywriting émotionnel orienté expérience (sensation, exclusivité), une grille tarifaire claire, des CTAs de réservation optimisés et des preuves sociales (avis, note 4.9/5, 500+ clients).",
+    solution: "Nous avons créé une landing page immersive avec un design premium, un copywriting émotionnel orienté expérience (sensation, exclusivité), une grille tarifaire claire, des CTAs de réservation optimisés et des preuves sociales (avis, note 4,5/5, 500+ clients).",
     metrics: [
-      { label: "Note clients", value: "4.9/5", description: "500+ clients satisfaits" },
+      { label: "Note clients", value: "4,5/5", description: "500+ clients satisfaits" },
       { label: "Réservation", value: "En ligne", description: "WhatsApp + téléphone" },
       { label: "Positionnement", value: "N°1", description: "Cannes sans permis" },
       { label: "Immersion", value: "Premium", description: "Design luxe immersif" },

@@ -141,7 +141,7 @@ L'erreur la plus fréquente consiste à automatiser des relances sur une base pl
 
 ## Ce que fait ConvertiLab
 
-Notre pôle [CRM et relances automatiques pour TPE et PME](/services/crm) met en place votre CRM sur l'outil de votre choix, HubSpot, Salesforce, Pipedrive, Zoho CRM ou celui que vous avez déjà. Nous relions votre site et vos campagnes, importons vos contacts après nettoyage et écrivons avec vous les relances par email et les rappels de rendez-vous. Diagnostic d'une journée, plan écrit et prix fixe communiqué sous 24 h ; mise en place sur devis, suivi mensuel facultatif. Vos données restent sur un compte à votre nom. Plus de 150 clients accompagnés, 4,9/5 sur 15 avis. Pour savoir où se perdent vos demandes, [demandez le diagnostic CRM d'une journée](/contact).
+Notre pôle [CRM et relances automatiques pour TPE et PME](/services/crm) met en place votre CRM sur l'outil de votre choix, HubSpot, Salesforce, Pipedrive, Zoho CRM ou celui que vous avez déjà. Nous relions votre site et vos campagnes, importons vos contacts après nettoyage et écrivons avec vous les relances par email et les rappels de rendez-vous. Diagnostic d'une journée, plan écrit et prix fixe communiqué sous 24 h ; mise en place sur devis, suivi mensuel facultatif. Vos données restent sur un compte à votre nom. Plus de 150 clients accompagnés, 4,5/5 sur 14 avis. Pour savoir où se perdent vos demandes, [demandez le diagnostic CRM d'une journée](/contact).
 
 ## Questions fréquentes
 

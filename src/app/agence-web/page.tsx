@@ -9,12 +9,12 @@ import { ArrowRight, MapPin, Star, Users, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Agence Web par Ville : Création Site Internet en France",
-  description: "Quelle agence web choisir en Île-de-France ? ConvertiLab intervient dans 51 villes : Paris, Lyon, Marseille, Bordeaux et toute la France. Site vitrine dès 490€, livré en 2 semaines. 150+ clients accompagnés, 4,9/5 sur 15 avis.",
+  description: "Quelle agence web choisir en Île-de-France ? ConvertiLab intervient dans 51 villes : Paris, Lyon, Marseille, Bordeaux et toute la France. Site vitrine dès 490€, livré en 2 semaines. 150+ clients accompagnés, 4,5/5 sur 14 avis.",
   keywords: "agence web Île-de-France, création site internet Paris Lyon Marseille, agence web locale France, site vitrine entreprise 490€",
   alternates: { canonical: `${SITE.url}/agence-web` },
   openGraph: {
     title: "Agence Web par Ville : 51 villes en France | ConvertiLab",
-    description: "ConvertiLab intervient dans 51 villes en France. Site vitrine dès 490€, livré en 2 semaines. 150+ clients accompagnés, 4,9/5 sur 15 avis. Devis gratuit.",
+    description: "ConvertiLab intervient dans 51 villes en France. Site vitrine dès 490€, livré en 2 semaines. 150+ clients accompagnés, 4,5/5 sur 14 avis. Devis gratuit.",
     url: `${SITE.url}/agence-web`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -49,7 +49,7 @@ export default function AgenceWebPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Comment choisir une agence web locale ?", acceptedAnswer: { "@type": "Answer", text: "Vérifiez le portfolio (réalisations concrètes), les avis clients (Trustpilot, Google), les délais de livraison et la transparence des prix. ConvertiLab affiche des prix fixes, livre en 2 semaines et publie ses 15 avis Trustpilot (4,9/5)." } },
+      { "@type": "Question", name: "Comment choisir une agence web locale ?", acceptedAnswer: { "@type": "Answer", text: "Vérifiez le portfolio (réalisations concrètes), les avis clients (Trustpilot, Google), les délais de livraison et la transparence des prix. ConvertiLab affiche des prix fixes, livre en 2 semaines et publie ses 14 avis Trustpilot (4,5/5)." } },
       { "@type": "Question", name: "Faut-il une agence web proche de chez moi ?", acceptedAnswer: { "@type": "Answer", text: "Non, ce n'est pas indispensable. ConvertiLab gère 100% des projets à distance (visio, Figma, Notion) avec les mêmes résultats que si vous étiez à Paris. Nous intervenons aussi en présentiel dans toute l'Île-de-France." } },
       { "@type": "Question", name: "Quel est le prix d'un site web pour une PME ?", acceptedAnswer: { "@type": "Answer", text: "Le prix d'un site vitrine professionnel chez ConvertiLab démarre à 490€ pour une PME. Il inclut le design sur-mesure, 5 pages, le SEO, l'hébergement première année et le support 30 jours. Les grandes entreprises et e-commerces ont des forfaits sur devis." } },
       { "@type": "Question", name: "Combien de temps pour créer un site internet ?", acceptedAnswer: { "@type": "Answer", text: "ConvertiLab livre votre site en 2 semaines à partir de la validation de la maquette. La maquette est présentée sous 48h après l'appel découverte. Au total, comptez 2 semaines de la prise de contact à la mise en ligne." } },
@@ -79,7 +79,7 @@ export default function AgenceWebPage() {
             ConvertiLab crée des sites internet professionnels pour les entrepreneurs et PME dans 51 villes en France. Site vitrine livré en 2 semaines dès 490€, avec référencement local et support 30 jours inclus. Basés à Rueil-Malmaison, nous intervenons en présentiel en Île-de-France et à distance partout en France.
           </p>
           <p className="text-base text-gray-500 mb-8 max-w-2xl mx-auto">
-            150+ clients accompagnés · 4,9/5 sur 15 avis · Paiement étalé, pas d&apos;abonnement
+            150+ clients accompagnés · 4,5/5 sur 14 avis · Paiement étalé, pas d&apos;abonnement
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <div className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-sm border">
@@ -89,7 +89,7 @@ export default function AgenceWebPage() {
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-sm border">
               <Star className="w-5 h-5 text-yellow-500" />
-              <span className="font-bold text-gray-900">4.9/5</span>
+              <span className="font-bold text-gray-900">4,5/5</span>
               <span className="text-gray-600 text-sm">satisfaction client</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-sm border">

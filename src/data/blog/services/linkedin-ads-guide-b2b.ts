@@ -144,7 +144,7 @@ Si vous vous reconnaissez, revenez à notre page [agence Google Ads, Meta Ads et
 
 ## Ce que fait ConvertiLab
 
-Notre [agence LinkedIn Ads à Paris et Rueil-Malmaison](/services/sea/linkedin-ads) commence par un diagnostic gratuit de trente minutes : ce que vous vendez, à qui, le montant moyen d'un contrat. Si LinkedIn a peu de chances d'être rentable, nous le disons et proposons une autre plateforme, ou rien. Sinon, vous recevez sous 24 h un plan et un devis écrit, frais de gestion sur devis, sans commission sur le budget média. Au programme : Campaign Manager à votre nom, Insight Tag posé, annonces rédigées, Lead Gen Form préparé, rapport d'une page chaque mois. Sans engagement de durée, trois mois conseillés. Plus de 150 clients accompagnés, 4,9/5 sur 15 avis. Pour un premier ordre de grandeur, [estimez votre budget publicitaire](/estimateur-ads) gratuitement.
+Notre [agence LinkedIn Ads à Paris et Rueil-Malmaison](/services/sea/linkedin-ads) commence par un diagnostic gratuit de trente minutes : ce que vous vendez, à qui, le montant moyen d'un contrat. Si LinkedIn a peu de chances d'être rentable, nous le disons et proposons une autre plateforme, ou rien. Sinon, vous recevez sous 24 h un plan et un devis écrit, frais de gestion sur devis, sans commission sur le budget média. Au programme : Campaign Manager à votre nom, Insight Tag posé, annonces rédigées, Lead Gen Form préparé, rapport d'une page chaque mois. Sans engagement de durée, trois mois conseillés. Plus de 150 clients accompagnés, 4,5/5 sur 14 avis. Pour un premier ordre de grandeur, [estimez votre budget publicitaire](/estimateur-ads) gratuitement.
 
 ## Questions fréquentes
 

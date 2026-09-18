@@ -39,8 +39,8 @@ const PortfolioHeader = () => {
           <div className="flex items-center justify-center gap-1 mb-0.5">
             <Star className="w-4 h-4 text-yellow-500" />
           </div>
-          <div className="text-2xl font-black text-foreground">4,9/5</div>
-          <div className="text-xs text-muted-foreground">sur 15 avis</div>
+          <div className="text-2xl font-black text-foreground">4,5/5</div>
+          <div className="text-xs text-muted-foreground">sur 14 avis</div>
         </div>
       </div>
     </div>

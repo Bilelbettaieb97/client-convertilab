@@ -135,9 +135,9 @@ export default function HeroV2() {
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
-                  <span className="ml-1 font-bold text-gray-900 text-sm">4.9/5</span>
+                  <span className="ml-1 font-bold text-gray-900 text-sm">4,5/5</span>
                 </div>
-                <p className="text-xs text-gray-500">15 avis Trustpilot</p>
+                <p className="text-xs text-gray-500">14 avis Trustpilot</p>
               </div>
             </motion.div>
 

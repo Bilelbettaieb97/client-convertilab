@@ -178,7 +178,7 @@ export const pricingPages: PricingPage[] = [
       },
     ],
     deliveryTime: "10 à 15 jours",
-    relatedService: "/services/sites-web/refonte-site-web",
+    relatedService: "/services/sites-web/refonte-site",
   },
   {
     slug: "seo",

@@ -487,6 +487,6 @@ export const comparisons: Comparison[] = [
       { question: "Une refonte coûte-t-elle moins cher qu'un nouveau site ?", answer: "Généralement oui : refonte à partir de 400€ vs nouveau site à partir de 490€. La différence vient de la récupération du contenu existant qui réduit le travail." },
       { question: "Combien de temps mon site sera-t-il hors ligne ?", answer: "Zéro. Nous développons le nouveau site en parallèle et basculons en une fois. Votre ancien site reste en ligne jusqu'à la mise en production du nouveau." },
     ],
-    relatedService: "/services/sites-web/refonte-site-web",
+    relatedService: "/services/sites-web/refonte-site",
   },
 ];

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SITE, PRICING } from "@/lib/constants";
+import { SITE, PRICING, STRUCTURED_DATA } from "@/lib/constants";
 import { cities, getCityBySlug } from "@/data/cities";
-import { getSectorBySlug } from "@/data/sectors";
 import { POLES } from "@/data/poles";
 import { MAILLAGE_VILLE } from "@/lib/maillage-poles";
 import { getContenuLocal } from "@/data/cities-contenu-local";
@@ -54,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   ];
   const title = titleVariants[city.slug.length % titleVariants.length];
   const industries = city.keyIndustries.slice(0, 2).join(", ").toLowerCase();
-  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine 890 €, livré en 7 à 14 jours, prix fixe. 150+ clients accompagnés, 4,9/5 sur 15 avis. Devis gratuit sous 24h.`;
+  const description = `Agence web à ${city.name} (${city.department}) : création de sites internet pour ${industries} et PME locales. Site vitrine 890 €, livré en 7 à 14 jours, prix fixe. 150+ clients accompagnés, 4,5/5 sur 14 avis. Devis gratuit sous 24h.`;
 
   return {
     title,
@@ -76,8 +75,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+/** Villes sans aucune impression Google en 90 jours (audit du 18/09/2026) : redirigées vers /agence-web par next.config, plus générées ni listées. */
+/** Dernière modification du gabarit des pages villes (prix, délais, références réelles). */
+const CITY_PAGES_UPDATED_ISO = "2026-09-18";
+
+export const VILLES_RETIREES = ["neuilly-sur-seine", "versailles", "toulon", "perpignan", "saint-denis", "asnieres-sur-seine"];
+
 export function generateStaticParams() {
-  return cities.map((city) => ({ secteur: city.slug }));
+  return cities.filter((city) => !VILLES_RETIREES.includes(city.slug)).map((city) => ({ secteur: city.slug }));
 }
 
 export default async function CityPage({ params }: Props) {
@@ -166,35 +171,11 @@ export default async function CityPage({ params }: Props) {
 
   /* ---------- Structured Data ---------- */
 
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "ProfessionalService"],
-    "@id": `${SITE.url}/agence-web/${city.slug}#localbusiness`,
-    name: `ConvertiLab - Agence Web ${city.name}`,
-    url: `${SITE.url}/agence-web/${city.slug}`,
-    telephone: SITE.phone,
-    email: SITE.email,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: city.name,
-      postalCode: city.postalCode,
-      addressRegion: city.region,
-      addressCountry: "FR",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: city.lat,
-      longitude: city.lng,
-    },
-    areaServed: { "@type": "City", name: city.name },
-    priceRange: "€€",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE.reviews.rating,
-      reviewCount: SITE.reviews.count,
-      bestRating: "5",
-    },
-  };
+  // Une seule entité locale réelle : ConvertiLab à Rueil-Malmaison (STRUCTURED_DATA.localBusiness,
+  // @id .../#localbusiness, portée par l'accueil). Les autres pages villes ne déclarent plus
+  // d'établissement fictif : elles décrivent un Service dont la zone desservie est la ville.
+  const localBusinessSchema =
+    city.slug === "rueil-malmaison" ? { "@context": "https://schema.org", ...STRUCTURED_DATA.localBusiness } : null;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -223,21 +204,22 @@ export default async function CityPage({ params }: Props) {
     })),
   };
 
-  const reviewSchema = {
+  const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: `Création de site internet à ${city.name}`,
     serviceType: "Création de site internet",
-    provider: { "@id": `${SITE.url}/agence-web/${city.slug}#localbusiness` },
+    provider: { "@id": `${SITE.url}/#localbusiness` },
     areaServed: { "@type": "City", name: city.name },
+    dateModified: local ? "2026-09-18" : CITY_PAGES_UPDATED_ISO,
     offers: {
       "@type": "Offer",
       priceCurrency: "EUR",
-      price: "500",
+      price: String(PRICING.vitrine.from),
       priceSpecification: {
         "@type": "PriceSpecification",
         priceCurrency: "EUR",
-        minPrice: "500",
+        minPrice: String(PRICING.landing.from),
       },
       availability: "https://schema.org/InStock",
       url: `${SITE.url}/agence-web/${city.slug}`,
@@ -246,33 +228,12 @@ export default async function CityPage({ params }: Props) {
 
   const otherCities = cities.filter((c) => c.slug !== city.slug);
 
-  const PRIORITY_SECTORS_CITY = [
-    "restaurant",
-    "coiffeur",
-    "artisan",
-    "coach",
-    "plombier",
-    "electricien",
-    "immobilier",
-    "boulangerie",
-  ];
-  const PRIORITY_CITIES_FOR_MAILLAGE = [
-    "paris", "rueil-malmaison", "boulogne-billancourt", "versailles",
-    "neuilly-sur-seine", "lyon", "marseille", "bordeaux", "nice", "nantes",
-  ];
-  const showSectorLinks = PRIORITY_CITIES_FOR_MAILLAGE.includes(city.slug);
-  const sectorsForCity = showSectorLinks
-    ? PRIORITY_SECTORS_CITY.map((s) => getSectorBySlug(s)).filter(Boolean)
-    : [];
 
   return (
     <div className="min-h-screen">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
-      />
+      {localBusinessSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -283,7 +244,7 @@ export default async function CityPage({ params }: Props) {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <Navigation />
 
@@ -335,7 +296,7 @@ export default async function CityPage({ params }: Props) {
             </div>
             <div className="flex items-center gap-2 text-gray-700">
               <Star className="w-5 h-5 text-yellow-500" />
-              <span className="font-semibold">4,9/5</span> (15 avis)
+              <span className="font-semibold">4,5/5</span> (14 avis)
             </div>
           </div>
 
@@ -857,32 +818,6 @@ export default async function CityPage({ params }: Props) {
       </section>
 
       {/* Maillage secteur×ville */}
-      {showSectorLinks && sectorsForCity.length > 0 && (
-        <section className="py-12 bg-white border-t border-gray-100">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-xl font-bold text-gray-900 mb-2 text-center">
-              Nos sites web par secteur à {city.name}
-            </h2>
-            <p className="text-gray-500 text-sm text-center mb-6">
-              Un site spécialisé selon votre activité
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {sectorsForCity.map((s) =>
-                s ? (
-                  <Link
-                    key={s.slug}
-                    href={`/agence-web/${s.slug}/${city.slug}`}
-                    className="px-4 py-2 bg-gray-50 rounded-full text-sm text-gray-700 hover:text-purple-600 hover:shadow-md transition-all border border-gray-200 hover:border-purple-200"
-                  >
-                    {s.emoji} Site web {s.name.toLowerCase()} {city.name}
-                  </Link>
-                ) : null
-              )}
-            </div>
-          </div>
-        </section>
-      )}
-
       <SuggestedArticles title="Conseils pour développer votre business en ligne" max={3} themes={MAILLAGE_VILLE.themes} />
       <RelatedServicesSection title={`Nos services à ${city.name}`} max={4} poles={MAILLAGE_VILLE.poles} />
       <Footer />

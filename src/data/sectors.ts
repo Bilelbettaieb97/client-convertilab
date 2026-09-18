@@ -3197,7 +3197,7 @@ export const sectors: Sector[] = [
         "Planning rempli à 90% en 4 mois",
         "1ère page Google sur 'psychologue Bordeaux centre'",
         "+120 RDV pris en ligne en 6 mois",
-        "4.9/5 de satisfaction patients",
+        "4,5/5 de satisfaction patients",
       ],
       testimonial:
         "Mon site est devenu mon meilleur allié. Les patients me disent qu'ils m'ont choisie parce que le site les a rassurés. ConvertiLab a compris l'importance du ton et de l'image pour ma profession.",

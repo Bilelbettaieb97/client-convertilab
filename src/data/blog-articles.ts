@@ -133,7 +133,7 @@ Le référencement Google est un avantage durable parce qu'un article ou une pag
 
 Exemple : une page "plombier urgence Paris 15" correctement optimisée peut recevoir 200 à 500 visites par mois pendant 3 à 5 ans sans aucune mise à jour majeure.
 
-Pour aller plus loin sur ce sujet : [Comment apparaître en premier sur Google Maps grâce au SEO local](/blog/seo-local-google-maps)
+Pour aller plus loin sur ce sujet : [Comment apparaître en premier sur Google Maps grâce au SEO local](/blog/seo-local-guide-complet)
 
 ## Quels secteurs ont le plus à gagner avec un site web professionnel ?
 
@@ -266,7 +266,7 @@ La solution : ajoutez vos vrais chiffres, vos vrais clients, vos vraies photos. 
 Les avis clients influencent la décision d'achat en ligne parce que **92% des consommateurs** lisent des avis avant de choisir un prestataire, et 84% font autant confiance aux avis en ligne qu'à une recommandation personnelle. Sans preuve sociale visible sur votre site, vous demandez à vos prospects de vous faire confiance sur parole, et la majorité ne le fait pas.
 
 Preuves sociales à afficher par ordre d'impact :
-- Avis Trustpilot ou Google avec note moyenne et nombre total (ex : 4.9/5 sur 15 avis)
+- Avis Trustpilot ou Google avec note moyenne et nombre total (ex : 4,5/5 sur 14 avis)
 - Témoignages avec photo, prénom complet et ville
 - Logos de clients reconnus dans votre secteur
 - Chiffres clés : "150+ clients accompagnés", "2 semaines de délai moyen"
@@ -8939,7 +8939,7 @@ Les seuils varient selon la concurrence locale :
 
 La **fréquence** est aussi importante que le nombre total. Google favorise les fiches qui reçoivent régulièrement de nouveaux avis plutôt que celles qui ont un pic puis plus rien pendant 6 mois.
 
-Chez ConvertiLab, nous avons atteint 4.9/5 en envoyant systématiquement un message WhatsApp personnel à chaque client 24h après la livraison du site, avec le lien direct vers notre fiche. Sur 15 messages envoyés en moyenne, 5 à 7 donnent lieu à un avis. Aucune incentive, aucune automatisation, juste un message sincère au bon moment.
+Chez ConvertiLab, nous avons atteint 4,5/5 en envoyant systématiquement un message WhatsApp personnel à chaque client 24h après la livraison du site, avec le lien direct vers notre fiche. Sur 15 messages envoyés en moyenne, 5 à 7 donnent lieu à un avis. Aucune incentive, aucune automatisation, juste un message sincère au bon moment.
 
 ## Comment intégrer les avis Google sur son site web ?
 
