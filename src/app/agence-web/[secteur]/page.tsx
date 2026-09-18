@@ -51,9 +51,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     `Création de site internet à ${city.name} : agence web`,
     `Agence web à ${city.name} : site vitrine à 890 €`,
   ];
-  const title = titleVariants[city.slug.length % titleVariants.length];
+  // Le gabarit ajoute « | ConvertiLab » (14 caractères) : on vise 65 au total.
+  let title = titleVariants[city.slug.length % titleVariants.length];
+  if (title.length > 51) title = `Agence web ${city.name} : site à 890 €`;
+  if (title.length > 51) title = `Agence web ${city.name}`;
   const industries = city.keyIndustries.slice(0, 2).join(", ").toLowerCase();
-  const description = `Agence web à ${city.name} (${city.department}) : site internet pour ${industries} et PME. Site vitrine 890 €, livré en 7 à 14 jours, prix fixe, maquette gratuite sous 48 h.`;
+  // 155 caractères au plus : les secteurs ne sont ajoutés que s'ils tiennent.
+  let description = `Agence web à ${city.name} (${city.department}) : site vitrine 890 € livré en 7 à 14 jours, SEO local, maquette gratuite sous 48 h.`;
+  const avecSecteurs = `${description.slice(0, -1)}. Pour ${industries} et PME.`;
+  if (avecSecteurs.length <= 155) description = avecSecteurs;
 
   return {
     title,
@@ -68,12 +74,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     },
     other: {
-      "geo.region": "FR-IDF",
+      "geo.region": REGION_ISO[city.region] ?? "FR",
       "geo.placename": city.name,
       ICBM: `${city.lat}, ${city.lng}`,
     },
   };
 }
+
+/** Codes ISO 3166-2 des régions : le gabarit mettait « FR-IDF » sur Toulouse ou Nantes. */
+const REGION_ISO: Record<string, string> = {
+  "Île-de-France": "FR-IDF", "Auvergne-Rhône-Alpes": "FR-ARA", "Nouvelle-Aquitaine": "FR-NAQ", "Occitanie": "FR-OCC",
+  "Provence-Alpes-Côte d'Azur": "FR-PAC", "Hauts-de-France": "FR-HDF", "Grand Est": "FR-GES", "Bretagne": "FR-BRE",
+  "Pays de la Loire": "FR-PDL", "Normandie": "FR-NOR", "Centre-Val de Loire": "FR-CVL", "Bourgogne-Franche-Comté": "FR-BFC",
+};
 
 /** Villes sans aucune impression Google en 90 jours (audit du 18/09/2026) : redirigées vers /agence-web par next.config, plus générées ni listées. */
 /** Dernière modification du gabarit des pages villes (prix, délais, références réelles). */

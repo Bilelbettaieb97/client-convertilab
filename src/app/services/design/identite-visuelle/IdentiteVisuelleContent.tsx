@@ -23,11 +23,11 @@ export default function IdentiteVisuelleContent() {
           <BreadcrumbItem><BreadcrumbLink asChild><Link href="/" className="text-white/70 hover:text-white">Accueil</Link></BreadcrumbLink></BreadcrumbItem><BreadcrumbSeparator className="text-white/50" />
           <BreadcrumbItem><BreadcrumbLink asChild><Link href="/services" className="text-white/70 hover:text-white">Services</Link></BreadcrumbLink></BreadcrumbItem><BreadcrumbSeparator className="text-white/50" />
           <BreadcrumbItem><BreadcrumbLink asChild><Link href="/services/design" className="text-white/70 hover:text-white">Design</Link></BreadcrumbLink></BreadcrumbItem><BreadcrumbSeparator className="text-white/50" />
-          <BreadcrumbItem><BreadcrumbPage className="text-white">Identite Visuelle</BreadcrumbPage></BreadcrumbItem>
+          <BreadcrumbItem><BreadcrumbPage className="text-white">Identité visuelle</BreadcrumbPage></BreadcrumbItem>
         </BreadcrumbList></Breadcrumb>
         <div className="max-w-4xl">
           <div className="flex items-center gap-3 mb-6"><div className="p-3 bg-white/20 rounded-xl"><Fingerprint className="w-8 h-8" /></div><span className="px-4 py-1 bg-white/20 rounded-full text-sm font-medium">Design</span></div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Identite Visuelle</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Identité visuelle</h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">Logo et charte graphique pour une image de marque coherente et memorable.</p>
           <div className="flex flex-wrap gap-4">
             <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-100"><Link href="/contact">Demander un devis gratuit <ArrowRight className="ml-2 w-5 h-5" /></Link></Button>

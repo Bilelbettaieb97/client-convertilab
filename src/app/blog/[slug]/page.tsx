@@ -51,6 +51,15 @@ async function getArticle(slug: string): Promise<FullBlogArticle | null> {
   return staticArticle || null;
 }
 
+/** Meta description sous 155 caractères : coupe à la dernière phrase complète, sinon au dernier mot. */
+function descriptionCourte(texte: string): string {
+  if (texte.length <= 155) return texte;
+  const tronque = texte.slice(0, 153);
+  const finPhrase = Math.max(tronque.lastIndexOf(". "), tronque.lastIndexOf(" ! "), tronque.lastIndexOf(" ? "));
+  if (finPhrase >= 90) return tronque.slice(0, finPhrase + 1);
+  return tronque.slice(0, tronque.lastIndexOf(" ")) + "…";
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const article = await getArticle(slug);
@@ -59,14 +68,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Article introuvable" };
   }
 
+  const titre = article.seoTitle ?? article.title;
   return {
-    title: article.seoTitle ?? article.title,
-    description: article.metaDescription,
+    // Au-delà de 51 caractères, le suffixe « | ConvertiLab » ferait dépasser 65 : titre seul.
+    title: titre.length > 51 ? { absolute: titre } : titre,
+    description: descriptionCourte(article.metaDescription),
     keywords: article.tags,
     authors: [{ name: "Bilel Bettaieb", url: `${SITE.url}/a-propos` }],
     openGraph: {
       title: article.seoTitle ?? article.title,
-      description: article.metaDescription,
+      description: descriptionCourte(article.metaDescription),
       url: `${SITE.url}/blog/${article.slug}`,
       type: "article",
       images: [{ url: article.image.startsWith("http") ? article.image : `${SITE.url}${article.image}`, width: 1200, height: 630 }],

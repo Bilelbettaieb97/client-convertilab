@@ -46,13 +46,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const sector = getSectorBySlug(secteur);
   if (!sector) return { title: "Page introuvable" };
 
+  // « | ConvertiLab » (14 caractères) est ajouté par le gabarit : 51 caractères au plus ici.
+  let title = [
+    `Site internet ${sector.name} : création à 890 €`,
+    `Création de site web ${sector.name} : 890 €`,
+    `Site internet ${sector.name} : attirer vos clients`,
+  ][sector.slug.length % 3];
+  if (title.length > 51) title = `Site internet ${sector.name} : 890 €`;
+  if (title.length > 51) title = `Site web ${sector.name}`;
+  const nom = sector.name.toLowerCase();
+  let description = `Site internet pour ${nom} : 890 € tout compris, livré en 7 à 14 jours, référencement local inclus, maquette gratuite sous 48 h.`;
+  if (description.length > 155) description = `Site internet pour ${nom} : 890 € tout compris, livré en 7 à 14 jours, SEO local inclus, maquette gratuite sous 48 h.`;
+
   return {
-    title: [
-      `Site internet ${sector.name} : création à 890 €`,
-      `Création de site web ${sector.name} : 890 €`,
-      `Site internet ${sector.name} : attirer vos clients`,
-    ][sector.slug.length % 3],
-    description: `Création de site internet pour ${sector.name.toLowerCase()} : 890 € tout compris, livré en 7 à 14 jours, référencement local inclus, maquette gratuite sous 48 h.`,
+    title,
+    description,
     keywords: `site web ${sector.name.toLowerCase()}, création site internet ${sector.name.toLowerCase()}, site vitrine ${sector.name.toLowerCase()}`,
     alternates: { canonical: `${SITE.url}/solutions/${sector.slug}` },
     openGraph: {

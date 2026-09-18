@@ -34,8 +34,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? term.definition.slice(0, 152) + "..."
     : term.definition;
 
+  // « | ConvertiLab » est ajouté par le gabarit : titre court pour les termes longs.
+  const title = term.term.length > 22 ? `${term.term} : définition` : `${term.term} : définition et guide complet`;
+
   return {
-    title: `${term.term} : Définition & Guide Complet`,
+    title,
     description: desc,
     alternates: { canonical: `${SITE.url}/glossaire/${term.slug}` },
     openGraph: {

@@ -21,7 +21,7 @@ const schemas = [
     { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE.url}/services` },
     { "@type": "ListItem", "position": 3, "name": "Design", "item": `${SITE.url}/services/design` },
   ]},
-  { "@context": "https://schema.org", "@type": "Service", "name": "Design UI/UX & Identite Visuelle", "description": "Design UI/UX, identite visuelle, logo et charte graphique. Interfaces qui convertissent vos visiteurs en clients.", "url": `${SITE.url}/services/design`, "provider": { "@type": "Organization", "name": SITE.name } },
+  { "@context": "https://schema.org", "@type": "Service", "name": "Design UI/UX & Identité visuelle", "description": "Design UI/UX, identité visuelle, logo et charte graphique. Interfaces qui convertissent vos visiteurs en clients.", "url": `${SITE.url}/services/design`, "provider": { "@type": "Organization", "name": SITE.name } },
 ];
 
 export default function DesignPage() {

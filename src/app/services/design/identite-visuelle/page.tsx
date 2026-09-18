@@ -16,7 +16,7 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE.url },
   { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE.url}/services` },
   { "@type": "ListItem", "position": 3, "name": "Design", "item": `${SITE.url}/services/design` },
-  { "@type": "ListItem", "position": 4, "name": "Identite Visuelle", "item": `${SITE.url}/services/design/identite-visuelle` },
+  { "@type": "ListItem", "position": 4, "name": "Identité visuelle", "item": `${SITE.url}/services/design/identite-visuelle` },
 ]};
 
 
