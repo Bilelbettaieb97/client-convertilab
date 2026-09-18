@@ -20,6 +20,8 @@ export const SITE = {
     count: "14",
     rating: "4.5",
   },
+  // Fiche Google « Convertilab » (Rueil-Malmaison), relevée le 18/09/2026 ; lien direct par CID.
+  reviewsGoogle: { count: "10", rating: "4,6", url: "https://www.google.com/maps?cid=2860015223805054579" },
   analytics: {
     ga: "G-N9NTVTE0R6",
     gtm: "GTM-5TDHTDHP",

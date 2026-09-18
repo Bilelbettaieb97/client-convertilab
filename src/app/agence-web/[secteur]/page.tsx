@@ -379,9 +379,8 @@ export default async function CityPage({ params }: Props) {
                 Votre agence web près {deVille(city.name)}
               </div>
               <p className="text-sm text-gray-600 mb-3">
-                ConvertiLab est basée à Rueil-Malmaison (92500) et intervient
-                à {city.name} et dans toute l&apos;Île-de-France. Rencontre possible en
-                visio ou sur place selon votre projet.
+                ConvertiLab est basée à Rueil-Malmaison (92500) et accompagne les entreprises{" "}
+                {deVille(city.name)}{city.region === "Île-de-France" ? " et de toute l'Île-de-France, en visio ou sur place selon votre projet." : " et de toute la France, en visio, avec un interlocuteur unique."}
               </p>
               <div className="flex flex-col gap-1.5 text-sm text-gray-700">
                 <a href={`tel:${SITE.phone}`} className="inline-flex items-center gap-2 hover:text-purple-700 font-medium">
@@ -390,6 +389,9 @@ export default async function CityPage({ params }: Props) {
                 <span className="inline-flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-purple-600" /> {SITE.fullAddress}
                 </span>
+                <a href={SITE.reviewsGoogle.url} target="_blank" rel="noopener" className="inline-flex items-center gap-2 hover:text-purple-700">
+                  <Star className="w-4 h-4 text-yellow-500" /> Avis Google : {SITE.reviewsGoogle.rating}/5 sur {SITE.reviewsGoogle.count} avis
+                </a>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden border border-purple-100 shadow-sm min-h-[220px]">
