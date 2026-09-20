@@ -63,7 +63,9 @@ export async function GET(request: NextRequest) {
       "Devis":            { icon: "💼", leads: d.devis_submissions || [] },
       "Demande Maquette": { icon: "🖼️", leads: d.mockup_requests || [] },
       "Estimation Prix":  { icon: "💰", leads: d.price_estimations || [] },
-      "Offre Spéciale":   { icon: "🎁", leads: d.offer_reservations || [] },
+      // Page /promo-site-web : le formulaire écrit dans promo_leads (RPC upsert_promo_lead),
+      // plus dans offer_reservations, vide depuis la refonte de la page.
+      "Offre Spéciale":   { icon: "🎁", leads: d.promo_leads || [] },
     },
   }, { headers: CORS_HEADERS });
 }
