@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, ArrowRight, ArrowUp } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, ArrowUp, BadgeCheck } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { SITE } from "@/lib/constants";
@@ -218,6 +218,13 @@ const Footer = () => {
                 <svg className="w-4 h-4 text-[#00b67a]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg>
                 <span className="text-xs font-semibold text-[#00b67a]">{SITE.reviews.rating.replace(".", ",")}/5 · {SITE.reviews.count} avis</span>
                 <span className="text-xs text-gray-500">Trustpilot</span>
+                <span className="sr-only"> (ouvre dans un nouvel onglet)</span>
+              </a>
+              {/* Notre produit, édité par la même entreprise : un lien suivi
+                  depuis chaque page de l'agence, c'est le premier lien
+                  entrant vérifiable de merciavis.fr (audit SEO du 20/09/2026). */}
+              <a href="https://merciavis.fr" target="_blank" rel="noopener" className="flex items-center gap-2 min-h-11 text-sm text-gray-400 hover:text-purple-400 transition-colors">
+                <BadgeCheck className="w-4 h-4 flex-shrink-0" aria-hidden="true" /> MerciAvis, notre plaque avis Google
                 <span className="sr-only"> (ouvre dans un nouvel onglet)</span>
               </a>
             </div>
