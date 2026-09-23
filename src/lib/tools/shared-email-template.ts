@@ -31,64 +31,57 @@ export function buildToolEmailHtml(params: EmailParams): string {
 
   const sc = score !== undefined ? scoreColor(score) : "#6c5ce7";
 
+  /*
+   * Habillage volontairement sobre.
+   *
+   * L'ancien gabarit ouvrait sur un bandeau noir de 40 px, affichait le score
+   * en 48 px de couleur et finissait sur un bouton violet dans un second
+   * bandeau : la signature visuelle d'une newsletter, que Gmail range en
+   * Promotions. Mesuré le 11/09/2026 sur la séquence de relance, le passage à
+   * un habillage de courrier ordinaire a fait passer 4 emails sur 9 à 9 sur 9
+   * en boîte principale, à texte identique. Ici : fond blanc, pas de logo,
+   * pas de bouton coloré, un lien hypertexte simple, une signature en texte.
+   *
+   * Ne pas « embellir » ce gabarit sans refaire le test d'arrivée en boîte.
+   */
+  const lignesAlerte = warnings.slice(0, 3).map(w => `<li style="margin:0 0 4px;">${w}</li>`).join("");
+  const lignesForts = highlights.slice(0, 3).map(h => `<li style="margin:0 0 4px;">${h}</li>`).join("");
+
   return `<!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"></head>
-<body style="font-family:Arial,sans-serif;background:#f4f4f8;margin:0;padding:0;">
-<div style="max-width:600px;margin:0 auto;padding:20px;">
+<html lang="fr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#ffffff;">
+<div style="max-width:600px;margin:0 auto;padding:24px 20px;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#222;">
 
-<div style="background:#0a0a1a;border-radius:16px;padding:40px;text-align:center;color:#fff;">
-  <div style="font-size:12px;color:#a29bfe;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">${toolLabel}</div>
-  <h1 style="font-size:28px;margin:0 0 8px;">${isPdf ? "Votre rapport est prêt" : "Votre analyse est terminée"}</h1>
-  ${domain ? `<p style="color:#8888aa;font-size:14px;margin:0;">Analyse de <strong style="color:#a29bfe;">${domain}</strong></p>` : ""}
-</div>
+<p style="margin:0 0 16px;">Bonjour,</p>
 
-<div style="background:#fff;border-radius:16px;padding:30px;margin-top:16px;text-align:center;">
-  <p style="color:#666;font-size:14px;margin:0 0 20px;">Bonjour,</p>
-  <p style="color:#666;font-size:14px;margin:0 0 20px;">${lead.name
-    ? `Voici votre rapport pour <strong>${lead.name}</strong>.`
-    : "Voici votre rapport."}</p>
+<p style="margin:0 0 16px;">${lead.name
+    ? `Voici votre ${toolLabel.toLowerCase()} pour <strong>${lead.name}</strong>${domain ? ` (${domain})` : ""}.`
+    : `Voici votre ${toolLabel.toLowerCase()}${domain ? ` pour ${domain}` : ""}.`}</p>
 
-  ${score !== undefined && grade ? `
-  <div style="background:#f8f9fa;border-radius:12px;padding:24px;margin:20px 0;">
-    <div style="font-size:48px;font-weight:900;color:${sc};line-height:1;">${score}/100</div>
-    <div style="font-size:18px;color:#666;margin-top:4px;">Grade : <strong style="color:${sc};">${grade}</strong> — ${gradeLabel}</div>
-  </div>
-  ` : ""}
+${score !== undefined && grade ? `<p style="margin:0 0 16px;">Résultat : <strong>${score}/100</strong>, note ${grade}${gradeLabel ? ` (${gradeLabel})` : ""}.</p>` : ""}
 
-  ${warnings.length > 0 ? `
-  <div style="background:#fff0f0;border-radius:12px;padding:16px;margin:16px 0;border-left:4px solid #ef4444;">
-    <p style="color:#ef4444;font-weight:700;margin:0;font-size:14px;">${warnings.length} point(s) à améliorer</p>
-    ${warnings.slice(0, 3).map(w => `<p style="color:#888;font-size:12px;margin:4px 0 0;">• ${w}</p>`).join("")}
-  </div>` : ""}
+${warnings.length > 0 ? `<p style="margin:0 0 6px;">Les points à améliorer en priorité :</p>
+<ul style="margin:0 0 16px;padding-left:20px;">${lignesAlerte}</ul>` : ""}
 
-  ${highlights.length > 0 ? `
-  <div style="background:#f0fff4;border-radius:12px;padding:16px;margin:16px 0;border-left:4px solid #22c55e;text-align:left;">
-    <p style="color:#22c55e;font-weight:700;margin:0 0 8px;font-size:14px;">Points forts</p>
-    ${highlights.slice(0, 3).map(h => `<p style="color:#666;font-size:12px;margin:4px 0;">\u2713 ${h}</p>`).join("")}
-  </div>` : ""}
+${highlights.length > 0 ? `<p style="margin:0 0 6px;">Ce qui est déjà en place :</p>
+<ul style="margin:0 0 16px;padding-left:20px;">${lignesForts}</ul>` : ""}
 
-  ${isPdf
+${isPdf
     ? (pdfUrl
-        ? `<div style="margin:24px 0;">
-             <a href="${pdfUrl}" style="display:inline-block;background:#6c5ce7;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;">Ouvrir mon rapport (PDF)</a>
-             <p style="color:#888;font-size:13px;margin:14px 0 0;">Il est aussi en pièce jointe de cet email. Si vous ne la voyez pas, utilisez le bouton ci-dessus.</p>
-             <p style="color:#aaa;font-size:11px;margin:8px 0 0;word-break:break-all;">Ou copiez ce lien : <a href="${pdfUrl}" style="color:#6c5ce7;">${pdfUrl}</a></p>
-           </div>`
-        : `<p style="color:#888;font-size:13px;margin:20px 0;">Le rapport complet est en <strong>pièce jointe</strong> de cet email.</p>`)
-    : `<p style="color:#888;font-size:13px;margin:20px 0;">Le rapport détaillé n'a pas pu être généré cette fois. Vous pouvez relancer l'analyse depuis notre site.</p>`}
-</div>
+        ? `<p style="margin:0 0 16px;">Le rapport complet est en pièce jointe, et vous pouvez aussi l'ouvrir ici :<br>
+<a href="${pdfUrl}" style="color:#4a3fc7;">${pdfUrl}</a></p>`
+        : `<p style="margin:0 0 16px;">Le rapport complet est en pièce jointe de cet email.</p>`)
+    : `<p style="margin:0 0 16px;">Le rapport détaillé n'a pas pu être généré cette fois. Vous pouvez relancer l'analyse depuis notre site.</p>`}
 
-<div style="background:#1a1040;border-radius:16px;padding:30px;margin-top:16px;text-align:center;color:#fff;">
-  <h2 style="font-size:20px;margin:0 0 8px;">Besoin d'aide ?</h2>
-  <p style="color:#8888aa;font-size:13px;margin:0 0 20px;">Notre équipe peut vous accompagner sur tous ces sujets.</p>
-  <a href="${ctaUrl}" style="display:inline-block;background:#6c5ce7;color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">${ctaText}</a>
-  <p style="color:#5a5a7a;font-size:11px;margin-top:16px;">
-    <a href="https://www.convertilab.com" style="color:#a29bfe;text-decoration:none;">convertilab.com</a> &bull;
-    <a href="tel:+33616477245" style="color:#a29bfe;text-decoration:none;">06 16 47 72 45</a> &bull;
-    <a href="mailto:contact@convertilab.com" style="color:#a29bfe;text-decoration:none;">contact@convertilab.com</a>
-  </p>
-</div>
+<p style="margin:0 0 16px;">Si vous voulez qu'on regarde ensemble par quoi commencer, répondez simplement à cet email, ou prenez 30 minutes ici : <a href="${ctaUrl}" style="color:#4a3fc7;">${ctaText.toLowerCase()}</a>.</p>
+
+<p style="margin:24px 0 0;color:#444;">
+Bilel Bettaieb<br>
+Fondateur, ConvertiLab<br>
+06 16 47 72 45<br>
+<a href="https://www.convertilab.com" style="color:#4a3fc7;">convertilab.com</a>
+</p>
 
 </div>
 </body>

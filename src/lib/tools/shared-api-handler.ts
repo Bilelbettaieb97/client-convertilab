@@ -5,6 +5,7 @@ import type { ToolConfig, LeadInfo } from "./shared-types";
 import { pushToPipedrive } from "@/lib/pipedrive";
 import { scheduleEmailSeries } from "@/lib/email-series";
 import { deposerRapport } from "./upload-rapport";
+import { htmlVersTexte, entetesDesinscription } from "./email-delivrabilite";
 import { baliserLiens, slug } from "@/lib/utm";
 
 const supabase = createClient(
@@ -130,14 +131,21 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
       // 5. Send email to client
       let emailSent = false;
       try {
+        const corpsHtml = baliserLiens(
+          config.buildEmailHtml(lead, result, !!(hasPdf || attachments.length > 0), pdfUrl),
+          { medium: "rapport", campaign: slug(config.toolName), content: "immediat" }
+        );
         const { error: sendErr } = await resend.emails.send({
           from: "ConvertiLab <bilel@convertilab.com>",
           to: lead.email,
+          // Les réponses doivent arriver dans une boîte lue : une réponse est
+          // le signal d'engagement le plus fort pour le classement Gmail.
+          replyTo: "contact@convertilab.com",
           subject: config.buildEmailSubject(result),
-          html: baliserLiens(
-            config.buildEmailHtml(lead, result, !!(hasPdf || attachments.length > 0), pdfUrl),
-            { medium: "rapport", campaign: slug(config.toolName), content: "immediat" }
-          ),
+          html: corpsHtml,
+          // Version texte : un message sans elle est un signal de publipostage.
+          text: htmlVersTexte(corpsHtml),
+          headers: entetesDesinscription(lead.email),
           attachments: attachments.length > 0 ? attachments : undefined,
         });
         if (sendErr) throw sendErr;
