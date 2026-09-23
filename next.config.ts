@@ -149,7 +149,19 @@ const nextConfig: NextConfig = {
               // ad.doubleclick.net et googleads.g.doubleclick.net. Les deux passerelles Meta
               // (*.on.aws, *.run.app, « events?cee=no ») restent volontairement bloquées :
               // trop larges, et le pixel fonctionne sans elles.
-              "connect-src 'self' https://*.supabase.co https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://stats.g.doubleclick.net https://ad.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://www.google.fr https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.facebook.com https://vitals.vercel-insights.com",
+              // googleadservices.com : la conversion Google Ads part par là depuis
+              // la nouvelle balise gtag. Sans lui, « conversion » et « generate_lead »
+              // étaient refusés en silence depuis le 18/09 : plus aucune conversion
+              // remontée dans Google Ads.
+              //
+              // *.on.aws et *.run.app : passerelle d'évènements de Meta. Le pixel ne
+              // poste plus sur www.facebook.com/tr mais sur un sous-domaine aléatoire
+              // de cette passerelle (« /events?cee=no »). Les bloquer revenait à
+              // éteindre le pixel : mesuré le 23/09, un fbq('track','Lead') ne
+              // produisait aucune requête réseau. C'est large, et c'est le prix à
+              // payer pour mesurer les conversions Meta ; à revoir si Meta publie
+              // un domaine fixe.
+              "connect-src 'self' https://*.supabase.co https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://stats.g.doubleclick.net https://ad.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://www.google.fr https://www.googleadservices.com https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.facebook.com https://*.on.aws https://*.run.app https://vitals.vercel-insights.com",
               // Google Maps embed (pages villes), GTM preview, Calendly
               "frame-src 'self' https://www.google.com https://www.googletagmanager.com https://calendly.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.facebook.com",
               "object-src 'none'",
