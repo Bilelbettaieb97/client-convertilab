@@ -194,7 +194,7 @@ function SeoCheckFormInner({ initialUrl = "" }: { initialUrl?: string }) {
         {/* STEP 2: Contact info */}
         {step === 2 && (
           <motion.div key="step2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Ou envoyer votre rapport ?</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Où envoyer votre rapport ?</h2>
             <p className="text-white/50 mb-8 text-sm">Le rapport PDF complet sera envoyé à votre adresse email.</p>
 
             <div className="space-y-4">

@@ -444,7 +444,7 @@ export default function AdsEstimatorForm() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Ou envoyer votre rapport ?</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Où envoyer votre rapport ?</h2>
             <p className="text-white/50 mb-8 text-sm">
               Le rapport PDF complet avec vos projections sera envoyé à votre adresse email.
             </p>

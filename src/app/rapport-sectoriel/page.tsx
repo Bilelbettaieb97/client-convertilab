@@ -77,7 +77,7 @@ const features = [
   {
     icon: "\ud83d\udcc4",
     title: "Rapport PDF",
-    desc: "6 pages complètes envoyées par email en piece jointe.",
+    desc: "6 pages complètes envoyées par email en pièce jointe.",
   },
 ];
 

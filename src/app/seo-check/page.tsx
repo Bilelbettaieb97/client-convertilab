@@ -173,7 +173,7 @@ const features = [
   {
     icon: "📄",
     title: "Rapport PDF",
-    desc: "Rapport complet envoyé par email en piece jointe.",
+    desc: "Rapport complet envoyé par email en pièce jointe.",
   },
   {
     icon: "⚡",

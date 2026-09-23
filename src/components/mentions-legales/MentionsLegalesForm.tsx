@@ -370,7 +370,7 @@ export default function MentionsLegalesForm() {
         {/* STEP 5: Contact Info */}
         {step === 5 && (
           <motion.div key="step5" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Ou envoyer le document ?</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Où envoyer le document ?</h2>
             <p className="text-white/50 mb-6 text-sm">Le PDF sera envoyé à votre adresse email.</p>
 
             <div className="space-y-4">
