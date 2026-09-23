@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
+import { conversionOutil } from "@/components/tools/conversionOutil";
 import {
   Globe, ArrowRight, ArrowLeft, Mail, Building2,
   Loader2, CheckCircle2, TrendingUp, Zap, Search, Trophy,
@@ -96,6 +97,8 @@ export default function ComparateurForm() {
     }, 4000);
 
     try {
+      // Demande enregistrée : on le signale à Google Ads et à Meta.
+      conversionOutil("comparateur", email);
       const res = await fetch("/api/comparateur-sites", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

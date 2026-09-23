@@ -39,8 +39,13 @@ export function GoogleAnalytics() {
               }
             } catch (e) {}
             gtag('event', 'conversion', { 'send_to': '${SITE.analytics.googleAdsId}/${SITE.analytics.googleAdsLabel}' });
-            gtag('event', 'generate_lead');
-            if (typeof fbq === 'function' && window._fbqInitialized) { fbq('track', 'Lead'); }
+            // « outil » distingue l'origine (audit SEO, test de vitesse, devis…)
+            // sans créer un événement par formulaire : les campagnes s'optimisent
+            // ensuite sur une conversion personnalisée filtrée sur ce paramètre.
+            gtag('event', 'generate_lead', userData && userData.outil ? { outil: userData.outil } : {});
+            if (typeof fbq === 'function' && window._fbqInitialized) {
+              fbq('track', 'Lead', userData && userData.outil ? { content_name: userData.outil } : {});
+            }
           };
         `}
       </Script>

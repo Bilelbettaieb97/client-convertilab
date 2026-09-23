@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
+import { conversionOutil } from "@/components/tools/conversionOutil";
 import {
   Globe, ArrowRight, ArrowLeft, Mail, Building2,
   Shield, Zap, CheckCircle2, Search, FileText,
@@ -71,6 +72,8 @@ export default function RobotsGeneratorForm() {
     }, 2000);
 
     try {
+      // Demande enregistrée : on le signale à Google Ads et à Meta.
+      conversionOutil("robots-sitemap", email);
       const res = await fetch("/api/robots-generator", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

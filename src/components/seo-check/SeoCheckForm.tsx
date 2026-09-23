@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
+import { conversionOutil } from "@/components/tools/conversionOutil";
 import {
   Globe, ArrowRight, ArrowLeft, Mail, Building2,
   Search, Loader2, CheckCircle2, AlertTriangle, TrendingUp,
@@ -103,6 +104,8 @@ function SeoCheckFormInner({ initialUrl = "" }: { initialUrl?: string }) {
     }, 2500);
 
     try {
+      // Demande enregistrée : on le signale à Google Ads et à Meta.
+      conversionOutil("audit-seo", email);
       const res = await fetch("/api/seo-check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

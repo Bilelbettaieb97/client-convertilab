@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
+import { conversionOutil } from "@/components/tools/conversionOutil";
 import {
   ArrowRight,
   ArrowLeft,
@@ -188,6 +189,8 @@ export default function AdsEstimatorForm() {
     }, 1500);
 
     try {
+      // Demande enregistrée : on le signale à Google Ads et à Meta.
+      conversionOutil("estimateur-ads", email);
       const res = await fetch("/api/estimateur-ads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

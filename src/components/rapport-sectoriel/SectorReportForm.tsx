@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
+import { conversionOutil } from "@/components/tools/conversionOutil";
 import {
   ArrowRight, ArrowLeft, Mail, Building2,
   Loader2, CheckCircle2, TrendingUp, Zap, Search, ChevronDown, Download,
@@ -68,6 +69,8 @@ export default function SectorReportForm() {
     }, 1800);
 
     try {
+      // Demande enregistrée : on le signale à Google Ads et à Meta.
+      conversionOutil("rapport-sectoriel", email);
       const res = await fetch("/api/rapport-sectoriel", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
