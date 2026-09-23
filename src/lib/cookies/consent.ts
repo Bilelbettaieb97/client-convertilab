@@ -5,12 +5,22 @@ import {
   CONSENT_VERSION,
   type CookieConsent,
 } from "./types";
+import { recueilSuspendu } from "./suspension";
 
 export function getStoredConsent(): CookieConsent | null {
   if (typeof window === "undefined") return null;
   try {
     const stored = localStorage.getItem(CONSENT_LOCALSTORAGE_KEY);
-    if (!stored) return null;
+    // Pendant la suspension, pas de choix enregistré vaut « tout accepté » :
+    // le bandeau ne s'ouvre pas et la mesure part. Rien n'est écrit pour
+    // autant, donc le visiteur ne porte aucune trace d'un accord qu'il n'a
+    // pas donné. Voir ./suspension.ts.
+    if (!stored) {
+      return recueilSuspendu()
+        ? { necessary: true, analytics: true, marketing: true, preferences: true,
+            consentId: "suspension", timestamp: Date.now(), version: CONSENT_VERSION }
+        : null;
+    }
     const parsed = JSON.parse(stored) as CookieConsent;
     // Invalider si la version a changé
     if (parsed.version !== CONSENT_VERSION) return null;

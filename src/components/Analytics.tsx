@@ -32,7 +32,9 @@ export function GoogleAnalytics() {
           window.trackFormConversion = function(userData) {
             try {
               if (userData && userData.email) {
-                var consent = JSON.parse(localStorage.getItem('convertilab_consent') || '{}');
+                var _b = localStorage.getItem('convertilab_consent');
+                var consent = _b ? JSON.parse(_b)
+                                 : (Date.now() < 1791064800000 ? { marketing: true } : {});
                 if (consent.marketing) {
                   gtag('set', 'user_data', { 'email': userData.email, 'phone_number': userData.phone || '' });
                 }
@@ -103,7 +105,10 @@ export function MetaPixel() {
           if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
         })(window);
         try {
-          var _c = JSON.parse(localStorage.getItem('convertilab_consent') || '{}');
+          var _brut = localStorage.getItem('convertilab_consent');
+          // Suspension du recueil jusqu'au 04/10/2026 (voir lib/cookies/suspension.ts).
+          var _c = _brut ? JSON.parse(_brut)
+                         : (Date.now() < 1791064800000 ? { marketing: true, analytics: true } : {});
           if (_c.marketing) {
             var _t=document.createElement('script');_t.async=!0;
             _t.src='https://connect.facebook.net/en_US/fbevents.js';

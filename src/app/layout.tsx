@@ -122,6 +122,11 @@ export default function RootLayout({
             // Restaurer le consentement précédent depuis localStorage
             try {
               var stored = localStorage.getItem('convertilab_consent');
+              // Suspension du recueil jusqu'au 04/10/2026 (voir lib/cookies/suspension.ts) :
+              // sans choix enregistré, on applique « tout accepté » sans rien écrire.
+              if (!stored && Date.now() < 1791064800000) {
+                stored = '{"analytics":true,"marketing":true,"preferences":true}';
+              }
               if (stored) {
                 var c = JSON.parse(stored);
                 gtag('consent', 'update', {
