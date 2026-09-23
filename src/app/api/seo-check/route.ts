@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
   const warnings: string[] = [];
   try {
     const body = await request.json();
-    const { url, name, email, phone, company } = body;
+    const { url, name, email, phone, company, source } = body;
 
     if (!url || !name || !email) {
       return NextResponse.json(
@@ -104,6 +104,7 @@ export async function POST(request: NextRequest) {
       issues_count: audit.issues.length,
       critical_count: audit.issues.filter(i => i.priority === "critical").length,
       report_html: reportHtml,
+      source: source || null,
     };
 
     // 5. Build attachment (PDF if available, HTML fallback)
@@ -161,14 +162,12 @@ export async function POST(request: NextRequest) {
       `Nouveau lead SEO Check — ${name} — ${audit.domain} (${audit.scores.global}/100)`,
       `
         <h2>Nouveau lead via SEO Check</h2>
-        <p><strong>Nom :</strong> ${name}</p>
-        <p><strong>Email :</strong> ${email}</p>
-        <p><strong>Tel :</strong> ${phone || "Non renseigne"}</p>
-        <p><strong>Entreprise :</strong> ${company || "Non renseigne"}</p>
-        <hr>
-        <p><strong>Site audite :</strong> ${audit.domain}</p>
+        <p><strong>Entreprise :</strong> ${name || "non renseignée"}</p>
+        <p><strong>Email :</strong> <a href="mailto:${email}">${email}</a></p>
+        <p><strong>Site audité :</strong> <a href="https://${audit.domain}">${audit.domain}</a></p>
         <p><strong>Score :</strong> ${audit.scores.global}/100 (${audit.grade})</p>
-        <p><strong>Problemes critiques :</strong> ${audit.issues.filter(i => i.priority === "critical").length}</p>
+        <p><strong>Problèmes critiques :</strong> ${audit.issues.filter(i => i.priority === "critical").length}</p>
+        <p><strong>Origine :</strong> ${source || "inconnue"}</p>
         <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
       `,
       "SEO Check"

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
 import { conversionOutil } from "@/components/tools/conversionOutil";
+import { sourceVisite } from "@/lib/tools/source-visite";
 import {
   ArrowRight,
   ArrowLeft,
@@ -195,6 +196,7 @@ export default function AdsEstimatorForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          source: sourceVisite(),
           name: company, email, company,
           sector,
           city,

@@ -160,6 +160,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         .insert({
           ...row,
           name: lead.name || lead.company || null,
+          source: lead.source || null,
           email: lead.email,
           phone: lead.phone || null,
           company: lead.company || null,
@@ -183,10 +184,10 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         `Nouveau lead ${config.toolName} — ${lead.name}`,
         `
           <h2>Nouveau lead via ${config.toolName}</h2>
-          <p><strong>Nom :</strong> ${lead.name}</p>
-          <p><strong>Email :</strong> ${lead.email}</p>
-          <p><strong>Tel :</strong> ${lead.phone || "Non renseigne"}</p>
-          <p><strong>Entreprise :</strong> ${lead.company || "Non renseigne"}</p>
+          <p><strong>Entreprise :</strong> ${lead.company || "non renseignée"}</p>
+          <p><strong>Email :</strong> <a href="mailto:${lead.email}">${lead.email}</a></p>
+          <p><strong>Téléphone :</strong> ${lead.phone || "non renseigné"}</p>
+          <p><strong>Origine :</strong> ${lead.source || "inconnue"}</p>
           <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
         `,
         config.toolName

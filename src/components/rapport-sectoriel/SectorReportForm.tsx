@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
 import { conversionOutil } from "@/components/tools/conversionOutil";
+import { sourceVisite } from "@/lib/tools/source-visite";
 import {
   ArrowRight, ArrowLeft, Mail, Building2,
   Loader2, CheckCircle2, TrendingUp, Zap, Search, ChevronDown, Download,
@@ -74,7 +75,7 @@ export default function SectorReportForm() {
       const res = await fetch("/api/rapport-sectoriel", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sectorSlug: selectedSector, name: company, email, company }),
+        body: JSON.stringify({ sectorSlug: selectedSector, name: company, email, company , source: sourceVisite() }),
       });
 
       clearInterval(interval);

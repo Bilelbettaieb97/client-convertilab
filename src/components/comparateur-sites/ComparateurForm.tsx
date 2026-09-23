@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
 import { conversionOutil } from "@/components/tools/conversionOutil";
+import { sourceVisite } from "@/lib/tools/source-visite";
 import {
   Globe, ArrowRight, ArrowLeft, Mail, Building2,
   Loader2, CheckCircle2, TrendingUp, Zap, Search, Trophy,
@@ -102,7 +103,7 @@ export default function ComparateurForm() {
       const res = await fetch("/api/comparateur-sites", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ urlA, urlB, name: company, email, company }),
+        body: JSON.stringify({ urlA, urlB, name: company, email, company , source: sourceVisite() }),
       });
 
       clearInterval(interval);

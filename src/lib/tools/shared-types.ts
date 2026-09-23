@@ -1,4 +1,6 @@
 export interface LeadInfo {
+  /** D'où vient la personne : campagne payante, Google, lien direct. */
+  source?: string;
   name: string;
   email: string;
   phone?: string;

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
 import { conversionOutil } from "@/components/tools/conversionOutil";
+import { sourceVisite } from "@/lib/tools/source-visite";
 import {
   Globe, ArrowRight, ArrowLeft, Mail, Building2,
   Search, Loader2, CheckCircle2, AlertTriangle, TrendingUp,
@@ -109,7 +110,7 @@ function SeoCheckFormInner({ initialUrl = "" }: { initialUrl?: string }) {
       const res = await fetch("/api/seo-check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url, name: company, email, company }),
+        body: JSON.stringify({ url, name: company, email, company , source: sourceVisite() }),
       });
 
       clearInterval(interval);

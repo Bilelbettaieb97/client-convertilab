@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
 import { conversionOutil } from "@/components/tools/conversionOutil";
+import { sourceVisite } from "@/lib/tools/source-visite";
 import {
   ArrowRight, ArrowLeft, User, Mail, Building2,
   MapPin, FileText, Globe, Cookie, Shield,
@@ -111,6 +112,7 @@ export default function MentionsLegalesForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          source: sourceVisite(),
           name,
           email,
           companyType,
