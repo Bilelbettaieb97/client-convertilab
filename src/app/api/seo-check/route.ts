@@ -236,12 +236,15 @@ function getEmailHtml(name: string, domain: string, score: number, grade: string
 
 <div style="background:#0a0a1a;border-radius:16px;padding:40px;text-align:center;color:#fff;">
   <div style="font-size:12px;color:#a29bfe;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">Audit SEO Complet</div>
-  <h1 style="font-size:28px;margin:0 0 8px;">Votre rapport est pret !</h1>
+  <h1 style="font-size:28px;margin:0 0 8px;">Votre rapport est prêt</h1>
   <p style="color:#8888aa;font-size:14px;margin:0;">Audit de <strong style="color:#a29bfe;">${domain}</strong></p>
 </div>
 
 <div style="background:#fff;border-radius:16px;padding:30px;margin-top:16px;text-align:center;">
-  <p style="color:#666;font-size:14px;margin:0 0 20px;">Bonjour${name ? ` <strong>${name}</strong>` : ""},</p>
+  <p style="color:#666;font-size:14px;margin:0 0 20px;">Bonjour,</p>
+  <p style="color:#666;font-size:14px;margin:0 0 20px;">${name
+    ? `Voici votre audit SEO pour <strong>${name}</strong>.`
+    : "Voici votre audit SEO."}</p>
   <p style="color:#666;font-size:14px;margin:0 0 24px;">Voici les resultats de l'analyse SEO de votre site <strong>${domain}</strong>.</p>
 
   <div style="background:#f8f9fa;border-radius:12px;padding:24px;margin:20px 0;">
@@ -252,7 +255,7 @@ function getEmailHtml(name: string, domain: string, score: number, grade: string
   ${criticalCount > 0 ? `
   <div style="background:#fff0f0;border-radius:12px;padding:16px;margin:16px 0;border-left:4px solid #ef4444;">
     <p style="color:#ef4444;font-weight:700;margin:0;font-size:14px;">${criticalCount} probleme(s) critique(s) detecte(s)</p>
-    <p style="color:#888;font-size:12px;margin:6px 0 0;">Consultez le rapport complet pour les details et les solutions.</p>
+    <p style="color:#888;font-size:12px;margin:6px 0 0;">Consultez le rapport complet pour le détail et les solutions.</p>
   </div>` : ""}
 
   ${strengths.length > 0 ? `
@@ -264,10 +267,10 @@ function getEmailHtml(name: string, domain: string, score: number, grade: string
   ${rapportUrl
     ? `<div style="margin:24px 0;">
          <a href="${rapportUrl}" style="display:inline-block;background:#6c5ce7;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;">Ouvrir mon rapport${isPdf ? " (PDF)" : ""}</a>
-         <p style="color:#888;font-size:13px;margin:14px 0 0;">Il est aussi en piece jointe de cet email. Si vous ne la voyez pas, utilisez le bouton ci-dessus.</p>
+         <p style="color:#888;font-size:13px;margin:14px 0 0;">Il est aussi en pièce jointe de cet email. Si vous ne la voyez pas, utilisez le bouton ci-dessus.</p>
          <p style="color:#aaa;font-size:11px;margin:8px 0 0;word-break:break-all;">Ou copiez ce lien : <a href="${rapportUrl}" style="color:#6c5ce7;">${rapportUrl}</a></p>
        </div>`
-    : `<p style="color:#888;font-size:13px;margin:20px 0;">Le rapport complet est en <strong>piece jointe</strong> de cet email${isPdf ? "." : ". Ouvrez le fichier HTML dans votre navigateur puis <strong>Cmd+P</strong> pour l'enregistrer en PDF."}</p>`}
+    : `<p style="color:#888;font-size:13px;margin:20px 0;">Le rapport complet est en <strong>pièce jointe</strong> de cet email${isPdf ? "." : ". Ouvrez le fichier HTML dans votre navigateur puis <strong>Cmd+P</strong> pour l'enregistrer en PDF."}</p>`}
 </div>
 
 <div style="background:#1a1040;border-radius:16px;padding:30px;margin-top:16px;text-align:center;color:#fff;">
