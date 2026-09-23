@@ -38,12 +38,12 @@ const HOSTS = [
 
 const ANALYSIS_STEPS = [
   "Preparation du document...",
-  "Generation des mentions legales...",
+  "Génération des mentions légales…",
   "Section editeur...",
   "Section RGPD...",
   "Section cookies...",
   "Mise en forme PDF...",
-  "Envoi par email...",
+  "Envoi par email…",
 ];
 
 export default function MentionsLegalesForm() {
@@ -53,7 +53,7 @@ export default function MentionsLegalesForm() {
   const [companyType, setCompanyType] = useState("");
   const [companyName, setCompanyName] = useState("");
 
-  // Step 2: Company details
+  // Step 2: Company détails
   const [address, setAddress] = useState("");
   const [siret, setSiret] = useState("");
   const [directorName, setDirectorName] = useState("");
@@ -130,7 +130,7 @@ export default function MentionsLegalesForm() {
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || "Erreur lors de la generation");
+        throw new Error(data.error || "Erreur lors de la génération");
       }
 
       const data = await res.json();
@@ -140,7 +140,7 @@ export default function MentionsLegalesForm() {
     } catch (err: unknown) {
       clearInterval(interval);
       setIsAnalyzing(false);
-      setError(err instanceof Error ? err.message : "Une erreur est survenue. Verifiez vos informations et reessayez.");
+      setError(err instanceof Error ? err.message : "Une erreur est survenue. Vérifiez vos informations et réessayez.");
     }
   };
 
@@ -163,7 +163,7 @@ export default function MentionsLegalesForm() {
         {step === 1 && (
           <motion.div key="step1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
             <h2 className="text-2xl font-bold text-white mb-2">Quel est le type de votre entreprise ?</h2>
-            <p className="text-white/50 mb-6 text-sm">Selectionnez la forme juridique de votre structure.</p>
+            <p className="text-white/50 mb-6 text-sm">Sélectionnez la forme juridique de votre structure.</p>
 
             <div className="grid grid-cols-3 gap-3 mb-6">
               {COMPANY_TYPES.map(ct => (
@@ -212,11 +212,11 @@ export default function MentionsLegalesForm() {
             <div className="space-y-4">
               <div className="relative">
                 <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                <Input placeholder="Adresse du siege social *" value={address} onChange={e => setAddress(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
+                <Input placeholder="Adresse du siège social *" value={address} onChange={e => setAddress(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
               </div>
               <div className="relative">
                 <Hash className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                <Input placeholder="Numero SIRET *" value={siret} onChange={e => setSiret(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
+                <Input placeholder="Numéro SIRET *" value={siret} onChange={e => setSiret(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
               </div>
               <div className="relative">
                 <UserCircle className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
@@ -225,7 +225,7 @@ export default function MentionsLegalesForm() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative">
                   <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                  <Input placeholder="Telephone (optionnel)" value={companyPhone} onChange={e => setCompanyPhone(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
+                  <Input placeholder="Téléphone (optionnel)" value={companyPhone} onChange={e => setCompanyPhone(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
                 </div>
                 <div className="relative">
                   <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
@@ -234,14 +234,14 @@ export default function MentionsLegalesForm() {
               </div>
             </div>
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(1)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(1)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={() => setStep(3)}
                 disabled={!address || !siret || !directorName}
-                className="flex-1 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
+                className="w-full sm:flex-1 min-w-0 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
               >
                 Continuer <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -252,8 +252,8 @@ export default function MentionsLegalesForm() {
         {/* STEP 3: Host Selection */}
         {step === 3 && (
           <motion.div key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Quel est votre hebergeur ?</h2>
-            <p className="text-white/50 mb-6 text-sm">Selectionnez l&apos;hebergeur de votre site web.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">Quel est votre hébergeur ?</h2>
+            <p className="text-white/50 mb-6 text-sm">Sélectionnez l&apos;hébergeur de votre site web.</p>
 
             <div className="grid grid-cols-3 gap-3 mb-4">
               {HOSTS.map(h => (
@@ -275,18 +275,18 @@ export default function MentionsLegalesForm() {
             {host === "autre" && (
               <div className="relative mt-4">
                 <Server className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                <Input placeholder="Nom de l'hebergeur *" value={hostCustom} onChange={e => setHostCustom(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
+                <Input placeholder="Nom de l'hébergeur *" value={hostCustom} onChange={e => setHostCustom(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
               </div>
             )}
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(2)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(2)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={() => setStep(4)}
                 disabled={!host || (host === "autre" && !hostCustom)}
-                className="flex-1 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
+                className="w-full sm:flex-1 min-w-0 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
               >
                 Continuer <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -298,7 +298,7 @@ export default function MentionsLegalesForm() {
         {step === 4 && (
           <motion.div key="step4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
             <h2 className="text-2xl font-bold text-white mb-2">Cookies & Donnees</h2>
-            <p className="text-white/50 mb-6 text-sm">Selectionnez les types de cookies utilises sur votre site.</p>
+            <p className="text-white/50 mb-6 text-sm">Sélectionnez les types de cookies utilisés sur votre site.</p>
 
             <div className="space-y-3">
               {[
@@ -353,13 +353,13 @@ export default function MentionsLegalesForm() {
               </div>
             </div>
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(3)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(3)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={() => setStep(5)}
-                className="flex-1 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl"
+                className="w-full sm:flex-1 min-w-0 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl"
               >
                 Continuer <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -371,7 +371,7 @@ export default function MentionsLegalesForm() {
         {step === 5 && (
           <motion.div key="step5" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
             <h2 className="text-2xl font-bold text-white mb-2">Ou envoyer le document ?</h2>
-            <p className="text-white/50 mb-6 text-sm">Le PDF sera envoye a votre adresse email.</p>
+            <p className="text-white/50 mb-6 text-sm">Le PDF sera envoyé à votre adresse email.</p>
 
             <div className="space-y-4">
               <div className="relative">
@@ -384,14 +384,14 @@ export default function MentionsLegalesForm() {
               </div>
             </div>
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(4)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(4)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={() => setStep(6)}
                 disabled={!name || !isValidEmail(email)}
-                className="flex-1 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
+                className="w-full sm:flex-1 min-w-0 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
               >
                 Continuer <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -402,8 +402,8 @@ export default function MentionsLegalesForm() {
         {/* STEP 6: Confirmation */}
         {step === 6 && !isAnalyzing && (
           <motion.div key="step6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Pret a generer ?</h2>
-            <p className="text-white/50 mb-6 text-sm">Verification de vos informations avant de demarrer la generation.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">Prêt à générer ?</h2>
+            <p className="text-white/50 mb-6 text-sm">Vérification de vos informations avant de démarrer la génération.</p>
 
             <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
               <div className="flex items-center gap-3">
@@ -417,7 +417,7 @@ export default function MentionsLegalesForm() {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-purple-400" />
                 <div>
-                  <p className="text-xs text-white/40">Document envoye a</p>
+                  <p className="text-xs text-white/40">Document envoyé à</p>
                   <p className="text-white font-medium">{email}</p>
                 </div>
               </div>
@@ -457,13 +457,13 @@ export default function MentionsLegalesForm() {
               </div>
             )}
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(5)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(5)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={handleGenerate}
-                className="flex-1 h-13 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-base"
+                className="w-full sm:flex-1 min-w-0 h-13 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-base"
               >
                 <Zap className="w-5 h-5 mr-2" /> Generer mes mentions legales
               </Button>
@@ -497,7 +497,7 @@ export default function MentionsLegalesForm() {
                 <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
               </motion.div>
               <h2 className="text-2xl font-bold text-white mb-2">
-                Mentions legales generees !
+                Mentions légales générées !
               </h2>
               <p className="text-white/50 text-sm">
                 {result.totalSections} sections generees pour <strong className="text-purple-400">{result.companyName}</strong>
@@ -513,7 +513,7 @@ export default function MentionsLegalesForm() {
             >
               {emailSent ? <CheckCircle2 className="w-5 h-5 text-green-400" /> : <Loader2 className="w-5 h-5 text-yellow-400" />}
               <p className={`text-sm ${emailSent ? "text-green-300" : "text-yellow-300"}`}>
-                {emailSent ? `Document PDF envoye a ${email}` : "Le document sera disponible prochainement par email."}
+                {emailSent ? `Document PDF envoyé a ${email}` : "Le document sera disponible prochainement par email."}
               </p>
             </motion.div>
 
@@ -525,7 +525,7 @@ export default function MentionsLegalesForm() {
                   download={`mentions-legales-${result.companyName}.pdf`}
                   className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
                 >
-                  <Download className="w-4 h-4" /> Telecharger le PDF
+                  <Download className="w-4 h-4" /> Télécharger le PDF
                 </a>
               </motion.div>
             )}
@@ -561,19 +561,19 @@ export default function MentionsLegalesForm() {
             <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/30 border border-purple-500/30 rounded-xl p-6 text-center">
               <Shield className="w-8 h-8 text-purple-400 mx-auto mb-3" />
               <h3 className="text-white font-bold text-lg mb-1">
-                Besoin d&apos;aide pour la mise en conformite ?
+                Besoin d&apos;aide pour la mise en conformité ?
               </h3>
               <p className="text-white/50 text-sm mb-4">
-                Notre equipe peut vous accompagner sur le RGPD, les CGV et la conformite legale de votre site.
+                Notre équipe peut vous accompagner sur le RGPD, les CGV et la conformité légale de votre site.
               </p>
               <a
                 href="https://www.convertilab.com/contact"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-colors"
               >
-                Prendre rendez-vous gratuit <ArrowRight className="w-4 h-4" />
+                Prendre rendez-vous, c&apos;est gratuit <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-white/30 text-xs mt-3">
-                Consultation de 30 min offerte, sans engagement
+                Consultation de 30 minutes offerte, sans engagement
               </p>
             </div>
           </motion.div>

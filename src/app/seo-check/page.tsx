@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Audit SEO Gratuit en Ligne : Analyse SEO en 60 secondes | ConvertiLab",
     description:
-      "60+ points de contrôle SEO, analyse IA, rapport PDF complet envoyé par email. 100% gratuit.",
+      "60+ points de contrôle SEO, analyse IA, rapport PDF complet envoyé par email. 100 % gratuit.",
     url: `${SITE.url}/seo-check`,
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
     siteName: SITE.name,
@@ -55,7 +55,7 @@ const faqItems = [
   {
     question: "L'audit SEO est-il vraiment gratuit ?",
     answer:
-      "Oui, l'audit SEO est 100% gratuit et sans engagement. Vous entrez l'URL de votre site, votre email, et vous recevez le rapport complet en PDF. Aucune carte bancaire n'est demandée, aucun abonnement caché. Nous proposons cet outil gratuitement car certains utilisateurs choisissent ensuite de nous confier la correction des problèmes détectés, mais rien ne vous y oblige.",
+      "Oui, l'audit SEO est 100 % gratuit et sans engagement. Vous entrez l'URL de votre site, votre email, et vous recevez le rapport complet en PDF. Aucune carte bancaire n'est demandée, aucun abonnement caché. Nous proposons cet outil gratuitement car certains utilisateurs choisissent ensuite de nous confier la correction des problèmes détectés, mais rien ne vous y oblige.",
   },
   {
     question: "Qu'est-ce qu'un audit SEO exactement ?",
@@ -152,33 +152,33 @@ const auditCategories = [
 const features = [
   {
     icon: "🔍",
-    title: "60+ Points de Controle",
+    title: "60+ Points de Contrôle",
     desc: "SEO technique, on-page, schema, mobile, contenu, performance, securite.",
   },
   {
     icon: "🤖",
     title: "Analyse IA (GEO)",
-    desc: "Visibilite sur ChatGPT, Perplexity, Gemini, Claude et Google AI.",
+    desc: "Visibilité sur ChatGPT, Perplexity, Gemini, Claude et Google AI.",
   },
   {
     icon: "📊",
     title: "Score Detaille",
-    desc: "8 categories notees sur 100 avec grade global de A+ a F.",
+    desc: "8 catégories notées sur 100 avec grade global de A+ a F.",
   },
   {
     icon: "📋",
     title: "Plan d'Action",
-    desc: "Actions priorisees : critiques, importantes et recommandees.",
+    desc: "Actions priorisées : critiques, importantes et recommandees.",
   },
   {
     icon: "📄",
     title: "Rapport PDF",
-    desc: "Rapport complet envoye par email en piece jointe.",
+    desc: "Rapport complet envoyé par email en piece jointe.",
   },
   {
     icon: "⚡",
     title: "60 Secondes",
-    desc: "Resultats instantanes. Pas besoin d'attendre.",
+    desc: "Résultats instantanes. Pas besoin d'attendre.",
   },
 ];
 
@@ -220,18 +220,18 @@ export default function SeoCheckPage() {
       <Navigation />
       <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
-        <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <section className="relative pt-6 pb-10 px-4 overflow-hidden md:pt-32 md:pb-16">
           {/* Background effects */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.15),transparent_60%)]" />
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl" />
 
-          <div className="relative max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
+          <div className="relative max-w-4xl mx-auto text-center mb-6 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-3 md:mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              100% Gratuit, sans engagement
+              100 % gratuit, sans engagement
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+            <h1 className="text-[1.75rem] leading-tight md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-4">
               Audit SEO{" "}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Gratuit
@@ -239,7 +239,7 @@ export default function SeoCheckPage() {
               en Ligne
             </h1>
 
-            <p className="text-lg text-white/50 max-w-xl mx-auto">
+            <p className="hidden md:block text-lg text-white/50 max-w-xl mx-auto">
               Analysez votre site en 60 secondes. Recevez un rapport PDF complet avec{" "}
               <strong className="text-white/70">60+ points de controle</strong>, analyse IA et plan d&apos;action priorise.
             </p>
@@ -247,7 +247,7 @@ export default function SeoCheckPage() {
 
           {/* Form */}
           <div className="relative max-w-2xl mx-auto">
-            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-10">
               <SeoCheckForm />
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function SeoCheckPage() {
               Ce que contient votre audit
             </h2>
             <p className="text-white/40 text-center mb-12 text-sm">
-              Un rapport professionnel complet, accessible aux debutants comme aux experts.
+              Un rapport professionnel complet, accessible aux débutants comme aux experts.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -334,8 +334,8 @@ export default function SeoCheckPage() {
             <div className="grid grid-cols-3 gap-8">
               {[
                 { step: "1", title: "Entrez votre URL", desc: "Indiquez l'adresse de votre site web." },
-                { step: "2", title: "On analyse tout", desc: "Notre IA verifie 60+ points en 60 secondes." },
-                { step: "3", title: "Recevez le PDF", desc: "Rapport complet envoye a votre email." },
+                { step: "2", title: "On analyse tout", desc: "Notre IA vérifié 60+ points en 60 secondes." },
+                { step: "3", title: "Recevez le PDF", desc: "Rapport complet envoyé a votre email." },
               ].map((s) => (
                 <div key={s.step}>
                   <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold mx-auto mb-3">

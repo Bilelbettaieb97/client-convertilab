@@ -51,7 +51,7 @@ export const POST = createToolHandler<DesignScoreInput, DesignAuditResult>({
     return `Votre Audit Design & UX — ${audit.domain} — Score: ${audit.scores.global}/100 (${audit.grade})`;
   },
 
-  buildEmailHtml(lead: LeadInfo, audit: DesignAuditResult, isPdf: boolean) {
+  buildEmailHtml(lead: LeadInfo, audit: DesignAuditResult, isPdf: boolean, pdfUrl?: string) {
     return buildToolEmailHtml({
       toolLabel: "Audit Design & UX",
       lead,
@@ -62,6 +62,7 @@ export const POST = createToolHandler<DesignScoreInput, DesignAuditResult>({
       highlights: audit.strengths.slice(0, 3),
       warnings: audit.issues.slice(0, 3).map(i => i.title),
       isPdf,
+      pdfUrl,
     });
   },
 

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Audit Design & UX Gratuit | ConvertiLab",
-    description: "Evaluez le design et l'UX de votre site web. Rapport PDF complet et gratuit.",
+    description: "Évaluez le design et l'UX de votre site web. Rapport PDF complet et gratuit.",
   },
   alternates: {
     canonical: `${SITE.url}/design-score`,
@@ -35,7 +35,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "Audit Design & UX Gratuit : ConvertiLab",
-  description: "Outil gratuit pour evaluer le design et l'experience utilisateur de votre site web avec rapport PDF detaille.",
+  description: "Outil gratuit pour évaluer le design et l'expérience utilisateur de votre site web avec rapport PDF détaillé.",
   url: `${SITE.url}/design-score`,
   applicationCategory: "UX Tool",
   operatingSystem: "Web",
@@ -83,7 +83,7 @@ const features = [
   {
     icon: "\uD83C\uDFAF",
     title: "CTA & Conversion",
-    desc: "Detection des boutons d'action, formulaires et signaux d'urgence.",
+    desc: "Détection des boutons d'action, formulaires et signaux d'urgence.",
   },
   {
     icon: "\uD83D\uDCCA",
@@ -97,7 +97,7 @@ const features = [
   },
   {
     icon: "\uD83D\uDCF1",
-    title: "Compatibilite Mobile",
+    title: "Compatibilité Mobile",
     desc: "Viewport, framework responsive et adaptabilite mobile.",
   },
   {
@@ -127,32 +127,32 @@ export default function DesignScorePage() {
       <Navigation />
       <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
-        <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <section className="relative pt-6 pb-10 px-4 overflow-hidden md:pt-32 md:pb-16">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.15),transparent_60%)]" />
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl" />
 
-          <div className="relative max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
+          <div className="relative max-w-4xl mx-auto text-center mb-6 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-3 md:mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              100% Gratuit, sans engagement
+              100 % gratuit, sans engagement
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+            <h1 className="text-[1.75rem] leading-tight md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-4">
               Audit Design & UX{" "}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Gratuit
               </span>
             </h1>
 
-            <p className="text-lg text-white/50 max-w-xl mx-auto">
-              Evaluez l&apos;experience utilisateur de votre site en 60 secondes. Recevez un rapport PDF avec{" "}
+            <p className="hidden md:block text-lg text-white/50 max-w-xl mx-auto">
+              Évaluez l&apos;expérience utilisateur de votre site en 60 secondes. Recevez un rapport PDF avec{" "}
               <strong className="text-white/70">6 categories UX analysees</strong> et un plan d&apos;action priorise.
             </p>
           </div>
 
           {/* Form */}
           <div className="relative max-w-2xl mx-auto">
-            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-10">
               <DesignScoreForm />
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function DesignScorePage() {
               Ce que contient votre audit UX
             </h2>
             <p className="text-white/40 text-center mb-12 text-sm">
-              Une evaluation complete du design et de l&apos;experience utilisateur de votre site.
+              Une évaluation complète du design et de l&apos;expérience utilisateur de votre site.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -190,8 +190,8 @@ export default function DesignScorePage() {
             <div className="grid grid-cols-3 gap-8">
               {[
                 { step: "1", title: "Entrez votre URL", desc: "Indiquez l'adresse de votre site web." },
-                { step: "2", title: "On analyse le design", desc: "Notre outil evalue 6 categories UX cles." },
-                { step: "3", title: "Recevez le PDF", desc: "Rapport complet envoye a votre email." },
+                { step: "2", title: "On analyse le design", desc: "Notre outil évalué 6 catégories UX cles." },
+                { step: "3", title: "Recevez le PDF", desc: "Rapport complet envoyé a votre email." },
               ].map((s) => (
                 <div key={s.step}>
                   <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold mx-auto mb-3">

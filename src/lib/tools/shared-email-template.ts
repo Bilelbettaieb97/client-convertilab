@@ -14,6 +14,9 @@ interface EmailParams {
   // Le handler le calcule par !!(hasPdf || attachments.length > 0) : a false, il n'y
   // a AUCUN fichier joint, l'email ne doit donc rien promettre.
   isPdf: boolean;
+  // Adresse publique du rapport. La piece jointe ne suffit pas : selon la
+  // messagerie elle passe inapercue, ce lien la double dans le texte.
+  pdfUrl?: string;
   ctaText?: string;
   ctaUrl?: string;
 }
@@ -21,7 +24,7 @@ interface EmailParams {
 export function buildToolEmailHtml(params: EmailParams): string {
   const {
     toolLabel, lead, domain, score, grade, gradeLabel,
-    highlights = [], warnings = [], isPdf,
+    highlights = [], warnings = [], isPdf, pdfUrl,
     ctaText = "Prendre rendez-vous gratuit",
     ctaUrl = "https://www.convertilab.com/contact",
   } = params;
@@ -41,7 +44,7 @@ export function buildToolEmailHtml(params: EmailParams): string {
 </div>
 
 <div style="background:#fff;border-radius:16px;padding:30px;margin-top:16px;text-align:center;">
-  <p style="color:#666;font-size:14px;margin:0 0 20px;">Bonjour <strong>${lead.name}</strong>,</p>
+  <p style="color:#666;font-size:14px;margin:0 0 20px;">Bonjour${lead.name ? ` <strong>${lead.name}</strong>` : ""},</p>
 
   ${score !== undefined && grade ? `
   <div style="background:#f8f9fa;border-radius:12px;padding:24px;margin:20px 0;">
@@ -63,7 +66,13 @@ export function buildToolEmailHtml(params: EmailParams): string {
   </div>` : ""}
 
   ${isPdf
-    ? `<p style="color:#888;font-size:13px;margin:20px 0;">Le rapport complet est en <strong>piece jointe</strong>.</p>`
+    ? (pdfUrl
+        ? `<div style="margin:24px 0;">
+             <a href="${pdfUrl}" style="display:inline-block;background:#6c5ce7;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;">Ouvrir mon rapport (PDF)</a>
+             <p style="color:#888;font-size:13px;margin:14px 0 0;">Il est aussi en piece jointe de cet email. Si vous ne la voyez pas, utilisez le bouton ci-dessus.</p>
+             <p style="color:#aaa;font-size:11px;margin:8px 0 0;word-break:break-all;">Ou copiez ce lien : <a href="${pdfUrl}" style="color:#6c5ce7;">${pdfUrl}</a></p>
+           </div>`
+        : `<p style="color:#888;font-size:13px;margin:20px 0;">Le rapport complet est en <strong>piece jointe</strong> de cet email.</p>`)
     : `<p style="color:#888;font-size:13px;margin:20px 0;">Le rapport detaille n'a pas pu etre genere cette fois. Vous pouvez relancer l'analyse depuis notre site.</p>`}
 </div>
 

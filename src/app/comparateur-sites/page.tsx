@@ -51,13 +51,13 @@ const jsonLd = {
 const features = [
   {
     icon: "\ud83d\udcca",
-    title: "8 Categories",
+    title: "8 Catégories",
     desc: "Technique, on-page, schema, mobile, contenu, IA, performance, securite.",
   },
   {
     icon: "\ud83c\udfc6",
     title: "Score Detaille",
-    desc: "Chaque categorie est notee sur 100 avec un gagnant identifie.",
+    desc: "Chaque catégorie est notée sur 100 avec un gagnant identifié.",
   },
   {
     icon: "\u2705",
@@ -67,12 +67,12 @@ const features = [
   {
     icon: "\ud83d\udcc4",
     title: "Rapport PDF",
-    desc: "4 pages de comparaison detaillee envoyees par email.",
+    desc: "4 pages de comparaison détaillée envoyées par email.",
   },
   {
     icon: "\ud83d\udcb0",
-    title: "100% Gratuit",
-    desc: "Aucun frais, aucun engagement. Resultats complets.",
+    title: "100 % gratuit",
+    desc: "Aucun frais, aucun engagement. Résultats complets.",
   },
   {
     icon: "\u26a1",
@@ -92,24 +92,24 @@ export default function ComparateurSitesPage() {
       <Navigation />
       <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
-        <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <section className="relative pt-6 pb-10 px-4 overflow-hidden md:pt-32 md:pb-16">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.15),transparent_60%)]" />
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl" />
 
-          <div className="relative max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
+          <div className="relative max-w-4xl mx-auto text-center mb-6 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-3 md:mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              100% Gratuit, résultats en 60 secondes
+              100 % gratuit, résultats en 60 secondes
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+            <h1 className="text-[1.75rem] leading-tight md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-4">
               Comparez{" "}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Votre Site
               </span>
             </h1>
 
-            <p className="text-lg text-white/50 max-w-xl mx-auto">
+            <p className="hidden md:block text-lg text-white/50 max-w-xl mx-auto">
               Votre site web est-il meilleur que celui de votre concurrent ?{" "}
               <strong className="text-white/70">Comparez-les sur 8 categories</strong> et recevez un rapport PDF gratuit.
             </p>
@@ -117,7 +117,7 @@ export default function ComparateurSitesPage() {
 
           {/* Form */}
           <div className="relative max-w-2xl mx-auto">
-            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-10">
               <ComparateurForm />
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function ComparateurSitesPage() {
               Ce que contient le comparatif
             </h2>
             <p className="text-white/40 text-center mb-12 text-sm">
-              Une analyse detaillee de chaque site sur les criteres qui comptent vraiment.
+              Une analyse détaillée de chaque site sur les critères qui comptent vraiment.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -155,8 +155,8 @@ export default function ComparateurSitesPage() {
             <div className="grid grid-cols-3 gap-8">
               {[
                 { step: "1", title: "Entrez les 2 URLs", desc: "Votre site et celui de votre concurrent." },
-                { step: "2", title: "On compare tout", desc: "8 categories analysees en parallele." },
-                { step: "3", title: "Recevez le PDF", desc: "Rapport comparatif envoye a votre email." },
+                { step: "2", title: "On compare tout", desc: "8 catégories analysées en parallele." },
+                { step: "3", title: "Recevez le PDF", desc: "Rapport comparatif envoyé a votre email." },
               ].map((s) => (
                 <div key={s.step}>
                   <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold mx-auto mb-3">

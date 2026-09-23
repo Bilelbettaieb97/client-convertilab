@@ -4,6 +4,7 @@ import { Resend } from "resend";
 import type { ToolConfig, LeadInfo } from "./shared-types";
 import { pushToPipedrive } from "@/lib/pipedrive";
 import { scheduleEmailSeries } from "@/lib/email-series";
+import { deposerRapport } from "./upload-rapport";
 import { baliserLiens, slug } from "@/lib/utm";
 
 const supabase = createClient(
@@ -116,6 +117,16 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         });
       }
 
+      // 4 bis. Déposer le rapport et récupérer son adresse publique.
+      // La pièce jointe reste, mais certaines messageries ne la montrent pas :
+      // le lien du corps de l'email garantit que le lecteur accède au rapport.
+      let pdfUrl: string | undefined;
+      if (attachments.length > 0) {
+        const premier = attachments[0];
+        const type = premier.filename.endsWith(".pdf") ? "application/pdf" : "text/html";
+        pdfUrl = (await deposerRapport(premier.filename, premier.content, type as "application/pdf" | "text/html")) || undefined;
+      }
+
       // 5. Send email to client
       let emailSent = false;
       try {
@@ -124,7 +135,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           to: lead.email,
           subject: config.buildEmailSubject(result),
           html: baliserLiens(
-            config.buildEmailHtml(lead, result, !!(hasPdf || attachments.length > 0)),
+            config.buildEmailHtml(lead, result, !!(hasPdf || attachments.length > 0), pdfUrl),
             { medium: "rapport", campaign: slug(config.toolName), content: "immediat" }
           ),
           attachments: attachments.length > 0 ? attachments : undefined,
@@ -142,7 +153,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         .from(config.tableName)
         .insert({
           ...row,
-          name: lead.name,
+          name: lead.name || lead.company || null,
           email: lead.email,
           phone: lead.phone || null,
           company: lead.company || null,

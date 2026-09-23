@@ -73,7 +73,7 @@ export const POST = createToolHandler<AdsEstimatorInput, AdsProjectionResult>({
     return `Votre Estimation ROI Ads — ${result.sectorLabel} — ROAS: ${result.monthlyRoas}x`;
   },
 
-  buildEmailHtml(lead: LeadInfo, result: AdsProjectionResult, isPdf: boolean) {
+  buildEmailHtml(lead: LeadInfo, result: AdsProjectionResult, isPdf: boolean, pdfUrl?: string) {
     return buildToolEmailHtml({
       toolLabel: "Estimation ROI Ads",
       lead,
@@ -83,6 +83,7 @@ export const POST = createToolHandler<AdsEstimatorInput, AdsProjectionResult>({
         `ROAS projete: ${result.monthlyRoas}x`,
       ],
       isPdf,
+      pdfUrl,
     });
   },
 

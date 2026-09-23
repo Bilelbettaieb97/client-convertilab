@@ -54,12 +54,12 @@ const jsonLd = {
 const features = [
   {
     icon: "\uD83C\uDFAF",
-    title: "Estimation personnalisee",
+    title: "Estimation personnalisée",
     desc: "Projections basees sur les benchmarks de votre secteur d'activite en France.",
   },
   {
     icon: "\uD83D\uDCCA",
-    title: "Donnees sectorielles",
+    title: "Données sectorielles",
     desc: "CPC, CTR et taux de conversion reels pour 65+ secteurs d'activite.",
   },
   {
@@ -70,17 +70,17 @@ const features = [
   {
     icon: "\uD83D\uDCC4",
     title: "Rapport PDF complet",
-    desc: "4 pages detaillees avec tableaux, projections et plan d'action.",
+    desc: "4 pages détaillées avec tableaux, projections et plan d'action.",
   },
   {
     icon: "\uD83D\uDCB0",
     title: "Calcul ROAS",
-    desc: "Retour sur investissement publicitaire estime pour Google et Meta Ads.",
+    desc: "Retour sur investissement publicitaire estimé pour Google et Meta Ads.",
   },
   {
     icon: "\u26A1",
-    title: "100% Gratuit",
-    desc: "Aucun engagement. Resultats instantanes envoyes par email.",
+    title: "100 % gratuit",
+    desc: "Aucun engagement. Résultats instantanes envoyés par email.",
   },
 ];
 
@@ -95,25 +95,25 @@ export default function EstimateurAdsPage() {
       <Navigation />
       <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
-        <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <section className="relative pt-6 pb-10 px-4 overflow-hidden md:pt-32 md:pb-16">
           {/* Background effects */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.15),transparent_60%)]" />
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl" />
 
-          <div className="relative max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
+          <div className="relative max-w-4xl mx-auto text-center mb-6 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-3 md:mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              100% Gratuit, sans engagement
+              100 % gratuit, sans engagement
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+            <h1 className="text-[1.75rem] leading-tight md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-4">
               Estimez votre{" "}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 ROI Ads
               </span>
             </h1>
 
-            <p className="text-lg text-white/50 max-w-xl mx-auto">
+            <p className="hidden md:block text-lg text-white/50 max-w-xl mx-auto">
               Combien de clients et de CA pouvez-vous generer avec la{" "}
               <strong className="text-white/70">publicite en ligne</strong> ? Estimez votre retour sur investissement Google Ads et Meta Ads.
             </p>
@@ -121,7 +121,7 @@ export default function EstimateurAdsPage() {
 
           {/* Form */}
           <div className="relative max-w-2xl mx-auto">
-            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-10">
               <AdsEstimatorForm />
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function EstimateurAdsPage() {
               Ce que contient votre estimation
             </h2>
             <p className="text-white/40 text-center mb-12 text-sm">
-              Un rapport professionnel complet pour estimer la rentabilite de vos campagnes publicitaires.
+              Un rapport professionnel complet pour estimer la rentabilité de vos campagnes publicitaires.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -158,10 +158,10 @@ export default function EstimateurAdsPage() {
             <h2 className="text-2xl font-bold text-white mb-12">Comment ca marche ?</h2>
             <div className="grid grid-cols-4 gap-6">
               {[
-                { step: "1", title: "Votre secteur", desc: "Selectionnez votre activite et plateforme." },
+                { step: "1", title: "Votre secteur", desc: "Sélectionnez votre activite et plateforme." },
                 { step: "2", title: "Votre budget", desc: "Indiquez votre budget et panier moyen." },
                 { step: "3", title: "Vos coordonnees", desc: "Pour recevoir le rapport par email." },
-                { step: "4", title: "Vos projections", desc: "Resultats instantanes + PDF complet." },
+                { step: "4", title: "Vos projections", desc: "Résultats instantanes + PDF complet." },
               ].map((s) => (
                 <div key={s.step}>
                   <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold mx-auto mb-3">

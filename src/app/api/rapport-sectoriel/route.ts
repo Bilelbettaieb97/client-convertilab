@@ -51,12 +51,13 @@ export const POST = createToolHandler<SectorReportInput, SectorReportResult>({
     return `Votre Rapport Digital — Secteur ${report.sector.name}`;
   },
 
-  buildEmailHtml(lead: LeadInfo, report: SectorReportResult, isPdf: boolean) {
+  buildEmailHtml(lead: LeadInfo, report: SectorReportResult, isPdf: boolean, pdfUrl?: string) {
     return buildToolEmailHtml({
       toolLabel: "Rapport Sectoriel",
       lead,
       highlights: report.painPoints.slice(0, 3),
       isPdf,
+      pdfUrl,
       ctaText: "Lancer mon projet digital",
       ctaUrl: "https://www.convertilab.com/contact",
     });

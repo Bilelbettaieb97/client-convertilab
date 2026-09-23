@@ -57,17 +57,17 @@ const features = [
   {
     icon: "\ud83d\udcca",
     title: "Diagnostic Marche",
-    desc: "Problemes frequents, erreurs courantes et chiffres cles de votre industrie.",
+    desc: "Problèmes fréquents, erreurs courantes et chiffres clés de votre industrie.",
   },
   {
     icon: "\u2705",
     title: "Checklist Digitale",
-    desc: "Liste complete des essentiels pour votre presence en ligne.",
+    desc: "Liste complète des essentiels pour votre presence en ligne.",
   },
   {
     icon: "\ud83d\udcd6",
     title: "Etudes de Cas",
-    desc: "Exemples concrets de resultats obtenus dans votre secteur.",
+    desc: "Exemples concrets de résultats obtenus dans votre secteur.",
   },
   {
     icon: "\ud83d\udca1",
@@ -77,7 +77,7 @@ const features = [
   {
     icon: "\ud83d\udcc4",
     title: "Rapport PDF",
-    desc: "6 pages completes envoyees par email en piece jointe.",
+    desc: "6 pages complètes envoyées par email en piece jointe.",
   },
 ];
 
@@ -92,24 +92,24 @@ export default function RapportSectorielPage() {
       <Navigation />
       <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
-        <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <section className="relative pt-6 pb-10 px-4 overflow-hidden md:pt-32 md:pb-16">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.15),transparent_60%)]" />
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl" />
 
-          <div className="relative max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
+          <div className="relative max-w-4xl mx-auto text-center mb-6 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-3 md:mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              100% Gratuit, 50+ secteurs
+              100 % gratuit, 50+ secteurs
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+            <h1 className="text-[1.75rem] leading-tight md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-4">
               Rapport Digital{" "}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Gratuit
               </span>
             </h1>
 
-            <p className="text-lg text-white/50 max-w-xl mx-auto">
+            <p className="hidden md:block text-lg text-white/50 max-w-xl mx-auto">
               Decouvrez les opportunites digitales de votre{" "}
               <strong className="text-white/70">secteur d&apos;activite</strong>. Diagnostic, checklist et plan d&apos;action en PDF.
             </p>
@@ -117,7 +117,7 @@ export default function RapportSectorielPage() {
 
           {/* Form */}
           <div className="relative max-w-2xl mx-auto">
-            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-10">
               <SectorReportForm />
             </div>
           </div>
@@ -154,9 +154,9 @@ export default function RapportSectorielPage() {
             <h2 className="text-2xl font-bold text-white mb-12">Comment ca marche ?</h2>
             <div className="grid grid-cols-3 gap-8">
               {[
-                { step: "1", title: "Choisissez votre secteur", desc: "Selectionnez votre activite parmi 50+ secteurs." },
-                { step: "2", title: "On compile les donnees", desc: "Diagnostic, checklist, etudes de cas et plan d'action." },
-                { step: "3", title: "Recevez le PDF", desc: "Rapport de 6 pages envoye a votre email." },
+                { step: "1", title: "Choisissez votre secteur", desc: "Sélectionnez votre activite parmi 50+ secteurs." },
+                { step: "2", title: "On compile les données", desc: "Diagnostic, checklist, etudes de cas et plan d'action." },
+                { step: "3", title: "Recevez le PDF", desc: "Rapport de 6 pages envoyé a votre email." },
               ].map((s) => (
                 <div key={s.step}>
                   <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold mx-auto mb-3">

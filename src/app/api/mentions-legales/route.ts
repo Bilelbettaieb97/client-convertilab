@@ -76,7 +76,7 @@ export const POST = createToolHandler<MentionsLegalesApiInput, MentionsLegalesRe
     return `Vos Mentions Legales — ${result.companyName}`;
   },
 
-  buildEmailHtml(lead: LeadInfo, result: MentionsLegalesResult, isPdf: boolean) {
+  buildEmailHtml(lead: LeadInfo, result: MentionsLegalesResult, isPdf: boolean, pdfUrl?: string) {
     return buildToolEmailHtml({
       toolLabel: "Generateur Mentions Legales",
       lead,
@@ -86,6 +86,7 @@ export const POST = createToolHandler<MentionsLegalesApiInput, MentionsLegalesRe
         `Personnalise pour ${result.companyName}`,
       ],
       isPdf,
+      pdfUrl,
     });
   },
 

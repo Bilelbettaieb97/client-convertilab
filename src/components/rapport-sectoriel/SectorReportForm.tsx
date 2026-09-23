@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  ArrowRight, ArrowLeft, User, Mail, Phone, Building2,
+  ArrowRight, ArrowLeft, Mail, Building2,
   Loader2, CheckCircle2, TrendingUp, Zap, Search, ChevronDown, Download,
 } from "lucide-react";
 import { sectors } from "@/data/sectors";
@@ -26,8 +26,8 @@ const ANALYSIS_STEPS = [
   "Diagnostic du marche...",
   "Checklist digitale...",
   "Etude de cas...",
-  "Generation du rapport PDF...",
-  "Envoi par email...",
+  "Génération du rapport PDF…",
+  "Envoi par email…",
 ];
 
 const POPULAR_COUNT = 20;
@@ -36,9 +36,7 @@ export default function SectorReportForm() {
   const [step, setStep] = useState(1);
   const [selectedSector, setSelectedSector] = useState<string>("");
   const [showAll, setShowAll] = useState(false);
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisStep, setAnalysisStep] = useState(0);
@@ -71,7 +69,7 @@ export default function SectorReportForm() {
       const res = await fetch("/api/rapport-sectoriel", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sectorSlug: selectedSector, name, email, phone, company }),
+        body: JSON.stringify({ sectorSlug: selectedSector, name: company, email, company }),
       });
 
       clearInterval(interval);
@@ -79,7 +77,7 @@ export default function SectorReportForm() {
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || "Erreur lors de la generation");
+        throw new Error(data.error || "Erreur lors de la génération");
       }
 
       const data = await res.json();
@@ -89,7 +87,7 @@ export default function SectorReportForm() {
     } catch (err: unknown) {
       clearInterval(interval);
       setIsAnalyzing(false);
-      setError(err instanceof Error ? err.message : "Une erreur est survenue. Reessayez.");
+      setError(err instanceof Error ? err.message : "Une erreur est survenue. Réessayez.");
     }
   };
 
@@ -111,10 +109,10 @@ export default function SectorReportForm() {
         {/* STEP 1: Sector Selection */}
         {step === 1 && (
           <motion.div key="step1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Quel est votre secteur d&apos;activite ?</h2>
-            <p className="text-white/50 mb-6 text-sm">Selectionnez votre secteur pour recevoir un rapport digital personnalise.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">Quel est votre secteur d&apos;activité ?</h2>
+            <p className="text-white/50 mb-6 text-sm">Sélectionnez votre secteur pour recevoir un rapport digital personnalisé.</p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-h-[400px] overflow-y-auto pr-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-h-[46vh] md:max-h-[400px] overflow-y-auto pr-2">
               {displayedSectors.map((sector) => (
                 <button
                   key={sector.slug}
@@ -155,37 +153,27 @@ export default function SectorReportForm() {
         {step === 2 && (
           <motion.div key="step2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
             <h2 className="text-2xl font-bold text-white mb-2">Ou envoyer votre rapport ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Le rapport PDF complet sera envoye a votre adresse email.</p>
+            <p className="text-white/50 mb-8 text-sm">Le rapport PDF complet sera envoyé à votre adresse email.</p>
 
             <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                  <Input placeholder="Votre nom *" value={name} onChange={(e) => setName(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
-                </div>
                 <div className="relative">
                   <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                  <Input placeholder="Entreprise" value={company} onChange={(e) => setCompany(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
+                  <Input placeholder="Nom de votre entreprise" value={company} onChange={(e) => setCompany(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
                 </div>
-              </div>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
                 <Input type="email" placeholder="votre@email.com *" value={email} onChange={(e) => setEmail(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
               </div>
-              <div className="relative">
-                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                <Input type="tel" placeholder="Telephone (optionnel)" value={phone} onChange={(e) => setPhone(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
-              </div>
             </div>
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(1)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(1)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={() => setStep(3)}
-                disabled={!name || !isValidEmail(email)}
-                className="flex-1 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
+                disabled={!isValidEmail(email)}
+                className="w-full sm:flex-1 min-w-0 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
               >
                 Continuer <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -196,14 +184,14 @@ export default function SectorReportForm() {
         {/* STEP 3: Confirmation + Generate */}
         {step === 3 && !isAnalyzing && (
           <motion.div key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Pret a generer votre rapport ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Verification de vos informations avant de demarrer.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">Prêt à générer votre rapport ?</h2>
+            <p className="text-white/50 mb-8 text-sm">Vérification de vos informations avant de démarrer.</p>
 
             <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
               <div className="flex items-center gap-3">
                 <div className="text-3xl">{selectedSectorData?.emoji}</div>
                 <div>
-                  <p className="text-xs text-white/40">Secteur selectionne</p>
+                  <p className="text-xs text-white/40">Secteur sélectionné</p>
                   <p className="text-white font-medium">{selectedSectorData?.name}</p>
                 </div>
               </div>
@@ -211,7 +199,7 @@ export default function SectorReportForm() {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-purple-400" />
                 <div>
-                  <p className="text-xs text-white/40">Rapport envoye a</p>
+                  <p className="text-xs text-white/40">Rapport envoyé à</p>
                   <p className="text-white font-medium">{email}</p>
                 </div>
               </div>
@@ -236,13 +224,13 @@ export default function SectorReportForm() {
               </div>
             )}
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(2)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(2)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={handleGenerate}
-                className="flex-1 h-13 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-base"
+                className="w-full sm:flex-1 min-w-0 h-13 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-base"
               >
                 <Zap className="w-5 h-5 mr-2" /> Generer le rapport
               </Button>
@@ -261,7 +249,7 @@ export default function SectorReportForm() {
                   <Search className="absolute inset-0 m-auto w-8 h-8 text-purple-400" />
                 </div>
 
-                <h2 className="text-xl font-bold text-white mb-2">Generation en cours...</h2>
+                <h2 className="text-xl font-bold text-white mb-2">Génération en cours…</h2>
                 <p className="text-white/50 text-sm mb-8">{selectedSectorData?.emoji} {selectedSectorData?.name}</p>
 
                 <div className="max-w-md mx-auto space-y-3">
@@ -303,7 +291,7 @@ export default function SectorReportForm() {
                   <CheckCircle2 className="w-20 h-20 text-green-400 mx-auto mb-6" />
                 </motion.div>
 
-                <h2 className="text-xl font-bold text-white mb-2">Rapport genere !</h2>
+                <h2 className="text-xl font-bold text-white mb-2">Rapport généré !</h2>
                 <p className="text-white/50 text-sm mb-6">
                   Vous allez recevoir un <strong className="text-white">rapport PDF de 6 pages</strong> sur votre boite mail{" "}
                   <strong className="text-purple-400">{email}</strong>.
@@ -313,9 +301,9 @@ export default function SectorReportForm() {
                   <div className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
                     <div>
-                      <p className="text-white text-sm font-medium mb-1">Verifiez votre boite de reception</p>
+                      <p className="text-white text-sm font-medium mb-1">Vérifiez votre boîte de réception</p>
                       <p className="text-white/40 text-xs">
-                        Si vous ne recevez pas le rapport d&apos;ici 10 minutes, verifiez vos spams ou contactez-nous a{" "}
+                        Si vous ne recevez pas le rapport d&apos;ici 10 minutes, vérifiez vos spams ou contactez-nous à{" "}
                         <a href="mailto:contact@convertilab.com" className="text-purple-400 underline">contact@convertilab.com</a>
                       </p>
                     </div>
@@ -323,7 +311,7 @@ export default function SectorReportForm() {
                 </div>
 
                 <Button onClick={() => { setIsAnalyzing(false); setStep(4); }} className="bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl px-8 py-3">
-                  Voir les resultats <ArrowRight className="w-4 h-4 ml-2" />
+                  Voir les résultats <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
 
                 <div className="mt-6 max-w-md mx-auto">
@@ -362,7 +350,7 @@ export default function SectorReportForm() {
             >
               <CheckCircle2 className={`w-5 h-5 ${emailSent ? "text-green-400" : "text-yellow-400"}`} />
               <p className={`text-sm ${emailSent ? "text-green-300" : "text-yellow-300"}`}>
-                {emailSent ? `Rapport PDF de 6 pages envoye a ${email}` : "Le rapport PDF sera disponible prochainement par email."}
+                {emailSent ? `Rapport PDF de 6 pages envoyé a ${email}` : "Le rapport PDF sera disponible prochainement par email."}
               </p>
             </motion.div>
 
@@ -374,7 +362,7 @@ export default function SectorReportForm() {
                   download={`rapport-sectoriel-${result.sectorName}.pdf`}
                   className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
                 >
-                  <Download className="w-4 h-4" /> Telecharger le PDF
+                  <Download className="w-4 h-4" /> Télécharger le PDF
                 </a>
               </motion.div>
             )}
@@ -398,7 +386,7 @@ export default function SectorReportForm() {
             {/* Pain points */}
             <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 mb-4">
               <h3 className="text-red-400 font-bold text-sm mb-2">
-                {result.painPoints.length} problemes identifies dans le secteur
+                {result.painPoints.length} problèmes identifiés dans le secteur
               </h3>
               {result.painPoints.slice(0, 3).map((pp, i) => (
                 <p key={i} className="text-red-300/70 text-xs mb-1">{"\u2022"} {pp}</p>
@@ -409,7 +397,7 @@ export default function SectorReportForm() {
             <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-4 mb-6">
               <h3 className="text-purple-400 font-bold text-sm mb-2">Checklist digitale incluse</h3>
               <p className="text-purple-300/70 text-xs">
-                {result.essentialCount} points essentiels et {result.checklistCount - result.essentialCount} recommandes pour votre presence digitale.
+                {result.essentialCount} points essentiels et {result.checklistCount - result.essentialCount} recommandés pour votre presence digitale.
               </p>
             </div>
 
@@ -420,7 +408,7 @@ export default function SectorReportForm() {
                 Lancez votre projet digital
               </h3>
               <p className="text-white/50 text-sm mb-4">
-                Notre equipe peut creer votre site et mettre en place toute la strategie digitale pour votre secteur.
+                Notre équipe peut créer votre site et mettre en place toute la stratégie digitale pour votre secteur.
               </p>
               <a
                 href="https://www.convertilab.com/contact"

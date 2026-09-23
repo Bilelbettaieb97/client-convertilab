@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Générateur de Mentions Légales Gratuit : Conforme RGPD",
   description:
-    "Créez vos mentions légales conformes LCEN + RGPD en 2 minutes. Document PDF personnalisé, prêt à copier-coller sur votre site. 100% gratuit.",
+    "Créez vos mentions légales conformes LCEN + RGPD en 2 minutes. Document PDF personnalisé, prêt à copier-coller sur votre site. 100 % gratuit.",
   openGraph: {
     title: "Générateur de Mentions Légales Gratuit : Conforme RGPD | ConvertiLab",
     description:
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Generateur de Mentions Legales Gratuit | ConvertiLab",
-    description: "Creez vos mentions legales conformes LCEN + RGPD en 2 minutes. 100% gratuit.",
+    title: "Générateur de Mentions Légales Gratuit | ConvertiLab",
+    description: "Créez vos mentions légales conformes LCEN + RGPD en 2 minutes. 100 % gratuit.",
   },
   alternates: {
     canonical: `${SITE.url}/generateur-mentions-legales`,
@@ -32,7 +32,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "Générateur de Mentions Légales Gratuit : ConvertiLab",
-  description: "Outil gratuit de generation de mentions legales conformes LCEN et RGPD.",
+  description: "Outil gratuit de génération de mentions légales conformes LCEN et RGPD.",
   url: `${SITE.url}/generateur-mentions-legales`,
   applicationCategory: "Legal Tool",
   operatingSystem: "Web",
@@ -57,21 +57,21 @@ const features = [
   {
     icon: "🛡️",
     title: "Conforme RGPD",
-    desc: "Section protection des donnees personnelles incluse.",
+    desc: "Section protection des données personnelles incluse.",
   },
   {
     icon: "🍪",
     title: "Politique Cookies",
-    desc: "Section cookies personnalisee selon vos usages.",
+    desc: "Section cookies personnalisée selon vos usages.",
   },
   {
     icon: "📄",
     title: "PDF Telechargeable",
-    desc: "Document professionnel envoye par email en PDF.",
+    desc: "Document professionnel envoyé par email en PDF.",
   },
   {
     icon: "💰",
-    title: "100% Gratuit",
+    title: "100 % gratuit",
     desc: "Aucun frais, aucune inscription requise.",
   },
   {
@@ -92,34 +92,34 @@ export default function GenerateurMentionsLegalesPage() {
       <Navigation />
       <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
-        <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <section className="relative pt-6 pb-10 px-4 overflow-hidden md:pt-32 md:pb-16">
           {/* Background effects */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.15),transparent_60%)]" />
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl" />
 
-          <div className="relative max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
+          <div className="relative max-w-4xl mx-auto text-center mb-6 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-3 md:mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              100% Gratuit, conforme LCEN + RGPD
+              100 % gratuit, conforme LCEN + RGPD
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
-              Generateur de{" "}
+            <h1 className="text-[1.75rem] leading-tight md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-4">
+              Générateur de{" "}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Mentions Legales
+                Mentions Légales
               </span>
             </h1>
 
-            <p className="text-lg text-white/50 max-w-xl mx-auto">
-              Creez vos mentions legales conformes{" "}
+            <p className="hidden md:block text-lg text-white/50 max-w-xl mx-auto">
+              Créez vos mentions légales conformes{" "}
               <strong className="text-white/70">LCEN + RGPD</strong> en 2 minutes.
-              Document PDF personnalise, pret a copier-coller sur votre site.
+              Document PDF personnalisé, prêt a copier-coller sur votre site.
             </p>
           </div>
 
           {/* Form */}
           <div className="relative max-w-2xl mx-auto">
-            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-10">
               <MentionsLegalesForm />
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function GenerateurMentionsLegalesPage() {
               Ce que contient votre document
             </h2>
             <p className="text-white/40 text-center mb-12 text-sm">
-              Un document legal complet, conforme et personnalise pour votre entreprise.
+              Un document legal complet, conforme et personnalisé pour votre entreprise.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -157,8 +157,8 @@ export default function GenerateurMentionsLegalesPage() {
             <div className="grid grid-cols-3 gap-8">
               {[
                 { step: "1", title: "Remplissez le formulaire", desc: "Indiquez les informations de votre entreprise." },
-                { step: "2", title: "On genere tout", desc: "Mentions legales conformes en quelques secondes." },
-                { step: "3", title: "Recevez le PDF", desc: "Document complet envoye a votre email." },
+                { step: "2", title: "On généré tout", desc: "Mentions légales conformes en quelques secondes." },
+                { step: "3", title: "Recevez le PDF", desc: "Document complet envoyé a votre email." },
               ].map((s) => (
                 <div key={s.step}>
                   <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold mx-auto mb-3">

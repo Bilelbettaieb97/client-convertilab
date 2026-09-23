@@ -7,9 +7,7 @@ import { Input } from "@/components/ui/input";
 import {
   ArrowRight,
   ArrowLeft,
-  User,
   Mail,
-  Phone,
   Building2,
   CheckCircle2,
   Search,
@@ -106,11 +104,11 @@ const PLATFORMS = [
 const ANALYSIS_STEPS = [
   "Analyse du secteur...",
   "Calcul du CPC moyen...",
-  "Estimation des clics...",
+  "Estimation des clics…",
   "Projection des leads...",
   "Calcul du ROI...",
   "Génération du rapport PDF...",
-  "Envoi par email...",
+  "Envoi par email…",
 ];
 
 interface ProjectionData {
@@ -146,9 +144,7 @@ export default function AdsEstimatorForm() {
   const [platform, setPlatform] = useState<"google" | "meta" | "both" | "">("");
   const [budgetMonthly, setBudgetMonthly] = useState("");
   const [avgBasket, setAvgBasket] = useState("");
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisStep, setAnalysisStep] = useState(0);
@@ -162,7 +158,7 @@ export default function AdsEstimatorForm() {
 
   const canProceedStep1 = !!sector && !!platform;
   const canProceedStep2 = Number(budgetMonthly) >= 300 && Number(avgBasket) > 0;
-  const canProceedStep3 = !!name && isValidEmail(email);
+  const canProceedStep3 = isValidEmail(email);
 
   const selectedSector = SECTORS.find((s) => s.slug === sector);
   const selectedPlatform = PLATFORMS.find((p) => p.value === platform);
@@ -194,10 +190,7 @@ export default function AdsEstimatorForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name,
-          email,
-          phone,
-          company,
+          name: company, email, company,
           sector,
           city,
           budgetMonthly: Number(budgetMonthly),
@@ -221,7 +214,7 @@ export default function AdsEstimatorForm() {
     } catch (err: unknown) {
       clearInterval(interval);
       setIsAnalyzing(false);
-      setError(err instanceof Error ? err.message : "Une erreur est survenue. Reessayez.");
+      setError(err instanceof Error ? err.message : "Une erreur est survenue. Réessayez.");
     }
   };
 
@@ -269,7 +262,7 @@ export default function AdsEstimatorForm() {
           >
             <h2 className="text-2xl font-bold text-white mb-2">Votre activite</h2>
             <p className="text-white/50 mb-6 text-sm">
-              Selectionnez votre secteur et la plateforme publicitaire souhaitee.
+              Sélectionnez votre secteur et la plateforme publicitaire souhaitée.
             </p>
 
             {/* Sector search */}
@@ -381,7 +374,7 @@ export default function AdsEstimatorForm() {
                 </div>
                 {budgetMonthly && Number(budgetMonthly) < 300 && (
                   <p className="text-orange-400 text-xs mt-2">
-                    Budget minimum recommande : 300{"\u00a0"}{"\u20ac"}/mois pour des resultats significatifs.
+                    Budget minimum recommandé : 300{"\u00a0"}{"\u20ac"}/mois pour des résultats significatifs.
                   </p>
                 )}
                 <div className="flex gap-2 mt-3">
@@ -427,15 +420,14 @@ export default function AdsEstimatorForm() {
             <div className="flex gap-3 mt-8">
               <Button
                 onClick={() => setStep(1)}
-                variant="outline"
-                className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5"
+                className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={() => setStep(3)}
                 disabled={!canProceedStep2}
-                className="flex-1 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
+                className="w-full sm:flex-1 min-w-0 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
               >
                 Continuer <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -454,29 +446,18 @@ export default function AdsEstimatorForm() {
           >
             <h2 className="text-2xl font-bold text-white mb-2">Ou envoyer votre rapport ?</h2>
             <p className="text-white/50 mb-8 text-sm">
-              Le rapport PDF complet avec vos projections sera envoye a votre adresse email.
+              Le rapport PDF complet avec vos projections sera envoyé à votre adresse email.
             </p>
 
             <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                  <Input
-                    placeholder="Votre nom *"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500"
-                  />
-                </div>
-                <div className="relative">
-                  <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                  <Input
-                    placeholder="Entreprise"
-                    value={company}
-                    onChange={(e) => setCompany(e.target.value)}
-                    className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500"
-                  />
-                </div>
+              <div className="relative">
+                <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
+                <Input
+                  placeholder="Nom de votre entreprise"
+                  value={company}
+                  onChange={(e) => setCompany(e.target.value)}
+                  className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500"
+                />
               </div>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
@@ -488,30 +469,19 @@ export default function AdsEstimatorForm() {
                   className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500"
                 />
               </div>
-              <div className="relative">
-                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                <Input
-                  type="tel"
-                  placeholder="Telephone (optionnel)"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500"
-                />
-              </div>
             </div>
 
-            <div className="flex gap-3 mt-6">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
               <Button
                 onClick={() => setStep(2)}
-                variant="outline"
-                className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5"
+                className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={() => setStep(4)}
                 disabled={!canProceedStep3}
-                className="flex-1 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
+                className="w-full sm:flex-1 min-w-0 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
               >
                 Continuer <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -528,9 +498,9 @@ export default function AdsEstimatorForm() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Pret a calculer votre ROI ?</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Prêt à calculer votre ROI ?</h2>
             <p className="text-white/50 mb-8 text-sm">
-              Verification de vos informations avant de generer les projections.
+              Vérification de vos informations avant de générer les projections.
             </p>
 
             <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
@@ -573,7 +543,7 @@ export default function AdsEstimatorForm() {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-purple-400" />
                 <div>
-                  <p className="text-xs text-white/40">Rapport envoye a</p>
+                  <p className="text-xs text-white/40">Rapport envoyé à</p>
                   <p className="text-white font-medium">{email}</p>
                 </div>
               </div>
@@ -583,7 +553,7 @@ export default function AdsEstimatorForm() {
               {[
                 { icon: TrendingUp, label: "Projection 12 mois" },
                 { icon: FileText, label: "Rapport PDF complet" },
-                { icon: Zap, label: "Resultats instantanes" },
+                { icon: Zap, label: "Résultats instantanés" },
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 rounded-lg p-3 text-center">
                   <item.icon className="w-5 h-5 text-purple-400 mx-auto mb-1" />
@@ -598,17 +568,16 @@ export default function AdsEstimatorForm() {
               </div>
             )}
 
-            <div className="flex gap-3 mt-6">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
               <Button
                 onClick={() => setStep(3)}
-                variant="outline"
-                className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5"
+                className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={handleAnalyze}
-                className="flex-1 h-13 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-base"
+                className="w-full sm:flex-1 min-w-0 h-13 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-base"
               >
                 <Zap className="w-5 h-5 mr-2" /> Calculer mon ROI
               </Button>
@@ -669,7 +638,7 @@ export default function AdsEstimatorForm() {
                 <p className="text-2xl font-bold text-green-400">
                   {result.monthlyRevenue.toLocaleString("fr-FR")}{"\u00a0"}{"\u20ac"}
                 </p>
-                <p className="text-xs text-white/40">CA/mois estime</p>
+                <p className="text-xs text-white/40">CA/mois estimé</p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
                 <BarChart3 className={`w-5 h-5 ${gradeColor(result.grade)} mx-auto mb-2`} />
@@ -703,7 +672,7 @@ export default function AdsEstimatorForm() {
                       <span className="text-purple-300 font-semibold">{proj.leads.toLocaleString("fr-FR")}</span>
                     </div>
                     <div className="flex justify-between text-xs">
-                      <span className="text-white/40">CA estime</span>
+                      <span className="text-white/40">CA estimé</span>
                       <span className="text-green-400 font-semibold">{proj.revenue.toLocaleString("fr-FR")}{"\u00a0"}{"\u20ac"}</span>
                     </div>
                     <div className="flex justify-between text-xs">
@@ -727,9 +696,9 @@ export default function AdsEstimatorForm() {
               <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-4 mb-6 flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-green-400 font-medium">Rapport PDF envoye !</p>
+                  <p className="text-sm text-green-400 font-medium">Rapport PDF envoyé !</p>
                   <p className="text-xs text-white/40 mt-1">
-                    Un rapport complet avec projections detaillees et plan d&apos;action a ete envoye a{" "}
+                    Un rapport complet avec projections détaillées et plan d&apos;action a été envoyé à{" "}
                     <strong className="text-purple-300">{email}</strong>.
                   </p>
                 </div>
@@ -744,7 +713,7 @@ export default function AdsEstimatorForm() {
                   download="rapport-estimateur-ads.pdf"
                   className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
                 >
-                  <Download className="w-4 h-4" /> Telecharger le PDF
+                  <Download className="w-4 h-4" /> Télécharger le PDF
                 </a>
               </div>
             )}
@@ -774,14 +743,14 @@ export default function AdsEstimatorForm() {
                 On gere vos campagnes publicitaires
               </h3>
               <p className="text-white/50 text-sm mb-4">
-                Confiez vos campagnes Google Ads et Meta Ads a notre equipe d&apos;experts.
+                Confiez vos campagnes Google Ads et Meta Ads à notre équipe d&apos;experts.
                 Premiere consultation gratuite.
               </p>
               <a
                 href="https://www.convertilab.com/contact"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
               >
-                Prendre rendez-vous gratuit <ArrowRight className="w-4 h-4" />
+                Prendre rendez-vous, c&apos;est gratuit <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </motion.div>

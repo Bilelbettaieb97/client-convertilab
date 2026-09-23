@@ -152,6 +152,21 @@
   * {
     @apply border-border outline-ring/50;
   }
+  /*
+   * Le site ne défile que verticalement.
+   *
+   * Un halo décoratif ou un tableau plus large que l'écran suffisait à faire
+   * glisser toute la page de côté sur téléphone, ce qui donne l'impression que
+   * la mise en page est cassée. La règle vaut pour html et body à la fois :
+   * posée sur body seul, certains navigateurs mobiles laissent quand même
+   * partir la page. Un bloc qui doit vraiment défiler en largeur (un tableau,
+   * un code) porte son propre conteneur en overflow-x-auto.
+   */
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
   body {
     @apply bg-background text-foreground;
   }

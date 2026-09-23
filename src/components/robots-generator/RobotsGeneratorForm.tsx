@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  Globe, ArrowRight, ArrowLeft, User, Mail,
+  Globe, ArrowRight, ArrowLeft, Mail, Building2,
   Shield, Zap, CheckCircle2, Search, FileText,
   Bot, Loader2, Download,
 } from "lucide-react";
@@ -20,12 +20,12 @@ interface RobotsApiResult {
 }
 
 const ANALYSIS_STEPS = [
-  "Connexion au site...",
+  "Connexion au site…",
   "Decouverte des pages...",
   "Analyse de la structure...",
-  "Generation du robots.txt...",
-  "Generation du sitemap.xml...",
-  "Envoi par email...",
+  "Génération du robots.txt…",
+  "Génération du sitemap.xml…",
+  "Envoi par email…",
 ];
 
 export default function RobotsGeneratorForm() {
@@ -35,8 +35,8 @@ export default function RobotsGeneratorForm() {
   const [url, setUrl] = useState("");
 
   // Step 2: Contact info
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
 
   // State
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -72,7 +72,7 @@ export default function RobotsGeneratorForm() {
       const res = await fetch("/api/robots-generator", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url, name, email }),
+        body: JSON.stringify({ url, name: company, email, company }),
       });
 
       clearInterval(interval);
@@ -80,7 +80,7 @@ export default function RobotsGeneratorForm() {
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || "Erreur lors de la generation");
+        throw new Error(data.error || "Erreur lors de la génération");
       }
 
       const data = await res.json();
@@ -90,7 +90,7 @@ export default function RobotsGeneratorForm() {
     } catch (err: unknown) {
       clearInterval(interval);
       setIsAnalyzing(false);
-      setError(err instanceof Error ? err.message : "Une erreur est survenue. Verifiez l'URL et reessayez.");
+      setError(err instanceof Error ? err.message : "Une erreur est survenue. Vérifiez l'URL et réessayez.");
     }
   };
 
@@ -132,7 +132,7 @@ export default function RobotsGeneratorForm() {
 
             <div className="flex items-center gap-3 mt-4 text-xs text-white/30">
               <Shield className="w-4 h-4" />
-              <span>Analyse 100% gratuite et confidentielle. Aucune modification sur votre site.</span>
+              <span>Analyse 100 % gratuite et confidentielle. Aucune modification sur votre site.</span>
             </div>
 
             <Button
@@ -148,28 +148,28 @@ export default function RobotsGeneratorForm() {
         {/* STEP 2: Contact Info */}
         {step === 2 && (
           <motion.div key="step2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Ou envoyer vos fichiers ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Les fichiers robots.txt et sitemap.xml seront envoyes a votre adresse email.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">Où envoyer vos fichiers ?</h2>
+            <p className="text-white/50 mb-8 text-sm">Les fichiers robots.txt et sitemap.xml seront envoyés à votre adresse email.</p>
 
             <div className="space-y-4">
-              <div className="relative">
-                <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                <Input placeholder="Votre nom *" value={name} onChange={e => setName(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
-              </div>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
                 <Input type="email" placeholder="votre@email.com *" value={email} onChange={e => setEmail(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
               </div>
+              <div className="relative">
+                <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
+                <Input placeholder="Nom de votre entreprise" value={company} onChange={e => setCompany(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
+              </div>
             </div>
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(1)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(1)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={() => setStep(3)}
-                disabled={!name || !isValidEmail(email)}
-                className="flex-1 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
+                disabled={!isValidEmail(email)}
+                className="w-full sm:flex-1 min-w-0 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
               >
                 Continuer <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -180,8 +180,8 @@ export default function RobotsGeneratorForm() {
         {/* STEP 3: Confirmation */}
         {step === 3 && !isAnalyzing && (
           <motion.div key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Pret a generer ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Verification de vos informations avant de demarrer.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">Prêt à générer ?</h2>
+            <p className="text-white/50 mb-8 text-sm">Vérification de vos informations avant de démarrer.</p>
 
             <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
               <div className="flex items-center gap-3">
@@ -220,13 +220,13 @@ export default function RobotsGeneratorForm() {
               </div>
             )}
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(2)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(2)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={handleGenerate}
-                className="flex-1 h-13 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-base"
+                className="w-full sm:flex-1 min-w-0 h-13 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-base"
               >
                 <Zap className="w-5 h-5 mr-2" /> Generer robots.txt & sitemap
               </Button>
@@ -244,7 +244,7 @@ export default function RobotsGeneratorForm() {
               url={url}
               email={email}
               onViewResults={() => { setIsAnalyzing(false); setStep(4); }}
-              completeTitle="Generation terminee !"
+              completeTitle="Génération terminée !"
               completeMessage={`Vous allez recevoir vos fichiers robots.txt et sitemap.xml sur votre boite mail ${email}.`}
             />
           </motion.div>
@@ -263,7 +263,7 @@ export default function RobotsGeneratorForm() {
                 <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
               </motion.div>
               <h2 className="text-2xl font-bold text-white mb-2">
-                Fichiers generes !
+                Fichiers générés !
               </h2>
               <p className="text-white/50 text-sm">
                 <strong className="text-purple-400">{result.urlsDiscovered} URLs</strong> decouvertes sur{" "}
@@ -280,7 +280,7 @@ export default function RobotsGeneratorForm() {
             >
               {emailSent ? <CheckCircle2 className="w-5 h-5 text-green-400" /> : <Loader2 className="w-5 h-5 text-yellow-400" />}
               <p className={`text-sm ${emailSent ? "text-green-300" : "text-yellow-300"}`}>
-                {emailSent ? `Fichiers envoyes a ${email}` : "Les fichiers seront disponibles prochainement par email."}
+                {emailSent ? `Fichiers envoyés a ${email}` : "Les fichiers seront disponibles prochainement par email."}
               </p>
             </motion.div>
 
@@ -292,7 +292,7 @@ export default function RobotsGeneratorForm() {
                   download={`rapport-robots-${result.domain}.pdf`}
                   className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
                 >
-                  <Download className="w-4 h-4" /> Telecharger le PDF
+                  <Download className="w-4 h-4" /> Télécharger le PDF
                 </a>
               </motion.div>
             )}
@@ -351,7 +351,7 @@ export default function RobotsGeneratorForm() {
                   ))}
                   {result.internalLinks.length > 20 && (
                     <div className="text-white/30 text-xs mt-2 text-center">
-                      + {result.internalLinks.length - 20} autres pages dans les fichiers envoyes par email
+                      + {result.internalLinks.length - 20} autres pages dans les fichiers envoyés par email
                     </div>
                   )}
                 </div>
@@ -365,16 +365,16 @@ export default function RobotsGeneratorForm() {
                 Besoin d&apos;optimiser votre SEO ?
               </h3>
               <p className="text-white/50 text-sm mb-4">
-                Notre equipe peut deployer ces fichiers et optimiser l&apos;indexation de votre site.
+                Notre équipe peut déployer ces fichiers et optimiser l&apos;indexation de votre site.
               </p>
               <a
                 href="https://www.convertilab.com/contact"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-colors"
               >
-                Prendre rendez-vous gratuit <ArrowRight className="w-4 h-4" />
+                Prendre rendez-vous, c&apos;est gratuit <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-white/30 text-xs mt-3">
-                Consultation de 30 min offerte, sans engagement
+                Consultation de 30 minutes offerte, sans engagement
               </p>
             </div>
           </motion.div>

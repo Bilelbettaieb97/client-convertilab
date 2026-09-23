@@ -18,7 +18,7 @@ export interface ToolConfig<TInput, TResult> {
   analyze: (input: TInput) => Promise<TResult>;
   generatePdf: (result: TResult) => Promise<Buffer>;
   buildEmailSubject: (result: TResult) => string;
-  buildEmailHtml: (lead: LeadInfo, result: TResult, isPdf: boolean) => string;
+  buildEmailHtml: (lead: LeadInfo, result: TResult, isPdf: boolean, pdfUrl?: string) => string;
   buildSupabaseRow: (lead: LeadInfo, result: TResult) => Record<string, unknown>;
   buildResponsePayload: (result: TResult) => Record<string, unknown>;
   /** Generate extra attachments (e.g. robots.txt + sitemap.xml) */

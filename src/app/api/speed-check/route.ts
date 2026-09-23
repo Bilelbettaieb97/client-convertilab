@@ -51,7 +51,7 @@ export const POST = createToolHandler<SpeedCheckInput, SpeedAuditResult>({
     return `Votre Audit Vitesse — ${audit.domain} — Score: ${audit.scores.global}/100 (${audit.grade})`;
   },
 
-  buildEmailHtml(lead: LeadInfo, audit: SpeedAuditResult, isPdf: boolean) {
+  buildEmailHtml(lead: LeadInfo, audit: SpeedAuditResult, isPdf: boolean, pdfUrl?: string) {
     return buildToolEmailHtml({
       toolLabel: "Audit de Vitesse",
       lead,
@@ -62,6 +62,7 @@ export const POST = createToolHandler<SpeedCheckInput, SpeedAuditResult>({
       highlights: audit.strengths.slice(0, 3),
       warnings: audit.issues.slice(0, 3).map(i => i.title),
       isPdf,
+      pdfUrl,
     });
   },
 

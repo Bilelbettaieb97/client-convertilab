@@ -35,7 +35,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "Audit Vitesse Gratuit : ConvertiLab",
-  description: "Outil gratuit pour tester la vitesse de chargement de votre site web avec rapport PDF detaille.",
+  description: "Outil gratuit pour tester la vitesse de chargement de votre site web avec rapport PDF détaillé.",
   url: `${SITE.url}/speed-check`,
   applicationCategory: "Performance Tool",
   operatingSystem: "Web",
@@ -54,7 +54,7 @@ const jsonLd = {
 
 const faqItems = [
   { question: "Le test de vitesse est-il vraiment gratuit ?",
-    answer: "Oui, 100% gratuit et sans engagement. Vous entrez l'URL de votre site et votre email, et vous recevez le rapport complet en PDF avec votre score de vitesse, le détail des 20+ points de contrôle et les corrections à apporter, classées par priorité." },
+    answer: "Oui, 100 % gratuit et sans engagement. Vous entrez l'URL de votre site et votre email, et vous recevez le rapport complet en PDF avec votre score de vitesse, le détail des 20+ points de contrôle et les corrections à apporter, classées par priorité." },
   { question: "Que sont les Core Web Vitals ?",
     answer: "Ce sont les trois métriques officielles de Google pour mesurer l'expérience de chargement : le LCP (vitesse d'affichage du contenu principal, cible < 2,5s), le CLS (stabilité visuelle de la page) et l'INP (réactivité aux clics). Depuis 2021, elles font partie des critères de classement Google : un site lent perd des positions." },
   { question: "Quel est un bon score de vitesse pour un site web ?",
@@ -93,12 +93,12 @@ const features = [
   {
     icon: "\uD83D\uDDDC\uFE0F",
     title: "Compression",
-    desc: "Verification de la compression Gzip ou Brotli.",
+    desc: "Vérification de la compression Gzip ou Brotli.",
   },
   {
     icon: "\u26A0\uFE0F",
     title: "Scripts Bloquants",
-    desc: "Detection des scripts qui ralentissent le rendu.",
+    desc: "Détection des scripts qui ralentissent le rendu.",
   },
   {
     icon: "\uD83D\uDDBC\uFE0F",
@@ -127,24 +127,24 @@ export default function SpeedCheckPage() {
       <Navigation />
       <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
-        <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <section className="relative pt-6 pb-10 px-4 overflow-hidden md:pt-32 md:pb-16">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.15),transparent_60%)]" />
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl" />
 
-          <div className="relative max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
+          <div className="relative max-w-4xl mx-auto text-center mb-6 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-3 md:mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              100% Gratuit, sans engagement
+              100 % gratuit, sans engagement
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+            <h1 className="text-[1.75rem] leading-tight md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-4">
               Audit Vitesse{" "}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Gratuit
               </span>
             </h1>
 
-            <p className="text-lg text-white/50 max-w-xl mx-auto">
+            <p className="hidden md:block text-lg text-white/50 max-w-xl mx-auto">
               Testez la rapidite de votre site en 60 secondes. Recevez un rapport PDF complet avec{" "}
               <strong className="text-white/70">20+ points de controle</strong> et un plan d&apos;action priorise.
             </p>
@@ -152,7 +152,7 @@ export default function SpeedCheckPage() {
 
           {/* Form */}
           <div className="relative max-w-2xl mx-auto">
-            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-10">
               <SpeedCheckForm />
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function SpeedCheckPage() {
               Ce que contient votre audit vitesse
             </h2>
             <p className="text-white/40 text-center mb-12 text-sm">
-              Une analyse complete de la performance de votre site, accessible a tous.
+              Une analyse complète de la performance de votre site, accessible a tous.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -191,7 +191,7 @@ export default function SpeedCheckPage() {
               {[
                 { step: "1", title: "Entrez votre URL", desc: "Indiquez l'adresse de votre site web." },
                 { step: "2", title: "On mesure tout", desc: "Notre outil analyse 20+ metriques de vitesse." },
-                { step: "3", title: "Recevez le PDF", desc: "Rapport complet envoye a votre email." },
+                { step: "3", title: "Recevez le PDF", desc: "Rapport complet envoyé a votre email." },
               ].map((s) => (
                 <div key={s.step}>
                   <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold mx-auto mb-3">

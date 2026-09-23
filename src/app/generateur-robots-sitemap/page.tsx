@@ -7,11 +7,11 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Générateur robots.txt & sitemap.xml Gratuit",
   description:
-    "Générez un fichier robots.txt optimisé et un sitemap.xml automatique pour votre site web. Règles AI bots incluses. 100% gratuit.",
+    "Générez un fichier robots.txt optimisé et un sitemap.xml automatique pour votre site web. Règles AI bots incluses. 100 % gratuit.",
   openGraph: {
     title: "Générateur robots.txt & sitemap.xml Gratuit | ConvertiLab",
     description:
-      "Générez un fichier robots.txt optimisé et un sitemap.xml automatique. Règles AI bots incluses. 100% gratuit.",
+      "Générez un fichier robots.txt optimisé et un sitemap.xml automatique. Règles AI bots incluses. 100 % gratuit.",
     url: `${SITE.url}/generateur-robots-sitemap`,
     type: "website",
     images: [{ url: `${SITE.url}/og-image.png`, width: 1200, height: 630 }],
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Generateur robots.txt & sitemap.xml Gratuit | ConvertiLab",
-    description: "Generez robots.txt et sitemap.xml optimises pour votre site. 100% gratuit.",
+    title: "Générateur robots.txt & sitemap.xml Gratuit | ConvertiLab",
+    description: "Générez robots.txt et sitemap.xml optimisés pour votre site. 100 % gratuit.",
   },
   alternates: {
     canonical: `${SITE.url}/generateur-robots-sitemap`,
@@ -32,7 +32,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "Générateur robots.txt & sitemap.xml Gratuit : ConvertiLab",
-  description: "Outil gratuit de generation de fichiers robots.txt et sitemap.xml optimises.",
+  description: "Outil gratuit de génération de fichiers robots.txt et sitemap.xml optimises.",
   url: `${SITE.url}/generateur-robots-sitemap`,
   applicationCategory: "SEO Tool",
   operatingSystem: "Web",
@@ -52,12 +52,12 @@ const features = [
   {
     icon: "🤖",
     title: "robots.txt optimise",
-    desc: "Regles optimisees pour les moteurs de recherche et crawlers.",
+    desc: "Regles optimisées pour les moteurs de recherche et crawlers.",
   },
   {
     icon: "🗺️",
     title: "sitemap.xml",
-    desc: "Sitemap XML genere automatiquement avec toutes vos pages.",
+    desc: "Sitemap XML généré automatiquement avec toutes vos pages.",
   },
   {
     icon: "🧠",
@@ -66,18 +66,18 @@ const features = [
   },
   {
     icon: "🔍",
-    title: "Detection auto",
+    title: "Détection auto",
     desc: "Decouverte automatique de toutes les pages de votre site.",
   },
   {
     icon: "💰",
-    title: "100% Gratuit",
+    title: "100 % gratuit",
     desc: "Aucun frais, aucune inscription requise.",
   },
   {
     icon: "📥",
     title: "Telechargeable",
-    desc: "Fichiers prets a deployer envoyes par email.",
+    desc: "Fichiers prets a deployer envoyés par email.",
   },
 ];
 
@@ -92,34 +92,34 @@ export default function GenerateurRobotsSitemapPage() {
       <Navigation />
       <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
-        <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <section className="relative pt-6 pb-10 px-4 overflow-hidden md:pt-32 md:pb-16">
           {/* Background effects */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.15),transparent_60%)]" />
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl" />
 
-          <div className="relative max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
+          <div className="relative max-w-4xl mx-auto text-center mb-6 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-3 md:mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              100% Gratuit, SEO et bots IA
+              100 % gratuit, SEO et bots IA
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
-              Generateur{" "}
+            <h1 className="text-[1.75rem] leading-tight md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-4">
+              Générateur{" "}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 robots.txt & Sitemap
               </span>
             </h1>
 
-            <p className="text-lg text-white/50 max-w-xl mx-auto">
+            <p className="hidden md:block text-lg text-white/50 max-w-xl mx-auto">
               Optimisez l&apos;exploration de votre site par{" "}
               <strong className="text-white/70">Google et les IA</strong>.
-              Fichiers robots.txt et sitemap.xml generes automatiquement.
+              Fichiers robots.txt et sitemap.xml générés automatiquement.
             </p>
           </div>
 
           {/* Form */}
           <div className="relative max-w-2xl mx-auto">
-            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+            <div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-10">
               <RobotsGeneratorForm />
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function GenerateurRobotsSitemapPage() {
               Ce que vous recevez
             </h2>
             <p className="text-white/40 text-center mb-12 text-sm">
-              Deux fichiers essentiels pour le referencement de votre site web.
+              Deux fichiers essentiels pour le référencement de votre site web.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -158,7 +158,7 @@ export default function GenerateurRobotsSitemapPage() {
               {[
                 { step: "1", title: "Entrez votre URL", desc: "Indiquez l'adresse de votre site web." },
                 { step: "2", title: "On decouvre vos pages", desc: "Analyse automatique de la structure de votre site." },
-                { step: "3", title: "Recevez les fichiers", desc: "robots.txt + sitemap.xml envoyes par email." },
+                { step: "3", title: "Recevez les fichiers", desc: "robots.txt + sitemap.xml envoyés par email." },
               ].map((s) => (
                 <div key={s.step}>
                   <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold mx-auto mb-3">

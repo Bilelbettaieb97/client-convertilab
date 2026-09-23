@@ -54,7 +54,7 @@ export const POST = createToolHandler<RobotsApiInput, RobotsResult>({
     return `Vos fichiers robots.txt & sitemap.xml — ${result.domain}`;
   },
 
-  buildEmailHtml(lead: LeadInfo, result: RobotsResult, isPdf: boolean) {
+  buildEmailHtml(lead: LeadInfo, result: RobotsResult, isPdf: boolean, pdfUrl?: string) {
     return buildToolEmailHtml({
       toolLabel: "Generateur robots.txt & sitemap",
       lead,
@@ -65,6 +65,7 @@ export const POST = createToolHandler<RobotsApiInput, RobotsResult>({
         "sitemap.xml pret a deployer",
       ],
       isPdf,
+      pdfUrl,
     });
   },
 

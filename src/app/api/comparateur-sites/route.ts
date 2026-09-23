@@ -53,7 +53,7 @@ export const POST = createToolHandler<ComparisonInput, ComparisonResult>({
     return `Comparatif SEO — ${result.siteA.domain} vs ${result.siteB.domain}`;
   },
 
-  buildEmailHtml(lead: LeadInfo, result: ComparisonResult, isPdf: boolean) {
+  buildEmailHtml(lead: LeadInfo, result: ComparisonResult, isPdf: boolean, pdfUrl?: string) {
     const winnerDomain = result.winner === "A" ? result.siteA.domain : result.winner === "B" ? result.siteB.domain : "Egalite";
     return buildToolEmailHtml({
       toolLabel: "Comparatif SEO",
@@ -64,6 +64,7 @@ export const POST = createToolHandler<ComparisonInput, ComparisonResult>({
         `Gagnant: ${winnerDomain}`,
       ],
       isPdf,
+      pdfUrl,
       ctaText: "Depasser votre concurrent",
       ctaUrl: "https://www.convertilab.com/contact",
     });

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  Globe, ArrowRight, ArrowLeft, User, Mail, Phone, Building2,
+  Globe, ArrowRight, ArrowLeft, Mail, Building2,
   Loader2, CheckCircle2, TrendingUp, Zap, Search, Trophy,
   Shield, Download,
 } from "lucide-react";
@@ -35,22 +35,20 @@ interface ComparisonResultData {
 }
 
 const ANALYSIS_STEPS = [
-  "Connexion au site A...",
+  "Connexion au site A…",
   "Analyse du site A...",
-  "Connexion au site B...",
+  "Connexion au site B…",
   "Analyse du site B...",
   "Comparaison des scores...",
-  "Generation du rapport...",
-  "Envoi par email...",
+  "Génération du rapport…",
+  "Envoi par email…",
 ];
 
 export default function ComparateurForm() {
   const [step, setStep] = useState(1);
   const [urlA, setUrlA] = useState("");
   const [urlB, setUrlB] = useState("");
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisStep, setAnalysisStep] = useState(0);
@@ -99,7 +97,7 @@ export default function ComparateurForm() {
       const res = await fetch("/api/comparateur-sites", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ urlA, urlB, name, email, phone, company }),
+        body: JSON.stringify({ urlA, urlB, name: company, email, company }),
       });
 
       clearInterval(interval);
@@ -117,7 +115,7 @@ export default function ComparateurForm() {
     } catch (err: unknown) {
       clearInterval(interval);
       setIsAnalyzing(false);
-      setError(err instanceof Error ? err.message : "Une erreur est survenue. Verifiez les URLs et reessayez.");
+      setError(err instanceof Error ? err.message : "Une erreur est survenue. Vérifiez les adresses et réessayez.");
     }
   };
 
@@ -184,7 +182,7 @@ export default function ComparateurForm() {
 
             <div className="flex items-center gap-3 mt-4 text-xs text-white/30">
               <Shield className="w-4 h-4" />
-              <span>Analyse 100% gratuite et confidentielle. Aucune modification sur les sites.</span>
+              <span>Analyse 100 % gratuite et confidentielle. Aucune modification sur les sites.</span>
             </div>
 
             <Button
@@ -201,37 +199,27 @@ export default function ComparateurForm() {
         {step === 2 && (
           <motion.div key="step2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
             <h2 className="text-2xl font-bold text-white mb-2">Ou envoyer le comparatif ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Le rapport PDF complet sera envoye a votre adresse email.</p>
+            <p className="text-white/50 mb-8 text-sm">Le rapport PDF complet sera envoyé à votre adresse email.</p>
 
             <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                  <Input placeholder="Votre nom *" value={name} onChange={(e) => setName(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
-                </div>
                 <div className="relative">
                   <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                  <Input placeholder="Entreprise" value={company} onChange={(e) => setCompany(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
+                  <Input placeholder="Nom de votre entreprise" value={company} onChange={(e) => setCompany(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
                 </div>
-              </div>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
                 <Input type="email" placeholder="votre@email.com *" value={email} onChange={(e) => setEmail(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
               </div>
-              <div className="relative">
-                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                <Input type="tel" placeholder="Telephone (optionnel)" value={phone} onChange={(e) => setPhone(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
-              </div>
             </div>
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(1)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(1)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={() => setStep(3)}
-                disabled={!name || !isValidEmail(email)}
-                className="flex-1 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
+                disabled={!isValidEmail(email)}
+                className="w-full sm:flex-1 min-w-0 h-12 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl disabled:opacity-30"
               >
                 Continuer <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -242,8 +230,8 @@ export default function ComparateurForm() {
         {/* STEP 3: Confirmation + Launch */}
         {step === 3 && !isAnalyzing && (
           <motion.div key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Pret a comparer ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Verification des informations avant de lancer la comparaison.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">Prêt à comparer ?</h2>
+            <p className="text-white/50 mb-8 text-sm">Vérification des informations avant de lancer la comparaison.</p>
 
             <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
               <div className="flex items-center gap-3">
@@ -267,7 +255,7 @@ export default function ComparateurForm() {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-purple-400" />
                 <div>
-                  <p className="text-xs text-white/40">Rapport envoye a</p>
+                  <p className="text-xs text-white/40">Rapport envoyé à</p>
                   <p className="text-white font-medium">{email}</p>
                 </div>
               </div>
@@ -275,8 +263,8 @@ export default function ComparateurForm() {
 
             <div className="grid grid-cols-3 gap-3 mt-6">
               {[
-                { icon: Search, label: "8 categories analysees" },
-                { icon: Trophy, label: "Gagnant par categorie" },
+                { icon: Search, label: "8 catégories analysées" },
+                { icon: Trophy, label: "Gagnant par catégorie" },
                 { icon: TrendingUp, label: "Rapport PDF complet" },
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 rounded-lg p-3 text-center">
@@ -292,13 +280,13 @@ export default function ComparateurForm() {
               </div>
             )}
 
-            <div className="flex gap-3 mt-6">
-              <Button onClick={() => setStep(2)} variant="outline" className="h-12 px-6 border-white/10 text-white/60 rounded-xl hover:bg-white/5">
+            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
+              <Button onClick={() => setStep(2)} className="h-12 w-full px-6 sm:w-auto border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl hover:bg-white/5">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour
               </Button>
               <Button
                 onClick={handleCompare}
-                className="flex-1 h-13 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-base"
+                className="w-full sm:flex-1 min-w-0 h-13 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-base"
               >
                 <Zap className="w-5 h-5 mr-2" /> Lancer la comparaison
               </Button>
@@ -359,7 +347,7 @@ export default function ComparateurForm() {
                   <CheckCircle2 className="w-20 h-20 text-green-400 mx-auto mb-6" />
                 </motion.div>
 
-                <h2 className="text-xl font-bold text-white mb-2">Comparaison terminee !</h2>
+                <h2 className="text-xl font-bold text-white mb-2">Comparaison terminée !</h2>
                 <p className="text-white/50 text-sm mb-6">
                   Vous allez recevoir un <strong className="text-white">rapport PDF comparatif</strong> sur votre boite mail{" "}
                   <strong className="text-purple-400">{email}</strong>.
@@ -369,9 +357,9 @@ export default function ComparateurForm() {
                   <div className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
                     <div>
-                      <p className="text-white text-sm font-medium mb-1">Verifiez votre boite de reception</p>
+                      <p className="text-white text-sm font-medium mb-1">Vérifiez votre boîte de réception</p>
                       <p className="text-white/40 text-xs">
-                        Si vous ne recevez pas le rapport d&apos;ici 10 minutes, verifiez vos spams ou contactez-nous a{" "}
+                        Si vous ne recevez pas le rapport d&apos;ici 10 minutes, vérifiez vos spams ou contactez-nous à{" "}
                         <a href="mailto:contact@convertilab.com" className="text-purple-400 underline">contact@convertilab.com</a>
                       </p>
                     </div>
@@ -379,7 +367,7 @@ export default function ComparateurForm() {
                 </div>
 
                 <Button onClick={() => { setIsAnalyzing(false); setStep(4); }} className="bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl px-8 py-3">
-                  Voir les resultats <ArrowRight className="w-4 h-4 ml-2" />
+                  Voir les résultats <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
 
                 <div className="mt-6 max-w-md mx-auto">
@@ -454,7 +442,7 @@ export default function ComparateurForm() {
             >
               <CheckCircle2 className={`w-5 h-5 ${emailSent ? "text-green-400" : "text-yellow-400"}`} />
               <p className={`text-sm ${emailSent ? "text-green-300" : "text-yellow-300"}`}>
-                {emailSent ? `Rapport comparatif PDF envoye a ${email}` : "Le rapport PDF sera disponible prochainement par email."}
+                {emailSent ? `Rapport comparatif PDF envoyé a ${email}` : "Le rapport PDF sera disponible prochainement par email."}
               </p>
             </motion.div>
 
@@ -466,7 +454,7 @@ export default function ComparateurForm() {
                   download={`rapport-comparaison-${result.siteA.domain}-vs-${result.siteB.domain}.pdf`}
                   className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
                 >
-                  <Download className="w-4 h-4" /> Telecharger le PDF
+                  <Download className="w-4 h-4" /> Télécharger le PDF
                 </a>
               </motion.div>
             )}
@@ -509,16 +497,16 @@ export default function ComparateurForm() {
                   : "Consolidez votre avantage"}
               </h3>
               <p className="text-white/50 text-sm mb-4">
-                Notre equipe peut optimiser votre site pour depasser la concurrence sur chaque categorie.
+                Notre équipe peut optimiser votre site pour dépasser la concurrence sur chaque catégorie.
               </p>
               <a
                 href="https://www.convertilab.com/contact"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-colors"
               >
-                Prendre rendez-vous gratuit <ArrowRight className="w-4 h-4" />
+                Prendre rendez-vous, c&apos;est gratuit <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-white/30 text-xs mt-3">
-                Consultation de 30 min offerte, sans engagement
+                Consultation de 30 minutes offerte, sans engagement
               </p>
             </div>
           </motion.div>
