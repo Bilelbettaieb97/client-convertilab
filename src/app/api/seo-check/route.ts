@@ -132,9 +132,8 @@ export async function POST(request: NextRequest) {
         { medium: "rapport", campaign: "seo-check", content: "immediat" }
       );
       const { error: sendErr } = await resend.emails.send({
-        from: "ConvertiLab <bilel@convertilab.com>",
+        from: "ConvertiLab <contact@convertilab.com>",
         to: email,
-        replyTo: "contact@convertilab.com",
         subject: `Votre audit SEO de ${audit.domain} : ${audit.scores.global}/100`,
         html: corpsHtml,
         text: htmlVersTexte(corpsHtml),
@@ -158,7 +157,7 @@ export async function POST(request: NextRequest) {
 
     // 7. Agency notification (non-blocking) + Pipedrive (awaited)
     resend.emails.send({
-      from: "ConvertiLab <bilel@convertilab.com>",
+      from: "ConvertiLab <contact@convertilab.com>",
       to: ["contact@convertilab.com", "convertilab@gmail.com"],
       subject: `Nouveau lead SEO Check — ${name} — ${audit.domain} (${audit.scores.global}/100)`,
       html: `

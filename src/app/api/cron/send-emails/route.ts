@@ -55,7 +55,7 @@ export async function GET(request: NextRequest) {
   for (const row of rows as QueueRow[]) {
     try {
       const { error: sendErr } = await resend.emails.send({
-        from: "Bilel · ConvertiLab <bilel@convertilab.com>",
+        from: "Bilel · ConvertiLab <contact@convertilab.com>",
         to: row.lead_email,
         subject: row.subject,
         html: row.html_body,

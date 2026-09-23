@@ -136,11 +136,8 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           { medium: "rapport", campaign: slug(config.toolName), content: "immediat" }
         );
         const { error: sendErr } = await resend.emails.send({
-          from: "ConvertiLab <bilel@convertilab.com>",
+          from: "ConvertiLab <contact@convertilab.com>",
           to: lead.email,
-          // Les réponses doivent arriver dans une boîte lue : une réponse est
-          // le signal d'engagement le plus fort pour le classement Gmail.
-          replyTo: "contact@convertilab.com",
           subject: config.buildEmailSubject(result),
           html: corpsHtml,
           // Version texte : un message sans elle est un signal de publipostage.
@@ -182,7 +179,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
 
       // 8. Agency notification (fire-and-forget mais erreurs loggées)
       resend.emails.send({
-        from: "ConvertiLab <bilel@convertilab.com>",
+        from: "ConvertiLab <contact@convertilab.com>",
         to: ["contact@convertilab.com", "convertilab@gmail.com"],
         subject: `Nouveau lead ${config.toolName} — ${lead.name}`,
         html: `

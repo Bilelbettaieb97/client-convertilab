@@ -98,7 +98,7 @@ async function sendICSEmails(
 
   // Email au lead
   void resend.emails.send({
-    from: "Bilel · ConvertiLab <bilel@convertilab.com>",
+    from: "Bilel · ConvertiLab <contact@convertilab.com>",
     to: lead.email,
     subject: `✅ Votre RDV est confirmé — ${displayTime}`,
     // Balisage UTM : seul envoi vers un prospect qui ne passait pas par le
@@ -126,7 +126,7 @@ async function sendICSEmails(
 
   // Notification interne à Bilel
   void resend.emails.send({
-    from: "ConvertiLab Notif <bilel@convertilab.com>",
+    from: "ConvertiLab Notif <contact@convertilab.com>",
     to: "bilel@convertilab.com",
     subject: `📅 Nouveau RDV — ${lead.prenom || lead.email} — ${displayTime}`,
     html: `

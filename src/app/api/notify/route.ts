@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
     // vérifier le retour, sinon l'échec est silencieux et le lead est perdu.
     const [emailResult] = await Promise.all([
       resend.emails.send({
-        from: "ConvertiLab <bilel@convertilab.com>",
+        from: "ConvertiLab <contact@convertilab.com>",
         to: ["contact@convertilab.com", "convertilab@gmail.com"],
         replyTo: email,
         subject,
@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
       // On renvoie sans replyTo — la notification interne ne doit jamais sauter.
       console.error("[notify] resend error, retry sans replyTo:", emailResult.error);
       const retry = await resend.emails.send({
-        from: "ConvertiLab <bilel@convertilab.com>",
+        from: "ConvertiLab <contact@convertilab.com>",
         to: ["contact@convertilab.com", "convertilab@gmail.com"],
         subject: `${subject} (email lead invalide : ${email ?? "absent"})`,
         html,
@@ -129,7 +129,7 @@ export async function POST(request: NextRequest) {
       const accuse = construireAccuseReception(formType, ctx);
       if (accuse) {
         const { error: accuseErr } = await resend.emails.send({
-          from: "Bilel · ConvertiLab <bilel@convertilab.com>",
+          from: "Bilel · ConvertiLab <contact@convertilab.com>",
           to: email,
           subject: accuse.subject,
           html: accuse.html,
