@@ -82,13 +82,17 @@ export async function POST(request: NextRequest) {
 
     const subject = `[ConvertiLab] Nouveau lead ${formType}${name ? ` — ${name}` : ""}`;
 
+    // Un seul destinataire par envoi : le 23/09/2026, contact@convertilab.com
+    // traînait sur la liste de suppression de Resend depuis le 4 juin, et comme
+    // les deux adresses voyageaient ensemble, Resend supprimait le message
+    // entier. Plus aucune notification pendant trois mois et demi, en silence.
     // Email + Pipedrive en parallèle.
     // ATTENTION : le SDK Resend ne throw pas, il retourne { error } — il faut
     // vérifier le retour, sinon l'échec est silencieux et le lead est perdu.
     const [emailResult] = await Promise.all([
       resend.emails.send({
         from: "ConvertiLab <contact@convertilab.com>",
-        to: ["contact@convertilab.com", "convertilab@gmail.com"],
+        to: "convertilab@gmail.com",
         replyTo: email,
         subject,
         html,
@@ -102,7 +106,7 @@ export async function POST(request: NextRequest) {
       console.error("[notify] resend error, retry sans replyTo:", emailResult.error);
       const retry = await resend.emails.send({
         from: "ConvertiLab <contact@convertilab.com>",
-        to: ["contact@convertilab.com", "convertilab@gmail.com"],
+        to: "convertilab@gmail.com",
         subject: `${subject} (email lead invalide : ${email ?? "absent"})`,
         html,
       });

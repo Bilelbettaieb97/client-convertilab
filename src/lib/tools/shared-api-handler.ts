@@ -6,6 +6,7 @@ import { pushToPipedrive } from "@/lib/pipedrive";
 import { scheduleEmailSeries } from "@/lib/email-series";
 import { deposerRapport } from "./upload-rapport";
 import { htmlVersTexte, entetesDesinscription } from "./email-delivrabilite";
+import { notifierAgence } from "./notifier-agence";
 import { baliserLiens, slug } from "@/lib/utm";
 
 const supabase = createClient(
@@ -178,11 +179,9 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
       }
 
       // 8. Agency notification (fire-and-forget mais erreurs loggées)
-      resend.emails.send({
-        from: "ConvertiLab <contact@convertilab.com>",
-        to: ["contact@convertilab.com", "convertilab@gmail.com"],
-        subject: `Nouveau lead ${config.toolName} — ${lead.name}`,
-        html: `
+      notifierAgence(
+        `Nouveau lead ${config.toolName} — ${lead.name}`,
+        `
           <h2>Nouveau lead via ${config.toolName}</h2>
           <p><strong>Nom :</strong> ${lead.name}</p>
           <p><strong>Email :</strong> ${lead.email}</p>
@@ -190,9 +189,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           <p><strong>Entreprise :</strong> ${lead.company || "Non renseigne"}</p>
           <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
         `,
-      }).then(
-        () => {},
-        (err) => log(config.toolName, "email_agency", err)
+        config.toolName
       );
 
       // 9. Pipedrive — awaité pour garantir la complétion, erreurs loggées

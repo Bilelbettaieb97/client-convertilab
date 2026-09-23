@@ -11,6 +11,7 @@ import { scheduleEmailSeries, firstName } from "@/lib/email-series";
 import { baliserLiens } from "@/lib/utm";
 import { deposerRapport } from "@/lib/tools/upload-rapport";
 import { htmlVersTexte, entetesDesinscription } from "@/lib/tools/email-delivrabilite";
+import { notifierAgence } from "@/lib/tools/notifier-agence";
 import type { SeoAuditResult } from "@/lib/seo/analyzer";
 
 export const maxDuration = 60;
@@ -156,11 +157,9 @@ export async function POST(request: NextRequest) {
     }
 
     // 7. Agency notification (non-blocking) + Pipedrive (awaited)
-    resend.emails.send({
-      from: "ConvertiLab <contact@convertilab.com>",
-      to: ["contact@convertilab.com", "convertilab@gmail.com"],
-      subject: `Nouveau lead SEO Check — ${name} — ${audit.domain} (${audit.scores.global}/100)`,
-      html: `
+    notifierAgence(
+      `Nouveau lead SEO Check — ${name} — ${audit.domain} (${audit.scores.global}/100)`,
+      `
         <h2>Nouveau lead via SEO Check</h2>
         <p><strong>Nom :</strong> ${name}</p>
         <p><strong>Email :</strong> ${email}</p>
@@ -172,9 +171,7 @@ export async function POST(request: NextRequest) {
         <p><strong>Problemes critiques :</strong> ${audit.issues.filter(i => i.priority === "critical").length}</p>
         <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
       `,
-    }).then(
-      () => {},
-      (err) => console.error("[SEO Check][email_agency] ERREUR:", err instanceof Error ? err.message : err)
+      "SEO Check"
     );
 
     // origine : pose par le ChatWidget, liste blanche car la route est publique.
