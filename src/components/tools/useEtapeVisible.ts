@@ -18,6 +18,26 @@ export function useEtapeVisible<T extends HTMLElement = HTMLDivElement>(etape: n
   const ancre = useRef<T>(null);
   const premier = useRef(true);
 
+  /*
+   * Arriver en haut de la page, quoi qu'il arrive.
+   *
+   * Signalé le 23/09/2026 : en cliquant sur la publicité depuis le téléphone,
+   * la page s'ouvrait au niveau du pied de page, et il fallait remonter pour
+   * voir le formulaire. Non reproduit en navigateur propre, ni au premier
+   * chargement ni au retour sur la page : la cause la plus probable est le
+   * navigateur intégré de Facebook, qui restitue la position d'une visite
+   * précédente. Une personne qui paie pour ce clic ne doit pas avoir à
+   * remonter, donc on force la position au montage.
+   *
+   * L'ancre d'URL est respectée : un lien vers « /seo-check#faq » doit
+   * continuer d'ouvrir la FAQ.
+   */
+  useEffect(() => {
+    if (window.location.hash) return;
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    if (window.scrollY > 0) window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     if (premier.current) {
       premier.current = false;
