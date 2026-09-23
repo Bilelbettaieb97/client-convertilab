@@ -146,9 +146,11 @@ const nextConfig: NextConfig = {
               // (ccm/collect sur pagead2.googlesyndication.com), GTM, Meta (tracking), Vercel (vitals)
               // Mesuré en production le 18/09/2026 avec cookies acceptés : GA4 collecte sur
               // region1.analytics.google.com, Google Ads sur www.google.com/ccm et /rmkt,
-              // ad.doubleclick.net et googleads.g.doubleclick.net. Les deux passerelles Meta
-              // (*.on.aws, *.run.app, « events?cee=no ») restent volontairement bloquées :
-              // trop larges, et le pixel fonctionne sans elles.
+              // ad.doubleclick.net et googleads.g.doubleclick.net.
+              //
+              // Correction du 23/09/2026 : la note « le pixel fonctionne sans les
+              // passerelles Meta » était fausse. Mesuré sur la production, il ne
+              // fonctionnait pas du tout.
               // googleadservices.com : la conversion Google Ads part par là depuis
               // la nouvelle balise gtag. Sans lui, « conversion » et « generate_lead »
               // étaient refusés en silence depuis le 18/09 : plus aucune conversion
