@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
 import {
   ArrowRight,
   ArrowLeft,
@@ -139,6 +140,7 @@ interface ProjectionData {
 
 export default function AdsEstimatorForm() {
   const [step, setStep] = useState(1);
+  const ancreEtape = useEtapeVisible<HTMLDivElement>(step);
   const [sector, setSector] = useState("");
   const [city, setCity] = useState("");
   const [platform, setPlatform] = useState<"google" | "meta" | "both" | "">("");
@@ -233,10 +235,10 @@ export default function AdsEstimatorForm() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div ref={ancreEtape} className="w-full max-w-2xl mx-auto scroll-mt-20">
       {/* Progress bar */}
       {step <= 4 && !isAnalyzing && (
-        <div className="flex items-center gap-2 mb-8">
+        <div className="flex items-center gap-2 mb-5 sm:mb-8">
           {[1, 2, 3, 4].map((s) => (
             <div key={s} className="flex items-center gap-2 flex-1">
               <div
@@ -260,8 +262,8 @@ export default function AdsEstimatorForm() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Votre activite</h2>
-            <p className="text-white/50 mb-6 text-sm">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Votre activite</h2>
+            <p className="text-white/50 mb-4 sm:mb-6 text-sm">
               Sélectionnez votre secteur et la plateforme publicitaire souhaitée.
             </p>
 
@@ -277,7 +279,7 @@ export default function AdsEstimatorForm() {
             </div>
 
             {/* Sector grid */}
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 max-h-[280px] overflow-y-auto pr-1 mb-6 custom-scrollbar">
+            <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 max-h-[24vh] sm:max-h-[280px] overflow-y-auto pr-1 mb-3 sm:mb-6 custom-scrollbar">
               {filteredSectors.map((s) => (
                 <button
                   key={s.slug}
@@ -308,8 +310,8 @@ export default function AdsEstimatorForm() {
             </div>
 
             {/* Platform selection */}
-            <p className="text-sm text-white/60 font-medium mb-3">Plateforme publicitaire *</p>
-            <div className="grid grid-cols-3 gap-3 mb-6">
+            <p className="text-sm text-white/60 font-medium mb-2 sm:mb-3">Plateforme publicitaire *</p>
+            <div className="grid grid-cols-3 gap-2 mb-4 sm:gap-3 sm:mb-6">
               {PLATFORMS.map((p) => (
                 <button
                   key={p.value}
@@ -323,7 +325,7 @@ export default function AdsEstimatorForm() {
                   <p className={`text-sm font-semibold ${platform === p.value ? "text-white" : "text-white/70"}`}>
                     {p.label}
                   </p>
-                  <p className="text-xs text-white/40 mt-1">{p.desc}</p>
+                  <p className="hidden sm:block text-xs text-white/40 mt-1">{p.desc}</p>
                 </button>
               ))}
             </div>
@@ -347,8 +349,8 @@ export default function AdsEstimatorForm() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Votre budget et objectifs</h2>
-            <p className="text-white/50 mb-8 text-sm">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Votre budget et objectifs</h2>
+            <p className="text-white/50 mb-5 sm:mb-8 text-sm">
               Indiquez votre budget publicitaire mensuel et votre panier moyen client.
             </p>
 
@@ -444,8 +446,8 @@ export default function AdsEstimatorForm() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Où envoyer votre rapport ?</h2>
-            <p className="text-white/50 mb-8 text-sm">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Où envoyer votre rapport ?</h2>
+            <p className="text-white/50 mb-5 sm:mb-8 text-sm">
               Le rapport PDF complet avec vos projections sera envoyé à votre adresse email.
             </p>
 
@@ -498,12 +500,12 @@ export default function AdsEstimatorForm() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Prêt à calculer votre ROI ?</h2>
-            <p className="text-white/50 mb-8 text-sm">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Prêt à calculer votre ROI ?</h2>
+            <p className="text-white/50 mb-5 sm:mb-8 text-sm">
               Vérification de vos informations avant de générer les projections.
             </p>
 
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-3 sm:p-6 sm:space-y-4">
               <div className="flex items-center gap-3">
                 <div className="text-xl">{selectedSector?.emoji}</div>
                 <div>
@@ -549,7 +551,7 @@ export default function AdsEstimatorForm() {
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 mt-6">
+            <div className="hidden sm:grid grid-cols-3 gap-3 mt-6">
               {[
                 { icon: TrendingUp, label: "Projection 12 mois" },
                 { icon: FileText, label: "Rapport PDF complet" },
@@ -627,7 +629,7 @@ export default function AdsEstimatorForm() {
             </div>
 
             {/* Monthly summary */}
-            <div className="grid grid-cols-3 gap-3 mb-6">
+            <div className="grid grid-cols-3 gap-2 mb-4 sm:gap-3 sm:mb-6">
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
                 <Users className="w-5 h-5 text-purple-400 mx-auto mb-2" />
                 <p className="text-2xl font-bold text-white">{result.monthlyLeads}</p>
@@ -648,7 +650,7 @@ export default function AdsEstimatorForm() {
             </div>
 
             {/* Projection cards */}
-            <div className="grid grid-cols-3 gap-3 mb-6">
+            <div className="grid grid-cols-3 gap-2 mb-4 sm:gap-3 sm:mb-6">
               {result.projections.map((proj, i) => (
                 <div
                   key={proj.months}

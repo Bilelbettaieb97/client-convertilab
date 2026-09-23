@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
 import {
   ArrowRight, ArrowLeft, User, Mail, Building2,
   MapPin, FileText, Globe, Cookie, Shield,
@@ -48,6 +49,7 @@ const ANALYSIS_STEPS = [
 
 export default function MentionsLegalesForm() {
   const [step, setStep] = useState(1);
+  const ancreEtape = useEtapeVisible<HTMLDivElement>(step);
 
   // Step 1: Company type & name
   const [companyType, setCompanyType] = useState("");
@@ -145,10 +147,10 @@ export default function MentionsLegalesForm() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div ref={ancreEtape} className="w-full max-w-2xl mx-auto scroll-mt-20">
       {/* Progress bar */}
       {step <= totalSteps && !isAnalyzing && (
-        <div className="flex items-center gap-2 mb-8">
+        <div className="flex items-center gap-2 mb-5 sm:mb-8">
           {Array.from({ length: totalSteps }, (_, i) => i + 1).map(s => (
             <div key={s} className="flex-1">
               <div className={`h-1.5 rounded-full transition-all duration-500 ${s <= step ? "bg-purple-500" : "bg-white/10"}`} />
@@ -162,8 +164,8 @@ export default function MentionsLegalesForm() {
         {/* STEP 1: Company Type + Name */}
         {step === 1 && (
           <motion.div key="step1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Quel est le type de votre entreprise ?</h2>
-            <p className="text-white/50 mb-6 text-sm">Sélectionnez la forme juridique de votre structure.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Quel est le type de votre entreprise ?</h2>
+            <p className="text-white/50 mb-4 sm:mb-6 text-sm">Sélectionnez la forme juridique de votre structure.</p>
 
             <div className="grid grid-cols-3 gap-3 mb-6">
               {COMPANY_TYPES.map(ct => (
@@ -206,10 +208,10 @@ export default function MentionsLegalesForm() {
         {/* STEP 2: Company Details */}
         {step === 2 && (
           <motion.div key="step2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Informations de l&apos;entreprise</h2>
-            <p className="text-white/50 mb-6 text-sm">Ces informations apparaitront dans vos mentions legales.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Informations de l&apos;entreprise</h2>
+            <p className="text-white/50 mb-4 sm:mb-6 text-sm">Ces informations apparaitront dans vos mentions legales.</p>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <div className="relative">
                 <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
                 <Input placeholder="Adresse du siège social *" value={address} onChange={e => setAddress(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
@@ -252,8 +254,8 @@ export default function MentionsLegalesForm() {
         {/* STEP 3: Host Selection */}
         {step === 3 && (
           <motion.div key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Quel est votre hébergeur ?</h2>
-            <p className="text-white/50 mb-6 text-sm">Sélectionnez l&apos;hébergeur de votre site web.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Quel est votre hébergeur ?</h2>
+            <p className="text-white/50 mb-4 sm:mb-6 text-sm">Sélectionnez l&apos;hébergeur de votre site web.</p>
 
             <div className="grid grid-cols-3 gap-3 mb-4">
               {HOSTS.map(h => (
@@ -297,8 +299,8 @@ export default function MentionsLegalesForm() {
         {/* STEP 4: Cookies & Data */}
         {step === 4 && (
           <motion.div key="step4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Cookies & Donnees</h2>
-            <p className="text-white/50 mb-6 text-sm">Sélectionnez les types de cookies utilisés sur votre site.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Cookies & Donnees</h2>
+            <p className="text-white/50 mb-4 sm:mb-6 text-sm">Sélectionnez les types de cookies utilisés sur votre site.</p>
 
             <div className="space-y-3">
               {[
@@ -370,10 +372,10 @@ export default function MentionsLegalesForm() {
         {/* STEP 5: Contact Info */}
         {step === 5 && (
           <motion.div key="step5" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Où envoyer le document ?</h2>
-            <p className="text-white/50 mb-6 text-sm">Le PDF sera envoyé à votre adresse email.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Où envoyer le document ?</h2>
+            <p className="text-white/50 mb-4 sm:mb-6 text-sm">Le PDF sera envoyé à votre adresse email.</p>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
                 <Input placeholder="Votre nom *" value={name} onChange={e => setName(e.target.value)} className="pl-10 h-12 bg-white/5 border-white/10 text-white rounded-xl focus:border-purple-500" />
@@ -402,10 +404,10 @@ export default function MentionsLegalesForm() {
         {/* STEP 6: Confirmation */}
         {step === 6 && !isAnalyzing && (
           <motion.div key="step6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Prêt à générer ?</h2>
-            <p className="text-white/50 mb-6 text-sm">Vérification de vos informations avant de démarrer la génération.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Prêt à générer ?</h2>
+            <p className="text-white/50 mb-4 sm:mb-6 text-sm">Vérification de vos informations avant de démarrer la génération.</p>
 
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-3 sm:p-6 sm:space-y-4">
               <div className="flex items-center gap-3">
                 <Building2 className="w-5 h-5 text-purple-400" />
                 <div>
@@ -438,7 +440,7 @@ export default function MentionsLegalesForm() {
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 mt-6">
+            <div className="hidden sm:grid grid-cols-3 gap-3 mt-6">
               {[
                 { icon: Shield, label: "Conforme LCEN" },
                 { icon: FileText, label: "Conforme RGPD" },
@@ -496,7 +498,7 @@ export default function MentionsLegalesForm() {
               >
                 <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
               </motion.div>
-              <h2 className="text-2xl font-bold text-white mb-2">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
                 Mentions légales générées !
               </h2>
               <p className="text-white/50 text-sm">

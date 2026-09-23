@@ -92,18 +92,18 @@ export default function GenerateurMentionsLegalesPage() {
       <Navigation />
       <main className="min-h-screen bg-[#0a0a1a] pt-16">
         {/* Hero */}
-        <section className="relative pt-6 pb-10 px-4 overflow-hidden md:pt-32 md:pb-16">
+        <section className="relative flex min-h-[calc(100svh-4rem)] flex-col justify-center overflow-hidden px-4 py-3 md:block md:min-h-0 md:pt-32 md:pb-16">
           {/* Background effects */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.15),transparent_60%)]" />
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl" />
 
-          <div className="relative max-w-4xl mx-auto text-center mb-6 md:mb-12">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-3 md:mb-6">
+          <div className="relative max-w-4xl mx-auto text-center mb-4 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-3.5 py-1 text-[0.8rem] text-purple-300 mb-2 md:px-4 md:py-1.5 md:text-sm md:mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               100 % gratuit, conforme LCEN + RGPD
             </div>
 
-            <h1 className="text-[1.75rem] leading-tight md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-4">
+            <h1 className="text-[1.6rem] leading-[1.15] md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-4">
               Générateur de{" "}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Mentions Légales

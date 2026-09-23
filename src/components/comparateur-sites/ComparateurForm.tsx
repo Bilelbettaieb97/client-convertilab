@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
 import {
   Globe, ArrowRight, ArrowLeft, Mail, Building2,
   Loader2, CheckCircle2, TrendingUp, Zap, Search, Trophy,
@@ -46,6 +47,7 @@ const ANALYSIS_STEPS = [
 
 export default function ComparateurForm() {
   const [step, setStep] = useState(1);
+  const ancreEtape = useEtapeVisible<HTMLDivElement>(step);
   const [urlA, setUrlA] = useState("");
   const [urlB, setUrlB] = useState("");
   const [email, setEmail] = useState("");
@@ -120,10 +122,10 @@ export default function ComparateurForm() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div ref={ancreEtape} className="w-full max-w-2xl mx-auto scroll-mt-20">
       {/* Progress bar */}
       {step < 4 && !isAnalyzing && (
-        <div className="flex items-center gap-2 mb-8">
+        <div className="flex items-center gap-2 mb-5 sm:mb-8">
           {[1, 2, 3].map((s) => (
             <div key={s} className="flex items-center gap-2 flex-1">
               <div className={`h-1.5 rounded-full flex-1 transition-all duration-500 ${s <= step ? "bg-purple-500" : "bg-white/10"}`} />
@@ -137,8 +139,8 @@ export default function ComparateurForm() {
         {/* STEP 1: Two URLs side by side */}
         {step === 1 && (
           <motion.div key="step1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Quels sites comparer ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Entrez l&apos;URL de votre site et celle de votre concurrent pour les comparer.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Quels sites comparer ?</h2>
+            <p className="text-white/50 mb-5 sm:mb-8 text-sm">Entrez l&apos;URL de votre site et celle de votre concurrent pour les comparer.</p>
 
             <div className="space-y-4">
               <div>
@@ -198,8 +200,8 @@ export default function ComparateurForm() {
         {/* STEP 2: Contact info */}
         {step === 2 && (
           <motion.div key="step2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Où envoyer le comparatif ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Le rapport PDF complet sera envoyé à votre adresse email.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Où envoyer le comparatif ?</h2>
+            <p className="text-white/50 mb-5 sm:mb-8 text-sm">Le rapport PDF complet sera envoyé à votre adresse email.</p>
 
             <div className="space-y-4">
                 <div className="relative">
@@ -230,10 +232,10 @@ export default function ComparateurForm() {
         {/* STEP 3: Confirmation + Launch */}
         {step === 3 && !isAnalyzing && (
           <motion.div key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Prêt à comparer ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Vérification des informations avant de lancer la comparaison.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Prêt à comparer ?</h2>
+            <p className="text-white/50 mb-5 sm:mb-8 text-sm">Vérification des informations avant de lancer la comparaison.</p>
 
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-3 sm:p-6 sm:space-y-4">
               <div className="flex items-center gap-3">
                 <Globe className="w-5 h-5 text-purple-400" />
                 <div>
@@ -261,7 +263,7 @@ export default function ComparateurForm() {
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 mt-6">
+            <div className="hidden sm:grid grid-cols-3 gap-3 mt-6">
               {[
                 { icon: Search, label: "8 catégories analysées" },
                 { icon: Trophy, label: "Gagnant par catégorie" },

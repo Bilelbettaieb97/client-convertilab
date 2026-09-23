@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useEtapeVisible } from "@/components/tools/useEtapeVisible";
 import {
   ArrowRight, ArrowLeft, Mail, Building2,
   Loader2, CheckCircle2, TrendingUp, Zap, Search, ChevronDown, Download,
@@ -34,6 +35,7 @@ const POPULAR_COUNT = 20;
 
 export default function SectorReportForm() {
   const [step, setStep] = useState(1);
+  const ancreEtape = useEtapeVisible<HTMLDivElement>(step);
   const [selectedSector, setSelectedSector] = useState<string>("");
   const [showAll, setShowAll] = useState(false);
   const [email, setEmail] = useState("");
@@ -92,10 +94,10 @@ export default function SectorReportForm() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div ref={ancreEtape} className="w-full max-w-2xl mx-auto scroll-mt-20">
       {/* Progress bar */}
       {step < 4 && !isAnalyzing && (
-        <div className="flex items-center gap-2 mb-8">
+        <div className="flex items-center gap-2 mb-5 sm:mb-8">
           {[1, 2, 3].map((s) => (
             <div key={s} className="flex items-center gap-2 flex-1">
               <div className={`h-1.5 rounded-full flex-1 transition-all duration-500 ${s <= step ? "bg-purple-500" : "bg-white/10"}`} />
@@ -109,10 +111,10 @@ export default function SectorReportForm() {
         {/* STEP 1: Sector Selection */}
         {step === 1 && (
           <motion.div key="step1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Quel est votre secteur d&apos;activité ?</h2>
-            <p className="text-white/50 mb-6 text-sm">Sélectionnez votre secteur pour recevoir un rapport digital personnalisé.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Quel est votre secteur d&apos;activité ?</h2>
+            <p className="text-white/50 mb-4 sm:mb-6 text-sm">Sélectionnez votre secteur pour recevoir un rapport digital personnalisé.</p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-h-[46vh] md:max-h-[400px] overflow-y-auto pr-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-h-[38vh] md:max-h-[400px] overflow-y-auto pr-2">
               {displayedSectors.map((sector) => (
                 <button
                   key={sector.slug}
@@ -152,8 +154,8 @@ export default function SectorReportForm() {
         {/* STEP 2: Contact info */}
         {step === 2 && (
           <motion.div key="step2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Où envoyer votre rapport ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Le rapport PDF complet sera envoyé à votre adresse email.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Où envoyer votre rapport ?</h2>
+            <p className="text-white/50 mb-5 sm:mb-8 text-sm">Le rapport PDF complet sera envoyé à votre adresse email.</p>
 
             <div className="space-y-4">
                 <div className="relative">
@@ -184,10 +186,10 @@ export default function SectorReportForm() {
         {/* STEP 3: Confirmation + Generate */}
         {step === 3 && !isAnalyzing && (
           <motion.div key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-white mb-2">Prêt à générer votre rapport ?</h2>
-            <p className="text-white/50 mb-8 text-sm">Vérification de vos informations avant de démarrer.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Prêt à générer votre rapport ?</h2>
+            <p className="text-white/50 mb-5 sm:mb-8 text-sm">Vérification de vos informations avant de démarrer.</p>
 
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-3 sm:p-6 sm:space-y-4">
               <div className="flex items-center gap-3">
                 <div className="text-3xl">{selectedSectorData?.emoji}</div>
                 <div>
@@ -205,7 +207,7 @@ export default function SectorReportForm() {
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 mt-6">
+            <div className="hidden sm:grid grid-cols-3 gap-3 mt-6">
               {[
                 { icon: Search, label: "Diagnostic complet" },
                 { icon: CheckCircle2, label: "Checklist digitale" },
