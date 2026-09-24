@@ -161,10 +161,16 @@
    * posée sur body seul, certains navigateurs mobiles laissent quand même
    * partir la page. Un bloc qui doit vraiment défiler en largeur (un tableau,
    * un code) porte son propre conteneur en overflow-x-auto.
+   *
+   * `clip` et non `hidden` : `hidden` fait de html un conteneur de
+   * défilement, ce qui casse toutes les positions collantes de la page
+   * (les quatre pôles empilés de l'accueil, le sommaire des articles,
+   * la barre des outils). `clip` coupe le débordement sans créer ce
+   * conteneur, donc `position: sticky` continue de fonctionner.
    */
   html,
   body {
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100%;
   }
   body {
