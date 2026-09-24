@@ -212,5 +212,9 @@ CRON_SECRET=
 
 ## Dashboard des outils (HTML, hors repo)
 
-Fichier vivant : `~/Desktop/Onboarding-Bras-Droit/04-Marketing-et-Systeme/dashboard-outils.html` (lecture directe de la RPC Supabase `get_outils_dashboard` avec la clé anon + jeton admin) ; copie « API » : `~/Desktop/Outils/notion doc/dashboard-outils.html` (passe par `/api/admin/outils`). Les deux ont été mis à jour le 16/09/2026 avec les onglets « Lead magnet » et « Diagnostic » (colonnes ressource, diagnostic, page, pôle, score) et la description de leur email immédiat. Toute nouvelle table d'outil doit être ajoutée aux trois endroits : RPC, `route.ts`, HTML.
+Les deux copies doivent passer par `/api/admin/outils` : `~/Desktop/Outils/notion doc/dashboard-outils.html` (déjà conforme) et `~/Desktop/Onboarding-Bras-Droit/04-Marketing-et-Systeme/dashboard-outils.html` (**à migrer** — il appelait la RPC en direct avec la clé anon, ce qui ne fonctionne plus).
+
+> ⚠️ Depuis le 24/09/2026, `get_outils_dashboard` n'est plus exécutable par `anon` ni `authenticated`, uniquement par `service_role`. La clé anon étant publique, n'importe qui pouvait sinon appeler la RPC et vider les 19 tables de leads. Le jeton admin n'est plus codé en dur : il vient de `ADMIN_DASHBOARD_TOKEN` (Vercel, type Sensitive) et la route refuse de servir si la variable manque.
+
+Les deux dashboards ont été mis à jour le 16/09/2026 avec les onglets « Lead magnet » et « Diagnostic » (colonnes ressource, diagnostic, page, pôle, score) et la description de leur email immédiat. Toute nouvelle table d'outil doit être ajoutée aux trois endroits : RPC, `route.ts`, HTML.
 

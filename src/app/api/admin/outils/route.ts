@@ -1,33 +1,59 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { timingSafeEqual } from "node:crypto";
 
 export const dynamic = "force-dynamic";
 
+// La RPC get_outils_dashboard renvoie toutes les tables de leads : depuis le
+// 24/09/2026 elle n'est plus exécutable par `anon`, donc cette route doit
+// passer par la service role key et non plus par la clé anon publique.
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
 );
-
-const ADMIN_TOKEN = process.env.ADMIN_DASHBOARD_TOKEN || "convertilab-admin-2026";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
 };
+
+// Comparaison à temps constant : sans elle, le temps de réponse laisse deviner
+// le jeton caractère par caractère.
+function tokenMatches(candidate: string | null, expected: string): boolean {
+  if (!candidate) return false;
+  const a = Buffer.from(candidate);
+  const b = Buffer.from(expected);
+  return a.length === b.length && timingSafeEqual(a, b);
+}
 
 export async function OPTIONS() {
   return new NextResponse(null, { status: 204, headers: CORS_HEADERS });
 }
 
 export async function GET(request: NextRequest) {
-  const token = request.nextUrl.searchParams.get("token");
-  if (token !== ADMIN_TOKEN) {
+  // Aucune valeur de repli : un jeton codé en dur ici finirait publié avec le
+  // code. Variable absente = la route refuse de servir.
+  const expected = process.env.ADMIN_DASHBOARD_TOKEN;
+  if (!expected) {
+    console.error("[admin/outils] ADMIN_DASHBOARD_TOKEN manquant");
+    return NextResponse.json(
+      { error: "Server misconfigured" },
+      { status: 500, headers: CORS_HEADERS }
+    );
+  }
+
+  // En-tête Authorization de préférence ; ?token= reste accepté pour les
+  // dashboards HTML existants, mais il fuite dans les logs et le Referer.
+  const bearer = request.headers.get("authorization")?.replace(/^Bearer /, "") ?? null;
+  const token = bearer ?? request.nextUrl.searchParams.get("token");
+
+  if (!tokenMatches(token, expected)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401, headers: CORS_HEADERS });
   }
 
   const { data, error } = await supabase.rpc("get_outils_dashboard", {
-    admin_token: ADMIN_TOKEN,
+    admin_token: expected,
   });
 
   if (error) {

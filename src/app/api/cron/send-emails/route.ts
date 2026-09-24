@@ -20,8 +20,10 @@ interface QueueRow {
 
 export async function GET(request: NextRequest) {
   // Vercel cron injects Authorization: Bearer {CRON_SECRET}
+  // CRON_SECRET absent = on refuse. Tester la variable avant de comparer
+  // rendait la route ouverte partout où elle n'est pas définie (preview).
   const auth = request.headers.get("authorization");
-  if (process.env.CRON_SECRET && auth !== `Bearer ${process.env.CRON_SECRET}`) {
+  if (!process.env.CRON_SECRET || auth !== `Bearer ${process.env.CRON_SECRET}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 

@@ -94,8 +94,10 @@ async function existeDansPipedrive(email: string): Promise<boolean> {
  * alerte. Deux leads ont été perdus ainsi en août 2026.
  */
 export async function GET(request: NextRequest) {
+  // CRON_SECRET absent = on refuse. Tester la variable avant de comparer
+  // rendait la route ouverte partout où elle n'est pas définie (preview).
   const auth = request.headers.get("authorization");
-  if (process.env.CRON_SECRET && auth !== `Bearer ${process.env.CRON_SECRET}`) {
+  if (!process.env.CRON_SECRET || auth !== `Bearer ${process.env.CRON_SECRET}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
