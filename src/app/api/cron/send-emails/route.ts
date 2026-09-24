@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
-import { Resend } from "resend";
+import { getResend } from "@/lib/resend";
 import { marquerSerieFinie } from "@/lib/pipedrive";
 import { tailleDeSerie, htmlVersTexte } from "@/lib/email-series";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface QueueRow {
   id: string;
@@ -56,7 +54,7 @@ export async function GET(request: NextRequest) {
 
   for (const row of rows as QueueRow[]) {
     try {
-      const { error: sendErr } = await resend.emails.send({
+      const { error: sendErr } = await getResend().emails.send({
         from: "Bilel · ConvertiLab <contact@convertilab.com>",
         to: row.lead_email,
         subject: row.subject,

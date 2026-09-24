@@ -1,11 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { baliserLiens } from "@/lib/utm";
 import { createClient } from "@supabase/supabase-js";
-import { Resend } from "resend";
+import { getResend } from "@/lib/resend";
 
 export const dynamic = "force-dynamic";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 function sb() {
   return createClient(
@@ -97,7 +95,7 @@ async function sendICSEmails(
   };
 
   // Email au lead
-  void resend.emails.send({
+  void getResend().emails.send({
     from: "Bilel · ConvertiLab <contact@convertilab.com>",
     to: lead.email,
     subject: `✅ Votre RDV est confirmé — ${displayTime}`,
@@ -125,7 +123,7 @@ async function sendICSEmails(
   }).catch(() => {});
 
   // Notification interne à Bilel
-  void resend.emails.send({
+  void getResend().emails.send({
     from: "ConvertiLab Notif <contact@convertilab.com>",
     to: "bilel@convertilab.com",
     subject: `📅 Nouveau RDV — ${lead.prenom || lead.email} — ${displayTime}`,

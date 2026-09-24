@@ -1,4 +1,4 @@
-import { Resend } from "resend";
+import { getResend } from "@/lib/resend";
 
 /**
  * Prévenir l'agence d'un nouveau lead, sans qu'une seule adresse puisse tout
@@ -15,13 +15,12 @@ import { Resend } from "resend";
  * plus l'autre d'arriver, et le rejet se lit dans les journaux au lieu de
  * disparaître.
  */
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const DESTINATAIRES = ["convertilab@gmail.com", "contact@convertilab.com"];
 
 export function notifierAgence(sujet: string, html: string, contexte: string) {
   for (const destinataire of DESTINATAIRES) {
-    resend.emails
+    getResend().emails
       .send({
         from: "ConvertiLab <contact@convertilab.com>",
         to: destinataire,

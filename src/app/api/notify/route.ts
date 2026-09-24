@@ -1,12 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import { getResend } from "@/lib/resend";
 import { pushToPipedrive } from "@/lib/pipedrive";
 import { scheduleEmailSeries, buildFormSeriesContext, construireAccuseReception, htmlVersTexte } from "@/lib/email-series";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface NotifyPayload {
   formType: string;
@@ -32,7 +30,6 @@ function formatValue(v: unknown): string {
   if (typeof v === "object") return JSON.stringify(v);
   return String(v);
 }
-
 
 export async function POST(request: NextRequest) {
   try {
@@ -90,7 +87,7 @@ export async function POST(request: NextRequest) {
     // ATTENTION : le SDK Resend ne throw pas, il retourne { error } — il faut
     // vérifier le retour, sinon l'échec est silencieux et le lead est perdu.
     const [emailResult] = await Promise.all([
-      resend.emails.send({
+      getResend().emails.send({
         from: "ConvertiLab <contact@convertilab.com>",
         to: "convertilab@gmail.com",
         replyTo: email,
@@ -104,7 +101,7 @@ export async function POST(request: NextRequest) {
       // Cause fréquente : replyTo invalide (email mal saisi par le lead).
       // On renvoie sans replyTo — la notification interne ne doit jamais sauter.
       console.error("[notify] resend error, retry sans replyTo:", emailResult.error);
-      const retry = await resend.emails.send({
+      const retry = await getResend().emails.send({
         from: "ConvertiLab <contact@convertilab.com>",
         to: "convertilab@gmail.com",
         subject: `${subject} (email lead invalide : ${email ?? "absent"})`,
@@ -132,7 +129,7 @@ export async function POST(request: NextRequest) {
       // le lead est déjà dans Pipedrive.
       const accuse = construireAccuseReception(formType, ctx);
       if (accuse) {
-        const { error: accuseErr } = await resend.emails.send({
+        const { error: accuseErr } = await getResend().emails.send({
           from: "Bilel · ConvertiLab <contact@convertilab.com>",
           to: email,
           subject: accuse.subject,

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
-import { Resend } from "resend";
+import { getResend } from "@/lib/resend";
 import type { ToolConfig, LeadInfo } from "./shared-types";
 import { pushToPipedrive } from "@/lib/pipedrive";
 import { scheduleEmailSeries } from "@/lib/email-series";
@@ -13,8 +13,6 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const BLOCKED_EMAILS = new Set(
   (process.env.BLOCKED_EMAILS || "").split(",").map((e) => e.trim().toLowerCase()).filter(Boolean)
@@ -136,7 +134,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           config.buildEmailHtml(lead, result, !!(hasPdf || attachments.length > 0), pdfUrl),
           { medium: "rapport", campaign: slug(config.toolName), content: "immediat" }
         );
-        const { error: sendErr } = await resend.emails.send({
+        const { error: sendErr } = await getResend().emails.send({
           from: "ConvertiLab <contact@convertilab.com>",
           to: lead.email,
           subject: config.buildEmailSubject(result),

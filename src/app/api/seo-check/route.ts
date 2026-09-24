@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { analyzeSite } from "@/lib/seo/analyzer";
 import { generateReportHtml } from "@/lib/seo/report-template";
 import { createClient } from "@supabase/supabase-js";
-import { Resend } from "resend";
+import { getResend } from "@/lib/resend";
 import { renderToBuffer } from "@react-pdf/renderer";
 import React from "react";
 import { SeoAuditPdf } from "@/lib/seo/pdf-template";
@@ -25,8 +25,6 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function generatePdf(audit: SeoAuditResult): Promise<Buffer> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -133,7 +131,7 @@ export async function POST(request: NextRequest) {
         getEmailHtml(name, audit.domain, audit.scores.global, audit.grade, audit.gradeLabel, audit.issues.filter(i => i.priority === "critical").length, audit.strengths.slice(0, 3), !!pdfBuffer, rapportUrl),
         { medium: "rapport", campaign: "seo-check", content: "immediat" }
       );
-      const { error: sendErr } = await resend.emails.send({
+      const { error: sendErr } = await getResend().emails.send({
         from: "ConvertiLab <contact@convertilab.com>",
         to: email,
         subject: `Votre audit SEO de ${audit.domain} : ${audit.scores.global}/100`,
