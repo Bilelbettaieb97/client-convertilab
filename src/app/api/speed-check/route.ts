@@ -6,7 +6,7 @@ import { analyzeSpeed } from "@/lib/speed/analyzer";
 import { SpeedAuditPdf } from "@/lib/speed/pdf-template";
 import type { SpeedAuditResult } from "@/lib/speed/analyzer";
 import type { LeadInfo } from "@/lib/tools/shared-types";
-import { firstName } from "@/lib/email-series";
+import { nomDappel } from "@/lib/email-series";
 
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
@@ -92,7 +92,7 @@ export const POST = createToolHandler<SpeedCheckInput, SpeedAuditResult>({
 
   buildSeriesContext(audit: SpeedAuditResult, lead: LeadInfo) {
     return {
-      prenom: firstName(lead.name),
+      prenom: nomDappel(lead.name, lead.company),
       domaine: audit.domain,
       score: String(audit.scores.global),
       grade: audit.grade,

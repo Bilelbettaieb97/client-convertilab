@@ -7,7 +7,7 @@ import { renderToBuffer } from "@react-pdf/renderer";
 import React from "react";
 import { SeoAuditPdf } from "@/lib/seo/pdf-template";
 import { pushToPipedrive } from "@/lib/pipedrive";
-import { scheduleEmailSeries, firstName } from "@/lib/email-series";
+import { scheduleEmailSeries, nomDappel } from "@/lib/email-series";
 import { baliserLiens } from "@/lib/utm";
 import { deposerRapport } from "@/lib/tools/upload-rapport";
 import { htmlVersTexte, entetesDesinscription } from "@/lib/tools/email-delivrabilite";
@@ -187,7 +187,7 @@ export async function POST(request: NextRequest) {
     });
 
     await scheduleEmailSeries("SEO Check", email, {
-      prenom: firstName(name),
+      prenom: nomDappel(name, company),
       domaine: audit.domain,
       score: String(audit.scores.global),
       grade: audit.grade,

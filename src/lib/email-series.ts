@@ -6,7 +6,7 @@ const CALENDLY = "https://calendly.com/convertilab-5bsc/30min";
 type EmailTemplate = { delay: number; subject: string; body: string };
 
 // ─────────────────────────────────────────────────────────────
-// EMAIL SERIES — all delays in days from submission
+// EMAIL SERIES, all delays in days from submission
 // ─────────────────────────────────────────────────────────────
 const EMAIL_SERIES: Record<string, EmailTemplate[]> = {
 
@@ -15,14 +15,14 @@ const EMAIL_SERIES: Record<string, EmailTemplate[]> = {
   "SEO Check": [
     {
       delay: 1,
-      subject: "{{prenom}}, {{domaine}} score {{score}}/100 — ce que ça coûte chaque jour sans le savoir",
+      subject: "{{prenom}}, {{domaine}} score {{score}}/100, ce que ça coûte chaque jour sans le savoir",
       body: `Bonjour {{prenom}},
 
 Votre audit SEO pour {{domaine}} vient de tourner.
 
-Score global : {{score}}/100 — Grade {{grade}}.
+Score global : {{score}}/100, Grade {{grade}}.
 
-Ce que ce chiffre représente concrètement : chaque jour, des gens cherchent ce que vous proposez sur Google. Avec un score de {{score}}, une partie d'entre eux atterrit chez vos concurrents — pas chez vous. Sans que vous le sachiez.
+Ce que ce chiffre représente concrètement : chaque jour, des gens cherchent ce que vous proposez sur Google. Avec un score de {{score}}, une partie d'entre eux atterrit chez vos concurrents, pas chez vous. Sans que vous le sachiez.
 
 On a identifié {{critiques}} problèmes critiques sur {{domaine}}. Ce sont les points que Google pénalise directement dans son classement.
 
@@ -34,7 +34,7 @@ Bilel · ConvertiLab`,
     },
     {
       delay: 3,
-      subject: "Ce que vos concurrents en première page font différemment — avec les mêmes ressources que vous",
+      subject: "Ce que vos concurrents en première page font différemment, avec les mêmes ressources que vous",
       body: `Bonjour {{prenom}},
 
 Les sites qui dominent Google dans votre secteur n'ont pas forcément plus de budget. Ils ont mieux exécuté sur les bons critères, dans le bon ordre.
@@ -62,7 +62,7 @@ Je vous propose un audit stratégique de 45 minutes en visio.
 Ce que vous repartez avec :
 1. Les {{critiques}} points critiques à corriger dans les 30 prochains jours
 2. Une estimation réelle de l'impact sur votre trafic Google
-3. Un plan d'action priorisé — ce qui rapporte le plus, d'abord
+3. Un plan d'action priorisé, ce qui rapporte le plus, d'abord
 
 Offert. Sans engagement. Que vous travailliez avec nous ensuite ou pas.
 
@@ -78,7 +78,7 @@ Bilel Bettaieb · ConvertiLab
 
 C'est mon dernier email.
 
-Je ne veux pas vous relancer indéfiniment — vous n'avez pas besoin de ça non plus.
+Je ne veux pas vous relancer indéfiniment, vous n'avez pas besoin de ça non plus.
 
 Ce que je sais : un score de {{score}}/100 avec {{critiques}} problèmes critiques est entièrement récupérable. Les sites qu'on a traités dans cet état ont systématiquement retrouvé leur positionnement en moins de 90 jours.
 
@@ -94,27 +94,27 @@ Bilel Bettaieb · ConvertiLab`,
   "Speed Check": [
     {
       delay: 1,
-      subject: "{{prenom}}, {{domaine}} est-il assez rapide pour Google — et pour vos visiteurs ?",
+      subject: "{{prenom}}, {{domaine}} est-il assez rapide pour Google, et pour vos visiteurs ?",
       body: `Bonjour {{prenom}},
 
-Audit vitesse pour {{domaine}} : {{score}}/100 — Grade {{grade}}.
+Audit vitesse pour {{domaine}} : {{score}}/100, Grade {{grade}}.
 
 53 % des visiteurs quittent une page qui met plus de 3 secondes à s'afficher. Google utilise la vitesse comme critère de classement direct depuis Core Web Vitals (2021).
 
-Ce que votre score indique : il y a probablement 2 à 4 corrections précises qui feraient passer {{domaine}} dans la zone verte — sans toucher au design, sans reconstruire quoi que ce soit.
+Ce que votre score indique : il y a probablement 2 à 4 corrections précises qui feraient passer {{domaine}} dans la zone verte, sans toucher au design, sans reconstruire quoi que ce soit.
 
 En 30 minutes, je vous dis lesquelles, dans quel ordre, et quel gain attendre.
 
-→ [Diagnostic vitesse — 30 min gratuits](${CALENDLY})
+→ [Diagnostic vitesse, 30 min gratuits](${CALENDLY})
 
 Bilel · ConvertiLab`,
     },
     {
       delay: 3,
-      subject: "1 seconde de chargement en moins = +27 % de conversions — voici la méthode",
+      subject: "1 seconde de chargement en moins = +27 % de conversions, voici la méthode",
       body: `Bonjour {{prenom}},
 
-Ce n'est pas une exagération. Amazon a calculé qu'une seconde de délai supplémentaire lui coûte 1,6 milliard de dollars par an. Votre échelle est différente — mais le principe est identique.
+Ce n'est pas une exagération. Amazon a calculé qu'une seconde de délai supplémentaire lui coûte 1,6 milliard de dollars par an. Votre échelle est différente, mais le principe est identique.
 
 {{domaine}} est à {{score}}/100. Pour franchir le cap des 80, il y a en général 3 à 5 interventions techniques ciblées. Aucune ne touche à votre contenu, aucune ne nécessite une refonte.
 
@@ -131,7 +131,7 @@ Bilel`,
 
 Dans votre secteur, les sites en première page Google ont presque tous un score vitesse supérieur à 80.
 
-{{domaine}} est à {{score}}. L'écart existe — et il joue contre vous à chaque recherche.
+{{domaine}} est à {{score}}. L'écart existe, et il joue contre vous à chaque recherche.
 
 Ce n'est pas irrémédiable. Mais ça ne se règle pas tout seul.
 
@@ -144,12 +144,12 @@ Bilel Bettaieb · ConvertiLab
     },
     {
       delay: 14,
-      subject: "Dernier message — {{domaine}}, {{prenom}}",
+      subject: "Dernier message pour {{domaine}}, {{prenom}}",
       body: `Bonjour {{prenom}},
 
 Je ferme votre dossier après cet email.
 
-La vitesse de {{domaine}} ({{score}}/100) peut être améliorée rapidement. Si ce n'est pas une priorité aujourd'hui, gardez votre rapport — il reste valable.
+La vitesse de {{domaine}} ({{score}}/100) peut être améliorée rapidement. Si ce n'est pas une priorité aujourd'hui, gardez votre rapport, il reste valable.
 
 Si ça l'est :
 
@@ -163,18 +163,18 @@ Bilel Bettaieb · ConvertiLab`,
   "Design Score": [
     {
       delay: 1,
-      subject: "{{prenom}}, en 5 secondes vos visiteurs ont déjà jugé {{domaine}} — voici leur verdict",
+      subject: "{{prenom}}, en 5 secondes vos visiteurs ont déjà jugé {{domaine}}, voici leur verdict",
       body: `Bonjour {{prenom}},
 
-Score design & UX pour {{domaine}} : {{score}}/100 — Grade {{grade}}.
+Score design & UX pour {{domaine}} : {{score}}/100, Grade {{grade}}.
 
-Vos visiteurs ne lisent pas votre site — ils le scannent. En moins de 5 secondes, ils décident inconsciemment : "je reste ou je pars". Un score {{grade}} indique que quelque chose dans cette décision joue contre vous.
+Vos visiteurs ne lisent pas votre site, ils le scannent. En moins de 5 secondes, ils décident inconsciemment : "je reste ou je pars". Un score {{grade}} indique que quelque chose dans cette décision joue contre vous.
 
 Ce n'est pas une question de goût. C'est une question de structure, de hiérarchie visuelle, de friction.
 
-Je peux vous montrer exactement où ça se bloque — et comment le corriger.
+Je peux vous montrer exactement où ça se bloque, et comment le corriger.
 
-→ [Analyse UX — 30 min gratuites](${CALENDLY})
+→ [Analyse UX, 30 min gratuites](${CALENDLY})
 
 Bilel · ConvertiLab`,
     },
@@ -183,9 +183,9 @@ Bilel · ConvertiLab`,
       subject: "Ce que vos visiteurs pensent vraiment de {{domaine}} (sans vous le dire)",
       body: `Bonjour {{prenom}},
 
-Personne ne vous dit "votre site est confus" — ils partent, c'est tout.
+Personne ne vous dit "votre site est confus", ils partent, c'est tout.
 
-Un score de {{score}}/100 sur {{domaine}} signifie qu'il y a des frictions invisibles pour vous — parce que vous connaissez trop bien votre site pour voir ce qu'un nouveau visiteur voit.
+Un score de {{score}}/100 sur {{domaine}} signifie qu'il y a des frictions invisibles pour vous, parce que vous connaissez trop bien votre site pour voir ce qu'un nouveau visiteur voit.
 
 En 30 minutes, je vous montre {{domaine}} avec les yeux de quelqu'un qui ne vous connaît pas. Ce qui coince, où, et pourquoi.
 
@@ -195,7 +195,7 @@ Bilel`,
     },
     {
       delay: 10,
-      subject: "{{prenom}}, un design qui convertit change tout — voici la preuve chiffrée",
+      subject: "{{prenom}}, un design qui convertit change tout, voici la preuve chiffrée",
       body: `Bonjour {{prenom}},
 
 Un client dans un secteur similaire au vôtre a amélioré son taux de conversion de 34 % en restructurant uniquement la hiérarchie visuelle de sa page d'accueil.
@@ -214,17 +214,17 @@ Bilel Bettaieb · ConvertiLab
   "Estimateur Ads": [
     {
       delay: 1,
-      subject: "{{prenom}}, votre simulation Ads — ce que les projections ne vous disent pas",
+      subject: "{{prenom}}, votre simulation Ads, ce que les projections ne vous disent pas",
       body: `Bonjour {{prenom}},
 
 Votre simulation Google Ads vient de tourner :
 → {{leads_mois}} leads estimés/mois · ROAS projeté {{roas}}x · Budget : {{budget_ads}} €/mois · Secteur : {{secteur}}
 
-Ces chiffres sont réels — mais ils supposent une campagne bien structurée dès le départ. Une mauvaise configuration peut brûler {{budget_ads}} € en un mois sans générer le moindre lead qualifié.
+Ces chiffres sont réels, mais ils supposent une campagne bien structurée dès le départ. Une mauvaise configuration peut brûler {{budget_ads}} € en un mois sans générer le moindre lead qualifié.
 
 La différence entre une campagne qui performe et une qui saigne le budget : elle se joue dans les 3 premières semaines.
 
-En 30 minutes, je vous explique comment sécuriser ces projections — et les conditions pour les dépasser.
+En 30 minutes, je vous explique comment sécuriser ces projections, et les conditions pour les dépasser.
 
 → [Sécuriser mes projections Ads](${CALENDLY})
 
@@ -237,7 +237,7 @@ Bilel · ConvertiLab`,
 
 Les campagnes Google Ads échouent presque toujours pour les mêmes raisons : ciblage trop large, landing page non optimisée pour convertir, budget brûlé aux mauvaises heures de la journée.
 
-Avec {{budget_ads}} €/mois dans {{secteur}}, vous avez l'enveloppe pour une campagne qui performe vraiment — à condition de l'architecturer correctement dès le départ.
+Avec {{budget_ads}} €/mois dans {{secteur}}, vous avez l'enveloppe pour une campagne qui performe vraiment, à condition de l'architecturer correctement dès le départ.
 
 Un mauvais départ dans les Ads coûte cher à corriger, en temps et en argent.
 
@@ -247,10 +247,10 @@ Bilel`,
     },
     {
       delay: 7,
-      subject: "{{prenom}}, un ROAS de {{roas}}x dans {{secteur}} — voici comment c'est réaliste",
+      subject: "{{prenom}}, un ROAS de {{roas}}x dans {{secteur}}, voici comment c'est réaliste",
       body: `Bonjour {{prenom}},
 
-Un ROAS de {{roas}}x, c'est ambitieux — mais c'est un chiffre qu'on a atteint pour des clients dans {{secteur}} avec des budgets similaires au vôtre.
+Un ROAS de {{roas}}x, c'est ambitieux, mais c'est un chiffre qu'on a atteint pour des clients dans {{secteur}} avec des budgets similaires au vôtre.
 
 Ce qui les a différenciés : ils ont suivi un processus. Pas de l'improvisation.
 
@@ -267,10 +267,10 @@ Bilel Bettaieb · ConvertiLab
     },
     {
       delay: 14,
-      subject: "{{prenom}}, je ferme votre dossier Ads — dernier message",
+      subject: "{{prenom}}, je ferme votre dossier Ads, dernier message",
       body: `Bonjour {{prenom}},
 
-Un budget de {{budget_ads}} €/mois peut générer des résultats sérieux dans {{secteur}} — mais uniquement avec un plan solide.
+Un budget de {{budget_ads}} €/mois peut générer des résultats sérieux dans {{secteur}}, mais uniquement avec un plan solide.
 
 Si votre réflexion est toujours en cours :
 
@@ -284,14 +284,14 @@ Bilel Bettaieb · ConvertiLab`,
   "Comparateur Sites": [
     {
       delay: 1,
-      subject: "{{prenom}}, {{gagnant}} prend l'avantage — et maintenant ?",
+      subject: "{{prenom}}, {{gagnant}} prend l'avantage, et maintenant ?",
       body: `Bonjour {{prenom}},
 
 Le verdict est tombé : {{gagnant}} remporte la comparaison sur les métriques principales entre {{site_a}} et {{site_b}}.
 
 Maintenant la vraie question : qu'est-ce que ça change concrètement pour votre stratégie ?
 
-Connaître le gagnant, c'est la première étape. Comprendre pourquoi il gagne — et comment le dépasser — c'est celle qui fait la différence.
+Connaître le gagnant, c'est la première étape. Comprendre pourquoi il gagne, et comment le dépasser, c'est celle qui fait la différence.
 
 En 30 minutes, on analyse les leviers concrets ensemble.
 
@@ -301,10 +301,10 @@ Bilel · ConvertiLab`,
     },
     {
       delay: 4,
-      subject: "Ce que {{site_a}} fait que {{site_b}} ne fait pas — les 3 points qui changent tout",
+      subject: "Ce que {{site_a}} fait que {{site_b}} ne fait pas, les 3 points qui changent tout",
       body: `Bonjour {{prenom}},
 
-La valeur d'un comparatif ne tient pas dans le classement final — elle tient dans l'identification précise de ce que le gagnant fait différemment.
+La valeur d'un comparatif ne tient pas dans le classement final, elle tient dans l'identification précise de ce que le gagnant fait différemment.
 
 Sur les données que j'ai, il y a 3 leviers prioritaires que vous pouvez activer dès maintenant. Pas besoin de tout refaire.
 
@@ -335,16 +335,16 @@ Bilel Bettaieb · ConvertiLab
   "Robots Generator": [
     {
       delay: 1,
-      subject: "{{prenom}}, vos fichiers robots.txt et sitemap sont prêts — voici la suite logique",
+      subject: "{{prenom}}, vos fichiers robots.txt et sitemap sont prêts, voici la suite logique",
       body: `Bonjour {{prenom}},
 
 Votre robots.txt et sitemap.xml pour {{domaine}} sont dans votre boîte mail.
 
-Ces deux fichiers disent à Google quoi explorer et quoi indexer. C'est la base technique — mais c'est loin d'être suffisant pour apparaître en bonne position dans les résultats.
+Ces deux fichiers disent à Google quoi explorer et quoi indexer. C'est la base technique, mais c'est loin d'être suffisant pour apparaître en bonne position dans les résultats.
 
 L'indexation garantit que Google visite votre site. Le positionnement, c'est une autre mécanique entièrement.
 
-Si vous voulez qu'on parle de la suite — 30 minutes, offert.
+Si vous voulez qu'on parle de la suite, 30 minutes, offert.
 
 → [Parler stratégie SEO pour {{domaine}}](${CALENDLY})
 
@@ -357,11 +357,11 @@ Bilel · ConvertiLab`,
 
 La question à se poser maintenant : est-ce que Google lit correctement vos fichiers et indexe les bonnes pages ?
 
-Un fichier mal configuré — même un seul caractère dans robots.txt — peut bloquer l'indexation de vos pages les plus importantes, sans que vous vous en rendiez compte.
+Un fichier mal configuré, même un seul caractère dans robots.txt, peut bloquer l'indexation de vos pages les plus importantes, sans que vous vous en rendiez compte.
 
 En 30 minutes, je fais un bilan complet sur la santé SEO de {{domaine}} : indexation, positionnement actuel, premières opportunités à saisir.
 
-→ [Bilan SEO gratuit — 30 min](${CALENDLY})
+→ [Bilan SEO gratuit, 30 min](${CALENDLY})
 
 Bilel`,
     },
@@ -384,12 +384,12 @@ Bilel Bettaieb · ConvertiLab`,
   "Rapport Sectoriel": [
     {
       delay: 1,
-      subject: "{{prenom}}, votre rapport {{secteur}} — ce que les données ne peuvent pas faire à votre place",
+      subject: "{{prenom}}, votre rapport {{secteur}}, ce que les données ne peuvent pas faire à votre place",
       body: `Bonjour {{prenom}},
 
 Vous venez de recevoir le rapport sectoriel sur {{secteur}}.
 
-Les données sont là — benchmarks, tendances, comportements des acteurs qui dominent en ligne dans votre domaine.
+Les données sont là, benchmarks, tendances, comportements des acteurs qui dominent en ligne dans votre domaine.
 
 Ce que le rapport ne peut pas faire à votre place : vous dire comment adapter ces insights à votre entreprise spécifiquement, avec vos ressources, votre position et vos objectifs de croissance.
 
@@ -401,12 +401,12 @@ Bilel · ConvertiLab`,
     },
     {
       delay: 4,
-      subject: "Les acteurs de {{secteur}} qui gagnent des clients en ligne — leur point commun",
+      subject: "Les acteurs de {{secteur}} qui gagnent des clients en ligne, leur point commun",
       body: `Bonjour {{prenom}},
 
 Dans {{secteur}}, les entreprises qui génèrent le plus de clients en ligne partagent toutes un point commun : elles ont investi dans leur présence digitale avant leurs concurrents directs.
 
-La fenêtre d'avantage est réelle — mais elle se referme au fur et à mesure que le secteur se densifie en ligne.
+La fenêtre d'avantage est réelle, mais elle se referme au fur et à mesure que le secteur se densifie en ligne.
 
 En 30 minutes, je vous dis où en est {{secteur}} aujourd'hui et quel positionnement vous pouvez encore saisir.
 
@@ -421,10 +421,10 @@ Bilel`,
 
 Est-ce que le digital est une priorité pour votre activité dans {{secteur}} cette année ?
 
-Si oui — je suis disponible pour construire quelque chose ensemble.
-Si non — revenez quand le moment est venu.
+Si oui, je suis disponible pour construire quelque chose ensemble.
+Si non, revenez quand le moment est venu.
 
-→ [Oui — je réserve 30 min](${CALENDLY}) · 06 16 47 72 45
+→ [Oui, je réserve 30 min](${CALENDLY}) · 06 16 47 72 45
 
 Bilel Bettaieb · ConvertiLab`,
     },
@@ -433,18 +433,18 @@ Bilel Bettaieb · ConvertiLab`,
   "Mentions Legales": [
     {
       delay: 2,
-      subject: "{{prenom}}, vos mentions légales sont conformes — et votre site dans son ensemble ?",
+      subject: "{{prenom}}, vos mentions légales sont conformes, et votre site dans son ensemble ?",
       body: `Bonjour {{prenom}},
 
 Vos mentions légales pour {{entreprise}} ({{forme_jur}} · SIRET {{siret}}) sont dans votre boîte mail.
 
-Document conforme LCEN + RGPD — prêt à copier-coller sur votre site.
+Document conforme LCEN + RGPD, prêt à copier-coller sur votre site.
 
-Une question naturelle s'ensuit : si on a regardé les mentions légales, c'est que vous avez un site. Est-ce qu'il travaille aussi bien qu'il le devrait — en termes de visibilité Google, de vitesse, de conversion ?
+Une question naturelle s'ensuit : si on a regardé les mentions légales, c'est que vous avez un site. Est-ce qu'il travaille aussi bien qu'il le devrait, en termes de visibilité Google, de vitesse, de conversion ?
 
 Un regard externe en 30 minutes peut révéler beaucoup.
 
-→ [Audit express gratuit — 30 min](${CALENDLY})
+→ [Audit express gratuit, 30 min](${CALENDLY})
 
 Bilel · ConvertiLab`,
     },
@@ -455,11 +455,11 @@ Bilel · ConvertiLab`,
 
 En tant que {{forme_jur}}, vous avez probablement des objectifs de développement cette année.
 
-Le digital est souvent le levier avec le meilleur ROI — et aussi le plus sous-exploité par les entreprises qui n'y ont pas consacré de stratégie claire.
+Le digital est souvent le levier avec le meilleur ROI, et aussi le plus sous-exploité par les entreprises qui n'y ont pas consacré de stratégie claire.
 
 Si votre site n'est pas encore votre premier commercial, c'est qu'il manque quelque chose. 30 minutes pour diagnostiquer quoi.
 
-→ [Diagnostic digital — 30 min gratuits](${CALENDLY})
+→ [Diagnostic digital, 30 min gratuits](${CALENDLY})
 
 Bilel`,
     },
@@ -470,7 +470,7 @@ Bilel`,
 
 Je ne vous recontacterai plus après cet email.
 
-Si vous avez un projet web en cours ou à venir — création, refonte, SEO, Ads — je suis disponible cette semaine.
+Si vous avez un projet web en cours ou à venir, création, refonte, SEO, Ads, je suis disponible cette semaine.
 
 → [Réserver un appel](${CALENDLY}) · 06 16 47 72 45
 
@@ -482,25 +482,25 @@ Bilel Bettaieb · ConvertiLab`,
   "Chatbot Audit": [
     {
       delay: 1,
-      subject: "{{prenom}}, votre audit chatbot pour {{domaine}} — score {{score}}/100",
+      subject: "{{prenom}}, votre audit chatbot pour {{domaine}}, score {{score}}/100",
       body: `Bonjour {{prenom}},
 
-Score chatbot & capture : {{score}}/100 — Grade {{grade}} pour {{domaine}}.
+Score chatbot & capture : {{score}}/100, Grade {{grade}} pour {{domaine}}.
 
 Un chatbot bien configuré peut capturer entre 25 et 40 % des visiteurs qui quittent votre site sans laisser leurs coordonnées. Avec un score de {{score}}, une partie significative de ce potentiel est inexploitée en ce moment.
 
 En 30 minutes, je vous montre les 3 réglages qui font le plus de différence sur votre site spécifiquement.
 
-→ [Optimiser mon chatbot — 30 min gratuites](${CALENDLY})
+→ [Optimiser mon chatbot, 30 min gratuites](${CALENDLY})
 
 Bilel · ConvertiLab`,
     },
     {
       delay: 7,
-      subject: "{{domaine}} perd des leads chaque nuit — voici comment les récupérer",
+      subject: "{{domaine}} perd des leads chaque nuit, voici comment les récupérer",
       body: `Bonjour {{prenom}},
 
-Vos visiteurs arrivent à toutes les heures. Ceux qui viennent le soir, le week-end, hors de vos horaires de bureau — ils repartent sans contact si rien n'est en place pour les capturer.
+Vos visiteurs arrivent à toutes les heures. Ceux qui viennent le soir, le week-end, hors de vos horaires de bureau, ils repartent sans contact si rien n'est en place pour les capturer.
 
 Un chatbot ou un formulaire intelligent peut changer ça en quelques jours. Et les leads récupérés à 23h valent autant que ceux de 10h du matin.
 
@@ -512,7 +512,7 @@ Bilel`,
     },
     {
       delay: 14,
-      subject: "{{prenom}}, dernier message — {{domaine}}",
+      subject: "{{prenom}}, dernier message pour {{domaine}}",
       body: `Bonjour {{prenom}},
 
 Je ferme votre dossier après cet email.
@@ -548,14 +548,14 @@ Bilel · ConvertiLab
     },
     {
       delay: 1,
-      subject: "{{prenom}}, votre site sera prêt en 2 semaines — voici comment ça se passe",
+      subject: "{{prenom}}, votre site sera prêt en 2 semaines, voici comment ça se passe",
       body: `Bonjour {{prenom}},
 
 Voici comment se déroule la création de votre site :
 
-1. Appel de cadrage (15 min) — on aligne le style, les pages, le message
-2. Maquette envoyée sous 48h — vous validez avant qu'on code
-3. Site livré en 2 semaines — hébergé, sécurisé, prêt à recevoir des clients
+1. Appel de cadrage (15 min), on aligne le style, les pages, le message
+2. Maquette envoyée sous 48h, vous validez avant qu'on code
+3. Site livré en 2 semaines, hébergé, sécurisé, prêt à recevoir des clients
 
 Aucune surprise. Aucun abonnement caché. Juste votre site, livré vite.
 
@@ -607,7 +607,7 @@ Bilel Bettaieb · ConvertiLab`,
 
 Votre message est bien reçu.
 
-Vous cherchez {{projet}} — c'est exactement le type de mission sur lequel on travaille au quotidien.
+Vous cherchez {{projet}}, c'est exactement le type de mission sur lequel on travaille au quotidien.
 
 Plutôt que de vous répondre par écrit et risquer de passer à côté de ce qui compte vraiment, je préfère vous donner 30 minutes de mon temps. On aligne les objectifs, vous repartez avec une réponse claire et un chiffrage honnête.
 
@@ -635,7 +635,7 @@ Bilel`,
       subject: "{{prenom}}, ma proposition concrète pour votre projet",
       body: `Bonjour {{prenom}},
 
-Ce que je peux vous promettre pour l'appel : une honnêteté totale sur ce qu'on peut faire pour vous, des exemples concrets de clients avec un besoin similaire, et une réponse claire — même si c'est "ce n'est pas le bon moment".
+Ce que je peux vous promettre pour l'appel : une honnêteté totale sur ce qu'on peut faire pour vous, des exemples concrets de clients avec un besoin similaire, et une réponse claire, même si c'est "ce n'est pas le bon moment".
 
 30 minutes. Sans engagement. Vous repartez avec des éléments concrets.
 
@@ -651,7 +651,7 @@ Bilel Bettaieb · ConvertiLab
 
 Je ferme votre dossier cette semaine sans nouvelles de votre part.
 
-Ce n'est pas une pression — simplement, je ne veux pas vous relancer indéfiniment si votre projet a évolué.
+Ce n'est pas une pression, simplement, je ne veux pas vous relancer indéfiniment si votre projet a évolué.
 
 Si c'est toujours d'actualité :
 
@@ -665,14 +665,14 @@ Bilel Bettaieb · ConvertiLab`,
   "Newsletter": [
     {
       delay: 2,
-      subject: "Bienvenue — une promesse et une chose à savoir",
+      subject: "Bienvenue, une promesse et une chose à savoir",
       body: `Bonjour,
 
 Vous venez de rejoindre la newsletter ConvertiLab.
 
 Ce que vous allez recevoir : des stratégies concrètes pour acquérir des clients en ligne. Des choses qu'on applique nous-mêmes, testées sur des projets réels. Pas de théorie.
 
-Une chose à savoir dès maintenant : si vous avez un projet web en cours ou à venir — création, refonte, SEO, Ads — je suis disponible pour en parler 30 minutes, gratuitement.
+Une chose à savoir dès maintenant : si vous avez un projet web en cours ou à venir, création, refonte, SEO, Ads, je suis disponible pour en parler 30 minutes, gratuitement.
 
 → [Réserver un appel découverte](${CALENDLY})
 
@@ -687,9 +687,9 @@ Bilel · ConvertiLab`,
 
 La réponse honnête : ça dépend entièrement de comment il est construit et pour quoi.
 
-Un site pensé pour convertir — avec une architecture claire, une stratégie SEO, une proposition de valeur immédiatement visible — oui, c'est l'un des meilleurs investissements qu'une entreprise puisse faire.
+Un site pensé pour convertir, avec une architecture claire, une stratégie SEO, une proposition de valeur immédiatement visible, oui, c'est l'un des meilleurs investissements qu'une entreprise puisse faire.
 
-Un site vitrine sans objectif de conversion — non.
+Un site vitrine sans objectif de conversion, non.
 
 La différence entre les deux, c'est ce qu'on regarde ensemble en 30 minutes.
 
@@ -702,7 +702,7 @@ Bilel`,
       subject: "Un projet web dans les prochains mois ?",
       body: `Bonjour,
 
-Un message simple : est-ce qu'il y a un projet web — création, refonte, SEO ou Ads — dans votre agenda pour les 6 prochains mois ?
+Un message simple : est-ce qu'il y a un projet web, création, refonte, SEO ou Ads, dans votre agenda pour les 6 prochains mois ?
 
 Si oui, l'appel est gratuit, sans engagement. Vous repartez avec des réponses claires et un chiffrage honnête.
 
@@ -720,7 +720,7 @@ Bilel Bettaieb · ConvertiLab`,
 
 Votre demande pour {{offre}} est bien reçue.
 
-Pour vous envoyer un devis précis — pas une fourchette vague de type "3 000 à 15 000 €" — j'ai besoin de comprendre votre projet en 30 minutes. Votre secteur, vos objectifs de conversion, les contraintes à respecter.
+Pour vous envoyer un devis précis, pas une fourchette vague de type "3 000 à 15 000 €", j'ai besoin de comprendre votre projet en 30 minutes. Votre secteur, vos objectifs de conversion, les contraintes à respecter.
 
 Un appel bien préparé = un devis qui colle vraiment à votre réalité.
 
@@ -730,12 +730,12 @@ Bilel · ConvertiLab`,
     },
     {
       delay: 2,
-      subject: "Ce que comprend {{offre}} — et comment ça s'adapte à {{entreprise}}",
+      subject: "Ce que comprend {{offre}}, et comment ça s'adapte à {{entreprise}}",
       body: `Bonjour {{prenom}},
 
 Nos clients obtiennent : un site livré en 3 à 4 semaines, conçu pour convertir dès le premier jour, avec un mois d'accompagnement intégré au démarrage.
 
-Mais chaque projet est unique — et c'est l'appel qui permet de calibrer exactement ce dont vous avez besoin, ni plus ni moins.
+Mais chaque projet est unique, et c'est l'appel qui permet de calibrer exactement ce dont vous avez besoin, ni plus ni moins.
 
 → [Réserver 30 min pour mon devis sur mesure](${CALENDLY})
 
@@ -757,7 +757,7 @@ Bilel Bettaieb · ConvertiLab
     },
     {
       delay: 10,
-      subject: "{{prenom}}, votre demande pour {{offre}} — toujours d'actualité ?",
+      subject: "{{prenom}}, votre demande pour {{offre}}, toujours d'actualité ?",
       body: `Bonjour {{prenom}},
 
 Sans nouvelles de votre part, je ferme votre demande pour {{offre}} et libère le créneau.
@@ -774,7 +774,7 @@ Bilel Bettaieb · ConvertiLab`,
   "Demande Maquette": [
     {
       delay: 1,
-      subject: "{{prenom}}, votre maquette pour un site {{type_site}} — je commence à réfléchir",
+      subject: "{{prenom}}, votre maquette pour un site {{type_site}}, je commence à réfléchir",
       body: `Bonjour {{prenom}},
 
 Votre demande de maquette est bien reçue : site {{type_site}} dans {{secteur}}, style {{style}}.
@@ -783,7 +783,7 @@ Avant de me lancer dans la conception, j'ai besoin de 20 minutes avec vous pour 
 
 Sans ça, une maquette reste une hypothèse. Avec ça, elle devient une arme commerciale.
 
-→ [Appel maquette — 20 min](${CALENDLY})
+→ [Appel maquette, 20 min](${CALENDLY})
 
 Bilel · ConvertiLab`,
     },
@@ -794,7 +794,7 @@ Bilel · ConvertiLab`,
 
 Pour un site {{type_site}} dans {{secteur}} avec un style {{style}}, j'ai plusieurs directions en tête.
 
-Mais il me manque votre vision — les sites que vous aimez ou que vous ne voulez surtout pas ressembler, les émotions que vous voulez provoquer chez vos visiteurs, vos couleurs si vous en avez.
+Mais il me manque votre vision, les sites que vous aimez ou que vous ne voulez surtout pas ressembler, les émotions que vous voulez provoquer chez vos visiteurs, vos couleurs si vous en avez.
 
 30 minutes et je peux démarrer.
 
@@ -809,7 +809,7 @@ Bilel`,
 
 Elle se joue dans les premières secondes.
 
-Pas dans la couleur. Pas dans le logo. Dans la clarté du message principal et la fluidité avec laquelle le visiteur comprend ce que vous faites — et pourquoi c'est exactement pour lui.
+Pas dans la couleur. Pas dans le logo. Dans la clarté du message principal et la fluidité avec laquelle le visiteur comprend ce que vous faites, et pourquoi c'est exactement pour lui.
 
 C'est ce qu'on optimise dès la conception dans {{secteur}}.
 
@@ -820,13 +820,13 @@ Bilel Bettaieb · ConvertiLab
     },
     {
       delay: 14,
-      subject: "Votre maquette, {{prenom}} — toujours d'actualité ?",
+      subject: "Votre maquette, {{prenom}}, toujours d'actualité ?",
       body: `Bonjour {{prenom}},
 
 Votre demande de maquette attend encore.
 
-Si votre projet est toujours en cours — 30 minutes et je démarre.
-Si les priorités ont changé — revenez quand le moment est venu.
+Si votre projet est toujours en cours, 30 minutes et je démarre.
+Si les priorités ont changé, revenez quand le moment est venu.
 
 → [Oui, je réserve un appel](${CALENDLY}) · 06 16 47 72 45
 
@@ -838,7 +838,7 @@ Bilel Bettaieb · ConvertiLab`,
   "Estimation Prix": [
     {
       delay: 1,
-      subject: "{{prenom}}, votre estimation pour un site {{type_site}} — ce que les prix affichés ne disent pas",
+      subject: "{{prenom}}, votre estimation pour un site {{type_site}}, ce que les prix affichés ne disent pas",
       body: `Bonjour {{prenom}},
 
 Vous avez demandé une estimation pour un site {{type_site}}.
@@ -855,10 +855,10 @@ Bilel · ConvertiLab`,
     },
     {
       delay: 3,
-      subject: "Combien coûte vraiment un site {{type_site}} en 2026 — réponse honnête",
+      subject: "Combien coûte vraiment un site {{type_site}} en 2026, réponse honnête",
       body: `Bonjour {{prenom}},
 
-La vraie réponse : entre 1 500 € et 15 000 € pour un site professionnel. Tout dépend de ce que vous mettez dedans — pas du prestataire.
+La vraie réponse : entre 1 500 € et 15 000 € pour un site professionnel. Tout dépend de ce que vous mettez dedans, pas du prestataire.
 
 Ce qui fait exploser les budgets : les fonctionnalités ajoutées en cours de route, les aller-retours interminables, les prestataires qui ne posent pas les bonnes questions au départ.
 
@@ -880,7 +880,7 @@ Pour un site {{type_site}} :
 → Un mois de support inclus au démarrage
 → Aucun frais caché
 
-Les compromis intelligents — ceux qui ne coûtent rien en performance — c'est notre spécialité.
+Les compromis intelligents, ceux qui ne coûtent rien en performance, c'est notre spécialité.
 
 → [Voir ce qui est possible pour mon projet](${CALENDLY})
 
@@ -895,7 +895,7 @@ Bilel Bettaieb · ConvertiLab
 Dernier message concernant votre demande pour un site {{type_site}}.
 
 Si le projet est toujours d'actualité, je suis disponible cette semaine.
-Si les priorités ont changé — pas de problème, revenez quand le moment est venu.
+Si les priorités ont changé, pas de problème, revenez quand le moment est venu.
 
 → [Réserver 30 min](${CALENDLY})
 
@@ -907,12 +907,12 @@ Bilel Bettaieb · ConvertiLab`,
   "Offre Speciale": [
     {
       delay: 1,
-      subject: "{{prenom}}, votre place est réservée — voici la prochaine étape",
+      subject: "{{prenom}}, votre place est réservée, voici la prochaine étape",
       body: `Bonjour {{prenom}},
 
 Votre réservation pour l'offre spéciale est confirmée. Vous faites partie des premiers à avoir répondu.
 
-Pour démarrer dans les meilleures conditions, j'ai besoin de 20 minutes avec vous cette semaine — brief rapide, alignement sur vos objectifs, confirmation du planning.
+Pour démarrer dans les meilleures conditions, j'ai besoin de 20 minutes avec vous cette semaine, brief rapide, alignement sur vos objectifs, confirmation du planning.
 
 → [Réserver notre appel de démarrage](${CALENDLY})
 
@@ -939,10 +939,10 @@ Bilel`,
     },
     {
       delay: 5,
-      subject: "{{prenom}}, votre place est encore là — mais pas longtemps",
+      subject: "{{prenom}}, votre place est encore là, mais pas longtemps",
       body: `Bonjour {{prenom}},
 
-Le planning se remplit vite. Ce n'est pas une technique marketing — c'est la réalité d'un planning chargé et d'une équipe qui ne prend pas plus de projets qu'elle ne peut en livrer correctement.
+Le planning se remplit vite. Ce n'est pas une technique marketing, c'est la réalité d'un planning chargé et d'une équipe qui ne prend pas plus de projets qu'elle ne peut en livrer correctement.
 
 Si vous voulez démarrer dans les 2 prochaines semaines, l'appel doit avoir lieu avant jeudi.
 
@@ -952,7 +952,7 @@ Bilel`,
     },
     {
       delay: 10,
-      subject: "{{prenom}}, votre réservation — dernière chance",
+      subject: "{{prenom}}, votre réservation, dernière chance",
       body: `Bonjour {{prenom}},
 
 Sans nouvelles de votre part avant demain, je libère votre place pour quelqu'un d'autre.
@@ -1028,6 +1028,25 @@ Bilel · ConvertiLab`,
 
 function firstName(fullName: string): string {
   return (fullName || "").split(/\s+/)[0] || fullName || "";
+}
+
+/**
+ * Nom d'appel du destinataire.
+ *
+ * Depuis le 23/09/2026, les formulaires des huit outils ne demandent plus le
+ * nom de la personne : le champ « name » reçoit le nom de l'entreprise. Couper
+ * au premier mot donnait « Bonjour Speed » pour « Speed vitre nettoyage »,
+ * « Bonjour Les » pour « Les Arrangés de Célérine », « Bonjour 1612 » pour
+ * « 1612 LE CHATEAU ». On ne coupe donc que lorsque le nom saisi diffère
+ * vraiment de l'entreprise, c'est-à-dire sur les formulaires qui demandent
+ * encore un prénom (contact, devis, maquette).
+ */
+function nomDappel(name?: string, company?: string): string {
+  const nom = (name || "").trim();
+  const entreprise = (company || "").trim();
+  if (!nom) return entreprise;
+  if (!entreprise) return firstName(nom);
+  return nom.toLowerCase() === entreprise.toLowerCase() ? entreprise : firstName(nom);
 }
 
 function resolveTokens(template: string, ctx: Record<string, string>): string {
@@ -1347,8 +1366,8 @@ export function buildFormSeriesContext(
   company?: string,
   fields: Record<string, unknown> = {}
 ): Record<string, string> {
-  const prenom = firstName(name || "");
   const entreprise = company || String(fields.company || "");
+  const prenom = nomDappel(name, entreprise);
   const ctx: Record<string, string> = { prenom, entreprise };
 
   if (formType === "promo_lead") {
@@ -1469,4 +1488,4 @@ export async function scheduleEmailSeries(
   if (error) console.error("[email_series] insert error:", error.message);
 }
 
-export { COMPANY_TYPE_LABELS, firstName };
+export { COMPANY_TYPE_LABELS, firstName, nomDappel };

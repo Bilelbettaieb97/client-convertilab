@@ -2,7 +2,7 @@ import { createToolHandler } from "@/lib/tools/shared-api-handler";
 import { buildToolEmailHtml } from "@/lib/tools/shared-email-template";
 import { generateRobotsSitemap } from "@/lib/robots/generator";
 import type { RobotsResult } from "@/lib/robots/generator";
-import { firstName } from "@/lib/email-series";
+import { nomDappel } from "@/lib/email-series";
 import type { LeadInfo } from "@/lib/tools/shared-types";
 
 export const maxDuration = 60;
@@ -85,7 +85,7 @@ export const POST = createToolHandler<RobotsApiInput, RobotsResult>({
 
   buildSeriesContext(result: RobotsResult, lead: LeadInfo) {
     return {
-      prenom: firstName(lead.name),
+      prenom: nomDappel(lead.name, lead.company),
       domaine: result.domain,
     };
   },

@@ -6,7 +6,7 @@ import { analyzeDesign } from "@/lib/design/analyzer";
 import { DesignAuditPdf } from "@/lib/design/pdf-template";
 import type { DesignAuditResult } from "@/lib/design/analyzer";
 import type { LeadInfo } from "@/lib/tools/shared-types";
-import { firstName } from "@/lib/email-series";
+import { nomDappel } from "@/lib/email-series";
 
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
@@ -93,7 +93,7 @@ export const POST = createToolHandler<DesignScoreInput, DesignAuditResult>({
 
   buildSeriesContext(audit: DesignAuditResult, lead: LeadInfo) {
     return {
-      prenom: firstName(lead.name),
+      prenom: nomDappel(lead.name, lead.company),
       domaine: audit.domain,
       score: String(audit.scores.global),
       grade: audit.grade,

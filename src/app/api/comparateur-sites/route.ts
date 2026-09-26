@@ -5,7 +5,7 @@ import { buildToolEmailHtml } from "@/lib/tools/shared-email-template";
 import { compareSites } from "@/lib/comparison/comparator";
 import { ComparisonPdf } from "@/lib/comparison/pdf-template";
 import type { ComparisonResult } from "@/lib/comparison/comparator";
-import { firstName } from "@/lib/email-series";
+import { nomDappel } from "@/lib/email-series";
 import type { LeadInfo } from "@/lib/tools/shared-types";
 
 export const maxDuration = 120;
@@ -97,7 +97,7 @@ export const POST = createToolHandler<ComparisonInput, ComparisonResult>({
       result.winner === "B" ? result.siteB.domain :
       "Egalité";
     return {
-      prenom: firstName(lead.name),
+      prenom: nomDappel(lead.name, lead.company),
       site_a: result.siteA.domain,
       site_b: result.siteB.domain,
       gagnant: winnerDomain,
