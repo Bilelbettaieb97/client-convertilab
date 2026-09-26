@@ -8,6 +8,7 @@ import { deposerRapport } from "./upload-rapport";
 import { htmlVersTexte, entetesDesinscription } from "./email-delivrabilite";
 import { notifierAgence } from "./notifier-agence";
 import { baliserLiens, slug } from "@/lib/utm";
+import { chercherTelephone } from "@/lib/seo/telephone";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -94,6 +95,23 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         });
       }
 
+      // 2 bis. Telephone : les formulaires ne le demandent plus, mais le visiteur
+      // nous confie l'adresse de son site, ou son numero est affiche en clair.
+      // Concerne les outils qui prennent une adresse de site : `url` pour le plus
+      // grand nombre, `urlA` pour le comparateur (champ « Votre site »). Les
+      // autres (rapport sectoriel, mentions legales, estimateur Ads) n'ont aucune
+      // adresse a explorer, la promesse reste donc nulle et le lead passe sans
+      // telephone, comme avant.
+      //
+      // Lance ici pour tourner pendant la generation du PDF et l'envoi de
+      // l'email : le visiteur n'attend pas une seconde de plus.
+      const entree = input as Record<string, unknown>;
+      const siteAudite = (entree.url ?? entree.urlA) as string | undefined;
+      const telephoneTrouve =
+        lead.phone || !siteAudite
+          ? Promise.resolve(lead.phone ?? null)
+          : chercherTelephone(siteAudite).catch(() => null);
+
       // 3. Generate PDF
       let pdfBuffer: Buffer | null = null;
       try {
@@ -151,6 +169,10 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
         warnings.push("email_client_failed");
       }
 
+      // Le numero trouve devient celui du lead : il part ainsi en base, dans la
+      // notification et dans Pipedrive, sans que chaque outil ait a s'en occuper.
+      lead.phone = (await telephoneTrouve) || undefined;
+
       // 6. Store in Supabase avec email_sent correct — awaité pour garantir la complétion
       const row = config.buildSupabaseRow(lead, result);
       const { error: insertErr } = await supabase
@@ -184,7 +206,7 @@ export function createToolHandler<TInput, TResult>(config: ToolConfig<TInput, TR
           <h2>Nouveau lead via ${config.toolName}</h2>
           <p><strong>Entreprise :</strong> ${lead.company || "non renseignée"}</p>
           <p><strong>Email :</strong> <a href="mailto:${lead.email}">${lead.email}</a></p>
-          <p><strong>Téléphone :</strong> ${lead.phone || "non renseigné"}</p>
+          <p><strong>Téléphone :</strong> ${lead.phone ? `<a href="tel:${lead.phone.replace(/\s/g, "")}">${lead.phone}</a> (trouvé sur son site)` : "introuvable sur son site"}</p>
           <p><strong>Origine :</strong> ${lead.source || "inconnue"}</p>
           <p><strong>Date :</strong> ${new Date().toLocaleString("fr-FR")}</p>
         `,
