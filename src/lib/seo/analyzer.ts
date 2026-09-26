@@ -425,68 +425,68 @@ function findIssues(page: PageAnalysis, robots: RobotsTxtAnalysis, sitemap: Site
 
   // Critical
   if (!page.url.startsWith("https")) {
-    issues.push({ priority: "critical", title: "Le site n'est pas en HTTPS", description: "HTTPS est obligatoire pour la securite, le SEO et la confiance des visiteurs. Google penalise les sites non securises.", fix: "Installer un certificat SSL (gratuit via Let's Encrypt ou Vercel/Netlify). Rediriger tout le HTTP vers HTTPS." });
+    issues.push({ priority: "critical", title: "Le site n'est pas en HTTPS", description: "HTTPS est obligatoire pour la sécurité, le SEO et la confiance des visiteurs. Google pénalise les sites non sécurisés.", fix: "Installer un certificat SSL (gratuit via Let's Encrypt ou Vercel/Netlify). Rediriger tout le HTTP vers HTTPS." });
   }
   if (!page.title) {
-    issues.push({ priority: "critical", title: "Balise title manquante", description: "La balise title est le facteur on-page #1 pour Google. Sans elle, votre page n'a pas de titre dans les resultats de recherche.", fix: "Ajouter une balise <title> unique de 50-60 caracteres contenant le mot-cle principal." });
+    issues.push({ priority: "critical", title: "Balise title manquante", description: "La balise title est le facteur on-page #1 pour Google. Sans elle, votre page n'a pas de titre dans les résultats de recherche.", fix: "Ajouter une balise <title> unique de 50-60 caractères contenant le mot-clé principal." });
   }
   if (page.h1.length === 0) {
-    issues.push({ priority: "critical", title: "Aucune balise H1 detectee", description: "Le H1 est le titre principal de la page. Il aide Google a comprendre le sujet de la page.", fix: "Ajouter un seul H1 par page, contenant le mot-cle principal." });
+    issues.push({ priority: "critical", title: "Aucune balise H1 détectée", description: "Le H1 est le titre principal de la page. Il aide Google à comprendre le sujet de la page.", fix: "Ajouter un seul H1 par page, contenant le mot-clé principal." });
   }
   if (!robots.exists) {
-    issues.push({ priority: "critical", title: "Fichier robots.txt absent", description: "Sans robots.txt, les moteurs de recherche n'ont pas de directives pour explorer votre site.", fix: "Creer un fichier robots.txt a la racine du site avec les directives Allow/Disallow et un lien vers le sitemap." });
+    issues.push({ priority: "critical", title: "Fichier robots.txt absent", description: "Sans robots.txt, les moteurs de recherche n'ont pas de directives pour explorer votre site.", fix: "Créer un fichier robots.txt à la racine du site avec les directives Allow/Disallow et un lien vers le sitemap." });
   }
   if (!sitemap.exists) {
-    issues.push({ priority: "critical", title: "Sitemap XML absent", description: "Le sitemap aide Google a decouvrir et indexer toutes vos pages.", fix: "Generer un sitemap.xml et le referencer dans le robots.txt." });
+    issues.push({ priority: "critical", title: "Sitemap XML absent", description: "Le sitemap aide Google à découvrir et indexer toutes vos pages.", fix: "Générer un sitemap.xml et le référencer dans le robots.txt." });
   }
 
   // Important
   if (page.imagesWithoutAlt > 0) {
-    issues.push({ priority: page.imagesWithoutAlt > 5 ? "critical" : "important", title: `${page.imagesWithoutAlt} image(s) sans attribut alt`, description: "Les images sans texte alternatif sont invisibles pour Google Images et les lecteurs d'ecran (accessibilite).", fix: `Ajouter un attribut alt descriptif a chaque image. Exemple : alt="Description de l'image".` });
+    issues.push({ priority: page.imagesWithoutAlt > 5 ? "critical" : "important", title: `${page.imagesWithoutAlt} image(s) sans attribut alt`, description: "Les images sans texte alternatif sont invisibles pour Google Images et les lecteurs d'écran (accessibilité).", fix: `Ajouter un attribut alt descriptif à chaque image. Exemple : alt="Description de l'image".` });
   }
   if (!page.metaDescription) {
-    issues.push({ priority: "important", title: "Meta description manquante", description: "La meta description est le texte affiche sous votre titre dans Google. Sans elle, Google choisit un extrait au hasard.", fix: "Ajouter une meta description de 150-160 caracteres, incitative, avec le mot-cle principal." });
+    issues.push({ priority: "important", title: "Meta description manquante", description: "La meta description est le texte affiché sous votre titre dans Google. Sans elle, Google choisit un extrait au hasard.", fix: "Ajouter une meta description de 150-160 caractères, incitative, avec le mot-clé principal." });
   }
   if (page.h1.length > 1) {
-    issues.push({ priority: "important", title: `${page.h1.length} balises H1 detectees (au lieu de 1)`, description: "Plusieurs H1 diluent le signal SEO. Google ne sait pas quel est le vrai sujet principal.", fix: "Garder un seul H1 par page et convertir les autres en H2." });
+    issues.push({ priority: "important", title: `${page.h1.length} balises H1 détectées (au lieu de 1)`, description: "Plusieurs H1 diluent le signal SEO. Google ne sait pas quel est le vrai sujet principal.", fix: "Garder un seul H1 par page et convertir les autres en H2." });
   }
   if (!page.canonical) {
-    issues.push({ priority: "important", title: "Balise canonical manquante", description: "Sans canonical, Google peut considerer des URLs differentes comme du contenu duplique.", fix: "Ajouter <link rel=\"canonical\" href=\"URL_DE_LA_PAGE\"> dans le <head>." });
+    issues.push({ priority: "important", title: "Balise canonical manquante", description: "Sans canonical, Google peut considérer des URLs différentes comme du contenu duplique.", fix: "Ajouter <link rel=\"canonical\" href=\"URL_DE_LA_PAGE\"> dans le <head>." });
   }
   if (page.wordCount < 300) {
-    issues.push({ priority: "important", title: "Contenu insuffisant (moins de 300 mots)", description: "Les pages avec peu de contenu ont du mal a se positionner. Google prefere les pages completes et utiles.", fix: "Etoffer le contenu avec des informations utiles, des FAQ, des details sur vos services." });
+    issues.push({ priority: "important", title: "Contenu insuffisant (moins de 300 mots)", description: "Les pages avec peu de contenu ont du mal à se positionner. Google préfère les pages complètes et utiles.", fix: "Étoffer le contenu avec des informations utiles, des FAQ, des details sur vos services." });
   }
 
   // AI/GEO
   const blockedBots = Object.entries(robots.aiBots).filter(([, v]) => v === "blocked");
   if (blockedBots.length > 0) {
-    issues.push({ priority: "critical", title: "Bots IA bloques dans robots.txt", description: `${blockedBots.map(([k]) => k).join(", ")} sont bloques. Votre site ne sera pas cite par ces moteurs IA.`, fix: "Ajouter User-agent: [BotName] et Allow: / pour chaque bot IA dans le robots.txt." });
+    issues.push({ priority: "critical", title: "Bots IA bloqués dans robots.txt", description: `${blockedBots.map(([k]) => k).join(", ")} sont bloqués. Votre site ne sera pas cité par ces moteurs IA.`, fix: "Ajouter User-agent: [BotName] et Allow: / pour chaque bot IA dans le robots.txt." });
   }
   const notMentioned = Object.entries(robots.aiBots).filter(([, v]) => v === "not_mentioned");
   if (notMentioned.length > 0 && robots.exists) {
-    issues.push({ priority: "recommended", title: `${notMentioned.length} bot(s) IA non configures dans robots.txt`, description: "Ces bots ne sont ni autorises ni bloques explicitement. Les autoriser explicitement renforce la visibilite IA.", fix: `Ajouter des regles Allow explicites pour : ${notMentioned.map(([k]) => k).join(", ")}.` });
+    issues.push({ priority: "recommended", title: `${notMentioned.length} bot(s) IA non configurés dans robots.txt`, description: "Ces bots ne sont ni autorisés ni bloqués explicitement. Les autoriser explicitement renforce la visibilité IA.", fix: `Ajouter des règles Allow explicites pour : ${notMentioned.map(([k]) => k).join(", ")}.` });
   }
 
   // Performance
   if (page.responseTime > 1500) {
-    issues.push({ priority: page.responseTime > 3000 ? "critical" : "important", title: `Temps de reponse eleve (${(page.responseTime / 1000).toFixed(1)}s)`, description: "Un site lent perd des visiteurs et est penalise par Google. L'ideal est sous 600ms.", fix: "Optimiser les images, activer la compression, utiliser un CDN, reduire le JavaScript." });
+    issues.push({ priority: page.responseTime > 3000 ? "critical" : "important", title: `Temps de réponse élevé (${(page.responseTime / 1000).toFixed(1)}s)`, description: "Un site lent perd des visiteurs et est pénalise par Google. L'idéal est sous 600ms.", fix: "Optimiser les images, activer la compression, utiliser un CDN, réduire le JavaScript." });
   }
   if (page.scriptsBlocking > 2) {
-    issues.push({ priority: "recommended", title: `${page.scriptsBlocking} scripts bloquants detectes`, description: "Les scripts sans async/defer bloquent le rendu de la page.", fix: "Ajouter l'attribut defer ou async aux balises <script> non critiques." });
+    issues.push({ priority: "recommended", title: `${page.scriptsBlocking} scripts bloquants détectés`, description: "Les scripts sans async/defer bloquent le rendu de la page.", fix: "Ajouter l'attribut defer ou async aux balises <script> non critiques." });
   }
 
   // Recommended
   if (!page.ogTags["og:title"]) {
-    issues.push({ priority: "recommended", title: "Balises Open Graph manquantes", description: "Sans Open Graph, les partages sur les reseaux sociaux n'affichent pas d'apercu riche.", fix: "Ajouter og:title, og:description, og:image et og:url dans le <head>." });
+    issues.push({ priority: "recommended", title: "Balises Open Graph manquantes", description: "Sans Open Graph, les partagés sur les réseaux sociaux n'affichent pas d'aperçu riche.", fix: "Ajouter og:title, og:description, og:image et og:url dans le <head>." });
   }
   if (!page.lang) {
-    issues.push({ priority: "important", title: "Attribut lang manquant sur la balise HTML", description: "L'attribut lang aide Google et les lecteurs d'ecran a identifier la langue du contenu.", fix: 'Ajouter lang="fr" (ou la langue appropriee) sur la balise <html>.' });
+    issues.push({ priority: "important", title: "Attribut lang manquant sur la balise HTML", description: "L'attribut lang aide Google et les lecteurs d'écran à identifier la langue du contenu.", fix: 'Ajouter lang="fr" (ou la langue appropriee) sur la balise <html>.' });
   }
   if (page.jsonLd.every(j => !j.detected)) {
-    issues.push({ priority: "critical", title: "Aucun schema JSON-LD detecte", description: "Les donnees structurees permettent les rich snippets dans Google et augmentent la visibilite IA de +40%.", fix: "Ajouter au minimum Organization et FAQPage en JSON-LD." });
+    issues.push({ priority: "critical", title: "Aucun schema JSON-LD détecté", description: "Les données structurées permettent les rich snippets dans Google et augmentent la visibilité IA de +40%.", fix: "Ajouter au minimum Organization et FAQPage en JSON-LD." });
   }
   if (!page.viewport) {
-    issues.push({ priority: "critical", title: "Balise viewport manquante", description: "Sans viewport, le site ne s'adapte pas aux mobiles. Google penalise les sites non mobile-friendly.", fix: 'Ajouter <meta name="viewport" content="width=device-width, initial-scale=1"> dans le <head>.' });
+    issues.push({ priority: "critical", title: "Balise viewport manquante", description: "Sans viewport, le site ne s'adapte pas aux mobiles. Google pénalise les sites non mobile-friendly.", fix: 'Ajouter <meta name="viewport" content="width=device-width, initial-scale=1"> dans le <head>.' });
   }
 
   return issues.sort((a, b) => {
@@ -497,28 +497,28 @@ function findIssues(page: PageAnalysis, robots: RobotsTxtAnalysis, sitemap: Site
 
 function findStrengths(page: PageAnalysis, robots: RobotsTxtAnalysis, sitemap: SitemapAnalysis): string[] {
   const strengths: string[] = [];
-  if (page.url.startsWith("https")) strengths.push("Site en HTTPS — securise et conforme");
-  if (page.title && page.titleLength >= 30 && page.titleLength <= 70) strengths.push(`Title optimise (${page.titleLength} caracteres)`);
-  if (page.metaDescription && page.metaDescriptionLength >= 100) strengths.push("Meta description presente et optimisee");
+  if (page.url.startsWith("https")) strengths.push("Site en HTTPS — sécurisé et conforme");
+  if (page.title && page.titleLength >= 30 && page.titleLength <= 70) strengths.push(`Title optimisé (${page.titleLength} caractères)`);
+  if (page.metaDescription && page.metaDescriptionLength >= 100) strengths.push("Meta description présente et optimisée");
   if (page.h1.length === 1) strengths.push("Un seul H1 bien structure");
-  if (page.viewport) strengths.push("Viewport configure — site mobile-friendly");
-  if (page.canonical) strengths.push("Balise canonical presente");
-  if (robots.exists && robots.hasSitemap) strengths.push("Robots.txt present avec lien vers le sitemap");
+  if (page.viewport) strengths.push("Viewport configuré — site mobile-friendly");
+  if (page.canonical) strengths.push("Balise canonical présente");
+  if (robots.exists && robots.hasSitemap) strengths.push("Robots.txt présent avec lien vers le sitemap");
   if (sitemap.exists && sitemap.urlCount > 10) strengths.push(`Sitemap XML complet (${sitemap.urlCount} URLs)`);
   const detectedSchemas = page.jsonLd.filter(j => j.detected);
   if (detectedSchemas.length >= 3) strengths.push(`Schema JSON-LD riche (${detectedSchemas.length} types : ${detectedSchemas.map(j => j.type).join(", ")})`);
-  if (page.ogTags["og:title"]) strengths.push("Open Graph configure pour les reseaux sociaux");
-  if (page.twitterCard["twitter:card"]) strengths.push("Twitter Card configure");
+  if (page.ogTags["og:title"]) strengths.push("Open Graph configuré pour les réseaux sociaux");
+  if (page.twitterCard["twitter:card"]) strengths.push("Twitter Card configuré");
   if (page.wordCount > 1000) strengths.push(`Contenu riche (${page.wordCount} mots)`);
   if (page.internalLinks > 10) strengths.push(`Bon maillage interne (${page.internalLinks} liens)`);
-  if (page.hasWebpImages) strengths.push("Images optimisees en WebP");
+  if (page.hasWebpImages) strengths.push("Images optimisées en WebP");
   if (page.hasPreconnect) strengths.push("Preconnect/prefetch pour les performances");
   if (page.fontPreload) strengths.push("Fonts preloaded — chargement rapide");
-  if (page.jsFramework === "Next.js") strengths.push("Next.js — framework optimise pour le SEO (SSR)");
-  if (page.cssFramework === "Tailwind CSS") strengths.push("Tailwind CSS — CSS optimise et leger");
+  if (page.jsFramework === "Next.js") strengths.push("Next.js — framework optimisé pour le SEO (SSR)");
+  if (page.cssFramework === "Tailwind CSS") strengths.push("Tailwind CSS — CSS optimisé et léger");
   const allowedBots = Object.entries(robots.aiBots).filter(([, v]) => v === "allowed");
-  if (allowedBots.length > 0) strengths.push(`Bots IA autorises : ${allowedBots.map(([k]) => k).join(", ")}`);
-  if (page.lang) strengths.push(`Attribut lang="${page.lang}" present`);
+  if (allowedBots.length > 0) strengths.push(`Bots IA autorisés : ${allowedBots.map(([k]) => k).join(", ")}`);
+  if (page.lang) strengths.push(`Attribut lang="${page.lang}" présent`);
   return strengths;
 }
 
@@ -558,4 +558,32 @@ export async function analyzeSite(inputUrl: string): Promise<SeoAuditResult> {
     scores, grade, gradeLabel: label,
     issues, strengths,
   };
+}
+
+/**
+ * Les problemes a citer nommement dans la relance J+1.
+ *
+ * L'email disait « on a identifie 4 problemes critiques » sans dire lesquels :
+ * generique, donc ignorable. On liste ici les trois qui pesent le plus, du
+ * plus grave au moins grave, sous une forme lisible dans un email
+ * (« • Titre. Premiere phrase de l'explication. »).
+ *
+ * Si le site n'a aucun probleme critique, on remonte aux points importants
+ * puis recommandes : la liste n'est jamais vide tant que l'audit a trouve
+ * quelque chose, et le message reste vrai dans les deux cas.
+ */
+export function problemesEnClair(issues: AuditIssue[], combien = 3): string {
+  const rang = { critical: 0, important: 1, recommended: 2 } as const;
+  const retenus = [...issues]
+    .sort((a, b) => rang[a.priority] - rang[b.priority])
+    .slice(0, combien);
+
+  return retenus
+    .map((i) => {
+      // Premiere phrase seulement : l'email doit rester court, le rapport
+      // joint porte le detail complet.
+      const phrase = i.description.split(/(?<=\.)\s/)[0].trim();
+      return `• ${i.title}. ${phrase}`;
+    })
+    .join("\n");
 }

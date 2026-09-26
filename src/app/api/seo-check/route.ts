@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { analyzeSite } from "@/lib/seo/analyzer";
+import { analyzeSite, problemesEnClair } from "@/lib/seo/analyzer";
 import { generateReportHtml } from "@/lib/seo/report-template";
 import { createClient } from "@supabase/supabase-js";
 import { getResend } from "@/lib/resend";
@@ -8,6 +8,7 @@ import React from "react";
 import { SeoAuditPdf } from "@/lib/seo/pdf-template";
 import { pushToPipedrive } from "@/lib/pipedrive";
 import { scheduleEmailSeries, nomDappel } from "@/lib/email-series";
+import { chercherTelephone } from "@/lib/seo/telephone";
 import { baliserLiens } from "@/lib/utm";
 import { deposerRapport } from "@/lib/tools/upload-rapport";
 import { htmlVersTexte, entetesDesinscription } from "@/lib/tools/email-delivrabilite";
@@ -64,6 +65,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: raison }, { status: 400 });
     }
 
+    // 1 bis. Le formulaire ne demande plus le telephone (etape 2 tenue sur un
+    // ecran de mobile). On le cherche donc sur le site que le visiteur vient de
+    // nous confier, en parallele du rapport et du PDF : au moment ou on en a
+    // besoin, la recherche est deja finie et n'a rien coute au temps d'attente.
+    const telephoneTrouve = phone
+      ? Promise.resolve(phone as string)
+      : chercherTelephone(audit.url).catch(() => null);
+
     // 2. Generate HTML report
     const reportHtml = generateReportHtml(audit);
 
@@ -81,12 +90,14 @@ export async function POST(request: NextRequest) {
       request.headers.get("x-real-ip") ||
       null;
 
+    const telephone = (await telephoneTrouve) || null;
+
     const supabaseRow = {
       website_url: audit.url,
       domain: audit.domain,
       name,
       email,
-      phone: phone || null,
+      phone: telephone,
       company: company || null,
       ip: visitorIp,
       score_global: audit.scores.global,
@@ -162,6 +173,7 @@ export async function POST(request: NextRequest) {
         <h2>Nouveau lead via SEO Check</h2>
         <p><strong>Entreprise :</strong> ${name || "non renseignée"}</p>
         <p><strong>Email :</strong> <a href="mailto:${email}">${email}</a></p>
+        <p><strong>Telephone :</strong> ${telephone ? `<a href="tel:${telephone.replace(/\s/g, "")}">${telephone}</a> (trouve sur son site)` : "introuvable sur son site"}</p>
         <p><strong>Site audité :</strong> <a href="https://${audit.domain}">${audit.domain}</a></p>
         <p><strong>Score :</strong> ${audit.scores.global}/100 (${audit.grade})</p>
         <p><strong>Problèmes critiques :</strong> ${audit.issues.filter(i => i.priority === "critical").length}</p>
@@ -175,7 +187,7 @@ export async function POST(request: NextRequest) {
     // Le lead garde la serie SEO Check, seule la note du deal signale le chat.
     const origine = body.origine === "chatbot" ? "chatbot" : null;
 
-    await pushToPipedrive("SEO Check", name, email, phone, company, {
+    await pushToPipedrive("SEO Check", name, email, telephone ?? undefined, company, {
       domain: audit.domain,
       score_global: audit.scores.global,
       grade: audit.grade,
@@ -192,6 +204,7 @@ export async function POST(request: NextRequest) {
       score: String(audit.scores.global),
       grade: audit.grade,
       critiques: String(audit.issues.filter(i => i.priority === "critical").length),
+      problemes: problemesEnClair(audit.issues),
     }).catch((err) =>
       console.error("[SEO Check][email_series] ERREUR:", err instanceof Error ? err.message : err)
     );

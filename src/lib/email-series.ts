@@ -18,15 +18,17 @@ const EMAIL_SERIES: Record<string, EmailTemplate[]> = {
       subject: "{{prenom}}, {{domaine}} score {{score}}/100, ce que ça coûte chaque jour sans le savoir",
       body: `Bonjour {{prenom}},
 
-Votre audit SEO pour {{domaine}} vient de tourner.
+Votre audit SEO pour {{domaine}} vient de tourner. Score global : {{score}}/100, Grade {{grade}}.
 
-Score global : {{score}}/100, Grade {{grade}}.
+Je ne vais pas vous renvoyer le rapport entier. Voici les points qui pèsent le plus lourd sur {{domaine}} aujourd'hui :
 
-Ce que ce chiffre représente concrètement : chaque jour, des gens cherchent ce que vous proposez sur Google. Avec un score de {{score}}, une partie d'entre eux atterrit chez vos concurrents, pas chez vous. Sans que vous le sachiez.
+{{problemes}}
 
-On a identifié {{critiques}} problèmes critiques sur {{domaine}}. Ce sont les points que Google pénalise directement dans son classement.
+Ce que ça représente concrètement : chaque jour, des gens cherchent ce que vous proposez sur Google. Une partie d'entre eux atterrit chez vos concurrents, pas chez vous, à cause de ces points précis.
 
-La bonne nouvelle : chacun a une solution précise. En 20 minutes, je vous dis lesquels corriger en premier et dans quel ordre.
+Chacun a une correction claire, et aucune ne demande de refaire votre site.
+
+En 20 minutes, je vous dis dans quel ordre les traiter et ce que ça change pour vous.
 
 → [Je réserve 20 min gratuites](${CALENDLY})
 
